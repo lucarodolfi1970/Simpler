@@ -1,7 +1,7 @@
 @echo off
-rem === Simpler: test completo del motore (avvia prima Start-Engine.bat in un'altra finestra) ===
+rem === Simpler: full test of the engine (start Start-Engine.bat in another window first) ===
 set BLENDER=C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
 "%BLENDER%" --background --factory-startup --python "%~dp0tools\test_engine.py" -- "%~dp0tools\anello_test.fbx" "%~dp0test_out"
 echo.
-echo Immagini di prova in: %~dp0test_out
+echo Test images in: %~dp0test_out
 pause

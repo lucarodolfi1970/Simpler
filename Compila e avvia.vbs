@@ -1,5 +1,5 @@
-' Simpler: compila l'app senza mostrare finestre e la avvia.
-' Se la compilazione non riesce apre build.log (da copiare e incollare a Claude).
+' Simpler: builds the app without showing any window and starts it.
+' If the build fails it opens build.log (to copy and paste to Claude).
 Option Explicit
 Dim sh, fso, dir, rc
 Set sh = CreateObject("WScript.Shell")
@@ -11,6 +11,6 @@ If rc <> 0 Then rc = sh.Run("cmd /c dotnet publish app\Simpler\Simpler.csproj -c
 If rc = 0 Then
     sh.Run """" & dir & "\dist\Simpler.exe""", 1, False
 Else
-    MsgBox "Compilazione non riuscita: si apre build.log, copialo e incollalo a Claude.", 48, "Simpler"
+    MsgBox "Build failed: build.log opens now, copy it and paste it to Claude.", 48, "Simpler"
     sh.Run "notepad """ & dir & "\build.log""", 1, False
 End If

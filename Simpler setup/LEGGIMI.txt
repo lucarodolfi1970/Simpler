@@ -1,30 +1,30 @@
-SETUP DI SIMPLER
-================
-Cosa fa: un unico Setup.exe con wizard in italiano e inglese (lingua di Windows): contratto di licenza di Simpler
-(nelle due lingue) con approvazione specifica delle clausole, pagina "Il tuo computer" (scheda video trovata e
-quanto e' adatta), cartella del programma, cartella dei contenuti (con controllo dello spazio), icona sul desktop,
-installazione di WebView2 se manca, avvio di Simpler alla fine. Dentro: Simpler (con .NET incluso), il motore,
-Blender, i due progetti di esempio, le miniature dei modelli del cloud, le decal di Simpler. Nessun modello: si
-scaricano a richiesta. I materiali di Simpler li crea il motore. Pack Studio non c'e'.
+SIMPLER SETUP
+=============
+What it does: a single Setup.exe with a wizard in Italian and English (the language of Windows): Simpler's license
+agreement (in both languages) with specific approval of the clauses, a "Your computer" page (graphics card found and
+how suitable it is), program folder, contents folder (with a check of the free space), desktop icon, installation
+of WebView2 if missing, start of Simpler at the end. Inside: Simpler (with .NET included), the engine, Blender, the
+two sample projects, the thumbnails of the cloud models, Simpler's decals. No models: they are downloaded on
+request. Simpler's materials are made by the engine. Pack Studio is not included.
 
-Come si costruisce (Luca)
-  1. Inno Setup installato (una volta).
-  2. Doppio clic su Build-Setup.bat in questa cartella. La finestra mostra 7 passi; l'ultimo dura 10-20 minuti.
-  3. Scrivere "fatto" a Claude: tutto il dettaglio e' in build.log (lo legge Claude).
-  Il risultato e' in "Simpler setup\Output\Simpler-Setup-<versione>.exe". La versione e' quella di Simpler.csproj.
+How to build it (Luca)
+  1. Inno Setup installed (once).
+  2. Double-click Build-Setup.bat in this folder. The window shows 7 steps; the last one takes 10-20 minutes.
+  3. Write "done" to Claude: all the details are in build.log (Claude reads it).
+  The result is in "Simpler setup\Output\Simpler-Setup-<version>.exe". The version is the one in Simpler.csproj.
 
-Da dove prende le cose
-  - miniature: M:\3D\simpler-setup\thumbs (le crea Pack Studio preparando i contenuti del cloud)
-  - decal: la cartella "Simpler" delle decal di Luca (paths.json) -> %APPDATA%\Simpler\decals\Simpler dell'utente
-  - contratto: credits\Licenza.md e credits\en\License.md; la versione e' LicenseWindow.Version
-  - Blender: quello in Program Files\Blender Foundation (o: Build-Setup.bat "C:\cartella\di\Blender")
+Where it takes things from
+  - thumbnails: M:\3D\simpler-setup\thumbs (made by Pack Studio when it prepares the cloud contents)
+  - decals: the "Simpler" folder of Luca's decals (paths.json) -> the user's %APPDATA%\Simpler\decals\Simpler
+  - agreement: credits\Licenza.md and credits\en\License.md; its version is LicenseWindow.Version
+  - Blender: the one in Program Files\Blender Foundation (or: Build-Setup.bat "C:\folder\of\Blender")
 
-Firma (quando c'e' il certificato)
-  Crea il file "Simpler setup\sign.cmd" con UNA riga, il comando di firma del certificato Certum, con $f al posto
-  del file. Esempio (da adattare a quello che Certum/SimplySign indica):
-     signtool.exe sign /fd SHA256 /tr http://time.certum.pl /td SHA256 /n "Nome sul certificato" $f
-  Se il file non c'e', il setup viene costruito senza firma (Windows mostrera' l'avviso SmartScreen).
+Signature (when the certificate is there)
+  Create the file "Simpler setup\sign.cmd" with ONE line, the signing command of the Certum certificate, with $f in
+  place of the file. Example (to adapt to what Certum/SimplySign says):
+     signtool.exe sign /fd SHA256 /tr http://time.certum.pl /td SHA256 /n "Name on the certificate" $f
+  If the file is not there, the setup is built without a signature (Windows will show the SmartScreen warning).
 
-Dopo l'installazione il programma e' in %LOCALAPPDATA%\Programs\Simpler (o in Program Files se si sceglie
-"per tutti gli utenti"). Disinstallando NON si cancellano i contenuti dell'utente. Il setup scrive
-%APPDATA%\Simpler\license-accepted.txt: Simpler non richiede il contratto al primo avvio.
+After the installation the program is in %LOCALAPPDATA%\Programs\Simpler (or in Program Files if "for all users"
+is chosen). Uninstalling does NOT delete the user's contents. The setup writes %APPDATA%\Simpler\license-accepted.txt:
+Simpler does not ask for the agreement again at the first start.

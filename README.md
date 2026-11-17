@@ -1,73 +1,49 @@
 # Simpler
 
-**Rendering fotorealistico di immagini fisse, semplice da usare, basato su Blender/Cycles.**
-*Photorealistic still-image rendering made simple, built on Blender/Cycles.* (English below)
+**Photorealistic still-image rendering made simple, built on Blender/Cycles.**
 
-Sito: <https://www.rodluc.com/simpler/> · Autore: Luca Rodolfi · Licenza: GNU GPL versione 3 o successiva
+Website: <https://www.rodluc.com/simpler/en/> · Author: Luca Rodolfi · License: GNU GPL version 3 or later
 
----
+Simpler is a Windows application for making photorealistic images without learning a professional 3D package.
+The interface (WPF) shows the scene in real time (three.js in WebView2); the final render is done by Cycles, inside
+a copy of Blender used as a headless engine. The interface is available in English and Italian.
 
-## Italiano
+## Repository layout
 
-Simpler è un'applicazione Windows per ottenere immagini fotorealistiche senza dover imparare un programma 3D
-professionale. L'interfaccia (WPF) mostra la scena in tempo reale (three.js in WebView2); il render vero lo fa
-Cycles, dentro una copia di Blender usata come motore, senza interfaccia.
-
-### Struttura
-
-| Cartella | Contenuto |
+| Folder | Contents |
 |---|---|
-| `app/Simpler/` | L'interfaccia Windows `Simpler.exe` (C#, WPF, .NET 8, WebView2) e la vista 3D (`web/`) |
-| `engine/` | Il motore: codice Python che gira dentro Blender 5.2 ed espone un'API locale all'app |
-| `tools/` | Prove automatiche e strumenti di sviluppo |
-| `Simpler setup/` | Lo script del programma di installazione (Inno Setup) |
-| `release-notes/` | Le note di ogni versione |
-| `credits/` | Licenza d'uso e crediti (italiano e inglese) |
+| `app/Simpler/` | The Windows app `Simpler.exe` (C#, WPF, .NET 8, WebView2) and the real-time 3D view (`web/`) |
+| `engine/` | The engine: Python code running inside Blender 5.2, exposing a local API to the app |
+| `tools/` | Automated tests and development tools |
+| `Simpler setup/` | The installer script (Inno Setup) |
+| `release-notes/` | Release notes of every version (English in `release-notes/en/`) |
+| `credits/` | License terms and credits (English in `credits/en/`) |
 
-### Compilare
+## Building
 
-Servono: Windows 10/11, [.NET 8 SDK](https://dotnet.microsoft.com/download), [Blender 5.2](https://www.blender.org/download/).
+Requirements: Windows 10/11, [.NET 8 SDK](https://dotnet.microsoft.com/download), [Blender 5.2](https://www.blender.org/download/).
 
-1. `Build-App.bat`: compila l'app nella cartella `dist\` e la avvia.
-2. Al primo avvio, se Blender non è nel percorso standard, Simpler chiede dove si trova `blender.exe`.
-3. Programma di installazione (facoltativo): `Simpler setup\Build-Setup.bat`, con Inno Setup installato
-   (vedi `Simpler setup\LEGGIMI.txt`).
+1. Run `Build-App.bat`: it builds the app into `dist\` and starts it.
+2. Simpler uses the copy of Blender in a `blender\` folder next to `Simpler.exe` (as installed by the setup);
+   otherwise the one installed in `C:\Program Files\Blender Foundation\Blender 5.x`.
+3. Installer (optional): `Simpler setup\Build-Setup.bat`, with Inno Setup installed.
 
-### Cosa non c'è in questo repository
+## Not in this repository
 
-- I **contenuti** (modelli 3D, materiali, pacchetti, esempi): non sono codice, hanno licenze proprie
-  (vedi `credits/`) e si scaricano dall'app.
-- L'**indirizzo dei contenuti nel cloud**: nei sorgenti la parte segreta è sostituita da `SEGRETO-NON-PUBBLICATO`;
-  una copia compilata da qui funziona, ma senza il download dei contenuti.
-- Gli strumenti privati dell'autore (preparazione dei pacchetti) e il codice dei servizi web del sito.
+- The **contents** (3D models, materials, packs, samples): they are not code, they have their own licenses
+  (see `credits/`) and are downloaded from within the app.
+- The **cloud contents address**: in these sources its secret part is replaced by `SEGRETO-NON-PUBBLICATO`; a build
+  from these sources works, without content downloads.
+- The author's private tools (pack preparation) and the code of the website's services.
 
-### Licenza
+## Source language
 
-Il codice di Simpler è © 2026 Luca Rodolfi ed è distribuito con la **GNU General Public License versione 3 o,
-a tua scelta, una versione successiva** (file `LICENSE`). I contenuti, il nome e il logo sono regolati da
-`credits/Licenza.md`. Blender è GPL ed è usato come programma separato, non modificato; Cycles è Apache 2.0;
-le librerie incluse (three.js, meshoptimizer e altre) conservano le loro licenze, nei file accanto a loro.
+Code comments are in English. The interface texts are written in Italian in the source (`L.T("…")`) and translated
+into English in `app/Simpler/L.En.cs`.
 
----
+## License
 
-## English
-
-Simpler is a Windows application for photorealistic images without learning a professional 3D package. The
-interface (WPF) shows the scene in real time (three.js in WebView2); the final render is done by Cycles, inside a
-copy of Blender used as a headless engine.
-
-**Layout:** `app/Simpler/` the Windows app (C#, WPF, .NET 8, WebView2) and the 3D view (`web/`); `engine/` the
-engine, Python running inside Blender 5.2 with a local API; `tools/` tests and development tools; `Simpler setup/`
-the installer script (Inno Setup); `release-notes/`; `credits/` license and credits.
-
-**Build:** Windows 10/11, .NET 8 SDK, Blender 5.2. Run `Build-App.bat` (builds into `dist\` and starts the app);
-the installer is built by `Simpler setup\Build-Setup.bat` with Inno Setup.
-
-**Not in this repository:** the contents (3D models, materials, packs, samples: not code, with their own licenses,
-downloaded from the app); the secret part of the cloud contents address (replaced by `SEGRETO-NON-PUBBLICATO`: a
-build from these sources works, without content downloads); the author's private tools and the code of the web
-services.
-
-**License:** Simpler's code is © 2026 Luca Rodolfi, released under the **GNU General Public License version 3 or,
-at your option, any later version** (`LICENSE`). Contents, name and logo: `credits/en/License.md`. Blender is GPL,
-used as a separate, unmodified program; Cycles is Apache 2.0; bundled libraries keep their own licenses.
+Simpler's code is © 2026 Luca Rodolfi, released under the **GNU General Public License version 3 or, at your
+option, any later version** (see `LICENSE`). Contents, name and logo are covered by `credits/en/License.md`.
+Blender is GPL and is used as a separate, unmodified program; Cycles is Apache 2.0; the bundled libraries
+(three.js, meshoptimizer and others) keep their own licenses, in the files next to them.

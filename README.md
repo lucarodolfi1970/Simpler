@@ -4,6 +4,8 @@
 
 Website: <https://www.rodluc.com/simpler/en/> · Author: Luca Rodolfi · License: GNU GPL version 3 or later
 
+![The Simpler interface: scene tree, path-traced view of a rainy street, environment panel and library](docs/images/simpler-interface.jpg)
+
 Simpler is a Windows application for making photorealistic images without learning a professional 3D package.
 The interface (WPF) shows the scene in real time (three.js in WebView2); the final render is done by Cycles, inside
 a copy of Blender used as a headless engine. The interface is available in English and Italian.

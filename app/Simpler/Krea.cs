@@ -93,8 +93,11 @@ namespace Simpler
                 L.T("Il più economico: movimenti di camera puliti tra il primo e l'ultimo fotogramma"),
                 new[] { "720p", "1080p" }, new() { ["720p"] = 0.084, ["1080p"] = 0.112 }, 3, 15, "kling"),
             new VideoModel("seedance-2", "Seedance 2.0", "/generate/video/bytedance/seedance-2",
-                L.T("ByteDance: buona coerenza dei dettagli; prezzo indicativo (Krea lo dà «a partire da»)"),
-                new[] { "720p", "1080p" }, new() { ["720p"] = 0.0809, ["1080p"] = 0 }, 4, 15, "resolution"),
+                L.T("ByteDance: buona coerenza dei dettagli; costa circa 3,6 volte Kling"),
+                // (17/11, the bills of Luca's Krea account: Seedance 2.0 at 720p $1.8204 for 6 s and $2.4272 for 8 s =
+                // $0.3034 a second, 3.75 times the «from» price of the Krea pages; Kling 3.0 at 720p $0.504 for 6 s =
+                // $0.084, as in the table. 1080p of Seedance: no bill yet, not known)
+                new[] { "720p", "1080p" }, new() { ["720p"] = 0.3034, ["1080p"] = 0 }, 4, 15, "resolution"),
         };
 
         static List<VideoModel>? _models;

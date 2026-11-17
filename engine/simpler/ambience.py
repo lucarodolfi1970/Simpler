@@ -1209,7 +1209,7 @@ def _ground(kind, force=False):
 
 # ---------------------------------------------------------------- haze / fog (compositor, Mist pass)
 
-FOG_TREE = "Simpler Foschia v16"
+FOG_TREE = "Simpler Foschia v17"
 MIST_DEPTH = 50000.0
 
 
@@ -1274,6 +1274,9 @@ def _fog(s):
                        "r2": V / V2 if V2 else 0.0})
     fog_camera(scene)
     _put(tree.nodes["z_to_mist"].inputs[1], "default_value", 1.0 / depth)
+    for n in tree.nodes:                                                 # (v17: the sky, in the Mist pass's units)
+        if n.label == "sky_cut":
+            _put(n.inputs[1], "default_value", 1e9 / depth)
     # (volumetric clouds: the far end is sky and clouds only if the ground is well inside the Mist pass)
     _put(tree.nodes["keep_far"].inputs[1], "default_value", 1.0 if clouds.active(s) and depth > 1.5 * GROUND_SIZE else 0.0)
     col = _fog_color(s)
@@ -1758,6 +1761,10 @@ def _neighbour_min(N, L, value, others=False):
             t.use_relative = False
         except (AttributeError, TypeError):
             pass
+        try:
+            t.inputs["Interpolation"].default_value = "Nearest"     # (v17: whole pixels, never a blend with the sky)
+        except (KeyError, TypeError, AttributeError):
+            pass
         L.new(value, t.inputs[0])
         z0 = N.new("ShaderNodeMath"); z0.operation = "LESS_THAN"; z0.inputs[1].default_value = 1e-6
         L.new(t.outputs[0], z0.inputs[0])
@@ -1783,6 +1790,10 @@ def _neighbour_max(N, L, value):
             t.use_relative = False
         except (AttributeError, TypeError):
             pass
+        try:
+            t.inputs["Interpolation"].default_value = "Nearest"     # (v17: whole pixels, never a blend with the sky)
+        except (KeyError, TypeError, AttributeError):
+            pass
         L.new(value, t.inputs[0])
         best = _math(N, L, "MAXIMUM", best, t.outputs[0])
     return best
@@ -1804,6 +1815,10 @@ def _neighbour_sum5(N, L, value):
             try:
                 t.use_relative = False
             except (AttributeError, TypeError):
+                pass
+            try:
+                t.inputs["Interpolation"].default_value = "Nearest"
+            except (KeyError, TypeError, AttributeError):
                 pass
             L.new(value, t.inputs[0])
             total = _math(N, L, "ADD", total, t.outputs[0])
@@ -1987,7 +2002,13 @@ def _fog_tree():
     # everything is 1 there, the share above comes out 0 and the pixel (an edge whose first ray went past, a tree seen
     # through a cloud) got no haze at all among pixels completely hazed. With a surface around at any distance (a Depth
     # that is not the sky) and none inside the Mist pass, the pixel takes the whole haze of the far end.
-    hasfar = N.new("ShaderNodeMath"); hasfar.operation = "LESS_THAN"; hasfar.inputs[1].default_value = 1e8
+    # (v17, Luca 17/11: a light rim along every ridge of trees against a sunset sky) nmin5 is in units of the Mist pass
+    # (Depth x 1/depth, z_to_mist), the sky there is 1e10/depth: 2e5 with a light haze (depth 50 km), under the 1e8 of
+    # v14 - every pixel of open sky counted as «a surface beyond the far end» and took the whole haze of the far end,
+    # except the two pixels next to a ridge, where a real surface is near: a band without haze along every crown.
+    # Now the cut is the sky's, in the same units (sky_cut: 1e9 / depth, set with z_to_mist).
+    hasfar = N.new("ShaderNodeMath"); hasfar.operation = "LESS_THAN"; hasfar.label = "sky_cut"
+    hasfar.inputs[1].default_value = 1e8
     L.new(nmin5, hasfar.inputs[0])
     nohas = N.new("ShaderNodeMath"); nohas.operation = "SUBTRACT"; nohas.inputs[0].default_value = 1.0
     L.new(has.outputs[0], nohas.inputs[1])

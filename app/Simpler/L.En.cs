@@ -594,7 +594,7 @@ namespace Simpler
             ["Krea non risponde (tempo scaduto): controlla la connessione a internet"] = "Krea does not answer (timed out): check the Internet connection",
             ["Impossibile raggiungere Krea: "] = "Cannot reach Krea: ",
             ["Il più economico: movimenti di camera puliti tra il primo e l'ultimo fotogramma"] = "The cheapest: clean camera moves between the first and the last frame",
-            ["ByteDance: buona coerenza dei dettagli; prezzo indicativo (Krea lo dà «a partire da»)"] = "ByteDance: good consistency of details; indicative price (Krea gives it «from»)",
+            ["ByteDance: buona coerenza dei dettagli; costa circa 3,6 volte Kling"] = "ByteDance: good consistency of details; costs about 3.6 times Kling",
             ["Modello trovato su Krea: prezzo non noto a Simpler, controllalo su krea.ai"] = "Model found on Krea: price not known to Simpler, check it on krea.ai",
             ["Krea: {0} modelli in più trovati"] = "Krea: {0} more models found",
             ["Elenco aggiornato da Krea"] = "List updated from Krea",

@@ -1,0 +1,46 @@
+SIMPLER 1.67.5  —  29 October 2026
+==================================
+
+Fixes from the full check, and performance.
+
+Real-time view
+- No more freezes of several seconds when a model comes in, a material changes or you select something: anything that needs new shaders is prepared in the background before drawing. The «Busy» box appears only if the wait is longer than 0.4 s, no longer at every check.
+- Turning the fill light on or off no longer freezes the view.
+- With an object selected, the view no longer re-checks every material at every frame.
+- Rain:
+  - drops lying on surfaces no longer show rectangles around decals and transparent leaves;
+  - turning it off, «No rain» objects do not stay wet, and materials are recompiled once instead of twice;
+  - a new water gets its rings at once.
+- Gizmo: the sector for moving on a plane stays visible and grabbable even when the view is almost edge-on, down to about 3°.
+
+Final render
+- Clicking a format (Full HD, 4K…) changes the height too; before, it kept the old one.
+- Width, height and samples are read on confirmation: a value left half-typed no longer goes into the render, and an invalid value turns red.
+- The time left appears even for very slow renders.
+- The quality menu shows «Custom» when it is.
+
+Materials
+- New «Fit to the object» (in UV): one whole picture over the part of the object with that material, stretched to its shape and centred. Useful for a picture made for that shape, such as a stained glass window; then you touch it up.
+- Undo and Redo of «With rain» work; the choice is kept even with «Restore original».
+- Imported lights with their own nodes (for example IES) no longer lose them when you adjust the light.
+
+Rain and snow
+- Going from rain to snow, freezing water keeps its waves.
+- Falling drops:
+  - in the view's path tracing they wait for the camera to stop before being recomputed, and respect «Stop recalculations»;
+  - in large scenes they are computed much faster;
+  - an error in the drops no longer makes the image fail;
+  - turning the rain off frees their memory.
+- Motion blur of flakes and drops no longer stays on after reopening a project.
+- Distributions with «No rain» get no splashes.
+
+Ecosystems («No pieces behind the models»)
+- Walls and façades right beside the camera also hide the surface behind them.
+- A deformed object or a material turned to glass is read again, never old shapes.
+- An opaque texture linked to the Alpha no longer makes the object transparent.
+- The 1.5 m apply to the whole model, not to the single part.
+- Much faster: the computation is done once between estimate and placement, copies already hidden behind others are skipped, and there is a cap on triangles.
+
+Interface
+- Rain and snow presets can no longer have two identical names.
+- A damaged settings file no longer makes the panel fail.

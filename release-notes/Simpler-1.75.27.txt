@@ -1,0 +1,10 @@
+SIMPLER 1.75.27  —  1 novembre 2026
+===================================
+
+Inserimento dei modelli: confronto dei materiali più leggero; profilo dei comandi lenti nel registro.
+
+- Ogni modello inserito veniva confrontato con tutta la scena, per riusare immagini, gruppi di nodi e materiali già presenti invece di caricarli due volte: Simpler calcolava l'impronta completa di ogni immagine (le immagini incorporate lette per intero), di ogni gruppo e di ogni materiale della scena, a ogni inserimento.
+  - Ora l'impronta completa si calcola solo per ciò che potrebbe essere uguale: stessa immagine (stesso file o stessa dimensione), stesso numero di nodi e di collegamenti. Il risultato è lo stesso; in una scena con 425 immagini e 350 materiali 0,27 s invece di 0,71.
+  - Anche la correzione dei nomi delle immagini nei materiali di Simpler riguarda solo i materiali appena caricati, non tutti quelli della scena.
+- In una scena con 4.000 oggetti, 300 materiali e 20 distribuzioni l'inserimento dura 0,5 s.
+- Profilo dei comandi lenti: acceso con il file «profile.on» nella cartella locale di Simpler, ogni comando che dura più di 2 secondi scrive nel registro le funzioni in cui ha passato il tempo, oltre ai tempi delle fasi dell'inserimento. Serve a trovare le lentezze che dipendono da una scena particolare.

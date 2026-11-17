@@ -1,0 +1,9 @@
+SIMPLER 1.13.52  —  23 October 2026
+===================================
+
+LIGHTS UNDER WATER: THE LIGHT LEAVES THE WATER
+----------------------------------------------
+- With "Light reflected by water" on and caustics set to "Sharp", the light of a lamp under water leaves the surface and draws its net on the walls, the edges, the columns and the ceiling around the pool. Before the room stayed dark: the sharp caustics of Cycles did not find that light because the body of the water (the colour volume) interrupts them.
+- It is physical: Snell refraction from water to air (index 1.333), transmitted light = 1 − Fresnel, no light beyond 48.6° (there all the light goes back down as total internal reflection, already computed). Light travelling under water is dimmed by the colour and clarity of the water, both towards the surface and in the reflection towards the bottom.
+- With caustics set to "Normal" the light of lamps under water already leaves evenly (shadow shortcut): there it is not added again, so it is not counted twice.
+- Cost: one more ray per vertex for lamps under water. In a pool about 4.5 s in the view, only when lights, water or nearby objects change.

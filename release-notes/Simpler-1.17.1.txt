@@ -1,0 +1,7 @@
+SIMPLER 1.17.1  —  24 ottobre 2026
+==================================
+
+RENDER FINALE: DIMENSIONE DI PROVA E MISURA DEI TEMPI
+-----------------------------------------------------
+- Nuova dimensione «Prova 960×540» nel render finale: un quarto dei pixel del Full HD, per controllare in fretta luce e nuvole con la qualità vera prima del render grande. Con un formato impostato nella Fotocamera c'è anche la «Prova» nelle sue proporzioni.
+- Misura dei tempi (per lo sviluppo): con il file test_out\misura.on nella cartella di Simpler, il render finale successivo scrive in test_out\misura i campioni fatti da ogni pixel, il tempo di ogni fase e alcuni render brevi che cambiano una cosa alla volta (rimbalzi nei volumi, passo nei volumi, senza nuvole). Il file misura.on viene tolto: una misura per volta. Dopo il render l'app resta un paio di minuti su «fine» mentre fa i render brevi.

@@ -1,0 +1,4 @@
+SIMPLER 1.28.2  —  25 October 2026
+==================================
+
+- New way to apply a dragged material: «Replace in selection», in the menu next to «Replace material». The material takes the place of the one under the mouse only in the selected objects and their pieces: for example you select a building, drag a glass onto a window and every window of that building changes, not those of the other buildings using the same material. With nothing selected (or something else selected), it works on the model where you drop it.

@@ -1,0 +1,10 @@
+SIMPLER 1.76.33  —  3 November 2026
+===================================
+
+The sea against objects: no more clean cut.
+
+- In path tracing, near what the sea touches (rocks, piers, hulls, a sphere) the short waves become true shape: in a band of a couple of metres the water rises and falls, and the line where it meets the object waves instead of being a clean cut. The fine detail is added only in that band: the render of the rest of the sea is not slowed down.
+- The wet band on objects has a ragged top edge, like where the spray reaches, no longer a level line.
+- The foam clinging to objects is a little wider and whiter even with low seas.
+- In the real-time view the water near the shore is more broken, with no extra geometry: the view stays light.
+- Landscape › Coast › Advanced: «Moving water at the edge» sets how much the water moves against objects (0% = clean cut as before).

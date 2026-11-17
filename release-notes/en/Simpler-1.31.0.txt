@@ -1,0 +1,7 @@
+SIMPLER 1.31.0  —  25 October 2026
+==================================
+
+- 3D model library, several models at once: Ctrl+click selects (coloured border) and deselects models. With the right click on one of the selected ones the menu works on all of them: «Cut», «Copy», «Move to» a folder, «Delete from the library», «Clear the selection». «Paste» (right click on a folder or on the empty part of the library) moves them, or makes copies of them, into the open folder. Dragging them onto a folder moves all the selected ones.
+- Deleting, moving several models and pasting copies ask first; deleting shows the list of models.
+- With models selected nothing goes into the view: a click without Ctrl clears the selection. Changing folder clears it too.
+- New «Copy» for a single model too: «Paste» makes a full copy of it (model, textures and thumbnail) in the chosen folder.

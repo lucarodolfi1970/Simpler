@@ -1,0 +1,7 @@
+SIMPLER 1.17.8  —  24 ottobre 2026
+==================================
+
+TABELLA DEI COLORI DEL CIELO: AVANZAMENTO IN VISTA
+--------------------------------------------------
+- Mentre Simpler prepara in background la tabella dei colori del cielo (per «Colori da una foto»), a destra nella barra in basso compare l'avanzamento: «Tabella colori del cielo: 120 di 1584 · circa 25 min». Alla fine un messaggio dice che la funzione è pronta.
+- Se chiudi Simpler a metà, al prossimo avvio la tabella riprende da sola da dove era; non parte mai due volte insieme.

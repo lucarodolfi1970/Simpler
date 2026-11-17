@@ -1,0 +1,13 @@
+SIMPLER 1.76.0  —  1 novembre 2026
+==================================
+
+Terreno: paesaggi naturali generati in Simpler, pronti per i materiali.
+
+- Nuova sezione «Terreno» nel pannello Paesaggio. Si sceglie un tipo (Pianura, Colline, Valle, Montagne, Dune) e Simpler crea un terreno intorno al modello. Il rilievo non è rumore casuale: nasce da una simulazione dell'erosione (i fiumi scavano le valli e le ramificano, i versanti si ammorbidiscono, i detriti si depositano nei fondovalle), poi da un'erosione più fine e dal dettaglio delle rocce in alto. Il risultato ha creste, valli e canali che hanno un senso.
+- Il terreno è diviso in zone, ognuna una mesh separata con il suo materiale: Prato, Terra e ghiaia (lungo i canali, nei depositi e ai piedi delle pareti), Roccia (sui versanti ripidi, prima in alto e più tardi in basso), Neve (in quota, nelle conche, non sulle pareti), Spianata (l'area piana intorno al modello, alla quota 0) e Sabbia (dune). I confini tra le zone sono curve morbide e irregolari, senza gradini; le mesh combaciano senza fessure.
+- I materiali: le texture di Poly Haven adatte a ogni zona si scaricano da sole in sottofondo e vanno sulle zone appena pronte (proiezione a cubo, «Rompi la ripetizione» acceso: superfici grandi senza ripetizioni visibili). Una zona si può selezionare e le si può dare qualsiasi altro materiale, come a ogni oggetto.
+- «Un'altra versione» crea un'altra variante dello stesso tipo. Dimensione e Dislivello si regolano; Neve in quota con la sua quota; Spianata con raggio e «Centra sulla selezione».
+- «Da una mappa di altezze…»: un'immagine in scala di grigi (PNG a 16 bit, TIFF, EXR o RAW a 16 bit) diventa il terreno, con le stesse zone; nelle Avanzate si può aggiungere l'erosione.
+- Nelle Avanzate: Erosione, Età, Direzione (dune e valle), Pendenza della roccia, Ghiaia e terra, Confini irregolari, Raccordo della spianata, Bordo raccordato al suolo, Dettaglio (normale, alto, massimo).
+- Il bordo del terreno scende alla sua quota più bassa e il suolo dell'Ambiente viene messo lì: nessuna parte del terreno resta nascosta e non c'è un gradino dove si incontrano.
+- Ogni modifica si annulla con Ctrl+Z e si salva con il progetto. Montagne richiede circa mezzo minuto, le altre meno; l'avanzamento è sempre visibile.

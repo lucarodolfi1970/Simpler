@@ -1,0 +1,16 @@
+SIMPLER 1.4.4  —  21 October 2026
+=================================
+
+NEW
+---
+- INSTANCES IN THE TREE: an orange dot on the icon marks the objects that are instances, i.e. that share shape and
+  materials with other models (copies made as "Instance", Ctrl+D, Shift+drag). The original has the dot too:
+  original and instances are the same thing. On a group, the dot means its pieces are instances of those of another
+  group. Hovering over it tells you how many other models it is shared with.
+  Parts repeated within a single model (e.g. the four prongs of a ring) don't count: a unique model stays
+  without a dot.
+
+FIXES
+-----
+- LIGHTER INDEPENDENT COPY: parts that share the same shape in the original (e.g. the prongs) keep sharing a single,
+  new one in the copy, instead of all becoming separate.

@@ -1,0 +1,13 @@
+SIMPLER 1.75.6  —  31 October 2026
+==================================
+
+Qashqai: snow mantle, insertion from the library and thumbnail.
+
+- No 3D snow mantle on the Qashqai (only the white).
+  - Cause 1: with «Gives no shelter» on, the model was also taken out of the mantle. Now «Gives no shelter» lets the rain and snow reach under the car, but the car has its mantle.
+  - Cause 2: the Qashqai has 24 million triangles and the mantle took all of them, seats and engine included: memory ran out. Now it takes only the surfaces facing up and near the top of the model, i.e. the roof and the bonnet, not the seats under the roof.
+  - For example on a car: mantle on the roof and the bonnet (18 thousand points).
+- The Qashqai inserted from the library ended up about a kilometre high, and its thumbnail was empty.
+  - Cause: a piece hidden in the render («Glass_Clear», in millimetres inside a group scaled 0.001) is not updated by Blender. It counted as an object 4 km wide, so the model's base and the thumbnail framing were wrong.
+  - Now the position of the pieces is computed from their groups and hidden pieces do not count. Tested: the Qashqai lands on the ground.
+  - To redo the thumbnail save the model to the library again («Update the library»).

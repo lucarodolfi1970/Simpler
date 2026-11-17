@@ -1,0 +1,10 @@
+SIMPLER 1.17.2  —  24 ottobre 2026
+==================================
+
+RETI DI SICUREZZA
+-----------------
+- Render finale: mentre calcola, pannelli, albero, libreria e tasti sono bloccati (un cambio della scena, un nuovo progetto o un salvataggio a metà render finirebbero nell'immagine o la romperebbero). Un tasto premuto lo dice nella barra di stato.
+- Esc durante il render finale chiede se interromperlo (prima proponeva di fermare il motore come se fosse bloccato).
+- Chiudere Simpler (X o Alt+F4) durante il render finale: chiede se interrompere il render e chiudere; con Sì il render si ferma e poi Simpler chiude come sempre (con la domanda sulle modifiche non salvate).
+- Chiudere durante un salvataggio, un'apertura, un'importazione o la correzione dei materiali in blocco: un messaggio chiede di aspettare la fine, Simpler resta aperto.
+- Durante il salvataggio i tasti sono sospesi; Esc non propone più di fermare il motore (il file potrebbe restare incompleto).

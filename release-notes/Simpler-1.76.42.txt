@@ -1,0 +1,9 @@
+SIMPLER 1.76.42  —  4 novembre 2026
+===================================
+
+Ecosistemi: «Più rado in lontananza» non spoglia più il terreno. Terreno: «Rilievo della roccia» in «Forma e roccia».
+
+- Correzione di una regressione della 1.76.37: con la camera lontana, dopo «Ricalcola dalla vista» l'erba quasi spariva (1.878 pezzi su una vista di 3 km). Il diradamento per la memoria e «Più rado in lontananza» si moltiplicavano (lontano 1 pezzo su 12 per 1 su 400), e «Più rado» partiva da 25 m anche con la camera a 900 m.
+- Ora «Più rado» parte da 25 m o da un quarto della distanza dal punto guardato, se è più lontano; i pezzi che restano diventano più grandi (fino a 2,5 volte) così la superficie resta coperta; dove i pezzi sono già diradati per la memoria ne toglie al massimo il 40% in più. Nel test: 30% di pezzi in meno, superficie coperta al 65% (prima: 96% in meno, terreno spoglio).
+- «Rilievo della roccia» spostato in «Forma e roccia», in vista (non più in Avanzate), e funziona anche con «Colori dal terreno» spento. Il cuore dei preferiti lo segue.
+- Tooltip di «Più rado in lontananza» riscritto.

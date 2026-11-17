@@ -1,0 +1,5 @@
+SIMPLER 1.36.2  —  25 October 2026
+==================================
+
+- A distribution (Spacing, Area, Brush) moved or turned after drawing it, or a copy of it placed elsewhere, stays where it is now with «Update». Before, the line and the strokes were remembered where they had been drawn and «Update» took the objects back there. Now the distribution also remembers where it was when saved and the line and strokes follow it, also when moved while the line is open.
+- Distributions saved before this version are taken as being in their starting place (the usual case). If a copy already made still lands in the wrong place, draw its line again once.

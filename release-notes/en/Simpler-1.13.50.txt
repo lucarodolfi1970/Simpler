@@ -1,0 +1,25 @@
+SIMPLER 1.13.50  —  23 October 2026
+===================================
+
+LIGHT REFLECTED BY WATER (PROTOTYPE)
+------------------------------------
+- New switch in Render settings › Caustics: "Light reflected by water". The sun reflected by the waves draws the net of light on nearby walls, the sides of a pool and under bridges. Cycles alone does not compute it: its sharp caustics only do refraction (the net on the bottom).
+- It is physical: exact Fresnel reflection of water (index 1.333) on the real geometry of the waves, with shadows, distance and the size of the sun. Only for water with "Real waves" and only in path tracing.
+- Cost: a calculation of a few seconds (about 1 s in the view, 3-4 s in the final render), done again only when the sun, the water or nearby objects change. The time of the samples does not change. Under the switch you see the time of the last calculation, the rays and the lit surfaces.
+- Off by default. Note: it is a faint light as in reality (a few % of the sun): it shows well in the shade, little on a wall already in the sun.
+
+WATER
+-----
+- Under the surface the water is clear: the haze of the air (non-volumetric Fog) is no longer laid over the view when the camera is under water. Before a grey veil covered the pool whatever its clarity.
+
+ENVIRONMENT
+-----------
+- Night: the automatic exposure no longer turns the moon into a cloudy day. At night the scene is dark, blue, lit by the moon.
+- The automatic exposure also counts the lights of the scene (points, spots, areas): an old project with the three studio lights, under a night sky, turned all white.
+- Time of the sun written as HH:mm (e.g. 15:30), in steps of 5 minutes. 15.30 or 15,30 work too.
+
+VIEW
+----
+- Moving with the wheel pressed: the scene follows the mouse at the distance of what is under the pointer. Before it moved at the distance of the orbit centre: after turning around a very close object (a ring, a glass) it moved a millimetre at a time.
+- Gizmo: arrows and arcs always turn towards the camera. An arrow pointing away from the view stayed behind the others and was hard to grab.
+- A light added by clicking in the view goes exactly where you click, just off the surface and turned away from it (on a ceiling it lights downwards). Before it was placed higher and nearer to the camera.

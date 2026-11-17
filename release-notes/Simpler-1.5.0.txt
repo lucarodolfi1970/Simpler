@@ -1,0 +1,22 @@
+SIMPLER 1.5.0  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- DISTRIBUISCI > PENNELLO: dipingi modelli della libreria sulle superfici della scena (prati, fiori, sassi, alberi).
+  · È il terzo strumento nella barra in alto, accanto a Sposta/ruota e Scala (icona del pennello, tasto B).
+    Le sue opzioni si aprono nella barra di destra; Area e Spaziatura sono già al loro posto, arriveranno dopo.
+  · Modelli da distribuire: con lo strumento attivo, clicca i modelli nella libreria in basso (scheda Modelli 3D),
+    oppure tasto destro su un modello > "Aggiungi al pennello Distribuisci". Ogni modello ha la sua "Presenza":
+    per un prato erba al 100% e fiori al 10%. Accanto vedi la percentuale reale dei pezzi.
+  · Pennello: Diametro (anche con i tasti [ e ]), Distanza minima tra gli oggetti e Distanza casuale (gruppi naturali),
+    Scala e Scala casuale, Rotazione e Rotazione casuale, "Allinea alla superficie" (sassi e muschio seguono la
+    pendenza; spento gli oggetti restano dritti, come alberi ed erba).
+  · Tasto sinistro trascinato: dipingi. Shift + tasto sinistro: cancella i pezzi sotto il pennello. Rotellina, tasto
+    destro e centrale muovono la vista come sempre. Esc: esci dal pennello.
+  · Mentre dipingi compaiono piccoli coni verdi: i modelli veri arrivano subito dopo.
+  · Tutto finisce in un gruppo "Distribuzione 1" nell'albero. Il primo pezzo di ogni modello è l'originale, gli altri
+    sono istanze: anche con migliaia di pezzi la memoria è quella di un modello solo. "+" nel pannello inizia una
+    distribuzione nuova; per continuarne una esistente selezionala nell'albero con il pennello attivo.
+  · Ogni pennellata si annulla con Ctrl+Z.
+- Le impostazioni del pennello e i modelli scelti vengono ricordati alle aperture successive.

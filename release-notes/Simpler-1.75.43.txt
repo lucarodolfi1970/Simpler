@@ -1,0 +1,10 @@
+SIMPLER 1.75.43  —  1 novembre 2026
+===================================
+
+Video AI: avviso verde quando il video è pronto.
+
+- Il pulsante «Smetti di aspettare» ora si chiama «Continua a lavorare». Simpler non abbandona più il video: lo controlla da solo ogni 15 secondi mentre tu lavori.
+- Quando Krea ha finito, Simpler scarica il video, lo mette in Elaborazioni AI › Video AI con tutti i suoi parametri e mostra per 3 secondi un riquadro verde «Video AI creato e salvato in Elaborazioni AI». Il riquadro appare dove compare quello rosso «Occupato».
+- Funziona anche con più video in preparazione insieme, e anche se chiudi Simpler: alla riapertura riprende a controllarli.
+- Nel pannello, il riquadro «Video in preparazione» dice quanti video sono ancora su Krea. «Aspettalo qui» lo segue nel pannello; «Lascia perdere» smette di controllarli.
+- Se un video su Krea non riesce, lo dice la barra di stato.

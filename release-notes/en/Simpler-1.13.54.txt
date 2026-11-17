@@ -1,0 +1,17 @@
+SIMPLER 1.13.54  —  23 October 2026
+===================================
+
+LIGHT REFLECTED BY WATER: FIXES
+-------------------------------
+- No more "giant photons": the blur given by the size of the light is now made on the image of the light, not by moving each sample at random. Instead of separate circles you see the soft net. The smaller the light ("Size" of the lamp, size of the sun), the sharper the lines: as in reality.
+- Near lamps (above all just under the surface) the water is subdivided more finely, only there: their light no longer breaks into a few large patches.
+- The light falls only on the surface it really reaches: each point of the image knows the depth it arrived at. Before, another wall facing the same way (beyond a door, the base of a wall behind the edge) got a copy of it.
+- Very large scenes (87 M triangles, terrain with plants around a lake): only the objects nearest to the water are used, up to 3 M triangles in the view and 10 M in the final render. Before everything was taken, memory ran out and path tracing stayed on "computing…" even after turning the switch off.
+- If the calculation fails, path tracing goes on without this light and the panel says so.
+- While it is computing, the view label says what it is doing (nearby objects, surface, rays with the percentage, images).
+- Fixed: projects saved with versions 1.13.50-53 with this light on had the materials receiving it black when reopened.
+
+WATER ON AN OPEN OBJECT
+-----------------------
+- A glass (open at the top) or a vase with the Water material made the whole view black at night and grey by day. Under every face of the object a layer of water was created that never closed, and Cycles saw the whole scene from inside the water.
+- Now on an open object with walls the water is only its clear surface (index 1.333), like glass. Real waves and colour in depth are for flat water surfaces and closed pieces. The editor explains it when this happens.

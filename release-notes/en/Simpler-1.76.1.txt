@@ -1,0 +1,7 @@
+SIMPLER 1.76.1  —  1 November 2026
+==================================
+
+Terrain: zones are no longer semi-transparent.
+
+- Some Poly Haven ground textures come with an opacity map (for example the grass with leaves used for the Lawn): the terrain material took it, and the terrain became partly see-through. Terrain materials are now always solid.
+- Terrains already made with 1.76.0 are fixed on their own when the project is opened.

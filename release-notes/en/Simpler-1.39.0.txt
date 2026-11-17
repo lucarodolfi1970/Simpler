@@ -1,0 +1,12 @@
+SIMPLER 1.39.0  —  26 October 2026
+==================================
+
+- Scatter: settings of its own for each model of the brush. Under the «Presence» of each model there is a small orange «Advanced» section, closed at first. One click opens or closes it, and Simpler remembers if you left it open. It holds:
+  - Scale: against the general Scale, for example trees at 300% and bushes at 100%.
+  - Random scale: this model's own. Until you move it, it follows the general one.
+  - Rotation: added to the general Rotation, for example 90° for a model turned differently from the others.
+  - Random rotation: this model's own. Until you move it, it follows the general one.
+- An orange dot next to «Advanced» shows that the model has values of its own. «Default values» puts it back like the others.
+- They apply to brush, area and spacing, change the whole distribution at once like the other settings, and stay in saved ecosystems.
+- The general settings stay where they are and apply to every model.
+- Decals: when a project opened, the view received the decals before the scene and then lost them. Now they show.

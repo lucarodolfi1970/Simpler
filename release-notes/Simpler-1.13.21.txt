@@ -1,0 +1,23 @@
+SIMPLER 1.13.21  —  22 ottobre 2026
+===================================
+
+NUOVO TIPO DI MATERIALE: DISPLACEMENT
+-----------------------------------------------
+- Nel "Tipo" del materiale c'è Displacement: la superficie si sposta davvero con la mappa di altezza (sassi, mattoni,
+  cortecce, terreni). Il pannello ha in cima il gruppo "Rilievo vero" e sotto tutti i canali dello Standard. Lo
+  Standard non ha più la sezione Displacement; i materiali che l'avevano accesa sono già di tipo Displacement.
+- Rilievo vero:
+  · Modo: Vero + dettaglio (spostamento e in più il rilievo fine, consigliato) · Vero · Solo rilievo (nessuna
+    geometria, veloce).
+  · Altezza (mappa), Altezza massima in cm, Livello zero (per non far galleggiare o affondare l'oggetto).
+  · Mappa vettoriale (facoltativa): sposta la superficie anche di lato (sporgenze, rocce, tegole), con forza e zero.
+- Suddivisione (la suddivisione adattiva di Blender 5):
+  · In pixel (più fine vicino alla fotocamera) o In centimetri (stesso dettaglio per tutte le copie: distribuzioni).
+  · Livello massimo, Chiudi le fessure (vertici doppi uniti prima dello spostamento), Rifai la maglia (Remesh a
+    voxel per modelli con topologia pessima; costoso, le UV si perdono), Meno dettaglio fuori inquadratura.
+  · Solo nel render finale: nel path tracing della vista resta solo il rilievo, veloce.
+
+BUG CORRETTI
+------------
+- Le primitive (cubo, sfera, piano, cilindro, cono) avevano le coordinate UV tutte a zero: le texture non si
+  vedevano e il displacement non faceva niente. Ora hanno UV vere (le primitive già nelle scene restano come sono).

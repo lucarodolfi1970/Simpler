@@ -1,0 +1,43 @@
+SIMPLER 1.13.0  —  22 October 2026
+==================================
+
+NEW FEATURES
+------------
+- WATER: COLOUR AND CLARITY (volume). In the properties of the water object, section "Water: waves, colour and
+  caustics":
+  · "Colour and clarity (volume)": the water absorbs light like real water, turns blue or green with depth and
+    gets hazy with distance, also seen from under the water (finally blue under water).
+  · Colour: Pool, Lake, Sea, Marsh · Clarity in metres · Murkiness (milky haze).
+  · Works together with the caustics on the bottom and the waves.
+  · Cost: about +20-40% (more if murky): that is why it is a switch.
+- The "Water" material of the library comes with real waves and water colour already on (they can be switched off).
+- Waves and water colour can be undone with Ctrl+Z. In the material editor of transparent materials there is an
+  "Open" link to the properties of the object.
+- VOLUMETRIC FOG (shafts of light): Environment panel → Haze and fog, switch "Volumetric fog". The fog becomes real
+  in the scene: shafts of sunlight between trees and windows, a glow around lamps, visible also in the path
+  tracing of the view. Slower and noisier than the normal haze; it shows with a high density.
+- HDRI WITH THE SUN EXTRACTED: a 360° photographed sky as background and light. Library below → Poly Haven ▾ →
+  HDRI and backgrounds: the HDRIs that come with Blender (always available, also offline), those of Poly Haven
+  (downloaded the first time, 4K) and the studio backgrounds.
+  · Simpler measures the photograph and turns its sun into a real Sun light (direction, colour, strength): sharp,
+    clean shadows at once; the camera still sees the photograph as it is.
+  · In the Environment panel: Rotation (the sun turns with the sky), Strength, "Sun from the HDRI", Ground, Exposure.
+  · The "HDRI…" button among the Environment presets opens the HDRI library.
+- LIBRARY AS MENUS: Poly Haven ▾ (3D models, Materials, HDRI and backgrounds) · Simpler ▾ (Materials, Lights,
+  Primitives) · Personal ▾ (3D models, Materials) · Scenes. "Environments" is gone: the studio backgrounds are under
+  HDRI. The Simpler materials (also when you edited them) and yours are separate.
+- NEW "CLAY" VIEW: instead of the boxes, a clay view: every piece matte grey with its outlines drawn, without
+  textures, lights or shadows. Light, and useful to judge the shapes.
+- LIGHTS:
+  · Colour for Omni, Spot and Area (it tints the temperature: white = temperature only).
+  · Reach in metres for Omni, Spot and Area: the light fades out at that distance (0 = physical).
+  · Spot with a projected picture (projector/gobo style): choose a colour or black and white picture and it is
+    projected by the cone, in the path tracing and in the real-time view.
+- FACES: every surface shows from both sides in the real-time view (no more holes or black sides in models with
+  faces turned the wrong way). For the path tracing: "Fix normals" button in the object properties, it turns
+  outwards the faces facing inwards (undo with Ctrl+Z).
+
+NOTES
+-----
+- Caustics reflected by the water onto the walls and the wizard to fix the materials of many models at once are
+  planned (see ROADMAP).

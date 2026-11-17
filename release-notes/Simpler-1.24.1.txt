@@ -1,0 +1,4 @@
+SIMPLER 1.24.1  —  25 ottobre 2026
+==================================
+
+- Path tracing: la vista non si ferma più a un passaggio (per esempio 2/5) finché non si cambia applicazione. La vista 3D ora continua a disegnare e ad aggiornarsi anche quando Windows la considera coperta o in secondo piano.

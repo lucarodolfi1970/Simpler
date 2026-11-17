@@ -1,0 +1,10 @@
+SIMPLER 1.1.2  —  18 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- Le novità della versione non si aprono più in una finestra separata: compaiono nella barra laterale
+  destra, impaginate (titoli, elenchi puntati), e si chiudono con la piccola × in alto.
+  Si aprono da sole al primo avvio di una nuova versione e da Impostazioni › "Novità di questa versione".
+- In fondo al pannello, i pulsanti "Versioni precedenti" mostrano le note delle versioni passate.
+- Le note sono mostrate nella lingua dell'app (italiano o inglese).

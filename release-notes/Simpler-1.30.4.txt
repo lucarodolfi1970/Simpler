@@ -1,0 +1,5 @@
+SIMPLER 1.30.4  —  25 ottobre 2026
+==================================
+
+- Proprietà ▸ Trasformazione: nuova riga «Dimensioni» con larghezza × profondità × altezza del modello (con tutto quello che contiene e con la sua scala), lungo i suoi assi: un'auto ruotata resta 4,55 × 1,93 × 1,42 m. L'unità si adatta (m, cm, mm), così un modello importato con le unità sbagliate — un'auto di 12 cm invece di 4,5 m — si vede subito.
+- Corretto un errore di compilazione della 1.30.3 (decimali della mappatura): il programma ora si compila di nuovo.

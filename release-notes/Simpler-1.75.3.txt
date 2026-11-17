@@ -1,0 +1,10 @@
+SIMPLER 1.75.3  —  31 ottobre 2026
+==================================
+
+Vista in tempo reale: niente più 30 fps fissi.
+
+- La Qashqai andava a 30 fps anche ferma, con una scheda video capace di 690 fotogrammi al secondo.
+  - Causa (dal log della 1.75.2): la vista disegnava un fotogramma sì e uno no. Qualcosa segnava i materiali come «da rifare» a ogni fotogramma; la vista allora saltava il fotogramma successivo per preparare gli shader in background, e non trovava mai niente di nuovo da preparare.
+  - Ora, dopo 3 controlli di fila senza niente di nuovo, la vista smette di saltare fotogrammi, finché un fotogramma non prepara davvero uno shader nuovo. La protezione contro i blocchi lunghi dopo un import resta.
+  - Con la vista ferma non ridisegna più di continuo: la scheda video resta libera.
+  - Il log scrive chi segna i materiali, per togliere la causa alla radice.

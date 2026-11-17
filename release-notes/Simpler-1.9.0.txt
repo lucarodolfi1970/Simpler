@@ -1,0 +1,19 @@
+SIMPLER 1.9.0  —  21 ottobre 2026
+=================================
+
+- DISTRIBUISCI > AREA: il secondo modo dello strumento Distribuisci. Si disegna il
+  contorno con dei clic sulle superfici (clic sul primo punto, doppio clic, Invio o Esc per chiudere; Backspace
+  toglie l'ultimo punto) e l'area si riempie dei modelli scelti nella libreria, con le loro presenze.
+  · Dopo: si trascinano i punti (scorrono sulle superfici), il "+" a metà di ogni tratto aggiunge un punto,
+    Canc toglie quello selezionato. L'area si aggiorna subito.
+  · Regolazioni: Distanza, Distanza casuale, Probabilità (densità), Tensione (contorno morbido o a tratti
+    dritti), Sfuma ai bordi con la sua ampiezza (verso il contorno gli oggetti diventano più radi e più
+    piccoli), Appoggia alle superfici, Seme casuale con "Cambia" (stessa area, altre scelte casuali).
+    Scala, rotazione (anche casuali) e Allinea alla superficie sono comuni a Pennello e Area.
+  · Gli oggetti cadono sulla prima superficie sotto l'area; muri e facce molto ripide restano vuoti.
+  · Proprietà di un oggetto > Distribuisci > "Escludi da Area": l'Area non mette niente su di esso e gli
+    oggetti cadono sulla superficie sotto. "Aggiorna" ricalcola l'area dopo aver spostato o escluso oggetti.
+  · Prestazioni come il pennello: in Cycles sono istanze (punti), nella vista istanze GPU con livelli di
+    dettaglio; anche centinaia di migliaia di oggetti. Le regolazioni cambiano l'area anche dopo e tutto si
+    annulla con Ctrl+Z.
+  · Una distribuzione fatta con l'Area, scelta nell'albero, si riapre in Area con il suo contorno.

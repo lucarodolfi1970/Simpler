@@ -1,0 +1,12 @@
+SIMPLER 1.4.3  —  21 October 2026
+=================================
+
+NEW
+---
+- FPS: BESIDES THE FRAMES SHOWN, HOW MANY THE CARD COULD DRAW. The real-time view draws one frame per screen
+  refresh (vsync, like every web page and as WebView2 requires): on a 60 Hz screen the counter stops at 60, even
+  with an empty scene. This is intentional: there is no point drawing frames the screen doesn't show, the card
+  stays free for path tracing and doesn't heat up.
+  The counter now also shows "max ≈": every 20 frames Simpler measures how long the card takes to draw one until
+  the work is finished, and works out how many frames per second it could draw with that scene. The colour
+  (yellow/red) now follows this value, not the screen's limit.

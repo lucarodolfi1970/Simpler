@@ -1,0 +1,6 @@
+SIMPLER 1.32.0  —  25 ottobre 2026
+==================================
+
+- Pivot spostato a mano: nuovo pulsante con l'icona di un piccolo gizmo, accanto a Sposta / Scala / Distribuisci. Acceso, il gizmo diventa viola e trascinandolo si sposta solo il gizmo, il modello resta fermo: mettilo dove vuoi (per esempio sotto una ruota, sul cardine di una porta, al centro di un tavolo). Riclicca il pulsante: il gizmo torna normale e per quel modello quella è la sua posizione, anche dopo aver salvato e riaperto il progetto; spostare, ruotare e scalare il modello avviene attorno a quel punto, qualunque sia la scelta Centro / Base / Origine.
+- Vale per tutto il modello: se è selezionato un pezzo, il pivot viene messo al padre della gerarchia. Si annulla con Ctrl+Z.
+- Proprietà ▸ Trasformazione: «Pivot automatico» rimette il gizmo dove dicono Centro, Base o Origine.

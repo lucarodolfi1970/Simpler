@@ -1,0 +1,10 @@
+SIMPLER 1.76.5  —  2 November 2026
+==================================
+
+Terrain border blend: relief, water, volumetric and glass.
+
+- Relief (displacement) now blends along with the colour. Before, each zone moved its surface with its own map only, and a step remained at the border, for example the gravel stones ending in a sharp wall against the grass. Now the stones sink and disappear into the grass like the colours, and on the border the two sides move the surface by the same amount: no step between the two meshes.
+- A zone that blends with a zone with true displacement also gets the subdivision it needs. The render costs more: about 40% more in the test, because the lawn is subdivided too.
+- Water, volumetric and glass stay out: the zone keeps its material with a sharp border, on both sides, and the nearby zones do not blend with it. Mixing water or glass with grass would make no sense, and a copy of the material would lose waves, body of water and volume.
+- If you turn a zone's material into water or volumetric from its panel, the change goes to the zone's material, not to the copy with borders.
+- Materials imported with a model, not made by Simpler, also keep a sharp border.

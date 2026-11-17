@@ -1,0 +1,10 @@
+SIMPLER 1.75.5  —  31 ottobre 2026
+==================================
+
+Neve sul pezzo scelto e vista in tempo reale fluida con il vetro.
+
+- «Senza mantello» spento su un pezzo (la vernice della Qashqai), ma la neve non arrivava.
+  - Causa: l'interruttore era stato acceso sul modello intero. Così era scritto sul modello, sui gruppi e su ogni pezzo. Spento su un pezzo, restava acceso sui gruppi sopra, che decidevano ancora per quel pezzo, mentre il pannello mostrava «spento».
+  - Ora spegnerlo su un pezzo lo spegne anche sui gruppi sopra; gli altri pezzi restano come sono. Vale anche per «Niente pioggia», «Niente neve» e «Non fa riparo». Annulla riporta tutto com'era.
+  - Nei progetti già salvati: accendi e rispegni «Senza mantello» sul materiale, e la neve arriva.
+- Vista in tempo reale con vetri (Qashqai): la causa vera dei fotogrammi saltati è nel log della 1.75.3. Il motore della vista segna da solo i vetri a doppia faccia come «da rifare» a ogni fotogramma (15 000 volte in 10 secondi). Ora questi segni non contano più.

@@ -1,0 +1,4 @@
+SIMPLER 1.38.7  —  25 ottobre 2026
+==================================
+
+- Tessere della libreria sempre allineate: un nome su due righe non sposta più la miniatura verso l'alto. Le immagini stanno tutte alla stessa altezza e i nomi partono subito sotto. Vale per tutte le librerie: modelli, materiali, decal, sfondi, ecosistemi, cartelle, luci e oggetti. Prima i pulsanti centravano sempre il contenuto in verticale, anche dove la tessera chiedeva di allinearlo in alto.

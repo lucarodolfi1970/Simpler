@@ -1,0 +1,8 @@
+SIMPLER 1.13.59  —  23 October 2026
+===================================
+
+LIGHT FROM WATER: NO LONGER BURNT
+---------------------------------
+- Found the cause of the "burnt" look with lamps under water (and partly with the sun too): the light images were written to file through a colour transform, as if they were a photograph. Faint light came back up to 10 times stronger (0.01 became 0.10), strong light almost unchanged: bottoms and walls evenly bright, contrast lost.
+- Now they are saved as data. Checked with a flat water surface and a lamp under it: the light the surface sends back to the bottom matches the Fresnel formula (total reflection beyond 48.6°) within 4%, at the centre, at 1.5 m and at 3 m.
+- It was there since the first version of this light (1.13.50): with this fix every scene, with the sun too, gets the right reflected light.

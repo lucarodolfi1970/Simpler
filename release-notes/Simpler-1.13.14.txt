@@ -1,0 +1,10 @@
+SIMPLER 1.13.14  —  22 ottobre 2026
+===================================
+
+LIBRERIA: VIA IL MENU "SIMPLER"
+-------------------------------
+- Il menu "Simpler ▾" non c'è più: i menu della libreria sono Poly Haven ▾ · Personali ▾ · Luci · Scene.
+- I materiali di Simpler sono la cartella "Simpler" dentro Personali · Materiali, accanto alle tue cartelle (con le
+  stesse sottocartelle di prima: Superfici, Vetri, Gemme…). La ricerca trova sia i tuoi sia quelli di Simpler.
+- Le primitive (cubo, sfera, piano…) sono la cartella "Primitive" dentro Personali · Modelli 3D.
+- Le due cartelle non si possono spostare, rinominare o eliminare, e non ricevono materiali o modelli trascinati.

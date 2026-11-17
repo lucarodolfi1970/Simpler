@@ -1,0 +1,23 @@
+SIMPLER 1.74.0  —  30 October 2026
+==================================
+
+Every section of the panels has its icon, as in Ambience.
+
+- Materials (Colour, Roughness, Dirt, Metallic, Relief, Reflections and coat, Glass and transparency, Sheen, Subsurface, Emission, Texture mapping…), objects, lights, camera, decals, settings, ecosystems, disk usage, release notes: every section has a coloured icon next to its title.
+- It works in English too. Sections added in the future without their own icon get a generic one, so none is left without.
+- Ambience and Ocean keep the icons they had.
+
+Missing textures asked for at every opening, even when they were not textures:
+- Some FBX models coming from 3ds Max have, where the file of a map should be, only its name (for example «Map #5234338», no extension): it is an empty map already in the original model, there is no file to look for.
+- Now paths that name no file (no extension) are treated as empty maps: unplugged, only mentioned in the status bar, never asked for.
+- Also, in general: if you answer No to «Do you want to point to the folder?», for that project those textures are no longer asked for at every opening (the status bar says so). If you connect the drive again they are found by themselves; File ▸ Find missing textures looks for them whenever you want.
+
+Wave Height and Size «change nothing» and squares of reflected light on a very large water surface: it is the same problem.
+- To draw the waves Simpler divides the surface into small squares, at most 400 thousand: on a 139 m water plane each square is 27 cm. 16 cm waves do not fit, and Simpler reduces them to 0.5 cm. That is why the sliders seem to do nothing.
+- With almost flat water made of 27 cm squares, each square reflects the sun like a small mirror: hence the squares of light on the walls.
+- Reducing the water plane to the area needed (with the scale), the waves are the chosen ones again and the squares disappear.
+- The note under the sliders is now short and says what to do: «Waves reduced to 0.5 cm: the water surface is too large (139 m) to draw them. Reduce it to the area you need, or increase the Size.»
+
+Temporary folders never deleted:
+- Every time you closed Simpler, the engine's folders stayed in the Windows temporary folder: about 240 MB per session (copies of the scene for the render, pictures of the light reflected by the water, undo, previews). Over time they could become thousands of folders and fill the disk.
+- Now each folder knows which engine it belongs to, and at start Simpler deletes those of closed engines (in the background). Those left by previous versions are deleted after a day.

@@ -1,0 +1,7 @@
+SIMPLER 1.59.0  —  27 October 2026
+==================================
+
+- New «Update from the library…» (right click in the tree on a distribution, an ecosystem, a placed library model or a group containing them). A model corrected in the library (for example with «Fix model materials», or with «No snow mantle» on the inside of a car) stayed as it was in projects made before. Now a small window lists the models used there, with how many distributions, ecosystems and placed models use them, and the chosen ones are loaded again from the library in the whole project. Pieces and placed models stay where they are, objects put under a model move to the new one, the snow mantle is made again by itself. A single Ctrl+Z undoes everything.
+- Changes made in the project to those models (a material changed only here) are lost: the library wins. The window says so.
+- Before, in a project with an old model, even a new distribution copied the old model already there instead of taking it from the library. After the update it copies the new one.
+- From now on Simpler remembers which version of the library every model comes from: when opening a project, if a model changed in the library meanwhile, it asks whether to update it («Not now» leaves it as it is). For projects made before this version it cannot be known: the command by hand remains.

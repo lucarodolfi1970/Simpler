@@ -1,0 +1,8 @@
+SIMPLER 1.75.14  —  31 ottobre 2026
+===================================
+
+Selezione dei modelli immediata.
+
+- Selezionare un modello della libreria (per esempio un'auto) poteva bloccare la vista per molti secondi (fino a 15 s).
+  - Un modello selezionato si disegna come oggetto singolo, con contorno e gizmo, e questo richiede shader diversi da quelli delle copie. In alcuni casi la vista li preparava dentro un solo fotogramma, bloccandosi.
+  - Ora quegli shader si preparano in sottofondo appena il modello è pronto, così la selezione è immediata. Se ne manca ancora qualcuno, la vista li prepara senza bloccarsi.

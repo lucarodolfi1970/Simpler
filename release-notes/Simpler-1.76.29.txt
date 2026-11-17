@@ -1,0 +1,6 @@
+SIMPLER 1.76.29  —  3 novembre 2026
+===================================
+
+«Avanzate» non sembra più un pulsante.
+
+- La barra di «Avanzate» ora è di un blu medio con la scritta azzurra chiara: l'azzurro della versione precedente era troppo simile ai pulsanti principali (come «Posa le pietre»), che sono chiari con la scritta scura.

@@ -1,0 +1,7 @@
+SIMPLER 1.36.6  —  25 October 2026
+==================================
+
+- Triplanar (Box) projection with World reference on a turned object, for example a library car turned by 90°: in the path tracer the texture came out smeared, in stripes, while in real time it was right. Cycles picks the face of the projection from the object's orientation, the view from the world's. Now both use the same: the projection follows the object's orientation, in real time and in the path tracer. The texture still stays put when you move the object and continues between objects turned the same way.
+- «Centre on the object» and the automatic centring take the object's rotation into account.
+- Real-time view: the World projection on pieces drawn as instances now uses their real position.
+- Materials of projects already saved are fixed by themselves when opened.

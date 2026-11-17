@@ -1,0 +1,4 @@
+SIMPLER 1.37.4  —  25 ottobre 2026
+==================================
+
+- «La storia»: niente più nomi di altri programmi nel testo. Simpler è descritto come «tutta la potenza di Blender e Cycles, con un'interfaccia semplice e immediata che si ispira ai migliori programmi di visualizzazione in tempo reale».

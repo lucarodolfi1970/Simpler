@@ -1,0 +1,16 @@
+SIMPLER 1.4.7  —  21 October 2026
+=================================
+
+NEW
+---
+- IMPORT MODELS INTO THE LIBRARY: COLLECTIONS. New option "Every object in the file is a model of its own
+  (collections)": for files that contain several models together (e.g. an FBX with six tufts of grass), each main
+  object in the file, with its pieces, becomes a library model with its own name (without the .001 suffixes),
+  in the chosen folder, with its thumbnail and its textures.
+- MODEL ORIGIN: "Base" (centre of the base, at the lowest point: handy to set down plants, people, furniture),
+  "Centre" (3D centre) or "As in the file". With Base or Centre the model is saved with its origin at that
+  point: the gizmo in "Origin" mode and rotations start from there.
+- PROGRESS: as soon as a file is opened, its row shows how many models it contains and how far along it is (e.g.
+  3/6), the text under the bar says which model it is preparing ("model 3 of 6: …") and the bar advances model by
+  model. All in the background, as before: you can keep working.
+  With collections there is no check for existing names (the names are only known by opening the file).

@@ -1,0 +1,15 @@
+SIMPLER 1.13.26  —  22 ottobre 2026
+===================================
+
+MATERIALI CONDIVISI: LE MODIFICHE VANNO SOLO SULL'OGGETTO
+---------------------------------------------------------
+- Prima: Suolo e Sfera con lo stesso materiale; aprendo il materiale dal Suolo e facendolo rosso diventava rossa anche
+  la sfera, perché era lo stesso materiale.
+- Ora, quando apri un materiale da un oggetto e lo usano anche altri oggetti, sotto il Tipo c'è "Modifica:
+  Solo Suolo · Tutti (2)". Con "Solo …" (predefinito) alla prima modifica l'oggetto riceve una copia tutta sua del
+  materiale ("Bianco · Suolo"): gli altri oggetti non cambiano. Con "Tutti" le modifiche valgono per tutti, come
+  prima.
+- La copia non ha bisogno di essere salvata nella libreria per esistere: è nel progetto, legata a quell'oggetto. Per
+  darla anche ad altri oggetti trascina la sfera dell'anteprima sopra di loro; se vuoi tenerla anche per altri
+  progetti, "Salva nella libreria".
+- Il pulsante "Solo per questo oggetto" non serve più ed è stato tolto.

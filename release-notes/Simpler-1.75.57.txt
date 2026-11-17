@@ -1,0 +1,10 @@
+SIMPLER 1.75.57  —  1 novembre 2026
+===================================
+
+Le miniature delle scene diventano path tracing da sole.
+
+- Apri una scena cliccando la sua miniatura e lasci finire il path tracing nella vista, fino a «✓ finito»: l'immagine diventa la nuova miniatura della scena e un riquadro verde lo conferma. Così, senza fare altro che guardarle in path tracing, le scene prendono a poco a poco miniature molto più belle.
+- La sostituzione avviene solo se da quando hai aperto la scena non è cambiato niente: inquadratura, luci, ambiente, oggetti, materiali. Se sposti la camera o modifichi qualcosa, l'immagine non è più quella della scena e la miniatura resta com'è. Se interrompi il path tracing prima della fine, la miniatura non cambia.
+- La miniatura è ritagliata come quelle di sempre, quindi il formato non cambia. La data della scena non viene toccata, perché una miniatura più bella non è una modifica: i fotogrammi del video AI continuano a considerare la scena uguale.
+- «Aggiorna» sulla scena rimette la miniatura della vista in tempo reale, come prima.
+- Nuovo controllo automatico «pt_thumb»: verifica che la miniatura venga sostituita quando non è cambiato niente, che non lo sia dopo una modifica e che la data della scena resti uguale.

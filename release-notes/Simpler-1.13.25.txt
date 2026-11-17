@@ -1,0 +1,8 @@
+SIMPLER 1.13.25  —  22 ottobre 2026
+===================================
+
+EDITOR DEI MATERIALI
+--------------------
+- Sotto il Tipo, al posto dei nomi in fila: "Su: Suolo" con un solo oggetto, altrimenti "Su 152 oggetti ▾". Il
+  clic apre l'elenco degli oggetti (in ordine alfabetico, scorrevole); il clic su uno lo seleziona nella scena. Gli
+  oggetti dentro i modelli delle distribuzioni sono contati in fondo.

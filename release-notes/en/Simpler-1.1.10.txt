@@ -1,0 +1,24 @@
+SIMPLER 1.1.10  —  18 October 2026
+==================================
+
+BUG FIXES
+---------
+- Very slow final render on models with very large textures (an interior with 442 textures: 1920×1080
+  estimated at 50 minutes). When the original textures take more memory than the graphics card has, Cycles
+  must work in the computer's memory, many times slower. Now the final render picks by itself (Auto) the
+  largest textures that fit in video memory: for example copies at 2048 pixels, which for a 2K image lose
+  no detail. The copies are prepared only once and stay in the cache.
+- Applying a material made the 3D view be prepared again from scratch: now the material appears at once,
+  in every case (a material with textures the view does not have yet appears in its base colour until the
+  view is prepared again for other reasons).
+- In the final render screen the phase text overlapped the percentage and time.
+
+NEW FEATURES
+------------
+- Final render › Textures: Auto (recommended) / Full / 4K / 2K.
+- "Resources" button at the top: in the sidebar, video memory, graphics card usage and temperature,
+  processor, computer and engine memory, and how much video memory the scene textures would need
+  (originals, at 2048 and at 1024 pixels), with an indication of whether they fit on the card. Updated every second.
+- Accordion sidebar sections: click the heading to close or open them (the state is remembered).
+- Diagnostics: Simpler's logs record the reason for each new preparation of the 3D view, the device used by
+  the final render (GPU) and its phases.

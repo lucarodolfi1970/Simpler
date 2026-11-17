@@ -1,0 +1,10 @@
+SIMPLER 1.17.2  —  24 October 2026
+==================================
+
+SAFETY NETS
+-----------
+- Final render: while it runs, panels, tree, library and keys are locked (a change of the scene, a new project or a save in the middle of the render would end up in the picture or break it). A key pressed says so in the status bar.
+- Esc during the final render asks whether to stop it (before, it offered to stop the engine as if it were stuck).
+- Closing Simpler (X or Alt+F4) during the final render: asks whether to stop the render and close; with Yes the render stops and then Simpler closes as usual (with the question about unsaved changes).
+- Closing during a save, an opening, an import or the bulk material fix: a message asks to wait for the end, Simpler stays open.
+- During a save keys are paused; Esc no longer offers to stop the engine (the file could be left incomplete).

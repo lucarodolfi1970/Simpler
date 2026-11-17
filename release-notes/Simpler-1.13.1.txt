@@ -1,0 +1,15 @@
+SIMPLER 1.13.1  —  22 ottobre 2026
+==================================
+
+BUG CORRETTI
+------------
+- ACQUA SCURA E PIENA DI PUNTINI CON LE CAUSTICHE ACCESE (piscina al chiuso): con "Caustiche" accese anche i
+  vetri delle finestre diventavano "lenti" delle caustiche nitide. Il sole doveva passare prima dal vetro della
+  finestra e poi dall'acqua, un percorso che Cycles risolve male: la stanza restava al buio e l'acqua si riempiva
+  di rumore. Ora fanno caustiche solo l'acqua con le onde vere e i pezzi di vetro pieni (gemme, vasi, bicchieri:
+  più spessi di 2 cm); le lastre sottili (finestre, vetrate) lasciano entrare il sole come sempre, anche se usano
+  lo stesso materiale di una gemma.
+- TORBIDITÀ DELL'ACQUA: ora parte da 0% (acqua limpida). La torbidità con le caustiche accese porta molto rumore:
+  per una piscina limpida lasciala a 0% (c'è un avviso nel pannello).
+- LIBRERIA: "Luci" torna un pulsante a sé nella barra della libreria (prima era dentro il menu Simpler):
+  Poly Haven ▾ · Simpler ▾ (Materiali, Primitive) · Personali ▾ · Luci · Scene.

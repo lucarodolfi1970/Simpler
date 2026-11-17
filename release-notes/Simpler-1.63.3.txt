@@ -1,0 +1,4 @@
+SIMPLER 1.63.3  —  28 ottobre 2026
+==================================
+
+- Box «Solo ciò che vede la camera» più compatto: niente testi sotto gli interruttori, la spiegazione breve è nel suggerimento al passaggio del mouse.

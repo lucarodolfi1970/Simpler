@@ -1,0 +1,6 @@
+SIMPLER 1.60.0  —  27 ottobre 2026
+==================================
+
+- Nuovo «Nascondi la neve» nel menu del tasto destro sulla vista (compare solo quando nevica con il manto spesso). Con la neve nascosta il manto sparisce dalla vista e dalle immagini e non viene più ricalcolato dopo ogni spostamento: sposti, ruoti e aggiungi modelli senza il riquadro «Occupato». Il bianco della neve sui materiali resta. In basso nella vista un'etichetta ricorda «Neve nascosta».
+- «Mostra la neve» (stesso menu) rifà il manto una volta sola, con tutto quello che hai cambiato nel frattempo. Se non hai cambiato nulla, torna subito com'era.
+- Non si salva nel progetto: aprendo un progetto la neve è sempre visibile. Togliendo la neve dall'Ambiente la scelta si azzera.

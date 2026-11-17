@@ -1,0 +1,10 @@
+SIMPLER 1.13.34  —  23 October 2026
+===================================
+
+IMPORT MODELS INTO THE LIBRARY: THE SIZE BEFORE IMPORTING
+---------------------------------------------------------
+- As soon as you add the files (one by one or a whole folder) Simpler measures them in the background, one after the other: every row shows width × depth · height (in mm, cm, m or km). So you see at once if a model is too small or too big.
+- Every row has its own scale «×» (1 = as in the file): type 25.4 to enlarge, 0.01 to shrink, and the row shows the result at once (e.g. «7 cm tall → 1.78 m»).
+- «Scale for all» writes the same factor in every row; then single rows can be changed.
+- Odd sizes (smaller than 3 cm or bigger than 2 km) are orange. When you press Import, if there are any, Simpler says so and asks whether to import them like that or go back to the list to change the scale.
+- «Check the scale after each model» stays: the pause shows the size even when the library does not have it yet.

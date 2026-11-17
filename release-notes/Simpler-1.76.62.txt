@@ -1,0 +1,9 @@
+SIMPLER 1.76.62  —  6 novembre 2026
+===================================
+
+Note di rilascio riscritte: parlano solo di Simpler.
+
+- Tutte le note, in italiano e in inglese, ora descrivono le modifiche di ogni versione senza citare progetti, scene o computer particolari: al posto dei nomi dei progetti di prova ci sono descrizioni generiche («un interno grande», «una scena di mare», «una scena con migliaia di oggetti»).
+- Tolte le parti interne di verifica («Provato», «Non provato», i controlli prima della consegna e i loro risultati) e i riferimenti ai registri di un computer.
+- Tolti i nomi di altri programmi di rendering.
+- I numeri restano dove spiegano un miglioramento (tempi prima e dopo, memoria).

@@ -1,0 +1,7 @@
+SIMPLER 1.76.19  —  2 November 2026
+===================================
+
+Natural coasts.
+
+- The edge of new terrains goes down irregularly: with the sea at the foot of the terrain the coast has bays, headlands and islets instead of the straight line of the square.
+- In the terrain's Advanced there is «Edge with bays and headlands»: on for new terrains, off for the ones made before (they stay as they are); you can switch it on or off whenever you like.

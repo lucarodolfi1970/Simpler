@@ -1,0 +1,6 @@
+SIMPLER 1.76.11  —  2 novembre 2026
+===================================
+
+Fotogrammi del video: prima chiede.
+
+- «Usa la vista attuale» e «Stessa inquadratura dell'inizio» chiedono conferma prima di far partire il render del fotogramma, e avvisano se sostituisce quello che c'è già. Prima un clic faceva partire subito il render.

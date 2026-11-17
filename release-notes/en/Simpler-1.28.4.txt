@@ -1,0 +1,5 @@
+SIMPLER 1.28.4  —  25 October 2026
+==================================
+
+- «Convert to a Simpler material» on scanned models (for example from Sketchfab): many GLBs have «unlit» materials, with the light already in the photo. Blender imports them as an emission mixed with a transparent shader, and the editor could not read them: the conversion gave a white material. Now the texture becomes the colour of the material, matte (roughness 0.9). The same for materials made with Diffuse, Emission or Glossy and for those mixing a Principled with something else: the main shader is read.
+- Undo after the conversion: the real-time view really goes back to the original material. The view kept materials by name and the converted one had taken the place of the original; now the model's originals are kept aside and come back with undo (and with «Restore original»).

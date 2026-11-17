@@ -1,0 +1,11 @@
+SIMPLER 1.75.54  —  1 November 2026
+===================================
+
+«Optimize polygons»: a 3D preview you can turn, in a large window.
+
+- The window is now large, about 88% of the screen, and can be resized. The commands are on the left; on the right is the 3D preview with the «Before» and «After» model side by side, with materials and textures.
+- The two views share the same framing: drag to turn the model, right button to move it, wheel to zoom, double click to frame it again. Whatever you do in one view the other does too, so you can get close to a detail and compare the two versions from the same spot. At the top of each view is its triangle count.
+- «Wireframe» draws the triangles over the materials, in both views: up close you can see clearly where the shape was simplified.
+- «Before» is prepared as soon as you open the window. «After» updates when you let go of the slider; on models over 1.5 million triangles it updates with «Compute preview». Textures are reduced as in the real-time view.
+- The preview does not touch the scene: Simpler prepares a copy of the model, as for new pieces in the view. The main view is not weighed down, because the preview exists only while the window is open.
+- The automatic «decimate» check now also verifies that the preview is prepared without leaving objects in the scene.

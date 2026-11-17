@@ -1,0 +1,16 @@
+SIMPLER 1.17.0  —  24 ottobre 2026
+==================================
+
+PANNELLI PIÙ SEMPLICI: «AVANZATE»
+---------------------------------
+- In ogni scheda restano in vista solo i comandi principali; quelli meno usati sono in un riquadro arancio «Avanzate», subito sotto, chiuso all'inizio. Clic sul titolo per aprirlo: resta aperto (o chiuso) anche le volte successive.
+- Un pallino arancio sul titolo chiuso dice che dentro qualcosa non è al valore predefinito. Il pulsante «Valori predefiniti» lo rimette a posto.
+- Rendering: in vista preset, denoiser, caustiche, esposizione, luce di riempimento, ombre/luci e resa colore. In Avanzate campioni e soglia rumore, tutti i rimbalzi e la GI veloce, le singole caustiche, la luce riflessa dall'acqua, il filtro riflessi, i limiti di luce e i toni AgX.
+- Ambiente: in Avanzate giorno, latitudine, nord e dimensione del sole; aria, ozono e altitudine; altezza, spessore, base, sbuffi, densità e ombre delle nuvole volumetriche; nebbia volumetrica; stelle e luna.
+- Gli ambienti (Alba, Tramonto…) non cambiano più le impostazioni avanzate che hai modificato tu (per esempio la latitudine, la nebbia volumetrica, la luna).
+- Fotocamera: in Avanzate lamelle e rotazione delle lamelle, decentramento.
+- Materiali: ogni sezione tiene il suo comando principale; in Avanzate luminosità/saturazione/contrasto della texture, peso e inversione delle mappe, glossy, DirectX e bump, riflesso e rugosità della vernice, indice di rifrazione, parete sottile, colore in profondità, dispersione, morbidezza del velluto, profondità della sottosuperficie, luminanza e temperatura dell'emissione, inverti e ritaglio netto, dettagli del rilievo vero e della suddivisione, stira/ruota/sposta della mappatura.
+
+CORREZIONI
+----------
+- Alberi davanti alle nuvole volumetriche: niente più segni chiari frastagliati sul bordo delle chiome (la foschia trattava quei pixel come se fossero lontani quanto il cielo).

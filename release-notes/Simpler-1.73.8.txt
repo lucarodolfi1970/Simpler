@@ -1,0 +1,29 @@
+SIMPLER 1.73.8  —  30 ottobre 2026
+==================================
+
+Il mare con le proporzioni giuste: onde corte, onde fino all'orizzonte, niente riga scura.
+
+- Onde dei preset «enormi», soprattutto con il mare calmo vicino a una persona.
+  - Causa: la simulazione disegna solo le onde lunghe. Con Calmo, l'onda principale è lunga circa 7,5 m e alta 15 cm: giusta, ma da sola sembra una grande ondulazione liscia. Nel mare vero ci sono anche le onde corte, da pochi centimetri a mezzo metro, ed è soprattutto da quelle che dipende come si spezza il riflesso.
+  - Misurato: la pendenza delle onde era da 7 a 13 volte inferiore a quella del mare vero per lo stesso vento (misure classiche di Cox e Munk). Calmo: 0,0015 invece di 0,018.
+  - Ora Simpler aggiunge le onde corte che mancano: orientate soprattutto col vento, con la forma del mare vero, scalate in modo che la pendenza totale sia esattamente quella misurata per quel vento. Vale per tutti i preset e per ogni valore di vento.
+  - Le increspature delle Avanzate restano come prima, in più.
+- Onde che si interrompevano: oltre la zona vicina il mare diventava uno specchio piatto, con un bordo visibile dall'alto e i riflessi delle nuvole tirati in lunghe strisce.
+  - Ora le stesse onde della simulazione continuano fino all'orizzonte come disegno della superficie (una mappa delle loro pendenze): vicino in 3D, lontano come pendenze. Il bordo non c'è più.
+  - Dove anche quelle diventano più piccole di un pixel, il mare prende la ruvidità del mare vero per quel vento: la scia del sole si allarga come nella realtà.
+- Riga scura sull'orizzonte: il mare finiva a 20 km e dalla fessura tra il suo bordo e l'orizzonte si vedeva il cielo sotto l'orizzonte, blu scuro. Ora un ultimo anello piatto arriva a 200 km.
+- Tutto questo anche nella vista in tempo reale.
+- Prestazioni:
+  - la griglia del mare ha meno punti di prima (oltre la zona delle onde vere si allarga più in fretta): per esempio 261 mila punti invece di 271 mila, compreso l'anello;
+  - le mappe si rifanno solo quando cambiano le onde: circa 0,2 s;
+  - i progetti già salvati rifanno la griglia e la costa una volta, alla prima apertura (circa 4 s).
+
+Caustiche nel mare: il metodo del materiale acqua sul mare non funziona; arriveranno con un'altra strada.
+- Il cursore «Increspature» (Avanzate) ora regola anche le onde corte: al 35% (predefinito) quelle del mare vero per quel vento; più basso, il mare è più liscio e riflette come uno specchio.
+
+Bug di funzioni già chiuse (trovati oggi):
+- Piscina: la luce riflessa dall'acqua sul soffitto spariva riaprendo il progetto e tornava solo spegnendo e riaccendendo l'interruttore.
+  - Causa: le immagini di quella luce stanno in una cartella temporanea. Riaprendo il progetto non c'erano più, e il controllo delle texture mancanti le prendeva per texture dell'utente: le segnalava («Non ho trovato 24 texture»: axis0_….exr) e le scollegava dai materiali. Simpler ricalcolava la luce, ma i collegamenti restavano tagliati.
+  - Ora quelle immagini non sono più texture mancanti (Simpler le rifà da solo) e non vengono copiate nella cartella del progetto. I progetti già salvati con i collegamenti tagliati si riparano da soli all'apertura.
+  - In una piscina con le caustiche, con la 1.73.7 si tagliavano 24 collegamenti su 24, ora nessuno.
+- Motore bloccato per sempre: se l'Ambiente cambiava due volte mentre si scaricavano stelle e luna (cielo notturno, la prima volta su un PC nuovo o con rete lenta), il motore si fermava. Dove stelle e luna erano già scaricate non succedeva.

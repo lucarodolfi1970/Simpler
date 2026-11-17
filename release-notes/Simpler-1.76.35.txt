@@ -1,0 +1,6 @@
+SIMPLER 1.76.35  —  3 novembre 2026
+===================================
+
+Comandi preferiti: valgono per tutti gli ecosistemi.
+
+- Corretto: il cuore di un comando nel pannello Ecosistemi (per esempio «Oltre il bordo») restava legato all'ecosistema su cui l'avevi messo, e scegliendone un altro spariva. Ora un comando preferito vale per tutti gli ecosistemi. I cuori già messi vengono convertiti da soli.

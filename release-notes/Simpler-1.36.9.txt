@@ -1,0 +1,6 @@
+SIMPLER 1.36.9  —  25 ottobre 2026
+==================================
+
+- Materiali ▸ Mappatura texture ▸ Avanzate: nuovo interruttore «Centra ogni pezzo». Ogni parte staccata dell'oggetto ha la texture centrata sul proprio centro, invece di un solo centro per tutto l'oggetto. Serve per i due fanali di un'auto che stanno nello stesso oggetto, per le lenti di un fanale, per piastrelle separate. Vale per UV, Triplanare, Piana, Cilindro e Sfera, in tempo reale e nel path tracer. «Sposta X/Y» spostano tutti i pezzi allo stesso modo.
+- Decal: in Avanzate c'è ora anche il riquadro «Immagine (colore)». La figura della decal si cambia come le altre mappe e la misura resta quella che è.
+- Decal: clic destro su una mappa per «Copia la mappa», «Incolla la mappa» (anche una mappa copiata da un materiale) e «Incolla immagine dagli appunti».

@@ -1,0 +1,8 @@
+SIMPLER 1.17.5  —  24 October 2026
+==================================
+
+TREES IN FRONT OF CLOUDS AND A FASTER FINAL RENDER
+--------------------------------------------------
+- The last bright dots on sparse twigs of the crowns in front of volumetric clouds are gone: where a twig covers only a small part of the pixel, the haze applies only to that part and at its distance (no longer to the whole pixel as if it were as far as the sky). Against a clear sky nothing changes.
+- Final render: the minimum of samples per pixel goes from a quarter to an eighth of the samples (never under 256). Measured on a sunset with volumetric clouds at 2048 samples: 15% less time, same picture (99% of the pixels identical).
+- Measurement (for development), third round on the clouds: the second round showed that neither the maximum number of steps nor the step of the material changes time or picture. It now tries volumes without "Biased", without volume guiding and without the light tree, plus a whole render without "Biased".

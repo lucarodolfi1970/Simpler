@@ -1,0 +1,11 @@
+SIMPLER 1.13.35  —  23 October 2026
+===================================
+
+DELETING A MODEL FROM THE LIBRARY NO LONGER SPOILS THE SCENES
+-------------------------------------------------------------
+- Deleting a model from the library deleted its textures too: the copies already in the scene (and in saved projects) read them from there and turned pink. Now the model leaves the library but its textures stay on disk: the scenes keep seeing them.
+
+MISSING TEXTURES WHEN SAVING
+----------------------------
+- When saving to the library a model whose textures are gone (deleted with an older version), Simpler tries to recover them: from memory or from the reduced copy of the 3D view, saving them next to the model.
+- If that is not possible, a warning lists the missing textures and explains how to get them back: import the model again from its original file. Before, the model was saved pink without a word.

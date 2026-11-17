@@ -1,0 +1,12 @@
+SIMPLER 1.38.0  —  25 ottobre 2026
+==================================
+
+- Ecosistemi, primo passo. Componi la vegetazione una volta e la rimetti su qualunque superficie. Simpler non fornisce ecosistemi già fatti, perché ognuno li costruisce con i propri modelli, anche quelli commerciali.
+  - Pulsante «Ecosistemi» nella barra in alto, accanto ad Ambiente. Il pannello a destra crea il banco di prova: un terreno di 20 m accanto alla scena (50 m per i boschi, in Avanzate). Lì dipingi o riempi aree con Scatter, uno strato alla volta, poi premi «Salva ecosistema»: l'inquadratura del momento diventa la miniatura.
+  - Menu «Ecosistemi» nella libreria, dopo Decal: trascina un ecosistema su un oggetto e si popola. Se l'oggetto ha più materiali, si popola solo quello sotto il mouse, per esempio il prato e non il vialetto. Il clic lo mette sull'oggetto selezionato. Con il tasto destro: Rinomina ed Elimina.
+  - Il campione si ripete a tessere girate a caso. Ogni pezzo si appoggia sulla superficie, anche in pendenza, e i pezzi che cadono fuori dall'oggetto restano fuori. Ogni strato diventa una distribuzione con istanze, tutte dentro un gruppo «Ecosistema».
+  - Selezionato l'ecosistema nella scena, il pannello cambia Densità e Scala e propone «Altra disposizione». In Avanzate: Gira le tessere, Segui la pendenza, Solo sul materiale.
+  - Prima di mettere molti pezzi, oltre 400.000, Simpler chiede conferma. Oltre 3 milioni si ferma e suggerisce di abbassare la densità.
+  - Anche distribuzioni già fatte nella scena possono diventare un ecosistema: selezionale e salva.
+- Il pulsante Scatter (il pennello) è ora nella barra in alto, accanto ad Ambiente ed Ecosistemi, perché apre il suo pannello a destra come gli altri. Il tasto B funziona come prima.
+- Il cielo preparato per la vista in tempo reale: se non riesce, l'errore viene scritto nel registro del motore.

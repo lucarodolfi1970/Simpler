@@ -1,0 +1,14 @@
+SIMPLER 1.76.56  —  5 novembre 2026
+===================================
+
+Modificare un materiale del terreno non blocca più.
+
+- Prima ogni modifica a un materiale usato da una zona del terreno (aggiungere una mappa, cambiare un colore) costava 25-31 s: Simpler rifaceva da zero tutti i materiali del terreno, perché ognuno contiene anche i vicini nella fascia di sfumatura. Lo faceva anche in SmartView, dove quei materiali non si vedono.
+- Ora la modifica è immediata (0,7 s nella prova automatica, prima 25-31 s). I materiali del terreno si rifanno una volta sola quando servono a Cycles (path tracing, render finale, miniature), e solo con l'ultimo stato: dieci modifiche di fila costano una ricostruzione.
+- La vista in tempo reale mostra subito la modifica, come prima.
+- L'anteprima dei materiali con texture molto grandi (foto di pareti o aeree, decine di metri) mostra la texture intera sulla sfera invece di un pezzetto sfocato. Il materiale non cambia.
+- Sfumatura dei bordi del terreno: una texture di decine di metri non decide più il bordo con le sue chiazze chiare e scure (bordi seghettati di metri); conta sempre meno sopra i 10 m. Le texture normali restano come prima.
+- «Dimensione della texture grande» ora è in metri, con «m» accanto al valore come gli altri cursori.
+- Tooltip aggiunti ai cursori che non lo avevano: Dimensione delle macchie di tono, Dimensione delle macchie, Contrasto, Forza normal, Intensità, Intensità bump, Rugosità vernice, Morbidezza, Temperatura, Stira X/Y, Rotazione, Sposta X/Y. Un controllo automatico verifica che ogni cursore abbia il suo.
+- «Occupato · attendi» in inglese: i nomi dei comandi (es. «Edit material») ora sono tradotti.
+- Nuovi controlli automatici: una modifica a un materiale del terreno deve rispondere in meno di 4 s e comparire nel render; ogni nome mostrato in «Occupato · attendi» deve avere la traduzione inglese.

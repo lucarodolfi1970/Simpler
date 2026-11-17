@@ -1,0 +1,5 @@
+SIMPLER 1.71.5  —  30 October 2026
+==================================
+
+- When you open a project, start a new scene or launch the program, the scene tree appears all closed: only the main rows, and you open what you need. Before, the models opened at once and the list was long to scroll.
+- Nothing changes while you work: an imported model, an object selected in the view or a new item still open the rows needed to see it.

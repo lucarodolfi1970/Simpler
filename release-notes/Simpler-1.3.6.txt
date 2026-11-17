@@ -1,0 +1,13 @@
+SIMPLER 1.3.6  —  20 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- MEMORIA VIDEO DELLE ANTEPRIME: il secondo Blender (anteprime dei materiali e miniature dei modelli) poteva
+  occupare molti GB di memoria video (7,6 GB nella scheda Risorse). Cause e rimedi:
+  - teneva sulla scheda tutto quello che aveva disegnato (texture e mesh di ogni modello importato o salvato):
+    ora dopo ogni immagine la scheda viene liberata;
+  - leggeva le texture alla risoluzione piena (anche 4K/8K) per immagini di 256 px: ora al massimo 1024 px;
+  - restava acceso anche quando non faceva niente: ora si chiude dopo 45 secondi senza lavoro e la sua memoria
+    video torna a zero. La richiesta successiva lo riavvia da sola (qualche secondo in più solo per quella).
+  Le anteprime e le miniature sono e restano immagini PNG salvate su disco.

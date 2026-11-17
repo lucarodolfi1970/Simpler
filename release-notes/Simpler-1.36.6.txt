@@ -1,0 +1,7 @@
+SIMPLER 1.36.6  —  25 ottobre 2026
+==================================
+
+- Proiezione Triplanare (Box) con riferimento Mondo su un oggetto ruotato, per esempio un'auto della libreria girata di 90°: nel path tracer la texture usciva strisciata, a righe, mentre in tempo reale era giusta. Cycles sceglie la faccia della proiezione dall'orientamento dell'oggetto, la vista da quello del mondo. Ora le due usano la stessa cosa: la proiezione segue l'orientamento dell'oggetto, in tempo reale e nel path tracer. La texture resta comunque ferma quando sposti l'oggetto e continua tra oggetti ruotati allo stesso modo.
+- «Centra sull'oggetto» e la centratura automatica tengono conto della rotazione dell'oggetto.
+- Vista in tempo reale: la proiezione in Mondo sui pezzi disegnati come istanze ora usa la loro posizione vera.
+- I materiali dei progetti già salvati vengono sistemati da soli all'apertura.

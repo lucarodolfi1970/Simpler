@@ -1,0 +1,7 @@
+SIMPLER 1.17.12  —  24 ottobre 2026
+===================================
+
+NUVOLE: SECONDO STRATO E CIELO COPERTO A BANCHI
+-----------------------------------------------
+- Nuovo interruttore «Secondo strato di nuvole» nella scheda Nuvole (con le nuvole volumetriche): un velo più alto e leggero sopra il primo, come nei cieli coperti veri, con masse scure sotto, strato chiaro e rotto sopra e squarci di luce tra i due. «Copertura strato alto» regola quanto cielo copre. Acceso, un avviso ricorda che la vista ray-traced e il render finale possono richiedere fino al doppio del tempo: decidi tu.
+- I preset «Nuvoloso» di «Colori da una foto» non danno più una coltre uniforme al 90%: scelgono grandi masse scure al 70%, con squarci. Per confrontarle con le foto la tabella dei colori si completa da sola al prossimo avvio (circa 10 minuti in background, avanzamento nella barra in basso); fino ad allora i preset Nuvoloso funzionano come prima.

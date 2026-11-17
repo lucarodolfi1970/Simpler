@@ -1,0 +1,6 @@
+SIMPLER 1.51.0  —  27 October 2026
+==================================
+
+- Rain and snow on the object also with several objects selected (for example the inner parts of a car): «Always dry», «Does not shelter», «No snow mantle» and «Snow detail» apply to the whole selection. Each switch is on when it is on for all, off when it is off for all, with a small «multi» when the selected ones differ; a click turns it on (or off) for all.
+- The card is called «Rain and snow» and is always there, also when it neither rains nor snows: the choices can be prepared beforehand. They are values of the model: when you save it in the library they stay with it and apply wherever you use it, also in distributions.
+- Snow: the parts of a distribution model with «No snow mantle» stay without a mantle.

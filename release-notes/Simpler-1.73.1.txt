@@ -1,0 +1,8 @@
+SIMPLER 1.73.1  —  30 ottobre 2026
+==================================
+
+Costa corretta: in alcune scene il mare era opaco come vernice, perché la costa non trovava nulla da toccare.
+
+- Il suolo dell'Ambiente inclinato (o abbassato sotto il livello del mare) ora è il fondale del mare: l'acqua diventa trasparente dove è bassa e sempre più blu dove si fa profonda. Il calcolo è istantaneo: per il suolo, che è un piano, non servono raggi. Il suolo piatto messo dall'Ambiente appena sotto il mare resta escluso; in quel caso il pannello continua a suggerire di toglierlo.
+- I modelli della libreria (come la scogliera Poly Haven) contano per la costa. Prima erano esclusi per errore, perché hanno la stessa etichetta dei modelli delle distribuzioni.
+- Una scena senza nulla al livello del mare non dà più errore nel calcolo della costa.

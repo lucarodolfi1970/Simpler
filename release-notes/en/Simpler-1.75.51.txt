@@ -1,0 +1,9 @@
+SIMPLER 1.75.51  —  1 November 2026
+===================================
+
+«Paint dirt» visible again in the path tracing.
+
+- In big projects the painted dirt showed in the real-time view but was missing, or almost transparent, in the path tracing. It could also be missing in the final render, when textures are reduced.
+- The cause: to lighten the path tracing view, Simpler replaces big images with reduced copies. It did this with the painted dirt map too, but that is not a photo, it is a data map: besides the amount of dirt, its colours hold the depth of the painted surface. Reduced, those values got mixed, no surface matched any more and the dirt vanished.
+- Now Simpler's data maps are never reduced: painted dirt, painted puddles and snow, the rain shelter. Projects already saved too: just open them again.
+- New automatic check «data_maps_not_proxied»: it fails with the old code, it passes with the fix.

@@ -1,0 +1,6 @@
+SIMPLER 1.76.13  —  2 novembre 2026
+===================================
+
+Ricerca nella libreria per scheda.
+
+- Il testo di ricerca vale solo per la scheda in cui l'hai scritto: passando a un'altra scheda la ricerca riparte vuota, tornando indietro ritrovi il testo di prima.

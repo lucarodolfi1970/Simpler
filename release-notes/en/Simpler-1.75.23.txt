@@ -1,0 +1,12 @@
+SIMPLER 1.75.23  —  31 October 2026
+===================================
+
+The chart of the samples stayed flat in tiled renders: fixed.
+
+- In your 4K render the chart jumped up halfway and then stayed flat while the samples went from 152 to 184.
+  - Cause: the 4K render goes by tiles (4 here). When Cycles moves to the next tile it first writes the new tile count with the samples still at the end of the tile before («Rendered 1/4 Tiles, Sample 512/512»), and only then starts again («Sample 1/512»). Simpler read that line as a whole tile more: half the render with 4 tiles. The chart keeps the highest point reached, so it stayed up there until the real samples went past it.
+  - The bar and «sample X of Y» made the same jump for a moment at every change of tile.
+  - Now that line counts as the start of the new tile, and the samples never go back (after the last tile Cycles writes «Sample 0/512»).
+- Tested: with a real Cycles render in 4 tiles the samples climb 0, 4, 8, 12, 16 without jumps.
+
+The 4K render running now finishes normally; only its chart will stay wrong.

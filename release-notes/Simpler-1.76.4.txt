@@ -1,0 +1,12 @@
+SIMPLER 1.76.4  —  1 novembre 2026
+==================================
+
+Terreno: i materiali delle zone si fondono al confine.
+
+- Nuovo cursore «Sfumatura dei bordi» nel pannello del terreno (0–5 m, 2,5 m di base). Dove due zone si toccano, per esempio il prato e la ghiaia, i loro materiali si mescolano anche senza ecosistemi: i sassi escono dall'erba e l'erba resta fra i sassi, con un bordo irregolare e non una dissolvenza. Al confine i due lati coincidono: nessuna linea.
+- Le zone restano mesh separate, ognuna con il suo materiale. Il materiale che vedi su una zona è una copia «con i bordi» di quello che le hai dato: modificarlo nel pannello del materiale modifica quello della zona, e un materiale trascinato su una zona viene sfumato da solo con le zone vicine.
+- Nelle Avanzate: «Irregolarità del bordo», quanto il confine si frastaglia.
+- Funziona con tutti i materiali di Simpler e della libreria, non solo con quelli automatici del terreno. Nella vista in tempo reale la sfumatura usa il colore e la ruvidità della zona vicina; il path tracing usa il materiale intero.
+- I terreni creati prima di questa versione vengono rifatti la prima volta che si usa il cursore (serve la distanza dai confini, che ora viene calcolata con il terreno).
+- Ogni zona ha anche una mappa UV piana in metri: un materiale proiettato con le UV ora si posa correttamente sul terreno.
+- Corretto: nel controllo automatico completo, il passo «map_scale» si interrompeva per un errore introdotto nella 1.76.1.

@@ -1,0 +1,10 @@
+SIMPLER 1.13.33  —  23 ottobre 2026
+===================================
+
+IMPORTA MODELLI NELLA LIBRERIA: LA SCALA
+----------------------------------------
+- Nuova riga «Scala per tutti» nel passo 3: ×1 = come nel file. Si può scrivere un fattore qualsiasi (es. 25,4) o sceglierne uno veloce: ×0,01, ×0,1, ×2,54, ×10, ×25,4, ×100. Vale per tutti i modelli dell'elenco.
+- Nuovo interruttore «Controlla la scala dopo ogni modello»: dopo ogni import Simpler si ferma e mostra miniatura e dimensioni (larghezza × profondità · altezza in mm, cm, m o km). Scrivi un fattore solo per quel modello, vedi subito quanto diventerà grande e premi Prosegui per passare al successivo, oppure Ferma.
+  Con «Usa questo fattore anche per i prossimi modelli» la correzione vale per il resto dell'elenco e Simpler non si ferma più.
+- Per un file con più modelli (collezioni) il fattore vale per tutti i modelli di quel file.
+- Ogni riga, dopo l'import, mostra le dimensioni del modello.

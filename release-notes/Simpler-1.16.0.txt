@@ -1,0 +1,14 @@
+SIMPLER 1.16.0  —  24 ottobre 2026
+==================================
+
+TRAMONTI: SOLE, ALONE E NUVOLE ACCESE DA SOTTO
+----------------------------------------------
+- Il disco del sole non è più un disco bianco: ha il colore che mostra una fotografia, bianco-giallo alto nel cielo, arancio e poi rosso vicino all'orizzonte (dalla stessa attenuazione dell'aria che colora la luce), luminoso e sempre più chiaro del cielo attorno, un po' più scuro verso il bordo come il sole vero. È tagliato dall'orizzonte e la sua dimensione resta quella che scegli.
+- Alone attorno al sole: la foschia del cielo si accende verso il sole con il colore della sua luce (le goccioline la diffondono in avanti), il grande alone arancio dei tramonti al posto di un velo grigio uniforme.
+- Nuvole volumetriche accese da sotto: dopo che il sole è sparito dal suolo, le nuvole alte lo vedono ancora e i suoi raggi salgono dal basso: basi rosa e arancio sotto un cielo già blu, come nelle foto dei tramonti. Prima la luce arrivava solo sui fianchi e sulle cime.
+- Nella vista in tempo reale il disco ha lo stesso colore.
+
+RESA COLORE «VIVIDA»
+--------------------
+- Nelle impostazioni di render, in «Colore ed esposizione»: «Resa colore» Naturale (AgX, come finora) o Vivida (Khronos PBR Neutral, inclusa in Blender). Con Vivida i colori molto luminosi restano saturi: tramonti, albe, luci colorate, dove AgX li sbiadisce verso il bianco. Con Vivida i toni di AgX non servono e non compaiono. Vale per tutte le viste e il render finale.
+- Consiglio per i tramonti contro sole: Vivida e un'esposizione più bassa (−2…−4 EV), come farebbe un fotografo che espone per il cielo.

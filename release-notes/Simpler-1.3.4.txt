@@ -1,0 +1,20 @@
+SIMPLER 1.3.4  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- NUOVA ICONA "SPOSTA E RUOTA" nella barra in alto: frecce in croce + due archi che girano, perché quello strumento
+  fa entrambe le cose.
+- DOVE STA IL GIZMO, pulsanti più chiari nella barra della vista:
+  - "⊥ Base (piedi)": il gizmo va al centro della base, nel punto più basso dell'oggetto (i piedi di un
+    personaggio, la base del tronco): comodo per appoggiarlo su una superficie e ruotarlo sul posto;
+  - "◎ Centro 3D": il gizmo va esattamente al centro 3D del modello;
+  - "Origine": dove l'aveva messa il programma che ha creato il modello.
+  (Erano già "Centro / Base / Origine": ora hanno nomi, simboli e suggerimenti che dicono cosa fanno.)
+  Se la vista è stretta, la barra delle ombre scende sotto quella degli strumenti invece di sovrapporsi.
+
+CORREZIONI
+----------
+- PANNELLO DI DESTRA E SELEZIONE: con l'editor del materiale aperto, selezionando una luce (o un gruppo, o nulla)
+  il pannello torna subito alle proprietà e mostra i parametri della luce. Selezionando nell'albero un pezzo con
+  materiali, l'editor passa al suo materiale.

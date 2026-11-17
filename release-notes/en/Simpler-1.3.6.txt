@@ -1,0 +1,13 @@
+SIMPLER 1.3.6  —  20 October 2026
+=================================
+
+FIXES
+-----
+- PREVIEW VIDEO MEMORY: the second Blender (material previews and model thumbnails) could take up many GB of video
+  memory (7.6 GB in the Resources tab). Causes and remedies:
+  - it kept on the card everything it had drawn (textures and meshes of every imported or saved model): now the
+    card is freed after each image;
+  - it read textures at full resolution (even 4K/8K) for 256 px images: now at most 1024 px;
+  - it stayed on even when it had nothing to do: now it closes after 45 seconds without work and its video memory
+    goes back to zero. The next request restarts it automatically (a few extra seconds, only for that one).
+  Previews and thumbnails are, and remain, PNG images saved on disk.

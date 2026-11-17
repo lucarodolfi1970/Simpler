@@ -1,0 +1,4 @@
+SIMPLER 1.35.1  —  25 ottobre 2026
+==================================
+
+- Incolla un'immagine dagli appunti come mappa: tasto destro sulla miniatura (o sul nome) di una mappa ▸ «Incolla immagine dagli appunti». Va bene un ritaglio dello schermo (Win+Maiusc+S), un'immagine copiata dal browser o da un programma di grafica, o un file immagine copiato in Esplora risorse. Non serve più salvarla prima come JPG o PNG: il ritaglio viene incorporato nel progetto (la trasparenza resta quando il programma la fornisce). Vale per le mappe dei materiali e per quelle delle decal.

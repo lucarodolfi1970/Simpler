@@ -1,0 +1,9 @@
+SIMPLER 1.76.24  —  3 November 2026
+===================================
+
+Stones and debris: «Lay the stones» fixed, a size for each stone, only where the camera looks.
+
+- Fixed: «Lay the stones» worked and then stopped with «Internal error» without laying anything (with some models, such as Poly Haven's). If something goes wrong, the stones of before stay and no empty groups are left in the scene.
+- Each stone has its own «Size» and «How many of this one» (in Advanced, under the stone's name), as in the brush: to make one stone bigger or smaller, or have fewer of it.
+- The stones are laid only where the camera looks when «Compute only the framed area · Ecosystems» is on, as the ecosystems: much lighter on a big terrain. «Always whole» (in Advanced) lays them on the whole terrain; «Recalculate from the view» lays them again where the camera looks now.
+- «Pick the stones from the library» works only while the Landscape panel is open: leaving it, a click on a model puts it in the scene again.

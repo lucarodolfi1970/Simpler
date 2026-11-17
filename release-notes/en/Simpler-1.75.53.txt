@@ -1,0 +1,8 @@
+SIMPLER 1.75.53  —  1 November 2026
+===================================
+
+«Optimize polygons»: the view shows the optimized model and the preview shows the materials.
+
+- After «Apply» the model really was optimized: in your case, 2.5 million triangles. The real-time view, however, did not reload it and kept showing the old one, still at 5 million. Now the changed pieces are reloaded in the view right after «Apply», and also after Ctrl+Z and Ctrl+Y, without preparing the whole view again. If there are many pieces, or they come from a library model, the whole view is prepared again.
+- Preview: it now shows the model with its own materials and textures, under neutral light. Before, it was always grey, and the wireframe, on by default, covered it with blue lines so dense it looked all light blue. «Wireframe» is now off by default: on, it shows the grey model with thin dark lines.
+- The automatic «decimate» check now also verifies that the engine tells the view which objects changed, both after «Apply» and after Ctrl+Z.

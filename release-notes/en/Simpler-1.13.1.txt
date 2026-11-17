@@ -1,0 +1,14 @@
+SIMPLER 1.13.1  —  22 October 2026
+==================================
+
+BUG FIXES
+---------
+- DARK WATER FULL OF SPECKLES WITH THE CAUSTICS ON (indoor pool): with "Caustics" on, the glass of the windows also
+  became a "lens" of the sharp caustics. The sun had to go through the window glass and then through the water, a
+  path Cycles solves badly: the room stayed dark and the water filled with noise. Now only water with real waves and
+  solid glass pieces (gems, vases, glasses: thicker than 2 cm) make caustics; thin panes (windows, glass walls) let
+  the sun in as always, even when they use the same material as a gem.
+- MURKINESS OF THE WATER: it now starts at 0% (clear water). Murkiness with the caustics on brings a lot of noise:
+  for a clear pool leave it at 0% (there is a warning in the panel).
+- LIBRARY: "Lights" is again a button of its own in the library bar (before it was inside the Simpler menu):
+  Poly Haven ▾ · Simpler ▾ (Materials, Primitives) · Personal ▾ · Lights · Scenes.

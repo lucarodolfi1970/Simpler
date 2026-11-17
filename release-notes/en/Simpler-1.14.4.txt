@@ -1,0 +1,8 @@
+SIMPLER 1.14.4  —  24 October 2026
+==================================
+
+DOTS ON LAMP SHADES, SALT SHAKERS AND GLASS WITH AN OPACITY MAP
+---------------------------------------------------------------
+- Found the cause: not the light or the glass, but the "Clean cut-out" of the opacity. These models make frosted or engraved glass with an opacity map in shades of grey (not with transparency): cut at 50% it became salt and pepper, full and empty points finer than the pixels, sparkling as white dots with any number of samples (even 2048). That is why it changed with the reduced textures of the view and stayed in the final render with the original textures.
+- Now Simpler recognises maps made of shades (more than 4% of the map between 30% and 70%) and uses them as graded transparency, even with "Clean cut-out" on. Leaves and grids, made of full and empty, stay cut as before.
+- Existing projects are fixed when opened, once.

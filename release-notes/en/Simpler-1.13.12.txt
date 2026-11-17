@@ -1,0 +1,9 @@
+SIMPLER 1.13.12  —  22 October 2026
+===================================
+
+DISTRIBUTIONS: THE NAME SAYS HOW THEY WERE MADE
+-----------------------------------------------
+- New distributions are called "Scatter Brush 1", "Scatter Area 1", "Scatter Spacing 1" (in Italian "Distribuzione
+  Pennello 1", "Distribuzione Area 1", "Distribuzione Spaziatura 1"), numbered per type. Before, they were all
+  "Scatter 1, 2, 3".
+- Distributions already made keep their name; you can always rename them from the tree.

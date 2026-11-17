@@ -1,0 +1,8 @@
+SIMPLER 1.71.1  —  30 ottobre 2026
+==================================
+
+- Look (LUT) con le anteprime: il menu mostra ogni look come una miniatura della tua inquadratura con quel look applicato, due per riga, con il nome sotto. Si capisce subito com'è ciascuno. Le miniature si preparano in mezzo secondo per tutti i 14 look di Simpler, poi restano pronte.
+- Preferiti con il tasto destro su un look: «Aggiungi ai preferiti» o «Togli dai preferiti». Il cuore cliccabile non c'è più; sulle miniature dei preferiti resta un piccolo cuore nero come segno, come nella libreria. Anche la cartella «Look (LUT)» dei Preferiti mostra le miniature dell'inquadratura.
+- La ricerca cerca solo nei nomi dei look: prima «p» trovava tutti i look perché il gruppo si chiama «Simpler».
+- Restano solo i look di Simpler, più quelli che importi tu (.cube, .zip, cartelle). Nessuna raccolta di terze parti.
+- I look importati si leggono una volta sola: il programma ne tiene una copia veloce accanto al file, così anche con molti look le anteprime arrivano subito.

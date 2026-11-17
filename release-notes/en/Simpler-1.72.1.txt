@@ -1,0 +1,4 @@
+SIMPLER 1.72.1  —  30 October 2026
+==================================
+
+- Top bar: with a narrow window the «Landscape» button also becomes just an icon, like the other panels. Before, it always showed its label.

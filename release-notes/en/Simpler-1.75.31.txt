@@ -1,0 +1,6 @@
+SIMPLER 1.75.31  —  1 November 2026
+===================================
+
+License agreement: the boxes and buttons at the bottom change language too.
+
+- With «Italiano» or «English» at the top all the texts of the window now change, not only the agreement: the two acceptance boxes, «I accept» / «I do not accept», «Close», the acceptance date and the window title. Before, the bottom part stayed in Simpler's language.

@@ -1,0 +1,5 @@
+SIMPLER 1.56.0  —  27 ottobre 2026
+==================================
+
+- Albero della scena, tasto destro: nuova voce «Unisci in un solo oggetto». Su un gruppo, su un modello o su più oggetti selezionati: tutti i pezzi diventano un solo oggetto, con ogni materiale al suo posto, dove stava il primo. Le luci e le camere dentro restano, sotto l'oggetto unito. Ctrl+Z rimette tutto com'era. Distribuzioni e decal non si uniscono (un messaggio lo dice).
+- Menu Importa: la scelta che unisce i pezzi ora si chiama «Unisci i pezzi durante l'importazione», per non confonderla con l'unione degli oggetti già nella scena.

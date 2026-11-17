@@ -1,0 +1,7 @@
+SIMPLER 1.76.38  —  4 novembre 2026
+===================================
+
+«Acqua mossa sul bordo» più visibile con il mare grosso.
+
+- Con onde di 2 m l'acqua contro gli oggetti si muoveva al massimo di 22 cm: contro una sfera di 12 m la linea sembrava ancora dritta. Ora si muove di circa un quinto dell'altezza delle onde, fino a mezzo metro (con «Calmo» resta piccola).
+- Nota: le onde vere, e quindi anche questo effetto, ci sono nella zona fine del mare, circa 500 m attorno al centro. Per un oggetto lontano dal centro della scena (per esempio ai piedi di un terreno grande): Oceano › Avanzate › centro del mare su «camera».

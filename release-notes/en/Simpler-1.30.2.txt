@@ -1,0 +1,4 @@
+SIMPLER 1.30.2  —  25 October 2026
+==================================
+
+- Emission of imported materials: switching «Emits light» on for a material of an imported model (for example the lights of an FBX car) lit nothing, because the file carried a black colour filter (the value of materials that do not glow) and light times black is zero. Now, when a material emits with a black filter, the filter becomes white; a colour chosen by hand stays as chosen. Materials already converted are fixed at their first change.

@@ -1,0 +1,26 @@
+SIMPLER 1.6.1  —  21 October 2026
+=================================
+
+SCATTER: THE ADJUSTMENTS CHANGE WHAT YOU HAVE ALREADY PAINTED
+-------------------------------------------------------------
+- A scatter now remembers its brush strokes: where the brush went, with what diameter, and where you erased.
+  The pieces are worked out from there with the current adjustments.
+  If you move a slider (spacing, random spacing, scale, rotation and their random parts, align to surface)
+  or change the presence, add or remove a model, the whole scatter is redone immediately. Example: trees too
+  close together, raise Spacing and they thin out.
+- The same brush strokes always give the same result. If you change only the presence, the pieces stay where
+  they are and some of them change model. If you change scale or rotation, the pieces stay in place.
+- Each change is an undo step ("Scatter"): Ctrl+Z goes back to the previous pieces and adjustments.
+- Brush strokes, adjustments and models are saved with the project. When you reopen it and select the scatter
+  in the tree with the brush active, the panel shows its adjustments and its models with their presences.
+- The diameter applies to new brush strokes: the ones already made keep theirs.
+- Scatters painted with 1.5 and 1.6.0 have no saved brush strokes: their pieces stay as they are and the
+  adjustments apply only to new brush strokes.
+- Note: when the scatter is redone, pieces moved or deleted by hand with the gizmo go back to how the brush
+  strokes make them.
+
+FIXES
+-----
+- While you paint, pieces no longer vanish halfway through a brush stroke: they show up right away with their
+  model. The first time you use a model they appear as green cones until the model is ready (a few seconds),
+  then they turn into the real model.

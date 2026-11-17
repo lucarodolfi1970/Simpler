@@ -1,0 +1,29 @@
+SIMPLER 1.1.3  —  18 October 2026
+=================================
+Fast, interruptible path tracing on large models.
+
+NEW FEATURES
+------------
+- Optimised textures for previews: textures larger than 2048 pixels are reduced once, in parallel and in the
+  background, and kept in a cache on the local disk (%LOCALAPPDATA%\Simpler\texcache). The path tracing view and
+  the 3D view use the reduced copies: path tracing starts much sooner and uses much less GPU memory. When the
+  project (or another project with the same textures) is reopened the copies are already ready. The final render
+  and saving always use the originals.
+- While the copies are being prepared, the path tracing badge shows "Optimising textures 120/480".
+- "Preview textures" now has an Auto option (default): copies at 2048 pixels, 1024 if there are a great
+  many textures. "Full" is still available.
+
+INTERRUPTIONS
+-------------
+- "Real time" switches back to the real-time view at once, even while path tracing is computing.
+- Any command (applying a scene or a material, moving an object…) interrupts the running path tracing pass
+  instead of queueing: it runs at once, then path tracing resumes.
+
+BUG FIXES
+---------
+- Very slow path tracing on large models (e.g. "sample 1 of 128" after 3 minutes, 28.5 GB of memory): the
+  textures at original resolution exceeded the graphics card memory (16 GB) and Cycles worked in system
+  memory. With the reduced copies the scene stays in GPU memory.
+- Clicking "Real time" during path tracing left the app stuck until the end of the pass.
+- Commands queued behind path tracing (stuck with a full bar).
+- A path tracing image computed before a change could appear as if it were up to date.

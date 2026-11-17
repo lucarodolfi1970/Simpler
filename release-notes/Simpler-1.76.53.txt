@@ -1,0 +1,15 @@
+SIMPLER 1.76.53  —  5 novembre 2026
+===================================
+
+Nuova scheda «Rilievo 3D» nel terreno: il rilievo della roccia in tipi diversi, ognuno con la sua miniatura.
+
+- Una scheda nuova sotto «Forma e roccia», con le miniature dei tipi di rilievo: Attuale (il rilievo di prima), Canaloni erosi, Parete fratturata, Strati a cenge, Nessuno.
+- Canaloni erosi: la parete scavata dall'acqua, con canaloni che scendono, speroni affilati fra l'uno e l'altro e rigagnoli fini.
+- Parete fratturata: la parete rotta in blocchi spigolosi di misure diverse, ognuno con la sua faccia piana; la luce si spezza blocco per blocco.
+- Strati a cenge: gli strati della roccia (gli stessi di «Roccia scolpita» e delle fasce di colore) come cenge marcate, mensola e salto, strato dopo strato.
+- Cursori: Profondità (il vecchio «Rilievo della roccia», spostato qui), Dimensione, Dettaglio, Dove. Nelle Avanzate: Orientamento, per la parete fratturata.
+- I cursori cambiano i numeri dei materiali senza rifarli: meno di un secondo, e la vista 3D non si ricarica. Cambiare tipo rifà i materiali del terreno una volta (qualche secondo).
+- Il rilievo si vede nel path tracing e nel render finale, come prima; la vista in tempo reale non viene appesantita.
+- Un terreno fatto prima resta identico («Attuale», stessi numeri): i suoi materiali non vengono rifatti all'apertura.
+- Il cuore messo su «Rilievo della roccia» passa da solo a «Profondità» nella nuova scheda.
+- Nuovi controlli automatici: ogni tipo dà un'immagine diversa da «Attuale», i cursori cambiano l'immagine senza rifare i materiali, ogni tipo ha la sua miniatura.

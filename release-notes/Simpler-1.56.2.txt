@@ -1,0 +1,4 @@
+SIMPLER 1.56.2  —  27 ottobre 2026
+==================================
+
+- Vista in tempo reale: una nuvola (o un altro modello con materiale Volumetrico) salvata nella libreria e trascinata nella scena appariva come un mucchio di dischetti grigi; solo il path tracing la mostrava come volume. Ora anche la vista la disegna come volume, come quella originale.

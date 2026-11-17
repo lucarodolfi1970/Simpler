@@ -1,0 +1,5 @@
+SIMPLER 1.71.2  —  30 October 2026
+==================================
+
+- Missing textures, clearer: each texture is shown with the name of its file and the materials that use it, for example «muro_diffuse.jpg — material «Muro»». Before, the internal name of the image appeared, like «Map #0», which said nothing.
+- «Map #0» and similar are maps left empty in the program the model comes from (typical of 3ds Max models): they have no file, so they cannot be looked for. They no longer bring up the question about the folder. A line at the bottom says how many there are and which materials they belong to (the full list is in the log). The materials use their base colour, as before.

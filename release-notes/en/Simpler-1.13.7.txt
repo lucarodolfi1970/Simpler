@@ -1,0 +1,8 @@
+SIMPLER 1.13.7  —  22 October 2026
+==================================
+
+TOUCHPAD (DIAGNOSIS)
+--------------------
+- On some computers two fingers on the touchpad did not move the view. Simpler now writes the first 80 wheel and
+  touchpad movements to its log: the values differ from computer to computer and are needed to recognise the
+  touchpad for sure. No visible change.

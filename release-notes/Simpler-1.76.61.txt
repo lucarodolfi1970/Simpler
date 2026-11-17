@@ -1,0 +1,8 @@
+SIMPLER 1.76.61  —  6 novembre 2026
+===================================
+
+I tre pulsanti in alto a destra hanno lo stesso stile; nelle Novità si può cercare.
+
+- Render finale, AI immagini e Video AI hanno la stessa larghezza e le icone allineate.
+- Render finale: la macchina fotografica con un piccolo sole in alto a destra (la luce simulata), blu. AI immagini e Video AI: le stelline dell'AI nello stesso punto, arancioni.
+- Novità: in cima c'è una casella di ricerca con la lente (o Invio). Il pannello mostra le versioni che contengono la parola o la frase cercata, con il pezzo di testo dove compare evidenziato in arancione. Un clic apre quella nota, tutta aperta, con la parola evidenziata; la × toglie la ricerca.

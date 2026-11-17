@@ -1,0 +1,8 @@
+SIMPLER 1.36.4  —  25 October 2026
+==================================
+
+- Materials ▸ Texture mapping ▸ Advanced: new «Centre on the object» button. It puts the middle of the texture on the middle of the selected object, or rather of its part with that material. Only the offset changes: scale and rotation stay as they are.
+  - UV: the middle of the picture goes to the middle of the object's UVs.
+  - Triplanar and Planar: the middle of a repeat goes to the middle of the object, in World or Object as set. This works on walls and vertical faces too, not only on floors.
+  - Cylinder and Sphere: the projection turns around the middle of the object.
+- «Offset X» and «Offset Y» both work, in the path tracer and in real time (checked). With a texture striped in one direction only (long joints, planks) moving along the stripes does not show, because the pattern is the same.

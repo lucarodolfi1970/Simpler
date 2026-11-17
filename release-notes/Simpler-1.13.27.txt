@@ -1,0 +1,9 @@
+SIMPLER 1.13.27  —  22 ottobre 2026
+===================================
+
+BUG CORRETTI
+------------
+- Aprendo un progetto compariva "Errore interno: cannot access local variable matedit" (dalla 1.13.22) e l'apertura
+  si fermava a metà: la scena c'era, ma la camera non tornava dove era stata salvata (inquadratura da lontano) e i
+  passi successivi dell'apertura non venivano fatti. Corretto: i progetti si aprono di nuovo per intero, con la
+  camera salvata.

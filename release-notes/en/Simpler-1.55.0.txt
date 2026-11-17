@@ -1,0 +1,8 @@
+SIMPLER 1.55.0  —  27 October 2026
+==================================
+
+- Volumetric, models that are not closed: a model without an «inside» (open pieces, or a cloud made of many small discs like the downloadable ones) stayed transparent and frayed. Now Simpler wraps its pieces in a soft shape and fills that, in the render and in the view; in the editor an orange note says which models are not closed.
+- Volumetric, «Puff size» is now a % of the size of the model: the same value gives the same look on a 6 m cloud and on a 100 m one (the «Cloud» kind uses 12%). The material preview, a 1 m sphere, now looks more like the model too.
+- Volumetric and haze: the haze of the sky turned volumes in front of the sky into flat grey patches (it treated them as if they were at the horizon). Now they keep their lights and shadows.
+- Real-time view: dense volumes have their own light and shadow (the side towards the sun bright, the other in shade), as in the render, instead of a uniform grey.
+- Import: new choice «Merge into a single object» (Import menu and import into the library): all the pieces of the model become a single object with all its materials in place. Pieces repeated many times (bolts, chairs) stay copies, so as not to multiply the memory. The choice is kept for the next imports.

@@ -1,0 +1,4 @@
+SIMPLER 1.69.2  —  29 October 2026
+==================================
+
+- Grunge, a handier «Size»: from 5 cm to 50 m on a scale that gives more room to small sizes, shown in cm or m depending on how large it is. You can type «250» (cm), «2,5 m» or «2.5m».

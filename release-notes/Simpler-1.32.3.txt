@@ -1,0 +1,4 @@
+SIMPLER 1.32.3  —  25 ottobre 2026
+==================================
+
+- Centro 3D, Base e Origine funzionano anche sui modelli con il pivot spostato a mano (gizmo viola): prima il pivot manuale vinceva sempre e i tre pulsanti non facevano nulla. Ora l'ultima scelta comanda: cliccando Centro 3D, Base o Origine il gizmo va lì; il pivot spostato a mano resta salvato nel modello e si riprende con il nuovo pulsante «✥ Manuale», che compare nella barra del gizmo solo quando il modello selezionato ne ha uno. Spostando di nuovo il pivot con il gizmo viola si torna a «Manuale».

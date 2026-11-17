@@ -1,0 +1,11 @@
+SIMPLER 1.75.26  —  1 novembre 2026
+===================================
+
+SmartView: inserire un modello senza il riquadro rosso della vista; tempi dell'inserimento nel registro.
+
+- Dal registro, inserendo un modello con SmartView acceso, ci sono due attese diverse.
+  - La vista (10 secondi alle 23:59:06, «slow frame: 10511 ms, 2 new shaders»): i pezzi di un modello della libreria vengono disegnati «a copie», e queste copie nascono in un punto del fotogramma che viene dopo il controllo di SmartView, quindi i loro shader si facevano lì, con tutti i lampioni accesi. La versione semplice arrivava solo al fotogramma dopo.
+    Ora quel controllo si ripete anche subito prima di disegnare: con SmartView le copie nuove nascono già nella versione semplice (colore e immagine), e la tengono finché SmartView è acceso. Spegnendolo, tornano ai loro materiali prima della preparazione con «Occupato».
+    Vale anche senza SmartView: le copie nuove passano dalla preparazione in sottofondo invece di bloccare la vista dentro un fotogramma.
+  - Il motore (17,5 secondi per «models/insert» alle 23:58, il primo inserimento dell'uomo con l'ombrello). Dal registro non si capisce quale parte: tra le due righe c'è solo la fine. Una mia prova con 425 immagini e 350 materiali dà 0,6 s per la parte che confronta i materiali, quindi non è quella.
+    Ora il registro scrive il tempo di ogni fase dell'inserimento (caricamento, collegamento, materiali, confronto, aggiornamento della scena, posizione) e, per ogni comando lento, quanto è il comando e quanto il resto. Mandami il registro dopo il prossimo inserimento lento e lo tolgo.

@@ -1,0 +1,14 @@
+SIMPLER 1.73.5  —  30 October 2026
+==================================
+
+Ecosystems on the ground and on models, opening projects with the sea, and an automatic check before every version.
+
+- Ecosystem dragged onto the ground: error «Unable to allocate 950 MiB» and no ecosystem.
+  - Cause: with «Compute only the framed area» and a 4 km ground seen from close up, the frame reaches the horizon. Simpler prepared hundreds of millions of pieces before dropping the ones that cannot be seen, and memory ran out. The problem was there before the sea too: it was already in 1.71.6.
+  - Now it prepares at most 4 million pieces, starting from the areas nearest the camera. The far ones would be smaller than a pixel anyway.
+  - Then what already existed applies: if there are still too many, the pieces thin out in the distance by themselves.
+  - With a thick meadow on a large ground: 6 seconds and about 2 GB of memory, instead of the error.
+- Ecosystem dragged onto a library model (a cliff): «Drop the ecosystem onto an object».
+  - Cause: the model is selected as a whole and its root is a group, not a surface.
+  - Now the ecosystem grows on the piece under the mouse. If Simpler gets the group, it picks the largest piece (of overlapping levels of detail, the finest).
+- Opening a project with the sea: the coast is not measured again. It was already saved in the project and is taken from there, if the objects at sea level are the same. On a sea scene: 0.2 s instead of 3.9 s. It is measured again only if something changed.

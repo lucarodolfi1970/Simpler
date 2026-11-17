@@ -1,0 +1,9 @@
+SIMPLER 1.76.24  —  3 novembre 2026
+===================================
+
+Pietre e detriti: corretto «Posa le pietre», grandezza per ogni pietra, solo dove guarda la camera.
+
+- Corretto: «Posa le pietre» lavorava e poi si fermava con «Errore interno» senza posare nulla (con alcuni modelli, come quelli di Poly Haven). Se qualcosa va storto, le pietre di prima restano e non rimangono gruppi vuoti nella scena.
+- Ogni pietra ha la sua «Grandezza» e il suo «Quante di questa» (nelle Avanzate, sotto il nome della pietra), come nel pennello: per ingrandire o rimpicciolire una pietra sola, o averne di meno.
+- Le pietre si posano solo dove guarda la camera quando «Calcola solo l'area inquadrata · Ecosistemi» è acceso, come gli ecosistemi: molto più leggero su un terreno grande. «Sempre intero» (nelle Avanzate) le mette su tutto il terreno; «Ricalcola dalla vista» le rifà dove guarda la camera adesso.
+- «Scegli le pietre dalla libreria» vale solo mentre il pannello Paesaggio è aperto: uscendo, il clic su un modello torna a metterlo nella scena.

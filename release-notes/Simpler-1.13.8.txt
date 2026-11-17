@@ -1,0 +1,9 @@
+SIMPLER 1.13.8  —  22 ottobre 2026
+==================================
+
+TOUCHPAD
+--------
+- Le due dita ora spostano la vista anche subito, senza dover prima usare la rotellina del mouse. Dal registro del tuo
+  PC: il touchpad era riconosciuto bene, ma lo spostamento si misurava sul centro dell'orbita, che dopo l'apertura
+  di una scena può stare a pochi centimetri dalla camera, e così la vista si muoveva di pochissimo. Ora la scena
+  segue le dita alla distanza di quello che c'è sotto il cursore (o, sul cielo, alla misura della scena).

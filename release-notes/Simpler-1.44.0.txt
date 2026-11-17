@@ -1,0 +1,8 @@
+SIMPLER 1.44.0  —  26 ottobre 2026
+==================================
+
+- Quando Simpler è occupato lo dice chiaramente: in basso a destra nella vista, sopra gli fps, compare una scritta rossa lampeggiante «Occupato · attendi» con sotto cosa sta facendo e da quanti secondi (per esempio «Salvataggio automatico · 12 s», «Apertura del progetto», «Calcolo del riparo dalla pioggia»).
+  - Resta finché tutto è finito: il motore occupato con un comando o con un calcolo suo, l'app che aspetta il motore, i pannelli bloccati, la vista che si prepara.
+  - Compare dopo 0,4 secondi, così i comandi veloci non la fanno lampeggiare.
+  - Con lei c'è sempre la clessidra, anche sopra la vista 3D.
+  - Il path tracing che si affina non conta come «occupato»: mentre migliora l'immagine puoi lavorare. Lo dice il riquadro in basso a sinistra: «passaggio 3/5 · sto affinando…» con una barra che continua a muoversi, poi «✓ finito» quando ha finito davvero.

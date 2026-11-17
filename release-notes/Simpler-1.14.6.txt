@@ -1,0 +1,6 @@
+SIMPLER 1.14.6  —  24 ottobre 2026
+==================================
+
+DIAGNOSTICA DELL'OPACITÀ
+-------------------------
+- I nomi scritti nel file diag.on (pezzi o materiali, uno per riga) scelgono i pezzi salvati in diag_alpha.blend.

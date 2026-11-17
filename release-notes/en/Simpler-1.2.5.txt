@@ -1,0 +1,17 @@
+SIMPLER 1.2.5  —  20 October 2026
+=================================
+
+FIXES
+-----
+- When saving to the library a piece that sits inside another object in the scene (for example the glass placed on
+  and linked to the floor), that object also ended up in the file: Blender always brings the "parent" along. So the
+  thumbnail showed the 40 m floor and the glass couldn't be seen. Now the model keeps only what you saved, in its
+  real position and size; inserting it into the scene also discards the rest (this applies to models already saved
+  too).
+
+NEW FEATURES
+------------
+- Object thumbnails: the object fills the whole square, on the checker backdrop like the material previews (glass
+  and transparency are easier to read); axonometric view and studio lights as before.
+- Right click on a library object > "Render the thumbnail again": redoes the thumbnail (and cleans up the model if
+  it was saved with extra objects).

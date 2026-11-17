@@ -1,0 +1,10 @@
+SIMPLER 1.76.32  —  3 novembre 2026
+===================================
+
+Comandi preferiti: un cuore per ogni comando, per vedere solo quelli che usi.
+
+- Nel pannello di destra, prima di ogni comando (anche dentro «Avanzate») c'è un piccolo cuore giallo: contorno giallo e interno nero se spento, tutto giallo se acceso. Un clic lo accende o lo spegne.
+- I comandi base hanno il cuore con il bordo nero e l'interno giallo: restano sempre visibili, così nessun pannello si svuota.
+- Nella barra in alto, tra SmartView e le doppie frecce, il pulsante con il cuore mostra solo i comandi preferiti e quelli base. Una sezione senza nessuno dei due sparisce, e così le «Avanzate» vuote e le note di spiegazione. Premendolo di nuovo torna tutto visibile.
+- Accanto, il pulsante dei preset porta al pannello di partenza. Sotto i comandi rapidi c'è l'elenco dei preset: «Utente Rookie» (solo i comandi base) e quelli salvati da te. Si possono salvare i cuori di adesso, caricare un preset o deselezionare tutti i preferiti.
+- I cuori valgono per tutti i progetti, su questo computer.

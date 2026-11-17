@@ -1,0 +1,6 @@
+SIMPLER 1.36.9  —  25 October 2026
+==================================
+
+- Materials ▸ Texture mapping ▸ Advanced: new «Centre every piece» switch. Every separate part of the object gets the texture centred on its own middle, instead of one middle for the whole object. It is meant for the two lamps of a car that sit in the same object, for the lenses of a lamp, for separate tiles. It works with UV, Triplanar, Planar, Cylinder and Sphere, in real time and in the path tracer. «Offset X/Y» move all the pieces alike.
+- Decal: Advanced now also has the «Picture (colour)» box. The picture of the decal can be changed like the other maps and the size stays as it is.
+- Decal: right click on a map for «Copy the map», «Paste the map» (a map copied from a material too) and «Paste picture from the clipboard».

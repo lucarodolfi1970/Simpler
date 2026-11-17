@@ -1,0 +1,6 @@
+SIMPLER 1.21.0  —  24 ottobre 2026
+==================================
+
+- Copia e incolla delle mappe dei materiali: tasto destro sulla miniatura (o sul nome del file) di una mappa apre il menu con Anteprima, Apri la cartella, Copia la mappa e Incolla la mappa. Si incollano solo mappe copiate in Simpler, in qualsiasi materiale e in qualsiasi tipo di mappa (colore, rugosità, normale…), anche quelle incorporate nel progetto. La copia mette negli appunti anche l'immagine e il file, per incollarli in Photoshop o in Esplora risorse.
+- La stessa immagine usata come colore in una mappa e come dato in un'altra (rugosità, normale, metallo) ora viene letta correttamente in entrambe: prima l'ultima usata cambiava lo spazio colore anche all'altra.
+- Barra in alto: i pulsanti Importa e Apri sono stretti come Annulla e Ripeti, con la piccola freccia del menu sull'angolo dell'icona.

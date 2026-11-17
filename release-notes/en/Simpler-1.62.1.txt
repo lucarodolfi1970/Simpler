@@ -1,0 +1,4 @@
+SIMPLER 1.62.1  —  28 October 2026
+==================================
+
+- «Falling snowflakes» is now inside the snow's Advanced, at the top: «Snowing» and, when on, all its settings in a single list.

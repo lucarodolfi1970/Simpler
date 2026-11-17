@@ -1,0 +1,7 @@
+SIMPLER 1.30.0  —  25 ottobre 2026
+==================================
+
+- Luci e materiali che emettono luce hanno due nuovi interruttori. «Accesa»: spenta non illumina, qualunque sia l'ora, e vale più di tutto il resto (per spegnere a mano una luce o un'insegna). «Dal tramonto all'alba»: si accende da sola solo la sera e di notte, secondo l'ora dell'Ambiente, e di giorno resta spenta — luci delle case, lampioni, neon e insegne di una città. Cambiando l'ora nell'Ambiente si accendono e si spengono tutte insieme, nel path tracing e nella vista in tempo reale.
+- Si accendono quando il sole scende sotto i 2° (poco prima del tramonto) e si spengono quando torna sopra (poco dopo l'alba). Con un cielo fotografico (HDRI) conta il suo sole, o la sua luce se il sole non c'è; con uno sfondo da studio restano accese.
+- Una luce spenta conserva la sua potenza e un materiale la sua luminanza: riaccendendoli tornano come prima. L'esposizione automatica tiene conto delle luci accese.
+- Nel pannello della luce, sotto i due interruttori, c'è scritto se adesso è accesa o spenta.

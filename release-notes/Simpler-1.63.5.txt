@@ -1,0 +1,7 @@
+SIMPLER 1.63.5  —  28 ottobre 2026
+==================================
+
+- «Ricalcola» degli ecosistemi: «Ecosistema non trovato» quando l'ecosistema era stato tolto dalla libreria o salvato di nuovo, perché in quel caso cambia codice. Ora per rifarlo si usa, in ordine:
+  - la copia che il progetto tiene da quando l'ecosistema è stato posato (da questa versione in poi);
+  - l'ecosistema della libreria con lo stesso nome, se ce n'è uno solo.
+- Se non si trova da nessuna parte, l'ecosistema resta com'è, il pulsante non lo chiede più e il messaggio spiega di rimetterlo dalla libreria.

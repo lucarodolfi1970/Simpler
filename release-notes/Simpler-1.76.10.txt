@@ -1,0 +1,12 @@
+SIMPLER 1.76.10  —  2 novembre 2026
+===================================
+
+Roccia scolpita: montagne rocciose, non solo forme morbide.
+
+- Nuovo cursore «Roccia scolpita» nel pannello Terreno: sui pendii ripidi la roccia si spezza in cenge e salti, canaloni che scendono lungo la massima pendenza, creste frastagliate. A 0% le forme restano morbide e consumate, come prima.
+- «Spigolosità»: creste e canaloni più netti, roccia più rotta.
+- Nelle Avanzate: «Strati di roccia» (quanto le pareti sono a cenge), «Spessore degli strati» e «Inclinazione degli strati».
+- I nuovi terreni partono con un valore adatto al tipo: alto per Montagne e Valle, basso per Colline e Pianura, nullo per Dune e per le mappe di altezze (un luogo reale resta com'è).
+- Tutto è nella geometria: si vede uguale nella vista in tempo reale, nel path tracing e nel render; neve, ecosistemi, zone e «Dividi zona» lo seguono.
+- I terreni dei progetti già salvati non cambiano finché non muovi il cursore.
+- Generazione del terreno un po' più veloce (il rumore di base calcolato in modo più leggero, con lo stesso risultato).

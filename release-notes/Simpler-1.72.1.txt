@@ -1,0 +1,4 @@
+SIMPLER 1.72.1  —  30 ottobre 2026
+==================================
+
+- Barra in alto: con la finestra stretta anche il pulsante «Paesaggio» resta solo icona, come gli altri pannelli. Prima mostrava sempre la scritta.

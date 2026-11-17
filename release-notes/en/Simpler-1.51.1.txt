@@ -1,0 +1,4 @@
+SIMPLER 1.51.1  —  27 October 2026
+==================================
+
+- Real-time view: «Always dry» on the parts of a library model (the interior of a car, the driver) now also keeps away the wetness and the white of the snow, not only the mantle. The model in the view is drawn from a light copy of it that merges the parts with the same material: the copy now carries, part by part, which ones are dry. This applies to the cars of distributions too.

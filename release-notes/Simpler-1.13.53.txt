@@ -1,0 +1,8 @@
+SIMPLER 1.13.53  —  23 ottobre 2026
+===================================
+
+ANNULLA SUI VALORI
+------------------
+- Ctrl+Z / Ctrl+Y dopo aver scritto un valore in una casella (es. Grandezza onde 80 cm, Invio): ora annulla la modifica nella scena. Prima il cursore restava nella casella e Ctrl+Z annullava solo il testo scritto, non il passo.
+- Mentre stai ancora scrivendo nella casella (valore non confermato), Ctrl+Z resta l'annulla del testo, come prima.
+- Dopo Annulla e Ripeti l'editor del materiale si rilegge (acqua, onde, canali tornano ai valori annullati) e il pannello Ambiente mostra i valori giusti. Prima la scena tornava indietro ma il pannello mostrava ancora i valori nuovi.

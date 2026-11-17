@@ -1,0 +1,6 @@
+SIMPLER 1.45.3  —  26 ottobre 2026
+==================================
+
+- Vista in tempo reale: edifici, auto e gli altri modelli della libreria potevano restare invisibili (si vedevano solo il terreno e pochi oggetti), anche riaprendo il progetto. Era un errore della 1.44.3 («Sempre asciutto» sulle distribuzioni): finché le versioni leggere di un modello non erano pronte (in una città possono servire minuti) l'aggiornamento dei pezzi si fermava. Ora i pezzi si vedono subito, con la versione già pronta più vicina.
+- Nuovo tasto rosso «Ridisegna la vista», accanto al contagocce: rifà la vista in tempo reale da capo, come all'apertura del progetto, se sembra incompleta.
+- Nel registro (app.log) ora finiscono gli errori della vista e, 20 secondi dopo ogni caricamento e quando premi «Ridisegna la vista», un riepilogo di cosa la vista ha della scena.

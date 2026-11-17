@@ -1,0 +1,6 @@
+SIMPLER 1.76.30  —  3 novembre 2026
+===================================
+
+Mare: niente più «terreno» dove c'era un oggetto.
+
+- Corretto: spostando un oggetto nell'acqua, nella vista in tempo reale restava un pezzo di «terreno» dove l'oggetto era prima. Era l'acqua che in quel punto restava trasparente, perché la vista teneva la vecchia mappa della costa, e si vedeva il fondo sotto. Ora la mappa si aggiorna insieme al mare, appena finito «Calcolo della costa».

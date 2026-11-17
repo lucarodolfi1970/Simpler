@@ -1,0 +1,5 @@
+SIMPLER 1.69.3  —  29 October 2026
+==================================
+
+- Grunge identical in the real-time view and in path tracing: the stains are in the same places. Before, the random shift of each object was computed differently in the two engines, and in the view the picture was upside down.
+- «On the edges» follows the line of edges and corners: the dirt runs along the edge and varies only a little, instead of appearing in random patches.

@@ -1,0 +1,15 @@
+SIMPLER 1.4.1  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- FPS NELLA VISTA: in basso a destra, in piccolo, i fotogrammi al secondo della vista in tempo reale, i triangoli
+  disegnati e le chiamate di disegno ("draw"). Il numero diventa giallo sotto i 30 fps e rosso sotto i 15. Passando
+  sopra si legge anche il tempo di preparazione di un fotogramma. (Il massimo è la frequenza dello schermo: 60, 144…)
+  Nascosto mentre si guarda il path tracing.
+- VISTA "SAGOME" (nella barra in alto, prima di "Tempo reale"): per scene enormi. Ogni pezzo è disegnato come una
+  scatola del suo colore, orientata come il pezzo; anche gli oggetti ripetuti (istanze) hanno la loro scatola.
+  Tutte le scatole insieme sono una sola chiamata di disegno, senza texture né ombre: la navigazione resta fluida
+  anche con migliaia di oggetti. Selezione, gizmo, copie e menu funzionano come sempre (il clic usa la forma vera);
+  i pezzi selezionati sono arancioni. Blender ha l'equivalente ("Mostra come: Contorni"), ma la nostra vista in
+  tempo reale non è quella di Blender, quindi la modalità è fatta direttamente nella vista.

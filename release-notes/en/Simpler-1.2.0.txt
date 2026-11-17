@@ -1,0 +1,46 @@
+SIMPLER 1.2.0  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+Material editor (right sidebar: "Edit" next to an object's material, the eyedropper, or
+"Scene materials")
+- Channels, each with a value and a map (PNG, JPG, EXR, TIFF…), with invert, channel (R/G/B/A)
+  and map weight: Colour (tint, brightness, saturation, contrast) · Roughness (also glossy maps) · Metallic ·
+  Relief (OpenGL/DirectX normal maps and bump) · Reflections and coat (clear coat) · Glass and transparency (index
+  of refraction with glass, crystal, water, diamond, sapphire… presets, thin wall, colour with depth) ·
+  Sheen · Subsurface · Emission (luminance in nits and temperature in Kelvin) · Opacity (cut-out with the alpha
+  or a map).
+- DISPERSION for glass and gems: light splits into red, green and blue with the right index of refraction for each
+  colour (from the material's Abbe number), with a slider to exaggerate the effect. Gems show the coloured
+  "fire". Note: Cycles is not a spectral engine and sharp caustics (MNEE) follow a single colour, so
+  materials with dispersion use normal caustics: coloured caustics on the floor are there but are softer
+  and noisier than those of a spectral engine; more samples and a small, strong light are needed.
+- TRUE DISPLACEMENT: the surface is really displaced by the height map, with adaptive subdivision (finer
+  near the camera). Height in cm, zero level, low/medium/high detail. Visible in path tracing and
+  in the final render.
+- Mapping: model UVs, Box (triplanar), planar, cylindrical, spherical; real size in cm (e.g. "one
+  tile = 60 cm"), object or world reference, edge blend, stretch, rotation, offset,
+  "Vary per object".
+- Materials imported from FBX files read with their textures (on an interior with 116 materials all
+  are read; on a sample of 8 converted ones the image is identical to the original). At the first edit the original
+  is kept: "Restore original" puts it back as it was.
+- Actions: rename, "Only for this object" (copy of the material), "Replace everywhere…", eyedropper.
+- Instant Undo/Redo of material edits (before, they saved a copy of the whole scene).
+- Real-time view: every edit, maps included, is visible at once without preparing the 3D view again.
+
+Library at the bottom, new tabs
+- Lights (omni, spot, area, disc, LED strip, sun) and Objects (cube, sphere, cylinder, cone, plane, torus, group).
+- DRAG into the view: a light or an object is placed on the surface where you drop it; a material goes onto the
+  piece under the mouse (Shift: onto the whole group). Clicking works as before.
+- Poly Haven textures: hundreds of real scanned textures (CC0, free even for commercial use), downloaded at
+  first use in 2K and reused by all projects; the material comes with colour, roughness, normal map, height
+  map for displacement and the real size of the scanned surface.
+- Search box in the library.
+
+BUG FIXES
+---------
+- Primitives (cube, plane, sphere…) had no UV coordinates: textures in UV mode were not visible.
+
+Sources: Poly Haven API and
+terms of use (github.com/Poly-Haven/Public-API, ToS.md).

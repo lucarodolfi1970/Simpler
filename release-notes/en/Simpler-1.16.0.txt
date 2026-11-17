@@ -1,0 +1,14 @@
+SIMPLER 1.16.0  —  24 October 2026
+==================================
+
+SUNSETS: SUN, GLOW AND CLOUDS LIT FROM BELOW
+--------------------------------------------
+- The sun disc is no longer a white disc: it has the colour a photograph shows, white-yellow high in the sky, orange and then red near the horizon (from the same attenuation of the air that colours the light), bright and always brighter than the sky around it, a little darker towards the edge like the real sun. It is cut by the horizon and keeps the size you choose.
+- Glow around the sun: the haze of the sky lights up towards the sun with the colour of its light (droplets scatter it forwards), the large orange glow of sunsets instead of a uniform grey veil.
+- Volumetric clouds lit from below: after the sun has left the ground, high clouds still see it and its rays rise from below: pink and orange bases under an already blue sky, as in sunset photos. Before, light only reached their sides and tops.
+- In the real-time view the disc has the same colour.
+
+"VIVID" COLOUR RENDERING
+------------------------
+- In the render settings, under "Colour and exposure": "Colour rendering" Natural (AgX, as before) or Vivid (Khronos PBR Neutral, included in Blender). With Vivid very bright colours stay saturated: sunsets, sunrises, coloured lights, where AgX fades them towards white. With Vivid the AgX tones are not needed and do not appear. It applies to all views and the final render.
+- Tip for sunsets against the sun: Vivid and a lower exposure (−2…−4 EV), as a photographer exposing for the sky would do.

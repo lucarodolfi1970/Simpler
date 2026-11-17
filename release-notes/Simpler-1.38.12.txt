@@ -1,0 +1,7 @@
+SIMPLER 1.38.12  —  26 ottobre 2026
+===================================
+
+- Diagnosi dei decal che non si vedono nella vista in tempo reale.
+  - All'apertura il registro del motore elenca ogni decal (righe SIMPLER_DECAL): dove sta, a quale oggetto è attaccato e quanti triangoli ha la sua geometria.
+  - Il registro dell'app riporta per ogni decal ricevuto dalla vista (righe «view:») quanti triangoli mostra, quanto è sfumato, quanto è grande e se è visibile.
+  - Niente cambia nell'aspetto.

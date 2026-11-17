@@ -1,0 +1,5 @@
+SIMPLER 1.25.2  —  25 October 2026
+==================================
+
+- Copied decals: the copy now shows and is independent. Before, it was put aside along the world X axis, off the surface, where there was nothing to project it on, and it stayed tied to the original as an "instance". Now the copy goes next to the original along its own width, on the same surface, has its own values and material, and is projected onto the piece under it.
+- Copying a model that has decals: the copied decals are projected onto the copy too (before, they still looked at the original piece).

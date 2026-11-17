@@ -1,0 +1,5 @@
+SIMPLER 1.68.4  —  29 ottobre 2026
+==================================
+
+- Corretto: una texture mancante all'apertura e poi ricollegata indicando la cartella si vedeva nel path tracing ma non nella vista in tempo reale. Simpler ricordava per tutta la sessione che quella texture non aveva un file; ora, quando la texture viene ritrovata, cerca di nuovo il file.
+- Anche la vista in tempo reale non ricorda più le texture che non è riuscita a caricare: le riprova al caricamento successivo.

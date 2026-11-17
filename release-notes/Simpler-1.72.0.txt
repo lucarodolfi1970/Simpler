@@ -1,0 +1,43 @@
+SIMPLER 1.72.0  —  30 ottobre 2026
+==================================
+
+Nuovo pannello «Paesaggio» (pulsante in alto, accanto ad Ambiente): quello che circonda la scena fino all'orizzonte. Si comincia dall'Oceano.
+
+Oceano:
+- «Aggiungi il mare»: un mare vero intorno alla scena, fino a 20 km, così il bordo non si vede nemmeno dall'alto. Le onde sono quelle del modificatore Ocean di Blender, che simula migliaia di onde di lunghezze diverse come in un mare reale.
+- Otto preset: Calmo, Brezza, Mosso, Burrasca, Onda lunga, Tropicale, Nordico, Lago.
+- Comandi principali:
+  - Altezza onde in metri: è l'altezza vera, dalla gola alla cresta, come nei bollettini del mare.
+  - Vento: cambia la lunghezza delle onde, non la loro altezza.
+  - Creste: quanto sono appuntite.
+  - Direzione.
+  - Schiuma: si forma dove le creste si rompono.
+  - Livello del mare.
+  - Colore dell'acqua: Oceano, Mediterraneo, Tropicale, Nordico, Lago, Torbido.
+  - «Seme casuale»: le stesse onde in un'altra disposizione.
+  - «Togli il mare».
+- Nelle Avanzate c'è il resto di quello che offre il modificatore:
+  - tipo di mare (Agitato, Formato, Formato con creste a punta, Acqua bassa);
+  - allineamento delle onde, onda più piccola, smorzamento, profondità del fondale;
+  - distanza del vento sul mare e picchi, per i due tipi che li usano;
+  - istante;
+  - increspature;
+  - dettaglio (basso, medio, alto);
+  - dove mettere le onde più fini: intorno alla scena o alla fotocamera.
+- L'acqua è disegnata uguale nella vista in tempo reale e nel path tracing:
+  - il cielo riflesso;
+  - il colore del fondo, più chiaro sulle creste;
+  - la schiuma a merletto, più ruvida;
+  - le increspature che allargano il riflesso del sole.
+- Sul mare non piove e non nevica.
+- Ogni modifica si annulla con Ctrl+Z.
+- Se c'è anche il suolo dell'Ambiente, il pannello avvisa: il suolo spunta tra le onde e copre il mare se è più in alto. C'è il pulsante «Togli il suolo».
+- Lo spray del modificatore non è usato: è solo una mappa per emettere gocce, non si vede.
+
+Prestazioni, misurate su una scena con migliaia di oggetti (senza scheda video, 2 core):
+- aggiungere il mare: 2 secondi;
+- cambiare altezza, livello, colore o increspature: 0,06 secondi, senza rifare la simulazione;
+- cambiare vento o tipo di mare: da 0,5 a 1,4 secondi;
+- annulla e ripeti: 0,07 secondi;
+- la vista riceve solo posizioni e schiuma (3 MB); i triangoli (altri 5,6 MB) solo quando cambia la griglia.
+- Il mare non entra nel file della vista: l'esportazione della scena non rallenta.

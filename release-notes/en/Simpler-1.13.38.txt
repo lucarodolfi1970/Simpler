@@ -1,0 +1,8 @@
+SIMPLER 1.13.38  —  23 October 2026
+===================================
+
+MATERIALS: CHANGES ON A MODEL CHOSEN IN THE TREE NOW SHOW
+---------------------------------------------------------
+- Choosing the material with the whole model selected (a library model, a group) and editing it in «Only this object», Simpler made a copy of the material for the group, which has no materials: the copy ended up on no piece («it is on no object of the scene») and the model did not change.
+- Now the copy goes to all the pieces of that model that use the material (e.g. all the leaves of the plant); other models with the same material stay as they are.
+- If the chosen object does not use that material at all, the change goes to the material itself instead of a copy nobody uses.

@@ -1,0 +1,9 @@
+SIMPLER 1.76.36  —  4 novembre 2026
+===================================
+
+«Acqua mossa sul bordo» funziona anche vicino a un terreno grande.
+
+- Corretto: con un terreno grande nella scena il mare vicino agli oggetti ha punti ogni 2,5 m, e la distanza dalla riva era misurata su quei punti. La fascia dove l'acqua si muove (un paio di metri) cadeva tra un punto e l'altro, e «Acqua mossa sul bordo» a 0%, 300% o 1200% dava lo stesso taglio netto. Ora la distanza si misura sulla forma vera degli oggetti dove toccano l'acqua, e la linea di contatto ondeggia.
+- Il dettaglio in più si fa solo entro 80 m dalla camera: da lontano le increspature sarebbero più piccole di un pixel, e la costa intera di un terreno avrebbe pesato più di un milione di facce.
+- Un progetto salvato con la versione precedente rimisura la costa una volta all'apertura.
+- Corretto: a scena finita, la miniatura della scena non si aggiornava con il path tracing se la scena era stata appena salvata o aggiornata (funzionava solo aprendola dalla sua miniatura). Ora vale anche per una scena appena salvata o aggiornata; e se il path tracing finisce mentre Simpler è occupato, la miniatura aspetta invece di essere saltata.

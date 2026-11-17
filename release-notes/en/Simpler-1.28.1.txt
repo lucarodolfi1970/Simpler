@@ -1,0 +1,5 @@
+SIMPLER 1.28.1  —  25 October 2026
+==================================
+
+- «Convert to a Simpler material» no longer loses the textures. Imported materials (for example from a GLB) that multiply the texture by the vertex colours turned white: reading stopped at the first unknown node and lost the readable channels too. Now every channel (colour, roughness, metal, normal, emission, opacity, displacement) is read on its own: the conversion keeps every map that can be read and leaves out only what the editor cannot represent (vertex colours).
+- Undo after a material change: the real-time view now shows the material as it was again (before it kept the changed one, for example white after the conversion, even though the undo had happened).

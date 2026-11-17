@@ -1,0 +1,7 @@
+SIMPLER 1.2.8  —  20 October 2026
+=================================
+
+- MATERIAL EDITOR: click a texture thumbnail = the texture shown large in a small window that always stays on top
+  (it doesn't block the editor: you can keep editing). It shows the file name, the resolution, whether it is
+  embedded in the file, the transparent parts on a checkerboard, and an "Open the folder" button that shows the
+  file in File Explorer. Clicking another thumbnail shows that one in the window; Esc or × to close it.

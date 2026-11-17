@@ -1,0 +1,6 @@
+SIMPLER 1.76.11  —  2 November 2026
+===================================
+
+Video keyframes: it asks first.
+
+- «Use the current view» and «Same framing as the start» ask for confirmation before starting the render of the keyframe, and warn when it replaces the one already there. Before, one click started the render at once.

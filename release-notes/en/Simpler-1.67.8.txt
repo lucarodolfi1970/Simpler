@@ -1,0 +1,6 @@
+SIMPLER 1.67.8  —  29 October 2026
+==================================
+
+- «Fit to the object» is now always visible in UV mapping. Before, it appeared only if the material had been opened from a selected object, and from the list of the scene materials it could not be found.
+- Opened from the list of materials, it fits the picture to every object that uses that material, each on its own shape. Opened from a selected object, it applies to that object only, as before.
+- It also turns off «Centre every piece» and resets the offset, so the picture stays whole.

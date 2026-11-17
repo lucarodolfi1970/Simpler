@@ -1,0 +1,11 @@
+SIMPLER 1.70.0  —  29 ottobre 2026
+==================================
+
+- Nuovo «Dipingi lo sporco» (Materiale > Sporco > Avanzate): un pennello per mettere lo sporco dove vuoi, su qualsiasi superficie, anche su muri e colonne.
+  - Tre tipi di sporco, con le loro icone: Uniforme (sporco fine e uniforme), Frastagliato (una macchia piena con il bordo frastagliato), A macchie (macchie separate).
+  - Aggiungi o Togli, grandezza del pennello (anche con [ e ] sulla vista) e forza. Maiusc toglie, Esc finisce.
+  - Lo sporco compare subito nella vista in tempo reale mentre dipingi, ed è lo stesso nel path tracing e nel render.
+  - Dipingendo una faccia non si sporca quella dietro (per esempio il retro di una colonna).
+  - Lo sporco dipinto usa il colore, l'opacità e gli altri parametri dello Sporco del materiale, e si somma a quello automatico. Per avere solo quello dipinto, lascia Quantità a 0.
+  - Dipingendo su un altro materiale, il suo sporco dipinto si accende da solo.
+  - Ogni passata si annulla con Ctrl+Z; «Cancella lo sporco dipinto» toglie tutto. Lo sporco dipinto si salva nel progetto.

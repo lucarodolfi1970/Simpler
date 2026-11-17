@@ -1,0 +1,12 @@
+SIMPLER 1.38.0  —  25 October 2026
+==================================
+
+- Ecosystems, first step. You compose the vegetation once and put it back on any surface. Simpler ships no ready-made ecosystems, because everyone builds them with their own models, commercial ones too.
+  - «Ecosystems» button in the top bar, next to Environment. The panel on the right creates the test plot: a 20 m ground next to the scene (50 m for woods, in Advanced). There you paint or fill areas with Scatter, one layer at a time, then press «Save ecosystem»: the framing of that moment becomes the thumbnail.
+  - «Ecosystems» menu in the library, after Decals: drag an ecosystem onto an object and it gets populated. If the object has several materials, only the one under the mouse is populated, for example the lawn and not the path. A click puts it on the selected object. Right click: Rename and Delete.
+  - The sample repeats in tiles turned at random. Every piece rests on the surface, also on slopes, and the pieces that fall outside the object are left out. Every layer becomes a distribution with instances, all inside an «Ecosystem» group.
+  - With the ecosystem selected in the scene, the panel changes Density and Scale and offers «Another arrangement». In Advanced: Turn the tiles, Follow the slope, Only on the material.
+  - Before placing many pieces, over 400,000, Simpler asks for confirmation. Over 3 million it stops and suggests lowering the density.
+  - Distributions already made in the scene can become an ecosystem too: select them and save.
+- The Scatter button (the brush) is now in the top bar, next to Environment and Ecosystems, because it opens its panel on the right like the others. The B key works as before.
+- The sky prepared for the real-time view: when it fails, the error is written in the engine log.

@@ -1,0 +1,8 @@
+SIMPLER 1.75.33  —  1 novembre 2026
+===================================
+
+Video AI: corretta la richiesta a Krea.
+
+- Krea rifiutava il video («generate_audio was removed»): dal 30 ottobre non accetta più l'opzione dell'audio. Simpler non la manda più; i video restano senza audio.
+- Se in futuro Krea toglie un altro campo e lo dice nella risposta, Simpler rimanda la richiesta senza quel campo invece di fermarsi.
+- Modelli: come pulsanti restano quelli che Simpler conosce (con il prezzo) e quello scelto; gli altri trovati su Krea (25, senza prezzo noto) sono in «Altri modelli…».

@@ -1,0 +1,8 @@
+SIMPLER 1.75.16  —  31 ottobre 2026
+===================================
+
+Manto di neve con i bordi chiusi.
+
+- Dove il manto finiva ancora spesso (contro un oggetto, attorno a un palo, sotto un'auto, al bordo della neve scolpita) il suo bordo restava aperto: guardando radente si vedeva sotto la neve, come fessure scure sul marciapiede.
+  - Ora ogni bordo aperto più alto di 1 cm sulla superficie sotto ha una fascia che scende fino a terra: niente più fessure, in tempo reale, nel path tracing e nel render finale.
+- Il controllo automatico ora verifica anche questo.

@@ -1,0 +1,10 @@
+SIMPLER 1.76.22  —  3 novembre 2026
+===================================
+
+Pietre e detriti, e la schiuma della risacca.
+
+- Nuova sezione «Pietre e detriti» in Paesaggio, sotto il terreno: scegli i modelli di pietra dalla libreria (accendi «Scegli le pietre dalla libreria» e fai clic sui modelli, o tasto destro su un modello > «Aggiungi a Pietre e detriti») e premi «Posa le pietre». Simpler le posa dove la montagna le fa cadere: a coni ai piedi delle pareti di roccia, tanto più lunghi quanto la parete è alta, e lungo i canaloni e dove si aprono a ventaglio. Ogni pietra è girata a caso, un po' interrata e appoggiata sulla superficie vera del terreno.
+- Le pietre prendono da sole il colore della roccia del terreno («Accordo al terreno»), su una copia dei loro materiali: il modello della libreria non cambia.
+- Sul pannello: «Quantità» e «Altre posizioni». Nelle Avanzate: ai piedi delle pareti, lunghezza dei coni, nei canaloni, grandezza minima e massima, grandi in fondo (le piccole restano vicino alla parete), interrate, accordo al terreno, colore e quanto colore, saturazione, luminosità, contrasto.
+- Quando modifichi o rigeneri il terreno, le pietre vengono posate di nuovo sulla nuova forma. Ctrl+Z annulla.
+- Mare: la schiuma della risacca vicino alla costa ora è schiuma vera, a merletto bianco con bordi netti e buchi, più fitta dove le onde rompono e sulle creste, con l'acqua limpida in mezzo. Prima era una fascia grigia sfumata e opaca.

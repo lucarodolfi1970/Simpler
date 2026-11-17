@@ -1,0 +1,8 @@
+SIMPLER 1.75.41  —  1 novembre 2026
+===================================
+
+Elaborazioni AI: nel nome c'è anche il modello usato.
+
+- Il nome di ogni elemento in Elaborazioni AI ora riporta anche il modello che l'ha creato, per esempio «Video · Kling 3.0 · 01/11 10:20» o «Render AI · GPT Image 2 · 01/11 10:25». Vale anche per gli elementi già presenti nel progetto.
+- Anche il nome proposto da «Salva immagine…», «Salva video…» e «Rinomina…» contiene il modello.
+- Un nome dato con «Rinomina» resta come l'hai scritto.

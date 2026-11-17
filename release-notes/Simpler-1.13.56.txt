@@ -1,0 +1,17 @@
+SIMPLER 1.13.56  —  23 ottobre 2026
+===================================
+
+MENU PIÙ CHIARI
+---------------
+- I pulsanti che aprono un menu hanno una piccola freccia accanto all'icona: «Apri» e ora anche «Importa». Gli altri (Nuova, Salva) agiscono subito, senza menu.
+- «Importa» apre il menu: un modello nella scena (Ctrl+I), modelli nella libreria, Correggi materiali, Statistiche e pulizia della libreria. Tolto il piccolo ▾ separato.
+
+IMPOSTAZIONI NELLA BARRA DI DESTRA
+----------------------------------
+- L'ingranaggio apre le impostazioni nella barra laterale di destra, come gli altri pannelli (la scena a sinistra resta al suo posto). Si chiudono con la × o con un altro clic sull'ingranaggio.
+
+LUCI SOTT'ACQUA: NIENTE LUCE CONTATA DUE VOLTE
+----------------------------------------------
+- Con le caustiche «Nitide» e «Luce riflessa dall'acqua» acceso, la luce di una lampada sott'acqua che esce dall'acqua veniva calcolata due volte: dalle caustiche nitide di Cycles (uniforme, senza reticolo) e dal calcolo di Simpler (con il reticolo). Per questo sopra l'acqua tutto diventava molto più chiaro.
+- Ora per le lampade sotto la superficie la calcola solo Simpler. Verificato con una superficie piatta: l'illuminazione sul soffitto corrisponde alla formula della rifrazione, entro il 16%.
+- Ombre nette: una lampada di 2 cm è quasi un punto e fa ombre e linee nette anche dopo il riflesso. Le lampade vere delle piscine misurano 20-30 cm: con una «Grandezza» simile ombre e reticolo diventano morbidi come in realtà.

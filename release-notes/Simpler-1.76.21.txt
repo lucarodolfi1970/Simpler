@@ -1,0 +1,7 @@
+SIMPLER 1.76.21  —  3 novembre 2026
+===================================
+
+Il mare senza motivi ripetuti.
+
+- Le onde lontane e le increspature corte erano un'immagine ripetuta come una piastrella (208 m per «Mosso», pochi metri per le increspature): fino all'orizzonte si vedevano file e diagonali regolari. Ora le piastrelle sono posate a tasselli, ognuno spostato a caso e sfumato nei vicini senza perdere contrasto: nessuna ripetizione visibile, nel tempo reale e nel path tracing.
+- Via le lunghe strisce bianche che puntavano all'orizzonte davanti alla camera: era la schiuma disegnata fra i punti della superficie del mare dove sono radi in una direzione. Lì ora la schiuma viene dalla mappa delle onde lontane, con le sue creste bianche sparse come vicino.

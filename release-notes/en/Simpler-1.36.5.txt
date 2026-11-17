@@ -1,0 +1,9 @@
+SIMPLER 1.36.5  —  25 October 2026
+==================================
+
+- Textures centre themselves on the object:
+  - when you put a map (colour, normal, roughness…) on a material whose texture you never moved, the middle of the picture goes to the middle of the selected object;
+  - when you drag a material with a texture from the library onto an object, the texture is centred on what received it.
+- A centred texture stays centred when you change scale, stretch or rotation. If you change the projection (UV, Triplanar…) or the reference (Object, World), the middle is found again on the object.
+- If you move the texture by hand with «Offset X/Y», it stays where you put it and no longer centres itself. «Centre on the object» brings it back to the middle and makes it follow again.
+- With more than 50 objects using the same material, and on distributions, the texture is not moved by itself.

@@ -1,0 +1,5 @@
+SIMPLER 1.45.1  —  26 ottobre 2026
+==================================
+
+- Path tracing bloccato su «calcolo…» con la pioggia in una scena senza niente che fa riparo (solo il suolo e le pozzanghere dipinte): corretto. La pioggia rifaceva la mappa del riparo a ogni passaggio e ogni volta faceva ripartire il path tracing da capo, all'infinito. Ora la rifà solo quando la geometria cambia, e fa ripartire il path tracing solo se la mappa è cambiata davvero.
+- «Occupato · attendi» compare anche mentre si prepara il cielo nuovo (per esempio scegliendo Notte o un altro Ambiente): «Preparazione del cielo», qualche secondo.

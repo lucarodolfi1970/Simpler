@@ -1,0 +1,5 @@
+SIMPLER 1.25.1  —  25 ottobre 2026
+==================================
+
+- Decal: nella vista in tempo reale la decal è tagliata esattamente al suo riquadro. Prima arrivava intera la faccia del pezzo su cui era messa (per esempio tutto il pavimento), e per questo il gizmo non era al centro della decal e sembrava muoversi a una velocità diversa.
+- Decal: trascinandola dal quadratino giallo del gizmo scivola sulle superfici sotto il mouse, girata come la superficie, come i modelli. Lasciata su un altro pezzo (per esempio dal pavimento al cubo), viene proiettata su quello e ne diventa figlia. Vale anche per gli spostamenti e le rotazioni fatti dal pannello; tutto si annulla con Ctrl+Z.

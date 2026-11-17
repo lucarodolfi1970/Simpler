@@ -1,0 +1,9 @@
+SIMPLER 1.76.45  —  4 November 2026
+===================================
+
+Snow: no more repeated patterns.
+
+- With little snow (e.g. Amount 29.6) the mountain filled with the same white marks in rows, on the walls too. The cause: where the snow is thin its 8 m map decided, and it repeats identically every 8 m.
+- Now that map is turned and pushed around by two big ones (37 m and 164 m), which weigh in too: the snow makes patches of every size and no longer repeats in rows. The same Amount covers the same surface.
+- The same in path tracing, the real-time view and the snow mantle. Scenes already made change the pattern of the snow (not its amount).
+- New automatic check: how much the snow repeats every 8 m (before 0.62, now 0.17; the check fails above 0.4).

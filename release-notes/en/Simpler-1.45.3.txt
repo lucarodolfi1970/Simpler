@@ -1,0 +1,6 @@
+SIMPLER 1.45.3  —  26 October 2026
+==================================
+
+- Real-time view: buildings, cars and the other library models could stay invisible (only the ground and a few objects showed), even after reopening the project. It was a bug from 1.44.3 («Always dry» on distributions): until the light versions of a model were ready (minutes in a city) the update of the pieces stopped. Now the pieces show at once, with the nearest version already prepared.
+- New red «Redraw the view» button, next to the eyedropper: makes the real-time view again from scratch, as when the project is opened, if it looks incomplete.
+- The log (app.log) now gets the errors of the view and, 20 seconds after each load and when «Redraw the view» is pressed, a summary of what the view has of the scene.

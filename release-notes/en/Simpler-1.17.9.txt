@@ -1,0 +1,8 @@
+SIMPLER 1.17.9  —  24 October 2026
+==================================
+
+"MATERIALS" BUTTON IN THE TOP BAR
+---------------------------------
+- New "Materials" button, next to Ambience and Camera: it opens the editor of the material of the selected object (for a group or a library model, that of its first piece with a material).
+- With nothing selected it opens the white Standard material: adjust it, then drag the preview sphere onto objects to apply it.
+- A second click closes the panel.

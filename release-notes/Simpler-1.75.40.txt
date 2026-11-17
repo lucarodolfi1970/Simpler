@@ -1,0 +1,10 @@
+SIMPLER 1.75.40  —  1 novembre 2026
+===================================
+
+Video AI: «Migliora con l'AI» per il testo del movimento.
+
+- Sotto il riquadro «Movimento» c'è il pulsante con le stelline «Migliora con l'AI». Riscrive il testo in inglese, nel modo che il modello video segue meglio, senza aggiungere cose che non hai chiesto; con il riquadro vuoto scrive un testo adatto ai due fotogrammi.
+- L'AI guarda anche le miniature dei due fotogrammi, mandate piccole e in bassa definizione (il modo più economico), e sa se la camera si muove o resta ferma.
+- Usa la stessa chiave OpenAI delle immagini, nessun altro account. Simpler sceglie da solo il modello di testo più economico che la chiave può usare, prendendolo dall'elenco dei modelli della chiave e non da un nome scritto nel programma. Costa una frazione di centesimo per volta.
+- «Annulla» riporta il testo di prima. I token usati si sommano al consumo nel pannello AI.
+- Il pulsante è attivo solo con la chiave OpenAI funzionante.

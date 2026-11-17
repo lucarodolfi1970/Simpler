@@ -1,0 +1,10 @@
+SIMPLER 1.76.3  —  1 November 2026
+==================================
+
+Terrain: more detail where it matters.
+
+- The terrain grid is no longer the same everywhere: it is dense near the model, the camera and the point it looks at, and widens towards the edges. With «Normal» there is a point every 2 m in that area (1.5 m with «High», 1 m with «Maximum»); before, on a 3 km mountain, the points were almost 6 m apart even next to the model.
+- The number of points does not grow: it stays within the previous one (512, 768 or 1024 per side), so the view and the render stay light. On a small terrain, such as the plain, the fine detail covers everything.
+- The fine relief goes down to about a metre where the grid is dense; where it is wide there is no detail the grid cannot hold (no shimmering).
+- The zones (lawn, soil, rock, snow) have the same shapes as before, in metres, whatever the grid. The borders are sharper near the model.
+- The camera counts when the terrain is made or changed. If you then move it far away, «Detail where the camera looks» (in Advanced) makes the dense grid there too. A very distant camera, for example an aerial view of the whole terrain, does not widen the dense area: it stays around the model.

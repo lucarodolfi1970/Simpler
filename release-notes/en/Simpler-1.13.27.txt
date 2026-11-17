@@ -1,0 +1,8 @@
+SIMPLER 1.13.27  —  22 October 2026
+===================================
+
+BUG FIXES
+---------
+- Opening a project showed "Internal error: cannot access local variable matedit" (since 1.13.22) and the opening
+  stopped halfway: the scene was there, but the camera did not go back to where it was saved (a view from far away)
+  and the following steps of the opening were not done. Fixed: projects open fully again, with the saved camera.

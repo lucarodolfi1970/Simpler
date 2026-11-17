@@ -1,0 +1,5 @@
+SIMPLER 1.58.4  —  27 ottobre 2026
+==================================
+
+- Ecosistemi, «Ricalcola dalla vista» e «Solo dove guarda la camera»: prima di rifare l'ecosistema Simpler conta i pezzi per la vista di adesso, senza toccare la scena. Oltre 400.000 pezzi (o se servirebbe molta memoria) chiede conferma, come quando lo posizioni. Se sono troppi per la memoria del PC propone i pezzi più radi in lontananza («Più rado in lontananza» al 70%) dicendo quanti ne resterebbero; se anche così sono troppi, non fa nulla e lo dice. Se rispondi no, l'ecosistema resta com'era.
+- Il conto è quello vero: con i modelli già nella scena tiene conto della loro altezza (una chioma che spunta dietro un crinale), quindi coincide con i pezzi che verranno fatti.

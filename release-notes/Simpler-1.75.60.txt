@@ -1,0 +1,10 @@
+SIMPLER 1.75.60  —  1 novembre 2026
+===================================
+
+Materiali: «Scala mappa», per ingrandire una sola mappa rispetto alle altre texture del materiale.
+
+- Nelle «Avanzate» di Rugosità (anche con le mappe glossy), Metallico e Rilievo (normal map e bump) c'è il nuovo cursore «Scala mappa». Compare quando la mappa è caricata.
+- Con 1 la mappa ha le stesse dimensioni delle altre texture del materiale, come prima. Con 4 è quattro volte più grande. Nel pavimento a scacchi, per esempio, una mappa glossy a scala 4 copre più piastrelle insieme e le sue macchie non si ripetono più uguali su ogni piastrella.
+- La scala vale solo per quella mappa: colore, altre mappe, posizione e rotazione della texture restano come sono. Si vede sia nella vista in tempo reale sia nel path tracing e nel render.
+- Una mappa con la scala diversa da 1 non usa «Rompi la ripetizione», perché ingrandirla ha già lo stesso effetto. Nella vista in tempo reale, con «Rompi la ripetizione» acceso, l'aspetto può differire un po' dal render.
+- Nuovo controllo automatico «map_scale»: verifica che la scala resti nel materiale e arrivi alla vista in tempo reale.

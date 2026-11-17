@@ -1,0 +1,6 @@
+SIMPLER 1.27.0  —  25 ottobre 2026
+==================================
+
+- Vetro e acqua: niente più nero dentro i pezzi di vetro. I raggi rifratti o riflessi che passavano oltre il bordo del suolo (a 2 km, una striscia sottile appena sotto l'orizzonte) o che non trovavano nessun suolo vedevano il cielo sotto l'orizzonte, che è nero: righe e zone nere nel cubo di vetro, metà inferiore nera nei riflessi. Ora sotto l'orizzonte vedono un suolo lontano illuminato dallo stesso sole e cielo (dietro la sua foschia), o senza suolo il colore della foschia, come la fotocamera. I progetti già salvati si aggiornano all'apertura.
+- Render finale: la finestra dell'immagine mostrava solo la parte in alto a sinistra dei render più grandi della finestra (per esempio un 1920 × 1080): ora «Adatta» mostra tutta l'immagine. Vale anche per i risultati dell'AI.
+- Libreria dei modelli: il peso «(x MB)» si legge anche sotto i nomi lunghi su due righe.

@@ -1,0 +1,10 @@
+SIMPLER 1.13.14  —  22 October 2026
+===================================
+
+LIBRARY: THE "SIMPLER" MENU IS GONE
+-----------------------------------
+- The "Simpler ▾" menu is gone: the library menus are Poly Haven ▾ · Personal ▾ · Lights · Scenes.
+- Simpler's materials are the "Simpler" folder inside Personal · Materials, next to your folders (with the same
+  subfolders as before: Surfaces, Glass, Gems…). Search finds both yours and Simpler's.
+- The primitives (cube, sphere, plane…) are the "Primitives" folder inside Personal · 3D models.
+- The two folders cannot be moved, renamed or deleted, and do not take dragged materials or models.

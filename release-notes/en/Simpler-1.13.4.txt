@@ -1,0 +1,18 @@
+SIMPLER 1.13.4  —  22 October 2026
+==================================
+
+MATERIAL TYPE: DROP-DOWN LIST
+-----------------------------
+- "Type" is now a drop-down list with icon and description: Standard (sphere) · Water (blue drop).
+- Going back to Standard the material returns as it was before the water: the transparency, index of refraction,
+  roughness and metal of before (the other changes stay). Before, it stayed transparent like water.
+- The preview sphere updates when you change type (before, it kept the old one).
+
+BUG FIXES
+---------
+- WATER TURNING WHITE/GREY when raising the waves: 50 cm waves 60 cm wide are spikes, not waves, and the water
+  became a grey mirror of the sky; on huge surfaces (the ground is 4 km) the geometry cannot even draw waves that
+  small. Now the real height is at most a fifth of the size and drops on surfaces too large; the panel says how much
+  it was reduced. For higher waves increase the size too.
+- Dragging a library material onto an object, the material editor open on that object switches to the new
+  material (before, it stayed on the old one and it looked as if nothing had changed).

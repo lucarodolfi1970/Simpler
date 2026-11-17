@@ -1,0 +1,61 @@
+SIMPLER 1.0.0  —  18 ottobre 2026
+=================================
+
+Prima versione numerata. Da qui in avanti ogni consegna aumenta il numero di versione
+(1.0.x = correzioni, 1.x.0 = nuove funzioni) e ha il suo file di note in questa cartella.
+
+NOVITÀ
+------
+Vista e navigazione
+- Vista 3D in tempo reale (WebGL) con anteprima Path tracing (Cycles) attivabile con un pulsante o la barra spaziatrice.
+- Navigazione classica: tasto destro ruota attorno al centro vista, tasto sinistro trascinato ruota attorno
+  al punto cliccato, rotellina avanza/indietreggia, tasto centrale sposta. Shift+rotellina = passi fini.
+- Velocità della rotellina: a piedi, bicicletta, auto.
+- Ombre in tempo reale regolabili: No / Media / Alta / Ultra.
+
+Oggetti
+- Gizmo con anelli di rotazione, settore dell'angolo e valori a schermo (gradi, mm/cm/m, fattore di scala).
+- Pivot: centro, base o origine; assi Mondo/Locale (tasto Q); Snap (o Shift); "Appoggia" sulla superficie sotto.
+- Multiselezione: Ctrl+clic e Shift+clic nell'albero, Ctrl+clic nella vista, Ctrl+A. La selezione si trasforma come
+  un oggetto unico; con più oggetti la scala è uniforme per non deformare i pezzi. Doppio clic = sale al gruppo padre.
+- Annulla / Ripeti (Ctrl+Z / Ctrl+Y) fino a 60 passi.
+- Albero: filtro per nome con jolly (%frigo%, sedia_%) e per tipo (Modelli, Luci, Gruppi).
+
+Luci
+- Luci visibili nella vista con icona e sagoma; tipi Omni, Spot, Area, Sole; potenza, temperatura in Kelvin, cono e
+  sfumatura dello spot, dimensione della sorgente (ombre nette/morbide), ombre on/off, visibilità nei riflessi.
+  Anteprima in tempo reale mentre si trascinano i cursori.
+
+Import e texture
+- FBX (anche FBX di testo/ASCII, es. da Houdini), glTF/GLB, OBJ, USD.
+- Ricerca automatica delle texture spostate; quelle mancanti non rendono più il materiale rosa; scelta della cartella
+  delle texture (ricordata per i prossimi import) e voce "Cerca texture mancanti…".
+- Le dimensioni del modello importato sono mostrate nella barra di stato.
+
+Rendering
+- Pannello Rendering: preset Bozza/Alta/Finale, campioni, soglia rumore, denoiser, rimbalzi (totali, diffusi/GI,
+  riflessi, rifrazioni, trasparenze, volumi), GI veloce, caustiche (MNEE, riflesse, rifratte), filtro riflessi,
+  limiti luce diretta/indiretta, esposizione, tono AgX.
+- Render finale in un processo separato: barra di avanzamento, tempo rimanente e pulsante "Annulla render".
+  Opzione "Come impostato" che usa il pannello Rendering.
+
+Interfaccia
+- Barre di avanzamento piccole in basso nella vista (non coprono più lo schermo).
+- Pannelli laterali ridimensionabili (larghezza ricordata).
+- Lingua italiano / inglese (Impostazioni, ruota dentata in alto a destra; vale dal riavvio successivo).
+- Nuova icona dell'app; numero di versione nel titolo e nelle Impostazioni.
+
+BUG CORRETTI
+------------
+- Spostando o ruotando un gruppo (ramo padre) l'oggetto tornava al punto di partenza al rilascio del mouse.
+- Spostando un pezzo figlio, nel path tracing restava nella posizione precedente.
+- FBX salvati in formato testo (ASCII) non venivano importati e non compariva alcun errore.
+- Errori di import invisibili: ora compare un messaggio con il motivo.
+- Materiali rosa in path tracing quando le texture dell'FBX non erano nel percorso originale.
+- Effetto "a righe" (shadow acne) sulle ombre in tempo reale nelle scene grandi.
+- Progress bar al centro dello schermo ad ogni operazione.
+
+NOTE
+----
+- Il bicchiere "bicchiere whisky.fbx" dichiara nel file un'unità in centimetri: viene importato alto circa 1 cm.
+  È un dato del file (esportato da Houdini); si corregge scalando il modello (es. ×10).

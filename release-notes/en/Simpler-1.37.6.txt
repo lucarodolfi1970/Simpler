@@ -1,0 +1,5 @@
+SIMPLER 1.37.6  —  25 October 2026
+==================================
+
+- Round ground: a large 4 km disc instead of a square. The horizon is at the same distance in every direction. Before, towards the corners the edge was farther away and with little haze it showed as a slanted line. Projects already saved get the disc by themselves.
+- Night in real time: when the sky for the view does not arrive, the error is now written in the engine log (engine.log), so the cause can be found.

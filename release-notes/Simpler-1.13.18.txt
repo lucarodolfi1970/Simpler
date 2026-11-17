@@ -1,0 +1,14 @@
+SIMPLER 1.13.18  —  22 ottobre 2026
+===================================
+
+LIBRERIA: TAGLIA E INCOLLA
+--------------------------
+- Tasto destro su un materiale tuo, su un modello 3D o su una cartella: "Taglia". L'elemento tagliato resta in
+  trasparenza finché non lo incolli.
+- Poi apri la cartella dove vuoi metterlo e, con il tasto destro sulla parte vuota della libreria, scegli "Incolla
+  qui"; oppure tasto destro su una cartella: "Incolla in questa cartella". L'elemento sparisce da dove era e compare
+  nel nuovo posto. Una cartella si sposta con tutto quello che contiene (sottocartelle comprese).
+- Si incolla solo nello stesso tipo: un materiale va in una cartella di materiali, un modello in una cartella di
+  modelli. Passando dai materiali ai modelli (o viceversa) il taglia viene dimenticato. Le cartelle Simpler e
+  Primitive non ricevono incolla.
+- "Annulla il taglia" nel menu del tasto destro lo annulla.

@@ -1,0 +1,7 @@
+SIMPLER 1.20.0  —  24 October 2026
+==================================
+
+- AI panel: the function is chosen from a drop-down. Only the chosen one shows (preview, name and a few words on what it does); one click opens the list of all of them, and the options below change at once.
+- New "AI outputs" tab in the library, next to Scenes: every AI output of the project appears there as a thumbnail. One click opens the before/after window; from the "…" menu you can process it again with AI, save its image or delete it.
+- AI outputs are part of the project: when saving they go into the "<project name> AI" folder next to the .simpler file ("Save as" copies them into the new folder) and come back when you reopen the project. If you don't save, they are lost like the other changes; Simpler asks you to save even when the only news is an AI output.
+- "From file…" removed: only Simpler images are processed (the view, the final render, the project's AI outputs).

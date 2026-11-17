@@ -1,0 +1,4 @@
+SIMPLER 1.57.0  —  27 October 2026
+==================================
+
+- View bar: new red broom icon, «Free memory». It takes out of the computer's memory the deleted objects Simpler keeps for undo and the materials, textures and geometry no object uses any more. First a message says what and how much would go and asks for confirmation: the undo history (Ctrl+Z) is cleared, the scene does not change. Materials you are editing without objects and the originals for «Restore original» stay.

@@ -1,0 +1,4 @@
+SIMPLER 1.36.8  —  25 October 2026
+==================================
+
+- Scatter: a car (or another model) could stay tiny in the real-time view while it was right in the path tracer. It happened with models that have a scale of their own, such as FBX files in inches (38 times smaller). The model prepared for the view is shared between copies placed in the scene and distributions; when it had been prepared first for a copy in the scene, it did not carry the model's own rotation and scale that the distribution needs. Now the engine takes them each time from the distribution's model, and the view asks for them again when they are missing.

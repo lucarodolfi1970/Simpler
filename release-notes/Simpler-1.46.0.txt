@@ -1,0 +1,7 @@
+SIMPLER 1.46.0  —  26 ottobre 2026
+==================================
+
+- Neve, passo 1: nuova scheda «Neve» nell'Ambiente, sotto la Pioggia. «Quantità» va da una spolverata a chiazze a tutto bianco. La neve si posa dove la superficie guarda verso l'alto (terreno, tetti, cornicioni, auto, alberi e prati delle distribuzioni) e copre il rilievo delle texture. È uguale nella vista in tempo reale e nel path tracing.
+- Usa lo stesso riparo della pioggia: niente neve sotto tettoie, portici, balconi, auto e alberi. Sull'oggetto valgono «Sempre asciutto» (niente neve) e «Non fa riparo».
+- Avanzate: «Sulle pareti» (quanto scende sulle superfici inclinate), «Sfumatura bordi», «Sposta X/Y» per le chiazze, «Solo all'aperto».
+- Mentre nevica la pioggia è sospesa: le sue impostazioni e le pozzanghere dipinte restano e tornano quando la neve è a zero.

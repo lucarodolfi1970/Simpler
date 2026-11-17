@@ -1,0 +1,9 @@
+SIMPLER 1.76.39  —  4 November 2026
+===================================
+
+The sea has true waves where you look.
+
+- The sea has true waves, in shape, only in one area; outside it is flat and the waves are only drawn by the light. New mode «Follows the view» (default for new seas): the area is where you look. When the camera stops on a point outside it, the sea is computed again there in a few seconds (with «Busy · please wait»); while you stay inside nothing happens, and before the final render it is checked anyway. So an object far from the centre of the scene has its waves and its «Moving water at the edge».
+- «Fixed on the scene» stays in Ocean › Advanced › «True waves»: the area covers the objects of the scene and never moves, useful for many framings or a video with the very same sea. Before, «Camera» put the area where the camera was at that moment, without following it later: now it is the new mode.
+- The tooltips of «True waves» and «Detail» explain what they do and what they cost.
+- A sea already saved keeps its choice.

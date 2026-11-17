@@ -1,0 +1,6 @@
+SIMPLER 1.34.1  —  25 ottobre 2026
+==================================
+
+- Più copie dello stesso modello della libreria non duplicano più materiali e texture. Prima ogni inserimento caricava di nuovo tutti i materiali (body.001, glass.001…) e le immagini: più memoria, e la vista in tempo reale preparava ogni copia da capo. Ora quello che la scena ha già viene riusato, ma solo se è identico nel contenuto: stessi nodi con tutti i valori e i collegamenti, stesse impostazioni, stesse immagini (lo stesso file con lo stesso spazio colore, o gli stessi byte se incorporate). Due materiali con lo stesso nome ma anche una minima differenza restano separati. Con due Audi A4 i materiali passano da 35 a 18.
+- La vista in tempo reale prepara una sola volta il modello anche quando le sue copie hanno le parti rinominate in ordine diverso (Sphere, Sphere.006…): prima ogni copia aveva il suo prototipo e la sua esportazione. Al primo avvio i prototipi già pronti vengono rifatti una volta.
+- Da sapere: modificare nell'editor un materiale condiviso cambia tutte le copie che lo usano. Trascinare un materiale su un pezzo cambia solo quel pezzo.

@@ -1,0 +1,7 @@
+SIMPLER 1.66.2  —  28 ottobre 2026
+==================================
+
+- Pioggia forte più fitta. Con «Intensità» al 100% le gocce vicino alla camera erano troppo poche: il limite di gocce le diradava tutte allo stesso modo, anche quelle vicine che fanno sembrare fitta la pioggia (circa 2.700 entro 3 m). Ora:
+  - le gocce vicine restano tutte e solo il velo lontano usa gocce più rade e più grandi;
+  - l'intensità massima è circa il doppio;
+  - il limite sale a 600.000 gocce.

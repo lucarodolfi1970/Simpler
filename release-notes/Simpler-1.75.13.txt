@@ -1,0 +1,8 @@
+SIMPLER 1.75.13  —  31 ottobre 2026
+===================================
+
+Neve che segue i modelli «Non fa riparo» anche nel render finale.
+
+- Spostando un modello con «Non fa riparo» (per esempio un'auto, perché la strada sotto resti bagnata), il manto di neve non veniva ricalcolato: il motore controllava solo gli oggetti che fanno riparo. Nel render finale la neve restava dove l'auto era prima.
+  - La vista sembrava a posto perché, muovendo anche la camera, il manto si rifaceva per la nuova inquadratura.
+  - Ora anche questi oggetti contano: spostandoli, il manto si rifà subito e il render finale lo usa.

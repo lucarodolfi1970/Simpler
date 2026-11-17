@@ -1,0 +1,6 @@
+SIMPLER 1.50.0  —  27 ottobre 2026
+==================================
+
+- Neve: anche i modelli delle distribuzioni (auto, rocce, panchine posate con Distribuisci) ricevono il mantello sulla forma. Il mantello si calcola una volta sola per modello, in tre varianti con chiazze diverse assegnate alle copie: 80 auto costano quanto 3, nel path tracing e nella vista in tempo reale (instancing).
+- Per ogni copia: niente mantello se sta sotto qualcosa (tettoia, albero) o se è inclinata più di 10° (lì resta il bianco sulle superfici). Una distribuzione «Sempre asciutto», «Senza mantello» o con Dettaglio neve «Basso» resta senza mantello. Erba e foglie restano solo bianche.
+- Nel pannello, sotto «Dettaglio del mantello», si legge quante copie hanno il mantello e da quante forme.

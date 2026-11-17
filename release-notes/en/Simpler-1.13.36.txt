@@ -1,0 +1,11 @@
+SIMPLER 1.13.36  —  23 October 2026
+===================================
+
+FIX MODEL MATERIALS (NEW)
+-------------------------
+Fixes the materials of many models of the personal library at once. Open it from Import ▾ «Fix model materials…» or right-click a model «Fix materials…».
+1. Models: choose single models, whole folders or «The whole library».
+2. Materials: «Analyse the materials» reads them in the background (the scene is not touched) and groups them: Glass, Fake glass (opaque), Glass with metal, Metals, Glossy (plastics), Emissive, With textures, Plain. Every row shows colour, roughness, metal, transparency and its textures (C colour, R roughness, M metal, N normal, A alpha). Advanced materials (nodes the editor cannot read) are marked and left alone.
+3. Changes: for every parameter Set, Multiply × or Add + (roughness, metal, specular, colour brightness and saturation, tint, transparency, IOR, thin wall, coat, emission), or remove a texture or the alpha transparency. Ready presets: «Less plastic» and «Real glass». Before applying you see how many materials and models will change.
+4. Apply: in the background, model by model; then the thumbnails are rendered again. The backup copy is on by default and «Restore the last fix» puts the models back as they were (the last 3 fixes are kept).
+Models already placed in scenes stay as they are: the fix applies to the library and to the next insertions.

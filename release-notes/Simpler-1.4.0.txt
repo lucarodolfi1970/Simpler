@@ -1,0 +1,25 @@
+SIMPLER 1.4.0  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- COPIA E INCOLLA OGGETTI: Ctrl+C copia gli oggetti selezionati (anche dal menu del tasto destro), Ctrl+V apre la
+  finestra "Incolla" dove scegli:
+    · ISTANZA: le copie condividono forma e materiali con l'originale (in Blender: "duplicato collegato").
+      Cycles le disegna come istanze di un'unica geometria: quasi nessuna memoria in più anche con migliaia di
+      copie (alberi, sedie, lampioni). Cambiare il materiale di una le cambia tutte.
+    · COPIA INDIPENDENTE: ogni copia ha la sua geometria e puoi cambiarne i materiali una per una; occupa memoria
+      come l'originale.
+    · QUANTITÀ: le copie incollate vengono messe una accanto all'altra lungo l'asse X.
+  Ctrl+D resta il duplicato veloce (un'istanza, senza domande).
+- COPIA TRASCINANDO CON SHIFT: tieni premuto Shift e trascina il gizmo. L'originale resta al suo
+  posto (se ne vede il "fantasma") e la sagoma segue il mouse; quando lasci, Simpler chiede tipo (istanza o copia
+  indipendente) e quantità. La prima copia va dove hai lasciato, le successive continuano alla stessa distanza e
+  nella stessa direzione; trascinando un arco di rotazione le copie si dispongono in cerchio attorno al centro del
+  gizmo. Annullabile con Ctrl+Z.
+  ATTENZIONE: l'inversione dello Snap durante il trascinamento ora si fa con Ctrl (prima era Shift).
+- POTENZA DELLA SCHEDA VIDEO: all'avvio, sulla schermata iniziale, compaiono la scheda video, la memoria e una
+  valutazione in % di quanto è adatta a Simpler (100% = scheda per scene molto grandi, tipo RTX 4090 con 24 GB),
+  con un giudizio (eccellente, ottima, buona, sufficiente, limitata). Nessun test: i dati vengono dal driver in
+  pochi millisecondi, in parallelo, quindi l'avvio non rallenta. Il calcolo pesa potenza di calcolo (core × clock,
+  ray tracing) per il 60% e memoria video per il 40%. La stessa valutazione è nella scheda Risorse.

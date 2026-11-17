@@ -1,0 +1,7 @@
+SIMPLER 1.76.21  —  3 November 2026
+===================================
+
+The sea without repeating patterns.
+
+- The far waves and the short ripples were one picture repeated like a tile (208 m for «Rough», a few metres for the ripples): rows and diagonals showed all the way to the horizon. Now the tiles are laid as a mosaic, each piece shifted at random and blended into its neighbours without losing contrast: no visible repeat, in the real-time view and in path tracing.
+- Gone are the long white streaks pointing at the horizon in front of the camera: it was the foam drawn between the points of the sea surface where they are far apart in one direction. There the foam now comes from the map of the far waves, with its white crests scattered as near by.

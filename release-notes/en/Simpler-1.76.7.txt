@@ -1,0 +1,9 @@
+SIMPLER 1.76.7  —  2 November 2026
+==================================
+
+The project's folders stay tidy.
+
+- Next to «X.simpler» Simpler keeps the project's folders: «X texture» (the pictures copied with the project), «X AI» (the AI results) and «X - Video AI» (the video keyframes).
+- Saving as over another project: Simpler asks for confirmation, then the old project (with its backup and automatic copy) and the files of its folders go to the Windows Recycle Bin, from where they can be recovered. Before, the new files mixed with the old ones, and the AI results of the old project were deleted outright. Files the scene being saved still uses stay where they are.
+- At every save, the textures and keyframes the project no longer uses go to the Recycle Bin, but only from the following save: the backup «X.simpler1» may still need them. Folders made before this version are not touched at the first save.
+- AI results deleted in the app also go to the Recycle Bin at the save, instead of being deleted.

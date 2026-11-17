@@ -1,0 +1,10 @@
+SIMPLER 1.69.0  —  29 October 2026
+==================================
+
+- New «Grunge» section in materials: a layer of random dirt (stains, streaks, dust) for more realism.
+  - Quantity: how much dirt shows (0% = off).
+  - On the edges: more dirt on edges and corners and where the surface meets other objects, for example a wall on the floor. It shows in path tracing and in the render; not in the real-time view.
+  - Size: in centimetres, independent of the material's UV coordinates. The dirt is projected from three directions, so it works on models without UV too.
+- The dirt texture is Simpler's own (made for it, no licence issues) and repeats without seams.
+- Advanced: dirt colour, how much it dulls the surface, slight relief, «Vary per object» (identical objects do not have the same stains, on by default), edge width, a mask of yours instead of Simpler's, a colour texture and a normal map.
+- In the real-time view the dirt shows at once (colour and dullness); edges, relief and normal map only in path tracing.

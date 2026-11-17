@@ -1,0 +1,5 @@
+SIMPLER 1.38.3  —  25 October 2026
+==================================
+
+- Easier-to-read names on library tiles: long names without spaces, such as MT_PM_V60_Lolium_perenne_01, wrap after _ - . instead of in the middle of a word. They stay on two lines and, when longer, end with «…». The full name appears when you hold the pointer on it. This applies to models, materials, decals, backgrounds, ecosystems and folders.
+- Real-time view with huge distributions and ecosystems: the pieces are grouped in nearby blocks. Blocks outside the framing or too far away are dropped at once, and the positions of the visible pieces are computed more directly. The picture is the same as before. With a million pieces, the processor work at every camera move drops by up to 40%, depending on the framing.

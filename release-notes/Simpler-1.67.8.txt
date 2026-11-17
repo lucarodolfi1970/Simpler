@@ -1,0 +1,6 @@
+SIMPLER 1.67.8  —  29 ottobre 2026
+==================================
+
+- «Adatta all'oggetto» ora è sempre visibile nella mappatura UV. Prima compariva solo se il materiale era stato aperto da un oggetto selezionato, e dall'elenco dei materiali della scena non si trovava.
+- Aperto dall'elenco dei materiali, adatta l'immagine a tutti gli oggetti che usano quel materiale, ognuno sulla propria forma. Aperto da un oggetto selezionato, vale solo per quell'oggetto, come prima.
+- Spegne anche «Centra ogni pezzo» e azzera lo spostamento, così l'immagine resta intera.

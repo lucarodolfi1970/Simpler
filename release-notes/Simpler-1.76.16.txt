@@ -1,0 +1,10 @@
+SIMPLER 1.76.16  —  2 novembre 2026
+===================================
+
+Il mare al piede del terreno; le nuvole sopra la scena.
+
+- Aggiungendo l'oceano con un terreno in scena, il livello del mare va da solo al bordo più basso del terreno: il terreno emerge tutto dal mare, con le coste ai suoi bordi. Prima il mare restava a quota 0 (quella del modello) e allagava le valli.
+- Il mare segue il terreno quando lo modifichi, lo rigeneri o lo sposti, e torna indietro con Ctrl+Z.
+- Se muovi tu «Livello del mare», il valore resta il tuo. Per tornare al piede del terreno: Oceano > Avanzate > «Al piede del terreno». I mari dei progetti già salvati restano dove erano.
+- Il cursore «Livello del mare» si allarga quando il livello è lontano dallo zero (centinaia di metri con le montagne).
+- Le nuvole volumetriche stanno sempre almeno 100 m sopra il punto più alto della scena e si spostano se un terreno viene alzato o fatto più alto. Prima un terreno alzato poteva entrare nello strato di nuvole: con la camera dentro, il path tracing era tutto grigio.

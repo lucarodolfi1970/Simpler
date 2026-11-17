@@ -1,0 +1,10 @@
+SIMPLER 1.76.8  —  2 November 2026
+==================================
+
+Split zone: a terrain zone splits into parts that follow the shape of the land.
+
+- In the Terrain panel, next to each zone, «Split» offers the rules: wet (where water runs and gathers), dry, sunny, shaded (from the Ambience sun), high, low, steep, flat, mounds, hollows, patches.
+- Each part has «How much» (how much of the zone it takes) and «Irregularity» (a more natural edge); patches also their size.
+- Parts can be split again, up to 16 zones in all. When the terrain changes, the parts are made again on the new shape.
+- Each part gets a variant of the material of the zone it comes from; it can be replaced like the others. Border blending works between parts too.
+- Changing a split is much faster than making the terrain again; Ctrl+Z takes it away.

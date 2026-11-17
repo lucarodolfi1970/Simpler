@@ -1,0 +1,4 @@
+SIMPLER 1.27.1  —  25 ottobre 2026
+==================================
+
+- Libreria: menu riordinati per tipo. «Modelli 3D ▾» con Poly Haven e Personalizzati (i tuoi modelli), «Materiali ▾» con Poly Haven e Personalizzati (i tuoi materiali), «Decal ▾» con ambientCG e Personalizzati (le tue PNG). Poi HDRI e sfondi (prima dentro Poly Haven), Luci, Scene ed Elaborazioni AI. Il pulsante del menu aperto mostra anche la voce scelta, per esempio «Materiali · Personalizzati ▾».

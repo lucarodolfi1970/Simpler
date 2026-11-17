@@ -1,0 +1,6 @@
+SIMPLER 1.13.47  —  23 ottobre 2026
+===================================
+
+MENU IMPORTA
+------------
+- Una linea separa le voci per importare (nella scena, nella libreria) da quelle per curare la libreria (Correggi materiali, Statistiche e pulizia).

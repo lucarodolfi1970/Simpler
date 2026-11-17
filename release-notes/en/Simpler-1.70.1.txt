@@ -1,0 +1,5 @@
+SIMPLER 1.70.1  —  29 October 2026
+==================================
+
+- Fixed: the painted dirt showed in the real-time view but not in path tracing. Path tracing keeps its images from one pass to the next and went on using the old maps, without the new strokes; it updated only by opening the project again. Now every stroke shows at once in path tracing too.
+- Same fault and same fix for the puddles and the snow painted by hand and for the water that freezes.

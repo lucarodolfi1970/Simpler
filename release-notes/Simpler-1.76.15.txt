@@ -1,0 +1,8 @@
+SIMPLER 1.76.15  —  2 novembre 2026
+===================================
+
+Gli ecosistemi seguono il terreno.
+
+- Quando modifichi o rigeneri un terreno, gli ecosistemi messi sulle sue zone vengono rifatti sulla nuova forma, con le stesse impostazioni e lo stesso seme. Prima i pezzi restavano dove erano: sepolti dove il terreno si era alzato, sospesi dove si era abbassato, oltre i nuovi confini delle zone.
+- Un solo Ctrl+Z annulla insieme la modifica del terreno e gli ecosistemi rifatti.
+- Se un ecosistema non si può rifare (per esempio la camera non vede più la sua superficie), Simpler lo dice nella barra di stato e lo lascia com'era.

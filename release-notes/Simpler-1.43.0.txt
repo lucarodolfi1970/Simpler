@@ -1,0 +1,9 @@
+SIMPLER 1.43.0  —  26 ottobre 2026
+==================================
+
+- Pioggia, passo 2: il riparo. Sotto tettoie, portici, balconi, auto e alberi resta asciutto, come con la pioggia vera: niente bagnato e niente pozzanghere sotto quello che copre, uguale nella vista in tempo reale e nel path tracing.
+  - Simpler guarda la scena dall'alto e calcola cosa sta sotto qualcos'altro. Lo rifà da solo quando la geometria cambia (sposti, aggiungi o elimini un oggetto), un attimo dopo l'ultimo comando: non quando cambi un materiale, una luce o la camera.
+  - Delle distribuzioni contano solo i modelli alti (alberi, auto): l'erba non fa riparo.
+  - I muri sotto un riparo restano un po' bagnati, perché la pioggia arriva anche di traverso.
+  - Avanzate della Pioggia: «Solo all'aperto» (acceso di serie). Spento, si bagna tutto anche al coperto.
+  - Nuovo «Sempre asciutto» nelle Avanzate della scheda Pioggia di un oggetto (compare quando piove): la pioggia non bagna quell'oggetto né quello che contiene. Si può annullare con Ctrl+Z.

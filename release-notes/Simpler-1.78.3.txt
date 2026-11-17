@@ -1,0 +1,11 @@
+SIMPLER 1.78.3  —  6 novembre 2026
+==================================
+
+Le luci hanno il loro pulsante; Vegetazione e Modelli 3D hanno anche la parte «Simpler».
+
+- Nuovo pulsante con la lampadina gialla nella barra in alto, accanto al pivot: si apre l'elenco delle luci (Omni, Spot, Area, Disco, Striscia LED, Sole) e un clic mette la luce al centro della vista. Le luci non sono più nella libreria: il menu «Cielo e luci» diventa «HDRI e sfondi».
+- Vegetazione ha due voci: Simpler (le piante che arriveranno con il programma) e I miei (le tue). Modelli 3D ▸ Simpler mostra le forme di base e, sotto, i modelli di Simpler.
+  - Per ora le parti Simpler si usano come cartelle normali: ci puoi importare, spostare e togliere modelli. Quando saranno complete diventeranno di sola lettura.
+  - «Importa vegetazione…» aperto da Vegetazione ▸ Simpler importa lì.
+  - Un modello di Modelli 3D ▸ Simpler convertito in vegetazione resta tra le piante di Simpler.
+- Più veloce: cambiare colore, ruvidità, foglie, tessuto e gli altri aspetti di un materiale non fa più ricalcolare la costa del mare, il riparo dalla pioggia e la neve, che non dipendono da questi. Su una scena con il mare il motore restava occupato circa un secondo dopo ogni modifica; ora è libero subito.

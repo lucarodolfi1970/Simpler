@@ -1,0 +1,5 @@
+SIMPLER 1.18.2  —  24 October 2026
+==================================
+
+- "Colours from a photo" no longer chooses stratus at 90%: it gave one uniform sheet, far too thick. Now, depending on the colours, it chooses big cumulus (35% or 70%) or altocumulus (60%), with gaps and shapes. This holds for the presets and for your photos.
+- The Overcast presets give their best once the colour table has finished the clouds at 70% (it resumes by itself at start, about 15 minutes, progress in the bottom bar).

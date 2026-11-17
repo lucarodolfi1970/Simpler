@@ -1,0 +1,6 @@
+SIMPLER 1.71.6  —  30 October 2026
+==================================
+
+- Scene tree, dragging in long lists: when you bring a row towards the top or bottom edge of the tree, the list scrolls by itself. The closer you get to the edge, the faster it scrolls, so you can drop the row in the right place.
+- Several rows together: select them with Ctrl + click (or Shift + click for a range), then drag one of them. They all move: into a group, before or after another row, or out of every group. If one of the rows is a group with other selected rows inside it, those follow their group.
+- A click without dragging on a row of a multiple selection selects only that row, as before. The selection stays until you release the mouse, so you can drag all of it.

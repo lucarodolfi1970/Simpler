@@ -1,0 +1,16 @@
+SIMPLER 1.75.38  —  1 November 2026
+===================================
+
+Final render without the wet road: the cause found and fixed.
+
+- In some city scenes the final render came out dry. Before the render the map that tells where the rain wets and where not (the shelter) was the right one. In the copy of the scene passed to the render, however, there was an old map, already deleted from disk. Without a map everything counted as «sheltered», so dry.
+- The reason: in big scenes, Simpler uses reduced copies of the images for the path tracing view. The name of an old map stayed written on that image, and at render time (and when saving) the old one was put back instead of the current one.
+- Now an old name left there is ignored and removed.
+- The shelter map is no longer replaced by a reduced copy. It is a 16-bit height map, and reduced it lost precision in the view too.
+- The log now also writes the rain as the copy passed to the render really sees it.
+- New automatic check «stale_proxy_orig»: it fails with the old code, it passes with the fix.
+- The video keyframes made with the dry road must be made again with «Use the current view».
+
+AI video:
+- Under each keyframe there is the «See the render» button, enabled when the render has been made: it opens the image at full size to check it before creating the video.
+- If Krea reaches 100% but the video is not ready yet, «It is taking longer than usual, please wait…» replaces the stuck 100%.

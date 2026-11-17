@@ -1,0 +1,9 @@
+SIMPLER 1.19.0  —  24 ottobre 2026
+==================================
+
+- Pannello AI: con la chiave OpenAI funzionante, il pulsante con le stelline apre a destra il pannello «Intelligenza artificiale». Dall'alto: lo stato della chiave (verifica di nuovo, elimina), i token usati (ultima immagine e totale), il motore (modello e tre livelli di qualità), l'immagine da elaborare, la funzione e le sue opzioni, «Esegui».
+- Immagine da elaborare: «La vista» esattamente come la vedi (sagome, tempo reale o path tracing, senza gizmo e nella proporzione del formato), «Ultimo render», oppure un'immagine da file o aperta in Simpler.
+- Sette funzioni: Render → Fotorealismo, Migliora, Giorno notte e stagioni, Aggiungi persone, Arreda, Cambia inquadratura, Sostituisci. Le opzioni più usate sono in vista, le altre nei riquadri «Avanzate».
+- Sostituisci: con «Esegui» disegni un rettangolo sull'immagine attorno a ciò che vuoi togliere o cambiare (con una descrizione o con la foto di un oggetto); «Solo l'area scelta» lascia il resto identico.
+- Il risultato si apre in una finestra sempre in primo piano e ridimensionabile: confronto prima/dopo con la linea da trascinare, zoom con la rotellina, Salva, Copia, Adatta, 100% ed «Elabora con l'AI» per continuare a lavorare sul risultato. Ogni risultato resta anche in %LOCALAPPDATA%\Simpler\ai.
+- Il render finale ora si apre nella stessa finestra (con «Apri fuori» per il visualizzatore di Windows) e si può mandare all'AI con un clic. I file EXR si aprono come prima.

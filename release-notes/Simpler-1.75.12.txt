@@ -1,0 +1,11 @@
+SIMPLER 1.75.12  —  31 ottobre 2026
+===================================
+
+SmartView senza «Aggiornamento delle luci», caustiche del mare senza bordi né zone scure.
+
+- SmartView: aggiungendo, spegnendo o eliminando una luce la vista rifaceva tutti gli shader («Aggiornamento delle luci», 5-9 s ogni volta).
+  - Ora, con SmartView acceso, l'insieme delle luci della vista resta quello del momento in cui l'hai acceso: una luce nuova si vede come icona ma non illumina finché non spegni SmartView, una luce tolta lascia un segnaposto spento.
+  - Spegnendo SmartView tutto torna vero, con un solo aggiornamento.
+- Caustiche del mare («Luce riflessa dall'acqua»): il sole sotto il mare non viene più trattenuto e rimesso come immagine. Si aggiungono solo le linee di luce che le onde concentrano sopra la luce normale.
+  - Niente più riga al bordo dell'area né banda scura lungo la riva: con l'opzione accesa nessun punto può diventare più scuro che con l'opzione spenta.
+  - Linee un po' più marcate (contrasto ×3).

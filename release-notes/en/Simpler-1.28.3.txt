@@ -1,0 +1,4 @@
+SIMPLER 1.28.3  —  25 October 2026
+==================================
+
+- Scene tree: before «All» a small button unfolds the whole tree, or folds it all when something is open (double arrows pointing down or up).

@@ -1,0 +1,8 @@
+SIMPLER 1.75.41  —  1 November 2026
+===================================
+
+AI outputs: the name also shows the model used.
+
+- The name of each item in AI outputs now also shows the model that made it, for example «Video · Kling 3.0 · 01/11 10:20» or «AI render · GPT Image 2 · 01/11 10:25». This also applies to the items already in the project.
+- The name proposed by «Save image…», «Save video…» and «Rename…» contains the model too.
+- A name given with «Rename» stays as you wrote it.

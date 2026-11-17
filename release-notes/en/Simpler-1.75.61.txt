@@ -1,0 +1,10 @@
+SIMPLER 1.75.61  —  1 November 2026
+===================================
+
+«Optimize polygons»: a sturdier 3D preview on very heavy models.
+
+- With the 12-million-triangle Qashqai, the «Before» view showed only a few strips of the model. The model, however, was fully loaded: the triangle count was right, and here the same preview shows the whole car. With the 6-million version the preview worked.
+- The most likely cause: the preview was redrawn only when you moved something. With a very heavy model, while the main window was working, Windows could lose the picture already drawn, leaving partial pieces. Now the preview also redraws on its own once a second, when the window becomes visible again and when it regains focus. Redrawing a still picture costs the graphics card little.
+- If the graphics card loses the graphics context, for example from lack of memory, a message now appears instead of a blank picture.
+- The app log now records the loading of each view (triangles and model size) and any page errors. If it happens again, I can work out what happened.
+- Framing with better depth precision on large models.

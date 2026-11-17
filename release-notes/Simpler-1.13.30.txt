@@ -1,0 +1,9 @@
+SIMPLER 1.13.30  —  22 ottobre 2026
+===================================
+
+VISTA 3D: OGGETTI NUOVI IN UN ATTIMO
+------------------------------------
+- Trascinare una primitiva (o creare un oggetto nuovo) in una scena grande non prepara più tutta la vista 3D da capo: si prepara solo l'oggetto nuovo e si aggiunge a quello che c'è già.
+  Esempio: un cubo in un interno grande passava da circa 20 secondi (450 MB riesportati) a una frazione di secondo.
+- Gli oggetti con texture si preparano a parte (con le texture ridotte, come sempre), in un paio di secondi, senza bloccare l'app.
+- Se per qualche motivo l'aggiunta non riesce, la vista si prepara per intero come prima.

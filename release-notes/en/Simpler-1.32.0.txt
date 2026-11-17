@@ -1,0 +1,6 @@
+SIMPLER 1.32.0  —  25 October 2026
+==================================
+
+- Pivot moved by hand: new button with a small gizmo icon, next to Move / Scale / Scatter. On, the gizmo turns violet and dragging it moves only the gizmo, the model stays still: put it where you like (for example under a wheel, on a door hinge, in the middle of a table). Click the button again: the gizmo is back to normal and for that model that is its place, also after saving and opening the project again; moving, turning and scaling the model happen around that point, whatever Centre / Base / Origin says.
+- It works on the whole model: with a part selected, the pivot goes to the top of the hierarchy. Undone with Ctrl+Z.
+- Properties ▸ Transform: «Automatic pivot» puts the gizmo back where Centre, Base or Origin say.

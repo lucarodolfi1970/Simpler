@@ -1,0 +1,15 @@
+SIMPLER 1.13.32  —  23 October 2026
+===================================
+
+3D LIBRARY: OVERWRITING A MODEL NO LONGER LOSES ITS TEXTURES
+------------------------------------------------------------
+- Saving a model over the existing one (for example after scaling it) deleted its texture folder before copying them: the saved model came back all white. Now the textures stay and the saved model has them.
+- The same for «Import» with replace.
+
+THUMBNAILS OF IMPORTED MODELS
+-----------------------------
+- Lights of other programs (V-Ray, Corona) in an FBX became empty objects far from the model: the thumbnail framed them too and the model looked like a dot. Now they are not imported and the thumbnail frames only what is visible.
+
+DELETING A LIBRARY MODEL IS IMMEDIATE
+-------------------------------------
+- Deleting a library model from the scene prepared the whole 3D view again (20 seconds in a big scene). Now it disappears at once.

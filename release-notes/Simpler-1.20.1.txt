@@ -1,0 +1,5 @@
+SIMPLER 1.20.1  —  24 ottobre 2026
+==================================
+
+- Mentre l'AI elabora puoi continuare a usare Simpler. Se però scegli Nuova scena, Apri o chiudi Simpler, ti avvisa che il risultato andrebbe perso: «No» aspetta che finisca, «Sì» annulla l'elaborazione e continua.
+- Un risultato che arriva dopo aver cambiato progetto non finisce più tra le elaborazioni del progetto sbagliato.

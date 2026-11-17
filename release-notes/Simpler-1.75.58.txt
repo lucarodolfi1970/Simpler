@@ -1,0 +1,10 @@
+SIMPLER 1.75.58  —  1 novembre 2026
+===================================
+
+Video AI: il pulsante si chiama ora «Crea/migliora con l'AI».
+
+- Il pulsante sotto il testo del movimento non serve solo a migliorare un testo già scritto: se la casella è vuota, guarda i due fotogrammi e scrive il testo da zero. Il nuovo nome lo dice. Anche il suggerimento lo spiega: vuoto, lo crea da zero; scritto, lo migliora.
+- Mentre lavora il pulsante mostra «Sto scrivendo…». A lavoro finito, la barra di stato dice «Testo creato» o «Testo migliorato», a seconda che la casella fosse vuota o no.
+- Aggiornato lo stesso nome anche nelle Impostazioni, nella descrizione della chiave OpenAI.
+
+Solo nomi e testi: il modo in cui il testo viene scritto non cambia.

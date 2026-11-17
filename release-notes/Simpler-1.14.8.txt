@@ -1,0 +1,7 @@
+SIMPLER 1.14.8  —  24 ottobre 2026
+==================================
+
+PUNTINI SU PARALUMI, SALIERA, FORNO: TROVATA LA CAUSA VERA
+----------------------------------------------------------
+- Non erano il materiale né il path tracing: l'immagine calcolata da Cycles era pulita. I puntini li aggiungeva dopo la foschia (il compositor che sfuma le cose lontane). La foschia misura quanto è lontano ogni pixel con il passaggio «Mist», che è una media lungo i raggi: attraverso un materiale con mappa di opacità (paralume, saliera, sportello del forno) alcuni raggi passano e arrivano al cielo o al suolo lontano. Per un paralume a 2 m la distanza risultava 400 m su alcuni pixel e 2 m sui vicini: foschia sì e no, a puntini bianchi, con qualunque numero di campioni. Per questo con un materiale standard (opaco) il problema spariva.
+- Ora la distanza per la foschia non supera mai quella della prima superficie colpita (passaggio Depth). Verificato con una lastra semitrasparente davanti a un fondale lontano: puntini spariti, rumore dimezzato.

@@ -1,0 +1,5 @@
+SIMPLER 1.37.2  —  25 ottobre 2026
+==================================
+
+- Libreria: nuovo menu «La storia», prima di Modelli 3D. È la scheda che Simpler mostra all'avvio. Racconta in poche righe, firmate da Luca Rodolfi, perché esiste Simpler e con quale spirito, e porta il link al sito con tutte le informazioni in italiano e in inglese: https://simpler-render.web.app/en/
+- Prima all'avvio si apriva «Materiali · Personalizzati»: era la scheda iniziale rimasta da una versione vecchia.

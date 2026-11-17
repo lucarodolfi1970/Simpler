@@ -1,0 +1,5 @@
+SIMPLER 1.33.3  —  25 ottobre 2026
+==================================
+
+- Decimali e centesimi ovunque: tutti i campi numerici dei pannelli (luci, materiali, decal, oggetti, camera, ambiente, render) accettano e mostrano fino a due decimali, per esempio 0,125 m, 2,5 W o 12,75 %. I decimali compaiono solo quando ci sono: 10 resta «10». Restano interi solo i valori che lo sono per natura: campioni, rimbalzi, numero di lamelle, ordine delle decal.
+- Le decal non arrotondano più al millimetro (dimensioni e profondità) né al punto percentuale (opacità, rugosità, metallo).

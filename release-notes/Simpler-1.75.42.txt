@@ -1,0 +1,14 @@
+SIMPLER 1.75.42  —  1 novembre 2026
+===================================
+
+Video AI e scene salvate: verificati e gestiti tutti i casi.
+
+- Un fotogramma del video è sempre una copia completa della scena com'era quando l'hai fatto: inquadratura, luci, ambiente e immagine. Rinominare, aggiornare o eliminare la scena da cui viene non lo cambia mai, e il video usa sempre quella copia.
+- Sotto ogni fotogramma fatto con «Da una vista salvata…» ora c'è scritto da quale scena viene. Simpler la riconosce dal suo codice interno, non dal nome:
+  - scena rinominata: compare il nome nuovo;
+  - scena aggiornata dopo (⟳): un avviso dice che il fotogramma è la versione di prima, da rifare se vuoi quella nuova;
+  - scena eliminata: un avviso dice che la scena non c'è più e che il fotogramma resta com'era;
+  - scena eliminata e un'altra rinominata o creata con lo stesso nome: non viene scambiata per quella di prima.
+- Con «Usa la vista attuale» il fotogramma non è legato a nessuna scena.
+- Il pannello si aggiorna subito quando rinomini, aggiorni o elimini una scena.
+- Nuovo controllo automatico «video_frame_views» con tutte queste combinazioni.

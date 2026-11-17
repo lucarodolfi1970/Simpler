@@ -1,0 +1,9 @@
+SIMPLER 1.75.62  —  1 novembre 2026
+===================================
+
+Vista in tempo reale: niente più ciclo infinito quando un modello della libreria non si può preparare.
+
+- Dopo aver trascinato un materiale su un pezzo della Qashqai (un modello della libreria), l'auto è sparita dalla vista e «Preparing the models for the view» lampeggiava senza fine. La vista è rimasta bloccata finché non hai aperto una scena nuova.
+- La causa del ciclo: il motore rispondeva «Modello non presente nella scena» e la vista, dopo 1,5 secondi, dimenticava l'errore e chiedeva di nuovo, all'infinito.
+- Ora la vista riprova al massimo tre volte, sempre più distanziate (1,5 s, 6 s, 24 s), poi lascia stare fino alla preparazione successiva della vista. Il motore, se il modello non risulta più nella scena ma esiste già una sua versione preparata, usa quella: l'auto resta visibile invece di sparire.
+- Non ho ancora capito perché il motore non trovasse più il modello dopo il trascinamento del materiale. Ora, se capita di nuovo, nel registro c'è una riga con tutti i dati che servono (oggetto, modello, chiave).

@@ -1,0 +1,26 @@
+SIMPLER 1.1.11  —  19 ottobre 2026
+==================================
+
+BUG CORRETTI
+------------
+- Path tracing nella vista: a ogni passaggio di affinamento (2, 8, 32, 128 campioni) Cycles rileggeva tutti gli
+  oggetti e ricostruiva la struttura di accelerazione, anche se nulla era cambiato. In un interno grande
+  erano circa 2,3 secondi persi a ogni passaggio, quasi 10 secondi per ogni immagine. La causa: a ogni passaggio
+  la fotocamera veniva riassegnata alla scena, e Blender lo tratta come un cambiamento di tutta la scena. Ora la
+  scena resta sulla scheda video tra un passaggio e l'altro e anche quando si gira o si sposta la vista: si
+  riprepara solo quando cambia davvero qualcosa (oggetti spostati, materiali, luci).
+- Render finale diviso in 4 riquadri anche con molta memoria video libera: per questo il tempo rimanente
+  saltava (5:46, poi 0:12, con un render che è durato 4:13). Ora l'immagine si calcola in un colpo solo quando
+  sta comodamente nella memoria video; i riquadri restano solo per immagini enormi o schede piccole, e in quel
+  caso la barra avanza attraverso tutti i riquadri invece di ripartire da zero a ogni riquadro.
+- Le copie ridotte delle texture si accumulavano nel motore a ogni render finale e a ogni salvataggio (442,
+  poi 802, poi 1155 immagini nella scena): ora quelle non più usate vengono tolte, e la ricerca delle copie
+  già caricate è immediata invece di scorrere tutte le immagini.
+- Visualizzatore 3D: se restava "non risponde" per qualche istante (per esempio mentre caricava una scena
+  grande con il computer sotto carico) veniva ricaricato e la vista 3D si preparava di nuovo da capo. Ora si
+  ricarica solo se si è chiuso davvero.
+
+DIAGNOSTICA
+-----------
+- I registri di Simpler annotano la durata di ogni passaggio del path tracing, di ogni preparazione della vista 3D
+  e dei comandi lenti, e tengono anche quelli della sessione precedente: servono a trovare dove vanno i secondi.

@@ -1,0 +1,4 @@
+SIMPLER 1.44.3  —  26 ottobre 2026
+==================================
+
+- Pioggia: «Sempre asciutto» funziona anche sulle distribuzioni (una fila di auto fatta con Spaziatura, Pennello o Area): si accende sul gruppo della distribuzione e tutte le sue auto restano asciutte, nel path tracing e nella vista in tempo reale. Prima l'interruttore si accendeva ma le auto restavano bagnate.

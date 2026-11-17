@@ -1,0 +1,14 @@
+SIMPLER 1.75.50  —  1 novembre 2026
+===================================
+
+Nebbia, seconda ondata: la nebbia volumetrica più realistica.
+
+- Goccioline vere: la nebbia volumetrica usa ora la diffusione delle goccioline d'acqua (funzione di Mie), con il loro alone luminoso verso il sole e attorno alle lampade. Prima era una diffusione semplificata.
+- «Bagliore verso le luci» (Avanzate, con la nebbia volumetrica):
+  - basso: la luce si diffonde uguale in ogni direzione, come nella polvere, con i raggi ben visibili di lato;
+  - alto: goccioline d'acqua sempre più grandi, con l'alone più forte.
+- «Irregolarità» e «Grandezza delle chiazze» (Avanzate, con la nebbia volumetrica): banchi, chiazze e sbuffi invece di un velo uniforme. Con la nebbia bassa anche il bordo superiore dello strato ondeggia.
+- «Foschia sopra» (con la nebbia bassa): una foschia leggera in tutta l'aria sopra lo strato basso, come in una mattina umida. Funziona nella nebbia normale, nella volumetrica, sul cielo e nella vista in tempo reale.
+- Luce dentro la nebbia: nella nebbia volumetrica la luce rimbalza più volte tra le goccioline (2 volte nella vista, 4 nel render finale). Una nebbia vera è luminosa dall'interno; con un solo rimbalzo era più grigia e scura.
+- Il colore scelto della nebbia è ora il colore delle goccioline: la nebbia assorbe solo quello che serve per quel colore.
+- La vista in tempo reale mostra la nebbia uniforme: irregolarità e bagliore si vedono nel path tracing e nel render finale.

@@ -1,0 +1,10 @@
+SIMPLER 1.75.58  —  1 November 2026
+===================================
+
+AI video: the button is now called «Create/improve with AI».
+
+- The button under the motion text does not only improve text already written: if the box is empty, it looks at the two keyframes and writes the text from scratch. The new name says so. The tooltip explains it too: empty, it creates it from scratch; written, it improves it.
+- While it works the button shows «Writing…». When it has finished, the status bar says «Text created» or «Text improved», depending on whether the box was empty.
+- The same name is updated in Settings too, in the description of the OpenAI key.
+
+Names and texts only: the way the text is written does not change.

@@ -1,0 +1,4 @@
+SIMPLER 1.62.1  —  28 ottobre 2026
+==================================
+
+- «Fiocchi che cadono» è ora dentro le Avanzate della neve, in cima: «Nevica» e, quando è acceso, tutte le sue regolazioni in un solo elenco.

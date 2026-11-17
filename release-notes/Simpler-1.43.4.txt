@@ -1,0 +1,5 @@
+SIMPLER 1.43.4  —  26 ottobre 2026
+==================================
+
+- Path tracing fermo a «passaggio 3/5» quando piove: corretto. La vista in tempo reale chiedeva al motore ogni secondo e mezzo se la mappa del riparo era cambiata, e ogni domanda interrompeva il passaggio in corso, così il passaggio da 256 campioni non arrivava mai alla fine. Ora la risposta arriva senza disturbare il path tracing, che torna ad arrivare a 5/5.
+- Il motore, quando non ha niente da fare, non rilegge più l'Ambiente cento volte al secondo per sapere se piove.

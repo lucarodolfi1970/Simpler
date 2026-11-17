@@ -1,0 +1,10 @@
+SIMPLER 1.76.60  —  5 November 2026
+===================================
+
+The buttons of the AI functions are orange and easy to recognise.
+
+- In the top bar the order is now: Final render, AI images, AI video.
+- AI images: a small camera with the AI sparkles at its top right. Orange when the OpenAI key works, grey without a key.
+- AI video: a small clapperboard with the AI sparkles at its top right, orange.
+- Final render: only the camera, blue, without the words (the name stays in the tooltip).
+- From now on orange marks the AI functions, apart from the blue of the render.

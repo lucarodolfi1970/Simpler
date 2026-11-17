@@ -1,0 +1,4 @@
+SIMPLER 1.23.1  —  24 ottobre 2026
+==================================
+
+- Mappe del materiale: la bacchetta magica è più leggera (tratto sottile, bacchetta a linea singola).

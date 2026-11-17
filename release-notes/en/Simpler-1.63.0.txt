@@ -1,0 +1,8 @@
+SIMPLER 1.63.0  —  28 October 2026
+==================================
+
+- New, at the bottom left above «Lighten»: «Only what the camera sees». «All» switches every item on or off; under each switch it says what it does. It is saved with the project.
+- Snow: more detail where the camera looks, less far away, only a base outside the frame, with the same number of vertices as before. On the mountain project the cells near the camera go from 105 to 13 cm. The mantle is remade by itself when the camera stays still for a second; for the final render it is remade at once for its camera.
+- Ecosystems: pieces only where the camera sees the surface, for all the ecosystems of the scene. When you move the camera «View changed · Recalculate» lights up and remakes them all in a single undo step; before the final render they are remade by themselves. An ecosystem that must stay complete has «Always whole» in its Advanced (it replaces the panel's «Only where the camera looks»).
+- Snow on distributed trees: a model that cost too much used to be skipped, so the snow ended up on only some of the trees. Now every model gets its share of the budget and, when needed, a coarser mantle or a single variant.
+- More accurate mantle on the ground: each cell has the true height of the surface, where before it was the highest of a few random points. On slopes the snow no longer sits raised in steps and the ground no longer pokes through it.

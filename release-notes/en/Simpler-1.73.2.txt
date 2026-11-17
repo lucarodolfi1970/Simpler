@@ -1,0 +1,11 @@
+SIMPLER 1.73.2  —  30 October 2026
+==================================
+
+Coast: the water line is drawn by the sea, not by the sea bed.
+
+- Before, near the shore the waves died out completely (no higher than 0.78 times the depth, so zero at the shore). The sea became a plane that met the beach along a straight line.
+- Now part of the broken waves keeps running up the shore for a few metres, like the real swash:
+  - the water line moves with the waves, jagged;
+  - there is a little foam where the waves run over the sand;
+  - the run-up is longer with higher waves.
+- The distance from the shore is computed only where the grid is fine enough to show it. With a tilted ground the shore is kilometres long: the computation goes from 0.06 to 0.08 s.

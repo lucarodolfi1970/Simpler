@@ -1,0 +1,5 @@
+SIMPLER 1.34.3  —  25 ottobre 2026
+==================================
+
+- Vista in tempo reale: corretto un caso in cui un modello della libreria poteva diventare tutto bianco subito dopo l'apertura di un progetto, mentre nel path tracing aveva le sue texture. All'apertura Simpler rimanda alla vista i materiali Simpler; per un pezzo che ne usa uno partono anche gli altri suoi materiali. Se il modello non era ancora arrivato nella vista, per i materiali con texture veniva creata una versione provvisoria col solo colore, che poi poteva prendere il posto di quella vera. Ora la versione provvisoria non sostituisce più i materiali del modello, e un materiale che non è cambiato non viene più toccato.
+- Scatter a intervalli: «Orienta lungo la linea» è acceso di default e, quando è acceso, il cursore si chiama «Rotazione rispetto alla linea»: 0° = l'asse X del modello segue la linea, 180° = senso opposto, ±90° = di traverso, anche nelle curve. Così le auto restano nel senso di marcia scelto lungo tutta la strada.

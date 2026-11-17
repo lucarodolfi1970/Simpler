@@ -1,0 +1,5 @@
+SIMPLER 1.36.1  —  25 October 2026
+==================================
+
+- The green cone marking where a model is arriving (while the view prepares it) always has the same size, about 25 × 40 cm. Before, it was multiplied by the object's scale: a model imported in inches (scale 37.8) had a 15 m cone filling the whole view.
+- With the Scatter tool on and the line already finished (Area, Spacing) the view turns again with the left button held down, around the point under the mouse. Before, every left click stayed with the tool, far from the line too. Clicks on the points of the line and on the «+» still change it; a plain click elsewhere does not change the selection.

@@ -1,0 +1,7 @@
+SIMPLER 1.31.0  —  25 ottobre 2026
+==================================
+
+- Libreria dei modelli 3D, più modelli insieme: Ctrl+clic seleziona (bordo colorato) e deseleziona i modelli. Con il tasto destro su uno dei selezionati il menu vale per tutti: «Taglia», «Copia», «Sposta in» una cartella, «Elimina dalla libreria», «Togli la selezione». «Incolla» (tasto destro su una cartella o sullo spazio vuoto della libreria) li sposta, o ne fa delle copie, nella cartella aperta. Trascinarli su una cartella sposta tutti i selezionati.
+- Eliminare, spostare più modelli e incollare copie chiedono conferma; l'eliminazione mostra l'elenco dei modelli.
+- Con dei modelli selezionati non si inserisce niente nella vista: un clic senza Ctrl toglie la selezione. Cambiando cartella la selezione si azzera.
+- Nuovo «Copia» anche per un modello solo: «Incolla» ne fa una copia completa (modello, texture e miniatura) nella cartella scelta.

@@ -1,0 +1,7 @@
+SIMPLER 1.76.40  —  4 November 2026
+===================================
+
+Terrain: the rock has its relief from far away too.
+
+- New «Rock relief» (Terrain › Advanced, with «Colours from the terrain»): on the steep walls, steps of the layers (strong and faint, not all alike), creases running down the wall and a surface broken into blocks, sized on the thickness of the mountain's layers. From far away the terrain has a point every 6-20 m and the walls looked smooth like clay: now the light reads the rock. Shows in path tracing; the shape and the outline against the sky do not change (that is the next step).
+- On at 50% on terrains already made too; 0% = smooth walls as before.

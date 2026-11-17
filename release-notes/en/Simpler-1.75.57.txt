@@ -1,0 +1,10 @@
+SIMPLER 1.75.57  —  1 November 2026
+===================================
+
+Scene thumbnails become path traced by themselves.
+
+- Open a scene by clicking its thumbnail and let the path tracing finish in the view, up to «✓ done»: the picture becomes the scene's new thumbnail, and a green box confirms it. So, just by viewing them in path tracing, the scenes gradually get much nicer thumbnails.
+- The replacement happens only if nothing has changed since you opened the scene: framing, lights, ambience, objects, materials. If you move the camera or edit something, the picture is no longer the scene's and the thumbnail stays as it is. If you stop the path tracing before it finishes, the thumbnail does not change.
+- The thumbnail is cut like the usual ones, so the format does not change. The scene's date is not touched, because a nicer thumbnail is not a change: the AI video keyframes keep treating the scene as unchanged.
+- «Update» on the scene puts back the thumbnail from the real-time view, as before.
+- New automatic check «pt_thumb»: it verifies that the thumbnail is replaced when nothing has changed, that it is not after an edit, and that the scene's date stays the same.

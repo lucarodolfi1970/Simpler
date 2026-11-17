@@ -1,0 +1,14 @@
+SIMPLER 1.73.9  —  30 ottobre 2026
+==================================
+
+Dipingi lo sporco di nuovo affidabile, motore a riposo quando non ha niente da fare, un pulsante per chiudere tutte le sezioni.
+
+- Dipingi lo sporco: ripassando su una parte già dipinta lo sporco spariva.
+  - Nella vista: mentre il motore lavorava sul tratto precedente, la vista ricaricava lo sporco «vecchio» e i tratti appena fatti sparivano per qualche istante (o finché non arrivava il tratto dopo). Ora la vista ridisegna sopra i tratti ancora in attesa.
+  - Nel motore: un tratto vicino a un'altra superficie (il piede di una colonna, un gradino) toglieva lo sporco a quella superficie anche dove non la toccava. Ora un tratto cambia solo dove il suo sporco vince.
+- Il motore continuava a elaborare mentre si dipinge:
+  - ogni tratto faceva ripartire il riparo della pioggia, il mantello della neve e la costa, che non c'entrano (lo sporco cambia solo i materiali). Ora un tratto non li tocca;
+  - con la pioggia spenta il motore restava «occupato» per sempre: ricontrollava il riparo ogni 10 millisecondi senza mai finire. Corretto.
+- Nuovo: in ogni pannello di destra un pulsante con la doppia freccia, accanto a «Chiudi». Chiude tutte le sezioni; ripremuto le riapre come erano prima (si ricorda quali erano aperte e quali chiuse).
+
+Caustiche del mare: in lavorazione, non ancora attive.

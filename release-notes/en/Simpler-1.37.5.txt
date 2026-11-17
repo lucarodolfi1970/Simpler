@@ -1,0 +1,5 @@
+SIMPLER 1.37.5  —  25 October 2026
+==================================
+
+- «The story»: the box takes the whole width of the library from the start. Before, it widened only after resizing the right sidebar. It also follows every change in the size of the window.
+- Simpler's logo, small, before the title.

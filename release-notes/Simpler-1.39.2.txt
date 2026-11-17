@@ -1,0 +1,4 @@
+SIMPLER 1.39.2  —  26 ottobre 2026
+==================================
+
+- Banco di prova: uno scatter diventa figlio del banco a ogni modifica, non solo quando nasce. Prima bastava che la prima pennellata partisse appena fuori dal banco perché lo scatter restasse al primo livello della scena per sempre. Ora viene adottato appena più di metà dei suoi pezzi sta sul banco, e i pezzi restano dove li hai dipinti.

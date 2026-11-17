@@ -1,0 +1,8 @@
+SIMPLER 1.71.4  —  30 October 2026
+==================================
+
+- Under the progress of the final render there is now information about the hardware, updated while the render goes on:
+  - the graphics card, with its name, memory used out of the total and the percentage, and a thin bar that turns orange when it is full (from 97%). It also shows how hard it is working (%) and the temperature;
+  - the memory the render says it uses, the computer memory taken by the render process and that of the whole computer;
+  - an orange warning when part of the render does not fit on the graphics card and works from the computer's memory, with an estimate of how much (for example «about 3.2 GB»). This is what made the final render slow: it suggests closing other programs that use the card or choosing smaller textures.
+- The information is read without disturbing the render: it comes from the card and from Windows, not from Blender.

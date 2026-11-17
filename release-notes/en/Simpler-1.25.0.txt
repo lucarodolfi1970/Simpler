@@ -1,0 +1,9 @@
+SIMPLER 1.25.0  —  25 October 2026
+==================================
+
+- Decals: PNG images with transparency projected onto models, like stickers, lettering, signs, stains or graffiti.
+- Library ▸ Personal ▸ Decals: your decals, in folders. "Open decals…" (the tile with the + or a right click on a folder) copies the chosen images into the folder; right click on a decal: rename, show in folder, delete. If an image has no transparency, Simpler tells you.
+- Click a decal: it goes to the middle of the view. Drag it onto the model: it goes where you let go, oriented like the surface (upright on walls, readable from your point of view on floors) and about a quarter of the viewing distance wide.
+- The decal follows the shape of the piece (edges and curves too) and touches neither its materials nor its UVs: it is an object of its own in the tree, child of the piece, and follows it when moved. You select, move and turn it with the gizmo, copy, hide and delete it like other objects; everything undoes with Ctrl+Z.
+- Decal panel: Size (in proportion), projection Depth, Opacity, Colour; under "Advanced" separate Width and Height, Order (which is on top), Roughness, Metal, Glow.
+- The image is saved in the project: the project opens the same on another computer too.

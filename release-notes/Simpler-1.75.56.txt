@@ -1,0 +1,8 @@
+SIMPLER 1.75.56  —  1 novembre 2026
+===================================
+
+Il pannello Proprietà mostra quanti triangoli ha il modello.
+
+- Sotto «Dimensioni» c'è ora la riga «Triangoli», con il numero di triangoli del modello selezionato così come viene disegnato: le copie contano, i modelli della libreria anche. La riga compare solo per gli oggetti che hanno una superficie; per luci e gruppi vuoti non c'è.
+- Il conto è immediato anche su modelli di milioni di triangoli, perché non serve dividere le facce in triangoli: una faccia con n lati vale n−2 triangoli.
+- Il suggerimento della riga ricorda che, per alleggerire il modello, c'è «Ottimizza poligoni…» nel menu del tasto destro.

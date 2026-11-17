@@ -1,0 +1,15 @@
+SIMPLER 1.76.41  —  4 novembre 2026
+===================================
+
+Terreno: il pannello diviso in sezioni, ognuna con le sue Avanzate.
+
+- Il terreno non è più un'unica scheda con un'Avanzate lunghissima: cinque sezioni come «Pietre e detriti».
+  · Terreno: tipo, dimensione, dislivello, «Un'altra versione». Avanzate: dettaglio della griglia, «Dettaglio dove guarda la camera», mappa di altezze.
+  · Forma e roccia: roccia scolpita, pendenza della roccia. Avanzate: erosione, età, direzione, spigolosità e strati di roccia.
+  · Zone del terreno: neve, sfumatura dei bordi, elenco delle zone. Avanzate: ghiaia e terra, confini irregolari, irregolarità del bordo.
+  · Colori dal terreno: l'interruttore e «Rilievo della roccia». Avanzate: colate, fasce degli strati, creste e canaloni, umido.
+  · Spianata e bordi: spianata, raggio, «Centra sulla selezione». Avanzate: raccordo, bordo raccordato al suolo, baie e promontori.
+- Ogni Avanzate ha il suo pallino quando qualcosa non è al valore predefinito.
+- I comandi preferiti (cuori) messi sui comandi del terreno seguono il comando nella sua nuova sezione.
+- Tooltip più completi su erosione, età, strati, colori e bordi.
+- Nessun comando tolto, nessun valore cambiato.

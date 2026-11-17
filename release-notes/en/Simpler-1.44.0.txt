@@ -1,0 +1,8 @@
+SIMPLER 1.44.0  —  26 October 2026
+==================================
+
+- When Simpler is busy it says so clearly: at the bottom right of the view, above the fps, a blinking red «Busy · please wait» appears with what it is doing and for how many seconds underneath (for example «Autosave · 12 s», «Opening the project», «Computing the shelter from the rain»).
+  - It stays until everything is over: the engine busy with a command or a computation of its own, the app waiting for the engine, the panels locked, the view getting ready.
+  - It appears after 0.4 seconds, so quick commands do not make it flicker.
+  - The hourglass always comes with it, over the 3D view too.
+  - Path tracing refining the image does not count as «busy»: you can work while it improves the image. The box at the bottom left says so: «pass 3/5 · refining…» with a bar that keeps moving, then «✓ done» when it has really finished.

@@ -1,0 +1,42 @@
+SIMPLER 1.13.0  —  22 ottobre 2026
+==================================
+
+NOVITÀ
+------
+- ACQUA: COLORE E LIMPIDEZZA (volume). Nelle proprietà dell'oggetto acqua, sezione "Acqua: onde, colore e caustiche":
+  · "Colore e limpidezza (volume)": l'acqua assorbe la luce come quella vera, diventa azzurra o verde con la
+    profondità e si vela con la distanza, anche vista da sott'acqua (finalmente blu sott'acqua).
+  · Colore: Piscina, Lago, Mare, Palude · Limpidezza in metri · Torbidità (velo lattiginoso).
+  · Funziona insieme alle caustiche sul fondale e alle onde.
+  · Costo: circa +20-40% (di più se torbida): per questo è un interruttore.
+- Il materiale "Acqua" della libreria arriva già con onde vere e colore dell'acqua accesi (spegnibili).
+- Onde, colore dell'acqua: si annullano con Ctrl+Z. Nell'editor dei materiali trasparenti c'è un rimando con
+  "Apri" alle proprietà dell'oggetto.
+- NEBBIA VOLUMETRICA (raggi di luce): nel pannello Ambiente → Foschia e nebbia, interruttore "Nebbia volumetrica".
+  La nebbia diventa vera nella scena: raggi di sole tra alberi e finestre, alone attorno alle lampade, visibile
+  anche nel path tracing della vista. Più lenta e con più rumore della foschia normale; si vede con densità alta.
+- HDRI CON IL SOLE ESTRATTO: un cielo fotografato a 360° come sfondo e luce. Libreria in basso → Poly Haven ▾ →
+  HDRI e sfondi: gli HDRI di Blender (sempre disponibili, anche offline), quelli di Poly Haven (si scaricano al
+  primo uso, 4K) e gli sfondi da studio.
+  · Simpler misura la fotografia e trasforma il suo sole in una luce Sole vera (direzione, colore, forza):
+    ombre nette e pulite subito; la camera vede comunque la fotografia com'è.
+  · Nel pannello Ambiente: Rotazione (il sole gira con il cielo), Intensità, "Sole dall'HDRI", Suolo, Esposizione.
+  · Il pulsante "HDRI…" tra i preset dell'Ambiente apre la libreria degli HDRI.
+- LIBRERIA A MENU: Poly Haven ▾ (Modelli 3D, Materiali, HDRI e sfondi) · Simpler ▾ (Materiali, Luci, Primitive)
+  · Personali ▾ (Modelli 3D, Materiali) · Scene. "Ambienti" non c'è più: gli sfondi da studio sono in HDRI.
+  I materiali di Simpler (anche se li hai modificati) e i tuoi sono separati.
+- VISTA "SAGOME" NUOVA: al posto delle scatole, vista d'argilla: ogni pezzo grigio opaco con i contorni
+  disegnati, senza texture, luci né ombre. Leggera e utile per giudicare le forme.
+- LUCI:
+  · Colore per Omni, Spot e Area (tinge la temperatura: bianco = solo temperatura).
+  · Raggio d'azione in metri per Omni, Spot e Area: la luce si spegne sfumando a quella distanza (0 = fisica).
+  · Spot con proiezione da immagine (stile proiettore/gobo): scegli un'immagine colorata o in bianco e nero e
+    viene proiettata dal cono, nel path tracing e nella vista in tempo reale.
+- FACCE: ogni superficie si vede dai due lati nella vista in tempo reale (niente più buchi o lati neri nei modelli
+  con facce girate). Per il path tracing: pulsante "Correggi normali" nelle proprietà dell'oggetto, gira verso
+  l'esterno le facce rivolte all'interno (si annulla con Ctrl+Z).
+
+NOTE
+----
+- Le caustiche riflesse dall'acqua sulle pareti e il wizard per correggere i materiali di molti modelli insieme
+  sono in programma (vedi ROADMAP).

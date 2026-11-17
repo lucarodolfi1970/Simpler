@@ -1,0 +1,6 @@
+SIMPLER 1.67.6  —  29 October 2026
+==================================
+
+- «Fit to the object» redone. Before, it used the model's UV coordinates, which in many models are not suitable: in the stained glass window every pane was unwrapped in strips and the picture came out in streaks.
+- Now it projects the picture onto the plane the faces with that material lie in, seen from the side they face, with the object's up at the top, and stretches it to fill their shape once.
+- Only the UV coordinates of those faces change; the other parts of the object stay as they were. Undo with Ctrl+Z.

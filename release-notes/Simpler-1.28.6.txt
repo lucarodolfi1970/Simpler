@@ -1,0 +1,4 @@
+SIMPLER 1.28.6  —  25 ottobre 2026
+==================================
+
+- Decal su più modelli: una decal si proietta su tutti i pezzi che il suo riquadro tocca, non solo su quello dove l'hai lasciata. Un tombino sul bordo della strada continua sul marciapiede, una scritta a cavallo di due muri si vede su entrambi (fino a 12 pezzi, i più vicini al centro). I pezzi raggiunti si aggiornano quando sposti, ruoti o ridimensioni la decal.

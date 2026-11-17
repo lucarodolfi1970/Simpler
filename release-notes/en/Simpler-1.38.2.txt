@@ -1,0 +1,4 @@
+SIMPLER 1.38.2  —  25 October 2026
+==================================
+
+- Ecosystems are faster to place in the scene. A million pieces now take about 2 seconds instead of 8. On terrains with many polygons (a million triangles) they take 1.9 seconds instead of 3.4. The result is the same as before, piece by piece: only the way every piece is set on the surface changes, now all together instead of one at a time.

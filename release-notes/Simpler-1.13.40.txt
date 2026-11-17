@@ -1,0 +1,21 @@
+SIMPLER 1.13.40  —  23 ottobre 2026
+===================================
+
+MATERIALI A PORTATA DI MANO
+---------------------------
+- «Applica all'oggetto ▾» (come si applica un materiale trascinato nella vista) è passato in alto, tra le velocità di navigazione e Sagome / Tempo reale / Path tracing.
+- Accanto c'è il contagocce: cliccalo, poi clicca una superficie nella vista e si apre subito il pannello del suo materiale. Su un modello della libreria va diretto alla parte che ha quel materiale (es. le foglie). Esc annulla.
+
+STATISTICHE E PULIZIA DELLA LIBRERIA (NUOVO)
+--------------------------------------------
+Da Importa ▾ «Statistiche e pulizia della libreria…», per tutta la libreria o per le cartelle che scegli:
+- Quanti modelli e quanto spazio: file dei modelli, texture (con il numero di file), miniature, file originali importati (FBX, OBJ…, che stanno fuori dalla libreria; anche quanti non si trovano più).
+- Per cartella, i modelli più pesanti, le texture per formato, lo spazio dei materiali e modelli Poly Haven scaricati.
+- Suggerimenti per risparmiare spazio, per tutta la libreria:
+  · copie di sicurezza di «Correggi materiali» (non si vedono nella libreria): si possono eliminare se le correzioni vanno bene;
+  · texture di modelli eliminati: si possono eliminare, con un avviso chiaro perché potrebbero servire a progetti salvati (quelle della scena aperta restano comunque);
+  · modelli salvati due volte (stesso identico file) e texture uguali copiate in più modelli: segnalati con i nomi;
+  · cache della vista 3D e delle texture ridotte: si possono svuotare, Simpler le rifà quando servono;
+  · modelli senza file (import interrotti): si possono togliere dall'elenco;
+  · quante texture 4K e 8K ci sono.
+Ogni eliminazione chiede conferma e dice quanto spazio libera.

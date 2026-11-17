@@ -1,0 +1,6 @@
+SIMPLER 1.53.0  —  27 October 2026
+==================================
+
+- Snow > Advanced > «Old snow» (0-100%): snow that fell days ago. The white turns dull and warmer, scattered dirty stains appear at random (at two sizes, with no visible repeats), stronger where the snow thins out and in the footprints and tyre tracks; the surface becomes a slightly shinier crust. At 0% the snow stays fresh, as before.
+- It acts only on the snow material: the mantle and the white of the snow on ground, roofs, cars and decals. The stains fall in the same places in the render and in the real-time view (the same map and the same formulas).
+- No cost: no new geometry, the mantle is not recomputed; the slider only changes the colour.

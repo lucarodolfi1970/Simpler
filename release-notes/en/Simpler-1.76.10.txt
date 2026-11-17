@@ -1,0 +1,12 @@
+SIMPLER 1.76.10  —  2 November 2026
+===================================
+
+Sculpted rock: rocky mountains, not only soft shapes.
+
+- New «Sculpted rock» slider in the Terrain panel: on steep slopes the rock breaks into ledges and drops, gullies running down the fall line, jagged crests. At 0% the shapes stay soft and worn, as before.
+- «Sharpness»: sharper crests and gullies, more broken rock.
+- In Advanced: «Rock layers» (how much the walls are ledges), «Layer thickness» and «Layer tilt».
+- New terrains start with a value that suits their type: high for Mountains and Valley, low for Hills and Plain, none for Dunes and height maps (a real place stays as it is).
+- It is all in the geometry: it looks the same in the real-time view, in path tracing and in the render; snow, ecosystems, zones and «Split zone» follow it.
+- Terrains of projects already saved do not change until you move the slider.
+- Terrain generation a little faster (the base noise computed more lightly, with the same result).

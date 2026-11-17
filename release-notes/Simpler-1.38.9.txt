@@ -1,0 +1,6 @@
+SIMPLER 1.38.9  —  25 ottobre 2026
+==================================
+
+- Un solo banco di prova per scena. Il banco serve a creare un ecosistema: se ce n'è già uno, «Banco di prova» lo seleziona e lo inquadra invece di crearne un altro. Se chiedi l'altra misura (20 o 50 m), lo stesso banco cambia misura, resta al suo posto e tiene i suoi scatter. Se lo elimini, il prossimo clic ne crea uno nuovo.
+  - Nei progetti con più banchi, salvataggio e miniatura usano il banco selezionato, oppure quello con più scatter sopra.
+- Nuova icona per gli ecosistemi nella scena: il banco di prova e gli ecosistemi posati hanno l'icona del prato, in verde, invece di quelle della mesh e della cartella. Si distinguono subito dagli altri oggetti.

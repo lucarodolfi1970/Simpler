@@ -1,0 +1,4 @@
+SIMPLER 1.38.8  —  25 ottobre 2026
+==================================
+
+- Gli scatter dipinti sul banco di prova degli ecosistemi ne diventano figli. Spostando il banco gli scatter lo seguono, e cancellandolo spariscono anche loro. Nella scena il banco mostra il pallino blu, e tenendoci sopra il puntatore si vede quanti scatter contiene. Uno scatter conta come «sul banco» quando più di metà dei suoi pezzi sta sul banco. Lo Scatter dipinto sugli altri oggetti resta com'era, al primo livello della scena.

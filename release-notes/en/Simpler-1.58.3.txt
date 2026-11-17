@@ -1,0 +1,4 @@
+SIMPLER 1.58.3  —  27 October 2026
+==================================
+
+- Library windows (Fix model materials, Import models into the library, Statistics and cleanup): while they are open the rest of Simpler stays locked as before, but the red «Busy · please wait» box and the hourglass no longer appear; the hourglass also showed on the window and looked like an endless hang. Nothing is working: the window waits for your clicks. The red box stays for when the engine is really working.

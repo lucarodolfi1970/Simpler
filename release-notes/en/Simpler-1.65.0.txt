@@ -1,0 +1,10 @@
+SIMPLER 1.65.0  —  28 October 2026
+==================================
+
+- Falling rain. At the top of the rain's Advanced there is «Falling raindrops» with the «Raining» switch:
+  - Drops exist only where the camera looks, up to «How far they reach»; in the distance they become a veil. They do not fall under roofs, porches and trees. They are computed again when the camera stops.
+  - Sliders: «Intensity» (from drizzle to downpour), «Wind», «Wind direction», «Irregularity», «Drop size» (big drops fall faster), «Drop transparency» (from clearly visible pale streaks to clear water), «Motion blur» (the streak of every drop, like a shutter time up to 1/30 of a second).
+  - «Wets the surfaces»: open surfaces get as wet as the rain is strong; under shelters they stay dry.
+  - «Splashes»: small crowns of water where the drops hit flat surfaces near the camera, with their amount.
+  - The real-time view shows the same drops and splashes. In «Lighten», the button that hides the falling flakes hides them too, and the one that pauses automatic computations pauses them.
+- Rain rings on water. In the Advanced of a water-type material there is «Rain rings» (on): while drops fall, rings open on water facing up, not under a shelter. Sliders «Amount of rings», «Ring size», «Ring strength». They also show in the real-time view.

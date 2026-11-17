@@ -1,0 +1,26 @@
+SIMPLER 1.13.2  —  22 October 2026
+==================================
+
+MORE ORDER: WATER IS A MATERIAL
+-------------------------------
+- Water is now set in one place only: in the MATERIAL EDITOR, section "Water" (the first one).
+  · "Is water": the material becomes clear water (100% transparency, index 1.333, smooth); then you can change it
+    like any material. It applies to every object with that material.
+  · Below: Real waves (height, size), Colour and clarity (Pool/Lake/Sea/Marsh, clarity, murkiness).
+  · The caustics stay a render setting: Rendering → Caustics «Sharp» (the section reminds it).
+- The water section is gone from the object properties (it no longer appears on window glass).
+- Projects saved with earlier versions update by themselves: the waves move from the object to its material.
+- The "Water" material of the library comes with "Is water" already on.
+- Undo (Ctrl+Z) also covers the water changes.
+
+BUG FIXES
+---------
+- WATER FULL OF SPECKLES IN THE PATH TRACING (also with murkiness 0 and without glass): the view stopped after 4
+  seconds of its last pass, with few samples (the badge still said 512), and the OptiX denoiser left the grain on
+  waves and glass. Now:
+  · the last pass reaches all the samples set (a command or a movement interrupts it at once);
+  · the denoiser is OpenImageDenoise (on the graphics card), cleaner on water, glass and volumes, also in the final
+    render.
+  In an indoor pool the water surface is clean already at 32 samples.
+- Windows made of many panes joined in one object were taken for "solid glass" (a caustic lens). Now the real
+  thickness of the glass counts (volume/surface): thin panes always let the sun in.

@@ -1,0 +1,7 @@
+SIMPLER 1.37.1  —  25 October 2026
+==================================
+
+- Rename: the chosen name now stays. Before, when the name was already used by something you do not see (an object deleted and kept for Undo, the model of a distribution), Blender added .001, .002… and the name seemed to go back to the old one. Now the hidden object steps aside, and takes its name back on Undo.
+- A model dragged from the library gets its proper name, without .002 or .003.
+- Deleted distributions: their models stayed in the project forever, taking memory, file size and names. They could also be taken as the model's reference: that is why a car could show turned in the view. Now they no longer count and they are removed when the project opens.
+- Night, new defaults: Stars 10%, Moonlight 100%, Phase 50% (full), Size 4×, Disc brightness 60%, Halo 60%.

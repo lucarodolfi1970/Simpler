@@ -1,0 +1,8 @@
+SIMPLER 1.75.19  —  31 October 2026
+===================================
+
+Save the picture of the view.
+
+- In the bar inside the view, after «Lasso», the «⤓ Save image» button saves the picture of the view as it is at that moment to a JPEG file.
+  - In path tracing it saves the image reached so far (even halfway through the passes), at the resolution of the view.
+  - In real time it saves the view at its full resolution, without gizmo, selection outlines or light icons.

@@ -1,0 +1,8 @@
+SIMPLER 1.66.1  —  28 ottobre 2026
+==================================
+
+- Vista più fluida mentre lavori. I registri mostravano blocchi di 20-35 secondi, a volte con Windows che segnalava la vista come «non risponde». Ogni volta che cambiava qualcosa nelle luci o nei materiali, la vista preparava di nuovo tutti i materiali (40-60, circa mezzo secondo ciascuno in una scena grande) in un colpo solo e si fermava. Ora:
+  - li prepara in sottofondo, più di uno alla volta, e intanto mostra «Occupato · attendi» con il motivo (luci, ombre, materiali);
+  - vale quando aggiungi, copi o elimini una luce, cambi le ombre o la resa dei colori, accendi o spegni la pioggia, carichi la vista o un modello.
+- I materiali bagnati della vista contengono il codice delle gocce posate e dei cerchi nelle pozzanghere solo quando sono accesi: per il resto del tempo sono più leggeri da preparare.
+- Le gocce che cadono si ricalcolano solo quando la camera si muove abbastanza da uscire dal margine intorno all'inquadratura. Prima succedeva a ogni scatto della rotellina: mezzo secondo del motore e circa 10 MB per la vista ogni volta.

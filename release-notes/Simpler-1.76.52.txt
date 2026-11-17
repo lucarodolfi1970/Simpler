@@ -1,0 +1,10 @@
+SIMPLER 1.76.52  —  5 novembre 2026
+===================================
+
+Uscire dalla scultura del terreno è più rapido: ghiaioni ed ecosistemi rifatti in meno tempo, con lo stesso risultato.
+
+- «Pietre e detriti»: il calcolo di dove scendono le pietre dalle pareti segue solo il fronte che avanza lungo i pendii invece di riguardare ogni volta tutto il terreno: circa 5 volte più veloce (su una montagna di 3 km da 4,3 s a 0,9 s), stesse pietre.
+- «Pietre e detriti»: i triangoli del terreno vengono letti una volta sola, per la vista e per la posa.
+- Ecosistemi rifatti dopo una modifica del terreno: i pezzi contati prima di posarli vengono riusati invece di essere calcolati una seconda volta (circa 5 s in meno per ogni ecosistema sulla montagna di prova); stessi pezzi, verificato.
+- Vista della camera per ecosistemi e pietre: la struttura per i raggi si prepara più in fretta (circa 0,4 s in meno su un milione di triangoli).
+- Nuovo controllo automatico: un ecosistema rifatto dopo una scultura non calcola i pezzi due volte.

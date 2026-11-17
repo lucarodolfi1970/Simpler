@@ -1,0 +1,17 @@
+SIMPLER 1.75.1  —  31 October 2026
+==================================
+
+Three bugs fixed and the ocean caustics.
+
+- «Internal error: StructRNA of type Object has been removed» when moving the water sliders.
+  - Cause: when the water material changed, Simpler also updated the grid around the camera, which its surface had already rebuilt.
+  - Now the grid is rebuilt only by its surface, and an object already rebuilt is skipped.
+- Path tracing stuck at «pass 2/5»: it was not blocked, it restarted the same pass over and over.
+  - Cause: every incoming command interrupts the running pass to answer at once. With commands every 1-2 seconds the next pass (2 s) never finished: it could restart 27 times in 55 seconds.
+  - Now a pass is interrupted at most 3 times, then it finishes (commands wait at most that pass).
+- Empty (grey) real-time view after a very slow frame (18 s, pool with Ultra shadows).
+  - Cause: the video card resets the 3D view when a frame takes too long; the view stayed empty.
+  - Now Simpler notices and restarts the view by itself, with the same scene.
+- Ocean caustics: with «Light reflected by water» on and the sun high, the sea bed under the sea has the net of light of the waves.
+  - Stronger near the shore, gone in deep water (6 m); the size follows the wind, the direction follows the sun.
+  - Computed in the material, so no extra time.

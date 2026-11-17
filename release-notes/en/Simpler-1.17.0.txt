@@ -1,0 +1,16 @@
+SIMPLER 1.17.0  —  24 October 2026
+==================================
+
+SIMPLER PANELS: "ADVANCED"
+--------------------------
+- Each card now shows only its main controls; the less used ones are in an orange "Advanced" box right below, closed at first. Click its title to open it: it stays open (or closed) the next times too.
+- An orange dot on the closed title says that something inside is not at its default value. The "Defaults" button puts it back.
+- Rendering: in sight preset, denoiser, caustics, exposure, fill light, shadows/highlights and colour rendering. In Advanced samples and noise threshold, all bounces and fast GI, the single caustics, light reflected by water, reflection filter, light clamps and AgX tones.
+- Ambience: in Advanced day, latitude, north and sun size; air, ozone and altitude; height, thickness, base, puffs, density and shadows of volumetric clouds; volumetric fog; stars and moon.
+- Ambiences (Sunrise, Sunset…) no longer change the advanced settings you changed yourself (e.g. latitude, volumetric fog, moon).
+- Camera: in Advanced blades and blade rotation, shift.
+- Materials: each section keeps its main control; in Advanced texture brightness/saturation/contrast, map weight and invert, glossy, DirectX and bump, reflection and coat roughness, IOR, thin wall, depth colour, dispersion, sheen softness, subsurface depth, emission luminance and temperature, invert and hard cutout, details of true displacement and subdivision, stretch/rotate/offset of the mapping.
+
+FIXES
+-----
+- Trees in front of volumetric clouds: no more jagged bright marks on the edge of the foliage (the haze treated those pixels as if they were as far as the sky).

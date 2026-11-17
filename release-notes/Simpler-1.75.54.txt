@@ -1,0 +1,11 @@
+SIMPLER 1.75.54  —  1 novembre 2026
+===================================
+
+«Ottimizza poligoni»: anteprima 3D che si può girare, in una finestra grande.
+
+- La finestra ora è grande, circa l'88% dello schermo, e si può ridimensionare. I comandi stanno a sinistra; a destra c'è l'anteprima 3D con il modello «Prima» e «Dopo» affiancati, con materiali e texture.
+- Le due viste usano la stessa inquadratura: trascinando giri il modello, col tasto destro lo sposti, con la rotella fai zoom, con il doppio clic lo reinquadri. Quello che fai in una vista lo fa anche l'altra, così puoi avvicinarti a un dettaglio e confrontare le due versioni dallo stesso punto. In alto a ogni vista c'è il numero dei triangoli.
+- «Fil di ferro» disegna i triangoli sopra i materiali, in tutte e due le viste: da vicino si vede bene dove la forma è stata semplificata.
+- «Prima» si prepara appena apri la finestra. «Dopo» si aggiorna quando lasci il cursore; sui modelli sopra 1,5 milioni di triangoli si aggiorna con «Calcola anteprima». Le texture sono ridotte come nella vista in tempo reale.
+- L'anteprima non tocca la scena: Simpler prepara una copia del modello, come per i pezzi nuovi della vista. La vista principale non viene appesantita, perché l'anteprima esiste solo mentre la finestra è aperta.
+- Il controllo automatico «decimate» ora verifica anche che l'anteprima venga preparata senza lasciare oggetti nella scena.

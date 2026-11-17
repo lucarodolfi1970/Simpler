@@ -1,0 +1,11 @@
+SIMPLER 1.75.8  —  31 ottobre 2026
+==================================
+
+Caustiche del mare visibili, miniature dei modelli senza neve.
+
+- Caustiche del mare («Light reflected by water»): sulla tua «Scene 7» con la luce accesa l'acqua sembrava solo più scura.
+  - La luce sotto il mare la calcolava già Cycles con le onde vere, ma la rete era un grano grigio di celle di pochi centimetri, troppo debole per vedersi attraverso le onde.
+  - Ora la superficie che fa le caustiche usa solo le onde più lunghe di 25 cm: celle di un palmo o due, come si vedono in mare da qualche metro. Le linee di luce sono due volte più marcate, mentre la luce media del fondale resta la stessa.
+  - Provato sulla «Scene 7»: la rete luminosa si vede sul fondale e l'acqua non è più scura (leggermente più chiara).
+- Salvando un modello nella libreria con la neve (o la pioggia) nella scena, la miniatura e il modello salvato la portavano con sé.
+  - Ora pioggia e neve restano nella scena: il modello nella libreria e la sua miniatura sono asciutti. Quando lo inserisci in una scena con la neve, la prende da quella scena.

@@ -1,0 +1,4 @@
+SIMPLER 1.63.1  —  28 ottobre 2026
+==================================
+
+- Neve sugli alberi delle distribuzioni: con uno spessore più sottile (10 cm) due modelli di albero su quattro restavano ancora senza manto. Ora ogni modello lo riceve sempre: se il budget non basta, il manto di quel modello è più grossolano e un po' più spesso, ma non manca più.

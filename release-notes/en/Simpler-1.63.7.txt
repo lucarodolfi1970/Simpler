@@ -1,0 +1,5 @@
+SIMPLER 1.63.7  —  28 October 2026
+==================================
+
+- No snow under water in the white of the materials either: rocks under the surface of a pool stayed painted white. Where something comes out of the water, the snow stays there.
+- Snow on rock ledges: it used to run down faces that are too steep in thin, jagged flaps. Now it ends rounded at the edge. What counts as too steep depends on «On walls».

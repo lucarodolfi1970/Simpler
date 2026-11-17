@@ -1,0 +1,12 @@
+SIMPLER 1.75.52  —  1 novembre 2026
+===================================
+
+Nuovo: «Ottimizza poligoni». Il puntatore del mouse non sparisce più nella vista.
+
+- Tasto destro su un oggetto o un gruppo (nell'albero o nella vista): «Ottimizza poligoni…». Si apre una finestra sempre in primo piano con quattro preimpostazioni (Leggera 75%, Media 50%, Forte 30%, Massima 15%), un cursore che arriva al massimo al 15% e il numero di triangoli che resteranno.
+- Le immagini «Prima» e «Dopo» mostrano il modello da solo, visto dalla direzione della fotocamera, con il fil di ferro (si può togliere). Sui modelli leggeri l'anteprima si aggiorna quando lasci il cursore. Sui modelli pesanti (oltre 1,5 milioni di triangoli) si calcola con «Calcola anteprima», oppure si va direttamente su «Applica». Una barra mostra l'avanzamento pezzo per pezzo e «Interrompi» ferma il calcolo.
+- I materiali restano sulle loro facce, vetro e acqua compresi. Restano anche le coordinate delle texture, i bordi aperti (lastre di vetro, piani) e gli spigoli vivi; le superfici lisce restano lisce.
+- I pezzi restano separati e tutto il gruppo viene ottimizzato con un'unica quota di triangoli. I pezzi ripetuti (bulloni, cerchi) si riducono una volta sola e tutte le copie seguono, anche le copie del modello nel resto della scena. I pezzi molto piccoli (sotto 300 triangoli) non si toccano.
+- Il modello cambia solo nel progetto, la libreria resta com'è; dopo lo puoi salvare in libreria se vuoi. Ctrl+Z torna al modello di prima. In Avanzate c'è «Unisci prima i pezzi», spento di base: serve solo a tenere l'albero in ordine.
+- Mouse sparito nella vista: con «Dipingi lo sporco» acceso, Simpler nascondeva la freccia e mostrava al suo posto il cerchio del pennello. Con un pennello di pochi centimetri e la scena vista da lontano, il cerchio era più piccolo di un pixel e il mouse sembrava sparito. Ora la freccia si nasconde solo quando il cerchio si vede bene; altrimenti resta una croce. Vale per tutti i pennelli: sporco, pozzanghere, neve e Distribuisci.
+- Nuovo passo nel controllo automatico, «decimate»: dimezza i triangoli, controlla che pezzi e materiali siano gli stessi e che Ctrl+Z ridia il modello.

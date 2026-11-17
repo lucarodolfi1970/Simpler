@@ -1,0 +1,9 @@
+SIMPLER 1.54.0  —  27 ottobre 2026
+==================================
+
+- Nuovo tipo di materiale «Volumetrico»: il modello si riempie di nuvola, fumo, nebbia, vapore, polvere o fuoco. La superficie sparisce e resta il volume, che sfuma verso i bordi del modello e viene mangiato a sbuffi: una sfera diventa una nuvola, tre sfere una colonna di fumo, un parallelepipedo basso un banco di nebbia. Funziona su qualsiasi modello chiuso.
+- Sei tipi pronti (Nuvola, Fumo, Banco di nebbia, Vapore, Polvere, Fuoco), anche nella libreria dei materiali nella cartella «Volumi»: si trascinano su un modello come gli altri. Controlli: Visibilità, Colore, Morbidezza bordi, Sbuffi, Grandezza sbuffi, Bagliore e colore della luce (il fuoco illumina la scena); nelle Avanzate Assorbimento, Direzione della luce, Dettaglio e Variante.
+- Vista in tempo reale: il volume si vede anche lì, disegnato dentro le facce del modello, con la stessa sagoma, lo stesso colore e sbuffi simili; mentre muovi la vista usa meno passi, per restare fluida.
+- Pioggia e neve lasciano stare i volumi: niente riparo sotto un banco di nebbia, niente mantello sul fumo.
+- Velocità: per i modelli volumetrici il rendering usa la marcia a passi invece del campionamento esatto, da 3 a 6 volte più veloce con la stessa immagine (prova: 59 → 10 s); i passi seguono la grandezza del volume.
+- Corretto: la preparazione della vista poteva fermarsi con «could not convert string to float» quando un materiale aveva un campo di testo (nome di un attributo).

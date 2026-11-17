@@ -1,0 +1,14 @@
+SIMPLER 1.73.9  —  30 October 2026
+==================================
+
+Paint dirt reliable again, the engine at rest when it has nothing to do, a button to close all the sections.
+
+- Paint dirt: going over a part already painted made the dirt disappear.
+  - In the view: while the engine worked on the previous stroke, the view loaded the «old» dirt again and the strokes just made disappeared for a moment (or until the next stroke arrived). Now the view draws the strokes still waiting on top.
+  - In the engine: a stroke near another surface (the foot of a column, a step) took the dirt away from that surface even where it did not touch it. Now a stroke changes only where its dirt wins.
+- The engine kept working while painting:
+  - every stroke started the rain shelter, the snow mantle and the coast again, which have nothing to do with it (dirt changes only the materials). Now a stroke does not touch them;
+  - with the rain off the engine stayed «busy» for ever: it checked the shelter again every 10 milliseconds without ever finishing. Fixed.
+- New: in every panel on the right a button with the double arrow, next to «Close». It closes all the sections; pressed again it opens them as they were (it remembers which were open and which closed).
+
+Sea caustics: in progress, not active yet.

@@ -1,0 +1,10 @@
+SIMPLER 1.76.8  —  2 novembre 2026
+==================================
+
+Dividi zona: una zona del terreno si divide in parti che seguono la forma del terreno.
+
+- Nel pannello Terreno, accanto a ogni zona, «Dividi» propone le regole: umido (dove l'acqua scorre e si ferma), secco, al sole, in ombra (secondo il sole dell'Ambiente), in alto, in basso, ripido, piano, dossi, conche, macchie.
+- Ogni parte ha «Quanto» (quanta parte della zona prende) e «Irregolarità» (bordo più naturale); le macchie anche la loro dimensione.
+- Le parti si possono dividere ancora, fino a 16 zone in tutto. Quando il terreno cambia, le parti si rifanno sulla nuova forma.
+- Ogni parte riceve una variante del materiale della zona da cui nasce; si può sostituire come gli altri. La sfumatura dei bordi funziona anche tra le parti.
+- Cambiare una divisione è molto più veloce di rifare il terreno; Ctrl+Z la toglie.

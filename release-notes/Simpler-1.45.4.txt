@@ -1,0 +1,4 @@
+SIMPLER 1.45.4  —  26 ottobre 2026
+==================================
+
+- Risorse: «Chi usa la memoria video» non elenca più Windows (dwm, csrss). Windows conta anche le immagini delle finestre degli altri programmi: la stessa memoria compariva due volte e dwm risultava 7,3 GB con 5,2 GB usati in tutto. La nota sotto spiega che la memoria condivisa conta in ogni programma che la usa e che il totale vero è la barra sopra.

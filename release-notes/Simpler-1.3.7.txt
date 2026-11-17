@@ -1,0 +1,16 @@
+SIMPLER 1.3.7  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- CAMBIARE CARTELLA A UNA LIBRERIA, passo per passo (Impostazioni > Cartelle > "Cambia…"):
+  1. scegli la nuova cartella, vuota (se non lo è, Simpler chiede se usarla così com'è perché contiene già una
+     copia della libreria, oppure se sceglierne un'altra);
+  2. Simpler chiede se deve spostare lui tutto il contenuto, con tutte le sottocartelle (indica quanti file e
+     quanti GB);
+  3. la copia parte con una barra di avanzamento (file, GB, file in corso) e si può annullare;
+  4. alla fine ogni file viene controllato: solo se la copia è completa Simpler passa alla nuova cartella
+     (se fallisce o la annulli continua a usare quella di prima, niente si rompe);
+  5. infine chiede se eliminare lui la vecchia cartella o se preferisci lasciarla e cancellarla tu dopo aver
+     verificato che tutto funzioni.
+  Spostando i Materiali Poly Haven, anche i Modelli 3D Poly Haven (che stanno dentro la stessa cartella) seguono.

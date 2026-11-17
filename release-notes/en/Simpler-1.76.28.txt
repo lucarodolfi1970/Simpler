@@ -1,0 +1,6 @@
+SIMPLER 1.76.28  —  3 November 2026
+===================================
+
+«Advanced» in azure.
+
+- The «Advanced» bar is now azure, in the blue of the interface, with dark blue text: the yellow stood out too much on the panel. In the lists (one per stone, one per brush model) the thin bar stays, with azure text.

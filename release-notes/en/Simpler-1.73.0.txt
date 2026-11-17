@@ -1,0 +1,26 @@
+SIMPLER 1.73.0  —  30 October 2026
+==================================
+
+Landscape > Ocean: the Coast. The sea now feels what it touches: beaches, rocks, piers, piles, any object of the scene that reaches sea level.
+
+- Waves that feel the bottom: a wave breaks when it is about 0.78 times the depth (McCowan's criterion). Over a rising sea bed the waves get lower up to the shore; the surface no longer pokes through the sand or a rock.
+- Coast foam:
+  - the white band of the breakers, strongest where the waves break and lighter between there and the shore, in patches and more on the crests;
+  - a ring of foam around rocks and piles, as wide as the waves are high;
+  - the thin lines the last waves leave along the shore.
+- Clear shallow water: near the shore the bottom shows, the colour going from turquoise to blue as the water gets deeper. In path tracing it is real water, with refraction and absorption, and sunlight reaches the bottom. The film of water in the last few centimetres is a little rough, not a mirror.
+- Wet shore: sand, rocks and walls are darker and glossier from below the water up to where the waves reach, even without rain. «Always dry» applies here too.
+- The Landscape panel has a new «Coast» card:
+  - «Beaches and rocks» (on or off);
+  - Coast foam;
+  - Clear shallow water (on or off);
+  - in the Advanced settings: Clarity (how deep the bottom can be seen; 100% = the usual depth for the water colour) and Wet band.
+- The coast is measured by itself on the objects that reach sea level (not the Environment ground). When you move or edit one of them it updates in the idle time, with «Computing the coast» in the «Busy» box.
+- In the real-time view shallow water is transparency with a colour that follows the depth. Real refraction is only in path tracing.
+- There is no wave that curls over: Blender's simulation does not make it. It is shown with the foam of the breakers.
+
+Performance, measured without a graphics card (2 cores):
+- a beach with a rock: coast measurement 0.3–0.5 s; adding the sea 1.5 s; changing the height 0.03 s;
+- a large building with the whole ground floor at sea level (561 objects): measurement 0.8–1.1 s; changing the height 0.2 s.
+- Objects already read stay in memory: moving one does not read the others again.
+- With the coast on, the materials of the scene get the rain nodes, as when it rains, for the wet shore. This happens once, before the first path tracing.

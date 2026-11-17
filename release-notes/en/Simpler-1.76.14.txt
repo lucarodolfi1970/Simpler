@@ -1,0 +1,10 @@
+SIMPLER 1.76.14  —  2 November 2026
+===================================
+
+Colours from the terrain: the colour follows the shape of the mountain.
+
+- New in Terrain > Advanced: «Colours from the terrain». Over the textures of the zones the colour changes as in nature: lighter, worn crests, darker gullies, dark streaks running down the steep walls, bands of colour following the layers of the sculpted rock, darker where water runs and gathers.
+- Four settings in Advanced: «Streaks on the walls», «Layer bands», «Crests and gullies», «Damp».
+- It works on every material put on a terrain zone, yours too; the same in the real-time view, in path tracing and in the render. Changing it touches only the materials (no recalculation of the terrain); Ctrl+Z undoes it.
+- New terrains have it on; terrains already made stay as they are: switching it on makes them again once (the data of the shape is needed).
+- «Sharpness» moved to Advanced: only «Sculpted rock» stays outside.

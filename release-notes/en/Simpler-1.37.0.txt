@@ -1,0 +1,14 @@
+SIMPLER 1.37.0  —  25 October 2026
+==================================
+
+- Night: real stars and a real moon, the same in real time and in the path tracer.
+  - Stars: NASA's sky (Deep Star Maps 2020) with the Milky Way. The stars stand where they would at the hour, day and latitude of the scene, and turn with the north. Before, in the path tracer they were dots smaller than a pixel that noise and the denoiser wiped out.
+  - Moon: a real disc in the sky, with NASA's photo of the Moon (LRO). It stands where the moonlight comes from, so you see the moon and not only its glow on the ground.
+- Night panel:
+  - Stars;
+  - Moonlight;
+  - Phase (0 new · 25 first quarter · 50 full · 75 last quarter), with the name of the phase under the slider and the shadowed part drawn right;
+  - Moon size, from 1× (the real size) to 8×.
+- Night Advanced: Disc brightness, Halo, Automatic position or a Height and Direction chosen by hand.
+- Moonlight follows the phase: a quarter gives about a tenth of the full moon. The automatic exposure takes it into account too.
+- Stars and moon download by themselves the first time a night needs them, about 35 MB, only once. Until then the stars of before stay. Credits: NASA's Scientific Visualization Studio, ESA/Gaia/DPAC.

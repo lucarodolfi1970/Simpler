@@ -1,0 +1,5 @@
+SIMPLER 1.58.2  —  27 October 2026
+==================================
+
+- Ecosystems «Only where the camera looks»: on a big terrain made of few triangles (Simpler's floor, 4 km in two triangles) it said «Too many pieces even in the frame only» even framing a small patch: it counted the whole triangles the camera touches. Now it counts the pieces for real, as it would place them, before placing them: looking down up close few pieces, towards the horizon many more (rightly: a lot of ground shows). If even the frame is too much, Simpler offers to thin out in the distance.
+- Ecosystems: folders, as for the 3D models. «New folder» in the library, drag an ecosystem onto a folder to move it (or right click: Cut, Move to), folders inside folders, rename and delete with the right click. A saved ecosystem goes into the open folder.

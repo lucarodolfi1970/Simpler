@@ -1,0 +1,4 @@
+SIMPLER 1.27.1  —  25 October 2026
+==================================
+
+- Library: menus arranged by kind. «3D models ▾» with Poly Haven and Custom (your models), «Materials ▾» with Poly Haven and Custom (your materials), «Decals ▾» with ambientCG and Custom (your PNGs). Then HDRI and backgrounds (before under Poly Haven), Lights, Scenes and AI outputs. The button of the open menu also shows the chosen entry, for example «Materials · Custom ▾».

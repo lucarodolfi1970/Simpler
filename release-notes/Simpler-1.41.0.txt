@@ -1,0 +1,7 @@
+SIMPLER 1.41.0  —  26 ottobre 2026
+==================================
+
+- Annulla anche la selezione persa. Se una selezione di due o più oggetti va persa, perché deselezioni per sbaglio o selezioni altro, Ctrl+Z la riporta com'era e Ctrl+Y la toglie di nuovo. Nella barra di stato si legge «Annullato: selezione (10 oggetti)».
+  - Passare da un oggetto all'altro o allargare la selezione con Ctrl+clic non aggiunge passi: l'annulla delle modifiche resta com'era.
+  - Le selezioni perse si mettono in ordine con le modifiche alla scena: Ctrl+Z annulla sempre l'ultima cosa successa.
+  - Annullare una selezione non cambia nulla da salvare nel progetto.

@@ -1,0 +1,5 @@
+SIMPLER 1.58.4  —  27 October 2026
+==================================
+
+- Ecosystems, «Recalculate from the view» and «Only where the camera looks»: before making the ecosystem again Simpler counts the pieces for the current view, without touching the scene. Above 400,000 pieces (or when a lot of memory would be needed) it asks for confirmation, as when you place it. If they are too many for the memory of the PC it offers pieces sparser in the distance («Sparser in the distance» at 70%), saying how many would remain; if even that is too many, it does nothing and says so. If you answer no, the ecosystem stays as it was.
+- The count is the real one: with the models already in the scene it takes their height into account (a crown showing behind a ridge), so it matches the pieces that will be made.

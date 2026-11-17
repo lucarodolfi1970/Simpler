@@ -1,0 +1,4 @@
+SIMPLER 1.58.1  —  27 ottobre 2026
+==================================
+
+- Path tracing: «Path tracing failed: key "eye_z" not found» in un progetto con le nuvole volumetriche del cielo fatte con una versione vecchia. Le nuvole del progetto avevano ancora il materiale di allora, a cui manca un pezzo usato oggi; ora all'apertura del progetto le nuvole vengono rifatte con la versione attuale, e quel pezzo mancante non causa più l'errore.

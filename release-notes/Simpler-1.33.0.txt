@@ -1,0 +1,10 @@
+SIMPLER 1.33.0  —  25 ottobre 2026
+==================================
+
+- Decal con le mappe, come i materiali. Nel pannello della decal c'è la nuova sezione «Mappe»:
+  · Normale: dà rilievo alla decal (una crepa sul muro, un'incisione, i rivetti di una targa). Si regola con «Intensità normale»; «Normale DirectX» rovescia il rilievo se sembra in fuori invece che in dentro (mappe fatte per DirectX). Con il pulsante della bacchetta Simpler la genera dall'immagine della decal sul tuo computer (DeepBump), senza bisogno di averla pronta.
+  · Rugosità e Metallo: al posto dei cursori, che spariscono quando c'è la mappa.
+  · Opacità: bianco si vede, nero è trasparente, al posto della trasparenza dell'immagine.
+  · Emissione (in Avanzate, sotto Luminosità): si accendono solo le parti chiare della mappa, del colore della decal; per neon e scritte luminose. Mettendo la mappa la luminosità si accende da sola (1); la forza si regola con Luminosità.
+  Le mappe vengono salvate nel progetto insieme alla decal e si vedono sia in tempo reale sia nel path tracing. Le decal «macchia» (che scuriscono la superficie sotto) non usano mappe.
+- La normale cambia la luce, non la forma: la crepa sembra incisa, ma non fa ombra vera e vista molto di sbieco resta piatta.

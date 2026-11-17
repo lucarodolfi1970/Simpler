@@ -1,0 +1,4 @@
+SIMPLER 1.28.8  —  25 October 2026
+==================================
+
+- Real-time view: a library model could turn all white (right in path tracing) after changing a material of some of its parts, for example the glass of the windows with «Replace in selection». The view updates every material of the pieces touched; the textured ones it knows only from the library model, after a new preparation of the view, were replaced by their plain colour. Now they stay those of the model.

@@ -1,0 +1,8 @@
+SIMPLER 1.73.1  —  30 October 2026
+==================================
+
+Coast fixed: in some scenes the sea was opaque like paint, because the coast found nothing to touch.
+
+- The Environment ground, tilted (or lowered under sea level), is now the sea bed: the water becomes clear where it is shallow and bluer and bluer where it gets deeper. The computation is instant: the ground is a plane, so no rays are needed. The flat ground the Environment puts just under the sea stays out; in that case the panel still suggests removing it.
+- Library models (such as the Poly Haven cliff) count for the coast. Before, they were left out by mistake, because they carry the same tag as the models of distributions.
+- A scene with nothing at sea level no longer gives an error while computing the coast.

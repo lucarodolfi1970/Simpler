@@ -1,0 +1,29 @@
+SIMPLER 1.13.3  —  22 October 2026
+==================================
+
+MATERIALS: TYPE "STANDARD" OR "WATER"
+-----------------------------------------------
+- In the material editor, right under the name, there is "Type": Standard · Water.
+  · Standard = the usual material (colour, roughness, transparency, maps…).
+  · Water = only the water parameters are shown: Colour and depth (Pool/Lake/Sea/Marsh, clarity, murkiness) and
+    Surface and waves (real waves, height, size, index of refraction). The others, not needed for water, are hidden.
+  · Back to Standard the material stays as it is and all parameters come back.
+- More types will come here later (for example vegetation, fabric).
+
+WATER ALSO IN CLOSED VOLUMES
+----------------------------
+- Water works on closed objects too (sphere, tank, glass, aquarium), not only on planes.
+  Waves form only on the top; the water body sits inside the shape.
+- Fixed the halo around a water sphere: the closed object was "extruded" downward like a pool.
+
+NEW SCENE AND GROUND
+--------------------
+- A new scene starts with a WHITE MATTE ground (new ground type "White" in the Ambience panel).
+- Primitives (cube, sphere, plane…) are created with the "White" material: one click opens the material.
+
+BUG FIXES
+---------
+- If you gave the ground your own material, changing the Ambience (HDRI to sky, presets, sun hour) brought the lawn
+  back. Now your material stays; Simpler's comes back only if you choose a ground type in the Ambience panel.
+- Going from Studio back to the sky the ground disappeared: now it comes back.
+- After turning water on you could no longer drag another material onto the object: now it changes.

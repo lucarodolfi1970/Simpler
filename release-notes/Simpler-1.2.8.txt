@@ -1,0 +1,7 @@
+SIMPLER 1.2.8  —  20 ottobre 2026
+=================================
+
+- EDITOR MATERIALE: clic sulla miniatura di una texture = la texture in grande in una piccola finestra che resta
+  sempre in primo piano (non blocca l'editor: puoi continuare a modificare). Mostra nome del file, risoluzione,
+  se è incorporata nel file, le parti trasparenti su scacchiera, e un pulsante "Apri la cartella" che mostra il
+  file in Esplora risorse. Cliccando un'altra miniatura la finestra mostra quella; Esc o × per chiuderla.

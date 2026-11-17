@@ -1,0 +1,14 @@
+SIMPLER 1.76.55  —  5 November 2026
+===================================
+
+"3D relief": true displacement, in the Advanced settings.
+
+- New "True displacement" switch in the Advanced settings of "3D relief", off by default. When on, in the final render the relief of the rock becomes real geometry: cracks, steps and the edges of the blocks really stand out, show in profile and cast shadows.
+- Before it goes on, a message warns that the final render takes longer and needs more memory: you can step back.
+- Under the switch, two sliders: Amplitude (how far the real rock stands out: 100% = the depth seen in the light, up to 200%) and Fineness (how small the triangles are: finer = slower and more memory). They change at once, without remaking the materials.
+- Final render only: the real-time view and the path tracing of the view do not change.
+- Only on the zones with walls (usually the rock): meadows and the flat area are not subdivided, so no memory is wasted. On the borders between zones the true relief fades to zero: no cracks.
+- The cost does not grow with the render resolution: Fineness is measured on a 1920-pixel picture.
+- Measured (CPU, 960×540, 32 samples, mountain with 80% rock): render from 86 to 134 s with Fineness 50%, 142 s with Fineness 100%; Cycles memory from 0.3 to about 0.7-1.6 GB.
+- "Default values" in the Advanced settings puts back displacement off, Amplitude 100%, Fineness 50% and Orientation 0°.
+- New automatic check: the displacement changes the final render, Amplitude and Fineness change without remaking the materials, the render in its own process works, off gives back the picture of before.

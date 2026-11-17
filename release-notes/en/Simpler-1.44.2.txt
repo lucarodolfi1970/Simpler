@@ -1,0 +1,8 @@
+SIMPLER 1.44.2  —  26 October 2026
+==================================
+
+- «Busy · please wait» really covers every wait. While the view was loading the models of a distribution, the sign went away and came back:
+  - the «are you busy?» question to the engine waited in line behind the loadings (the browser opens at most 6 connections per address). Now it goes through a connection of its own and arrives at once;
+  - the sign is updated on its own clock, every 0.2 seconds;
+  - every request of the view to the engine that waits more than 0.4 seconds counts too (models, parts, decal pictures);
+  - it goes off only after 0.7 seconds without work, so the pause between one model and the next does not make it blink.

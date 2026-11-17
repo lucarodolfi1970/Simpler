@@ -1,0 +1,11 @@
+SIMPLER 1.78.3  —  6 November 2026
+==================================
+
+The lights have their own button; Vegetation and 3D models also have the «Simpler» part.
+
+- New button with the yellow bulb in the top bar, next to the pivot: it opens the list of lights (Omni, Spot, Area, Disc, LED strip, Sun) and one click puts the light in the middle of the view. The lights are no longer in the library: the menu «Sky and lights» becomes «HDRI and backgrounds».
+- Vegetation has two entries: Simpler (the plants that will come with the program) and Mine (yours). 3D models ▸ Simpler shows the basic shapes and, below, Simpler's models.
+  - For now the Simpler parts are used as normal folders: you can import, move and remove models there. When they are complete they will become read only.
+  - «Import vegetation…» opened from Vegetation ▸ Simpler imports there.
+  - A model of 3D models ▸ Simpler converted to vegetation stays among Simpler's plants.
+- Faster: changing the colour, roughness, leaves, cloth and the other looks of a material no longer recomputes the sea's coast, the shelter from the rain and the snow, which do not depend on them. On a scene with the sea the engine stayed busy about a second after every change; now it is free at once.

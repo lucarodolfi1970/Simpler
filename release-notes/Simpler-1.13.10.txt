@@ -1,0 +1,10 @@
+SIMPLER 1.13.10  —  22 ottobre 2026
+===================================
+
+DISTRIBUZIONI: UNA NUOVA DISTRIBUZIONE DEGLI STESSI MODELLI È IMMEDIATA
+-----------------------------------------------------------------------
+- Ogni nuova distribuzione caricava di nuovo i modelli dalla libreria, e ci metteva sempre di più: nel tuo test con 7
+  edifici 9 secondi la prima, 30 la seconda, 60 la terza. In più le texture finivano in memoria due e tre volte e la
+  vista doveva preparare di nuovo i modelli.
+- Ora, se un modello è già in un'altra distribuzione, la nuova ne usa una copia che condivide geometria, materiali e
+  texture: la distribuzione nasce subito e la vista non deve preparare niente di nuovo.

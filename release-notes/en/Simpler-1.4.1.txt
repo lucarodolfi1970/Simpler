@@ -1,0 +1,15 @@
+SIMPLER 1.4.1  —  21 October 2026
+=================================
+
+NEW
+---
+- FPS IN THE VIEW: at the bottom right, in small print, the frames per second of the real-time view, the triangles
+  drawn and the draw calls ("draw"). The number turns yellow below 30 fps and red below 15. Hovering over it also
+  shows the time needed to prepare a frame. (The maximum is the screen's refresh rate: 60, 144…)
+  Hidden while viewing path tracing.
+- "BOXES" VIEW (in the top bar, before "Real time"): for huge scenes. Every piece is drawn as a box of its colour,
+  oriented like the piece; repeated objects (instances) also get their own box.
+  All the boxes together are a single draw call, with no textures or shadows: navigation stays smooth
+  even with thousands of objects. Selection, gizmo, copies and menus work as always (clicking uses the real shape);
+  selected pieces are orange. Blender has the equivalent ("Display As: Bounds"), but our real-time view isn't
+  Blender's, so the mode is built directly into the view.

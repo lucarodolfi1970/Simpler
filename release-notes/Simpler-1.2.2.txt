@@ -1,0 +1,33 @@
+SIMPLER 1.2.2  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- LIBRERIA A CARTELLE, come un file system: nella scheda Materiali si vedono le cartelle (Metalli, Gemme, Vetri,
+  Superfici, Tessuti, I miei materiali…) con il numero di materiali; clic per entrare, "Indietro" o la barra del
+  percorso accanto alla ricerca per tornare su. Le cartelle si possono annidare (es. Legno / Parquet).
+  · "Nuova cartella" (ultima casella) crea una cartella dove sei; con / crei anche le sottocartelle.
+  · Tasto destro su una cartella: Apri, Nuova sottocartella, Rinomina, Elimina (i materiali non si perdono:
+    passano nella cartella superiore).
+  · Per spostare un materiale: trascinalo sopra una cartella, su "Indietro" o su un pezzo del percorso; oppure
+    tasto destro sul materiale > Sposta in. Vale anche per i materiali di Simpler.
+  · La ricerca cerca in tutte le cartelle insieme.
+- SALVATAGGIO CON CARTELLA: "Salva come nuovo…" (e "Salva nella libreria…" per un materiale che non viene dalla
+  libreria) chiede nome e cartella: scegli una cartella dall'elenco o scrivi un percorso nuovo (es. Legno/Parquet),
+  che viene creato. "Salva" su un materiale della libreria sovrascrive e lo lascia nella sua cartella.
+- TEXTURE POLY HAVEN in cartelle, su due livelli, prese dalle categorie di Poly Haven: Pietra, Mattoni e blocchi,
+  Terreno, Legno, Cemento e intonaco, Tessuti e pelle, Metallo, Ceramica, Asfalto… e dentro, per esempio,
+  Legno / Boards & Planks (le sottocartelle hanno il nome originale di Poly Haven). Sola lettura.
+- EDITOR MATERIALE: nome, sfera di anteprima e pulsanti di salvataggio restano FISSI in alto; scorrono solo i
+  parametri, così vedi subito l'effetto di ogni modifica. La scheda indica anche in quale cartella della libreria
+  si trova il materiale.
+- LIBRERIA IN BASSO RIDIMENSIONABILE: trascina verso l'alto il bordo tra la vista e la libreria per avere più righe
+  di caselle (la vista si riduce); doppio clic sul bordo passa da una a due righe. L'altezza viene ricordata.
+
+COME FUNZIONA IL SALVATAGGIO DEI MATERIALI
+------------------------------------------
+- Le modifiche fatte nell'editor valgono subito nella scena e si salvano con il progetto (.simpler) quando salvi
+  il progetto.
+- "Salva" / "Salva come nuovo…" mettono il materiale nella LIBRERIA (%APPDATA%\Simpler\materials, con una copia
+  delle texture): la libreria è la stessa per tutti i progetti, quindi in una scena nuova ritrovi i tuoi materiali
+  e le tue cartelle.

@@ -1,0 +1,6 @@
+SIMPLER 1.61.1  —  28 October 2026
+==================================
+
+- Falling snowflakes now show in the real-time view too (before, only in path tracing). They take the light of the sky, of the sun or the moon and of the nearby street lamps.
+- The scale at the bottom right measures what is under the bar: looking down a street it said «10 m» over the nearby pavement.
+- Clicking an object or a light is faster in big scenes: the tree prepared the right-click menu of every row at every click; now it prepares it when you open it. If a click is still slow, the log now says where the time goes.

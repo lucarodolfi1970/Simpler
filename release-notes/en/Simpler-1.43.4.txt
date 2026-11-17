@@ -1,0 +1,5 @@
+SIMPLER 1.43.4  —  26 October 2026
+==================================
+
+- Path tracing stuck at «pass 3/5» while it rains: fixed. The real-time view asked the engine every second and a half whether the shelter map had changed, and every question interrupted the running pass, so the 256-sample pass never reached the end. Now the answer comes without disturbing path tracing, which reaches 5/5 again.
+- When it has nothing to do, the engine no longer reads the Ambience a hundred times a second to know whether it rains.

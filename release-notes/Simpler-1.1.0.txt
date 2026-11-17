@@ -1,0 +1,44 @@
+SIMPLER 1.1.0  —  18 ottobre 2026
+=================================
+
+NOVITÀ
+------
+Scene salvate (scheda "Scene" nella libreria in basso, dopo Ambienti)
+- "Salva scena" memorizza inquadratura, obiettivo e profondità di campo, formato, tutte le impostazioni
+  di rendering (preset, campioni, rimbalzi, caustiche, esposizione, tono), ambiente, luci e oggetti visibili.
+- Ogni scena ha una miniatura calcolata in path tracing. Clic sulla miniatura = torna alla scena.
+- Rotellina ⟳ = aggiorna la scena con l'inquadratura e le impostazioni attuali (e rifà la miniatura).
+- Menu "…": rinomina, duplica, elimina. Le scene sono salvate dentro il progetto .simpler.
+
+Fotocamera (nuovo pulsante "Fotocamera" in alto)
+- Focale in mm con preset 14 / 24 / 35 / 50 / 85 / 135 / 200.
+- Profondità di campo: apertura f/, distanza di fuoco, forma del bokeh (lamelle), e
+  "Metti a fuoco con un clic": si clicca nella vista il punto che deve essere nitido.
+- Prospettiva: decentramento orizzontale/verticale e "Raddrizza le verticali (2 punti)".
+- Formato dell'immagine (16:9, 3:2, 4:3, 1:1, 4:5, 2:3, 9:16, A4): cornice nella vista e
+  render finale con esattamente quella inquadratura; il Render finale propone le dimensioni in quel formato.
+
+Materiali
+- Le miniature della libreria sono ora rendering reali (sfera su fondale) calcolati con Cycles e memorizzati:
+  la prima volta compaiono una alla volta, poi sono immediate.
+
+Navigazione e albero
+- Frecce della tastiera: avanti/indietro e laterale; PagSu/PagGiù: su/giù (Shift = lento).
+  La velocità segue i pulsanti a piedi / bicicletta / auto.
+- Rinomina nell'albero tenendo premuto il clic sul nome (oppure F2, oppure menu "Rinomina").
+
+Nuova scena
+- Chiede se salvare il progetto attuale.
+- Riporta ai valori iniziali tutte le impostazioni (inquadratura, rendering, esposizione, caustiche).
+- Contiene solo il pavimento (20 m) e una luce Sole; le altre luci si aggiungono dal pulsante +
+  e compaiono vicino al punto che si sta guardando, già puntate verso di esso.
+
+BUG CORRETTI
+------------
+- Caustiche Spente/Normali/Nitide senza differenze visibili:
+  · le caustiche nitide (MNEE) non si attivavano/disattivavano durante l'anteprima (il motore teneva le
+    vecchie impostazioni degli oggetti): ora cambiano subito;
+  · le caustiche "Normali" venivano cancellate dal filtro riflessi e dal limite della luce indiretta:
+    con le caustiche attive questi due valori vanno a 0, con le caustiche spente tornano ai valori puliti.
+- Dopo "Nuova scena" la vista restava dove era nel progetto precedente (pavimento lontanissimo).
+- L'esposizione e le altre impostazioni non tornavano ai valori iniziali con "Nuova scena".

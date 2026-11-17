@@ -1,0 +1,11 @@
+SIMPLER 1.18.0  —  24 October 2026
+==================================
+
+"AI" BUTTON: YOUR OPENAI KEY
+----------------------------
+- New "AI" button in the top bar, next to "Final render". It prepares the artificial intelligence features of Simpler, which will use ChatGPT image models (OpenAI): the first ones come in the next versions (for example enhancing the final image).
+- The API key is personal and not required: all of Simpler works without it, but without a key the AI features stay off. Requests are charged to your OpenAI account, pay as you go.
+- To get it: sign up at https://platform.openai.com/, buy API credits and create a key. The button's window explains the steps, with the link.
+- You paste the key, Simpler saves it encrypted (only for your Windows user) and tests it at once with OpenAI: a green tick if it answers and the image models are active, a red cross with the message received if something is wrong.
+- Once saved the key cannot be seen again: to change it you delete it and enter it again.
+- The button is grey without a key (or with a key that does not work) and turns blue, like "Final render", when the key works. At start the saved key is tested in the background.

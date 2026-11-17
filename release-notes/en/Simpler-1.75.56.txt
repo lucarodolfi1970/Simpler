@@ -1,0 +1,8 @@
+SIMPLER 1.75.56  —  1 November 2026
+===================================
+
+The Properties panel shows how many triangles the model has.
+
+- Under «Size» there is now a «Triangles» row, with the number of triangles of the selected model as it is drawn: copies count, and library models too. The row appears only for objects that have a surface; lights and empty groups do not have it.
+- The count is instant even on models with millions of triangles, because the faces do not need to be split into triangles: a face with n sides is n−2 triangles.
+- The row's tooltip reminds you that, to lighten the model, there is «Optimize polygons…» in the right-click menu.

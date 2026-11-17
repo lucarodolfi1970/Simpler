@@ -1,0 +1,11 @@
+SIMPLER 1.18.0  —  24 ottobre 2026
+==================================
+
+PULSANTE «AI»: LA TUA CHIAVE OPENAI
+-----------------------------------
+- Nuovo pulsante «AI» nella barra in alto, accanto a «Render finale». Prepara le funzioni di intelligenza artificiale di Simpler, che useranno i modelli di immagini di ChatGPT (OpenAI): le prime arriveranno nelle prossime versioni (per esempio il miglioramento dell'immagine finale).
+- La chiave API è personale e non obbligatoria: Simpler funziona tutto anche senza, ma senza chiave le funzioni AI restano spente. Le richieste sono addebitate sul tuo account OpenAI, a consumo.
+- Per ottenerla: registrati su https://platform.openai.com/, acquista dei crediti per le API e crea una chiave. La finestra del pulsante spiega i passaggi, con il collegamento.
+- Incolli la chiave, Simpler la salva cifrata (solo per il tuo utente di Windows) e la verifica subito con OpenAI: spunta verde se risponde e i modelli di immagini sono attivi, spunta rossa con il messaggio ricevuto se qualcosa non va.
+- Una volta salvata la chiave non si può più vedere: per cambiarla la elimini e la inserisci di nuovo.
+- Il pulsante è grigio senza chiave (o con una chiave che non funziona) e diventa azzurro, come «Render finale», quando la chiave funziona. All'avvio la chiave salvata viene verificata in background.

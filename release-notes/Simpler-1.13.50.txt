@@ -1,0 +1,25 @@
+SIMPLER 1.13.50  —  23 ottobre 2026
+===================================
+
+LUCE RIFLESSA DALL'ACQUA (PROTOTIPO)
+------------------------------------
+- Nuovo interruttore in Impostazioni rendering › Caustiche: «Luce riflessa dall'acqua». Il sole riflesso dalle onde disegna il reticolo di luce sui muri vicini, sui bordi della piscina e sotto i ponti. Cycles da solo non lo calcola: le sue caustiche nitide fanno solo la rifrazione (il reticolo sul fondo).
+- È fisico: riflessione di Fresnel esatta dell'acqua (indice 1,333) sulla vera geometria delle onde, con ombre, distanza e grandezza del sole. Vale solo per l'acqua con «Onde vere» e solo nel path tracing.
+- Costo: un calcolo di pochi secondi (circa 1 s nella vista, 3-4 s nel render finale), rifatto solo quando cambiano sole, acqua o oggetti vicini. Il tempo dei campioni non cambia. Sotto l'interruttore compaiono il tempo dell'ultimo calcolo, i raggi e le superfici illuminate.
+- È spento di default. Nota: è una luce debole come in realtà (pochi % del sole): si vede bene nelle zone in ombra, poco su un muro già al sole.
+
+ACQUA
+-----
+- Sotto la superficie l'acqua è limpida: la foschia dell'aria (Nebbia non volumetrica) non viene più stesa sulla vista quando la camera è sott'acqua. Prima un velo grigio copriva la piscina qualunque fosse la limpidezza.
+
+AMBIENTE
+--------
+- Notte: l'esposizione automatica non trasforma più la luna in una giornata nuvolosa. Di notte la scena è buia, blu, illuminata dalla luna.
+- L'esposizione automatica conta anche le luci della scena (punti, faretti, aree): un vecchio progetto con le tre luci da studio, messo sotto un cielo notturno, diventava tutto bianco.
+- Ora del sole scritta come HH:mm (es. 15:30), a passi di 5 minuti. Si può scrivere anche 15.30 o 15,30.
+
+VISTA
+-----
+- Spostamento con la rotellina premuta: la scena segue il mouse alla distanza di ciò che c'è sotto il puntatore. Prima andava alla distanza del centro di rotazione: dopo aver girato attorno a un oggetto vicinissimo (un anello, un vetro) si muoveva di un millimetro alla volta.
+- Gizmo: le frecce e gli archi si girano sempre verso la camera. Una freccia che andava lontano dalla vista restava dietro le altre ed era difficile da prendere.
+- Una luce aggiunta cliccando nella vista va esattamente dove clicchi, appena staccata dalla superficie e rivolta lontano da essa (su un soffitto illumina verso il basso). Prima veniva messa più in alto e più vicina alla camera.

@@ -1,0 +1,6 @@
+SIMPLER 1.54.1  —  27 October 2026
+==================================
+
+- Volumetric, Advanced: new «Light bounces» slider (1 to 32, 4 to start). More bounces make the inside of a cloud brighter and more natural instead of dark and bluish; the preview uses them at once, so you see the result (each pass is slower). The final render always uses at least 12 (about 30% more time on the test cloud).
+- The «Cloud» kind is tuned on a real cumulus: dense (Visibility 25 cm for a 6 m cloud), sharp edges (Softness 30%), Puffs 60% of 1 m, no absorption (the grey of a cloud is its own shadow), forward light 60%, Detail 70%.
+- «Busy · please wait»: the red box now also appears while the path tracing prepares the scene (geometry, volume grids, lights, textures) for more than a moment, because a command would have to wait then. It does not appear while the picture refines, which stops by itself.

@@ -1,0 +1,7 @@
+SIMPLER 1.4.2  —  21 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- SCHERMATA INIZIALE: la valutazione della scheda video (nome, memoria, barra e %, giudizio) non si sovrappone più
+  alle scritte in basso: ora è un piccolo riquadro scuro semitrasparente nell'angolo in alto a destra.

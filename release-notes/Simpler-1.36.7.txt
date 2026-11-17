@@ -1,0 +1,11 @@
+SIMPLER 1.36.7  —  25 ottobre 2026
+==================================
+
+- Pannello della decal riordinato. In alto restano solo Dimensione, Profondità, Opacità e Colore, più una riga che dice quali mappe ha la decal.
+- Tutto il resto è in Avanzate, in un riquadro per ogni canale, ciascuno con la sua mappa e solo i suoi valori:
+  - Rilievo (normale): mappa, Intensità, Normale DirectX;
+  - Rugosità: mappa, oppure il cursore quando non c'è la mappa;
+  - Metallo: mappa, oppure il cursore;
+  - Trasparenza: mappa di opacità;
+  - Emissione (luce): Luminosità e mappa;
+  - Forma: Larghezza, Altezza, Ordine.

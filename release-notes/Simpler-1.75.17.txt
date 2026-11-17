@@ -1,0 +1,8 @@
+SIMPLER 1.75.17  —  31 ottobre 2026
+===================================
+
+Bordo dell'asciutto sfumato.
+
+- Sotto un riparo (una tettoia, un lampione, una lastra) la zona asciutta aveva un bordo netto, a gradini, che seguiva le celle della mappa del riparo: una riga dura sulla strada bagnata.
+  - Ora il riparo si legge in 13 punti attorno a ogni punto della superficie, fino a 12 cm più metà della «Morbidezza» (circa 27 cm con il valore normale): il bordo dell'asciutto sfuma come quando la pioggia cade un po' di sbieco.
+  - Lo stesso nella vista in tempo reale, nel path tracing e nel render finale.

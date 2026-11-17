@@ -1,0 +1,4 @@
+SIMPLER 1.28.5  —  25 October 2026
+==================================
+
+- The windows to open and save files open in the last folder used for that kind of file, and remember it the next time Simpler starts too: projects, models to import (into the scene and the library, files and folders), images (material maps, sky photo, AI image, light gobos), decals, renders and saved images, folder of missing textures. The first time for a kind they start from the last folder used at all.

@@ -1,0 +1,7 @@
+SIMPLER 1.4.2  —  21 October 2026
+=================================
+
+FIXES
+-----
+- START SCREEN: the graphics card rating (name, memory, bar and %, verdict) no longer overlaps the text at the
+  bottom: it is now a small, dark, semi-transparent box in the top right corner.

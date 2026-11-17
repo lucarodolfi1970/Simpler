@@ -1,0 +1,6 @@
+SIMPLER 1.76.17  —  2 novembre 2026
+===================================
+
+Nuvole: l'altezza resta la tua.
+
+- Tolto lo spostamento automatico delle nuvole sopra la scena (1.76.16): l'altezza delle nuvole volumetriche è quella che scegli, anche con la camera dentro o sopra lo strato.

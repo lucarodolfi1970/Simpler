@@ -1,0 +1,23 @@
+SIMPLER 1.74.0  —  30 ottobre 2026
+==================================
+
+Ogni sezione dei pannelli ha la sua icona, come in Ambiente.
+
+- Materiali (Colore, Rugosità, Sporco, Metallico, Rilievo, Riflessi e vernice, Vetro e trasparenza, Velluto, Sottosuperficie, Emissione, Mappatura texture…), oggetti, luci, fotocamera, decal, impostazioni, ecosistemi, consumo del disco, note di rilascio: ogni sezione ha un'icona colorata accanto al titolo.
+- Vale anche in inglese. Le sezioni che verranno aggiunte in futuro senza un'icona propria ne prendono una generica, così nessuna resta senza.
+- Ambiente e Oceano tengono le icone che avevano.
+
+Texture mancanti chieste a ogni apertura, anche quando non erano texture:
+- Alcuni modelli FBX che arrivano da 3ds Max hanno, al posto del file di una mappa, solo il suo nome (per esempio «Map #5234338», senza estensione): è una mappa vuota già nel modello originale, non c'è un file da cercare.
+- Ora i percorsi che non indicano nessun file (senza estensione) sono trattati come mappe vuote: scollegati, detti solo nella barra di stato, mai chiesti.
+- In più, in generale: se a «Vuoi indicare la cartella?» rispondi No, per quel progetto quelle texture non vengono più chieste a ogni apertura (lo dice la barra di stato). Se ricolleghi il disco vengono ritrovate da sole; File ▸ Cerca texture mancanti le cerca quando vuoi.
+
+Altezza e Dimensione onde «non cambiano nulla» e quadrati di luce riflessa su una superficie d'acqua molto grande: è lo stesso problema.
+- Per disegnare le onde Simpler divide la superficie in quadratini, al massimo 400 mila: su un piano d'acqua di 139 m ogni quadratino misura 27 cm. Onde di 16 cm non ci stanno, e Simpler le riduce a 0,5 cm. Per questo gli slider sembrano non fare niente.
+- Con l'acqua quasi piatta fatta di quadratini da 27 cm, ogni quadratino riflette il sole come un piccolo specchio: da qui i quadrati di luce sulle pareti.
+- Riducendo il piano d'acqua all'area che serve (con la scala), le onde tornano quelle scelte e i quadrati spariscono.
+- La nota sotto gli slider ora è corta e dice cosa fare: «Onde ridotte a 0,5 cm: la superficie d'acqua è troppo grande (139 m) per disegnarle. Riducila all'area che serve, o aumenta la Dimensione.»
+
+Cartelle temporanee mai cancellate:
+- Ogni volta che chiudevi Simpler restavano nella cartella temporanea di Windows le cartelle del motore: circa 240 MB per sessione (copie della scena per il render, immagini della luce riflessa dall'acqua, annulla, anteprime). Con il tempo potevano diventare migliaia di cartelle e riempire il disco.
+- Ora ogni cartella sa a quale motore appartiene, e all'avvio Simpler cancella quelle dei motori chiusi (in sottofondo). Quelle lasciate dalle versioni precedenti vengono cancellate dopo un giorno.

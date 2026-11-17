@@ -1,0 +1,6 @@
+SIMPLER 1.48.1  —  26 ottobre 2026
+==================================
+
+- Neve: nuovo «Dettaglio del mantello» nelle Avanzate (compare con lo Spessore sopra zero). Più alto = bordi più precisi su tetti, cornicioni e auto, ma più tempo di calcolo e più peso nella vista; di serie 50%, come prima.
+- Simpler tiene il mantello dentro quello che la scena può reggere: mai oltre 4 milioni di vertici. Sotto il cursore vedi il mantello attuale (grandezza delle celle, vertici, secondi di calcolo), aggiornato a ogni nuovo calcolo. Un avviso arancione compare quando il dettaglio è alto o il mantello è pesante.
+- Prova su una scena di 220 m con 300 edifici: dettaglio 0% → celle di 58 cm, 1 s; 50% → 27 cm, 6 s; 100% → 11 cm, 3,8 milioni di vertici, 25 s.

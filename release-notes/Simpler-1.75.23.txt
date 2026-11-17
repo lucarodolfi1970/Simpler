@@ -1,0 +1,12 @@
+SIMPLER 1.75.23  —  31 ottobre 2026
+===================================
+
+Il grafico dei campioni restava dritto nei render a riquadri: corretto.
+
+- Nel tuo render 4K il grafico era salito di colpo a metà e poi restava dritto mentre i campioni andavano da 152 a 184.
+  - Causa: il render 4K va per riquadri (qui 4). Quando Cycles passa al riquadro successivo scrive prima il nuovo numero di riquadri con i campioni ancora alla fine del riquadro precedente («Rendered 1/4 Tiles, Sample 512/512»), e solo dopo riparte («Sample 1/512»). Simpler leggeva quella riga come un riquadro intero in più: metà render con 4 riquadri. Il grafico tiene il punto più alto raggiunto, quindi restava lassù finché i campioni veri non lo superavano.
+  - Anche la barra e «campione X di Y» facevano lo stesso salto per un attimo a ogni cambio di riquadro.
+  - Ora quella riga vale come inizio del nuovo riquadro, e i campioni non tornano mai indietro (dopo l'ultimo riquadro Cycles scrive «Sample 0/512»).
+- Provato: con un render vero a 4 riquadri di Cycles i campioni salgono 0, 4, 8, 12, 16 senza salti.
+
+Il render 4K che stai facendo ora finisce normalmente; solo il suo grafico resterà sbagliato.

@@ -1,0 +1,7 @@
+SIMPLER 1.15.1  —  24 October 2026
+==================================
+
+RECENT PROJECTS
+---------------
+- At the bottom of the Open menu (the folder with the arrow) are the last 5 projects opened or saved: one click opens them (with the question about unsaved changes, as Open). The open project has a check mark; the full file name shows on hover.
+- A project that was moved or deleted appears faded: clicking it, Simpler says so and removes it from the list. Automatic copies (.autosave) do not enter the list.

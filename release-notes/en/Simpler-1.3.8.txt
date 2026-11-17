@@ -1,0 +1,14 @@
+SIMPLER 1.3.8  —  21 October 2026
+=================================
+
+FIXES
+-----
+- INDEPENDENT FOLDERS: moving the Poly Haven materials also moved the Poly Haven 3D models (which by default are in
+  a "models" subfolder of the same folder). Now each library moves on its own:
+  - the copy skips the folders of the other libraries;
+  - when the old folder is deleted, the folders of the other libraries inside it are left where they are, with all
+    their content;
+  - the count of files and GB covers only the library you are moving.
+- If the Poly Haven 3D models ended up inside the materials folder (as with 1.3.7), use "Change…" on
+  "Poly Haven 3D models" (or "Back to default"): they are copied to the folder you choose and at the end
+  Simpler can delete the "models" subfolder left in the materials folder.

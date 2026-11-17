@@ -1,0 +1,4 @@
+SIMPLER 1.56.1  —  27 October 2026
+==================================
+
+- Importing into the scene (Import menu, Ctrl+I, files dropped on the scene): after choosing the files a small window opens with the files and the switch «Merge the pieces into a single object», so you always see whether it is on. The choice is kept for the next times. The item is gone from the Import menu, where you could not tell whether it was ticked.

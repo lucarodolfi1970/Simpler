@@ -1,0 +1,5 @@
+SIMPLER 1.33.4  —  25 ottobre 2026
+==================================
+
+- Gizmo «Base» di un modello preso dalla libreria: se il modello viene selezionato prima che la vista abbia la sua forma (per esempio la seconda copia di un'auto trascinata vicino alla camera), il gizmo finiva nell'origine del modello, mezzo metro sotto il pavimento per l'Audi, e ci restava. Ora la vista lo rimette al posto giusto appena il modello arriva.
+- Licenze e crediti: tolto l'elenco dei modelli consigliati di Sketchfab.

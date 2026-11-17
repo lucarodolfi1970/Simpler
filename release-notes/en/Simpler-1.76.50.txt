@@ -1,0 +1,14 @@
+SIMPLER 1.76.50  —  5 November 2026
+===================================
+
+Faster real-time view: fewer reloads, fewer shaders made again, path tracing that does not block commands.
+
+- After a terrain change (sculpting, shape, zones) the view replaces only the changed parts: before, a zone left empty reloaded the whole view.
+- The view's stand-in light always stays in the scene (off when not needed): before, every time it appeared or went away all shaders were made again ("Updating the lights").
+- When the view is loaded again (opening, a new preparation) the shaders already made are reused: before, they were thrown away and made again, a few seconds each time.
+- Path tracing in the view: when preparing the scene is slow, the intermediate passes are skipped and the pause between passes grows, so commands do not wait.
+- Terrain "Edge blending": only the material's numbers change, it is not made again (from 28 s to under a second).
+- Faster opening: the folder settings are not read again at every request.
+- SmartView even lighter: the shadows check only the known lights, not the whole scene twice a second.
+- View: a slow frame no longer places every distributed piece again when their limit is already at the minimum.
+- New automatic checks for each of these points.

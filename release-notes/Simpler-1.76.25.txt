@@ -1,0 +1,11 @@
+SIMPLER 1.76.25  —  3 novembre 2026
+===================================
+
+File di quote veri come terreno, pietre più leggere e ordinate, Avanzate più visibili, neve corretta.
+
+- Terreno da un file di quote vero: «Usa una mappa di altezze…» ora apre anche i file USGS (.dem), SRTM (.hgt) ed ESRI ASCII (.asc). Il terreno prende la larghezza e il dislivello reali del file (per esempio 9,6 km e 146 m), senza erosione aggiunta: il posto com'è. Le parti vuote ai bordi del file vengono tagliate o riempite.
+- «Pietre e detriti» ha il suo interruttore in «Calcola solo l'area inquadrata», accanto a neve ed ecosistemi; «Ricalcola» rifà anche le pietre, e prima del render si rifanno da sole.
+- Pietre solo dove guarda la camera: ora la scelta si fa prima di calcolarle (prima si facevano su tutto il terreno, milioni, e poi se ne teneva una parte uguale ovunque). Lontano dalla camera sono più rade e un po' più grandi, così il terreno resta coperto e la scena leggera; vicino ci sono tutte.
+- Ogni pietra ha la sua miniatura e, sotto, le sue Avanzate con «Grandezza» e «Quante di questa», regolabili anche prima di «Posa le pietre».
+- «Avanzate» è ora una barra gialla larga quanto il pannello con la scritta blu; dentro gli elenchi (pietre, modelli del pennello) è una barra sottile. Il pallino che dice «qualcosa non è al valore predefinito» è a destra nella barra.
+- Corretto: con la neve il path tracing poteva fermarsi con «foreach_set(..) sequence length mismatch given 1, needed 0».

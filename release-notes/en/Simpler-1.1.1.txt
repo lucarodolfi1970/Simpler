@@ -1,0 +1,45 @@
+SIMPLER 1.1.1  —  18 October 2026
+=================================
+A release dedicated to very large scenes (FBX models of hundreds of MB or more).
+
+NEW FEATURES
+------------
+- Path tracing: the badge at the bottom shows what the engine is doing and for how long, instead of
+  "computing…": reading objects (e.g. 1234/5000), loading textures (12/480 · file name),
+  building the acceleration structure (percentage), GPU memory used, elapsed time.
+  If path tracing fails (e.g. out of GPU memory) the error message appears in red.
+- Rendering panel › Path tracing: "Preview textures" (Full / 4K / 2K / 1K) reduces textures only
+  in the path tracing view, for huge scenes. The final render always uses full textures.
+- Rendering panel › Real-time view: "Textures" (Auto / 1K / 2K / Full) for the 3D view.
+  Auto = 2K, or 1K when the model has a great many textures.
+- Save as: ▾ menu next to "Save", or Ctrl+Shift+S.
+- Esc during "Preparing the 3D view…" stops the preparation and returns the scene to its state
+  before the last operation (e.g. undoes the material just applied or the import).
+- During long operations the commands that cannot be used are disabled (top bar, tree, library,
+  properties, selection and gizmo in the view). Navigation in the view stays active.
+- Context menus and tooltips in the app's dark style, no longer white.
+
+PERFORMANCE
+-----------
+- The 3D view is no longer rebuilt from scratch at every change: deleting, duplicating, adding lights
+  or groups, moving into groups, applying a material, undo and redo are instant even on huge
+  scenes. A full rebuild remains only for new geometry (import) or materials with textures the view
+  does not have yet.
+- When needed, the 3D view is prepared in a separate process: the app stays usable and the
+  preparation can be stopped with Esc. View textures are reduced (see above): smaller files,
+  much faster preparation and loading, much less memory.
+- Undo/Redo of import, add, delete, duplicate, environment and "apply scene" no longer save a copy of
+  the whole scene to disk: they are instant (before, on a 1 GB model they could take minutes).
+- Instant scene thumbnails: they are taken from the real-time view (enough to recognise the framing)
+  instead of being computed with path tracing.
+- The engine runs at lower priority and leaves a few CPU cores free: Windows and the app stay
+  responsive during imports, path tracing and final render.
+
+BUG FIXES
+---------
+- "Operation took too long" message on large scenes (e.g. applying a material while the view was being
+  prepared): commands now wait their turn instead of failing (and then being run anyway, behind the
+  scenes).
+- "The 3D viewer closed unexpectedly: RenderProcessExited" (out of memory with huge models): less memory
+  is used and, if it happens, the view restarts by itself and reloads the scene.
+- Path tracing could stay forever on "computing…" if Cycles failed: the error is now shown.

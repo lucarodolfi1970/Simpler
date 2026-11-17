@@ -1,0 +1,5 @@
+SIMPLER 1.34.3  —  25 October 2026
+==================================
+
+- Real-time view: fixed a case where a library model could turn all white right after opening a project, while in path tracing it had its textures. On opening, Simpler sends the Simpler materials to the view again; for a piece using one, its other materials come along. If the model had not reached the view yet, a stand-in with only the colour was made for the textured materials, which could then take the place of the real one. Now the stand-in no longer replaces the model's materials, and a material that did not change is not touched.
+- Spacing scatter: «Follow the line» is on by default and, when on, the slider is called «Rotation from the line»: 0° = the model's X axis follows the line, 180° = the opposite way, ±90° = crosswise, in the bends too. So cars keep the chosen direction along the whole road.

@@ -1,0 +1,8 @@
+SIMPLER 1.75.16  —  31 October 2026
+===================================
+
+Snow mantle with closed edges.
+
+- Where the mantle ended while still thick (against an object, around a pole, under a car, at the border of sculpted snow) its edge stayed open: looking from low down you could see under the snow, as dark slits on the sidewalk.
+  - Now every open edge more than 1 cm above the surface under it gets a strip down to the ground: no more slits, in real time, in path tracing and in the final render.
+- The automatic check now verifies this too.

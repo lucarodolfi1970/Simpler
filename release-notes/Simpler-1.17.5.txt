@@ -1,0 +1,8 @@
+SIMPLER 1.17.5  —  24 ottobre 2026
+==================================
+
+ALBERI DAVANTI ALLE NUVOLE E RENDER FINALE PIÙ VELOCE
+-----------------------------------------------------
+- Gli ultimi puntini chiari sui rametti radi delle chiome davanti alle nuvole volumetriche spariscono: dove un rametto copre solo una piccola parte del pixel, la foschia vale solo per quella parte e alla sua distanza (non più per tutto il pixel come se fosse lontano quanto il cielo). Contro il cielo sereno non cambia nulla.
+- Render finale: il minimo di campioni per pixel passa da un quarto a un ottavo dei campioni (mai sotto 256). Misurato su un tramonto con nuvole volumetriche a 2048 campioni: 15% di tempo in meno, immagine uguale (il 99% dei pixel identico).
+- Misura (per lo sviluppo), terzo giro sulle nuvole: il secondo giro ha mostrato che né il numero massimo di passi né il passo del materiale cambiano tempo o immagine. Ora prova il calcolo dei volumi senza «Biased», senza la guida dei volumi e senza il light tree, più un render completo senza «Biased».

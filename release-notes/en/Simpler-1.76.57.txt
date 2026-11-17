@@ -1,0 +1,11 @@
+SIMPLER 1.76.57  —  5 November 2026
+===================================
+
+Terrain path tracing: ready in a few seconds, not a minute.
+
+- With 1.76.56 editing a terrain material was immediate, but when the path tracing started the terrain materials took 53 s to prepare.
+- Cause: each terrain material had about 1000 nodes. 93% of them were the same tone and rock relief computation repeated for every neighbouring zone in the border blend, and Blender slows down a lot with every node added to a big tree.
+- Now that computation is made once per material and the zones share it: about 270 nodes, 0.4-0.5 s per material instead of 6-9 s.
+- The result does not change. In the border blend the relief of the neighbouring zones now uses the right thickness of the layers (before always 10 m) and follows the "3D relief" sliders without remaking the materials.
+- The copy Simpler keeps for Ctrl+Z is no longer prepared for the path tracing.
+- New automatic check: the terrain materials must be ready for Cycles in less than 6 s.

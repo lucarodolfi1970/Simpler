@@ -1,0 +1,8 @@
+SIMPLER 1.13.28  —  22 October 2026
+===================================
+
+LIBRARY: PRIMITIVES
+-------------------
+- Primitives (cube, sphere, cylinder, cone, plane, torus) have their own rendered thumbnail, like 3D models.
+- "Empty group" removed from the primitives.
+- Cylinder and cone: the caps stay flat (before, smoothed, their edge looked soft).

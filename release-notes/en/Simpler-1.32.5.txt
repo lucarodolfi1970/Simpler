@@ -1,0 +1,5 @@
+SIMPLER 1.32.5  —  25 October 2026
+==================================
+
+- In the scene tree a violet dot on the icon marks the objects that hold a decal: a decal sits under the piece it is projected on (for example the dashboard glass of a car), often inside closed rows of the model. The dot shows on the piece and on every level above it, so you can follow the way down to the decal; hovering it tells how many decals it holds.
+- When you place a new decal (or make an object that ends up inside another) the rows above it open by themselves and the tree scrolls to it: before, the decal was selected but stayed hidden inside the closed row of its piece.

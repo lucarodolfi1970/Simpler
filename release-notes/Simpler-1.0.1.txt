@@ -1,0 +1,18 @@
+SIMPLER 1.0.1  —  18 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- Caustiche nel pannello Rendering con un unico comando: Spente / Normali / Nitide (MNEE).
+  "Spente" disattiva tutte le caustiche (render più veloce e pulito); con "Normali" e "Nitide"
+  restano disponibili i dettagli (caustiche riflesse e rifratte).
+- Barra in alto più pulita: tolti il pulsante "Caustiche" e la barra di avanzamento del path tracing
+  (l'avanzamento resta nell'etichetta in basso nella vista, le caustiche nel pannello Rendering).
+
+BUG CORRETTI
+------------
+- Messaggio rosso "Errore di comunicazione con il motore: An error occurred while sending the request"
+  che compariva durante l'anteprima path tracing: il motore ora accetta più richieste contemporanee e
+  l'app ritenta automaticamente le richieste rifiutate per un istante.
+- Oggetti spostati nell'albero dentro il gruppo "Pavimento" venivano trattati come pavimento
+  (esclusi da "Appoggia" e dall'inquadratura).

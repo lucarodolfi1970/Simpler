@@ -1,0 +1,4 @@
+SIMPLER 1.19.1  —  24 October 2026
+==================================
+
+- AI panel: the "Test again" and "Delete key" buttons have the same height.

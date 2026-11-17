@@ -1,0 +1,5 @@
+SIMPLER 1.36.2  —  25 ottobre 2026
+==================================
+
+- Una distribuzione (Spaziatura, Area, Pennello) spostata o ruotata dopo averla disegnata, o una sua copia messa altrove, con «Aggiorna» resta dov'è ora. Prima la linea e le pennellate erano ricordate nel punto in cui erano state disegnate e «Aggiorna» riportava gli oggetti lì. Ora la distribuzione ricorda anche dov'era al salvataggio e linea e pennellate la seguono, anche se la sposti mentre la linea è aperta.
+- Le distribuzioni salvate prima di questa versione: si considera che fossero al loro posto iniziale (il caso normale). Se una copia già fatta finisse ancora nel punto sbagliato, basta ridisegnare la sua linea una volta.

@@ -1,0 +1,7 @@
+SIMPLER 1.1.7  —  18 October 2026
+=================================
+
+NEW FEATURES
+------------
+- Splash screen 30% smaller (about 42% of the screen width, 770 pixels at most);
+  the image was also reduced by 30%, so it stays sharp and is lighter.

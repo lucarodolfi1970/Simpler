@@ -1,0 +1,4 @@
+SIMPLER 1.57.1  —  27 ottobre 2026
+==================================
+
+- «Libera memoria»: in una scena con gruppi di Blender (collezioni, per esempio quelle delle distribuzioni) dava «Internal error: 'Collection' object has no attribute 'users_scene'» e non mostrava il messaggio. Corretto: le collezioni nella scena, quelle usate da altri oggetti e quelle delle distribuzioni restano; solo quelle che non usa nessuno vengono tolte.

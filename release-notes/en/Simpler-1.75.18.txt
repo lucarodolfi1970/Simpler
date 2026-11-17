@@ -1,0 +1,6 @@
+SIMPLER 1.75.18  —  31 October 2026
+===================================
+
+Diagnostics of wetness in the final render.
+
+- In the engine log, at every final render, one line tells how the rain is in the scene sent to the render (wetness, puddles, shelter map and whether its file exists, how many materials are wet) and a second line tells how the render process finds it. It is meant to understand why in one scene the final render came out without the wet ground the view showed.

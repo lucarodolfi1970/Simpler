@@ -1,0 +1,6 @@
+SIMPLER 1.75.45  —  1 November 2026
+===================================
+
+«Save image» no longer grey.
+
+- With nothing selected the bar at the top of the view greys out the commands that work on the object (World, Local, 3D centre, Drop…). «Save image» was greyed out with them, but it always works, even without a selection: now it stays bright like «Box» and «Lasso».

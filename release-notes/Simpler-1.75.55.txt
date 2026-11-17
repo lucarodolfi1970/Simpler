@@ -1,0 +1,8 @@
+SIMPLER 1.75.55  —  1 novembre 2026
+===================================
+
+Le finestre di Simpler restano sopra Simpler, non sopra tutti i programmi. «Ottimizza poligoni» mostra l'avanzamento anche dentro un pezzo.
+
+- Le finestre di Simpler (Ottimizza poligoni, il confronto delle immagini AI, il visualizzatore delle texture) erano «sempre in primo piano» su tutto Windows: aprendo un altro programma, come Esplora risorse, restavano sopra e lo coprivano. Ora restano sopra la finestra di Simpler, ma gli altri programmi possono andarci sopra. Vale anche per la finestra di avvio.
+- Nuovo controllo automatico: fallisce se nel codice torna una finestra «sempre in primo piano» su tutti i programmi. Fanno eccezione solo le finestre mostrate quando Simpler non ha ancora la sua finestra principale: il contratto di licenza al primo avvio e un messaggio senza finestra principale.
+- Avanzamento di «Ottimizza poligoni»: mentre riduce un pezzo, Blender non dice a che punto è; con un pezzo da 5 milioni di triangoli la barra restava ferma per 30 secondi. Ora Simpler misura quanti triangoli al secondo riduce il tuo computer e stima l'avanzamento del pezzo in corso: la barra avanza e accanto compare «circa N s». La velocità misurata viene tenuta per i calcoli successivi della stessa sessione. Quando non c'è niente da misurare, come mentre prepara l'anteprima 3D, la barra mostra un tratto che si muove, così si vede che sta lavorando.

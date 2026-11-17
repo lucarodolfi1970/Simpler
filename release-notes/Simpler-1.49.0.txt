@@ -1,0 +1,7 @@
+SIMPLER 1.49.0  —  27 ottobre 2026
+==================================
+
+- Neve: il mantello dei modelli ora segue la loro forma. Prima era un telo steso dall'alto e sulle forme curve (un'auto, una roccia) scendeva lungo i fianchi in lembi strappati. Ora Simpler sparge la neve sulle facce rivolte verso l'alto del modello, con la loro curvatura vera, e ne fa una superficie unica e morbida: calotte arrotondate sul tetto e sul cofano, niente tende sui fianchi. Vale per qualunque modello fino a 12 m (rocce, auto, panchine, lampioni, persone...). Simpler non sa cosa sia un modello: guarda solo la sua geometria. Il terreno e i modelli più grandi (edifici, strade) restano con il mantello dall'alto, più leggero sulle grandi superfici piane.
+- Nuovo «Dettaglio neve» nelle Avanzate della scheda Neve dell'oggetto: Auto (Simpler decide in base alla grandezza), Alto (sulla forma, più fine, per quello che si vede da vicino), Basso (dall'alto, leggero). Oltre il limite di vertici Simpler alleggerisce prima i modelli più lontani dall'inquadratura. Il «Dettaglio del mantello» del pannello vale per tutti.
+- Pioggia e neve ora coprono anche i decal nel path tracing (strisce, segnaletica): prima restavano asciutti e gialli sopra la neve, perché il loro materiale sta nel decal e non nell'oggetto.
+- Sole: se con la latitudine e il giorno scelti il sole non tramonta mai (sole di mezzanotte) o non sorge mai (notte polare), la scheda Sole lo dice. I preset tengono il luogo e la data: a latitudine 89° in giugno «Notte» e «Tramonto» non possono fare buio e l'ora restava a 24.

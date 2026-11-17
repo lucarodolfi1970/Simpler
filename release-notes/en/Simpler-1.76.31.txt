@@ -1,0 +1,11 @@
+SIMPLER 1.76.31  —  3 November 2026
+===================================
+
+Ecosystem bench on its own, stone «Size», «Recalculate» for stones, fixes.
+
+- Test bench for an ecosystem (20 m or 50 m): now the rest of the scene is hidden and the bench is seen three quarters from above, filling most of the view. A blue box in the view says so: the other elements come back from the eye in the scene panel. Ctrl+Z removes the bench and shows everything again.
+- Stones and debris: under «Quantity» there is «Size», for all the stones together (it multiplies each stone's own). It can be chosen before placing them too. Bigger ones cover the same, so there are fewer.
+- Stones and debris with «Calculate only the framed area»: after moving the camera, the «Recalculate» button bottom left now shows also when the scene has only stones and no ecosystem.
+- Library: with a model already downloaded and also a favourite, the green tick moves to the left of the heart and both show.
+- Fixed: after «Remove the split» of a terrain zone, the part stayed in the scene tree.
+- Fixed: with a coast as long as a whole terrain, the coast map has cells of about 3 m, coarser than the sea grid near the scene; the view and path tracing used it there anyway, and the shore near objects was less precise. Now the map is used only where it is finer than the grid.

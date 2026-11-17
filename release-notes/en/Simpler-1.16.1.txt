@@ -1,0 +1,10 @@
+SIMPLER 1.16.1  —  24 October 2026
+==================================
+
+SKY: CIRRUS, CLOUDS DOWN TO THE HORIZON, SUNRISE AND TWILIGHT
+-------------------------------------------------------------
+- Cirrus: in the Clouds card the "Cirrus" slider. Thin streaks very high up (8–10 km), stretched and bent by the wind, in patches: lit by the sun as it is up there, they are the last clouds to stay pink and orange after sunset. Light (painted on the sky), with or without volumetric clouds, also in the real-time view.
+- Clouds down to the horizon: with volumetric clouds, beyond the end of the 3D layer (about 30 km) the painted clouds continue, lit the same way. Before, the sky stayed empty towards the horizon.
+- Painted clouds get the sunlight at their height: after sunset they stay lit a little longer.
+- Two new ambiences: "Sunrise" (sun just risen, cirrus, light haze) and "Twilight" (sun 3° below the horizon, pink cirrus on a blue-violet sky, first stars). "Sunset" now has cirrus too.
+- Finer altocumulus, in small flakes ("mackerel sky").

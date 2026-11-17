@@ -1,0 +1,10 @@
+SIMPLER 1.75.44  —  1 novembre 2026
+===================================
+
+Video AI: il testo del movimento appartiene al progetto.
+
+- Il testo «Movimento» si salva ora dentro il progetto. Un progetto nuovo parte con il riquadro vuoto, e riaprendo un progetto torna il suo testo. Prima il testo restava lo stesso per tutti i progetti.
+- Anche «Annulla» di «Migliora con l'AI» vale solo nel progetto in cui l'hai usato.
+- Una piccola × nell'angolo del riquadro cancella il testo, e «Annulla» lo riporta.
+- Con un testo lungo il riquadro arriva a circa 12 righe e poi compare la barra di scorrimento verticale.
+- Modello, risoluzione, durata e audio restano invece le tue scelte abituali, uguali per tutti i progetti.

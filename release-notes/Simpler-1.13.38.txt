@@ -1,0 +1,8 @@
+SIMPLER 1.13.38  —  23 ottobre 2026
+===================================
+
+MATERIALI: LE MODIFICHE SU UN MODELLO SCELTO DALL'ALBERO ORA SI VEDONO
+---------------------------------------------------------------------
+- Scegliendo il materiale con il modello intero selezionato (un modello della libreria, un gruppo) e modificandolo in «Solo questo oggetto», Simpler faceva una copia del materiale per il gruppo, che però non ha materiali: la copia non finiva su nessun pezzo («non è su nessun oggetto della scena») e il modello non cambiava.
+- Ora la copia va a tutti i pezzi di quel modello che usano il materiale (es. tutte le foglie della pianta); gli altri modelli con lo stesso materiale restano come sono.
+- Se l'oggetto scelto non usa proprio quel materiale, la modifica va al materiale stesso invece di una copia che nessuno usa.

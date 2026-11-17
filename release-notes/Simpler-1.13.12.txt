@@ -1,0 +1,9 @@
+SIMPLER 1.13.12  —  22 ottobre 2026
+===================================
+
+DISTRIBUZIONI: IL NOME DICE COME SONO STATE FATTE
+-------------------------------------------------
+- Le nuove distribuzioni si chiamano "Distribuzione Pennello 1", "Distribuzione Area 1", "Distribuzione Spaziatura 1"
+  (in inglese "Scatter Brush 1", "Scatter Area 1", "Scatter Spacing 1"), con il numero che conta per tipo. Prima
+  erano tutte "Distribuzione 1, 2, 3".
+- Le distribuzioni già fatte tengono il loro nome; puoi sempre rinominarle dall'albero.

@@ -1,0 +1,5 @@
+SIMPLER 1.25.2  —  25 ottobre 2026
+==================================
+
+- Decal copiate: la copia ora si vede ed è indipendente. Prima veniva messa di lato lungo l'asse X del mondo, cioè fuori dalla superficie, dove non c'era niente su cui proiettarla, e restava legata all'originale come «istanza». Ora la copia va accanto all'originale lungo la propria larghezza, sulla stessa superficie, ha i suoi valori e il suo materiale, e viene proiettata sul pezzo che ha sotto.
+- Copiando un modello che ha delle decal, anche le decal copiate vengono proiettate sulla copia (prima guardavano ancora il pezzo originale).

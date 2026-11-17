@@ -1,0 +1,12 @@
+SIMPLER 1.2.7  —  20 October 2026
+=================================
+
+- POLY HAVEN 3D MODELS: new tab with the photorealistic models from polyhaven.com (CC0, free for commercial use
+  too, more than 500), in folders taken from Poly Haven's categories (e.g. Furniture / Seating), with thumbnails and
+  search across all folders. Click = in the middle of the view; drag it into the view = its base goes onto the
+  surface where you drop it. It is downloaded on first use (Poly Haven's original .blend file, with materials made
+  for Cycles and 2K textures) and then stays on disk (%LOCALAPPDATA%\Simpler\library\polyhaven\models) for all
+  projects. The insertion can be undone with Ctrl+Z. If you like it, right click > "Save to library" and you'll
+  find it in your 3D models, in the folder you want.
+- LIBRARY TABS renamed and reordered: Lights · 3D models · Poly Haven 3D models · Materials ·
+  Poly Haven materials (formerly "Poly Haven textures") · Environments · Scenes.

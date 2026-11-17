@@ -1,0 +1,4 @@
+SIMPLER 1.33.1  —  25 ottobre 2026
+==================================
+
+- Le copie (istanze) di un oggetto con lo stesso genitore non spariscono più dalla vista in tempo reale per i clic: dopo una preparazione completa della vista (riapertura, alcuni cambi che la rifanno da capo) si vedevano ma non si potevano cliccare né spostare nella vista, e non si accendevano al tramonto (per esempio le sfere emissive dentro i fari di un'auto). L'esportazione di Blender le fondeva in un unico blocco «istanziato» appeso al genitore, e i singoli oggetti scomparivano per la vista. Ora la vista le riconosce dalla posizione e le separa di nuovo: si cliccano, si spostano, si accendono e si spengono come gli altri oggetti. Le serie molto grandi (oltre 500 copie dello stesso oggetto) restano fuse per non appesantire la vista.

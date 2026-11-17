@@ -1,0 +1,8 @@
+SIMPLER 1.47.0  —  26 October 2026
+==================================
+
+- Snow, step 2: the snow mantle with a real thickness. New «Thickness» slider (0–50 cm, 10 by default) in the Snow card. A real layer of snow settles on ground, roofs, ledges and cars, rounded at the edges (the roof of a car, the edge of a roof) and leaning against walls. It follows the snow patches, does not go under canopies, cars and trees and leaves «Always dry» objects alone. At 0 only the white on the surfaces stays.
+- Grass and trees of distributions stay just white, and so do the parts with holes (leaves, nets).
+- New «No snow mantle» in the object's Advanced (card «Snow», while it snows): no layer on the object, the white stays.
+- The mantle is the same in the real-time view and in the path tracing. It is computed again by itself when the scene or the snow change (red sign «Computing the snow mantle»). It is not saved in the project: it is made again when opening.
+- Snow: the patches no longer show a repeat every 8 metres on a large ground (two scales of the same pattern).

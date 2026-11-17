@@ -1,0 +1,10 @@
+SIMPLER 1.76.2  —  1 November 2026
+==================================
+
+Ecosystems: past the edge of the surface, and no more empty areas in the distance.
+
+- New sliders in the ecosystem panel: «Past the edge» (metres) and «Density past the edge». Pieces can leave the surface they grow on and carry on over the surfaces next to it, for example from the terrain's Lawn into the gravel zone nearby, or onto the ground. No more sharp line where the mesh ends.
+- The band is not regular: in some places it reaches farther, in others hardly at all, and the pieces thin out outwards in tufts. The same seed always gives the same result; «Another arrangement» changes it.
+- Pieces past the edge only land on surfaces facing up and near the height of the edge: never on a roof, never down a drop.
+- «Save these values in the ecosystem» stores them in the library: every time you place it, the ecosystem goes past the edge like this.
+- In the distance: with «Compute only the framed area», a very dense ecosystem (grass) on a large terrain is no longer cut off beyond a few hundred metres, which left hills with no grass in the background. Now, past a certain distance, the pieces thin out and get a little bigger: from afar the ground stays just as covered, with the same number of pieces as before.

@@ -1,0 +1,11 @@
+SIMPLER 1.4.10  —  21 ottobre 2026
+==================================
+
+NOVITÀ
+------
+- ORDINE DELLE RIGHE NELL'ALBERO: trascinando una riga sul bordo alto o basso di un'altra (linea blu), l'oggetto va
+  esattamente lì, prima o dopo quella riga, anche allo stesso livello (prima l'albero era sempre in ordine
+  alfabetico e lo spostamento tra due righe dello stesso livello non faceva nulla). L'ordine viene salvato nel
+  progetto e si annulla con Ctrl+Z. Un originale porta con sé le sue istanze; lasciando qualcosa sulla riga
+  "N istanze" va subito dopo l'originale. Al centro della riga (bordo arancione) resta "metti dentro il gruppo".
+  Gli oggetti che non hai mai spostato restano in ordine alfabetico, dopo quelli ordinati a mano.

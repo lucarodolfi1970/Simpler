@@ -1,0 +1,24 @@
+SIMPLER 1.13.13  —  22 ottobre 2026
+===================================
+
+VETRI DEI MODELLI IMPORTATI
+---------------------------
+- Il vetro che restava uno specchio con la trasparenza al 100%: alcuni materiali di finestre importati hanno una
+  mappa "metalness" collegata al metallo. Nello shader di Blender il metallo vince sulla
+  trasparenza, quindi il vetro restava uno specchio. Ora, quando accendi la trasparenza, il metallo viene tolto da
+  solo (lo dice la barra di stato) e diventa un vetro.
+- Nuovo pulsante "Rendi vetro pulito" nella sezione Vetro e trasparenza: toglie le mappe di colore, ruvidezza, rilievo,
+  metallo e opacità. Spesso questi materiali hanno una texture di colore scura, una di ruvidezza "sporca" e una normal map a
+  macchie, fatte per il vecchio trucco della finestra semi-invisibile: tenute, il vetro è scuro e smerigliato; con
+  il pulsante diventa limpido. Ctrl+Z per tornare indietro.
+- Anche "È acqua" ora toglie le mappe di metallo.
+- Il puntinato delle finestre nel path tracing veniva da quel materiale originale (trasparenza al 43%, metallo e
+  ruvidezza da mappe): con il vetro vero o pulito sparisce.
+
+VISTA IN TEMPO REALE
+--------------------
+- Mentre ti muovi, i modelli delle distribuzioni usano versioni più leggere e tornano dettagliati appena ti fermi:
+  il movimento resta fluido anche con molti edifici grandi (ognuno dei tuoi ha circa 2 milioni di triangoli).
+- Le ombre disegnano i modelli una seconda volta: ora contano nel budget dei triangoli.
+- Nuova barra di scala in basso a destra: una linea con la sua lunghezza (mm, cm, m o km) alla distanza di quello che
+  c'è al centro della vista, come riferimento delle dimensioni. Cambia con lo zoom.

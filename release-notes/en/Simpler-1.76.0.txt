@@ -1,0 +1,13 @@
+SIMPLER 1.76.0  —  1 November 2026
+==================================
+
+Terrain: natural landscapes generated in Simpler, ready for materials.
+
+- New «Terrain» section in the Landscape panel. Pick a type (Plain, Hills, Valley, Mountains, Dunes) and Simpler creates a terrain around the model. The relief is not random noise: it comes from an erosion simulation (rivers carve and branch the valleys, slopes soften, debris settles on the valley floors), then a finer erosion and rock detail up high. The result has ridges, valleys and channels that make sense.
+- The terrain is split into zones, each a separate mesh with its own material: Lawn, Soil and gravel (along channels, in deposits and at the foot of walls), Rock (on steep slopes, sooner up high and later down low), Snow (high up, in hollows, not on walls), Level ground (the level area around the model, at height 0) and Sand (dunes). The borders between zones are soft, irregular curves with no steps; the meshes meet without gaps.
+- Materials: the Poly Haven textures suited to each zone download on their own in the background and go on the zones as soon as they are ready (box projection, «Break the repetition» on: large surfaces with no visible tiling). A zone can be selected and given any other material, like any object.
+- «Another version» creates another variant of the same type. Size and Relief can be adjusted; Snow up high with its height; Level ground with radius and «Centre on the selection».
+- «From a height map…»: a greyscale image (16-bit PNG, TIFF, EXR or 16-bit RAW) becomes the terrain, with the same zones; erosion can be added in Advanced.
+- In Advanced: Erosion, Age, Direction (dunes and valley), Rock slope, Gravel and soil, Irregular borders, Level ground blend, Edge blended to the ground, Detail (normal, high, maximum).
+- The terrain's edge goes down to its lowest height and the Environment ground is placed there: no part of the terrain is hidden and there is no step where they meet.
+- Every change can be undone with Ctrl+Z and is saved with the project. Mountains takes about half a minute, the others less; progress is always shown.

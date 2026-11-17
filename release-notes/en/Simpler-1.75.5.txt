@@ -1,0 +1,10 @@
+SIMPLER 1.75.5  —  31 October 2026
+==================================
+
+Snow on the chosen piece, and a smooth real-time view with glass.
+
+- «No snow mantle» turned off on one piece (the Qashqai's paint), but the snow did not come.
+  - Cause: the switch had been turned on for the whole model. So it was written on the model, on its groups and on every piece. Turned off on one piece, it stayed on for the groups above, which still decided for that piece, while the panel showed «off».
+  - Now turning it off on a piece turns it off on the groups above too; the other pieces stay as they are. The same for «No rain», «No snow» and «Gives no shelter». Undo brings everything back.
+  - In projects already saved: turn «No snow mantle» on and off again on the material, and the snow comes.
+- Real-time view with glass (Qashqai): the real cause of the skipped frames is in the 1.75.3 log. The view's engine itself marks the double-sided glass as «to be made again» at every frame (15,000 times in 10 seconds). Now those marks no longer count.

@@ -1,0 +1,9 @@
+SIMPLER 1.19.0  —  24 October 2026
+==================================
+
+- AI panel: with a working OpenAI key, the sparkles button opens the "Artificial intelligence" panel on the right. From the top: key status (check again, delete), tokens used (last image and total), the engine (model and three quality levels), the image to process, the function and its options, "Run".
+- Image to process: "The view" exactly as you see it (clay, real-time or path tracing, without gizmos and in the format's proportion), "Last render", or an image from file or opened in Simpler.
+- Seven functions: Render → Photorealism, Enhance, Day night and seasons, Add people, Furnish, Change the shot, Replace. The most used options are in sight, the rest in the "Advanced" boxes.
+- Replace: "Run" lets you draw a rectangle on the image around what you want to remove or change (with a description or a photo of an object); "Only the chosen area" keeps the rest identical.
+- The result opens in a resizable, always-on-top window: before/after comparison with a draggable line, wheel zoom, Save, Copy, Fit, 100% and "Process with AI" to keep working on the result. Every result is also kept in %LOCALAPPDATA%\Simpler\ai.
+- The final render now opens in the same window (with "Open outside" for the Windows viewer) and can be sent to the AI with one click. EXR files open as before.

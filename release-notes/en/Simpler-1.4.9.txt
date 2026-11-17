@@ -1,0 +1,12 @@
+SIMPLER 1.4.9  —  21 October 2026
+=================================
+
+FIXES
+-----
+- GIZMO AT THE BASE: models imported with "Model origin: Base" really do have their origin at the centre of the
+  base (checked also with rotated and scaled objects, like those exported from 3ds Max), but the gizmo still went to
+  "3D centre", which was the starting position. Now the gizmo's starting position is "Base (feet)" and
+  Simpler remembers the one you choose in the view bar (Base, 3D centre, Origin) in later sessions too.
+  With "Origin" the gizmo goes exactly to the origin chosen at import.
+- ALWAYS-ON-TOP WINDOWS (texture viewer, library import, dialog boxes): when closed, focus went back to another
+  program instead of Simpler. Now it always returns to the main window.

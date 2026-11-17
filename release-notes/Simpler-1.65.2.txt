@@ -1,0 +1,5 @@
+SIMPLER 1.65.2  —  28 ottobre 2026
+==================================
+
+- «Fin dove arrivano» delle gocce funziona davvero: in lontananza la pioggia diventa un velo sempre più fitto, come nella realtà. Prima oltre circa 40 m non si aggiungeva quasi nulla, e 150 m sembravano 40.
+- Le gocce sono sempre fatte d'acqua. «Trasparenza delle gocce» va dall'acqua che diffonde la luce (scie più visibili) all'acqua limpida, che mostra ciò che c'è dietro e i riflessi. Prima, con una trasparenza bassa, le gocce vicine alla camera sembravano palline bianche.

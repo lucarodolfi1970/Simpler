@@ -1,0 +1,8 @@
+SIMPLER 1.76.48  —  4 novembre 2026
+===================================
+
+Velocità: niente più lavori rifatti dopo la riapertura e la vista aggiornata in un attimo.
+
+- La forma del terreno (erosione compresa) è salvata anche su disco: dopo aver riaperto la scena la prima modifica non rifà più l'erosione (15 s su una montagna di 3 km).
+- Le versioni semplificate di alberi e pietre grandi (usate per capire cosa nasconde la vista) sono salvate su disco: dopo la riapertura gli ecosistemi non le preparano di nuovo.
+- Dopo una modifica della forma (scultura, parametri del terreno) la vista riceve solo la nuova geometria: materiali e texture li ha già. Prima un secondo Blender riscriveva tutte le texture del terreno (18 s); ora circa un secondo.

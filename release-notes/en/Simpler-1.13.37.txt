@@ -1,0 +1,9 @@
+SIMPLER 1.13.37  —  23 October 2026
+===================================
+
+FIX MATERIALS: VALUES IN PERCENT
+--------------------------------
+- In the changes, roughness, metal, specular, transparency, coat, brightness and saturation are written in percent, as in the material editor: Set 100 = 100%, Add 20 = +20 points. The unit is shown next to the value (%, ×, nits).
+- Multiply stays a factor: 1.5 = one and a half times, 0.5 = half.
+- The list of materials also shows roughness, metal and transparency in percent.
+- The drop-down menus have the text on the left and the arrow on the right.

@@ -1,0 +1,12 @@
+SIMPLER 1.35.2  —  25 October 2026
+==================================
+
+A check of materials and maps: three errors fixed.
+
+- Maps with the wrong name after inserting a model. When a model brings an image with a name the scene already has (targa.jpg), Blender renames it (targa.jpg.001), but the Simpler material's settings still said targa.jpg. So:
+  · at the first change the material was rebuilt with the other image (another car's plate, or none);
+  · the thumbnail and the texture window said «Texture not available (404)»;
+  · saving the material to the library copied the wrong image.
+  Now every material checks the names of its maps by itself and puts them back on the image it really uses. Projects already saved are fixed too, when opened.
+- «Restore original» on models taken from the library. Saving a model to the library did not save the hidden originals of its materials converted to Simpler: a model taken from the library could not go back to its imported materials, or found the original of another model with the same name (e.g. «Glass»). Now the originals are saved with the model and linked again when it is inserted. For models saved before, the wrong link is removed (Restore goes back to the base values); saving them to the library again brings the original back.
+- Sharing identical materials between copies of the same model compares the map names already fixed.

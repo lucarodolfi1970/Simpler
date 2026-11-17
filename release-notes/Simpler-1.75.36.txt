@@ -1,0 +1,6 @@
+SIMPLER 1.75.36  —  1 novembre 2026
+===================================
+
+Video AI: le miniature dei fotogrammi si vedono intere.
+
+- Le immagini di «Inizio» e «Fine» nel pannello erano ritagliate per riempire il riquadro. Ora si vedono tutte, con le loro proporzioni, e dove servono compaiono bande nere orizzontali o verticali. Il riquadro resta della stessa misura.

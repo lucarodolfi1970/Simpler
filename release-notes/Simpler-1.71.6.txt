@@ -1,0 +1,6 @@
+SIMPLER 1.71.6  —  30 ottobre 2026
+==================================
+
+- Albero della scena, trascinamento nelle liste lunghe: quando porti una riga verso il bordo in alto o in basso dell'albero, la lista scorre da sola. Più ti avvicini al bordo, più scorre veloce, così puoi rilasciare la riga nel punto giusto.
+- Più righe insieme: selezionale con Ctrl + clic (o Maiusc + clic per un intervallo), poi trascinane una. Si spostano tutte: dentro un gruppo, prima o dopo un'altra riga, o fuori da tutti i gruppi. Se tra le righe c'è un gruppo con dentro altre righe selezionate, quelle seguono il loro gruppo.
+- Un clic senza trascinare su una riga di una selezione multipla seleziona solo quella riga, come prima. La selezione resta finché non rilasci, così puoi trascinarla tutta.

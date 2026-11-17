@@ -1,0 +1,8 @@
+SIMPLER 1.71.1  —  30 October 2026
+==================================
+
+- Look (LUT) with previews: the menu shows each look as a thumbnail of your framing with that look applied, two per row, with the name under it. You can see at once what each one is like. The thumbnails are made in half a second for all 14 Simpler looks, then stay ready.
+- Favourites with a right click on a look: «Add to favourites» or «Remove from favourites». The clickable heart is gone; the thumbnails of the favourites keep a small black heart as a mark, as in the library. The «Look (LUT)» folder of the Favourites also shows the thumbnails of the framing.
+- The search looks only in the names of the looks: before, «p» found every look because the group is called «Simpler».
+- Only Simpler's looks remain, plus the ones you import (.cube, .zip, folders). No third-party collection.
+- Imported looks are read only once: the program keeps a fast copy next to the file, so the previews arrive at once even with many looks.

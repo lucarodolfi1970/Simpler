@@ -1,0 +1,4 @@
+SIMPLER 1.23.2  —  24 ottobre 2026
+==================================
+
+- Correggi materiali dei modelli: il passo 4 (copia di sicurezza, avanzamento, «Chiudi» e «Applica le modifiche») è fisso in fondo alla finestra; quando la finestra arriva all'altezza dello schermo scorrono i passi 1–3. Così i pulsanti restano sempre visibili, anche aggiungendo molte modifiche.

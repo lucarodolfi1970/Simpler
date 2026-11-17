@@ -1,0 +1,4 @@
+SIMPLER 1.23.4  —  24 October 2026
+==================================
+
+- Top bar: the two buttons with a menu always show icon, name and triangle, like the other drop-downs: "Import/Fix ▾" and "Open ▾". The other buttons hide their name when the window is narrow, as before.

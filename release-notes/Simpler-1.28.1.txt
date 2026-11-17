@@ -1,0 +1,5 @@
+SIMPLER 1.28.1  —  25 ottobre 2026
+==================================
+
+- «Converti in materiale Simpler» non perde più le texture. I materiali importati (per esempio da un GLB) che moltiplicano la texture per i colori dei vertici diventavano bianchi: la lettura si fermava al primo nodo sconosciuto e perdeva anche i canali leggibili. Ora ogni canale (colore, rugosità, metallo, normale, emissione, opacità, displacement) è letto per conto suo: la conversione tiene tutte le mappe che si possono leggere e lascia fuori solo ciò che l'editor non sa rappresentare (i colori dei vertici).
+- Annulla dopo una modifica di materiale: la vista in tempo reale ora mostra di nuovo il materiale com'era (prima restava quello modificato, per esempio bianco dopo la conversione, anche se l'annullamento era avvenuto).

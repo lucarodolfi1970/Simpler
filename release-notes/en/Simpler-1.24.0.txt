@@ -1,0 +1,6 @@
+SIMPLER 1.24.0  —  24 October 2026
+==================================
+
+- Library windows (Import models into the library, Fix model materials, Statistics and clean-up): while one is open, or is working in the background after being closed, the rest of Simpler is on hold as during long operations (panels, tree, library, selection in the view).
+- A click or a key on the rest of Simpler shows a message: with the window open it says to close it and brings it back to the front; with the job in the background it asks whether you want to see the progress.
+- Closing Simpler at those moments shows the same message instead of "Simpler is still working".

@@ -1,0 +1,4 @@
+SIMPLER 1.63.4  —  28 October 2026
+==================================
+
+- «Only what the camera sees» is now called «Compute only the framed area», in the messages and the ecosystem panel too.

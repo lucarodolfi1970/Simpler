@@ -1,0 +1,10 @@
+SIMPLER 1.76.2  —  1 novembre 2026
+==================================
+
+Ecosistemi: oltre il bordo della superficie, e niente più zone vuote in lontananza.
+
+- Nuovi cursori nel pannello dell'ecosistema: «Oltre il bordo» (metri) e «Densità oltre il bordo». I pezzi possono uscire dalla superficie su cui crescono e continuare sulle superfici accanto, per esempio dal Prato del terreno nella zona di ghiaia vicina, o sul suolo. Niente più linea netta dove finisce la mesh.
+- La fascia non è regolare: in alcuni punti entra di più e in altri quasi niente, e i pezzi si diradano verso l'esterno a ciuffi. Lo stesso seme dà sempre lo stesso risultato; «Altra disposizione» lo cambia.
+- I pezzi fuori dal bordo cadono solo su superfici rivolte verso l'alto e vicine alla quota del bordo: mai su un tetto, mai giù da un salto.
+- «Salva questi valori nell'ecosistema» li memorizza nella libreria: ogni volta che lo metti, l'ecosistema esce dal bordo così.
+- In lontananza: con «Calcola solo l'area inquadrata», un ecosistema fittissimo (erba) su un terreno grande non viene più tagliato oltre qualche centinaio di metri, cosa che lasciava colline senza erba sullo sfondo. Ora oltre una certa distanza i pezzi si diradano e diventano un po' più grandi: da lontano il terreno resta coperto allo stesso modo, con lo stesso numero di pezzi di prima.

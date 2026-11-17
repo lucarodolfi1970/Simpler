@@ -1,0 +1,4 @@
+SIMPLER 1.23.3  —  24 ottobre 2026
+==================================
+
+- Barra in alto: i pulsanti Importa e Apri hanno un piccolo triangolo pieno a destra dell'icona (come in Office ed Esplora risorse) al posto della freccina sovrapposta all'icona.

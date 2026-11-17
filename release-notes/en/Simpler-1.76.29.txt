@@ -1,0 +1,6 @@
+SIMPLER 1.76.29  —  3 November 2026
+===================================
+
+«Advanced» no longer looks like a button.
+
+- The «Advanced» bar is now a medium blue with light azure text: the azure of the previous version was too similar to the main buttons (such as «Place the stones»), which are light with dark text.

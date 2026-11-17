@@ -1,0 +1,14 @@
+SIMPLER 1.76.37  —  4 novembre 2026
+===================================
+
+Cursori che non facevano nulla: trovati con un controllo automatico e corretti.
+
+- Nuovo controllo automatico: per ogni cursore di Oceano e Costa fa due piccole immagini in path tracing, al minimo e al massimo, e segnala quelli che non cambiano niente. Ne aveva trovati 6 su 17:
+  - «Acqua mossa sul bordo» non faceva nulla con un terreno nella scena: la forma della riva era abbassata due volte del livello del mare. Corretto. Il dettaglio in più non dipende più dalla camera (prima la seguiva, e girando la vista non c'era); su una costa lunga si taglia meno fine, al massimo 400.000 facce in più.
+  - «Direzione» e «Smorzamento» non facevano nulla con «Allineamento» a 0% (le onde di Blender lì non hanno direzione). Ora le onde seguono sempre un po' il vento.
+  - «Schiuma» al 100% dava quasi la stessa schiuma dello 0%: ora in alto arriva a molta più schiuma (fino al 35%, quello dei preset, resta quasi uguale).
+  - «Picchi» tolto dal pannello: Blender lo ignora (controllato: la superficie del mare è identica da 0 a 100%).
+  - «Distanza del vento sul mare» funziona: compare solo con gli spettri che la usano.
+- Ecosistemi, «Più rado in lontananza»: il diradamento comincia a 25 m dalla camera. Prima partiva dal punto attorno a cui gira la camera, e con quel punto lontano (una montagna) quasi tutto ciò che si vedeva era più vicino e non si diradava niente: 0% e 100% uguali. Un controllo automatico ora lo verifica.
+- Mare intorno a un oggetto in acqua (una sfera, uno scoglio, un pilone): la terra accanto ad acqua profonda prende la profondità di quell'acqua. Prima, fra il punto «a terra» e quello in acqua il mare risultava basso e la vista lo faceva sparire, mostrando il fondo asciutto: il «terreno fantasma».
+- Corretto: dopo «Togli il mare» e Ctrl+Z il mare tornava senza «Acqua mossa sul bordo» (la forma della riva non veniva rifatta). Trovato dal controllo automatico.

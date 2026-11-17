@@ -1,0 +1,12 @@
+SIMPLER 1.4.9  —  21 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- GIZMO ALLA BASE: i modelli importati con "Origine del modello: Base" hanno davvero l'origine al centro della
+  base (verificato anche con oggetti ruotati e scalati, come quelli esportati da 3ds Max), ma il gizmo si metteva
+  comunque al "Centro 3D", che era la posizione di partenza. Ora la posizione di partenza del gizmo è "Base (piedi)"
+  e Simpler ricorda quella che scegli nella barra della vista (Base, Centro 3D, Origine) anche alle aperture
+  successive. Con "Origine" il gizmo va esattamente nell'origine scelta all'importazione.
+- FINESTRE SEMPRE IN PRIMO PIANO (visualizzatore delle texture, importazione nella libreria, finestre di dialogo):
+  chiudendole il focus tornava a un altro programma invece che a Simpler. Ora torna sempre alla finestra principale.

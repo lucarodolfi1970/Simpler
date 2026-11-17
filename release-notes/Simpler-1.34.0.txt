@@ -1,0 +1,5 @@
+SIMPLER 1.34.0  —  25 ottobre 2026
+==================================
+
+- Scatter a intervalli (Spaziatura), modalità «Per distanza»: nuovo parametro «Distanza casuale». A ogni intervallo si aggiungono a caso da 0 a quei metri, così le file non sono più perfettamente allineate (auto parcheggiate, alberi, lampioni). «Distanza» diventa la distanza minima: non si scende mai sotto, quindi i modelli non si sovrappongono; su una linea chiusa vale anche tra l'ultimo oggetto e il primo. Con lo stesso seme casuale il risultato è sempre lo stesso; «Cambia» ne dà un altro.
+- Luci dentro i modelli degli scatter: le luci «dal tramonto all'alba» ora si accendono e si spengono anche nelle copie distribuite. Prima restavano come erano state salvate nella libreria (un'auto salvata di giorno aveva la luce dell'abitacolo spenta in tutte le copie, mentre quella della targa, sempre accesa, si vedeva). Vale per il path tracing e il render; nella vista in tempo reale le luci delle copie distribuite non vengono disegnate.

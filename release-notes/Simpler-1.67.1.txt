@@ -1,0 +1,6 @@
+SIMPLER 1.67.1  —  28 ottobre 2026
+==================================
+
+- «Sempre asciutto» è diventato due interruttori separati, in Pioggia e neve → Avanzate: «Niente pioggia» e «Niente neve». Per esempio, su vetri e carrozzeria di un'auto puoi lasciare le gocce quando piove e togliere il mantello quando nevica.
+- Gli oggetti che avevano «Sempre asciutto» li hanno accesi tutti e due: nei progetti e nei modelli della libreria non cambia niente finché non li modifichi.
+- Path tracing: «Sempre asciutto» sulle parti di un modello ora vale anche per le copie di una distribuzione. Prima contava solo quello della distribuzione intera.

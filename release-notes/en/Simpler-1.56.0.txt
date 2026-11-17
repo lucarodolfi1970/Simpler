@@ -1,0 +1,5 @@
+SIMPLER 1.56.0  —  27 October 2026
+==================================
+
+- Scene tree, right click: new item «Merge into a single object». On a group, on a model or on several selected objects: all the pieces become a single object, with each material in place, where the first one was. Lights and cameras inside stay, under the merged object. Ctrl+Z puts everything back as it was. Distributions and decals are not merged (a message says so).
+- Import menu: the choice that merges the pieces is now called «Merge the pieces while importing», so as not to confuse it with merging objects already in the scene.

@@ -1,0 +1,24 @@
+SIMPLER 1.11.0  —  21 ottobre 2026
+==================================
+
+- AMBIENTE: nuovo pulsante nella barra in alto (e Risorse ora sta prima di Fotocamera). Usa il cielo fisico di
+  Blender: sole, colore del cielo, nuvole e foschia vengono dalla stessa atmosfera, quindi vanno d'accordo tra
+  loro e tra tempo reale e path tracing.
+  · Preset: Mattino limpido, Pieno giorno, Pomeriggio, Ora d'oro, Tramonto, Nuvoloso, Nebbia, Notte, Studio
+    (anche nella scheda Ambienti della libreria in basso).
+  · Sole: ora, giorno dell'anno, latitudine, nord, intensità e dimensione (ombre più o meno morbide). Colore e
+    forza seguono l'atmosfera: arancio al tramonto, più debole con la foschia o le nuvole.
+  · Cielo: aria, foschia (polvere e umidità), ozono, altitudine e luce del cielo.
+  · Nuvole: copertura, grandezza, morbidezza e "Altre nuvole".
+  · Foschia e nebbia: le cose lontane si perdono nell'aria, fino alla nebbia fitta.
+  · Notte: stelle e luna.
+  · Suolo: prato, terra, cemento, neutro o nessuno, fino all'orizzonte (oggetto «Suolo» nell'albero: può avere
+    anche un altro materiale).
+  · Esposizione automatica, come una macchina fotografica: al tramonto e di notte l'immagine resta leggibile. Si
+    somma all'esposizione delle impostazioni di rendering.
+- SCENA NUOVA: parte all'aperto, in pieno giorno, con il prato fino all'orizzonte e una leggera foschia, invece
+  del pavimento grigio sul fondo nero. I progetti già salvati restano come sono finché non scegli un ambiente.
+- PRESTAZIONI: niente volumi. Il sole è una luce vera (ombre nette senza rumore), le nuvole sono dipinte nel cielo
+  (circa il 10% di tempo in più), la foschia è aggiunta all'immagine (nessun costo nel path tracing). Il cielo
+  della vista in tempo reale lo prepara il Blender delle anteprime in un paio di secondi, senza fermare il resto.
+- Le scene salvate (scheda Scene) e Annulla comprendono anche l'Ambiente.

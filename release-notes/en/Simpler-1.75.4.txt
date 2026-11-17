@@ -1,0 +1,10 @@
+SIMPLER 1.75.4  —  31 October 2026
+==================================
+
+A single orange button to close the sections, and sea caustics computed for the right framing.
+
+- The double-arrow button that closes every section is no longer in each panel: there is a single orange one, in the top bar before the AI button.
+  - It works on the visible panel: it closes all its sections; pressed again, it opens again those that were open.
+  - Off (grey) when the visible panel has no sections to close.
+- Sea caustics in the path tracing view: the area of the bottom was computed with the camera's previous position. After a move, the sun was taken away and the light put on the wrong area, so the water became darker.
+  - Now the camera is put in place before every computation of the water.

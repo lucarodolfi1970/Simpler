@@ -1,0 +1,18 @@
+SIMPLER 1.13.4  —  22 ottobre 2026
+==================================
+
+TIPO DI MATERIALE: ELENCO A DISCESA
+-----------------------------------
+- "Tipo" ora è un elenco a discesa con icona e descrizione: Standard (sfera) · Acqua (goccia azzurra).
+- Tornando a Standard il materiale torna com'era prima dell'acqua: trasparenza, indice di rifrazione, ruvidezza e
+  metallo di prima (le altre modifiche restano). Prima restava trasparente come l'acqua.
+- La sfera di anteprima si aggiorna quando cambi tipo (prima restava quella vecchia).
+
+BUG CORRETTI
+------------
+- ACQUA CHE DIVENTA BIANCA/GRIGIA alzando le onde: onde di 50 cm larghe 60 cm sono punte, non onde, e l'acqua
+  diventava uno specchio grigio del cielo; su superfici enormi (il suolo è 4 km) la geometria non riesce nemmeno a
+  disegnare onde così piccole. Ora l'altezza vera è al massimo un quinto della dimensione e cala sulle superfici
+  troppo grandi; il pannello dice a quanto è stata ridotta. Per onde più alte aumenta anche la dimensione.
+- Trascinando un materiale della libreria su un oggetto, l'editor del materiale aperto su quell'oggetto passa al
+  materiale nuovo (prima restava sul vecchio e sembrava che non fosse cambiato nulla).

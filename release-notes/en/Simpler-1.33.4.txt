@@ -1,0 +1,5 @@
+SIMPLER 1.33.4  —  25 October 2026
+==================================
+
+- «Base» gizmo of a model taken from the library: when the model was selected before the view had its shape (for example the second copy of a car dropped near the camera), the gizmo went to the model's origin, half a metre under the floor for the Audi, and stayed there. Now the view puts it back in the right place as soon as the model arrives.
+- Licenses and credits: the list of recommended Sketchfab models is removed.

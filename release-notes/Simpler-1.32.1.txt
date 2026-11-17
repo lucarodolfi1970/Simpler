@@ -1,0 +1,5 @@
+SIMPLER 1.32.1  —  25 ottobre 2026
+==================================
+
+- Mappatura UV uguale nella vista in tempo reale e nel path tracing: «Sposta X / Y» spostavano la texture di quantità diverse nei due (nel path tracing di «spostamento» ripetizioni, nella vista di «spostamento × scala»), così una targa sistemata al millimetro nella vista usciva spostata nel render. Ora lo spostamento è sempre una frazione del quadrato UV del modello, uguale nei due, qualunque sia la scala; anche con scale non intere la vista resta allineata in verticale. Nei materiali già fatti con uno spostamento il render ora corrisponde a quello che si vede nella vista.
+- Cubo nuovo: ogni faccia ha tutta l'immagine, dritta guardandola da fuori. Una texture (una targa, un cartello, un quadro) su un cubo o su un piano è subito distesa sulla faccia con le sue proporzioni, senza scala e spostamenti da calcolare. I cubi già nella scena tengono la loro mappatura: per averla nuova va inserito un cubo nuovo.

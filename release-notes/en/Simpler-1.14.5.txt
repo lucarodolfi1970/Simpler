@@ -1,0 +1,6 @@
+SIMPLER 1.14.5  —  24 October 2026
+==================================
+
+OPACITY DIAGNOSTICS
+-------------------
+- With diag.on, besides diag.exr a diag_alpha.blend is saved: the pieces that use an opacity map (at most 12, selected ones first) with materials and textures, to reproduce elsewhere the dots that 1.14.4 did not remove.

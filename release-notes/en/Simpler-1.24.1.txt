@@ -1,0 +1,4 @@
+SIMPLER 1.24.1  —  25 October 2026
+==================================
+
+- Path tracing: the view no longer stops at a pass (e.g. 2/5) until you switch application. The 3D view now keeps drawing and updating even when Windows considers it covered or in the background.

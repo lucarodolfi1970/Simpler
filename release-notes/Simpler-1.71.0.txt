@@ -1,0 +1,19 @@
+SIMPLER 1.71.0  —  29 ottobre 2026
+==================================
+
+Effetti della fotocamera.
+
+- Nella card «Colore ed esposizione» del pannello Render ci sono ora Contrasto, Saturazione, Temperatura (bilanciamento del bianco, 6500 K = neutro) e Tinta (verde ↔ magenta).
+- Look (LUT): un menu con 14 look di Simpler, tra cui Pellicola calda e fredda, Teal & orange, Cinematografico, Architettura pulita, Luce dorata, Notte blu, Sbiadito, Vintage, Istantanea e alcuni bianco e nero. Sotto c'è l'Intensità del look, da 0 a 100%.
+  - Puoi importare i tuoi look: file .cube, archivi .zip o intere cartelle. Ogni archivio o cartella diventa un gruppo. La ricerca per nome aiuta quando sono centinaia.
+  - Il cuore nero accanto a un look lo mette tra i preferiti, in cima al menu.
+  - Nella libreria, in Preferiti, c'è la nuova cartella «Look (LUT)»: è nera con l'icona gialla, al contrario delle altre. Le cartelle nere saranno quelle degli effetti. Ogni look vi compare con un'anteprima dei suoi colori; un clic lo applica alla fotocamera.
+- Nelle Avanzate della stessa card: Bagliore, Vignettatura, Aberrazione cromatica, Grana (con la sua dimensione) e Nitidezza. Grana e un po' di Nitidezza danno un effetto «crispy», nitido e materico. Nelle stesse Avanzate è rimasto il Tono (AgX).
+- Gli effetti si applicano sull'immagine finita, come «Schiarisci ombre»: non serve ricalcolare. Valgono per la vista in tempo reale (mentre trascini il cursore), per il path tracing e per il render finale, con lo stesso risultato. Tutti a zero non costano nulla.
+- Le dimensioni seguono l'inquadratura e non i pixel: bagliore, grana, vignettatura e aberrazione restano uguali nella vista e in un render 4K.
+- I look sono salvati nel progetto e nelle viste. Un look importato che manca su un altro computer viene semplicemente ignorato.
+
+Sporco:
+- Nuovo pulsante «Seme casuale»: ogni clic sposta le macchie in un punto diverso dello sporco, sia in tempo reale sia nel path tracing. Ctrl+Z torna alla distribuzione precedente.
+
+Raccolta gratuita di LUT: la licenza, Creative Commons Attribution secondo tre articoli, non l'ho potuta verificare sul sito originale, che non si apre. Per questo non l'ho inclusa nel programma. Puoi scaricarla tu e importarla con «Importa file…» (gli archivi .zip vanno bene).

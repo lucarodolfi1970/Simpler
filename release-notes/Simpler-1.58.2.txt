@@ -1,0 +1,5 @@
+SIMPLER 1.58.2  —  27 ottobre 2026
+==================================
+
+- Ecosistemi «Solo dove guarda la camera»: su un terreno grande fatto di pochi triangoli (il pavimento di Simpler, 4 km in due triangoli) diceva «Troppi pezzi anche solo nell'inquadratura» anche inquadrando un pezzetto: contava i triangoli interi che la camera tocca. Ora conta i pezzi davvero, come li metterebbe, prima di metterli: guardando da vicino in basso pochi pezzi, verso l'orizzonte molti di più (giusto: si vede tanto terreno). Se anche l'inquadratura è troppo, Simpler propone di diradare in lontananza.
+- Ecosistemi: le cartelle, come per i modelli 3D. «Nuova cartella» nella libreria, trascina un ecosistema su una cartella per spostarlo (o tasto destro: Taglia, Sposta in), cartelle dentro cartelle, rinomina ed elimina con il tasto destro. Un ecosistema salvato va nella cartella aperta.

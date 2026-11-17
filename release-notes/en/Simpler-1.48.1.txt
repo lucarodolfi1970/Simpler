@@ -1,0 +1,6 @@
+SIMPLER 1.48.1  —  26 October 2026
+==================================
+
+- Snow: new «Mantle detail» in Advanced (shown with Thickness above zero). Higher = sharper edges on roofs, ledges and cars, but more computing time and more weight in the view; 50% by default, as before.
+- Simpler keeps the mantle within what the scene can carry: never beyond 4 million vertices. Under the slider you see the current mantle (cell size, vertices, seconds of computation), updated at every new computation. An orange warning appears when the detail is high or the mantle is heavy.
+- Test on a 220 m scene with 300 buildings: detail 0% → 58 cm cells, 1 s; 50% → 27 cm, 6 s; 100% → 11 cm, 3.8 million vertices, 25 s.

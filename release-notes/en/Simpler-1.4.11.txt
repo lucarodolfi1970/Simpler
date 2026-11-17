@@ -1,0 +1,10 @@
+SIMPLER 1.4.11  —  21 October 2026
+==================================
+
+FIXES
+-----
+- SAVE TO LIBRARY, MODEL ALREADY THERE: previously, saving an object with the same name in the same folder made
+  Simpler create a second identical model (two tiles with the same name). Now it asks:
+    · Overwrite: the library model is replaced (same tile, new thumbnail);
+    · Save as new: saves it alongside with a new name, e.g. "Maple (2)";
+    · Cancel.

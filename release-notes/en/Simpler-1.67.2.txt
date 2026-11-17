@@ -1,0 +1,6 @@
+SIMPLER 1.67.2  —  28 October 2026
+==================================
+
+- Ecosystems only where the camera looks: new «No pieces behind the models», on by default. Where trees, buildings or rocks already in the scene hide the surface, no pieces are placed; where the surface shows, also between one tree and the next, they are. Models at least 1.5 m high count: grass and stones hide nothing.
+- «No pieces behind the models» and «Sparser in the distance» are now in the ecosystem panel, under «Recalculate from the view», no longer in the Advanced box: they are the two controls that decide how many pieces are needed. The margin around the frame stays in the Advanced box.
+- The memory estimate in the question before placing an ecosystem is the computer's memory (RAM), not the graphics card's.

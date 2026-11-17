@@ -1,0 +1,6 @@
+SIMPLER 1.76.17  —  2 November 2026
+===================================
+
+Clouds: their height stays yours.
+
+- Removed the automatic move of the clouds above the scene (1.76.16): the height of the volumetric clouds is the one you choose, also with the camera inside or above the layer.

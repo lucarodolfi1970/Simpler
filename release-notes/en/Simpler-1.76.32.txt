@@ -1,0 +1,10 @@
+SIMPLER 1.76.32  —  3 November 2026
+===================================
+
+Favourite commands: a heart for every command, to see only the ones you use.
+
+- In the right panel, before every command (also inside «Advanced») there is a small yellow heart: yellow outline and black inside when off, all yellow when on. A click turns it on or off.
+- Base commands have the heart with a black edge and yellow inside: they always stay visible, so no panel ends up empty.
+- In the top bar, between SmartView and the double arrows, the heart button shows only the favourite and base commands. A section with neither disappears, and so do empty «Advanced» boxes and explanation notes. Pressed again, everything shows.
+- Next to it, the presets button leads to the start panel. Under the shortcuts there is the list of presets: «Rookie user» (base commands only) and the ones you saved. You can save the hearts of now, load a preset or deselect all favourites.
+- The hearts apply to every project, on this computer.

@@ -1,0 +1,23 @@
+SIMPLER 1.75.32  —  1 November 2026
+===================================
+
+AI video: a short video between two views of the scene, made by Krea with your key.
+
+- New light-blue button with a clapperboard, right after «Final render»: it opens the AI video panel.
+- Krea key: it is the first item of the panel. You paste it, it is verified and kept encrypted like the OpenAI one. Once saved it cannot be seen again: it can only be deleted and entered again.
+- Two keyframes, «Start» and «End». Each has three commands:
+  - «Use the current view»: renders the view and keeps framing, lights and environment with the keyframe.
+  - «From a saved view…»: starts from one of the saved Scenes.
+  - A click on the picture takes the scene back to that keyframe.
+- «End» also has «Same framing as the start». The camera goes back to the start one, while lights and environment stay as they are now: it is for a light time-lapse.
+- Both keyframes are rendered at the size of the video (1280×720 or 1920×1080), with the render settings of the scene.
+- If the two cameras are far apart (more than 3 m or 35°), Simpler says so: the video may invent parts of the scene.
+- Model and resolution:
+  - the default is the cheapest model, Kling 3.0 at 720p;
+  - you can choose Seedance 2.0 or 1080p;
+  - Simpler asks Krea which models take a first and a last frame; if Krea does not answer it uses its own list.
+- Length from 5 to 10 seconds, with a warning above 8.
+- Motion: optional text. Empty means a slow, clean camera move, or a light time-lapse when the two cameras are the same.
+- The estimated cost updates with every choice. «Create video» is enabled only with both keyframes and asks you to confirm the cost before it starts.
+- The video is made without audio. It is saved in a folder next to the project («name - Video AI») and opens in its own window, looping.
+- «Stop waiting»: Krea still finishes the video, and you can download it later from the panel.

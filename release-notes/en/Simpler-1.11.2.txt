@@ -1,0 +1,18 @@
+SIMPLER 1.11.2  —  21 October 2026
+==================================
+
+- GLASS AND WATER LET THE LIGHT THROUGH: under water and behind glass everything stayed dark (the bottom of a pond
+  black, the shadow of a glass table black). Cycles does not let the direct light of lamps and sun cross a refracting
+  surface: it only arrived by chance, as a caustic, and from the sun practically never. Now, as photorealistic
+  renderers do, glass and water are transparent (with their colour) for the light that falls on them, while to the
+  eye they stay real glass and water: the bottom of the water is lit by the sun, with its shadows. Almost no cost.
+  With "Caustics" on, the real caustics are computed instead (the shortcut switches off, the light is not counted
+  twice). No need to change the materials: it works for every glass and water in the scene, imported ones too.
+- FOG: leaves and other pieces with transparency against the sky became fog-coloured ghosts, and there was a dark
+  line at the horizon. The distance of these points is now computed correctly; the haze is also more precise with
+  thick fog.
+- TOP BAR: in a narrow window the buttons ran out of the bar (Draft/High/Final cut off). Now, when there is no room,
+  the labels of the panel buttons go first (the icons stay, with their tooltip on hover), then those of New/Import/
+  Open/Save, then the project name: all the buttons stay.
+- RELEASE NOTES IN ENGLISH: they are now copied into the folder of the built program too (before, the Italian
+  version showed even with Simpler in English).

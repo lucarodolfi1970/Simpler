@@ -1,0 +1,11 @@
+SIMPLER 1.13.36  —  23 ottobre 2026
+===================================
+
+CORREGGI MATERIALI DEI MODELLI (NUOVO)
+--------------------------------------
+Corregge in un colpo solo i materiali di tanti modelli della libreria personale. Si apre da Importa ▾ «Correggi materiali dei modelli…» oppure con il tasto destro su un modello «Correggi materiali…».
+1. Modelli: scegli singoli modelli, intere cartelle o «Tutta la libreria».
+2. Materiali: «Analizza i materiali» li legge in background (la scena non viene toccata) e li raggruppa: Vetri, Vetri finti (opachi), Vetri con metallo, Metalli, Lucidi (plastiche), Emissivi, Con texture, Semplici. Ogni riga mostra colore, ruvidezza, metallo, trasparenza e le texture che ha (C colore, R ruvidezza, M metallo, N normal, A alfa). I materiali avanzati (nodi che l'editor non sa leggere) sono indicati e lasciati stare.
+3. Modifiche: per ogni parametro Imposta, Moltiplica × o Somma + (ruvidezza, metallo, riflesso, luminosità e saturazione del colore, tinta, trasparenza, IOR, parete sottile, vernice, emissione), oppure togli una texture o la trasparenza alfa. Preset pronti: «Meno plastica» e «Vetri veri». Prima di applicare si vede quanti materiali e modelli cambieranno.
+4. Applica: in background, modello per modello; poi le miniature vengono rifatte. La copia di sicurezza è accesa di default e «Ripristina l'ultima correzione» rimette i modelli com'erano (si tengono le ultime 3 correzioni).
+I modelli già messi nelle scene restano come sono: la correzione vale per la libreria e per i prossimi inserimenti.

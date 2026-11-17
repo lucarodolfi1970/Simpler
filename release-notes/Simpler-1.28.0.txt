@@ -1,0 +1,6 @@
+SIMPLER 1.28.0  —  25 ottobre 2026
+==================================
+
+- Pezzi dei modelli della libreria: ora si può selezionare una parte di un modello (per esempio i muri di un palazzo) e lavorarci come su un pezzo qualsiasi: spostarla, ruotarla, cambiarle il materiale, cancellarla. Nell'albero basta un clic sulla parte; nella vista il primo clic seleziona il modello intero (contorno arancione), un secondo clic sul modello già selezionato seleziona la parte sotto il mouse (contorno azzurro).
+- Il materiale di una parte segue la scelta già presente: «Sostituisci materiale» lo cambia in tutte le copie del modello, «Applica all'oggetto» solo in quella parte.
+- Come funziona: nella vista in tempo reale un modello della libreria è disegnato da un suo prototipo (veloce, ma le parti non esistono una per una). Selezionando una parte il modello si «apre»: le sue parti arrivano nella vista una per una (qualche secondo per i modelli grandi). Quando selezioni altro il modello si richiude e torna al prototipo, con le modifiche fatte.

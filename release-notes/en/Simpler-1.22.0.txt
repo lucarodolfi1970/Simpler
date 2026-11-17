@@ -1,0 +1,11 @@
+SIMPLER 1.22.0  —  24 October 2026
+==================================
+
+- "Generate" button in the row of the material maps, with DeepBump (free, all on your computer):
+  · Normal map → "Normal from the colour map";
+  · Bump and Displacement → "Height from the normal" or "Height from the colour map";
+  · any map up to 2048 px → "Double the resolution".
+  A bar shows the progress; at the end the new map is already in the slot.
+- The generated map is saved next to the original (wood.jpg → wood_normal.png, without overwriting anything); if the original is embedded in the project, the new one is too.
+- The first time, Simpler asks to download DeepBump's components (onnxruntime and imageio, about 40 MB); after that it works offline too.
+- DeepBump (GPL-3.0 licence) is included, with its source code and models, in the tools\deepbump folder.

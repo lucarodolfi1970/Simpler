@@ -1,0 +1,5 @@
+SIMPLER 1.28.4  —  25 ottobre 2026
+==================================
+
+- «Converti in materiale Simpler» sui modelli scansionati (per esempio da Sketchfab): molti GLB hanno materiali «unlit», con la luce già dentro la foto. Blender li importa come un'emissione mescolata a un trasparente, e l'editor non li sapeva leggere: la conversione dava un materiale bianco. Ora la texture diventa il colore del materiale, opaco (rugosità 0,9). Vale anche per i materiali fatti con Diffuse, Emissione o Glossy e per quelli che mescolano un Principled con altro: si legge lo shader principale.
+- Annulla dopo la conversione: la vista in tempo reale torna davvero al materiale originale. La vista teneva in memoria i materiali per nome e il materiale convertito aveva preso il posto dell'originale; ora gli originali del modello restano a parte e tornano con l'annullamento (e con «Ripristina originale»).

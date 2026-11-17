@@ -1,0 +1,4 @@
+SIMPLER 1.63.4  —  28 ottobre 2026
+==================================
+
+- «Solo ciò che vede la camera» ora si chiama «Calcola solo l'area inquadrata», anche nei messaggi e nel pannello degli ecosistemi.

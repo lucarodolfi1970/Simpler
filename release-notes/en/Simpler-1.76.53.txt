@@ -1,0 +1,15 @@
+SIMPLER 1.76.53  —  5 November 2026
+===================================
+
+New "3D relief" card in the terrain: the relief of the rock in different kinds, each with its own picture.
+
+- A new card under "Shape and rock", with pictures of the kinds of relief: Current (the relief as before), Eroded gullies, Fractured wall, Ledged strata, None.
+- Eroded gullies: the wall carved by water, with gullies running down, sharp spurs between them and fine rills.
+- Fractured wall: the wall broken into angular blocks of different sizes, each with its own flat face; the light breaks block by block.
+- Ledged strata: the layers of the rock (the same as "Sculpted rock" and the colour bands) as marked ledges, shelf and step, layer after layer.
+- Sliders: Depth (the old "Rock relief", moved here), Size, Detail, Where. In Advanced: Orientation, for the fractured wall.
+- The sliders change the numbers of the materials without remaking them: under a second, and the 3D view does not reload. Changing the kind remakes the terrain materials once (a few seconds).
+- The relief shows in path tracing and in the final render, as before; the real-time view is not weighed down.
+- A terrain made before stays identical ("Current", same numbers): its materials are not remade when it is opened.
+- A heart on "Rock relief" moves by itself to "Depth" in the new card.
+- New automatic checks: each kind gives a picture different from "Current", the sliders change the picture without remaking the materials, each kind has its picture.

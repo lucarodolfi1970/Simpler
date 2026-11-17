@@ -1,0 +1,9 @@
+SIMPLER 1.3.10  —  21 October 2026
+==================================
+
+FIXES
+-----
+- PREVIEW AFTER "SAVE AS NEW": the material editor's sphere stayed empty, because the editor switched to the new
+  material without requesting its preview. Now the sphere immediately shows the image of the material it was
+  copied from (it is identical) and, more generally, whenever the editor opens a material it doesn't have a
+  preview for yet (new copy, renamed...) it requests one by itself.

@@ -1,0 +1,4 @@
+SIMPLER 1.30.1  —  25 ottobre 2026
+==================================
+
+- «Appoggia» porta su anche un modello affondato nel pavimento (per esempio un'auto importata con le ruote sotto il suolo): cerca la superficie sotto il modello a partire da metà della sua altezza, così trova il pavimento che lo taglia e lo appoggia sopra. Prima partiva dal fondo del modello, già sotto il pavimento, e il pavimento non lo trovava.

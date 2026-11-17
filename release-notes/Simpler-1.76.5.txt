@@ -1,0 +1,10 @@
+SIMPLER 1.76.5  —  2 novembre 2026
+==================================
+
+Sfumatura dei bordi del terreno: rilievo, acqua, volumetrico e vetro.
+
+- Rilievo (displacement): ora si fonde insieme al colore. Prima ogni zona spostava la superficie solo con la propria mappa, e al confine restava un gradino, per esempio i sassi della ghiaia che finivano con una parete netta contro l'erba. Ora i sassi si abbassano e spariscono nell'erba come i colori, e sul confine i due lati spostano la superficie della stessa quantità: niente gradino fra le due mesh.
+- Una zona che si fonde con una zona con rilievo vero riceve anche lei la suddivisione necessaria. Il render costa di più: nella prova circa il 40% in più, perché anche il prato viene suddiviso.
+- Acqua, volumetrico e vetro restano esclusi: la zona tiene il suo materiale con il bordo netto, da entrambi i lati, e le zone vicine non si fondono con lei. Mescolare l'acqua o un vetro con l'erba non avrebbe senso, e una copia del materiale perderebbe onde, corpo dell'acqua e volume.
+- Se trasformi in acqua o in volumetrico il materiale di una zona dal suo pannello, la modifica va al materiale della zona, non alla copia con i bordi.
+- Anche i materiali importati con un modello, che non sono fatti da Simpler, restano con il bordo netto.

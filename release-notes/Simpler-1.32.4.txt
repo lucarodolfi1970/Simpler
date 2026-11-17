@@ -1,0 +1,4 @@
+SIMPLER 1.32.4  —  25 ottobre 2026
+==================================
+
+- I materiali creati prima della 1.32.1 con uno spostamento UV (per esempio una targa centrata con Sposta X) si sistemano da soli all'apertura del progetto: nel path tracing restavano spostati rispetto alla vista in tempo reale (la targa tagliata in due) finché non si toccava un parametro. Ora vengono ricostruiti una volta con il calcolo nuovo e il path tracing mostra quello che si vede in tempo reale.

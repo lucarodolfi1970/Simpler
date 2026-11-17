@@ -1,0 +1,11 @@
+SIMPLER 1.76.31  —  3 novembre 2026
+===================================
+
+Banco per gli ecosistemi da solo, «Grandezza» delle pietre, «Ricalcola» per le pietre, correzioni.
+
+- Banco di prova per un ecosistema (20 m o 50 m): ora tutto il resto della scena viene nascosto e il banco si vede di tre quarti dall'alto, a riempire gran parte della vista. Un riquadro blu nella vista lo ricorda: gli altri elementi si riattivano dall'occhio nel pannello della scena. Ctrl+Z toglie il banco e rimostra tutto.
+- Pietre e detriti: sotto «Quantità» c'è «Grandezza», per tutte le pietre insieme (si moltiplica a quella di ogni pietra). Si può scegliere anche prima di posarle. Più grandi coprono uguale, quindi sono meno.
+- Pietre e detriti con «Calcola solo l'area inquadrata»: spostando la camera, il pulsante «Ricalcola» in basso a sinistra ora appare anche quando nella scena ci sono solo pietre e nessun ecosistema.
+- Libreria: con un modello già scaricato e anche nei preferiti, la spunta verde si sposta a sinistra del cuore e si vedono tutte e due.
+- Corretto: dopo «Elimina la suddivisione» di una zona del terreno, la parte restava nell'albero della scena.
+- Corretto: con una costa lunga come un intero terreno, la mappa della costa ha celle di circa 3 m, più grossolane della griglia del mare vicino alla scena; lì la vista e il path tracing la usavano lo stesso, e la riva vicino agli oggetti veniva meno precisa. Ora la mappa si usa solo dove è più fine della griglia.

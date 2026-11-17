@@ -1,0 +1,18 @@
+SIMPLER 1.13.23  —  22 October 2026
+===================================
+
+MATERIALS: HOW THEY ARE APPLIED
+----------------------------------------------------
+- In the library bar, next to the search, a menu decides what a material dragged into the view does (the choice is
+  remembered):
+  · Apply to object (default): only on the object (the surface) where you drop it.
+  · Replace material: it takes the place of the one under the mouse on every object that uses it.
+  · Apply to selection: it goes on every selected object, wherever you drop it in the view.
+  It works for library materials and for the sphere of the editor (Poly Haven: "to object" only for now).
+
+BUG FIXES
+---------
+- Ground and plane with the same "White": after turning the plane's White into a Displacement, dragging "White" from
+  the library onto the ground changed nothing, because the project reused the White already changed (it was the
+  same material). Now a material taken from the library always comes as it is in the library: if the copy in the
+  project was changed and not saved, a new one is made ("Bianco.001").

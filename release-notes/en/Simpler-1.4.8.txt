@@ -1,0 +1,11 @@
+SIMPLER 1.4.8  —  21 October 2026
+=================================
+
+FIXES
+-----
+- TREE: ORIGINAL AND INSTANCES MOVE TOGETHER. Dragging the original (or the "N instances" row under it) into
+  another group, above or below another row, its instances follow it: they stay grouped under it in the new
+  place too, each in its own position in the scene. A single Ctrl+Z undoes the whole move.
+  Dropping something on the "N instances" row puts it next to the original (same level).
+  Single instances can still be dragged on their own (by opening the "N instances" row): moved elsewhere,
+  an instance appears with its orange dot in the new place.

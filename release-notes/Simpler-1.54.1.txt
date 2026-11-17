@@ -1,0 +1,6 @@
+SIMPLER 1.54.1  —  27 ottobre 2026
+==================================
+
+- Volumetrico, Avanzate: nuovo cursore «Rimbalzi della luce» (da 1 a 32, 4 di partenza). Più rimbalzi rendono l'interno di una nuvola più luminoso e naturale invece che scuro e bluastro; l'anteprima li usa subito, così si vede il risultato (ogni passaggio è più lento). Il rendering finale ne usa sempre almeno 12 (circa il 30% di tempo in più sulla nuvola di prova).
+- Il tipo «Nuvola» è tarato su una vera nuvola a cumulo: densa (Visibilità 25 cm per una nuvola di 6 m), bordi netti (Morbidezza 30%), Sbuffi 60% da 1 m, nessun assorbimento (il grigio di una nuvola è la sua ombra), luce in avanti 60%, Dettaglio 70%.
+- «Occupato · attendi»: il riquadro rosso compare anche mentre il path tracing prepara la scena (geometrie, griglie dei volumi, luci, texture) per più di un istante, perché in quei momenti un comando dovrebbe aspettare. Non compare mentre l'immagine si affina, che si interrompe da sola.

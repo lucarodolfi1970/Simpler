@@ -1,0 +1,9 @@
+SIMPLER 1.13.45  —  23 ottobre 2026
+===================================
+
+IL SUOLO DELL'AMBIENTE È UN MATERIALE SIMPLER
+---------------------------------------------
+- Il materiale del suolo era costruito in un modo che l'editor non sapeva leggere: aprendolo, l'editor mostrava valori di default senza texture e alla prima modifica (per esempio «Rompi la ripetizione») lo ricostruiva bianco. Per questo nel path tracing le piastrelle sparivano, mentre la vista in tempo reale le mostrava ancora.
+- Ora ogni suolo (Piastrelle, Prato, Terra, Cemento, Bianco, Neutro) è un normale materiale Simpler: nell'editor si vedono la sua texture, la ruvidezza e la mappatura, e ogni modifica (compreso Randomize UV) la conserva.
+- Prato, terra e cemento rompono la ripetizione con lo stesso «Rompi la ripetizione» dell'editor (acceso, regolabile); le piastrelle no, perché le fughe devono combaciare.
+- Le scene già aperte con il suolo vecchio: sceglilo di nuovo nell'Ambiente per avere quello nuovo.

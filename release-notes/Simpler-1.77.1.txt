@@ -1,0 +1,12 @@
+SIMPLER 1.77.1  —  6 novembre 2026
+==================================
+
+Nuovo tipo di materiale «Tessuto»: stoffe piene con la peluria, o sottili che lasciano vedere e passare la luce.
+
+- Nell'editor dei materiali, nel menu del tipo, c'è «Tessuto».
+  - Pieno: velluto, lana, feltro, cotone, jeans. Peluria: il velo chiaro e morbido ai bordi delle stoffe.
+  - Sottile: tende, tulle, garza. Trasparenza (quanto si vede attraverso), Più fitto di taglio (guardata di sbieco la stoffa diventa più coprente, come una tenda vera), Luce attraverso (una tenda con il sole dietro si accende).
+  - Avanzate: Morbidezza e Colore della peluria; «Dove c'è peluria», una maschera per averla solo su alcune parti; «Maschera di tinta» con il suo colore, per cambiare il colore di righe o motivi senza rifare la texture.
+  - Passando a Tessuto, se la peluria era a zero parte dal 50%.
+  - Restano i canali che servono a una stoffa: colore, rugosità, sporco, rilievo, opacità e proiezione.
+  - Uguale nella vista in tempo reale e nel path tracing.

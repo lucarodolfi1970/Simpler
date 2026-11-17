@@ -1,0 +1,9 @@
+SIMPLER 1.36.5  —  25 ottobre 2026
+==================================
+
+- Le texture si centrano da sole sull'oggetto:
+  - quando metti una mappa (colore, normal, rugosità…) su un materiale la cui texture non avevi mai spostato, il centro dell'immagine va al centro dell'oggetto selezionato;
+  - quando trascini dalla libreria un materiale con texture su un oggetto, la texture è centrata su quello che l'ha ricevuto.
+- Una texture centrata resta centrata quando cambi scala, stira o rotazione. Se cambi proiezione (UV, Triplanare…) o riferimento (Oggetto, Mondo), il centro viene ritrovato sull'oggetto.
+- Se sposti la texture a mano con «Sposta X/Y», resta dove l'hai messa e non si ricentra più da sola. «Centra sull'oggetto» la riporta al centro e la fa di nuovo seguire.
+- Con più di 50 oggetti che usano lo stesso materiale, e sulle distribuzioni, la texture non viene spostata da sola.

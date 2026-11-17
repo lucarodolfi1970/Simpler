@@ -1,0 +1,8 @@
+SIMPLER 1.76.23  —  3 November 2026
+===================================
+
+Coast without the grey band, levels of detail of the Poly Haven models, stones from Poly Haven.
+
+- Sea: gone is the grey, opaque band that ran along the coast a few metres from the shore. It was not the foam (that is why «Coast foam» at 0% or 200% did not change it): it was where the clear shallow water turns into the deep sea, where half of the water went almost white. Now the clear water and the deep sea blend as they should: from the green of the shallows to the blue, with no veil.
+- Poly Haven 3D models with several levels of detail (LOD0, LOD1… the same shape with more or fewer triangles, all in the same file): Simpler asks which one to use, with the triangles of each, and puts only that one in the scene. Before, all of them came in, one inside the other. For the brush and «Stones and debris» it already suggests a light level.
+- «Stones and debris»: with «Pick the stones from the library» on, a click on a Poly Haven model adds it to the stones too (before, it went into the scene). On the Poly Haven models, right click: «Add to Stones and debris» and «Add to the Distribuisci brush».

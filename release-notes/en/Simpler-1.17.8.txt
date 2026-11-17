@@ -1,0 +1,7 @@
+SIMPLER 1.17.8  —  24 October 2026
+==================================
+
+SKY COLOUR TABLE: PROGRESS IN SIGHT
+-----------------------------------
+- While Simpler prepares the sky colour table in the background (for "Colours from a photo"), its progress shows on the right of the bottom bar: "Sky colour table: 120 of 1584 · about 25 min". At the end a message says the feature is ready.
+- If you close Simpler half way, at the next start the table goes on by itself from where it was; it never runs twice at the same time.

@@ -1,0 +1,9 @@
+SIMPLER 1.76.7  —  2 novembre 2026
+==================================
+
+Le cartelle del progetto restano in ordine.
+
+- Accanto a «X.simpler» Simpler tiene le cartelle del progetto: «X texture» (le immagini copiate con il progetto), «X AI» (le elaborazioni AI) e «X - Video AI» (i fotogrammi dei video).
+- Salvare con nome sopra un altro progetto: Simpler chiede conferma, poi il vecchio progetto (con la sua copia di sicurezza e il salvataggio automatico) e i file delle sue cartelle vanno nel Cestino di Windows, da cui si possono recuperare. Prima i file nuovi si mescolavano ai vecchi, e le elaborazioni AI del vecchio progetto venivano cancellate del tutto. I file che la scena che stai salvando usa ancora restano al loro posto.
+- A ogni salvataggio, le texture e i fotogrammi che il progetto non usa più vanno nel Cestino, ma solo dal salvataggio successivo: la copia di sicurezza «X.simpler1» può averne ancora bisogno. Le cartelle create prima di questa versione non vengono toccate al primo salvataggio.
+- Anche le elaborazioni AI eliminate nell'app vanno nel Cestino al salvataggio, invece di essere cancellate.

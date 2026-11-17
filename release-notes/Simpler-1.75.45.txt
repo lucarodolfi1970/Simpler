@@ -1,0 +1,6 @@
+SIMPLER 1.75.45  —  1 novembre 2026
+===================================
+
+«Salva immagine» non più grigio.
+
+- Senza nulla di selezionato la barra in alto nella vista ingrigisce i comandi che lavorano sull'oggetto (Mondo, Locale, Centro 3D, Appoggia…). «Salva immagine» veniva ingrigito con loro, ma funziona sempre, anche senza selezione: ora resta acceso come «Rettangolo» e «Lazo».

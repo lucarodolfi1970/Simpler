@@ -1,0 +1,8 @@
+SIMPLER 1.38.10  —  25 ottobre 2026
+===================================
+
+- Auto girate al contrario alla riapertura di un progetto: risolto alla radice. Quando un modello viene girato in libreria (Raddrizza, 90°, 180°), Simpler aggiornava le distribuzioni solo del progetto aperto in quel momento, e sommando l'ultima rotazione. I progetti salvati prima si tenevano l'orientamento vecchio: riaprendoli un'auto tornava girata, e girarla ancora spostava solo l'errore.
+  - Ora, a ogni apertura e dopo ogni rotazione in libreria, gli originali delle distribuzioni vengono allineati all'orientamento attuale della libreria, in modo assoluto e non più sommando rotazioni. I pezzi li seguono, nel tempo reale e nel path tracer.
+  - Le copie messe a mano nella scena restano come sono.
+  - Il registro del motore scrive quali modelli sono stati allineati e di quanti gradi.
+- Decal nella vista in tempo reale: se la vista si ricaricava mentre il motore preparava un decal, il decal veniva scartato e non più richiesto. Ora passa al nodo nuovo. Se un decal non si può mostrare, il motivo finisce nel registro dell'app (app.log, righe «view:»).

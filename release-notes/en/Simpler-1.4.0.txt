@@ -1,0 +1,25 @@
+SIMPLER 1.4.0  —  21 October 2026
+=================================
+
+NEW
+---
+- COPY AND PASTE OBJECTS: Ctrl+C copies the selected objects (also from the right-click menu), Ctrl+V opens the
+  "Paste" window where you choose:
+    · INSTANCE: the copies share shape and materials with the original (in Blender: "linked duplicate").
+      Cycles draws them as instances of a single geometry: almost no extra memory even with thousands of
+      copies (trees, chairs, street lamps). Changing the material of one changes them all.
+    · INDEPENDENT COPY: each copy has its own geometry and you can change its materials one by one; it takes up
+      as much memory as the original.
+    · QUANTITY: the pasted copies are placed side by side along the X axis.
+  Ctrl+D is still the quick duplicate (an instance, no questions asked).
+- COPY BY DRAGGING WITH SHIFT: hold Shift and drag the gizmo. The original stays in place (you
+  see its "ghost") and the outline follows the mouse; when you release, Simpler asks for the type (instance or
+  independent copy) and quantity. The first copy goes where you released, the next ones continue at the same
+  distance and in the same direction; dragging a rotation arc arranges the copies in a circle around the centre
+  of the gizmo. Can be undone with Ctrl+Z.
+  WARNING: inverting Snap while dragging is now done with Ctrl (it used to be Shift).
+- GRAPHICS CARD POWER: at startup, on the start screen, the graphics card, its memory and a % rating of how well
+  suited it is to Simpler appear (100% = a card for very large scenes, like an RTX 4090 with 24 GB), with a
+  verdict (excellent, very good, good, adequate, limited). No test: the data comes from the driver in a few
+  milliseconds, in parallel, so startup doesn't slow down. The calculation weighs computing power (cores × clock,
+  ray tracing) at 60% and video memory at 40%. The same rating is in the Resources tab.

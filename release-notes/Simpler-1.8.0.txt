@@ -1,0 +1,29 @@
+SIMPLER 1.8.0  —  21 ottobre 2026
+=================================
+
+DISTRIBUZIONI A PUNTI: PRATI E BOSCHI DA CENTINAIA DI MIGLIAIA DI PEZZI
+----------------------------------------------------------------------
+- Una distribuzione non è più fatta da un oggetto per pezzo, ma da un solo oggetto di punti: ogni punto dice quale
+  modello mostrare e come è posato (posizione, rotazione, scala). Blender li disegna come istanze con Geometry
+  Nodes ("Instance on Points"): stesso risultato nel path tracing e nel render finale.
+- Velocità (misurata senza scheda video):
+  · rifare una distribuzione di 20.000 pezzi: 0,2 s; 50.000: meno di 1 s (prima 1-2 s per 3.000);
+  · annulla e ripeti: istantanei;
+  · l'elenco della scena e l'albero non crescono più con i pezzi: la distribuzione è una riga sola e mostra
+    quanti pezzi ha.
+- Vista in tempo reale: i punti arrivano in blocco, in binario. La vista li disegna con l'instancing e i livelli di
+  dettaglio di prima. In più i pezzi minuscoli sullo schermo (un filo d'erba lontano) non vengono disegnati, e la
+  scheda video resta fluida anche con moltissimi pezzi.
+- Il pennello cerca le superfici con un albero di ricerca (three-mesh-bvh): le pennellate restano veloci anche
+  sopra modelli pesanti.
+- Le distribuzioni dei progetti fatti con le versioni precedenti vengono convertite da sole all'apertura del
+  progetto, con le loro pennellate.
+
+COSA CAMBIA NELL'USO
+--------------------
+- Un clic su un pezzo seleziona la sua distribuzione (il gizmo la sposta tutta). I singoli pezzi non si spostano
+  più a mano: si cambiano con il pennello, Shift per cancellare, e con le regolazioni.
+- Materiali: trascina un materiale su un pezzo e cambia su tutti i pezzi di quel modello, solo sulle superfici
+  che avevano il materiale sotto il mouse (con Shift su tutte le superfici del modello). Le modifiche
+  nell'editor dei materiali si vedono subito anche sulle distribuzioni.
+- Nascondere una distribuzione dall'albero nasconde tutti i suoi pezzi, anche nel path tracing.

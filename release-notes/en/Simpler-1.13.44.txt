@@ -1,0 +1,14 @@
+SIMPLER 1.13.44  —  23 October 2026
+===================================
+
+NEW SCENE
+---------
+- The camera starts higher and looks almost straight ahead: the horizon and the sky show, not only the floor.
+- The default ground is a floor of light tiles (3 × 3 tiles of 60 cm per repetition, slightly glossy) instead of flat white. It is also in the Environment grounds («Tiles»); white is still available.
+
+MATERIALS: TRIPLANAR AND «BREAK THE REPETITION» (RANDOMIZE UV)
+--------------------------------------------------------------
+- In Texture mapping the projection from three directions is now called «Triplanar» (it was Box), with World or Object as reference.
+- New «Break the repetition (Randomize UV)»: the texture is shown in zones, each shifted and turned at random and blended with its neighbours, so on a large floor, lawn or wall the same pattern no longer shows repeated, also with textures that do not tile well to begin with.
+  Settings: zone size (in repetitions), blend between zones, «Turn the zones» (off: only shifted, for wood and stripes). Normal maps are only shifted, never turned (the light stays right).
+  It shows in path tracing and in the final render; the real-time view shows the plain texture. Not for tiles and bricks (the joints would not match).

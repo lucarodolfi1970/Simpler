@@ -1,0 +1,9 @@
+SIMPLER 1.68.2  —  29 October 2026
+==================================
+
+- Textures travel with the project. When saving, the pictures taken from outside folders (Downloads, the desktop, the folder of an imported model) are copied into the «<project name> texture» folder next to the project, and the project uses the copies. You can move or delete the originals and take project and folder to another computer. Each picture is copied only once; Simpler's libraries stay where they are. It is turned off in Settings > Saving > «Copy the textures next to the project».
+- The first time you save a project with models imported from other folders, saving may take longer: their textures are copied. From then on only new pictures are copied.
+- At opening, the textures no longer where they were are looked for by name in the project's folder, the libraries and the folders you pointed to before. Those still missing are listed and Simpler asks for the folder to search, subfolders included.
+- A texture that cannot be found is only unplugged: the material keeps its name, colour and all its settings, and when you find it again it comes back as it was.
+- File menu > «Find missing textures…»: the same check, at any moment.
+- Fixed: textures saved with a path relative to the project were not found again by name when their name was different from the file's.

@@ -1,0 +1,9 @@
+SIMPLER 1.7.3  —  21 October 2026
+=================================
+
+- SCATTERS FROM THE TREE: clicking a scatter ("Scatter 1"…) in the tree immediately opens its Scatter panel on
+  the right, with its models, presences and adjustments: move a slider and the scatter is redone. The brush is
+  active, so you can also keep painting.
+  · Esc, the ✕ of the panel or another tool closes it.
+  · Clicking an object in the tree that is not part of a scatter closes the brush and brings back its
+    properties.

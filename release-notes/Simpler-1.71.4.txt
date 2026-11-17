@@ -1,0 +1,8 @@
+SIMPLER 1.71.4  —  30 ottobre 2026
+==================================
+
+- Sotto l'avanzamento del render finale ora ci sono le informazioni sull'hardware, aggiornate mentre il render procede:
+  - la scheda grafica, con nome, memoria usata su quella totale e percentuale, e una barretta che diventa arancione quando è piena (dal 97%). Ci sono anche quanto lavora (%) e la temperatura;
+  - la memoria che il render dice di usare, quella del computer occupata dal processo del render e quella del computer intero;
+  - un avviso in arancione quando una parte del render non sta sulla scheda grafica e lavora dalla memoria del computer, con una stima di quanto è (per esempio «circa 3,2 GB»). È il caso che rendeva lento il render finale: ti suggerisce di chiudere altri programmi che usano la scheda o di scegliere texture più piccole.
+- Le informazioni si leggono senza disturbare il render: arrivano dalla scheda e da Windows, non da Blender.

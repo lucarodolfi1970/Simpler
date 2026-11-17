@@ -1,0 +1,6 @@
+SIMPLER 1.76.28  —  3 novembre 2026
+===================================
+
+«Avanzate» in azzurro.
+
+- La barra di «Avanzate» ora è azzurra, nel blu dell'interfaccia, con la scritta blu scuro: il giallo spiccava troppo sul pannello. Negli elenchi (una per pietra, una per modello del pennello) resta la barra sottile, con la scritta azzurra.

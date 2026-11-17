@@ -1,0 +1,5 @@
+SIMPLER 1.68.3  —  29 October 2026
+==================================
+
+- The primitives (cube, sphere, plane…) have their own entry again: 3D models ▾ > Primitives, next to Poly Haven and Custom. They stay protected as before.
+- 3D models > Custom holds only your folders and your models.

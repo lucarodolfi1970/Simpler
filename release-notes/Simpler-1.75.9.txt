@@ -1,0 +1,13 @@
+SIMPLER 1.75.9  —  31 ottobre 2026
+==================================
+
+SmartView: imposti la scena senza attese.
+
+- Nuovo pulsante arancione «SmartView» nella barra in alto, accanto alla doppia freccia.
+  - Acceso, la vista non si ricalcola più da sola: niente calcolo della costa del mare, del riparo dalla pioggia, del manto di neve, dei fiocchi e delle gocce, niente path tracing.
+  - Le ombre della vista in tempo reale si spengono (tornano come prima allo spegnimento).
+  - Inserire modelli, spostarli, muovere la vista e cambiare i materiali funziona come sempre; quello che non viene ricalcolato resta com'era.
+  - Nella vista compare il promemoria «SmartView · vista ferma».
+  - Spento, ombre e ricalcoli tornano e quello che hai cambiato nel frattempo si calcola una volta.
+  - Se passi al path tracing (pulsante o barra spaziatrice) SmartView si spegne da solo.
+  - Resta acceso da una volta all'altra, come i pulsanti di «Alleggerisci».

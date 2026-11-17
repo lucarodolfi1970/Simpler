@@ -1,0 +1,10 @@
+SIMPLER 1.13.29  —  22 October 2026
+===================================
+
+ENVIRONMENT: CLEARER AND NICER
+------------------------------
+- Presets (Clear morning, Midday, Sunset, Night, Studio, HDRI…) are tiles with a small coloured sky and their icon; the chosen one is highlighted.
+- Every section (Sun, Sky, Clouds, Haze and fog, Night, Ground, Exposure) has its own coloured icon in the title.
+- Every parameter has a small icon (time, day, latitude, north, air, ozone, altitude…).
+- The Time slider shows night, dawn, day and sunset; the Day of the year slider shows winter and summer.
+- Grounds have a dot with their colour.

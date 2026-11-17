@@ -1,0 +1,4 @@
+SIMPLER 1.22.2  —  24 October 2026
+==================================
+
+- Material maps: the "Generate" button is now a small magic-wand button; its tooltip explains what it does.

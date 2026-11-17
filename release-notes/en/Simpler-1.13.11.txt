@@ -1,0 +1,12 @@
+SIMPLER 1.13.11  —  22 October 2026
+===================================
+
+DISTRIBUTIONS: YOU SEE WHAT IS HAPPENING
+----------------------------------------
+- While Simpler makes a distribution (the first one with big models takes a few seconds: the models come from the
+  library) the small bar appears at the bottom of the view: "Making the distribution…", with the model being
+  loaded and how many are left (for example "3 of 7 · Building_C"). Changing one already made: "Updating the
+  distribution…".
+- In the scene tree the row "New distribution · being prepared…" appears at once, and becomes the real
+  distribution as soon as it is ready. Before, for a while nothing was shown and the distribution seemed missing.
+- The bar appears only if the operation lasts more than a moment: quick changes stay clean.

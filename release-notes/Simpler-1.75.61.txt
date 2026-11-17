@@ -1,0 +1,10 @@
+SIMPLER 1.75.61  —  1 novembre 2026
+===================================
+
+«Ottimizza poligoni»: anteprima 3D più robusta sui modelli molto pesanti.
+
+- Con la Qashqai da 12 milioni di triangoli, nella vista «Prima» si vedevano solo alcune strisce del modello. Il modello però era caricato tutto: il conteggio dei triangoli era giusto, e qui la stessa anteprima mostra l'auto intera. Con la versione da 6 milioni l'anteprima funzionava.
+- La causa più probabile: l'anteprima si ridisegnava solo quando muovevi qualcosa. Con un modello molto pesante, mentre la finestra principale lavorava, Windows poteva perdere l'immagine già disegnata, e restavano pezzi parziali. Ora l'anteprima si ridisegna anche da sola una volta al secondo, quando la finestra torna visibile e quando riprende il fuoco. Ridisegnare un'immagine ferma costa poco alla scheda video.
+- Se la scheda video perde il contesto grafico, per esempio per mancanza di memoria, ora compare un messaggio invece di un'immagine vuota.
+- Nel registro dell'app vengono scritti il caricamento di ciascuna vista (triangoli e dimensioni del modello) e gli eventuali errori della pagina. Se capita di nuovo, così posso capire cosa è successo.
+- Inquadratura con una precisione di profondità migliore sui modelli grandi.

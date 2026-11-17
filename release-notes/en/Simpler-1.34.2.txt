@@ -1,0 +1,6 @@
+SIMPLER 1.34.2  —  25 October 2026
+==================================
+
+- Deleting the scatter being edited puts the panel back to the default values and removes its line from the view. Before, its settings and line stayed, as if the scatter were still there. The tool stays the one in use (Brush, Area or Spacing).
+- Busy cursor when the 3D view works too: while the view shows a task of its own (for example preparing the models of a scatter, or a piece being loaded) the mouse shows the arrow with the hourglass, as when the engine works. Before, Simpler worked in those moments without saying so.
+- Selecting a scatter while its line is visible no longer draws the yellow box around it: the line shows it already, and the box hid the view.

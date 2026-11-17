@@ -1,0 +1,6 @@
+SIMPLER 1.44.1  —  26 October 2026
+==================================
+
+- Autosave simpler and less intrusive: Off, 10, 20 or 30 minutes (5 and 15 before; 5 becomes 10, 15 becomes 20). 20 minutes by default. On a big project each copy stops the engine for a few seconds, and now you see it with «Busy · please wait».
+- The automatic copy is deleted every time you leave the project on purpose: closing Simpler, but also with New scene or opening another project. Before, after a New scene, reopening asked to recover a copy left behind.
+- Timing log: every time «Busy · please wait» appears, the app log notes how long it lasted and what for (for example «wait 26.0 s: Autosave»). The opening time of a project no longer includes waiting for the question about the automatic copy, which is noted separately.

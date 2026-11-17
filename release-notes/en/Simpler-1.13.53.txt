@@ -1,0 +1,8 @@
+SIMPLER 1.13.53  —  23 October 2026
+===================================
+
+UNDO ON VALUES
+--------------
+- Ctrl+Z / Ctrl+Y after typing a value in a box (e.g. Wave size 80 cm, Enter): now undoes the change in the scene. Before the cursor stayed in the box and Ctrl+Z only undid the typed text, not the step.
+- While you are still typing in the box (value not taken yet), Ctrl+Z stays the undo of the text, as before.
+- After Undo and Redo the material editor is read again (water, waves, channels back to the undone values) and the Environment panel shows the right values. Before the scene went back but the panel still showed the new values.

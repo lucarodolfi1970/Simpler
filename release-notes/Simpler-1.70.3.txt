@@ -1,0 +1,17 @@
+SIMPLER 1.70.3  —  29 ottobre 2026
+==================================
+
+Prestazioni nelle scene molto grandi (prova con 4.300 oggetti): ogni azione misurata, tolti i lavori ripetuti o inutili. I tempi sono misurati senza scheda grafica; con una scheda sono più bassi, ma il rapporto prima/dopo resta lo stesso.
+
+- Preparazione della vista 3D (apertura del progetto, ridisegno): da 65 a 38 secondi. Gli oggetti di servizio del path tracing venivano tolti uno alla volta e ogni rimozione scorreva tutta la scena: 42 secondi solo per questo, ora meno di mezzo secondo.
+- Materiale applicato a un modello intero: da 48 secondi a meno di 1. Per ogni pezzo il programma cercava in tutta la scena un eventuale corpo d'acqua.
+- Annulla dopo «Sempre asciutto», «Non fa riparo», un materiale o uno spostamento su un modello intero: da diversi minuti a mezzo secondo. Prima la scena veniva ricalcolata una volta per ogni pezzo.
+- Dimensioni del modello nel pannello: da 13 secondi a 0,3.
+- Copia e incolla di un modello intero: da 10 a 4 secondi.
+- Cambio di sole, cielo, nebbia o preset dell'Ambiente: niente più ricalcolo completo della scena a ogni ritocco. Si risparmia circa un secondo per modifica, e il path tracing non deve risincronizzare tutti gli oggetti.
+- Applicazione di una vista salvata: da 3,5 a meno di 1,5 secondi. Ora si modificano solo gli oggetti che cambiano davvero visibilità.
+- Ecosistemi, primo calcolo dalla vista: da 4-8 a 1,5-2,5 secondi. Gli oggetti fuori dall'inquadratura, dietro la camera o più lontani della superficie non vengono più letti. La mappa di ciò che nasconde la superficie è identica, come pure il numero di pezzi.
+- «Adatta all'oggetto»: la vista 3D riprende solo i pezzi con le nuove coordinate e non tutta la scena (circa 20 secondi prima). Corretto anche un difetto: dopo un secondo «Adatta» con lo stesso materiale la vista poteva mostrare le coordinate vecchie.
+- Clic su un oggetto: l'albero della scena non viene più ricostruito per intero; cambia solo l'evidenziazione delle righe. Prima serviva 1 secondo per clic con 2.400 righe aperte. Dopo ogni azione l'albero si ricostruisce solo se è cambiato ciò che mostra.
+- Selezioni di molti oggetti: ogni oggetto viene trovato subito, senza scorrere tutta la scena ogni volta.
+- Tutti i risultati restano identici a prima: stessi pezzi negli ecosistemi, stessi annulla e ripeti.

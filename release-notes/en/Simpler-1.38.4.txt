@@ -1,0 +1,7 @@
+SIMPLER 1.38.4  —  25 October 2026
+==================================
+
+- The piece limit of an ecosystem now depends on the memory of your PC, no longer on a fixed cap of 3 million. Before placing it, Simpler reads the free memory and works out how much would be needed, then uses at most 60% of the free memory.
+  - The memory of every piece was measured. The project uses about 650 bytes of it in the engine, and as much again in the process that does the path tracing. The real-time view uses about 120. The path tracer uses about 1.8 KB for every part of the model: instances keep the shape only once, but for Cycles every copy of every part is an object. A plant made of a single piece therefore costs about 3 KB, a car of 28 parts about 50 KB.
+  - The confirmation question now also says how much memory will be needed and how much is free. If there are too many pieces, the message says why and what the largest possible number is at that moment.
+- In the scene, a blue dot on the icon shows that the row holds an ecosystem, even deep inside a model. Holding the pointer on it shows how many it holds. It works like the violet dot of decals.

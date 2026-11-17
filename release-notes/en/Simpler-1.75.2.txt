@@ -1,0 +1,15 @@
+SIMPLER 1.75.2  —  31 October 2026
+==================================
+
+Real sea caustics, computed by Cycles as in a pool. Plus two fixes.
+
+- Sea caustics: the drawn net of 1.75.1 is off. In its place the sunlight through the real waves of the sea.
+  - Simpler makes a small separate render, seen from above, of the bottom under the shallow water: the sea surface becomes real water, with the same short waves you see, and Cycles draws the caustics as in a pool.
+  - That light is put on the bottom in the normal render. The sea stays as it is: colour, foam, reflections.
+  - In that area the direct sun on the bottom is replaced by this light: the average light is the same as before, only its shape changes (bright lines following the waves).
+  - The light reflected by the sea onto the rocks is computed from the same waves.
+  - It is computed again only when the sun, the sea or the framing change.
+  - With «Light reflected by water» off everything is exactly as before.
+- The «Busy» box said «Computing the coast» even in projects without a sea: the name left by a project opened before. The real work was the rain shelter (0.4 s). Now the label is right.
+- Reflected light (pools and sea) on wet ground: it was seen with the dry colour, so up to twice as bright. Now it uses the wet colour.
+- Real-time view: every 10 seconds of movement the log says where the time goes (page, video card, wait between frames), to understand the stutter at 30 fps.

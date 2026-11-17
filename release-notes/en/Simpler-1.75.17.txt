@@ -1,0 +1,8 @@
+SIMPLER 1.75.17  —  31 October 2026
+===================================
+
+Soft edge of the dry areas.
+
+- Under a shelter (a canopy, a street lamp, a slab) the dry area had a sharp, stepped edge that followed the cells of the shelter map: a hard line on the wet road.
+  - Now the shelter is read at 13 points around every point of the surface, out to 12 cm plus half of «Softness» (about 27 cm at the normal value): the edge of the dry area fades as when rain falls slightly slanted.
+  - The same in the real-time view, in path tracing and in the final render.

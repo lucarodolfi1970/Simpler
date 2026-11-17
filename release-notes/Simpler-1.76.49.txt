@@ -1,0 +1,10 @@
+SIMPLER 1.76.49  —  5 novembre 2026
+===================================
+
+Cache su disco piccole e pulite da sole.
+
+- Le cache della forma dei terreni (terrcache) e dei modelli semplificati (occcache), in %LOCALAPPDATA%\Simpler, hanno limiti più stretti: al massimo 150 MB e 12 terreni, 400 MB e 60 modelli.
+- Un file che non serve da 30 giorni viene cancellato; un file scritto a metà (Simpler chiuso durante il salvataggio) anche.
+- Il controllo avviene dopo ogni scrittura e a ogni apertura di una scena: i file più vecchi (per ultimo uso) se ne vanno per primi.
+- Le cache sono solo un aiuto: quello che manca si ricalcola.
+- Nuovo controllo automatico: troppi file, file vecchi e file a metà devono sparire.

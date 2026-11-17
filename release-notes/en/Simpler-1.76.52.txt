@@ -1,0 +1,10 @@
+SIMPLER 1.76.52  —  5 November 2026
+===================================
+
+Leaving terrain sculpting is faster: scree and ecosystems made again in less time, with the same result.
+
+- "Stones and debris": working out where the stones fall from the walls follows only the front moving down the slopes instead of going over the whole terrain every time: about 5 times faster (on a 3 km mountain from 4.3 s to 0.9 s), the same stones.
+- "Stones and debris": the terrain's triangles are read once, for the view and for laying.
+- Ecosystems made again after a terrain change: the pieces counted before laying them are reused instead of being worked out a second time (about 5 s less for each ecosystem on the test mountain); the same pieces, checked.
+- Camera view for ecosystems and stones: the structure for the rays is prepared faster (about 0.4 s less on a million triangles).
+- New automatic check: an ecosystem made again after sculpting does not work out its pieces twice.

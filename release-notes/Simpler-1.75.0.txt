@@ -1,0 +1,30 @@
+SIMPLER 1.75.0  —  31 ottobre 2026
+==================================
+
+Acqua grande con onde vere: niente più quadrati di luce, e gli slider delle onde funzionano. Più quattro bug.
+
+- Altezza e Dimensione onde «non cambiavano nulla» e c'erano quadrati di luce sulle pareti, con un piano d'acqua molto grande.
+  - Causa: con un piano d'acqua largo 139 m, Simpler divideva tutta la superficie in quadratini, al massimo 400 mila, e su 139 m ogni quadratino misurava 27 cm. Le onde venivano ridotte a mezzo centimetro, e ogni quadratino piatto rifletteva il sole come un piccolo specchio.
+  - Ora una superficie d'acqua grande viene disegnata attorno alla fotocamera: quadratini fini vicino a te, sempre più larghi lontano, e mai più fitti di quanto si veda. Le onde hanno l'altezza e la dimensione che scegli, qualunque sia la grandezza del piano.
+  - Vale per ogni superficie d'acqua piana e rettangolare troppo grande per la suddivisione di prima. Le vasche piccole restano come prima.
+  - La griglia si rifà quando sposti la fotocamera (25 cm o 6°), solo per il path tracing: per esempio 248 mila facce in 0,3 s.
+  - I quadrati sulle pareti spariscono, al loro posto la luce riflessa dalle onde; le onde si vedono nei riflessi.
+- Materiale Acqua, più semplice: in «Superficie e onde» una scelta sola, «Acqua»: Ferma · Increspata · Mossa · Agitata.
+  - Altezza e dimensione delle onde le sceglie Simpler, già giuste fra loro. «Onde vere», Altezza e Dimensione sono nelle Avanzate, come prima; se le cambi tu, la scelta mostra «Onde personalizzate».
+  - Scegliendo acqua con onde, se le caustiche sono spente Simpler le accende da sole (Normali e luce riflessa dall'acqua) e te lo scrive nella barra di stato. Non le spegne mai: lo fai tu da Rendering.
+- Poly Haven e Distribuisci: con il pennello acceso, un clic su un modello Poly Haven lo metteva nella scena.
+  - Ora entra nel pennello. Il pennello lavora con i modelli della libreria: la prima volta il modello scaricato viene aggiunto alla libreria, nella cartella «Poly Haven» (una sola volta, poi si usa quello).
+  - Trascinato nella vista, invece, viene messo nella scena come prima.
+- Pioggia e mare: le pozzanghere comparivano sulla sabbia sotto il mare. Ora niente pozzanghere né velo d'acqua sotto il mare e dove arrivano le sue onde (la neve lo faceva già).
+- Il verde nel riflesso del sole al tramonto, sul bagnasciuga.
+  - Causa: la sabbia bagnata era lucida anche dove le onde la coprono. Il riflesso del sole basso, prima di arrivarti, attraversava l'acqua quasi orizzontale, e l'acqua toglieva il rosso.
+  - Ora la sabbia è lucida solo nella metà alta della fascia bagnata, dove l'acqua si è già ritirata, e mai vista attraverso l'acqua.
+  - La chiazza verde non c'è più; il bagnasciuga resta lucido e arancione.
+- Gizmo, spostamento sul piano tra freccia rossa e verde con la vista quasi orizzontale (per esempio una nave sul mare).
+  - Causa: la vista è quasi di taglio. Il settore del piano e l'arco della rotazione cadono sulla stessa linea sottile, e prendeva sempre l'arco.
+  - Ora sotto i 12° circa vince il settore del piano.
+
+- Luce colorata dalle vetrate: la luce riflessa dall'acqua sulle colonne e sulle volte prende il colore del vetro da cui è passato il sole.
+  - Prima ogni vetro fermava il sole come un muro, quindi sull'acqua arrivava solo la luce bianca delle aperture senza vetro.
+  - Ora il raggio del sole attraversa il vetro (fino a 4 vetri) e prende il colore della vetrata nel punto preciso, letto dalla sua immagine, insieme alla luce che il vetro lascia passare.
+  - Con vetrate scure (vetro che lascia passare poca luce) quella luce colorata è debole, e il bianco viene dalle aperture senza vetro.

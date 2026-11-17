@@ -1,0 +1,8 @@
+SIMPLER 1.75.47  —  1 November 2026
+===================================
+
+A small × in every text box.
+
+- Simpler's text boxes now have a small × at the end that empties the box and puts the cursor back in it: library and tree searches, names, colour look search, texts of the AI functions and the others. It appears only when there is text.
+- Number boxes and API key boxes do not have it.
+- The AI video «Motion» box keeps its own ×, which can be undone.

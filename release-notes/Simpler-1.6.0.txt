@@ -1,0 +1,41 @@
+SIMPLER 1.6.0  —  21 ottobre 2026
+=================================
+
+DISTRIBUISCI: VELOCE ANCHE CON MIGLIAIA DI PEZZI
+------------------------------------------------
+- PENNELLATE ISTANTANEE: i pezzi compaiono subito sotto il pennello, con il modello vero (non più i coni verdi),
+  e restano lì. Prima ogni blocco faceva ripreparare tutta la vista 3D (10-17 secondi).
+  Il motore ora crea 200 pezzi in circa 0,1 secondi.
+- La prima volta che usi un modello Simpler ne prepara una copia per la vista 3D: qualche secondo, poi mai più,
+  anche in altri progetti.
+- GPU INSTANCING: nella vista 3D tutti i pezzi di un modello si disegnano da un'unica copia. 300 cespugli = 5 draw
+  call. I pezzi fuori dall'inquadratura non vengono disegnati.
+- LIVELLI DI DETTAGLIO (LOD) AUTOMATICI: per ogni modello Simpler prepara da solo tre versioni più leggere
+  (circa 30%, 8% e 2% dei triangoli), senza bloccare la vista.
+  · Vegetazione (foglie, fili d'erba, aghi): toglie foglie intere e ingrandisce quelle rimaste, così la chioma
+    tiene il volume e il colore da lontano.
+  · Tronchi, rocce e altre superfici continue: semplificati con meshoptimizer.
+  Ogni pezzo usa il livello adatto alla sua grandezza sullo schermo. Se la scena supera quello che la scheda video
+  disegna fluido, Simpler abbassa il dettaglio dei pezzi più lontani, seguendo il tempo misurato di ogni
+  fotogramma. Il contatore in basso a destra mostra quanti pezzi si vedono e "LOD automatico" quando interviene.
+- Il path tracing e il render finale usano sempre i modelli completi (Cycles disegna le istanze in modo nativo).
+- Nascondere e rimostrare una distribuzione dall'albero non ammucchia più i pezzi in un punto.
+- La vista 3D non si riprepara più per le distribuzioni, e i file della vista sono più piccoli.
+
+PANNELLO DISTRIBUISCI
+---------------------
+- Ogni distribuzione ha i suoi modelli: selezionando "Scatter 1" o "Scatter 2" nell'albero con il pennello attivo
+  il pannello mostra i modelli di quella distribuzione. Funziona anche con un progetto riaperto: i modelli
+  vengono ricavati dai pezzi, al 100%. Anche premendo B con una distribuzione selezionata si riparte da quella.
+- "+ Nuova" svuota i modelli da distribuire: la prossima pennellata inizia un gruppo nuovo.
+- All'avvio, con Nuovo e con Apri il pennello parte vuoto (restano solo le regolazioni: diametro, distanza,
+  scala, rotazione).
+- Il pulsante per togliere un modello dal pennello ora è un cestino, con la spiegazione al passaggio del mouse.
+- "Dipingi in: …" di nuovo visibile.
+
+SCHEDA VIDEO A RIPOSO
+---------------------
+- La vista 3D si ridisegna solo quando cambia qualcosa: muovi la vista, il mouse, un tasto, una modifica, una
+  texture che arriva. Ferma, lascia la scheda video libera: niente carico al 90%, meno calore, più potenza al
+  path tracing e agli altri programmi. Il contatore lo segnala con "ferma".
+- Il contatore non mostra più "2 triangoli · 1 draw" quando c'è un oggetto selezionato: conta tutto il fotogramma.

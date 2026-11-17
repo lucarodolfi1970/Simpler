@@ -1,0 +1,7 @@
+SIMPLER 1.52.0  —  27 October 2026
+==================================
+
+- Snow > Advanced > «Sculpt the snow»: footprints, tyre tracks, snow shovelled or heaped, drawn on the view by holding the left button and dragging along the path. Five modes: Footprints (prints left and right, turned along the path, with a rim of pushed snow; adjustable size), Tyres (two grooves with a tread at the chosen track width, with the snow pushed to the sides), Dig (like a shovel, down to the ground), Raise and Smooth.
+- Where you pass the snow mantle becomes fine (about 1.5 cm), the rest stays light: a footprint keeps its shape even where the mantle's cells are large. Under footprints and tyres the snow stays pressed, greyer and smoother, and keeps the sole and the tread even where the snow is thin; only «Dig» reaches the ground.
+- The same in the render and in the real-time view (the same geometry, the same colour of pressed snow). Every stroke can be undone with Ctrl+Z, is kept in the project, and everything can be cleared with «Clear the sculpted snow». It works on the mantle of the ground and of big models (roofs); small models with the mantle on their shape are not sculpted.
+- Speed: a stroke costs a few milliseconds and the mantle is remade in a fraction of a second, because when only the sculpted snow changes Simpler keeps the heights, the models and the distributions already computed. The cut along the edge of the snow is now vectorised: faster for the normal mantle too (0.6 → 0.05 s in the test scene).

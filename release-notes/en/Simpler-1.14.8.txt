@@ -1,0 +1,7 @@
+SIMPLER 1.14.8  —  24 October 2026
+==================================
+
+DOTS ON LAMP SHADES, SALT SHAKER, OVEN: THE REAL CAUSE
+------------------------------------------------------
+- It was neither the material nor the path tracing: the image computed by Cycles was clean. The dots were added afterwards by the haze (the compositor that fades distant things). The haze measures how far each pixel is with the "Mist" pass, which is an average along the rays: through a material with an opacity map (lamp shade, salt shaker, oven door) some rays pass and reach the sky or the distant ground. For a lamp shade 2 m away the distance came out as 400 m on some pixels and 2 m on their neighbours: haze on and off, as white dots, with any number of samples. That is why the problem disappeared with a standard (opaque) material.
+- Now the distance used for the haze never exceeds that of the first surface hit (Depth pass). Checked with a semi-transparent plate in front of a distant backdrop: dots gone, noise halved.

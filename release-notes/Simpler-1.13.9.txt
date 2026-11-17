@@ -1,0 +1,15 @@
+SIMPLER 1.13.9  —  22 ottobre 2026
+==================================
+
+DISTRIBUZIONI DI MODELLI GRANDI: PIÙ VELOCI, NIENTE PIÙ EDIFICI CHE SPARISCONO
+------------------------------------------------------------------------------
+- Perché sparivano: un edificio di un kit è fatto di centinaia di pezzi, e la vista disegnava ogni pezzo a parte
+  (112 edifici = oltre 12.000 disegni per fotogramma, 16 fps). La protezione delle prestazioni vedeva la vista lenta
+  e, pensando che i triangoli fossero troppi, nascondeva i pezzi più lontani; ma il problema non erano i triangoli
+  (3 milioni vanno benissimo su una scheda video recente), era il numero di disegni.
+- Ora i pezzi di un modello con lo stesso materiale diventano un'unica geometria quando il modello arriva nella vista:
+  un disegno per materiale invece che per pezzo. Prova: un modello di 40 pezzi con 2 materiali passa da 40 a 2
+  disegni per livello di dettaglio.
+- La protezione delle prestazioni non nasconde più un oggetto alto più del 2% della vista: gli edifici lontani
+  restano, al massimo nella versione più leggera. I fili d'erba lontani continuano a sparire come prima.
+- Il path tracing non cambia: lì c'è sempre tutto.

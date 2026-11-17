@@ -1,0 +1,4 @@
+SIMPLER 1.38.6  —  25 October 2026
+==================================
+
+- Fix: with an ecosystem already saved and put back on the test plot, «Make the thumbnail again from the test plot» and «Save ecosystem» said «Nothing to save». The layers of ecosystems placed on the plot now count too: the thumbnail is made again, and a variant can be saved.

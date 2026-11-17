@@ -1,0 +1,9 @@
+SIMPLER 1.73.4  —  30 ottobre 2026
+==================================
+
+Neve e mare: la neve non va più sul mare.
+
+- Prima il mantello di neve copriva il suolo anche sotto il mare. Usciva dall'acqua come una lastra bianca con un bordo scuro dove la superficie del mare la tagliava.
+- Ora la neve si ferma dove arriva l'acqua: niente neve sotto il livello del mare né nella fascia bagnata dalle onde, perché in acqua si scioglie. Sopra comincia sfumando.
+- Vale per il mantello di neve (lo spessore vero), per il bianco sulle superfici nel path tracing e per la vista in tempo reale.
+- Quando cambi il mare (livello, altezza delle onde, fascia bagnata) il mantello si rifà da solo.

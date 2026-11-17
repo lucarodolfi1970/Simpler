@@ -1,0 +1,4 @@
+SIMPLER 1.38.2  —  25 ottobre 2026
+==================================
+
+- Ecosistemi più veloci da mettere in scena. Un milione di pezzi ora richiede circa 2 secondi invece di 8. Sui terreni con molti poligoni (un milione di triangoli) servono 1,9 secondi invece di 3,4. Il risultato è identico a prima, pezzo per pezzo: cambia solo il modo in cui ogni pezzo viene appoggiato sulla superficie, ora tutti insieme invece che uno alla volta.

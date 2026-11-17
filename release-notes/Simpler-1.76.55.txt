@@ -1,0 +1,14 @@
+SIMPLER 1.76.55  —  5 novembre 2026
+===================================
+
+«Rilievo 3D»: displacement vero, nelle Avanzate.
+
+- Nuovo interruttore «Displacement vero» nelle Avanzate di «Rilievo 3D», spento di default. Acceso, nel render finale il rilievo della roccia diventa geometria vera: crepe, gradini e bordi dei blocchi sporgono davvero, si vedono di profilo e fanno ombra.
+- Prima di accenderlo un messaggio avvisa che il render finale richiede più tempo e più memoria: si può rinunciare.
+- Sotto l'interruttore due cursori: Ampiezza (quanto sporge la roccia vera: 100% = la profondità che si vede nella luce, fino al 200%) e Finezza (quanto sono piccoli i triangoli: più fine = più lento e più memoria). Si cambiano subito, senza rifare i materiali.
+- Solo nel render finale: la vista in tempo reale e il path tracing della vista non cambiano.
+- Solo sulle zone con pareti (di solito la roccia): prati e spianata non vengono suddivisi, per non sprecare memoria. Sui bordi fra le zone il rilievo vero sfuma a zero: niente fessure.
+- Il costo non cresce con la risoluzione del render: Finezza è misurata su un'immagine di 1920 pixel.
+- Misure (CPU, 960×540, 32 campioni, montagna con roccia 80%): render da 86 a 134 s con Finezza 50%, 142 s con Finezza 100%; memoria di Cycles da 0,3 a circa 0,7-1,6 GB.
+- «Valori predefiniti» nelle Avanzate rimette displacement spento, Ampiezza 100%, Finezza 50% e Orientamento 0°.
+- Nuovo controllo automatico: il displacement cambia il render finale, Ampiezza e Finezza si cambiano senza rifare i materiali, il render in processo separato funziona, spento si ritrova l'immagine di prima.

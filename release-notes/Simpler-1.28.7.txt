@@ -1,0 +1,4 @@
+SIMPLER 1.28.7  —  25 ottobre 2026
+==================================
+
+- Decal sparite: una decal messa su una parte di un modello della libreria mentre il modello era aperto (selezionando la parte) diventava, alla chiusura del modello, una sua parte: spariva dalla vista e dall'albero, e così restava dopo aver salvato e riaperto. Ora, quando il modello si chiude, le sue decal ne escono e restano dove sono, proiettate sulla parte. I progetti già salvati si sistemano all'apertura: le decal tornano visibili.

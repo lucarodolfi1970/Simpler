@@ -1,0 +1,12 @@
+SIMPLER 1.77.0  —  6 November 2026
+==================================
+
+New material type «Foliage», with the season: from green to autumn to winter with no leaves.
+
+- In the material editor, in the type menu, there is «Foliage», for leaves, needles, petals and the wood of plants.
+  - Leaves or Wood: the wood (trunk, branches, bark) does not change with the season.
+  - Season: 0% summer, all green; around 30-50% the leaves turn yellow, then orange and red and start to fall; at 100% winter, no leaves. The change is gradual: every leaf has its own moment, whole branches change together, every plant a little earlier or later, with small random differences of colour. A line under the slider says where in the season you are.
+  - Fallen leaves become transparent and cast no shadow, in the real-time view too.
+  - Light through: the sun going through the leaf, for bright crowns seen from below instead of dark ones.
+  - Advanced: Back of the leaf (the underside lighter), Autumn reds (how many plants turn red instead of yellow), Darker inside (the crown darker in the middle, path tracing and render only), Variation (every plant and every leaf a little different).
+  - The channels a leaf needs remain: colour, roughness, dirt, relief, opacity (the cut-out of the leaf) and projection.

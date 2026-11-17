@@ -1,0 +1,10 @@
+SIMPLER 1.13.51  —  23 October 2026
+===================================
+
+LIGHT REFLECTED BY WATER: CLEANER, FROM LAMPS TOO
+-------------------------------------------------
+- No more speckles: when the samples are not enough, the image of the light gets softer instead of filling with scattered dots. Water triangles whose rays land on different surfaces now leave a patch of their own size, not a point.
+- Besides the sun, lamps (point, spot, area) near the water or under it count too. Seen from below, the surface sends part of the light back down, all of it beyond 48.6° (total internal reflection), onto the bottom and the walls of the pool.
+- Moonlight is left out: reflected, it could not be seen.
+- In the view, with very finely subdivided water, the calculation uses the same waves one level coarser (about 4 times faster); the final render uses the real ones.
+- When the net shows: with wide waves (50 cm and more) and light-coloured surfaces. With small waves (15 cm) the reflected light focuses a few centimetres from the surface and reaches the walls as an even glow. A nearly black surface (colour 0.4%) sends nothing back. That is real physics, not a limit of the calculation.

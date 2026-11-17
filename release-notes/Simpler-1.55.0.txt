@@ -1,0 +1,8 @@
+SIMPLER 1.55.0  —  27 ottobre 2026
+==================================
+
+- Volumetrico, modelli non chiusi: un modello senza un «dentro» (pezzi aperti, o una nuvola fatta di tanti dischetti come quelle che si scaricano) restava trasparente e sfilacciato. Ora Simpler avvolge i suoi pezzi in una forma morbida e riempie quella, nel rendering e nella vista; nell'editor un avviso arancione dice quali modelli non sono chiusi.
+- Volumetrico, «Grandezza sbuffi» ora è in % della grandezza del modello: lo stesso valore dà lo stesso aspetto su una nuvola di 6 m e su una di 100 m (il tipo «Nuvola» usa il 12%). Anche l'anteprima del materiale, una sfera di 1 m, ora somiglia di più al modello.
+- Volumetrico e foschia: la foschia del cielo trasformava i volumi davanti al cielo in macchie grigie piatte (li trattava come se fossero all'orizzonte). Ora mantengono luci e ombre.
+- Vista in tempo reale: i volumi densi hanno la loro luce e la loro ombra (il lato verso il sole chiaro, l'altro in ombra), come nel rendering, invece di un grigio uniforme.
+- Importazione: nuova scelta «Unisci in un solo oggetto» (menu Importa e importazione nella libreria): tutti i pezzi del modello diventano un solo oggetto con tutti i suoi materiali al loro posto. I pezzi ripetuti molte volte (bulloni, sedie) restano copie, per non moltiplicare la memoria. La scelta resta per le importazioni successive.

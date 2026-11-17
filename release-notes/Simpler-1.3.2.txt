@@ -1,0 +1,12 @@
+SIMPLER 1.3.2  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- SPOSTARE LE CARTELLE DENTRO ALTRE CARTELLE (Modelli 3D e Materiali):
+  - trascina una cartella su un'altra: ci finisce dentro, con tutte le sottocartelle e i contenuti;
+  - trascinala su "Indietro" o su un pezzo della barra del percorso (es. "Modelli 3D") per portarla più in alto;
+  - oppure tasto destro sulla cartella > "Sposta in" > scegli la destinazione (anche la cartella principale).
+  Non si può mettere una cartella dentro sé stessa o dentro una sua sottocartella (il cursore lo mostra con il
+  divieto). Se nella destinazione c'è già una cartella con lo stesso nome, Simpler chiede se unirle.
+  La cartella "Primitive" e quelle di Poly Haven restano fisse.

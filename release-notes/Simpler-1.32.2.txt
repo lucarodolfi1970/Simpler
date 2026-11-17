@@ -1,0 +1,4 @@
+SIMPLER 1.32.2  —  25 ottobre 2026
+==================================
+
+- La scelta del gizmo (Centro / Base / Origine) resta quella scelta: aprendo o salvando un progetto tornava alla scelta di quando Simpler era partito. Simpler ricordava l'ultima cartella usata riscrivendo una copia vecchia delle impostazioni, e così rimetteva i valori di prima a tutto quello che nel frattempo era stato cambiato: la posizione del gizmo, il modo di applicare i materiali trascinati, la velocità della rotellina e le altre impostazioni dei pannelli. Ora ricorda la cartella senza toccare il resto.

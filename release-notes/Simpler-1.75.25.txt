@@ -1,0 +1,13 @@
+SIMPLER 1.75.25  —  31 ottobre 2026
+===================================
+
+SmartView: prima la velocità, la vista fedele quando lo spegni.
+
+- Con SmartView acceso la vista non prepara più nessuno shader dei materiali illuminati, cioè la cosa che costava secondi a ogni selezione o modifica. Restano solo le cose indispensabili per lavorare e riempire la scena: navigare, selezionare, spostare con il gizmo, inserire e copiare modelli.
+  - Selezionare un'auto di una distribuzione: l'auto resta disegnata com'era; un suo «gemello» invisibile prende il contorno arancione, il gizmo e i clic. Nessuno shader nuovo: la selezione è immediata.
+  - Un modello inserito, o un materiale cambiato con uno che la vista non ha ancora preparato: viene disegnato con una versione semplice del suo materiale (colore e immagine, senza luci), pronta in millesimi di secondo.
+  - Le modifiche dei materiali che chiederebbero uno shader nuovo aspettano: la vista tiene quello che ha. Le modifiche leggere (colore, valori) si vedono subito come prima.
+  - Pioggia che cade e fiocchi di neve non sono disegnati: tanti oggetti da disegnare, non servono per impostare la scena.
+  - La preparazione degli shader dei modelli in sottofondo si ferma finché SmartView è acceso.
+  - Come prima: luci ferme, ombre spente, il motore non ricalcola pioggia, neve, costa e path tracing.
+- Spegnendo SmartView tutto torna com'è: materiali veri, modifiche rimaste in attesa, ombre, pioggia e fiocchi. Gli shader si preparano una volta sola, con il riquadro «Occupato»: l'unica attesa è qui, quando decidi tu di guardare il risultato.

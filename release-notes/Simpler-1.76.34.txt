@@ -1,0 +1,9 @@
+SIMPLER 1.76.34  —  3 novembre 2026
+===================================
+
+File di quote grandi: si sceglie la parte che serve.
+
+- Scegliendo un file di quote (USGS .dem, SRTM .hgt, ESRI .asc) più grande di 5 km, Simpler mostra il suo rilievo in una finestra con un quadrato giallo: trascinalo sulla parte che ti serve (o fai clic dove vuoi) e scegli il lato in km. Il terreno usa solo quella parte.
+- Il lato arriva al massimo a 10 km: oltre, i 512 punti del terreno sarebbero troppo radi. Un file più piccolo di 5 km si usa tutto, senza domande.
+- Un file grande scelto prima, senza un quadrato, usa da solo i 5 km centrali.
+- Paesaggio › Terreno › Avanzate: «Scegli un'altra parte del file…» per spostare o ingrandire il quadrato dopo.

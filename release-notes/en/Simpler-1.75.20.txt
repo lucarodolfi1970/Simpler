@@ -1,0 +1,10 @@
+SIMPLER 1.75.20  —  31 October 2026
+===================================
+
+The chart of the samples during the final render.
+
+- While the final render runs, the bottom of the waiting screen (170 pixels high) grows an area of the background colour, only a little lighter.
+  - Vertically the samples: from 0 at the bottom to the samples of the render at the top.
+  - Horizontally the time: the whole width is the time gone so far. At the first second it is one second, at the tenth ten seconds, and so on.
+  - Every second a new point is added. The seconds already gone keep the height they reached and only squeeze to the left, so the shape of the area shows the speed of each part of the render: flat at the start while geometry and textures load, then the climb of the samples.
+- The samples come from the engine with the progress (the same as «sample X of Y»), also when the render goes by tiles.

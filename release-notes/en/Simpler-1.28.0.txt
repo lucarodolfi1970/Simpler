@@ -1,0 +1,6 @@
+SIMPLER 1.28.0  —  25 October 2026
+==================================
+
+- Pieces of library models: you can now select a part of a model (for example the walls of a building) and work on it like any piece: move it, rotate it, change its material, delete it. In the tree one click on the part is enough; in the view the first click selects the whole model (orange outline), a second click on the model already selected selects the part under the mouse (light blue outline).
+- The material of a part follows the choice already there: «Replace material» changes it in every copy of the model, «Apply to object» only in that part.
+- How it works: in the real-time view a library model is drawn from a prototype (fast, but its parts do not exist one by one). Selecting a part «opens» the model: its parts come into the view one by one (a few seconds for big models). When you select something else the model closes and goes back to its prototype, with the changes made.

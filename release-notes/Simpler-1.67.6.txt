@@ -1,0 +1,6 @@
+SIMPLER 1.67.6  —  29 ottobre 2026
+==================================
+
+- «Adatta all'oggetto» rifatto. Prima usava le coordinate UV del modello, che in molti modelli non sono adatte: nella vetrata ogni vetro era aperto a strisce e l'immagine usciva a righe.
+- Ora proietta l'immagine sul piano in cui stanno le facce con quel materiale, vista dal lato verso cui guardano, con l'alto dell'oggetto in alto, e la stira per riempire la loro sagoma una volta sola.
+- Cambiano solo le coordinate UV di quelle facce; le altre parti dell'oggetto restano com'erano. Si annulla con Ctrl+Z.

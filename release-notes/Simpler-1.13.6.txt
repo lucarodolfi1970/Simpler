@@ -1,0 +1,12 @@
+SIMPLER 1.13.6  —  22 ottobre 2026
+==================================
+
+TOUCHPAD
+--------
+- Due dita sul touchpad verso l'alto o verso il basso (o di lato) spostano la vista senza ruotarla, come il tasto
+  centrale del mouse: la scena segue le dita.
+- Pizzicare con due dita avvicina o allontana (cammina avanti e indietro, in modo continuo).
+- La rotellina del mouse funziona come prima (cammina avanti e indietro a scatti): Simpler riconosce da solo se
+  arriva dal mouse o dal touchpad.
+- Si può spegnere: Impostazioni (ingranaggio) → Navigazione → "Touchpad: due dita spostano la vista". Spento, le due
+  dita camminano come la rotellina.

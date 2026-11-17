@@ -1,0 +1,12 @@
+SIMPLER 1.68.5  —  29 ottobre 2026
+==================================
+
+- Materiale usato anche da altri oggetti: in alto c'è un solo interruttore, «Vale: Solo qui / Ovunque», con il numero dei pezzi.
+  - «Solo qui» è la scelta di partenza: alla prima modifica i pezzi scelti ricevono una copia del materiale con tutte le sue impostazioni, e gli altri oggetti non cambiano. I pezzi scelti sono gli oggetti selezionati (con Rettangolo o Lazo, oppure un modello intero), o il solo pezzo cliccato se non c'è una selezione. Funziona anche tra i pezzi dello stesso modello: una sola finestra di una chiesa, non tutte e 69.
+  - «Ovunque» cambia tutti gli oggetti con quel materiale.
+  - La copia si chiama «<materiale> · <oggetto>» oppure «<materiale> copia»: puoi rinominarla nel campo del nome. Si annulla con Ctrl+Z.
+- Libreria, più chiara: una riga dice com'è il materiale nella libreria (non c'è, uguale, diverso) e ricorda che le modifiche restano in questo progetto. I pulsanti sono al massimo due:
+  - «Aggiungi alla libreria…»: una copia nella libreria; qui non cambia niente.
+  - «Aggiorna la libreria»: il materiale della libreria prende queste impostazioni, con conferma; i progetti già fatti non cambiano.
+  - «Aggiungi come nuovo…»: un altro materiale nella libreria, con il nome che scegli.
+- La parola «Salva» resta solo per il progetto.

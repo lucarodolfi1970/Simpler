@@ -1,0 +1,9 @@
+SIMPLER 1.13.30  —  22 October 2026
+===================================
+
+3D VIEW: NEW OBJECTS IN A BLINK
+-------------------------------
+- Dragging in a primitive (or creating a new object) in a big scene no longer prepares the whole 3D view again: only the new object is prepared and added to what is already there.
+  Example: a cube in a large interior went from about 20 seconds (450 MB exported again) to a fraction of a second.
+- Objects with textures are prepared on their own (with reduced textures, as always), in a couple of seconds, without blocking the app.
+- If adding fails for any reason, the view is prepared in full as before.

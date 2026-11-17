@@ -1,0 +1,4 @@
+SIMPLER 1.30.3  —  25 ottobre 2026
+==================================
+
+- Mappatura delle texture più precisa: «Sposta X» e «Sposta Y» accettano e mostrano fino a 4 decimali (per esempio 0,125, un ottavo di ripetizione), «Scala» e «Stira» 3 decimali, «Rotazione» un decimale. Prima la casella mostrava 0,13 al posto di 0,125, e un ritocco successivo poteva ripartire dal valore arrotondato.

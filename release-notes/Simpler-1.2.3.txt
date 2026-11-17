@@ -1,0 +1,22 @@
+SIMPLER 1.2.3  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- LIBRERIA IN BASSO A RIGHE INTERE: trascinando il bordo superiore la libreria scatta tra 1, 2 e 3 righe di
+  caselle (mai righe tagliate a metà, massimo 3). Doppio clic sul bordo: riga successiva (1 → 2 → 3 → 1).
+  Su schermi piccoli resta comunque almeno un po' di vista 3D.
+- SELEZIONE A RETTANGOLO E A LAZO nella barra in alto a sinistra della vista:
+  · "▭ Rettangolo": tieni premuto il tasto sinistro e trascina un rettangolo;
+  · "◌ Lazo": tieni premuto il tasto sinistro e disegna una forma libera.
+  Viene selezionato ogni pezzo (luci comprese) il cui centro, come lo vedi a schermo, cade dentro la forma.
+  Ctrl o Maiusc aggiungono alla selezione, Alt toglie. Un clic semplice seleziona ancora il singolo pezzo.
+  Mentre uno dei due è attivo il tasto sinistro disegna (destro e centrale muovono ancora la vista; il gizmo è in
+  pausa); clicca di nuovo il pulsante o premi Esc per tornare alla navigazione normale.
+- L'EDITOR MATERIALE SEGUE IL CLIC: con l'editor materiale (o l'elenco dei materiali della scena) aperto a destra,
+  cliccando un oggetto nella vista si apre il materiale della superficie cliccata (l'albero a sinistra si posiziona
+  sull'oggetto come prima). Con le proprietà dell'oggetto aperte resta tutto come prima.
+- TRASCINA LA SFERA DI ANTEPRIMA sopra un oggetto nella vista: gli applica il materiale dell'editor, esattamente
+  come dalla libreria in basso (sul pezzo sotto il mouse; Maiusc: tutto il gruppo).
+- Durante il trascinamento di un materiale (libreria, Poly Haven, sfera dell'anteprima) accanto al puntatore c'è
+  una pallina con l'anteprima del materiale e il suo nome.

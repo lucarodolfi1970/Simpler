@@ -1,0 +1,6 @@
+SIMPLER 1.38.1  —  25 ottobre 2026
+==================================
+
+- L'ecosistema è ora figlio dell'oggetto su cui è messo, come i decal. Se sposti, ruoti o scali l'oggetto, la vegetazione lo segue. Copiando l'oggetto si copia anche l'ecosistema, ed eliminandolo si elimina pure quello.
+  - «Altra disposizione», Densità e Scala rifanno l'ecosistema sull'oggetto a cui appartiene, anche se è una copia. Le piante crescono sempre verso l'alto, quindi su un oggetto inclinato tornano verticali.
+  - I progetti salvati con la 1.38.0 si sistemano da soli all'apertura: ogni ecosistema diventa figlio del suo oggetto e non si muove.

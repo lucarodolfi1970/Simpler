@@ -1,0 +1,8 @@
+SIMPLER 1.13.59  —  23 ottobre 2026
+===================================
+
+LUCE DALL'ACQUA: NON PIÙ BRUCIATA
+---------------------------------
+- Trovata la causa dell'effetto «bruciato» con le lampade sott'acqua (e in parte anche con il sole): le immagini della luce venivano scritte su file passando per una trasformazione di colore, come se fossero una fotografia. La luce debole tornava indietro fino a 10 volte più forte (0,01 diventava 0,10), quella forte quasi uguale: fondali e pareti uniformemente chiari, contrasto perso.
+- Ora sono salvate come dati. Verificato con una superficie d'acqua piatta e una lampada sotto: la luce che la superficie rimanda sul fondo corrisponde alla formula di Fresnel (riflessione totale oltre 48,6°) entro il 4%, al centro, a 1,5 m e a 3 m.
+- Era presente dalla prima versione di questa luce (1.13.50): con questa correzione tutte le scene, anche col sole, hanno la luce riflessa giusta.

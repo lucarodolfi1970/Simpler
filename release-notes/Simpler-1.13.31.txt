@@ -1,0 +1,15 @@
+SIMPLER 1.13.31  —  23 ottobre 2026
+===================================
+
+VETRI COLORATI CHE PROIETTANO IL LORO COLORE
+--------------------------------------------
+- Un vetro con una texture nel canale Colore (una vetrata, un mosaico) colora la luce che lo attraversa: sul pavimento e intorno si vedono i suoi colori, come con le finestre di una chiesa. Prima la luce passava bianca.
+- Vale per il sole e per le luci della scena, con o senza «Parete sottile», anche per i vetri dei progetti già salvati.
+
+VETRO SU UN PIANO
+-----------------
+- Se il vetro è su un foglio senza spessore (un piano, una lastra) e «Parete sottile» è spenta, l'editor lo dice e propone «Attiva parete sottile»: come vetro pieno un piano sembra uno specchio, perché la luce entra in un blocco di vetro che non finisce mai.
+
+NOVITÀ A PORTATA DI CLIC
+------------------------
+- Nuovo pulsante «?» in alto a destra: apre e chiude le novità senza passare dalle impostazioni.

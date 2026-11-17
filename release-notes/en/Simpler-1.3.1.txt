@@ -1,0 +1,19 @@
+SIMPLER 1.3.1  —  20 October 2026
+=================================
+
+FIXES
+-----
+- "OLD" FBX FILES (version 6.x, before 2011): they can now be imported. Blender only reads FBX 7.1 and later, but
+  many programs still write the 6.1 format (Tree It, old 3ds Max/Maya presets, lots of free model sites).
+  Simpler reads them by itself: meshes, UV coordinates, normals, vertex colours, materials, textures and hierarchy
+  (e.g. Tree It oak: trunk + crown as a child). Units and up axis converted (Y up -> Z, cm -> m).
+  Animations, skeletons, lights and cameras in these files are ignored. This applies both to "Import" into the
+  scene and to "Import models into the library".
+- READABLE IMPORT ERRORS: instead of Python's "Traceback" you get a sentence with the reason and what to do
+  (e.g. "Blender can't read X: … Try re-exporting it as binary FBX 2014 or later, or as glTF/OBJ").
+
+NOTES
+-----
+- The oak.fbx file looks for "bark07.png" (bark) and "no texture.dds" (Tree It had no texture for the leaves):
+  put bark07.png next to the FBX file (or in a subfolder) and it will be found. The leaves are squares: for a
+  realistic result you need a leaf material with transparency (alpha).

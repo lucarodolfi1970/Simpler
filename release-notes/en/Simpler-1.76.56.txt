@@ -1,0 +1,14 @@
+SIMPLER 1.76.56  —  5 November 2026
+===================================
+
+Editing a terrain material no longer blocks.
+
+- Before, every edit of a material used by a terrain zone (adding a map, changing a colour) took 25-31 s: Simpler remade all the terrain materials from scratch, because each one also holds its neighbours in the border blend. It did so in SmartView too, where those materials are not shown.
+- Now the edit is immediate (0.7 s in the automatic test, before 25-31 s). The terrain materials are made once, when Cycles needs them (path tracing, final render, thumbnails), and only with the last state: ten edits in a row cost one rebuild.
+- The real-time view shows the edit at once, as before.
+- The preview of materials with very large textures (photos of cliffs or aerial shots, tens of metres) shows the whole texture on the sphere instead of a blurred patch. The material does not change.
+- Terrain border blend: a texture of tens of metres no longer decides the border with its light and dark patches (jagged borders of metres); it counts less and less above 10 m. Normal textures stay as before.
+- "Size of the large texture" is now in metres, with "m" beside the value like the other sliders.
+- Tooltips added to the sliders that had none: Size of the tone patches, Size of the patches, Contrast, Normal strength, Strength, Bump strength, Coat roughness, Softness, Temperature, Stretch X/Y, Rotation, Move X/Y. An automatic check verifies that every slider has one.
+- "Busy · please wait" in English: the names of the commands (e.g. "Edit material") are now translated.
+- New automatic checks: an edit of a terrain material must answer in less than 4 s and show in the render; every name shown in "Busy · please wait" must have its English translation.

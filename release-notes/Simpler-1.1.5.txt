@@ -1,0 +1,16 @@
+SIMPLER 1.1.5  —  18 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- Path tracing su scene grandi: l'etichetta in basso ora ha una barra di avanzamento e mostra il conteggio
+  e il tempo rimanente stimato, per esempio
+  "Caricamento delle texture · 212/480 · ≈ 1:35 rimanenti · memoria 1.7 GB · nome del file".
+  Vale per la lettura degli oggetti, il caricamento delle texture, la costruzione della struttura di
+  accelerazione e l'ottimizzazione delle texture. Il conteggio delle texture considera solo quelle usate
+  davvero dalla scena e resta visibile anche quando Cycles non indica il file in corso.
+- Texture su un disco di rete (o su una chiavetta): Simpler ne fa una copia identica sul disco locale, una
+  volta sola e in sottofondo, e le anteprime leggono quella. Anche il render finale usa le copie locali
+  (stessi pixel delle originali, lette molto più in fretta). Il progetto salvato punta sempre ai file originali.
+- Il registro del motore annota ogni fase del path tracing con il suo tempo: se una scena resta lenta, si vede
+  esattamente dove.

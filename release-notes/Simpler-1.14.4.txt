@@ -1,0 +1,8 @@
+SIMPLER 1.14.4  —  24 ottobre 2026
+==================================
+
+PUNTINI SU PARALUMI, SALIERE E VETRI CON MAPPA DI OPACITÀ
+---------------------------------------------------------
+- Trovata la causa: non la luce né il vetro, ma il «Ritaglio netto» dell'opacità. Questi modelli fanno il vetro smerigliato o inciso con una mappa di opacità a sfumature di grigio (non con la trasparenza): tagliata al 50% diventava sale e pepe, punti pieni e vuoti più fini dei pixel, che brillavano come puntini bianchi con qualsiasi numero di campioni (anche a 2048). Per questo cambiava con le texture ridotte della vista e restava nel finale con le texture originali.
+- Ora Simpler riconosce da sé le mappe a sfumature (più del 4% della mappa tra 30% e 70%) e le usa con trasparenza graduale, anche con «Ritaglio netto» acceso. Foglie e griglie, fatte di pieno e vuoto, restano tagliate come prima.
+- I progetti già fatti vengono corretti all'apertura, una volta sola.

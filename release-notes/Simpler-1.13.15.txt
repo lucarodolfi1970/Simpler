@@ -1,0 +1,13 @@
+SIMPLER 1.13.15  —  22 ottobre 2026
+===================================
+
+NOVITÀ PIÙ CHIARE
+-----------------
+- In alto un elenco a discesa con la versione: ogni voce ha un'icona del tema principale, il numero e un riassunto
+  di due righe. Ci sono tutte le versioni, dalla 1.0.0 a oggi, ciascuna con il suo riassunto in italiano e in
+  inglese.
+- Sotto, il riassunto della versione scelta con la sua icona, e le prime righe del dettaglio; "Mostra tutto" apre il
+  testo completo.
+- Le novità si chiudono da sole appena fai qualcos'altro: un clic nella vista, nell'albero, nella libreria o in un
+  altro pannello. Non serve più cercare la ×.
+- Al posto della griglia di numeri di versione c'è solo l'elenco a discesa.

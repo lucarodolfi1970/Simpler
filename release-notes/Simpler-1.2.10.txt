@@ -1,0 +1,22 @@
+SIMPLER 1.2.10  —  20 ottobre 2026
+==================================
+
+CORREZIONI
+----------
+- DOWNLOAD DA POLY HAVEN BLOCCATI A 0% (il caso di Overhead Crane): cliccando di nuovo un materiale o un modello
+  mentre si stava già scaricando, il motore si bloccava su se stesso e il download restava fermo per sempre
+  (finché non si riavviava Simpler). Corretto, sia per i modelli sia per i materiali.
+
+NOVITÀ
+------
+- Download più robusti:
+  · ogni file viene ritentato da solo fino a 3 volte (dopo 2 e 5 secondi) se la connessione cade o un errore;
+  · una connessione che non manda dati per 45 secondi viene chiusa e ritentata;
+  · se per 2 minuti e mezzo non arriva nulla, il download viene abbandonato e lo "slot" si libera: un nuovo clic lo
+    fa ripartire;
+  · i file già arrivati restano sul disco: un nuovo tentativo riparte da dove si era fermato.
+- La percentuale nella barra di stato ora avanza durante il download di ogni file (prima saltava a fine file, per
+  questo si vedeva 0% a lungo sui file grandi); dopo 20 secondi senza dati lo dice.
+- Se il download non riesce: messaggio con il motivo in parole semplici (nessuna connessione a Internet, Poly Haven
+  non risponde, file non più disponibile, Poly Haven sovraccarico, proxy/antivirus che blocca HTTPS, disco pieno…)
+  e la domanda "Vuoi riprovare adesso?".

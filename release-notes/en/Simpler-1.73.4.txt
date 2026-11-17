@@ -1,0 +1,9 @@
+SIMPLER 1.73.4  —  30 October 2026
+==================================
+
+Snow and sea: snow no longer goes on the sea.
+
+- Before, the snow mantle covered the ground under the sea too. It came out of the water as a white slab with a dark edge where the sea surface cut it.
+- Now the snow stops where the water reaches: no snow below sea level or in the band wet by the waves, because it melts in water. Above, it starts with a fade.
+- This applies to the snow mantle (the real thickness), to the white on the surfaces in path tracing and to the real-time view.
+- When you change the sea (level, wave height, wet band) the mantle is rebuilt by itself.

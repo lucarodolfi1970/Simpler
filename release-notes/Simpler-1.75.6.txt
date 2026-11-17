@@ -1,0 +1,13 @@
+SIMPLER 1.75.6  —  31 ottobre 2026
+==================================
+
+Qashqai: mantello di neve, inserimento dalla libreria e miniatura.
+
+- Mantello di neve 3D assente sulla Qashqai (solo il bianco).
+  - Causa 1: con «Non fa riparo» acceso, il modello veniva tolto anche dal calcolo del mantello. Ora «Non fa riparo» lascia passare la pioggia e la neve sotto l'auto, ma il mantello sull'auto c'è.
+  - Causa 2: la Qashqai ha 24 milioni di triangoli e il mantello li prendeva tutti, sedili e motore compresi: la memoria non bastava. Ora prende solo le superfici rivolte verso l'alto e vicine alla cima del modello, cioè il tetto e il cofano, non i sedili sotto il tetto.
+  - Per esempio su un'auto: mantello sul tetto e sul cofano (18 mila punti).
+- La Qashqai inserita dalla libreria finiva a circa un chilometro di altezza, e la sua miniatura era vuota.
+  - Causa: un pezzo nascosto nel render («Glass_Clear», in millimetri dentro un gruppo in scala 0,001) non viene aggiornato da Blender. Contava come un oggetto largo 4 km, quindi la base del modello e l'inquadratura della miniatura erano sbagliate.
+  - Ora la posizione dei pezzi si calcola dai gruppi e i pezzi nascosti non contano. Provato: la Qashqai va a terra.
+  - Per rifare la miniatura salva di nuovo il modello nella libreria («Aggiorna la libreria»).

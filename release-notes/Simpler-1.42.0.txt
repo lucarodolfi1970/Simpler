@@ -1,0 +1,12 @@
+SIMPLER 1.42.0  —  26 ottobre 2026
+==================================
+
+- Pioggia nell'Ambiente: superfici bagnate e pozzanghere, uguali nella vista in tempo reale e nel path tracing.
+  - Bagnato: asfalto, pietra, legno e tessuti diventano più scuri e lucidi; metallo e vernici prendono solo un velo d'acqua. I muri si bagnano meno del terreno, le parti rivolte in basso quasi niente.
+  - Pozzanghere: quanta parte del terreno è coperta d'acqua, da poche pozzanghere sparse alla strada allagata. Si formano solo sulle superfici piane rivolte verso l'alto, con un alone bagnato attorno.
+  - Dimensione pozzanghere: piccole e fitte o grandi e distanti.
+  - Trasparenza dell'acqua: da specchio scuro (acqua profonda che riflette cielo, edifici e sole) ad acqua bassa in cui si vede il fondo.
+  - Avanzate: Sposta X e Sposta Y spostano le pozzanghere, per toglierne una da dove non la vuoi.
+  - Mentre trascini un cursore la vista in tempo reale si aggiorna subito.
+  - Erba e alberi delle distribuzioni si bagnano ma non fanno pozzanghere; vetro e acqua restano come sono.
+  - I materiali dei modelli non vengono toccati: con la pioggia a zero tutto torna esattamente com'era. La pioggia resta quando cambi preset dell'Ambiente e funziona anche con un cielo HDRI.

@@ -1,0 +1,4 @@
+SIMPLER 1.38.11  —  26 ottobre 2026
+===================================
+
+- All'apertura di un progetto, un'auto di uno scatter poteva apparire al contrario per qualche istante e poi girarsi da sola. La vista in tempo reale disegnava i pezzi prima di sapere come il modello è girato al suo interno. Ora quei pezzi aspettano come piccoli coni finché l'orientamento non arriva, di solito una frazione di secondo. Se non arriva entro 8 secondi vengono disegnati comunque.

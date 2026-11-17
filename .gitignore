@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+__pycache__/
+/dist/
+/test_out/
+/Simpler setup/Output/
+/Simpler setup/build.log
+/Simpler setup/sign.cmd

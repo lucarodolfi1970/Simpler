@@ -1,0 +1,8 @@
+SIMPLER 1.38.10  —  25 October 2026
+===================================
+
+- Cars turned backwards when a project is opened again: fixed at the root. When a model was turned in the library (Straighten, 90°, 180°), Simpler updated the distributions only of the project open at that moment, and by adding the last turn. Projects saved earlier kept the old orientation: opened again, a car was backwards again, and turning it once more only moved the error.
+  - Now, at every opening and after every turn in the library, the originals of the distributions are aligned to the library's current orientation, absolutely and no longer by adding turns. The pieces follow, in real time and in the path tracer.
+  - Copies placed by hand in the scene stay as they are.
+  - The engine log says which models were aligned and by how many degrees.
+- Decals in the real-time view: if the view reloaded while the engine was preparing a decal, the decal was dropped and never asked for again. Now it goes to the new node. If a decal cannot be shown, the reason goes to the app log (app.log, «view:» lines).

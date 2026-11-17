@@ -1,0 +1,46 @@
+SIMPLER 1.67.5  —  29 ottobre 2026
+==================================
+
+Correzioni dal controllo completo e prestazioni.
+
+Vista in tempo reale
+- Niente più blocchi di secondi quando entra un modello, cambia un materiale o lo selezioni: tutto ciò che richiede nuovi shader viene preparato in sottofondo prima del disegno. Il box «Occupato» compare solo se l'attesa supera 0,4 s, non più a ogni controllo.
+- Accendere o spegnere la luce di riempimento non blocca più la vista.
+- Con un oggetto selezionato la vista non rifà più a ogni fotogramma un controllo su tutti i materiali.
+- Pioggia:
+  - le gocce posate non fanno più comparire rettangoli attorno a decal e foglie trasparenti;
+  - spegnendola, gli oggetti «Niente pioggia» non restano bagnati e i materiali vengono ricompilati una volta sola invece di due;
+  - una nuova acqua riceve subito i cerchi.
+- Gizmo: il settore per spostare su un piano resta visibile e afferrabile anche con la vista quasi di taglio, fino a circa 3°.
+
+Render finale
+- Cliccando un formato (Full HD, 4K…) cambia anche l'altezza; prima restava quella vecchia.
+- Larghezza, altezza e campioni vengono letti alla conferma: un valore lasciato a metà mentre si scrive non finisce più nel render, e un valore non valido si colora di rosso.
+- Il tempo rimanente compare anche nei render molto lenti.
+- Il menu della qualità mostra «Personalizzata» quando lo è.
+
+Materiali
+- Nuovo «Adatta all'oggetto» (in UV): un'immagine intera sulla parte dell'oggetto con quel materiale, stirata alla sua forma e centrata. Utile per un'immagine fatta per quella sagoma, come una vetrata; poi si ritocca.
+- Annulla e Ripeti di «Con la pioggia» funzionano; la scelta resta anche con «Ripristina originale».
+- Le luci importate con nodi propri (per esempio IES) non perdono più i loro nodi quando si ritocca la luce.
+
+Pioggia e neve
+- Passando dalla pioggia alla neve, l'acqua che gela mantiene le sue onde.
+- Gocce che cadono:
+  - nel path tracing della vista aspettano che la camera sia ferma prima di essere ricalcolate e rispettano «Ferma i ricalcoli»;
+  - nelle scene grandi si calcolano molto più in fretta;
+  - un errore nelle gocce non fa più fallire l'immagine;
+  - spegnendo la pioggia liberano la memoria.
+- Il mosso dei fiocchi e delle gocce non resta acceso dopo aver riaperto un progetto.
+- Le distribuzioni «Niente pioggia» non ricevono schizzi.
+
+Ecosistemi («Niente pezzi dietro i modelli»)
+- Anche i muri e le facciate accanto alla camera nascondono la superficie dietro di loro.
+- Un oggetto deformato o un materiale diventato vetro vengono letti di nuovo, mai vecchie forme.
+- Una texture opaca collegata all'Alpha non rende più l'oggetto trasparente.
+- Gli 1,5 m valgono per il modello intero, non per il singolo pezzo.
+- Molto più veloce: il calcolo si fa una volta sola fra stima e posa, le copie già nascoste dietro altre vengono saltate e c'è un tetto di triangoli.
+
+Interfaccia
+- I preset di pioggia e neve non possono più avere due nomi uguali.
+- Un file delle impostazioni danneggiato non manda più in errore il pannello.

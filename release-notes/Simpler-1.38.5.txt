@@ -1,0 +1,7 @@
+SIMPLER 1.38.5  —  25 ottobre 2026
+==================================
+
+- La miniatura di un ecosistema ora è fatta con il path tracer, sul banco di prova. L'inquadratura è ravvicinata e piena: da poco sopra, con i quattro angoli dell'immagine sempre dentro il banco, quindi niente bordi e niente sfondo.
+  - La luce è quella del progetto, con il suo sole, il suo cielo e la sua esposizione, se il sole è alto. Se è notte o tramonto si usa una luce di giorno semplice.
+  - Il render richiede qualche decina di secondi e non blocca Simpler. Nel frattempo la tessera mostra l'immagine della vista, poi si aggiorna da sola.
+  - Per gli ecosistemi salvati prima: con il banco di prova nella scena, tasto destro sulla tessera ▸ «Rifai la miniatura dal banco di prova».

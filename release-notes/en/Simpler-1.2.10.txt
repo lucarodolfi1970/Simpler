@@ -1,0 +1,23 @@
+SIMPLER 1.2.10  —  20 October 2026
+==================================
+
+FIXES
+-----
+- POLY HAVEN DOWNLOADS STUCK AT 0% (the Overhead Crane case): clicking a material or a model again while it was
+  already downloading made the engine deadlock and the download stayed stuck forever (until Simpler was
+  restarted). Fixed, for both models and materials.
+
+NEW FEATURES
+------------
+- More robust downloads:
+  · each file is retried automatically up to 3 times (after 2 and 5 seconds) if the connection drops or an error
+    occurs;
+  · a connection that sends no data for 45 seconds is closed and retried;
+  · if nothing arrives for 2 and a half minutes, the download is abandoned and the "slot" is freed: a new click
+    restarts it;
+  · files already received stay on disk: a new attempt resumes from where it stopped.
+- The percentage in the status bar now advances during the download of each file (before, it jumped at the end of
+  the file, which is why 0% was shown for a long time on large files); after 20 seconds without data it says so.
+- If the download fails: a message with the reason in plain words (no Internet connection, Poly Haven not
+  responding, file no longer available, Poly Haven overloaded, proxy/antivirus blocking HTTPS, disk full…) and the
+  question "Try again now?".

@@ -1,0 +1,10 @@
+SIMPLER 1.16.1  —  24 ottobre 2026
+==================================
+
+CIELO: CIRRI, NUVOLE FINO ALL'ORIZZONTE, ALBA E CREPUSCOLO
+----------------------------------------------------------
+- Cirri: nella scheda Nuvole il cursore «Cirri». Strisce sottili altissime (8–10 km), stirate e curvate dal vento, a gruppi: illuminate dal sole com'è lassù, sono le ultime nuvole a restare rosa e arancio dopo il tramonto. Leggere (dipinte sul cielo), con o senza nuvole volumetriche, anche nella vista in tempo reale.
+- Nuvole fino all'orizzonte: con le nuvole volumetriche, oltre la fine dello strato 3D (circa 30 km) continuano le nuvole dipinte, illuminate allo stesso modo. Prima verso l'orizzonte il cielo restava vuoto.
+- Le nuvole dipinte ricevono la luce del sole alla loro quota: dopo il tramonto restano accese ancora un po'.
+- Due ambienti nuovi: «Alba» (sole appena sorto, cirri, foschia leggera) e «Crepuscolo» (sole 3° sotto l'orizzonte, cirri rosa su cielo blu-viola, prime stelle). «Tramonto» ora ha anche i cirri.
+- Altocumuli più fini, a piccoli fiocchi («cielo a pecorelle»).

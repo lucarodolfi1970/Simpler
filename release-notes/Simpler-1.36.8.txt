@@ -1,0 +1,4 @@
+SIMPLER 1.36.8  —  25 ottobre 2026
+==================================
+
+- Scatter: un'auto (o un altro modello) poteva restare minuscola nella vista in tempo reale, mentre nel path tracer era giusta. Succedeva con i modelli che hanno una scala propria, come gli FBX in pollici (38 volte più piccoli). Il modello pronto per la vista è condiviso tra le copie messe in scena e le distribuzioni; se era stato preparato per primo per una copia in scena, non portava la rotazione e la scala del modello che servono alla distribuzione. Ora il motore le prende ogni volta dal modello della distribuzione, e la vista le richiede se le mancano.

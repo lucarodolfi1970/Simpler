@@ -1,0 +1,9 @@
+SIMPLER 1.75.62  —  1 November 2026
+===================================
+
+Real-time view: no more endless loop when a library model cannot be prepared.
+
+- After dragging a material onto a piece of the Qashqai (a library model), the car vanished from the view and «Preparing the models for the view» flashed endlessly. The view stayed stuck until you opened a new scene.
+- The cause of the loop: the engine answered «Model not in the scene» and the view, after 1.5 seconds, forgot the error and asked again, for ever.
+- Now the view retries at most three times, further and further apart (1.5 s, 6 s, 24 s), then leaves it until the next preparation of the view. If the model no longer appears in the scene but a prepared version of it already exists, the engine uses that: the car stays visible instead of vanishing.
+- I have not yet worked out why the engine no longer found the model after the material was dragged. Now, if it happens again, the log has a line with all the data needed (object, model, key).

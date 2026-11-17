@@ -1,0 +1,13 @@
+SIMPLER 1.75.9  —  31 October 2026
+==================================
+
+SmartView: set up the scene without waiting.
+
+- New orange «SmartView» button in the top bar, next to the double arrow.
+  - On, the view is no longer recomputed by itself: no sea coast, rain shelter, snow mantle, flakes or drops, no path tracing.
+  - The real-time shadows go off (they come back as before when you turn it off).
+  - Inserting models, moving them, moving the view and changing materials work as always; what is not recomputed stays as it was.
+  - The view shows the reminder «SmartView · view on hold».
+  - Off, shadows and recomputations come back and what you changed meanwhile is computed once.
+  - Switching to path tracing (button or space bar) turns SmartView off by itself.
+  - It stays on from one time to the next, like the «Lighten» buttons.

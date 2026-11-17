@@ -1,0 +1,7 @@
+SIMPLER 1.13.19  —  22 October 2026
+===================================
+
+LIBRARY
+-------
+- The folders of Simpler (Simpler materials with their subfolders, and Primitives) are red instead of yellow: you
+  see at once that they cannot be moved, renamed or take a paste.

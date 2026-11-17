@@ -1,0 +1,8 @@
+SIMPLER 1.8.2  —  21 October 2026
+=================================
+
+- MOVE ON SURFACES: an object tilted on a sloping surface and then put back on the floor (or on any level
+  surface) goes back upright. Previously it stayed crooked: the tilt it had picked up remained. Now the object
+  always follows the surface under the mouse, relative to its "up" direction, and rests on its true base.
+- "ANT" SPEED: new button to the left of "walking", with steps 5 times smaller (wheel and arrow keys), for
+  getting close to details.

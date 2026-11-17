@@ -1,0 +1,10 @@
+SIMPLER 1.13.10  —  22 October 2026
+===================================
+
+DISTRIBUTIONS: A NEW DISTRIBUTION OF THE SAME MODELS IS IMMEDIATE
+-----------------------------------------------------------------
+- Every new distribution loaded the models from the library again, and took longer each time: in your test with 7
+  buildings 9 seconds the first, 30 the second, 60 the third. Also the textures ended up in memory two and three
+  times, and the view had to prepare the models again.
+- Now, if a model is already in another distribution, the new one uses a copy that shares geometry, materials and
+  textures: the distribution is made at once and the view has nothing new to prepare.

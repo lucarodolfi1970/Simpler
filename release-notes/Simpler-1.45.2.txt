@@ -1,0 +1,5 @@
+SIMPLER 1.45.2  —  26 ottobre 2026
+==================================
+
+- Pioggia: nuovo cursore «Sfumatura pennello» per le pozzanghere dipinte, nelle Avanzate della Pioggia (compare con il pennello acceso o se ci sono pozzanghere dipinte): bordi netti (0%) o sfumati nel terreno bagnato (100%). Vale per tutte, anche quelle già dipinte; di serie 50%, più morbide di prima.
+- Risorse: «Chi usa la memoria video» contava i programmi su tutte le schede video insieme (quella del processore compresa), e Windows (dwm) poteva risultare 7,3 GB con 5,4 GB usati in tutto. Ora conta solo la scheda che fa il render.

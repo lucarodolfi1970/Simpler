@@ -1,0 +1,10 @@
+SIMPLER 1.33.0  —  25 October 2026
+==================================
+
+- Decals with maps, like materials. The decal panel has a new «Maps» section:
+  · Normal: gives the decal relief (a crack on a wall, an engraving, the rivets of a plate). «Normal strength» sets how much; «DirectX normal» turns the relief over if it looks raised instead of carved (maps made for DirectX). With the wand button Simpler makes it from the decal's picture on your computer (DeepBump), no need to have one ready.
+  · Roughness and Metal: instead of the sliders, which disappear when there is a map.
+  · Opacity: white shows, black is transparent, instead of the picture's transparency.
+  · Emission (in Advanced, under Brightness): only the light parts of the map glow, in the decal's colour; for neon and luminous writing. Setting the map turns the brightness on by itself (1); Brightness sets the strength.
+  The maps are saved in the project with the decal and show both in real time and in the path tracing. «Stain» decals (that darken the surface under them) use no maps.
+- The normal changes the light, not the shape: the crack looks carved, but it casts no real shadow and seen very much from the side it stays flat.

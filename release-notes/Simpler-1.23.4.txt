@@ -1,0 +1,4 @@
+SIMPLER 1.23.4  —  24 ottobre 2026
+==================================
+
+- Barra in alto: i due pulsanti con il menu mostrano sempre icona, nome e triangolino, come gli altri menu a tendina: «Importa/Correggi ▾» e «Apri ▾». Gli altri pulsanti nascondono il nome quando la finestra è stretta, come prima.

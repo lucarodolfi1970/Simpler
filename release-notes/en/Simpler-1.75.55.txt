@@ -1,0 +1,8 @@
+SIMPLER 1.75.55  —  1 November 2026
+===================================
+
+Simpler's windows stay above Simpler, not above every program. «Optimize polygons» shows the progress inside a piece too.
+
+- Simpler's windows (Optimize polygons, the AI image comparison, the texture viewer) were «always on top» across all of Windows: opening another program, such as File Explorer, they stayed over it and covered it. Now they stay above Simpler's window, but other programs can go over them. This applies to the start-up window too.
+- New automatic check: it fails if a window that stays on top of every program comes back into the code. The only exceptions are the windows shown when Simpler does not yet have its main window: the license agreement at first start, and a message with no main window.
+- «Optimize polygons» progress: while reducing a piece, Blender does not say how far it has got; with a 5-million-triangle piece the bar stayed still for 30 seconds. Now Simpler measures how many triangles a second your computer reduces and estimates the progress of the piece being worked on: the bar moves and «about N s» appears next to it. The measured speed is kept for later computations in the same session. When there is nothing to measure, such as while it prepares the 3D preview, the bar shows a moving stripe, so you can see it is working.

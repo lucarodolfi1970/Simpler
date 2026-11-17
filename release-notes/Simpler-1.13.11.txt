@@ -1,0 +1,13 @@
+SIMPLER 1.13.11  —  22 ottobre 2026
+===================================
+
+DISTRIBUZIONI: SI VEDE COSA STA SUCCEDENDO
+------------------------------------------
+- Mentre Simpler crea una distribuzione (la prima con modelli grandi richiede qualche secondo: i modelli arrivano
+  dalla libreria) compare la piccola barra in basso nella vista: "Creo la distribuzione…", con il modello che sta
+  caricando e quanti ne mancano (per esempio "3 di 7 · Building_C"). Modificandone una già fatta: "Aggiorno la
+  distribuzione…".
+- Nell'albero della scena compare subito la riga "Nuova distribuzione · in preparazione…", che diventa la
+  distribuzione vera appena è pronta. Prima per un po' non si vedeva niente e sembrava che la distribuzione non ci
+  fosse.
+- La barra compare solo se l'operazione dura più di un istante: le modifiche veloci restano pulite.

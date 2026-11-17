@@ -1,0 +1,15 @@
+SIMPLER 1.13.31  —  23 October 2026
+===================================
+
+COLOURED GLASS THAT CASTS ITS COLOUR
+------------------------------------
+- A glass with a texture in the Colour channel (a stained glass window, a mosaic) colours the light that passes through it: its colours appear on the floor and around, as with church windows. Before, the light passed white.
+- It works for the sun and the lights of the scene, with or without «Thin wall», also for the glass of projects already saved.
+
+GLASS ON A PLANE
+----------------
+- If the glass is on a sheet without thickness (a plane, a pane) and «Thin wall» is off, the editor says so and offers «Turn on thin wall»: as solid glass a plane looks like a mirror, because the light enters a block of glass that never ends.
+
+WHAT'S NEW AT ONE CLICK
+-----------------------
+- New «?» button at the top right: opens and closes the news without going through the settings.

@@ -1,0 +1,14 @@
+SIMPLER 1.11.3  —  21 ottobre 2026
+==================================
+
+BUG CORRETTI
+------------
+- VETRO E ACQUA NERI (anche da sott'acqua, e una luce sotto l'acqua non si vedeva): nel progetto le impostazioni di
+  Rendering avevano "Rimbalzi totali" a 0. Cycles conta ogni rimbalzo nel totale: a 0 il raggio si fermava sulla
+  superficie dell'acqua o del vetro, che diventava nera qualunque fosse il materiale. Ora, se nella scena ci sono
+  vetri o acqua, il path tracing usa per il totale almeno il valore di "Rifrazioni": l'acqua è trasparente da sopra
+  (si vede il fondale illuminato) e da sotto (fondale e cielo attraverso la superficie, come nella realtà).
+  Costo: continuano solo i raggi che attraversano davvero vetro o acqua, gli altri restano ai loro limiti.
+  Il vaso dell'appartamento era trasparente perché quel progetto aveva i rimbalzi normali.
+- Pannello Rendering: un avviso quando "Totali" è sotto "Rifrazioni" e quando "Diffusi" è a 0 (senza luce indiretta
+  le zone in ombra, anche il fondale in ombra, restano nere).

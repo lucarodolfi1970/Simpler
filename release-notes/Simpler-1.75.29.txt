@@ -1,0 +1,6 @@
+SIMPLER 1.75.29  —  1 novembre 2026
+===================================
+
+Licenze e crediti: immagini incluse verificate.
+
+- Texture del suolo «piastrelle», immagine di avvio, immagine della procedura di importazione, schede delle funzioni AI e foto di riferimento dei cieli: verificate da te per l'uso in Simpler. Nella pagina «Licenze e crediti» e nell'allegato del contratto di licenza non sono più segnate come «da confermare» o «da sostituire»; tolta anche la nota corrispondente fra quelle per la distribuzione.

@@ -1,0 +1,7 @@
+SIMPLER 1.75.30  —  1 novembre 2026
+===================================
+
+Contratto di licenza: in italiano e in inglese nella stessa finestra; tolti i contatti.
+
+- La finestra del contratto (al primo avvio e da File ▸ Licenze e crediti) ha in alto due pulsanti, «Italiano» ed «English»: si passa da una lingua all'altra senza cambiare la lingua di Simpler. Si apre nella lingua di Simpler; il testo italiano resta quello che prevale (punto 16).
+- Tolto il punto 17 «Contatti» (con il link al sito) in entrambe le lingue.

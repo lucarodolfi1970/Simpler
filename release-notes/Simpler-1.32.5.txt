@@ -1,0 +1,5 @@
+SIMPLER 1.32.5  —  25 ottobre 2026
+==================================
+
+- Nell'albero della scena un pallino viola sull'icona segnala gli oggetti che contengono una decal: la decal sta sotto il pezzo su cui è proiettata (per esempio il vetro del cruscotto di un'auto), spesso dentro righe chiuse del modello. Il pallino compare sul pezzo e su tutti i livelli sopra, così si segue la strada fino alla decal; passandoci sopra si legge quante decal contiene.
+- Quando metti una decal nuova (o crei un oggetto che finisce dentro un altro) le righe sopra di lei si aprono da sole e l'albero scorre fino a lei: prima la decal veniva selezionata ma restava nascosta dentro la riga chiusa del pezzo.

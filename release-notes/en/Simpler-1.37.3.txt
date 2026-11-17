@@ -1,0 +1,4 @@
+SIMPLER 1.37.3  —  25 October 2026
+==================================
+
+- «The story» redone: one box as wide as the library, with the orange title «Blender, but simpler», two lines on the spirit of Simpler, Luca Rodolfi's signature and the link to the site.

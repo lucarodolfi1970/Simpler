@@ -1,0 +1,7 @@
+SIMPLER 1.75.30  —  1 November 2026
+===================================
+
+License agreement: in Italian and English in the same window; contacts removed.
+
+- The agreement window (at the first start and from File ▸ Licenses and credits) has two buttons at the top, «Italiano» and «English»: you switch language without changing Simpler's language. It opens in Simpler's language; the Italian text is still the one that prevails (section 16).
+- Section 17 «Contact» (with the link to the website) removed in both languages.

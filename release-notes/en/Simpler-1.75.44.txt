@@ -1,0 +1,10 @@
+SIMPLER 1.75.44  —  1 November 2026
+===================================
+
+AI video: the motion text belongs to the project.
+
+- The «Motion» text is now saved inside the project. A new project starts with the box empty, and opening a project again brings back its text. Before, the text stayed the same for every project.
+- «Cancel» of «Improve with AI» also applies only in the project where you used it.
+- A small × in the corner of the box clears the text, and «Cancel» brings it back.
+- With a long text the box grows to about 12 lines and then a vertical scrollbar appears.
+- Model, resolution, length and audio instead stay your usual choices, the same for all projects.

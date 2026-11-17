@@ -1,0 +1,10 @@
+SIMPLER 1.76.16  —  2 November 2026
+===================================
+
+The sea at the foot of the terrain; the clouds above the scene.
+
+- Adding the ocean with a terrain in the scene, the sea level goes by itself to the lowest edge of the terrain: the whole terrain rises out of the sea, with coasts at its edges. Before, the sea stayed at level 0 (the model's) and flooded the valleys.
+- The sea follows the terrain when you change it, make it again or move it, and goes back with Ctrl+Z.
+- If you move «Sea level» yourself, your value stays. To go back to the foot of the terrain: Ocean > Advanced > «At the foot of the terrain». The seas of projects already saved stay where they were.
+- The «Sea level» slider widens when the level is far from zero (hundreds of metres with mountains).
+- Volumetric clouds always stay at least 100 m above the highest point of the scene and move if a terrain is raised or made taller. Before, a raised terrain could enter the cloud layer: with the camera inside it, path tracing was all grey.

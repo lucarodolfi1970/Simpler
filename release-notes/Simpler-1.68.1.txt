@@ -1,0 +1,11 @@
+SIMPLER 1.68.1  —  29 ottobre 2026
+==================================
+
+- La libreria dei materiali non cambia più i progetti. Prima, in un progetto vecchio, bastava cliccare un materiale della libreria (per esempio Bianco) perché la sua copia nel progetto venisse ricostruita con la versione salvata nel frattempo da un altro progetto. Ora la copia del progetto resta sempre com'è: la libreria vale solo per i nuovi usi, quando trascini un materiale su un oggetto.
+- I materiali di Simpler sono diventati materiali tuoi: la cartella «Simpler» è una cartella normale, come le tue, e i materiali dentro si modificano, rinominano, spostano ed eliminano come gli altri. Al primo avvio vengono scritti nella cartella dei materiali della tua libreria.
+- Un materiale di Simpler sovrascritto con un altro nome diventa un materiale a sé e l'originale torna com'era. Nel tuo caso Bianco torna bianco e «Bianco - vetrata 1» resta in libreria accanto a lui; i progetti che lo usano restano collegati a «Bianco - vetrata 1».
+- «Salva» chiede conferma prima di sostituire un materiale nella libreria e spiega che progetti e modelli già fatti non cambiano.
+- «Salva come nuovo…»: il materiale del progetto diventa il nuovo materiale della libreria e gli oggetti tengono il loro aspetto. Prima tornavano al materiale di partenza e perdevano le modifiche.
+- I nuovi oggetti (cubo, sfera…) prendono un bianco proprio di Simpler, non il Bianco della libreria: modificarlo o eliminarlo non cambia gli oggetti nuovi.
+- Impostazioni > Cartelle: «Ripristina i materiali di Simpler» rimette quelli eliminati e riporta all'originale quelli modificati; la versione modificata resta come «nome (modificato)». I tuoi materiali e i progetti non cambiano.
+- Le miniature della libreria mostrano sempre il materiale della libreria, non la copia modificata nel progetto aperto.

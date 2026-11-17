@@ -1,0 +1,5 @@
+SIMPLER 1.18.2  —  24 ottobre 2026
+==================================
+
+- «Colori da una foto» non sceglie più gli strati al 90%: davano un'unica coltre uniforme, troppo fitta. Ora, a seconda dei colori, sceglie grandi cumuli (35% o 70%) o altocumuli (60%), con squarci e forme. Vale per i preset e per le tue foto.
+- I preset Nuvoloso danno il meglio quando la tabella dei colori ha finito le nuvole al 70% (riprende da sola all'avvio, circa 15 minuti, avanzamento nella barra in basso).

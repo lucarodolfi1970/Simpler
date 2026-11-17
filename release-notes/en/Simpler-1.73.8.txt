@@ -1,0 +1,29 @@
+SIMPLER 1.73.8  —  30 October 2026
+==================================
+
+The sea with the right proportions: short waves, waves up to the horizon, no dark line.
+
+- «Huge» preset waves, above all with a calm sea next to a person.
+  - Cause: the simulation draws only the long waves. With Calm the main wave is about 7.5 m long and 15 cm high: right, but on its own it looks like a big smooth swell. A real sea also has the short waves, from a few centimetres to half a metre, and they are what mostly decides how the reflection breaks up.
+  - Measured: the slope of the waves was 7 to 13 times lower than that of a real sea for the same wind (the classic measurements of Cox and Munk). Calm: 0.0015 instead of 0.018.
+  - Now Simpler adds the missing short waves: mostly along the wind, with the shape of a real sea, scaled so that the total slope is exactly the one measured for that wind. This applies to every preset and every wind value.
+  - The ripples in the Advanced settings stay as before, on top.
+- Waves that stopped: beyond the near area the sea became a flat mirror, with an edge visible from above and the reflections of the clouds pulled into long streaks.
+  - Now the same waves of the simulation go on up to the horizon as a pattern of the surface (a map of their slopes): near in 3D, far as slopes. The edge is gone.
+  - Where even those become smaller than a pixel, the sea takes the roughness of a real sea for that wind: the sun's path widens as in reality.
+- Dark line on the horizon: the sea ended at 20 km and through the gap between its edge and the horizon the sky below the horizon showed, dark blue. Now a last flat ring reaches 200 km.
+- All of this in the real-time view too.
+- Performance:
+  - the sea grid has fewer points than before (beyond the area of the real waves it widens faster): for example 261 thousand points instead of 271 thousand, ring included;
+  - the maps are made again only when the waves change: about 0.2 s;
+  - projects already saved make the grid and the coast again once, at the first opening (about 4 s).
+
+Caustics in the sea: the method of the water material does not work on the sea; they will come another way.
+- The «Ripples» slider (Advanced) now also sets the short waves: at 35% (default) those of a real sea for that wind; lower, the sea is smoother and reflects like a mirror.
+
+Bugs in features already closed (found today):
+- Pool: the light reflected by the water on the ceiling disappeared when reopening the project and came back only by turning the switch off and on.
+  - Cause: the pictures of that light live in a temporary folder. When the project was reopened they were gone, and the check for missing textures took them for the user's textures: it reported them («24 textures not found»: axis0_….exr) and unplugged them from the materials. Simpler computed the light again, but the links stayed cut.
+  - Now those pictures are never missing textures (Simpler makes them again by itself) and are not copied into the project folder. Projects already saved with the links cut repair themselves when opened.
+  - In a pool with caustics, with 1.73.7 24 links out of 24 were cut, now none.
+- Engine stuck for good: if the Environment changed twice while the stars and the moon were downloading (night sky, the first time on a new PC or on a slow network), the engine stopped. Where the stars and the moon were already downloaded it did not happen.

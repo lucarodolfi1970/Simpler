@@ -1,0 +1,20 @@
+SIMPLER 1.13.22  —  22 ottobre 2026
+===================================
+
+SICUREZZA: SIMPLER NON PUÒ PIÙ BLOCCARE IL COMPUTER
+---------------------------------------------------
+- Cosa è successo: "Rifai la maglia" con voxel da 2 cm sul Suolo (4 × 4 km) chiedeva circa 40 miliardi di facce.
+  Blender ha riempito tutta la RAM e Windows si è fermato.
+- Prima di applicarle, Simpler stima quanta geometria creerebbero le opzioni pesanti del Displacement (Rifai la
+  maglia, suddivisione in centimetri, il tipo stesso) su tutti gli oggetti che usano il materiale. Se è troppa (oltre
+  15 milioni di facce per il remesh, 60 milioni per la suddivisione) compare un messaggio che dice quale oggetto e
+  quante facce, e propone il valore più fine che ci sta (per il Suolo: voxel da 103 cm). "No" non cambia nulla.
+- Anche se la richiesta arrivasse lo stesso (progetti vecchi, altre strade), il motore non applica un remesh o una
+  suddivisione oltre il limite. Aprendo un progetto salvato con impostazioni troppo pesanti, vengono tolte.
+- Limite di memoria: Blender e i processi che avvia (anteprime, esportazioni) possono usare al massimo i tre quarti
+  della RAM, lasciando sempre almeno 3 GB a Windows. Se una qualunque operazione chiede di più, si ferma il motore e
+  non il computer: Simpler lo dice e riparte riaprendo l'ultimo progetto salvato.
+- Esc quando il motore non risponde da più di 4 secondi: Simpler chiede se fermarlo (un calcolo di Blender come il
+  remesh non si può interrompere a metà: si ferma il motore, si libera tutta la memoria e Simpler riparte
+  dall'ultimo salvataggio).
+- Il livello massimo di suddivisione del materiale ora vale come tetto anche per tutta la scena.

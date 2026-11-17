@@ -1,0 +1,7 @@
+SIMPLER 1.75.22  —  31 ottobre 2026
+===================================
+
+Una riga gialla sottilissima per il traguardo dei campioni.
+
+- Nel grafico dei campioni del render finale c'è ora una riga orizzontale sottilissima (1 pixel), dello stesso giallo dell'area finita, all'altezza dell'ultimo campione: è dove l'area deve arrivare perché il calcolo sia finito.
+- Si vede per tutto il render, sopra lo sfondo blu; quando l'area arriva in cima la tocca e diventa gialla.

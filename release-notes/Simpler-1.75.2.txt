@@ -1,0 +1,15 @@
+SIMPLER 1.75.2  —  31 ottobre 2026
+==================================
+
+Caustiche del mare vere, calcolate da Cycles come in piscina. Più due correzioni.
+
+- Caustiche del mare: il reticolato disegnato della 1.75.1 è spento. Al suo posto la luce del sole attraverso le onde vere del mare.
+  - Simpler fa un piccolo render separato, visto dall'alto, del fondale sotto l'acqua bassa: la superficie del mare diventa acqua vera, con le stesse onde corte che vedi, e Cycles disegna le caustiche come in piscina.
+  - Quella luce viene messa sul fondale nel render normale. Il mare resta com'è: colore, schiuma, riflessi.
+  - In quella zona il sole diretto sul fondale viene sostituito da questa luce: la luce media è la stessa di prima, cambia solo la forma (linee luminose che seguono le onde).
+  - La luce riflessa dal mare sulle rocce viene calcolata dalle stesse onde.
+  - Si ricalcola solo quando cambiano sole, mare o inquadratura.
+  - Con «Luce riflessa dall'acqua» spento tutto torna esattamente come prima.
+- Il riquadro «Occupato» diceva «Computing the coast» anche in progetti senza mare: era il nome rimasto di un progetto aperto prima. Il lavoro vero era il riparo dalla pioggia (0,4 s). Ora la scritta è giusta.
+- Luce riflessa (piscine e mare) sul fondo bagnato: era vista con il colore asciutto, quindi fino al doppio più chiara. Ora usa il colore bagnato.
+- Vista in tempo reale: ogni 10 secondi di movimento il log scrive dove va il tempo (pagina, scheda video, attesa tra i fotogrammi), per capire gli scatti a 30 fps.

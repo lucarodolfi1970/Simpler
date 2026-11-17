@@ -1,0 +1,8 @@
+SIMPLER 1.75.21  —  31 ottobre 2026
+===================================
+
+Il grafico dei campioni diventa giallo alla fine.
+
+- Quando il render finale arriva all'ultimo campione, l'area del grafico in basso diventa tutta gialla, del colore del pallino del logo un po' più scuro, con un passaggio di mezzo secondo. Il bordo in alto prende il giallo del pallino.
+- Diventa gialla anche se il motore passa alla riduzione del rumore prima di aver letto l'ultimo campione; in quel caso l'ultimo secondo sale fino in cima.
+- Resta gialla durante la riduzione del rumore e il salvataggio, fino a quando si apre l'immagine.

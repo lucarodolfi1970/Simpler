@@ -1,0 +1,43 @@
+SIMPLER 1.72.0  —  30 October 2026
+==================================
+
+New «Landscape» panel (button at the top, next to Environment): what surrounds the scene to the horizon. It starts with the Ocean.
+
+Ocean:
+- «Add the sea»: a real sea around the scene, out to 20 km, so its edge does not show even from above. The waves come from Blender's Ocean modifier, which simulates thousands of waves of different lengths, as in a real sea.
+- Eight presets: Calm, Breeze, Choppy, Gale, Long swell, Tropical, Northern, Lake.
+- Main controls:
+  - Wave height in metres: the real height, from trough to crest, as marine forecasts give it.
+  - Wind: changes the length of the waves, not their height.
+  - Crests: how sharp they are.
+  - Direction.
+  - Foam: it forms where the crests break.
+  - Sea level.
+  - Water colour: Ocean, Mediterranean, Tropical, Northern, Lake, Murky.
+  - «Random seed»: the same waves in another arrangement.
+  - «Remove the sea».
+- The Advanced settings hold the rest of what the modifier offers:
+  - kind of sea (Rough, Fully developed, Fully developed with sharp crests, Shallow water);
+  - wave alignment, smallest wave, damping, water depth;
+  - wind distance over the sea and peaks, for the two kinds that use them;
+  - moment;
+  - ripples;
+  - detail (low, medium, high);
+  - where the finest waves go: around the scene or around the camera.
+- The water is drawn the same in the real-time view and in path tracing:
+  - the sky reflected;
+  - the deep colour, lighter on the crests;
+  - lacy foam, rougher;
+  - ripples that spread the reflection of the sun.
+- It does not rain or snow on the sea.
+- Every change can be undone with Ctrl+Z.
+- If the Environment ground is there too, the panel warns you: the ground shows between the waves and hides the sea if it is higher. A «Remove the ground» button is there.
+- The spray of the modifier is not used: it is only a map to emit drops, nothing that shows.
+
+Performance, measured on a scene with thousands of objects (no graphics card, 2 cores):
+- adding the sea: 2 seconds;
+- changing height, level, colour or ripples: 0.06 seconds, with no new simulation;
+- changing wind or kind of sea: 0.5 to 1.4 seconds;
+- undo and redo: 0.07 seconds;
+- the view gets only positions and foam (3 MB); the triangles (5.6 MB more) only when the grid changes.
+- The sea is not in the view file: exporting the scene does not get slower.

@@ -1,0 +1,12 @@
+SIMPLER 1.2.13  —  20 October 2026
+==================================
+
+- GIZMO redone: three axes joined at the centre (positive direction only, arrows at the tips), a yellow
+  centre to move freely and three rotation bands that join the tips of the axes (red between blue and green =
+  rotate around X, green between blue and red = around Y, blue between red and green = around Z). No more detached
+  parts or plane handles. The scale gizmo: axes with a small cube at the tip and a grey centre to scale everything.
+  Thicker, more readable axis lines.
+- PATH TRACING: the orange selection outline is no longer shown on the path-traced image.
+- RIGHT CLICK: it no longer changes the selection if the clicked piece is part of what is selected (for example a
+  piece inside the selected "ring_02" group). The menu acts on the whole selection, so "Save to library" saves the
+  whole model.

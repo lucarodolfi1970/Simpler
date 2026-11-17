@@ -1,0 +1,4 @@
+SIMPLER 1.18.1  —  24 ottobre 2026
+==================================
+
+- Il pulsante «AI» ha l'icona classica delle due stelline al posto della scritta.

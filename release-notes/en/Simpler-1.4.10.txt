@@ -1,0 +1,11 @@
+SIMPLER 1.4.10  —  21 October 2026
+==================================
+
+NEW
+---
+- ROW ORDER IN THE TREE: dragging a row onto the top or bottom edge of another one (blue line) puts the object
+  exactly there, before or after that row, even at the same level (previously the tree was always in alphabetical
+  order and moving between two rows of the same level did nothing). The order is saved in the project and can be
+  undone with Ctrl+Z. An original takes its instances with it; dropping something on the "N instances" row puts
+  it right after the original. The middle of the row (orange border) still means "put inside the group".
+  Objects you have never moved stay in alphabetical order, after the ones ordered by hand.

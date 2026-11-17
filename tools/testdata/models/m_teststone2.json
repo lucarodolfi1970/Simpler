@@ -1,0 +1,14 @@
+{
+ "id": "m_teststone2",
+ "name": "Pietra di prova 2",
+ "folder": "Prove",
+ "rev": "1",
+ "version": 1,
+ "sizeCm": [
+  211.81,
+  166.71,
+  104.9
+ ],
+ "created": "2026-11-03 10:00",
+ "source": "test"
+}

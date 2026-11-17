@@ -1,0 +1,17 @@
+SIMPLER 1.13.54  —  23 ottobre 2026
+===================================
+
+LUCE RIFLESSA DALL'ACQUA: CORREZIONI
+------------------------------------
+- Niente più «fotoni giganti»: la sfocatura data dalla grandezza della luce ora è fatta sull'immagine della luce, non spostando a caso ogni campione. Al posto dei cerchi staccati si vede il reticolo sfumato. Più piccola è la luce («Grandezza» della lampada, dimensione del sole), più nitide sono le linee: come nella realtà.
+- Vicino alle lampade (soprattutto appena sotto la superficie) l'acqua viene suddivisa più fine, solo lì: la loro luce non si spezza più in poche grandi macchie.
+- La luce cade solo sulla superficie dove arriva davvero: ogni punto dell'immagine sa a che profondità è arrivata. Prima un'altra parete rivolta dalla stessa parte (oltre una porta, la base di un muro dietro il bordo) ne riceveva una copia.
+- Scene molto grandi (87 M triangoli, terreno con piante intorno a un lago): si usano solo gli oggetti più vicini all'acqua, fino a 3 M triangoli nella vista e 10 M nel render finale. Prima si prendeva tutto, la memoria finiva e il path tracing restava fermo su «calcolo…» anche spegnendo l'interruttore.
+- Se il calcolo non riesce, il path tracing prosegue senza questa luce e il pannello lo dice.
+- Mentre si calcola, l'etichetta della vista dice cosa sta facendo (oggetti vicini, superficie, raggi con la percentuale, immagini).
+- Corretto: i progetti salvati con le versioni 1.13.50-53 con questa luce accesa, riaperti, avevano i materiali che la ricevono neri.
+
+ACQUA SU UN OGGETTO APERTO
+--------------------------
+- Un bicchiere (aperto in alto) o un vaso con materiale Acqua rendevano tutta la vista nera di notte e grigia di giorno. Sotto ogni faccia dell'oggetto si creava uno strato d'acqua che non si chiudeva mai, e Cycles vedeva tutta la scena da dentro l'acqua.
+- Ora su un oggetto aperto con pareti l'acqua è solo la sua superficie trasparente (indice 1,333), come un vetro. Onde vere e colore in profondità valgono per le superfici d'acqua piane e per i pezzi chiusi. L'editor lo spiega quando succede.

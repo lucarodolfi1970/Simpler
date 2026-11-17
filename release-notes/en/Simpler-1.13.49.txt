@@ -1,0 +1,7 @@
+SIMPLER 1.13.49  —  23 October 2026
+===================================
+
+ENVIRONMENT: THE SUN FOLLOWS THE SLIDERS WHILE YOU MOVE THEM
+------------------------------------------------------------
+- In the real-time view, dragging Time, Day of the year, Latitude, North and Intensity of the sun, the light and the shadows move at once with the slider (the sun disc in the sky too). Before they changed only when the slider was let go.
+- The sky (colours, 360° picture) and the exposure update when you let the slider go, as before: making them again at every move would slow things down too much.

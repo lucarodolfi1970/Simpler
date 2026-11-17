@@ -1,0 +1,13 @@
+SIMPLER 1.76.58  —  5 novembre 2026
+===================================
+
+«Rilievo 3D»: la tua mappa di rilievo e la sua mappa colore.
+
+- Sotto i tipi di rilievo, due nuove righe: «Mappa di rilievo» e, subito sotto, «Mappa colore» (facoltativa). Carica una mappa di displacement in bianco e nero: prende il posto del tipo scelto, nella luce del path tracing e, con «Displacement vero» acceso, nella geometria del render finale. Toglila con «×» (o scegli un tipo) e torna il tipo di prima, identico.
+- La mappa colore, meglio se dello stesso set, prende il posto del colore del materiale sulle pareti della zona Roccia: le crepe scure cadono nelle crepe del rilievo. Prati, neve e ghiaioni restano del loro materiale. I colori dal terreno (creste, canali, strati) restano sopra. Si vede anche nella vista in tempo reale.
+- Nuovi cursori quando c'è una mappa: Grandezza (metri di roccia per ripetizione; il rilievo cresce con la grandezza), Rotazione (gira le mappe sulla parete, per l'inclinazione degli strati) e Colore dalla mappa. Si cambiano subito, senza rifare i materiali. Profondità, Dettaglio e Dove valgono come prima.
+- Avanzate: «Rompi la ripetizione» sposta le mappe a caso a zone, senza girarle (la Rotazione resta). Solo nel path tracing e nel render finale.
+- Le mappe sono proiettate dai tre lati in metri veri: nessuna UV da preparare, continue fra le zone del terreno.
+- La forma vera della roccia nella maglia (canaloni, blocchi, cenge di «Roccia scolpita») resta quella del tipo scelto.
+- Materiali, sezione Sottosuperficie: nuovo interruttore «Foglio sottile (luce attraverso)» per foglie, petali, carta, tende. Con la Sottosuperficie al 30-40% la luce attraversa la foglia (provato in Blender 5.2: da 0,0007 a 0,15 di luminosità con il sole dietro). Prima c'era solo come «Parete sottile» del vetro, visibile solo con Trasparenza sopra 0.
+- Nuovo controllo automatico: la mappa cambia il rilievo, Grandezza e Rotazione si cambiano senza rifare i materiali, la mappa colore va solo sulla roccia (anche nella vista), senza mappe torna esattamente il tipo.

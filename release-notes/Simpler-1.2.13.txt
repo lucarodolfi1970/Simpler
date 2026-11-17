@@ -1,0 +1,12 @@
+SIMPLER 1.2.13  —  20 ottobre 2026
+==================================
+
+- GIZMO rifatto: tre assi uniti al centro (solo verso +, frecce sulle punte), centro giallo per
+  spostare liberamente e tre fasce di rotazione che uniscono le punte degli assi (rossa tra blu e verde = ruota
+  attorno a X, verde tra blu e rosso = attorno a Y, blu tra rosso e verde = attorno a Z). Niente più pezzi staccati
+  o maniglie dei piani. Il gizmo di scala: assi con un cubetto in punta e centro grigio per scalare tutto.
+  Linee degli assi più spesse e leggibili.
+- PATH TRACING: il contorno arancione della selezione non si vede più sull'immagine in path tracing.
+- TASTO DESTRO: non cambia più la selezione se il pezzo cliccato fa parte di ciò che è selezionato (per esempio un
+  pezzo dentro il gruppo "ring_02" selezionato). Il menu agisce su tutta la selezione, quindi "Salva nella
+  libreria" salva il modello intero.

@@ -1,0 +1,4 @@
+SIMPLER 1.68.6  —  29 ottobre 2026
+==================================
+
+- «Adatta all'oggetto» con più pezzi selezionati (per esempio una finestra fatta di più parti) stende una sola immagine su tutti i pezzi insieme, invece di un'immagine intera su ciascuno. Senza selezione vale per il pezzo cliccato, come prima.

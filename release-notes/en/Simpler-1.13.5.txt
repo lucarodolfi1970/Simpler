@@ -1,0 +1,10 @@
+SIMPLER 1.13.5  —  22 October 2026
+==================================
+
+DISTRIBUTIONS (BRUSH, AREA, SPACING)
+------------------------------------
+- While the view prepares the models of a distribution (big models, such as 2K buildings, take a few seconds each)
+  the small progress bar appears at the bottom: "Preparing the models for the view…", with how many are left and
+  the name of the model. Before, only the green cones were shown and everything seemed stuck.
+- The points of the line (and drops into the view) always use the updated position of the objects, also right
+  after path tracing: the most likely cause of the points ending on the horizon at the first try.

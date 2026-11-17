@@ -1,0 +1,4 @@
+SIMPLER 1.28.6  —  25 October 2026
+==================================
+
+- Decals across models: a decal is projected on every piece its box reaches, not only on the one you dropped it on. A manhole on the edge of the road continues on the sidewalk, a writing across two walls shows on both (up to 12 pieces, the nearest to its middle). The pieces reached are updated when you move, turn or resize the decal.

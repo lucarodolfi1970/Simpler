@@ -1,0 +1,7 @@
+SIMPLER 1.75.34  —  1 November 2026
+===================================
+
+AI video without sound.
+
+- Krea adds audio to the videos and since 30 October no longer lets it be turned off. Simpler now removes the sound track from the video as soon as it downloads it.
+- The video is not encoded again: picture and quality stay identical, only the audio is gone.

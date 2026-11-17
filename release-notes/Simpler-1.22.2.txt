@@ -1,0 +1,4 @@
+SIMPLER 1.22.2  —  24 ottobre 2026
+==================================
+
+- Mappe del materiale: al posto del pulsante «Genera» c'è un piccolo pulsante con la bacchetta magica; il suggerimento spiega cosa fa.

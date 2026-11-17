@@ -1,0 +1,8 @@
+SIMPLER 1.36.0  —  25 October 2026
+==================================
+
+- Orientation of library models. Every model can be saved «straight»: its front along the red X axis, which is also the direction of a Spacing line (with «Follow the line» on). It works for any model: vehicles, benches, lamp posts, buildings, furniture.
+  · Right click on a model in the library ▸ Orientation ▸ «Straighten»: Simpler looks at the model from above and turns it so its long side lies on the X axis. «Turn by 90°» and «Turn by 180°» fix the rest (for example the front the wrong way).
+  · For models needing a custom straightening: insert it in the scene, turn it with the gizmo as you want (by a few degrees too, on X or Y too for a model lying down), then right click on the model in the tree or in the view ▸ «Save this orientation to the library».
+  · The library model is written again with its new orientation (the base stays where it was) and its thumbnail made again. From then on new insertions and every scatter use it, those already in the open project too, which turn by themselves. Copies already inserted in the scene stay as they are.
+- Why: a model saved to the library after turning it in the scene keeps that rotation; in scatters every model therefore pointed a different way (for example two cars saved turned by 15° and by 65°).

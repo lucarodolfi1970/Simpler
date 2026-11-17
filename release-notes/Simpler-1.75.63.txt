@@ -1,0 +1,7 @@
+SIMPLER 1.75.63  —  1 novembre 2026
+===================================
+
+Selezione con «Box» e «Lasso»: ora trova anche i modelli della libreria.
+
+- Il riquadro e il lazo non selezionavano niente sulle auto e sugli altri modelli inseriti dalla libreria. Questi modelli nella vista non hanno una geometria propria: vengono disegnati dalla loro versione preparata, una volta sola per tutte le copie, e la selezione ad area cercava solo le geometrie. Ora conta anche loro, con le loro dimensioni reali: si seleziona il modello intero, non i suoi pezzi interni.
+- I pezzi generati da una distribuzione restano esclusi: sono migliaia, e si selezionano con la loro distribuzione.

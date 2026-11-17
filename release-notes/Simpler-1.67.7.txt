@@ -1,0 +1,5 @@
+SIMPLER 1.67.7  —  29 ottobre 2026
+==================================
+
+- Corretto il blocco totale della vista 3D con «Centra ogni pezzo» acceso su un materiale con mappatura UV. Il materiale chiamava all'infinito una funzione della pioggia: la vista smetteva di disegnare e alla lunga la scheda grafica della vista si chiudeva. Il difetto c'era già dalle versioni precedenti (riprodotto anche nella 1.67.4).
+- Per sicurezza la vista ora ferma da sola qualsiasi richiamo di questo tipo, invece di bloccarsi.

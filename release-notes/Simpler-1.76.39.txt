@@ -1,0 +1,9 @@
+SIMPLER 1.76.39  —  4 novembre 2026
+===================================
+
+Il mare ha le onde vere dove guardi.
+
+- Il mare ha onde vere, in forma, solo in una zona; fuori è piatto e le onde sono solo disegnate dalla luce. Nuovo modo «Segue l'inquadratura» (predefinito per i mari nuovi): la zona sta dove guardi. Quando la camera si ferma su un punto fuori dalla zona, il mare si ricalcola lì in pochi secondi (con «Occupato · attendi»); finché resti dentro non succede nulla, e prima del render finale lo controlla comunque. Così un oggetto lontano dal centro della scena ha le sue onde e l'«Acqua mossa sul bordo».
+- «Ferma sulla scena» resta in Oceano › Avanzate › «Onde vere»: la zona copre gli oggetti della scena e non si sposta mai, utile per tante inquadrature o un video con lo stesso identico mare. Prima «Fotocamera» metteva la zona dove stava la camera in quel momento, senza seguirla dopo: ora è il nuovo modo.
+- I suggerimenti dei comandi «Onde vere» e «Dettaglio» spiegano cosa fanno e cosa costano.
+- Un mare già salvato tiene la sua scelta.

@@ -1,0 +1,10 @@
+SIMPLER 1.76.14  —  2 novembre 2026
+===================================
+
+Colori dal terreno: il colore segue la forma della montagna.
+
+- Nuovo in Terreno > Avanzate: «Colori dal terreno». Sopra le texture delle zone il colore cambia come in natura: creste più chiare e consumate, canaloni più scuri, colate scure che scendono lungo le pareti ripide, fasce di colore che seguono gli strati della roccia scolpita, più scuro dove l'acqua scorre e si raccoglie.
+- Quattro regolazioni nelle Avanzate: «Colate sulle pareti», «Fasce degli strati», «Creste e canaloni», «Umido».
+- Vale per ogni materiale messo su una zona del terreno, anche i tuoi; uguale nella vista in tempo reale, nel path tracing e nel render. Cambiarlo tocca solo i materiali (niente ricalcolo del terreno); Ctrl+Z lo annulla.
+- I terreni nuovi lo hanno acceso; quelli già fatti restano come sono: accenderlo li rifà una volta (servono i dati della forma).
+- «Spigolosità» è passata nelle Avanzate: fuori resta solo «Roccia scolpita».

@@ -1,0 +1,5 @@
+SIMPLER 1.64.1  —  28 ottobre 2026
+==================================
+
+- Neve sui bordi delle lastre e delle rocce vicine alla camera: il bordo del manto non è più una fila di denti. Lungo un bordo non dritto rispetto alla griglia il manto procedeva a gradini; ora il contorno è smussato.
+- Ghiaccio: nelle Avanzate dell'acqua ci sono due nuovi controlli, «Crepe grandi» e «Crepe sottili». Vanno da 0%, senza crepe, a 200%, crepe più marcate. Valgono solo nel path tracing.

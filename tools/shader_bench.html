@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Simpler · shader bench</title>
+<style>body{background:#0b1220;color:#dbe4f3;font:13px/1.5 Consolas,monospace;margin:16px}pre{white-space:pre-wrap}button{font:inherit;padding:6px 12px;margin-right:8px}</style></head>
+<body><h3>Simpler · tempi veri degli shader su questa scheda video</h3>
+<button id="go">Run</button><button id="clr">Clear history</button>
+<pre id="out">ready</pre><canvas id="c" width="64" height="64" style="width:64px;height:64px"></canvas>
+<script type="module">
+import * as THREE from './lib/three.module.js';
+const out = document.getElementById('out'); const log = (s) => { out.textContent += '\n' + s; };
+const CFG = {
+  A_budget_now: { dir: 5, dirS: 2, point: 9, pointS: 1, spot: 10, spotS: 2 },
+  D_new_budget: { dir: 4, dirS: 2, point: 4, pointS: 0, spot: 4, spotS: 1 },
+  B_small: { dir: 2, dirS: 1, point: 4, pointS: 0, spot: 2, spotS: 0 },
+  C_min: { dir: 2, dirS: 1, point: 0, pointS: 0, spot: 0, spotS: 0 },
+};
+const tex = () => { const t = new THREE.DataTexture(new Uint8Array([200, 180, 160, 255, 90, 90, 90, 255, 30, 60, 90, 255, 250, 250, 250, 255]), 2, 2); t.needsUpdate = true; return t; };
+function setup(cfg) {
+  const renderer = new THREE.WebGLRenderer({ canvas: Object.assign(document.createElement('canvas'), { width: 64, height: 64 }), antialias: false });
+  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap; renderer.toneMapping = THREE.AgXToneMapping;
+  const scene = new THREE.Scene(); scene.fog = new THREE.FogExp2(0x8899aa, 0.01);
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100); camera.position.set(0, 2, 5); camera.lookAt(0, 0, 0);
+  const add = (L, sh) => { L.castShadow = sh; if (sh) L.shadow.mapSize.set(256, 256); L.position.set(Math.random() * 4 - 2, 3, Math.random() * 4 - 2); scene.add(L); };
+  for (let i = 0; i < cfg.dir; i++) add(new THREE.DirectionalLight(0xffffff, 1), i < cfg.dirS);
+  for (let i = 0; i < cfg.point; i++) add(new THREE.PointLight(0xffffff, 5), i < cfg.pointS);
+  for (let i = 0; i < cfg.spot; i++) add(new THREE.SpotLight(0xffffff, 5), i < cfg.spotS);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x222222, 0.3));
+  const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial()); mesh.castShadow = mesh.receiveShadow = true; scene.add(mesh);
+  return { renderer, scene, camera, mesh };
+}
+function mat(salt, kind) {
+  const m = kind === 'std' ? new THREE.MeshStandardMaterial() : new THREE.MeshPhysicalMaterial({ clearcoat: 0.5 });
+  m.map = tex(); m.normalMap = tex(); m.roughnessMap = tex(); m.defines = { ...(m.defines || {}), SALT: salt };
+  return m;
+}
+const px = new Uint8Array(4);
+function timeOne(R, m) {
+  const gl = R.renderer.getContext(); R.mesh.material = m; const t0 = performance.now();
+  R.renderer.render(R.scene, R.camera); gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px); return performance.now() - t0;
+}
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+async function run() {
+  const res = { when: new Date().toISOString(), gpu: '' , rows: {} };
+  for (const [name, cfg] of Object.entries(CFG)) {
+    const R = setup(cfg); const gl = R.renderer.getContext();
+    const dbg = gl.getExtension('WEBGL_debug_renderer_info'); res.gpu = dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : '?';
+    res.par = !!gl.getExtension('KHR_parallel_shader_compile');
+    timeOne(R, new THREE.MeshBasicMaterial({ color: 1 }));               // (shadow programs and first frame out of the way)
+    await sleep(30);
+    // FIXED sources (the same at every run: a disk cache can serve them) and NEW sources (never seen: always compiled)
+    const fixedN = name === 'A_budget_now' ? 24 : 4, fixed = [], fresh = [], std = [];
+    for (let i = 0; i < fixedN; i++) { fixed.push(Math.round(timeOne(R, mat(1000 + i, 'phys')))); out.textContent = out.textContent.replace(/\n\.\.\..*$/, '') + `\n... ${name} fixed ${i + 1}/${fixedN}`; await sleep(0); }
+    const seed = Math.floor(Math.random() * 1e9);
+    for (let i = 0; i < 4; i++) { fresh.push(Math.round(timeOne(R, mat(seed + i, 'phys')))); await sleep(0); }
+    for (let i = 0; i < 2; i++) { std.push(Math.round(timeOne(R, mat(seed + 10 + i, 'std')))); await sleep(0); }
+    res.rows[name] = { lights: cfg, fixed, fresh, std };
+    out.textContent = out.textContent.replace(/\n\.\.\..*$/, '');
+    log(`${name}  lights ${JSON.stringify(cfg)}\n   NEW physical ms: ${fresh.join(', ')}   NEW standard ms: ${std.join(', ')}\n   FIXED (cacheable) ms: ${fixed.join(', ')}`);
+    R.renderer.dispose(); await sleep(100);
+  }
+  let hist = []; try { hist = JSON.parse(localStorage.getItem('bench') || '[]'); } catch {}
+  hist.push(res); try { localStorage.setItem('bench', JSON.stringify(hist.slice(-6))); } catch {}
+  window.__res = res; window.__hist = hist;
+  log(`GPU: ${res.gpu} · parallel compile ext: ${res.par}\nDONE run #${hist.length}`);
+  const avg = (a) => Math.round(a.reduce((x, y) => x + y, 0) / a.length);
+  log('history (avg ms per program: new / fixed):'); for (const [i, h] of hist.entries()) log(`  run ${i + 1} ${h.when.slice(11, 19)}: ` + Object.entries(h.rows).map(([k, v]) => `${k} ${avg(v.fresh)}/${avg(v.fixed)}`).join('  ·  '));
+}
+document.getElementById('go').onclick = () => { out.textContent = 'running…'; run().catch((e) => log('ERROR ' + e)); };
+document.getElementById('clr').onclick = () => { try { localStorage.removeItem('bench'); } catch {} out.textContent = 'cleared'; };
+if (location.hash !== '#manual') { out.textContent = 'running…'; run().catch((e) => log('ERROR ' + e)); }
+</script></body></html>

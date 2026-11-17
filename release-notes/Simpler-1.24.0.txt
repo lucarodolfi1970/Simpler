@@ -1,0 +1,6 @@
+SIMPLER 1.24.0  —  24 ottobre 2026
+==================================
+
+- Finestre della libreria (Importa modelli nella libreria, Correggi materiali dei modelli, Statistiche e pulizia): finché una è aperta, o lavora in background dopo averla chiusa, il resto di Simpler è fermo come durante le operazioni lunghe (pannelli, albero, libreria, selezione nella vista).
+- Un clic o un tasto sul resto di Simpler mostra un messaggio: con la finestra aperta dice di chiuderla e la riporta davanti; con il lavoro in background chiede se vuoi vedere l'avanzamento.
+- Chiudere Simpler in quei momenti mostra lo stesso messaggio invece di «Simpler sta ancora lavorando».

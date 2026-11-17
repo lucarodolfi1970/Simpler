@@ -1,0 +1,8 @@
+SIMPLER 1.8.2  —  21 ottobre 2026
+=================================
+
+- SPOSTA SULLE SUPERFICI: un oggetto inclinato su una superficie obliqua, rimesso sul pavimento (o su qualunque
+  superficie in piano), torna dritto. Prima restava storto: l'inclinazione presa prima restava. Ora l'oggetto
+  segue sempre la superficie sotto il mouse, rispetto al suo verso "in alto", e si appoggia con la sua base vera.
+- VELOCITÀ "FORMICA": nuovo pulsante a sinistra di "a piedi", con passi 5 volte più piccoli (rotellina e
+  frecce), per avvicinarsi ai dettagli.

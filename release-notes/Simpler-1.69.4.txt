@@ -1,0 +1,6 @@
+SIMPLER 1.69.4  —  29 ottobre 2026
+==================================
+
+- Sporco: nuovo slider «Opacità» accanto a «Quantità». Quantità decide quanta superficie è sporca, Opacità quanto lo sporco copre il materiale: al 5% è appena un velo. Funziona allo stesso modo nella vista in tempo reale e nel path tracing.
+- Il vecchio «Opacizza» (Avanzate) si chiama ora «Meno lucido», perché rende la superficie meno lucida e non più trasparente.
+- Tolto «Sui bordi»: quelli che sembravano bordi spesso erano punti in cui si incontrano modelli diversi. Al suo posto arriverà un pennello per dipingere lo sporco.

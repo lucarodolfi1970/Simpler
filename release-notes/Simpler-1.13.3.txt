@@ -1,0 +1,30 @@
+SIMPLER 1.13.3  —  22 ottobre 2026
+==================================
+
+MATERIALI: TIPO "STANDARD" O "ACQUA"
+----------------------------------------------
+- Nell'editor del materiale, subito sotto il nome, c'è "Tipo": Standard · Acqua.
+  · Standard = il materiale di sempre (colore, ruvidezza, trasparenza, mappe…).
+  · Acqua = si vedono solo i parametri dell'acqua: Colore e profondità (Piscina/Lago/Mare/Palude, limpidezza,
+    torbidità) e Superficie e onde (onde vere, altezza, dimensione, indice di rifrazione). Gli altri, che con l'acqua
+    non servono, spariscono.
+  · Tornando a Standard il materiale resta com'è e riappaiono tutti i parametri.
+- In futuro qui arriveranno altri tipi (per esempio vegetazione, tessuto).
+
+ACQUA ANCHE NEI VOLUMI CHIUSI
+-----------------------------
+- L'acqua funziona anche su oggetti chiusi (sfera, vasca, bicchiere, acquario), non solo sui piani.
+  Le onde si formano solo sulla parte di sopra; il corpo dell'acqua sta dentro la forma.
+- Corretto l'alone attorno alla sfera d'acqua: l'oggetto chiuso veniva "estruso" verso il basso come una piscina.
+
+SCENA NUOVA E SUOLO
+-------------------
+- Una scena nuova parte con il suolo BIANCO OPACO (nuovo tipo di suolo "Bianco" nel pannello Ambiente).
+- Le primitive (cubo, sfera, piano…) nascono con il materiale "Bianco": un clic e apri subito il materiale.
+
+BUG CORRETTI
+------------
+- Se davi al suolo un tuo materiale, cambiando l'Ambiente (da HDRI a cielo, preset, ora del sole) tornava il prato.
+  Ora il tuo materiale resta; torna quello di Simpler solo se scegli un tipo di suolo nel pannello Ambiente.
+- Passando da Studio a cielo il suolo spariva: ora torna.
+- Dopo aver acceso l'acqua non si poteva più trascinare un altro materiale sull'oggetto: ora si cambia.

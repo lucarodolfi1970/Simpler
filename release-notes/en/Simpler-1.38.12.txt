@@ -1,0 +1,7 @@
+SIMPLER 1.38.12  —  26 October 2026
+===================================
+
+- Diagnosis of decals not seen in the real-time view.
+  - At opening the engine log lists every decal (SIMPLER_DECAL lines): where it is, which object it is attached to and how many triangles its geometry has.
+  - The app log reports, for every decal the view receives («view:» lines), how many triangles it shows, how faded it is, how big it is and whether it is visible.
+  - Nothing changes in how things look.

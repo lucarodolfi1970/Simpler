@@ -1,0 +1,12 @@
+SIMPLER 1.13.48  —  23 ottobre 2026
+===================================
+
+«ROMPI LA RIPETIZIONE» ANCHE NELLA VISTA IN TEMPO REALE
+------------------------------------------------------
+- Randomize UV ora si vede anche in tempo reale, con la mappatura UV e con la Triplanare: colore, ruvidezza, metallo, emissione, opacità e normal map (queste solo spostate, mai ruotate). Le regolazioni sono le stesse (grandezza delle zone, sfumatura, ruota le zone).
+- Il disegno casuale delle zone è dello stesso tipo ma non identico a quello del path tracing.
+- Costa un po' di scheda video solo sui materiali che lo usano.
+
+SPLASH
+------
+- Il numero di versione (x.y.z) è in piccolo in alto a destra.

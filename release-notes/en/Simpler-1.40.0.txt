@@ -1,0 +1,9 @@
+SIMPLER 1.40.0  —  26 October 2026
+==================================
+
+- Favourites in the library. Right-click a 3D model, a material, a decal, an HDRI (or a studio background) or an ecosystem ▸ «Add to favourites». The same menu then offers «Remove from favourites».
+  - On the thumbnail of every favourite a small black heart with a white outline appears, wherever the item is in the library.
+  - New «Favourites» menu between «The story» and «3D models», with five folders: 3D models, Materials, Decals, HDRI and backgrounds, Ecosystems. They are amber folders with a black outline, the icon of their kind in the middle and the number of favourites. Every item goes by itself into the folder of its kind, mixing Poly Haven, ambientCG and your own.
+  - In the favourites every tile works as the original: click, drag into the view or onto an object, its menu.
+  - Right-click a favourite ▸ «Go to the item»: the tab and the folder of the original open, the tile comes into view and flashes orange.
+  - Favourites are yours, not the project's: they apply to every project. If an item is deleted from the library, it leaves the favourites too. In the favourites, search looks through all five folders.

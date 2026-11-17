@@ -1,0 +1,9 @@
+SIMPLER 1.13.8  —  22 October 2026
+==================================
+
+TOUCHPAD
+--------
+- Two fingers now move the view right away, without first using the mouse wheel. From the log of your PC: the
+  touchpad was recognised correctly, but the movement was measured on the orbit centre, which after opening a scene
+  can be a few centimetres from the camera, so the view barely moved. Now the scene follows the fingers at the
+  distance of what is under the cursor (or, on the sky, at the size of the scene).

@@ -1,0 +1,10 @@
+SIMPLER 1.8.3  —  21 ottobre 2026
+=================================
+
+- TEMPO REALE / PATH TRACING: tornando a "Tempo reale" mentre un'immagine del path tracing stava arrivando,
+  quell'immagine si rimetteva sopra la vista e restava lì, con l'etichetta "Path tracing · … campioni" ma il
+  pulsante su Tempo reale. Ora una risposta del path tracing che arriva dopo il cambio viene ignorata, e la vista
+  si ridisegna subito.
+- ALBERO DELLA SCENA: tolto il pulsante "+" con il suo menu. Luci, primitive (cubo, sfera, cilindro, cono,
+  piano, toro) e gruppo vuoto si aggiungono dalla libreria in basso: schede Luci e Modelli 3D > Primitive
+  (clic: al centro della vista; trascina: dove lo lasci).

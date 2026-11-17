@@ -1,0 +1,5 @@
+SIMPLER 1.35.3  —  25 ottobre 2026
+==================================
+
+- Le luci dentro un modello della libreria si selezionano anche nella vista: scegliendole nell'albero compaiono gizmo e selezione sulla luce, e in tempo reale illuminano. Prima alcune luci (per esempio quelle di un'auto salvata nella libreria partendo da un'altra auto della libreria) avevano il marchio di «pezzo del modello», per di più di un altro modello: la vista non le riceveva affatto, quindi niente selezione, niente gizmo e niente luce in tempo reale. Una luce non è mai un pezzo della forma del modello: ora resta sempre un oggetto della vista, anche nei progetti e nei modelli già salvati.
+- Verificata la selezione dall'albero per tutti gli oggetti mandati alla vista (modelli, pezzi, gruppi, luci, suolo): ognuno riceve selezione e gizmo.

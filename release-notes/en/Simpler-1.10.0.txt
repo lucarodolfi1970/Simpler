@@ -1,0 +1,19 @@
+SIMPLER 1.10.0  —  21 October 2026
+==================================
+
+- SCATTER > SPACING: the third mode of Scatter. You draw a line by clicking on
+  surfaces (double-click, click on the last point, Enter or Esc finish it; clicking on the first point closes
+  it into a loop) and the models line up along it.
+  · By distance (one object every so many metres) or By count (a fixed number along the whole line).
+  · Lateral offset: each object moves randomly to the side of the line.
+  · Random order: off, the models repeat in the order of the list; on, at random according to presence.
+  · Follow the line: objects turn to follow the line (fences, benches, street lamps).
+  · Tension, Snap to surfaces, Random seed, Update, scale/rotation as in Area. Draggable points, "+" to add
+    more, Del to remove them; everything can be undone with Ctrl+Z.
+- "Exclude from Area" becomes "Exclude from Area and Spacing" and applies to both.
+- REAL-TIME SHADOWS: small objects (rings, jewellery, objects on a table) had no shadows. Two causes:
+  · because of a three.js detail, spot and area lights in the view were one metre behind their position:
+    they lit less than in path tracing and their shadows did not reach nearby objects. Now they are in the
+    right place (the real-time view may look brighter than before: that is the correct one);
+  · the shadow maps covered the whole scene: now they concentrate on the part you are looking at and
+    adapt to every movement of the view, so even objects a few centimetres in size have sharp shadows.

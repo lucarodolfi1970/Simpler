@@ -1,0 +1,7 @@
+SIMPLER 1.13.43  —  23 ottobre 2026
+===================================
+
+FINESTRE SEMPRE DENTRO LO SCHERMO
+---------------------------------
+- «Correggi materiali dei modelli» è un po' più piccola: i due elenchi (modelli e materiali) prendono l'altezza che lo schermo lascia, così la finestra è tutta visibile con i pulsanti in fondo; resta al centro dello schermo.
+- Tutte le finestre di Simpler che crescono o si aprono più alte dello spazio rimasto tornano dentro lo schermo, al centro, invece di finire con il fondo fuori vista.

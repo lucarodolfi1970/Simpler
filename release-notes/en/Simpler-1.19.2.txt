@@ -1,0 +1,5 @@
+SIMPLER 1.19.2  —  24 October 2026
+==================================
+
+- AI panel: the functions are a list, like the materials one: the before/after preview on the left, the name and a few words on what it does on the right. One click picks the function and the options below change at once.
+- The options title is now translated into English too.

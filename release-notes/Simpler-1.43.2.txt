@@ -1,0 +1,4 @@
+SIMPLER 1.43.2  —  26 ottobre 2026
+==================================
+
+- Pioggia: in una scena grande (una città) il riparo sotto le auto non funzionava, quindi anche «Non fa riparo» sembrava non cambiare niente. Le facciate degli edifici prendevano quasi tutto il calcolo e gli ultimi oggetti, come le auto, restavano fuori. Ora contano soprattutto le superfici viste dall'alto (i muri danno solo i loro spigoli) e, se la scena è enorme, ogni oggetto viene alleggerito ma nessuno viene escluso. Il calcolo è anche più veloce.

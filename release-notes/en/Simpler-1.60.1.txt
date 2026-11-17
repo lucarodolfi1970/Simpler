@@ -1,0 +1,5 @@
+SIMPLER 1.60.1  —  27 October 2026
+==================================
+
+- At night street lamps placed with a scatter (or an ecosystem) now light the real-time view too, not only the path tracing. The lights inside the models of distributions become lights of the view, in the same place and with the same power, colour and cone as in the path tracing, and they switch on and off with the time of day as in the path tracing. To stay fast the view lights the 12 nearest to the camera, without shadows; the others show only in the path tracing.
+- «Update from the library»: when a model is no longer in the library (deleted and saved again, so a new model for Simpler) it now says so and explains what to do, instead of silently doing nothing. To correct a model without losing the link with the projects: save it with the same name in the same folder and choose to overwrite it.

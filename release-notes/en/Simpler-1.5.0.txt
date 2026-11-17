@@ -1,0 +1,22 @@
+SIMPLER 1.5.0  —  21 October 2026
+=================================
+
+NEW
+---
+- SCATTER > BRUSH: paint library models onto the surfaces of the scene (lawns, flowers, rocks, trees).
+  · It is the third tool in the top bar, next to Move and rotate and Scale (brush icon, B key).
+    Its options open in the right-hand bar; Area and Spacing already have their place and will come later.
+  · Models to scatter: with the tool active, click models in the library below (3D models tab), or right-click
+    a model > "Add to the Scatter brush". Each model has its own "Presence": for a lawn, grass at 100% and
+    flowers at 10%. Next to it you see the actual percentage of pieces.
+  · Brush: Diameter (also with the [ and ] keys), minimum distance between objects (Spacing) and Random spacing
+    (natural clusters), Scale and Random scale, Rotation and Random rotation, "Align to surface" (rocks and moss
+    follow the slope; when off, objects stay upright, like trees and grass).
+  · Left-drag: paint. Shift + left button: erase the pieces under the brush. Wheel, right and middle buttons move
+    the view as usual. Esc: exit the brush.
+  · While you paint, small green cones appear: the real models arrive right after.
+  · Everything goes into a "Scatter 1" group in the tree. The first piece of each model is the original, the
+    others are instances: even with thousands of pieces the memory is that of a single model. "+" in the panel
+    starts a new scatter; to continue an existing one, select it in the tree with the brush active.
+  · Each brush stroke can be undone with Ctrl+Z.
+- The brush settings and the chosen models are remembered the next time you open the app.

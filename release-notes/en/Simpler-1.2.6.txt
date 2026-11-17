@@ -1,0 +1,12 @@
+SIMPLER 1.2.6  —  20 October 2026
+=================================
+
+- SCENE TREE, dragging with three zones on each row:
+  · top or bottom edge of the row (a blue line appears) = the object goes NEXT TO that row, at the same level: this
+    way a child moves back up a level (to bring it to the root, drop it between two root objects, or in the empty
+    space below the tree);
+  · middle of the row (orange outline) = the object goes INSIDE that row, which becomes its parent.
+- OBJECT LIBRARY: an object saved on its own is inserted directly at the root of the tree, with the name given in
+  the library (no extra group). Several objects saved together stay in a group with that name.
+- (since 1.2.5) Saving a child saves only the child, not its parent: the "Floor" you saw in the library came from
+  1.2.4. For a model saved with 1.2.4: right click > "Render the thumbnail again" cleans it up.

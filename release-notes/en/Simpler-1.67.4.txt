@@ -1,0 +1,4 @@
+SIMPLER 1.67.4  —  29 October 2026
+==================================
+
+- «No rain» and «No snow» take effect at once in path tracing. Before, the switch was saved, but the image kept showing the object wet until the project was opened again. The same goes for undo.

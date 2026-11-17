@@ -1,0 +1,16 @@
+SIMPLER 1.4.7  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- IMPORTA MODELLI NELLA LIBRERIA: COLLEZIONI. Nuova opzione "Ogni oggetto del file è un modello a sé
+  (collezioni)": per i file che contengono più modelli insieme (es. un FBX con sei ciuffi d'erba), ogni oggetto
+  principale del file, con i suoi pezzi, diventa un modello della libreria con il proprio nome (senza i suffissi
+  .001), nella cartella scelta, con la sua miniatura e le sue texture.
+- ORIGINE DEL MODELLO: "Base" (centro della base, nel punto più basso: comodo per appoggiare piante, persone,
+  mobili), "Centro" (centro 3D) o "Come nel file". Con Base o Centro il modello viene salvato con l'origine in quel
+  punto: il gizmo in modalità "Origine" e le rotazioni partono da lì.
+- AVANZAMENTO: appena un file è aperto, la sua riga mostra quanti modelli contiene e a che punto è (es. 3/6), la
+  scritta sotto la barra dice quale modello sta preparando ("modello 3 di 6: …") e la barra avanza modello per
+  modello. Tutto in background, come prima: puoi continuare a lavorare.
+  Con le collezioni non c'è il controllo dei nomi già esistenti (i nomi si conoscono solo aprendo il file).

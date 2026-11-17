@@ -1,0 +1,10 @@
+SIMPLER 1.75.40  —  1 November 2026
+===================================
+
+AI video: «Improve with AI» for the motion text.
+
+- Under the «Motion» box there is the sparkles button «Improve with AI». It rewrites the text in English, the way the video model follows best, without adding things you did not ask; with the box empty it writes a text that fits the two keyframes.
+- The AI also looks at the thumbnails of the two keyframes, sent small and in low detail (the cheapest way), and knows whether the camera moves or stays still.
+- It uses the same OpenAI key as the images, no other account. Simpler picks by itself the cheapest text model the key can use, taking it from the key's list of models and not from a name written in the program. It costs a fraction of a cent each time.
+- «Cancel» brings back the previous text. The tokens used are added to the usage in the AI panel.
+- The button is enabled only with a working OpenAI key.

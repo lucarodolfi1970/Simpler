@@ -1,0 +1,11 @@
+SIMPLER 1.13.20  —  22 October 2026
+===================================
+
+BUG FIXES
+---------
+- Right click on the folders, materials and models of the library no longer opened any menu (since 1.13.18): the
+  "Paste here" menu of the empty part of the library blocked the menus of the tiles too. Now every tile has its
+  menu again (with Cut), and "Paste here" appears only on the empty part.
+- MEMORY AFTER "NEW" OR "OPEN": the 3D view kept everything it had loaded for the previous project (the models of the
+  distributions with their levels of detail, textures, materials): after a heavy scene, many GB stayed in use even
+  with the new empty scene. Now New and Open make the view release everything.

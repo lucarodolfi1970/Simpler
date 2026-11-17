@@ -1,0 +1,12 @@
+SIMPLER 1.13.58  —  23 ottobre 2026
+===================================
+
+LUCE DALL'ACQUA: VIA LE OMBRE NERE IRREALI
+------------------------------------------
+- Le macchie nere dai bordi netti sui muri, sulle colonne e sotto i ponti non erano ombre: dalla 1.13.54 ogni punto dell'immagine della luce ricordava una sola profondità. Dove un muro e una colonna davanti a lui si sovrapponevano (o al bordo di ogni zona illuminata) la profondità era sbagliata per entrambi e la luce veniva tagliata.
+- Ora le superfici rivolte dalla stessa parte ma a profondità diverse (il muro, le colonne, un gradino) hanno ciascuna la propria immagine della luce: niente buchi, e anche le colonne ricevono la loro luce.
+- Nella vista le onde non vengono più semplificate (cambiavano forma e il reticolo spariva): per le lampade si calcola solo la parte d'acqua che porta il 99,5% della loro luce, con le onde vere.
+
+SI VEDE QUANDO SIMPLER STA LAVORANDO (COMPLETATO)
+-------------------------------------------------
+- Clessidra ed etichetta anche durante l'aggiornamento della scena dopo un comando, l'aggiunta dei nuovi oggetti alla vista 3D (es. la copia di una luce) e la preparazione della vista. Prima contavano solo i comandi inviati al motore.

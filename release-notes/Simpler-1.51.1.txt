@@ -1,0 +1,4 @@
+SIMPLER 1.51.1  —  27 ottobre 2026
+==================================
+
+- Vista in tempo reale: «Sempre asciutto» sulle parti di un modello della libreria (gli interni di un'auto, il guidatore) ora tiene lontani anche il bagnato e il bianco della neve, non solo il mantello. Il modello in vista viene disegnato da una sua copia leggera che unisce le parti con lo stesso materiale: ora la copia si porta dietro, parte per parte, quali sono asciutte. Valgono anche per le auto delle distribuzioni.

@@ -1,0 +1,6 @@
+SIMPLER 1.60.0  —  27 October 2026
+==================================
+
+- New «Hide the snow» in the right-click menu of the view (it appears only when it snows with a thick mantle). With the snow hidden the mantle leaves the view and the images and is no longer computed again after every move: you move, turn and add models without the «Busy» box. The white of the snow on the materials stays. A label at the bottom of the view says «Snow hidden».
+- «Show the snow» (same menu) makes the mantle again once, with everything you changed meanwhile. If nothing changed, it is back at once.
+- It is not saved in the project: a project always opens with its snow visible. Turning the snow off in the Ambience resets the choice.

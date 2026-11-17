@@ -1,0 +1,9 @@
+SIMPLER 1.76.62  —  6 November 2026
+===================================
+
+Release notes rewritten: they talk only about Simpler.
+
+- All the notes, in Italian and in English, now describe the changes of each version without naming particular projects, scenes or computers: instead of the names of the test projects there are generic descriptions ("a large interior", "a sea scene", "a scene with thousands of objects").
+- The internal verification parts ("Tested", "Not tested", the checks before delivery and their results) and the references to the logs of a computer are gone.
+- The names of other rendering programs are gone.
+- The numbers stay where they explain an improvement (times before and after, memory).

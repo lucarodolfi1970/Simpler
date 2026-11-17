@@ -1,0 +1,7 @@
+SIMPLER 1.49.0  —  27 October 2026
+==================================
+
+- Snow: the mantle of models now follows their shape. Before it was a sheet laid from above, and on curved shapes (a car, a rock) it came down the sides in torn flaps. Now Simpler spreads the snow over the model's faces facing up, with their real curvature, and turns it into one smooth surface: rounded caps on the roof and the bonnet, no curtains on the sides. It works for any model up to 12 m (rocks, cars, benches, lamp posts, people...). Simpler does not know what a model is: it only looks at its geometry. The ground and the bigger models (buildings, streets) keep the mantle from above, lighter on large flat surfaces.
+- New «Snow detail» in the Advanced of the object's Snow card: Auto (Simpler decides from the size), High (on the shape, finer, for what is seen up close), Low (from above, light). Beyond the vertex limit Simpler first lightens the models farthest from the current view. The panel's «Mantle detail» applies to all.
+- Rain and snow now also cover decals in the path tracing (lines, road markings): before they stayed dry and yellow over the snow, because their material lives in the decal and not in the object.
+- Sun: if with the chosen latitude and day the sun never sets (midnight sun) or never rises (polar night), the Sun card says so. Presets keep the place and the date: at latitude 89° in June «Night» and «Sunset» cannot get dark and the hour stayed at 24.

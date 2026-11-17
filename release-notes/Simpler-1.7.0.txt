@@ -1,0 +1,35 @@
+SIMPLER 1.7.0  —  21 ottobre 2026
+=================================
+
+MODELLI DELLA LIBRERIA: INSERIMENTO SENZA RIPREPARARE LA VISTA
+-------------------------------------------------------------
+- Inserire un modello dalla libreria (Modelli 3D e Modelli 3D Poly Haven), con un clic o trascinandolo, non fa più
+  ripreparare tutta la vista 3D (prima 7-17 secondi, di più sulle scene grandi).
+  · La prima volta che usi un modello Simpler ne prepara una copia per la vista: qualche secondo, poi resta pronta
+    anche negli altri progetti.
+  · Dalla seconda volta il modello compare subito.
+- Il sistema delle distribuzioni ora vale per tutti i modelli della libreria e per le loro copie (Ctrl+C/V,
+  Shift-trascina, Duplica):
+  · GPU instancing: tutte le copie si disegnano da un'unica copia del modello;
+  · livelli di dettaglio automatici: le copie lontane o piccole sullo schermo usano versioni più leggere;
+  · le copie fuori dall'inquadratura non vengono disegnate;
+  · anche le copie compaiono subito, senza ripreparare la vista.
+- Puoi modificare i modelli inseriti come prima:
+  · cambiare un materiale si vede subito su tutte le copie che lo usano;
+  · "Solo per questo oggetto", nascondere o spostare una parte dalle proprietà: quell'oggetto riceve una copia
+    per la vista tutta sua (qualche secondo).
+- Il path tracing e il render finale usano sempre i modelli completi.
+- Limiti:
+  · nella vista 3D una parte dentro un modello inserito non si seleziona da sola: cliccando o scegliendola
+    nell'albero si seleziona tutto il modello, e il gizmo lo sposta intero;
+  · i modelli con ossa (personaggi con rig) e gli oggetti importati direttamente nella scena funzionano come
+    prima.
+
+SCENE CON MIGLIAIA DI OGGETTI
+-----------------------------
+- L'elenco della scena (albero, sincronizzazione con la vista) con 6.000 oggetti passa da 26 s a 0,5 s:
+  per ogni oggetto il motore riscorreva tutti gli oggetti del file.
+- Rifare una distribuzione di 3.000 pezzi (slider del pennello): da 6-29 s a 1-2 s.
+- 1.000 copie con Shift-trascina o Incolla: circa 1 s.
+- Annulla/Ripeti di migliaia di pezzi: da 3,7 s a circa 1 s.
+(Tempi misurati senza scheda video: con una scheda video sono più bassi.)

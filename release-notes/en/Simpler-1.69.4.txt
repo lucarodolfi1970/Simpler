@@ -1,0 +1,6 @@
+SIMPLER 1.69.4  —  29 October 2026
+==================================
+
+- Grunge: new «Opacity» slider next to «Quantity». Quantity decides how much of the surface is dirty, Opacity how strongly the dirt covers the material: at 5% it is just a veil. It works the same in the real-time view and in path tracing.
+- The old «Dulls» (Advanced) is now called «Less shiny», because it makes the surface less shiny, not more transparent.
+- «On the edges» removed: what looked like edges were often places where different models meet. A brush to paint the dirt will take its place.

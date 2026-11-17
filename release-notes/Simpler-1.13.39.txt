@@ -1,0 +1,8 @@
+SIMPLER 1.13.39  —  23 ottobre 2026
+===================================
+
+PARTI DEI MODELLI DELLA LIBRERIA
+--------------------------------
+- Selezionando nell'albero una parte di un modello della libreria (es. le foglie della pianta), la vista 3D evidenziava sempre il modello intero. Ora il contorno arancione mostra solo quella parte.
+- Con una parte selezionata il gizmo non compare: avrebbe spostato tutto il modello. La parte si modifica dal pannello a destra (materiale, posizione e dimensioni nelle proprietà).
+- Nota: i modelli della libreria sono disegnati raggruppando i pezzi per materiale (è ciò che li rende veloci), quindi la parte si riconosce dai suoi materiali. Nei modelli divisi per materiale, come questa pianta, corrisponde esattamente alla parte scelta.

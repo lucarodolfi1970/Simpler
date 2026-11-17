@@ -1,0 +1,34 @@
+SIMPLER 1.7.0  —  21 October 2026
+=================================
+
+LIBRARY MODELS: INSERTED WITHOUT PREPARING THE VIEW AGAIN
+---------------------------------------------------------
+- Inserting a model from the library (3D models and Poly Haven 3D models), with a click or by dragging it, no
+  longer makes the whole 3D view prepare again (previously 7-17 seconds, more on large scenes).
+  · The first time you use a model, Simpler prepares a copy of it for the view: a few seconds, then it stays
+    ready in other projects too.
+  · From the second time on, the model appears immediately.
+- The scatter system now applies to all library models and their copies (Ctrl+C/V, Shift-drag, Duplicate):
+  · GPU instancing: all copies are drawn from a single copy of the model;
+  · automatic levels of detail: copies that are far away or small on screen use lighter versions;
+  · copies outside the frame are not drawn;
+  · copies appear immediately too, without preparing the view again.
+- You can edit inserted models as before:
+  · changing a material shows up immediately on all the copies that use it;
+  · "Only for this object", hiding or moving a part from the properties: that object gets its own copy for the
+    view (a few seconds).
+- Path tracing and the final render always use the full models.
+- Limitations:
+  · in the 3D view a part inside an inserted model cannot be selected on its own: clicking it or choosing it
+    in the tree selects the whole model, and the gizmo moves it as a whole;
+  · models with bones (rigged characters) and objects imported directly into the scene work as
+    before.
+
+SCENES WITH THOUSANDS OF OBJECTS
+--------------------------------
+- The scene list (tree, sync with the view) with 6,000 objects goes from 26 s to 0.5 s:
+  for each object the engine was scanning all the objects in the file again.
+- Redoing a scatter of 3,000 pieces (brush sliders): from 6-29 s to 1-2 s.
+- 1,000 copies with Shift-drag or Paste: about 1 s.
+- Undo/Redo of thousands of pieces: from 3.7 s to about 1 s.
+(Times measured without a graphics card: with one they are lower.)

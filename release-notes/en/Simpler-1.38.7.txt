@@ -1,0 +1,4 @@
+SIMPLER 1.38.7  —  25 October 2026
+==================================
+
+- Library tiles always aligned: a name on two lines no longer moves the thumbnail up. The pictures all sit at the same height and the names start right below them. This applies to every library: models, materials, decals, backgrounds, ecosystems, folders, lights and objects. Before, buttons always centred their content vertically, even where the tile asked for it at the top.

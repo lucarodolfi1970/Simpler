@@ -1,0 +1,12 @@
+SIMPLER 1.3.2  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+- MOVING FOLDERS INTO OTHER FOLDERS (3D models and Materials):
+  - drag a folder onto another one: it goes inside, with all its subfolders and contents;
+  - drag it onto "Back" or onto a part of the path bar (e.g. "3D models") to move it higher up;
+  - or right click on the folder > "Move to" > choose the destination (the main folder too).
+  You can't put a folder inside itself or inside one of its subfolders (the cursor shows this with the
+  no-entry sign). If the destination already has a folder with the same name, Simpler asks whether to merge them.
+  The "Primitives" folder and the Poly Haven ones stay fixed.

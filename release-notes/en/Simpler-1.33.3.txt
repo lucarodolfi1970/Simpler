@@ -1,0 +1,5 @@
+SIMPLER 1.33.3  —  25 October 2026
+==================================
+
+- Decimals and hundredths everywhere: every number field of the panels (lights, materials, decals, objects, camera, ambience, render) takes and shows up to two decimal places, for example 0.125 m, 2.5 W or 12.75 %. Decimals show only when there are some: 10 stays «10». Only values that are whole by nature stay whole: samples, bounces, number of blades, decal order.
+- Decals no longer round to the millimetre (size and depth) or to the percent (opacity, roughness, metal).

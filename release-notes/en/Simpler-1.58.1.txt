@@ -1,0 +1,4 @@
+SIMPLER 1.58.1  —  27 October 2026
+==================================
+
+- Path tracing: «Path tracing failed: key "eye_z" not found» in a project with volumetric sky clouds made with an old version. The project's clouds still had the material of then, which lacks a part used today; now when the project opens the clouds are made again with the current version, and that missing part no longer causes the error.

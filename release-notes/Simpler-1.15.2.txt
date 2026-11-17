@@ -1,0 +1,8 @@
+SIMPLER 1.15.2  —  24 ottobre 2026
+==================================
+
+OMBRE E LUCI RIFATTE
+--------------------
+- «Recupera luci» conserva i colori: lavora sulla luminosità di ogni punto e scala insieme rosso, verde e blu, come Lightroom. Prima agiva su ogni canale separatamente e un cielo caldo al tramonto diventava grigio. È anche più delicato: al 100% un 90% scende all'85%, un 80% al 73%.
+- «Schiarisci ombre» agisce soprattutto sui quasi neri, dove sta il fogliame in controluce: al 100% un 3% sale all'8,5% (prima 6%), un 10% al 22%, un 30% al 38%; i toni medi restano quasi fermi e il nero resta nero. Anche qui i colori sono conservati.
+- Stesso calcolo in tutti e tre i posti: vista in tempo reale (dentro il suo shader), vista ray-traced (l'immagine arriva dal motore già corretta; spostando i cursori viene ricorretta l'ultima immagine, senza ricalcolare) e render finale.

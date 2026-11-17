@@ -1,0 +1,7 @@
+SIMPLER 1.46.0  —  26 October 2026
+==================================
+
+- Snow, step 1: new «Snow» card in the Ambience, under the Rain. «Amount» goes from a dusting in patches to all white. The snow settles where the surface faces up (ground, roofs, ledges, cars, trees and lawns of distributions) and covers the relief of the textures. It is the same in the real-time view and in the path tracing.
+- It uses the same shelter as the rain: no snow under canopies, porticoes, balconies, cars and trees. On the object, «Always dry» (no snow) and «Does not shelter» apply.
+- Advanced: «On slopes» (how far it goes down sloping surfaces), «Edge softness», «Move X/Y» for the patches, «Outdoors only».
+- While it snows the rain is suspended: its settings and the painted puddles stay and come back when the snow is at zero.

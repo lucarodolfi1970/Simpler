@@ -1,0 +1,25 @@
+SIMPLER 1.13.2  —  22 ottobre 2026
+==================================
+
+PIÙ ORDINE: L'ACQUA È UN MATERIALE
+---------------------------------
+- L'acqua ora si regola in un solo posto: nell'EDITOR DEL MATERIALE, sezione "Acqua" (la prima).
+  · "È acqua": il materiale diventa acqua limpida (trasparenza 100%, indice 1,333, liscia); poi puoi cambiarlo come
+    qualunque materiale. Vale per tutti gli oggetti con quel materiale.
+  · Sotto: Onde vere (altezza, dimensione), Colore e limpidezza (Piscina/Lago/Mare/Palude, limpidezza, torbidità).
+  · Le caustiche restano un'impostazione del rendering: Rendering → Caustiche «Nitide» (la sezione lo ricorda).
+- Tolta la sezione acqua dalle proprietà dell'oggetto (non compare più sui vetri delle finestre).
+- I progetti salvati con le versioni precedenti si aggiornano da soli: le onde passano dall'oggetto al suo materiale.
+- Il materiale "Acqua" della libreria arriva già con "È acqua" acceso.
+- Annulla (Ctrl+Z) vale anche per le modifiche dell'acqua.
+
+BUG CORRETTI
+------------
+- ACQUA PIENA DI PUNTINI NEL PATH TRACING (anche con torbidità 0 e senza vetri): la vista si fermava dopo 4 secondi
+  dell'ultimo passaggio, con pochi campioni (il badge diceva comunque 512), e il denoiser OptiX lasciava la grana
+  sulle onde e sul vetro. Ora:
+  · l'ultimo passaggio arriva a tutti i campioni impostati (un comando o un movimento lo interrompono subito);
+  · il denoiser è OpenImageDenoise (sulla scheda video), più pulito su acqua, vetro e volumi, anche nel render finale.
+  In una piscina al chiuso la superficie dell'acqua è pulita già a 32 campioni.
+- Le finestre fatte di tanti vetri uniti in un solo oggetto venivano prese per "vetro pieno" (lente delle caustiche).
+  Ora conta lo spessore vero del vetro (volume/superficie): le lastre sottili lasciano sempre entrare il sole.

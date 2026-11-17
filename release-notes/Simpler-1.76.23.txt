@@ -1,0 +1,8 @@
+SIMPLER 1.76.23  —  3 novembre 2026
+===================================
+
+Costa senza fascia grigia, livelli di dettaglio dei modelli Poly Haven, pietre da Poly Haven.
+
+- Mare: via la fascia grigia e opaca che correva lungo la costa a qualche metro dalla riva. Non era la schiuma (per questo «Schiuma della costa» a 0% o a 200% non la cambiava): era il punto in cui l'acqua bassa trasparente passa al mare profondo, dove metà dell'acqua diventava quasi bianca. Ora l'acqua limpida e il mare profondo si mescolano come devono: dal verde dell'acqua bassa al blu, senza velo.
+- Modelli 3D Poly Haven con più livelli di dettaglio (LOD0, LOD1… la stessa forma con più o meno triangoli, tutti nello stesso file): Simpler chiede quale usare, con il numero di triangoli di ognuno, e mette nella scena solo quello. Prima entravano tutti, uno dentro l'altro. Per il pennello e per «Pietre e detriti» propone già un livello leggero.
+- «Pietre e detriti»: con «Scegli le pietre dalla libreria» acceso, anche un clic su un modello di Poly Haven lo aggiunge alle pietre (prima finiva nella scena). Sui modelli di Poly Haven, tasto destro: «Aggiungi a Pietre e detriti» e «Aggiungi al pennello Distribuisci».

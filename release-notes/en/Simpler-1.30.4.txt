@@ -1,0 +1,5 @@
+SIMPLER 1.30.4  —  25 October 2026
+==================================
+
+- Properties ▸ Transform: new «Size» row with width × depth × height of the model (with everything it contains and with its scale), along its own axes: a turned car stays 4.55 × 1.93 × 1.42 m. The unit adapts (m, cm, mm), so a model imported with the wrong units — a car of 12 cm instead of 4.5 m — shows at once.
+- Fixed a compile error of 1.30.3 (mapping decimals): the program builds again.

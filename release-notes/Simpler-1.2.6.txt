@@ -1,0 +1,12 @@
+SIMPLER 1.2.6  —  20 ottobre 2026
+=================================
+
+- ALBERO DELLA SCENA, trascinamento con tre zone su ogni riga:
+  · bordo superiore o inferiore della riga (compare una linea blu) = l'oggetto va ACCANTO a quella riga, allo stesso
+    livello: così un figlio torna su di un livello (per portarlo nella radice rilascialo tra due oggetti della
+    radice, o nello spazio vuoto sotto l'albero);
+  · centro della riga (contorno arancione) = l'oggetto va DENTRO quella riga, che diventa il suo padre.
+- LIBRERIA OGGETTI: un oggetto salvato da solo viene inserito direttamente nella radice dell'albero, con il nome
+  dato nella libreria (niente gruppo in più). Più oggetti salvati insieme restano in un gruppo con quel nome.
+- (dalla 1.2.5) Salvando un figlio si salva solo il figlio, non il suo padre: il "Pavimento" che vedevi nella
+  libreria veniva dalla 1.2.4. Per un modello salvato con la 1.2.4: tasto destro > "Rigenera miniatura" lo ripulisce.

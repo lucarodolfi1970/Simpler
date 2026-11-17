@@ -1,0 +1,12 @@
+SIMPLER 1.75.24  —  31 October 2026
+===================================
+
+The 4K render «without the wet» was an old file; selecting cars with SmartView.
+
+- The wet had not disappeared: the 4K render was never saved and the window showed you the old file with the same name.
+  - From the log: in the render's copy the rain was all there (wet 0.85, puddles 0.55, shelter map loaded, 347 wet materials), the same as the 960×540 render before. Neither the resolution nor the memory had anything to do with it: card 13.9 GB of 16, no warning.
+  - At the end, after 10 minutes 50 seconds, Blender could not write the picture file («Could not open file»: usually the file is open in another program). But it exited as if all were fine; Simpler found there the file of the previous render with that name, and opened that.
+  - Now the render writes the image in its working folder and then Simpler copies it where you chose. If it cannot be written there, it is saved next to it with a number («... (2).png»), opened, and the status bar tells you: the render is never lost and an old file is never shown. An error inside the render now ends Blender with an error code, which Simpler sees.
+- SmartView, selecting a car (5–9 seconds).
+  - Cause: the cars of the distributions are drawn «as copies»; the selected one is drawn on its own, with shaders of its own. Simpler prepares them in advance, but shaders depend on the lights of the view: when the street lamps came on at dusk (lights from 4 to 16 and from 2 to 10, in the log at 22:46) the prepared ones were no use any more, and selecting made 3 of them inside one frame, 9 seconds.
+  - Now, at every change of the lights of the view, the shaders of the models are prepared again in the background, after the view's own. If you select before they are done, the preparation goes through the «Busy» box instead of freezing the view.

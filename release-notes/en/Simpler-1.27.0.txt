@@ -1,0 +1,6 @@
+SIMPLER 1.27.0  —  25 October 2026
+==================================
+
+- Glass and water: no more black inside glass pieces. Refracted or reflected rays that slipped past the edge of the ground (2 km away, a thin band just under the horizon) or found no ground at all saw the sky below the horizon, which is black: black lines and patches in a glass cube, black lower half in reflections. Now below the horizon they see a far ground lit by the same sun and sky (behind its haze), or with no ground the colour of the haze, as the camera does. Projects already saved are updated when opened.
+- Final render: the picture window showed only the top left part of renders larger than the window (for example 1920 × 1080): now «Fit» shows the whole picture. The same for AI results.
+- Model library: the size «(x MB)» is readable under long names on two lines too.

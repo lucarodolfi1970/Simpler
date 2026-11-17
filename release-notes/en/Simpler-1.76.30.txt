@@ -1,0 +1,6 @@
+SIMPLER 1.76.30  —  3 November 2026
+===================================
+
+Sea: no more «ground» where an object was.
+
+- Fixed: moving an object in the water, the real-time view kept a piece of «ground» where the object had been. It was the water staying transparent there, because the view kept the old coast map, and the bottom showed through. Now the map updates together with the sea, as soon as «Coast calculation» ends.

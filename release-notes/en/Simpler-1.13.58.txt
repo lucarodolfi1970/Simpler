@@ -1,0 +1,12 @@
+SIMPLER 1.13.58  —  23 October 2026
+===================================
+
+LIGHT FROM WATER: NO MORE UNREAL BLACK SHADOWS
+----------------------------------------------
+- The black patches with sharp edges on walls, columns and under bridges were not shadows: since 1.13.54 each point of the light image remembered a single depth. Where a wall and a column in front of it overlapped (or at the border of every lit area) the depth was wrong for both and the light was cut.
+- Now surfaces facing the same way at different depths (the wall, the columns, a step) each have their own light image: no holes, and the columns get their light too.
+- In the view the waves are no longer simplified (they changed shape and the net disappeared): for lamps only the part of the water carrying 99.5% of their light is computed, with the real waves.
+
+YOU CAN SEE WHEN SIMPLER IS WORKING (COMPLETED)
+-----------------------------------------------
+- Hourglass and label also while the scene is updated after a command, new objects are added to the 3D view (e.g. copying a light) and the view is prepared. Before only commands sent to the engine counted.

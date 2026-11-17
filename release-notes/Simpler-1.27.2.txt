@@ -1,0 +1,4 @@
+SIMPLER 1.27.2  —  25 ottobre 2026
+==================================
+
+- Libreria dei modelli: il peso del modello ora è un'etichetta piccola nell'angolo in basso a destra della miniatura, sempre leggibile (sotto il nome veniva tagliato dall'altezza della riga quando il nome andava su due righe).

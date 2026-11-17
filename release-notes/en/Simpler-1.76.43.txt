@@ -1,0 +1,8 @@
+SIMPLER 1.76.43  —  4 November 2026
+===================================
+
+Terrain: rock walls no longer «comb-like».
+
+- The creases of «Rock relief» and the «Streaks on the walls» were the same and parallel over the whole wall: from mid distance they looked like a texture. Now they come in groups (stretches of wall with creases, smooth slabs without), denser in the gullies and sparse on the crests, their line wanders and the gap between them changes, and next to a deep crease there is a faint one.
+- In the real-time view the streaks come in groups too (no noticeable extra cost).
+- The materials of terrains already made are rebuilt by themselves once. No value changed.

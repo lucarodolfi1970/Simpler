@@ -1,0 +1,13 @@
+SIMPLER 1.76.58  —  5 November 2026
+===================================
+
+"3D relief": your own relief map and its colour map.
+
+- Under the kinds of relief, two new rows: "Relief map" and, just below, "Colour map" (optional). Load a black and white displacement map: it takes the place of the chosen kind, in the light of the path tracing and, with "True displacement" on, in the geometry of the final render. Remove it with "×" (or choose a kind) and the kind comes back, identical.
+- The colour map, best from the same set, takes the place of the material's colour on the walls of the Rock zone: the dark cracks fall in the cracks of the relief. Meadows, snow and scree keep their material. The colours from the land (crests, gullies, strata) stay on top. It also shows in the real-time view.
+- New sliders when there is a map: Size (metres of rock per repeat; the relief grows with the size), Rotation (turns the maps on the wall, for the slant of the strata) and Colour from the map. They change at once, without remaking the materials. Depth, Detail and Where work as before.
+- Advanced: "Break the repetition" moves the maps at random in zones, without turning them (the Rotation stays). Only in path tracing and the final render.
+- The maps are projected from three sides in real metres: no UVs to prepare, continuous across the terrain zones.
+- The real shape of the rock in the mesh (gullies, blocks, ledges of "Sculpted rock") stays that of the chosen kind.
+- Materials, Subsurface section: new switch "Thin sheet (light goes through)" for leaves, petals, paper, curtains. With Subsurface at 30-40% the light goes through the leaf (tried in Blender 5.2: from 0.0007 to 0.15 brightness with the sun behind). Before it was only the glass's "Thin wall", shown only with Transparency above 0.
+- New automatic check: the map changes the relief, Size and Rotation change without remaking the materials, the colour map goes on the rock only (also in the view), without maps the kind comes back exactly.

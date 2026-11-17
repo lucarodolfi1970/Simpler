@@ -1,0 +1,12 @@
+SIMPLER 1.8.4  —  21 October 2026
+=================================
+
+- LED STRIP: in path tracing it looked switched off because Cycles, by default, does not show the surface of an
+  area light in the image: the strip lit its surroundings but the glowing line could not be seen. Now the LED
+  strip is created "Visible to camera": in path tracing you see the lit line and the real-time view shows it the
+  same way (only from the side it emits towards, as in Cycles).
+- AREA LIGHTS: new "Visible to camera" option in the light panel (Area, Disc, LED strip). On: the glowing
+  surface is visible; off: it lights the scene but does not appear in the image (suited to softbox panels).
+  For strips already inserted, just turn it on.
+- PROJECTS: when reopened, a project shows the same framing it had when saved, instead of framing the
+  whole scene. Projects saved without a framing still frame everything.

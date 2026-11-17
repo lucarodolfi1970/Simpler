@@ -1,0 +1,8 @@
+SIMPLER 1.63.0  —  28 ottobre 2026
+==================================
+
+- Nuovo, in basso a sinistra sopra «Alleggerisci»: «Solo ciò che vede la camera». «Tutto» accende o spegne ogni voce; sotto ogni interruttore c'è scritto cosa fa. Si salva con il progetto.
+- Neve: più dettaglio dove guarda la camera, meno lontano, solo una base fuori dall'inquadratura, con lo stesso numero di vertici di prima. Sul progetto della montagna le celle vicino alla camera passano da 105 a 13 cm. Il manto si rifà da solo quando la camera resta ferma un secondo; per il render finale si rifà subito per la sua camera.
+- Ecosistemi: pezzi solo dove la camera vede la superficie, per tutti gli ecosistemi della scena. Quando sposti la camera si accende «Vista cambiata · Ricalcola», che li rifà tutti in un solo passo da annullare; prima del render finale si rifanno da soli. Un ecosistema che deve restare completo ha «Sempre intero» nelle sue Avanzate (prende il posto di «Solo dove guarda la camera» del pannello).
+- Neve sugli alberi delle distribuzioni: prima un modello che costava troppo veniva saltato e la neve finiva solo su una parte degli alberi. Ora ogni modello ha la sua parte del budget e, se serve, il manto è più grossolano o in una sola variante.
+- Manto sul terreno più preciso: l'altezza di ogni cella è quella vera della superficie, mentre prima era il punto più alto di pochi punti a caso. Sui pendii la neve non sta più sollevata a gradini e non viene bucata dal terreno.

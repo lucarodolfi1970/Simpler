@@ -1,0 +1,8 @@
+SIMPLER 1.75.59  —  1 November 2026
+===================================
+
+AI outputs: a green thumb for the good ones, a red one for the failed ones.
+
+- The «…» menu of every AI video or image has two new entries: «Good» and «Failed». Once you pick one, a small thumb appears at the top right of the thumbnail: green and up for good ones, red and down for failed ones. So they can be told apart at a glance.
+- To remove the judgement, just pick the entry that is already ticked again.
+- The judgement is saved with the project, together with the AI outputs.

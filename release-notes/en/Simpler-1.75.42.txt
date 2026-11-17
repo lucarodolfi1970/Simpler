@@ -1,0 +1,14 @@
+SIMPLER 1.75.42  —  1 November 2026
+===================================
+
+AI video and saved scenes: all the cases checked and handled.
+
+- A video keyframe is always a full copy of the scene as it was when you made it: framing, lights, environment and picture. Renaming, updating or deleting the scene it comes from never changes it, and the video always uses that copy.
+- Under each keyframe made with «From a saved view…» it now says which scene it comes from. Simpler recognises it by its internal code, not by its name:
+  - scene renamed: the new name appears;
+  - scene updated afterwards (⟳): a warning says the keyframe is the earlier version, to make again if you want the new one;
+  - scene deleted: a warning says the scene is gone and the keyframe stays as it was;
+  - scene deleted and another renamed or created with the same name: it is not mistaken for the earlier one.
+- With «Use the current view» the keyframe is not linked to any scene.
+- The panel updates at once when you rename, update or delete a scene.
+- New automatic check «video_frame_views» with all these combinations.

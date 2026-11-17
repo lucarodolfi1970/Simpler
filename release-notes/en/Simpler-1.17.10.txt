@@ -1,0 +1,4 @@
+SIMPLER 1.17.10  —  24 October 2026
+===================================
+
+- The "Materials" button behaves like Rendering, Ambience, Camera and Resources: when the window is not very wide only the icon stays (the name is in the tooltip).

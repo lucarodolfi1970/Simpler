@@ -1,0 +1,7 @@
+SIMPLER 1.13.49  —  23 ottobre 2026
+===================================
+
+AMBIENTE: IL SOLE SEGUE GLI SLIDER MENTRE LI MUOVI
+--------------------------------------------------
+- Nella vista in tempo reale, trascinando Ora, Giorno dell'anno, Latitudine, Nord e Intensità del sole, la luce e le ombre si muovono subito insieme allo slider (anche il disco del sole nel cielo). Prima cambiavano solo quando si lasciava lo slider.
+- Il cielo (colori, foto a 360°) e l'esposizione si aggiornano quando lasci lo slider, come prima: rifarli a ogni movimento rallenterebbe troppo.

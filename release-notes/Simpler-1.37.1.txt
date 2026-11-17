@@ -1,0 +1,7 @@
+SIMPLER 1.37.1  —  25 ottobre 2026
+==================================
+
+- Rinomina: il nome scelto ora resta. Prima, se il nome era già usato da qualcosa che non si vede (un oggetto eliminato e tenuto per Annulla, il modello di una distribuzione), Blender aggiungeva .001, .002… e sembrava che il nome tornasse quello di prima. Ora è l'oggetto nascosto a farsi da parte, e con Annulla riprende il suo nome.
+- Un modello trascinato dalla libreria prende il nome giusto, senza .002 o .003.
+- Distribuzioni eliminate: i loro modelli restavano nel progetto per sempre, occupando memoria, peso del file e nomi. Potevano anche essere presi come riferimento del modello: per questo nella vista un'auto poteva comparire girata. Ora non contano più e vengono tolti all'apertura del progetto.
+- Notte, nuovi valori predefiniti: Stelle 10%, Luce della luna 100%, Fase 50% (piena), Dimensione 4×, Luminosità del disco 60%, Alone 60%.

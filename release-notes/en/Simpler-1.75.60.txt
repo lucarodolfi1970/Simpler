@@ -1,0 +1,10 @@
+SIMPLER 1.75.60  —  1 November 2026
+===================================
+
+Materials: «Map scale», to make a single map bigger than the material's other textures.
+
+- In the «Advanced» settings of Roughness (glossy maps too), Metallic and Relief (normal map and bump) there is the new «Map scale» slider. It appears once the map is loaded.
+- At 1 the map has the same size as the material's other textures, as before. At 4 it is four times bigger. On the checkered floor, for example, a glossy map at scale 4 covers several tiles at once and its stains no longer repeat identically on every tile.
+- The scale applies only to that map: the colour, the other maps, and the texture's position and rotation stay as they are. It shows both in the real-time view and in path tracing and the render.
+- A map with a scale other than 1 does not use «Break the repetition», because making it bigger already has the same effect. In the real-time view, with «Break the repetition» on, the look may differ a little from the render.
+- New automatic check «map_scale»: it verifies that the scale stays in the material and reaches the real-time view.

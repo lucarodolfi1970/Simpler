@@ -1,0 +1,9 @@
+SIMPLER 1.76.45  —  4 novembre 2026
+===================================
+
+Neve: niente più disegni ripetuti.
+
+- Con poca neve (per esempio Quantità 29,6) la montagna si riempiva degli stessi segni bianchi in fila, anche sulle pareti. La causa: dove la neve è poca decideva la sua mappa di 8 m, che si ripete identica ogni 8 m.
+- Ora quella mappa è ruotata e spostata da due mappe grandi (37 m e 164 m), che pesano anche loro: la neve fa chiazze di tutte le dimensioni e non si ripete più in file. A parità di Quantità copre la stessa superficie.
+- Uguale nel path tracing, nella vista in tempo reale e nel mantello di neve. Le scene già fatte cambiano il disegno della neve (non la quantità).
+- Nuovo controllo automatico: quanto la neve si ripete ogni 8 m (prima 0,62, ora 0,17; il controllo fallisce sopra 0,4).

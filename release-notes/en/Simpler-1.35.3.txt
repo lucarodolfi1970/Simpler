@@ -1,0 +1,5 @@
+SIMPLER 1.35.3  —  25 October 2026
+==================================
+
+- Lights inside a library model can be selected in the view too: choosing them in the tree shows the gizmo and the selection on the light, and in real time they light. Before, some lights (for example those of a car saved to the library from another library car) carried the mark of a «piece of the model», of another model even: the view did not get them at all, so no selection, no gizmo and no light in real time. A light is never a piece of the model's shape: now it always stays an object of the view, in projects and models already saved too.
+- Selection from the tree checked for every object sent to the view (models, pieces, groups, lights, ground): each one gets selection and gizmo.

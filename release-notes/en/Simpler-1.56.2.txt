@@ -1,0 +1,4 @@
+SIMPLER 1.56.2  —  27 October 2026
+==================================
+
+- Real-time view: a cloud (or another model with a Volumetric material) saved in the library and dragged into the scene looked like a heap of grey discs; only the path tracing showed it as a volume. Now the view draws it as a volume too, like the original one.

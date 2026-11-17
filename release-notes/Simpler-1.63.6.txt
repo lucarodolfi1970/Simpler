@@ -1,0 +1,4 @@
+SIMPLER 1.63.6  —  28 ottobre 2026
+==================================
+
+- Neve sotto l'acqua: le rocce poco sotto la superficie di una pozza ricevevano il manto di neve, sia con «Non fa riparo» attivo sia spento. Il riparo contava solo ciò che sta almeno circa un metro sopra. Ora un oggetto «Senza mantello» che fa riparo (l'acqua, una lastra di vetro) toglie il manto a tutto ciò che c'è sotto, a qualunque distanza, comprese le piante delle distribuzioni coperte del tutto. Con «Non fa riparo» la neve sotto torna.

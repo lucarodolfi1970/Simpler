@@ -1,0 +1,5 @@
+SIMPLER 1.67.9  —  29 ottobre 2026
+==================================
+
+- «Adatta all'oggetto»: l'immagine non esce più capovolta sui modelli importati con assi diversi (molti FBX hanno l'alto sull'asse Y e vengono girati dal loro gruppo). Ora l'alto è quello della scena, qualunque sia l'orientamento interno dell'oggetto, e le proporzioni tengono conto di tutte le scale, anche dei gruppi.
+- Per correggere una vetrata già adattata basta premere di nuovo «Adatta all'oggetto».

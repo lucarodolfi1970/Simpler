@@ -1,0 +1,10 @@
+SIMPLER 1.45.0  —  26 October 2026
+==================================
+
+- Rain, step 3: the puddle brush. In Ambience > Rain > Advanced turn on «Puddle brush» and paint straight on the view, holding the left button and dragging.
+  - «Add» puts puddles where you want them, «Remove» takes them away, the automatic ones too. Holding Shift removes without changing mode.
+  - The brush size goes from 10 cm to 10 m; [ and ] change it on the view. Esc stops painting; the right button turns the view as always.
+  - A painted puddle goes where you painted it, also under a canopy. It lies only on the surface you painted: paint the street under a portico and the roof above stays as it is.
+  - The edges follow «Edge softness». Painted puddles appear even with Puddles at 0.
+  - They show at once in the real-time view and are the same in path tracing. Every stroke undoes with Ctrl+Z, and «Clear the painted puddles» removes them all.
+  - They stay in the project when you save.

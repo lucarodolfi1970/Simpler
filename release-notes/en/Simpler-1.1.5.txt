@@ -1,0 +1,16 @@
+SIMPLER 1.1.5  —  18 October 2026
+=================================
+
+NEW FEATURES
+------------
+- Path tracing on large scenes: the badge at the bottom now has a progress bar and shows the count
+  and the estimated time left, for example
+  "Loading textures · 212/480 · ≈ 1:35 left · memory 1.7 GB · file name".
+  This applies to reading objects, loading textures, building the acceleration structure and
+  optimising textures. The texture count includes only the textures the scene really uses and
+  stays visible even when Cycles does not report the current file.
+- Textures on a network drive (or a USB stick): Simpler makes an identical copy on the local disk, only
+  once and in the background, and the previews read that copy. The final render also uses the local copies
+  (same pixels as the originals, read much faster). The saved project always points to the original files.
+- The engine's log records each path tracing phase with its time: if a scene stays slow, it shows exactly
+  where.

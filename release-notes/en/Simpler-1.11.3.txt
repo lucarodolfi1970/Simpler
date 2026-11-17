@@ -1,0 +1,14 @@
+SIMPLER 1.11.3  —  21 October 2026
+==================================
+
+BUG FIXES
+---------
+- BLACK GLASS AND WATER (also from under the water, and a light under the water could not be seen): in the project
+  the Rendering settings had "Total bounces" at 0. Cycles counts every bounce in the total: at 0 the ray stopped on
+  the surface of the water or glass, which turned black whatever the material. Now, when the scene has glass or
+  water, the path tracing uses at least the "Refractions" value for the total: the water is transparent from above
+  (the lit bottom shows) and from below (bottom and sky through the surface, as in reality).
+  Cost: only the rays that really cross glass or water go on, the others keep their own limits.
+  The vase of the apartment was transparent because that project had normal bounces.
+- Rendering panel: a warning when "Total" is below "Refractions" and when "Diffuse" is at 0 (without indirect light
+  the areas in shadow, the shaded bottom too, stay black).

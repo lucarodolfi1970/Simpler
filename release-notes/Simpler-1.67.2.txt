@@ -1,0 +1,6 @@
+SIMPLER 1.67.2  —  28 ottobre 2026
+==================================
+
+- Ecosistemi solo dove guarda la camera: nuovo «Niente pezzi dietro i modelli», acceso di partenza. Dove alberi, edifici o rocce già nella scena nascondono la superficie, lì non vengono messi pezzi; dove la superficie si vede, anche fra un albero e l'altro, sì. Contano i modelli alti almeno 1,5 m: erba e sassi non nascondono niente.
+- «Niente pezzi dietro i modelli» e «Più rado in lontananza» sono ora nel pannello dell'ecosistema, sotto «Ricalcola dalla vista», non più nelle Avanzate: sono i due controlli che decidono quanti pezzi servono. Nelle Avanzate resta il margine attorno all'inquadratura.
+- La stima della memoria nella domanda prima di mettere un ecosistema è la memoria del computer (RAM), non quella della scheda video.

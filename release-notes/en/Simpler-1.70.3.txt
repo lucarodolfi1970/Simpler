@@ -1,0 +1,17 @@
+SIMPLER 1.70.3  —  29 October 2026
+==================================
+
+Performance in very large scenes (tried with 4,300 objects): every action measured, repeated or useless work removed. Times measured without a graphics card; with one they are lower, the before/after ratio is the same.
+
+- Preparing the 3D view (opening the project, redraw): from 65 to 38 seconds. The path tracing helper objects were removed one at a time, each removal going through the whole scene: 42 seconds just for that, now under half a second.
+- A material given to a whole model: from 48 seconds to under 1. For each piece the program searched the whole scene for a body of water.
+- Undo after «Always dry», «Gives no shelter», a material or a move on a whole model: from several minutes to half a second. Before, the scene was recalculated once per piece.
+- Size of the model in the panel: from 13 seconds to 0.3.
+- Copy and paste of a whole model: from 10 to 4 seconds.
+- Changing the sun, sky, fog or preset of the Environment: no more full recalculation of the scene at every tweak. About a second saved per change, and the path tracing no longer has to resync every object.
+- Applying a saved view: from 3.5 to under 1.5 seconds. Only the objects that really change visibility are touched now.
+- Ecosystems, first calculation from the view: from 4-8 to 1.5-2.5 seconds. Objects outside the frame, behind the camera or farther than the surface are no longer read. The map of what hides the surface is identical, and so is the number of pieces.
+- «Fit to the object»: the 3D view takes again only the pieces with the new coordinates, not the whole scene (about 20 seconds before). Also fixed: after a second «Fit to the object» with the same material the view could show the old coordinates.
+- Clicking an object: the scene tree is no longer rebuilt in full; only the highlight of the rows changes. Before, a click took 1 second with 2,400 rows open. After each action the tree is rebuilt only if what it shows has changed.
+- Selections of many objects: each object is found at once, without going through the whole scene every time.
+- Every result stays identical to before: same pieces in the ecosystems, same undo and redo.

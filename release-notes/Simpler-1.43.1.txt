@@ -1,0 +1,6 @@
+SIMPLER 1.43.1  —  26 ottobre 2026
+==================================
+
+- Pioggia: nuovo «Non fa riparo» nelle Avanzate della scheda Pioggia di un oggetto. Quello che c'è sotto prende la pioggia come se l'oggetto non ci fosse: per le auto in movimento, che non asciugano la strada. L'oggetto stesso si bagna normalmente e portici e tettoie continuano a riparare.
+  - Vale anche per quello che l'oggetto contiene e per una distribuzione intera (una fila di auto in strada); selezioni più oggetti e lo accendi in un colpo solo. Ctrl+Z lo annulla.
+  - Per un'auto parcheggiata da prima della pioggia lascialo spento: sotto resta asciutto.

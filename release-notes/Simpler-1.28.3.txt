@@ -1,0 +1,4 @@
+SIMPLER 1.28.3  —  25 ottobre 2026
+==================================
+
+- Albero della scena: prima di «Tutto» c'è un tastino che espande tutto l'albero, o lo comprime tutto se qualcosa è aperto (frecce doppie verso il basso o verso l'alto).

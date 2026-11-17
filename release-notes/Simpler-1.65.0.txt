@@ -1,0 +1,10 @@
+SIMPLER 1.65.0  —  28 ottobre 2026
+==================================
+
+- Pioggia che cade. Nelle Avanzate della pioggia, in cima, c'è «Gocce che cadono» con l'interruttore «Piove»:
+  - Le gocce ci sono solo dove guarda la camera, fino a «Fin dove arrivano»; in lontananza diventano un velo. Non cadono sotto tettoie, portici e alberi. Si ricalcolano quando la camera si ferma.
+  - Cursori: «Intensità» (da pioggerella ad acquazzone), «Vento», «Direzione del vento», «Irregolarità», «Dimensione delle gocce» (le grosse cadono più veloci), «Trasparenza delle gocce» (da strisce chiare ben visibili ad acqua limpida), «Mosso» (la scia di ogni goccia, come un tempo di scatto fino a 1/30 di secondo).
+  - «Bagna le superfici»: le superfici scoperte si bagnano quanto è forte la pioggia; sotto i ripari restano asciutte.
+  - «Schizzi»: piccole corone d'acqua dove le gocce colpiscono le superfici piane vicino alla camera, con la loro quantità.
+  - Nella vista in tempo reale si vedono le stesse gocce e gli stessi schizzi. In «Alleggerisci» il pulsante che nasconde i fiocchi nasconde anche loro, e quello che ferma i ricalcoli automatici ferma anche loro.
+- Cerchi della pioggia sull'acqua. Nelle Avanzate del materiale di tipo acqua c'è «Cerchi della pioggia» (acceso): mentre cadono le gocce, sull'acqua rivolta verso l'alto si aprono i cerchi, non sotto un riparo. Cursori «Quantità di cerchi», «Dimensione dei cerchi», «Forza dei cerchi». Si vedono anche nella vista in tempo reale.

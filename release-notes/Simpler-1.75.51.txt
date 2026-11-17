@@ -1,0 +1,9 @@
+SIMPLER 1.75.51  —  1 novembre 2026
+===================================
+
+«Dipingi lo sporco» di nuovo visibile nel path tracing.
+
+- Nei progetti grandi lo sporco dipinto si vedeva nella vista in tempo reale ma mancava, o era quasi trasparente, nel path tracing. Poteva mancare anche nel render finale, quando le texture vengono ridotte.
+- La causa: per alleggerire la vista path tracing Simpler sostituisce le immagini grandi con copie ridotte. Lo faceva anche con la mappa dello sporco dipinto, che però non è una foto ma una mappa di dati: oltre alla quantità di sporco, i suoi colori contengono la profondità della superficie dipinta. Ridotta, quei valori si mescolavano, nessuna superficie corrispondeva più e lo sporco spariva.
+- Ora le mappe di dati di Simpler non vengono mai ridotte: sporco dipinto, pozzanghere e neve dipinte, riparo della pioggia. Vale anche per i progetti già salvati: basta riaprirli.
+- Nuovo controllo automatico «data_maps_not_proxied»: fallisce con il codice di prima, passa con la correzione.

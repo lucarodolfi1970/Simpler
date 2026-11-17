@@ -1,0 +1,27 @@
+SIMPLER 1.2.1  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+- Two clear gestures for materials in the library at the bottom:
+  · DRAG the material onto an object in the view = applies it (Shift: to the whole group);
+  · CLICK the material = it opens in the right sidebar for editing (it is not applied).
+  The same goes for Poly Haven textures. In an object's properties just click the name of its material
+  to edit it (no more "Edit" button).
+- Material PREVIEW in the editor: a sphere on a checkered backdrop, rendered with path tracing, that
+  updates after every edit, even for a material not yet used in the scene. It is computed by a second
+  Blender that is always ready, so the scene's path tracing view is not disturbed (with the old method
+  every preview would have made the whole scene be prepared again). The same process prepares the library
+  thumbnails.
+- SAVE to the library: by default it overwrites the library material it comes from; "Save as new…"
+  asks for a name and creates a new material in the library (the original goes back to how it was saved). The
+  editor shows whether there are unsaved changes. The library is in %APPDATA%\Simpler\materials, with a copy
+  of the textures, and applies to all projects. Right-click a library material: "Restore Simpler's
+  material" (for modified ones) or "Remove from the library" (for ones you created).
+- More natural, adjustable DISPERSION: "Intensity" (0-100%, default 35%) is the share of light that splits into
+  colours; "Colour separation" (1× = real value) is how far apart they spread. Before, the effect was very strong
+  even at the minimum: Cycles picks the colour again at every surface it passes through, and with all the light
+  split into three colours a gem became dark and full of coloured specks. Now part of the light stays normal
+  glass: this is why sharp caustics (MNEE) also work with dispersion (white).
+- Number boxes: Enter confirms the typed value at once (even beyond the slider limits, upwards, and
+  well below the minimum for logarithmic sliders).

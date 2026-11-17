@@ -1,0 +1,7 @@
+SIMPLER 1.13.43  —  23 October 2026
+===================================
+
+WINDOWS ALWAYS INSIDE THE SCREEN
+--------------------------------
+- «Fix model materials» is a little smaller: the two lists (models and materials) take the height the screen leaves, so the window is fully visible with the buttons at the bottom; it stays in the middle of the screen.
+- Every Simpler window that grows or opens taller than the room left comes back inside the screen, in the middle, instead of ending with its bottom out of sight.

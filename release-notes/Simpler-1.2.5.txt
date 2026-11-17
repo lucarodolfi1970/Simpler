@@ -1,0 +1,17 @@
+SIMPLER 1.2.5  —  20 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- Salvando nella libreria un pezzo che nella scena sta dentro un altro oggetto (per esempio il bicchiere appoggiato
+  e collegato al pavimento), nel file finiva anche quell'oggetto: Blender porta sempre con sé il "genitore". Così la
+  miniatura mostrava il pavimento di 40 m e il bicchiere non si vedeva. Ora nel modello resta solo ciò che hai
+  salvato, nella sua posizione e dimensione reale; anche l'inserimento nella scena scarta il resto (vale pure per
+  i modelli già salvati).
+
+NOVITÀ
+------
+- Miniature degli oggetti: l'oggetto riempie tutto il quadrato, sul fondale a scacchi come le anteprime dei
+  materiali (vetri e trasparenze si leggono meglio); vista assonometrica e luci da studio come prima.
+- Tasto destro su un oggetto della libreria > "Rigenera miniatura": rifà la miniatura (e ripulisce il modello se
+  era stato salvato con oggetti in più).

@@ -1,0 +1,4 @@
+SIMPLER 1.32.2  —  25 October 2026
+==================================
+
+- The gizmo choice (Centre / Base / Origin) stays as chosen: opening or saving a project put back the choice Simpler had when it started. Simpler remembered the last folder used by saving an old copy of the settings, which put back the earlier values of everything changed meanwhile: the place of the gizmo, the way dragged materials are applied, the speed of the wheel and the other panel settings. Now it remembers the folder without touching the rest.

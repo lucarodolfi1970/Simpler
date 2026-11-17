@@ -1,0 +1,8 @@
+SIMPLER 1.75.53  —  1 novembre 2026
+===================================
+
+«Ottimizza poligoni»: la vista mostra il modello ottimizzato e l'anteprima mostra i materiali.
+
+- Dopo «Applica» il modello era davvero ottimizzato: nel tuo caso 2,5 milioni di triangoli. La vista in tempo reale però non lo ricaricava e continuava a mostrare quello vecchio, sempre a 5 milioni. Ora i pezzi cambiati vengono ricaricati nella vista subito dopo «Applica» e anche dopo Ctrl+Z e Ctrl+Y, senza ripreparare tutta la vista. Se i pezzi sono molti, o vengono da un modello della libreria, si riprepara tutta la vista.
+- Anteprima: ora mostra il modello con i suoi materiali e le texture, sotto una luce neutra. Prima era sempre grigia e il fil di ferro, acceso di base, la copriva di linee blu così fitte da farla sembrare tutta azzurra. «Fil di ferro» adesso è spento di base: acceso mostra il modello grigio con linee sottili e scure.
+- Il controllo automatico «decimate» ora verifica anche che il motore dica alla vista quali oggetti sono cambiati, sia dopo «Applica» sia dopo Ctrl+Z.

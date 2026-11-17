@@ -1,0 +1,8 @@
+SIMPLER 1.26.0  —  25 October 2026
+==================================
+
+- New "Decals" menu in the library, between Personal and Lights: the 127 free ambientCG decals (CC0), grouped by family: road markings, leaks, manhole covers, paving edges, doors, chewing gum, damaged asphalt, tyre tracks. Previews, search, downloaded on first use (1K, a few MB) and placed like yours: click for the middle of the view or drag onto the model.
+- ambientCG decals bring all their maps: colour, opacity, normal (the relief), roughness and metal. When ambientCG gives their real size (e.g. a 90 × 90 cm manhole cover) they are placed at that size.
+- Leaks have no opacity: they are "stains" that darken the surface under them like real dirt (white = nothing, dark = dirtier), both in path tracing and in the real-time view.
+- In the decal panel the Roughness and Metal sliders go away when the decal has its own map; below it says where it comes from (e.g. "ambientCG ManholeCover011 · CC0").
+- Model library: under each model's name, small and in brackets, how much it weighs on disk (model and textures), e.g. "(84.2 MB)".

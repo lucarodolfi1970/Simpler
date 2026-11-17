@@ -1,0 +1,12 @@
+SIMPLER 1.2.7  —  20 ottobre 2026
+=================================
+
+- MODELLI 3D POLY HAVEN: nuova scheda con i modelli fotorealistici di polyhaven.com (CC0, liberi anche per uso
+  commerciale, oltre 500), in cartelle prese dalle categorie di Poly Haven (es. Arredamento / Sedute), con miniature
+  e ricerca in tutte le cartelle. Clic = al centro della vista; trascinalo nella vista = la sua base va sulla
+  superficie dove lo lasci. Si scarica al primo uso (il file .blend originale di Poly Haven, con materiali pensati
+  per Cycles e texture 2K) e poi resta sul disco (%LOCALAPPDATA%\Simpler\library\polyhaven\models) per tutti i
+  progetti. L'inserimento si annulla con Ctrl+Z. Se ti piace, tasto destro > "Salva nella libreria" e lo ritrovi nei
+  tuoi Modelli 3D, nella cartella che vuoi.
+- SCHEDE DELLA LIBRERIA rinominate e riordinate: Luci · Modelli 3D · Modelli 3D Poly Haven · Materiali ·
+  Materiali Poly Haven (prima "Texture Poly Haven") · Ambienti · Scene.

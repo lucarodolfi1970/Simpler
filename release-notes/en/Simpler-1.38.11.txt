@@ -1,0 +1,4 @@
+SIMPLER 1.38.11  —  26 October 2026
+===================================
+
+- When a project opened, a car of a scatter could appear backwards for a moment and then turn by itself. The real-time view drew the pieces before knowing how the model is turned inside them. Now those pieces wait as small cones until the orientation arrives, usually a fraction of a second. If it does not arrive within 8 seconds they are drawn anyway.

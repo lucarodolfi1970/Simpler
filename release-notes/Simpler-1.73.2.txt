@@ -1,0 +1,11 @@
+SIMPLER 1.73.2  —  30 ottobre 2026
+==================================
+
+Costa: la linea dell'acqua la disegna il mare, non il fondale.
+
+- Prima, vicino a riva le onde si spegnevano del tutto (non più alte di 0,78 volte la profondità, quindi zero sulla riva). Il mare diventava un piano che incontrava la spiaggia lungo una riga dritta.
+- Adesso una parte delle onde rotte continua a salire sulla riva per qualche metro, come la risacca vera:
+  - la linea dell'acqua si muove con le onde, frastagliata;
+  - lì dove le onde corrono sulla sabbia c'è un po' di schiuma;
+  - la risalita è più lunga con le onde più alte.
+- La distanza dalla riva si calcola solo dove la griglia è abbastanza fine da vederla. Con il suolo inclinato la riva è lunga chilometri: il calcolo passa da 0,06 a 0,08 s.

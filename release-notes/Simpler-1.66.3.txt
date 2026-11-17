@@ -1,0 +1,7 @@
+SIMPLER 1.66.3  —  28 ottobre 2026
+==================================
+
+- Gocce anche sui vetri delle auto. I vetri dei modelli sono avvolti dal nodo che lascia passare la luce del sole attraverso il vetro, e la pioggia saltava i materiali avvolti così: niente gocce né bagnato. Ora li attraversa.
+- Sui vetri le gocce sono lenti più bombate: contro l'interno scuro dell'auto si vedono i bordi che riflettono il cielo e le luci.
+- Le gocce compaiono anche sui vetri fatti con la trasparenza (Alpha bassa), comuni nei modelli di auto, e non solo su quelli trasparenti per rifrazione.
+- Barra in alto: i pulsanti Bozza/Alta/Finale sono diventati un unico menu a tendina accanto a «Path tracing». In Tempo reale mostra le ombre (No, Media, Alta, Ultra), in Path tracing la qualità (Bozza, Alta, Finale). La barra delle ombre dentro la vista non c'è più.

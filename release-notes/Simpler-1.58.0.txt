@@ -1,0 +1,6 @@
+SIMPLER 1.58.0  —  27 ottobre 2026
+==================================
+
+- Ecosistemi, nuova opzione «Solo dove guarda la camera»: i pezzi vanno solo dove la camera vede la superficie, cioè nell'inquadratura (con un margine per ombre e riflessi di ciò che è appena fuori) e non nascosti dietro creste e colline. Le chiome degli alberi appena dietro una cresta restano, perché si vedono. Su un terreno grande i pezzi diventano molti meno (nella prova 54.000 → 3.400).
+- Mettendo un ecosistema troppo grande per la memoria, Simpler propone da solo di metterlo solo nell'inquadratura e dice quanti pezzi servirebbero; se è solo pesante, chiede se tutta la superficie o solo l'inquadratura.
+- Nel pannello dell'ecosistema: l'interruttore, il pulsante «Ricalcola dalla vista» per rifarlo dopo aver spostato la camera (con la stessa disposizione: dove le viste coincidono i pezzi restano gli stessi), e nelle Avanzate «Margine attorno all'inquadratura» e «Più rado in lontananza». Cambiando densità o scala resta tagliato sulla vista di quando l'hai ricalcolato.

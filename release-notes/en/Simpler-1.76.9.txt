@@ -1,0 +1,8 @@
+SIMPLER 1.76.9  —  2 November 2026
+==================================
+
+You can see the terrain materials arriving.
+
+- As soon as a terrain is made or changed, «Busy · please wait · Terrain materials» stays visible until the materials are on, with the percentage of the textures being downloaded. Before, the terrain looked finished for tens of seconds and the materials arrived later, all of a sudden.
+- Fixed: when the textures were already downloaded, the materials were sometimes put on only the next time the Terrain panel was used.
+- Esc stops waiting: you can keep working and the materials come by themselves once downloaded. A material you put on meanwhile stays.

@@ -1,0 +1,23 @@
+SIMPLER 1.75.32  —  1 novembre 2026
+===================================
+
+Video AI: un breve video tra due viste della scena, creato da Krea con la tua chiave.
+
+- Nuovo pulsante azzurro con il ciak, subito dopo «Render finale»: apre il pannello Video AI.
+- Chiave Krea: è la prima cosa del pannello. Si incolla, si verifica e viene conservata cifrata come quella di OpenAI. Una volta salvata non si vede più: si può solo eliminare e inserire di nuovo.
+- Due fotogrammi, «Inizio» e «Fine». Ognuno ha tre comandi:
+  - «Usa la vista attuale»: fa il render della vista e tiene con il fotogramma inquadratura, luci e ambiente.
+  - «Da una vista salvata…»: parte da una delle Scene salvate.
+  - Un clic sull'immagine riporta la scena a quel fotogramma.
+- Per «Fine» c'è anche «Stessa inquadratura dell'inizio». La camera torna a quella dell'inizio, mentre luci e ambiente restano come sono adesso: serve per un timelapse della luce.
+- I due fotogrammi si fanno alla misura del video (1280×720 o 1920×1080), con le impostazioni di render della scena.
+- Se le due camere sono lontane (più di 3 m o di 35°), Simpler lo segnala: il video potrebbe inventare parti della scena.
+- Modello e risoluzione:
+  - di base c'è il modello più economico, Kling 3.0 a 720p;
+  - si può scegliere Seedance 2.0 o 1080p;
+  - Simpler chiede a Krea quali modelli accettano un primo e un ultimo fotogramma; se Krea non risponde usa il suo elenco.
+- Durata da 5 a 10 secondi, con un avviso sopra gli 8.
+- Movimento: un testo facoltativo. Vuoto vale come movimento di camera lento e pulito, oppure come timelapse della luce se le due camere coincidono.
+- Il costo stimato si aggiorna a ogni scelta. «Crea video» si attiva solo con i due fotogrammi e chiede conferma del costo prima di partire.
+- Il video viene creato senza audio. Si salva in una cartella accanto al progetto («nome - Video AI») e si apre in una finestra sua, in loop.
+- «Smetti di aspettare»: Krea finisce comunque il video, che si può scaricare dopo dal pannello.

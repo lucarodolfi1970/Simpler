@@ -1,0 +1,6 @@
+SIMPLER 1.65.1  —  28 ottobre 2026
+==================================
+
+- La pioggia rimbalza su tutto: gli schizzi ora nascono anche sugli oggetti che hanno «Non fa riparo» (come le auto) e sui modelli delle distribuzioni (auto, panchine, alberi; non l'erba). Sotto e dentro questi oggetti, vicino alla camera, non cadono più gocce.
+- Schizzi più visibili: corone più larghe e più alte, con più goccioline, più chiare delle gocce che cadono.
+- Pioggia di notte: le gocce vicino a lampioni e lampade ora si illuminano, soprattutto controluce, come in una foto. Prima l'acqua liscia delle gocce rifletteva e rifrangeva la luce delle lampade solo per caso, e restava quasi invisibile. Anche nella vista in tempo reale le gocce controluce davanti a una lampada brillano di più.

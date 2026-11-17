@@ -1,0 +1,6 @@
+SIMPLER 1.33.2  —  25 ottobre 2026
+==================================
+
+- Salvando un modello nella libreria non compare più l'avviso «texture mancanti» per i segnaposto vuoti del file originale: per esempio «Map #0» di 3ds Max, una mappa senza immagine (il percorso è solo una cartella) e collegata a niente nel materiale. Non c'era mai stata una texture da salvare. Vengono ignorati anche i nodi texture non collegati a nulla.
+- Quando una texture manca davvero, l'avviso ha lo stile di Simpler (non più la finestra di Windows) e dice le cause reali: file spostato o cancellato, o su un disco non collegato. Spiega anche come rimediare: tasto destro sul modello nell'albero ▸ Cerca texture mancanti…, poi salvare di nuovo; oppure reimportarlo dal file originale.
+- Anche la domanda sulla scala nella procedura di importazione ha lo stile di Simpler.

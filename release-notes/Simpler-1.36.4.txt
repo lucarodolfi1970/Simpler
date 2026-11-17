@@ -1,0 +1,8 @@
+SIMPLER 1.36.4  —  25 ottobre 2026
+==================================
+
+- Materiali ▸ Mappatura texture ▸ Avanzate: nuovo pulsante «Centra sull'oggetto». Mette il centro della texture al centro dell'oggetto selezionato, o meglio della sua parte con quel materiale. Cambia solo lo spostamento: scala e rotazione restano come sono.
+  - UV: il centro dell'immagine va al centro delle UV dell'oggetto.
+  - Triplanare e Piana: il centro di una ripetizione va al centro dell'oggetto, in Mondo o in Oggetto come è impostato. Vale anche su pareti e facce verticali, non solo sui pavimenti.
+  - Cilindro e Sfera: la proiezione gira attorno al centro dell'oggetto.
+- «Sposta X» e «Sposta Y» funzionano entrambi, sia nel path tracer sia in tempo reale (verificato). Con una texture a righe in una sola direzione (fughe lunghe, listoni) lo spostamento lungo le righe non si vede, perché il disegno è uguale.

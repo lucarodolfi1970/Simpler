@@ -1,0 +1,9 @@
+SIMPLER 1.15.3  —  24 October 2026
+==================================
+
+FILL LIGHT
+----------
+- In the render settings, under "Colour and exposure", the "Fill light" slider: real light added to the scene (not a correction of the picture), like the photographer's reflector or fill flash.
+- It comes softly from the camera, a little from above, and follows it as you move: it lights what you frame, with soft shadows falling behind the objects. It makes no highlights on glossy surfaces and is not visible in the picture.
+- The strength is a percentage and means the same in every scene: 100% = a grey surface facing the camera comes out as a well exposed mid grey, at noon or in a dark interior. For a natural fill 20–40%. Exposure brightens or darkens it together with the rest.
+- It shows in the real-time view (without shadows), in the ray-traced view and in the final render; it is saved with the project.

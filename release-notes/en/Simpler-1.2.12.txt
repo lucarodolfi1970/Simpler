@@ -1,0 +1,20 @@
+SIMPLER 1.2.12  —  20 October 2026
+==================================
+
+NEW FEATURES
+------------
+- SELECTION AS AN OUTLINE: selected pieces have an orange outline instead of the box. The outline is also visible
+  over the path-traced image. (The box remains only for things without surfaces: empty groups.)
+- MORE COMPACT GIZMO: a single arrow per axis, quarter discs to move on a plane, flat
+  rotation arcs close to the centre.
+- When the path-traced image is shown, the real-time view is no longer drawn underneath: less work for the
+  graphics card.
+
+FIXES
+-----
+- HUGE LIGHT ICONS with long lenses: the icon grew larger when the field of view narrowed (long focal length,
+  typical for jewellery). Now it stays the same size with any focal length.
+- POLY HAVEN MODELS STILL WITHOUT TEXTURES (Cannon 01): during the new download Simpler thought the model was
+  already ready (it read the old status file) and inserted the old version without textures. Now the old status is
+  removed at the start of the download. Your Cannon 01 has already been downloaded again correctly (glTF with
+  textures): delete the white cannons from the scene and insert it again.

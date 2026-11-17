@@ -1,0 +1,6 @@
+SIMPLER 1.38.1  —  25 October 2026
+==================================
+
+- The ecosystem is now a child of the object it is placed on, like decals. When you move, rotate or scale the object, the vegetation follows it. Copying the object copies the ecosystem too, and deleting it deletes the ecosystem as well.
+  - «Another arrangement», Density and Scale rebuild the ecosystem on the object it belongs to, even when it is a copy. Plants always grow upwards, so on a tilted object they stand vertical again.
+  - Projects saved with 1.38.0 fix themselves on opening: every ecosystem becomes a child of its object and does not move.

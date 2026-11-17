@@ -1,0 +1,4 @@
+SIMPLER 1.63.3  —  28 October 2026
+==================================
+
+- More compact «Only what the camera sees» box: no text under the switches, the short explanation is in the tooltip.

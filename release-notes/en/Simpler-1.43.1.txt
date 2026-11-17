@@ -1,0 +1,6 @@
+SIMPLER 1.43.1  —  26 October 2026
+==================================
+
+- Rain: new «Gives no shelter» in the Advanced of an object's Rain card. What is under it gets the rain as if the object were not there: for moving cars, which do not dry the road. The object itself gets wet as usual, and porticos and canopies still give shelter.
+  - It also applies to what the object contains and to a whole distribution (a row of cars on the street); select several objects and turn it on at once. Ctrl+Z undoes it.
+  - For a car parked before the rain leave it off: it stays dry underneath.

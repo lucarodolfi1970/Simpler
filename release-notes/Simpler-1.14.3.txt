@@ -1,0 +1,11 @@
+SIMPLER 1.14.3  —  24 ottobre 2026
+==================================
+
+VISTA RAY-TRACED SENZA MACCHIE
+------------------------------
+- La diagnostica della cucina (diag.exr) ha mostrato la causa delle macchie che comparivano solo ai passaggi 4/5 e 5/5: il 22% dei pixel, nelle zone scure (mobili neri, ombre, schienali), si fermava a 80 campioni su 512, sparsi a sale e pepe tra pixel arrivati a 512. Il denoiser non riesce a pulire un rumore così disuguale e lo trasforma in macchie. Nei primi passaggi (2, 8, 32 campioni) tutti i pixel hanno gli stessi campioni, per questo l'immagine sembrava perfetta.
+- Ora nella vista nessun pixel si ferma prima di metà dei campioni, nel render finale prima di un quarto. L'ultimo passaggio della vista può durare fino a un quarto in più.
+
+DIAGNOSTICA DEI PARALUMI
+------------------------
+- Con diag.on, diag.exr.txt elenca anche i pezzi luminosi e tutto quello che sta loro attorno (lampadina, paralume, gabbia) con i materiali nodo per nodo: per capire la grana che resta sui paralumi anche a 2048 campioni.

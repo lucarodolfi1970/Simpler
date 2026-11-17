@@ -1,0 +1,7 @@
+SIMPLER 1.76.46  —  4 November 2026
+===================================
+
+Interface: closed sections and azure hearts.
+
+- Every section of the panels starts closed: only the list with the icons shows, you open the one you need. Then they stay as you leave them while the scene is open; a new or opened scene starts again with all closed.
+- The hearts of the favourite commands are no longer yellow: a soft azure, less intrusive. The empty heart is only a dark outline; the base commands have a full heart with a dark edge. The heart of the top bar too.

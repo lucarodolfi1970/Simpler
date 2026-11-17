@@ -1,0 +1,6 @@
+SIMPLER 1.67.0  —  28 ottobre 2026
+==================================
+
+- Preset per la pioggia e per la neve, nelle Avanzate. Pioggia: Leggera, Moderata, Intensa, Nubifragio; neve che cade: Leggero, Intenso, Tormenta. Un clic imposta insieme tutti i valori: gocce, vento, schizzi, cerchi nelle pozzanghere e gocce sulle superfici (per la neve: fiocchi, vento, raffiche, zone, mosso). «Bagnato», «Pozzanghere» e la neve a terra restano come sono.
+- Preset tuoi: «Salva…» salva le impostazioni attuali con il nome che vuoi, con la sua icona. Tasto destro su un tuo preset: aggiorna con le impostazioni attuali, rinomina, elimina. Valgono per tutti i progetti.
+- I singoli cursori sono in «Regola a mano», chiuso all'inizio: il preset scelto resta evidenziato finché non cambi un valore.

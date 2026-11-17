@@ -1,0 +1,16 @@
+SIMPLER 1.75.38  —  1 novembre 2026
+===================================
+
+Render finale senza strada bagnata: trovata e corretta la causa.
+
+- In alcune scene di città il render finale usciva asciutto. Prima del render la mappa che dice dove la pioggia bagna e dove no (il riparo) era quella giusta. Nella copia della scena passata al render, invece, c'era una mappa vecchia, già cancellata dal disco. Senza mappa tutto risultava «al riparo», quindi asciutto.
+- Il motivo: nelle scene grandi, per la vista path tracing Simpler usa copie ridotte delle immagini. Su quell'immagine restava scritto il nome di una mappa vecchia, e al momento del render (e del salvataggio) veniva rimessa quella vecchia al posto di quella attuale.
+- Ora un nome vecchio rimasto viene ignorato e tolto.
+- La mappa del riparo non viene più sostituita da una copia ridotta. È una mappa di altezze a 16 bit, e ridotta perdeva precisione anche nella vista.
+- Il registro scrive ora la pioggia anche come la vede davvero la copia passata al render.
+- Nuovo controllo automatico «stale_proxy_orig»: fallisce con il codice di prima, passa con la correzione.
+- I fotogrammi del video fatti con la strada asciutta vanno rifatti con «Usa la vista attuale».
+
+Video AI:
+- Sotto ogni fotogramma c'è il pulsante «Vedi il render», attivo quando il render è stato fatto: apre l'immagine a piena grandezza per controllarla prima di creare il video.
+- Se Krea arriva al 100% ma il video non è ancora pronto, al posto del 100% fermo compare «Ci mette più del solito, aspetta…».

@@ -1,0 +1,4 @@
+SIMPLER 1.68.6  —  29 October 2026
+==================================
+
+- «Fit to the object» with several pieces selected (for example a window made of several parts) spreads one picture over all the pieces together, instead of a whole picture on each one. Without a selection it applies to the clicked piece, as before.

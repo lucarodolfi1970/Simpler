@@ -1,0 +1,4 @@
+SIMPLER 1.35.1  —  25 October 2026
+==================================
+
+- Paste an image from the clipboard as a map: right click on the thumbnail (or the name) of a map ▸ «Paste image from the clipboard». A screen cut-out (Win+Shift+S), an image copied in a browser or a graphics program, or an image file copied in Explorer all work. No need to save it as JPG or PNG first: the cut-out is embedded in the project (transparency kept when the program gives it). It works for material maps and decal maps.

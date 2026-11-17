@@ -1,0 +1,6 @@
+SIMPLER 1.48.0  —  26 ottobre 2026
+==================================
+
+- Neve, passo 3: «Pennello neve» nelle Avanzate della Neve. Si dipinge sulla vista come con il pennello delle pozzanghere: «Aggiungi» mette neve, «Togli» (o Maiusc) la toglie, anche quella automatica, insieme al suo spessore. Serve per un vialetto spalato, un marciapiede pulito o un cumulo dove serve. «Grandezza pennello», [ e ] sulla vista, Esc per smettere.
+- La neve dipinta va anche sotto le tettoie, segue la superficie dove è stata dipinta (non finisce sul tetto sopra la strada) e c'è anche con la Quantità a zero, se non piove. «Sfumatura pennello» regola i bordi; «Cancella la neve dipinta» la toglie tutta. Ogni pennellata si annulla con Annulla.
+- Pozzanghere e neve dipinte sono due mappe separate: mentre nevica le pozzanghere dipinte aspettano, e tornano quando smette.

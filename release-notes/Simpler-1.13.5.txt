@@ -1,0 +1,10 @@
+SIMPLER 1.13.5  —  22 ottobre 2026
+==================================
+
+DISTRIBUZIONI (PENNELLO, AREA, SPAZIATURA)
+------------------------------------------
+- Mentre la vista prepara i modelli di una distribuzione (i modelli grandi, come gli edifici in 2K, richiedono
+  qualche secondo ciascuno) compare la piccola barra di avanzamento in basso: "Preparazione dei modelli per la
+  vista…", con quanti ne mancano e il nome del modello. Prima si vedevano solo i coni verdi e sembrava tutto fermo.
+- I punti della linea (e i trascinamenti nella vista) usano sempre la posizione aggiornata degli oggetti, anche
+  subito dopo il path tracing: è la causa più probabile dei punti finiti sull'orizzonte al primo tentativo.

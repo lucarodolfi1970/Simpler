@@ -1,0 +1,7 @@
+SIMPLER 1.75.22  —  31 October 2026
+===================================
+
+A very thin yellow line for the finish of the samples.
+
+- The chart of the final render samples now has a very thin horizontal line (1 pixel), in the same yellow as the finished area, at the height of the last sample: it is where the area has to arrive for the computation to be done.
+- It shows for the whole render, over the blue background; when the area reaches the top it touches it and turns yellow.

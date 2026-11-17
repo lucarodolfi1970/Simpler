@@ -1,0 +1,7 @@
+SIMPLER 1.66.2  —  28 October 2026
+==================================
+
+- Denser heavy rain. With «Intensity» at 100% there were too few drops near the camera: the drop limit thinned them all alike, including the near ones that make rain look dense (about 2,700 within 3 m). Now:
+  - all near drops are kept and only the far veil uses fewer, bigger drops;
+  - the maximum intensity is about twice as much;
+  - the limit goes up to 600,000 drops.

@@ -1,0 +1,7 @@
+SIMPLER 1.63.5  —  28 October 2026
+==================================
+
+- Ecosystem «Recalculate»: «Ecosystem not found» when the ecosystem had been removed from the library or saved again, because its code changes in that case. Now, to remake it, Simpler uses, in order:
+  - the copy the project keeps from when the ecosystem was placed (from this version on);
+  - the library ecosystem with the same name, if there is only one.
+- If it cannot be found anywhere, the ecosystem stays as it is, the button no longer asks for it and the message says to place it again from the library.

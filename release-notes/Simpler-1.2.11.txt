@@ -1,0 +1,24 @@
+SIMPLER 1.2.11  —  20 ottobre 2026
+==================================
+
+NOVITÀ
+------
+- DUE GIZMO invece di tre, più piccoli:
+  · "Sposta e ruota" (W, anche E): frecce per spostare e tre archi per ruotare, insieme;
+    dove frecce e archi si toccano vince quello più vicino al mouse;
+  · "Scala" (R): maniglie con i cubetti.
+  Nella barra in alto ora ci sono due pulsanti.
+- RISORSE > Scheda video: nuovo elenco "Chi usa la memoria video", programma per programma (motore di Simpler,
+  processo delle anteprime, vista 3D, altri programmi), con gli stessi numeri di Gestione attività. Il valore
+  "Memoria video" in alto è quello di tutta la scheda, cioè di tutti i programmi aperti, non solo di Simpler.
+- Cartelle Poly Haven (materiali e modelli 3D): se contengono qualcosa di già scaricato compare in verde, piccolo,
+  quanti sul totale (es. 3/88).
+
+CORREZIONI
+----------
+- MODELLI POLY HAVEN SENZA TEXTURE (es. Cannon 01): alcuni file .blend di Poly Haven (i modelli con uno scheletro
+  per animarli) hanno materiali senza nessuna immagine. Ora, quando il .blend non porta texture, Simpler scarica la
+  versione glTF, che le ha sempre. I modelli già scaricati in quel modo vengono riscaricati da soli al prossimo uso
+  (elimina dalla scena il cannone senza texture e reinseriscilo).
+- Dai file .blend di Poly Haven non entrano più nella scena le forme che disegnano le "ossa" dello scheletro
+  (oggetti wdg_*), né scheletri, camere e luci dei file glTF/FBX.

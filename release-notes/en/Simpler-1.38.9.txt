@@ -1,0 +1,6 @@
+SIMPLER 1.38.9  —  25 October 2026
+==================================
+
+- One test plot per scene. The plot is there to create an ecosystem: if there is one already, «Test plot» selects and frames it instead of making another. If you ask for the other size (20 or 50 m), the same plot changes size, stays where it is and keeps its scatters. If you delete it, the next click makes a new one.
+  - In projects with several plots, saving and the thumbnail use the selected plot, or the one with most scatters on it.
+- New icon for ecosystems in the scene: the test plot and placed ecosystems have the grass icon, in green, instead of the mesh and folder icons. They stand out at once from other objects.

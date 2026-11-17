@@ -1,0 +1,9 @@
+SIMPLER 1.17.6  —  24 October 2026
+==================================
+
+SKY COLOURS FROM A PHOTO: FIRST STEP
+------------------------------------
+- Groundwork for "Colours from a photo" (Sky › Advanced, in the next version): Simpler does not understand the photo, it compares its colours with those of the skies it can make and picks the closest settings (time, haze, ozone, clouds). The sky stays physical.
+- The colour table is made once with Simpler itself: many small renders of the sky only, in the background, while Simpler is open (development: file test_out\tabella_cielo.on, progress in test_out\tabella_cielo.txt).
+- Four sunset photos as the first presets.
+- Final render measurement: the test without "Biased" is gone (over 20 times slower: "Biased" stays).

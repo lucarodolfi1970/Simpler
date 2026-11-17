@@ -1,0 +1,14 @@
+SIMPLER 1.75.50  —  1 November 2026
+===================================
+
+Fog, second wave: a more realistic volumetric fog.
+
+- Real droplets: the volumetric fog now uses the scattering of water droplets (Mie function), with their bright halo towards the sun and around the lamps. Before it was a simplified scattering.
+- «Glow towards lights» (Advanced, with the volumetric fog):
+  - low: light spreads evenly in every direction, as in dust, with the shafts well visible from the side;
+  - high: larger and larger water droplets, with a stronger halo.
+- «Irregularity» and «Patch size» (Advanced, with the volumetric fog): banks, patches and wisps instead of an even veil. With low fog the top of the layer undulates too.
+- «Haze above» (with low fog): a light haze in all the air above the low layer, as on a humid morning. It works in the normal fog, in the volumetric one, on the sky and in the real-time view.
+- Light inside the fog: in the volumetric fog light now bounces several times between the droplets (2 times in the view, 4 in the final render). A real fog glows from within; with a single bounce it was greyer and darker.
+- The chosen fog colour is now the colour of the droplets: the fog absorbs only what that colour needs.
+- The real-time view shows an even fog: irregularity and glow show in the path tracing and in the final render.

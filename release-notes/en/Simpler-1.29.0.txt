@@ -1,0 +1,4 @@
+SIMPLER 1.29.0  —  25 October 2026
+==================================
+
+- New «Licenses and credits» command in the File menu (and in Settings, next to «Info»): a page with every program, library, service and content by other authors that Simpler uses, with their licenses and links — Blender and Cycles, three.js, three-mesh-bvh, meshoptimizer, WebView2, DeepBump, Poly Haven, ambientCG, OpenAI, Sketchfab — the names and trademarks mentioned, the cars recommended from Sketchfab with author and credit to use, and the notes to settle before distributing Simpler. It is updated in every version that adds something.

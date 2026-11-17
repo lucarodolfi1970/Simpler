@@ -1,0 +1,9 @@
+SIMPLER 1.75.11  —  31 ottobre 2026
+===================================
+
+Statistiche del render finale, caustiche del mare senza riga, barra in alto più stretta.
+
+- Nella finestra del render finale, dopo i pulsanti: tempo totale, tempo di calcolo dei campioni, picco di memoria della scheda video (VRAM) e picco di RAM del render.
+  - Passando sopra con il mouse: il tempo di ogni fase (preparazione, caricamento di geometrie e texture, campioni, riduzione del rumore, salvataggio), la memoria già occupata sulla scheda prima del render, il picco dichiarato da Cycles e il nome della scheda.
+- Caustiche del mare: il bordo dell'area calcolata era una riga dritta sull'acqua. Ora le caustiche sfumano nella luce normale su qualche metro (da 1,5 a 6 m secondo l'area) e l'area è allargata di altrettanto, così la sfumatura cade fuori da ciò che vedi per intero.
+- Barra in alto: «Importa/Correggi» e «Apri» solo con l'icona e una piccola freccia in basso a destra che indica il menu, senza allargare il pulsante. Il nome resta nel suggerimento.

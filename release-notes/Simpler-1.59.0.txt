@@ -1,0 +1,7 @@
+SIMPLER 1.59.0  —  27 ottobre 2026
+==================================
+
+- Nuovo «Aggiorna dalla libreria…» (tasto destro nell'albero su una distribuzione, un ecosistema, un modello della libreria piazzato o un gruppo che li contiene). Un modello corretto nella libreria (per esempio con «Correggi materiali dei modelli», o con «Senza mantello» sull'interno di un'auto) nei progetti fatti prima restava com'era. Ora una finestrella elenca i modelli usati lì, con quante distribuzioni, ecosistemi e modelli piazzati li usano, e quelli scelti vengono ricaricati dalla libreria in tutto il progetto. I pezzi e i modelli piazzati restano dove sono, gli oggetti messi sotto un modello passano al nuovo, il manto di neve si rifà da solo. Un solo Ctrl+Z annulla tutto.
+- Le modifiche fatte nel progetto a quei modelli (un materiale cambiato solo qui) si perdono: vale la libreria. La finestrella lo dice.
+- Prima, in un progetto con un modello vecchio, anche una distribuzione nuova copiava il modello vecchio già presente invece di prenderlo dalla libreria. Dopo l'aggiornamento copia quello nuovo.
+- D'ora in poi Simpler ricorda da quale versione della libreria viene ogni modello: aprendo un progetto, se nel frattempo un modello è cambiato nella libreria, chiede se aggiornarlo («Non ora» lo lascia com'è). Per i progetti fatti prima di questa versione non si può sapere: resta il comando a mano.

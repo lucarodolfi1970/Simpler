@@ -1,0 +1,4 @@
+SIMPLER 1.18.1  —  24 October 2026
+==================================
+
+- The "AI" button has the classic two-sparkles icon instead of the text.

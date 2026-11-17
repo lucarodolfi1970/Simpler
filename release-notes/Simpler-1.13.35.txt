@@ -1,0 +1,11 @@
+SIMPLER 1.13.35  —  23 ottobre 2026
+===================================
+
+ELIMINARE UN MODELLO DALLA LIBRERIA NON ROVINA PIÙ LE SCENE
+-----------------------------------------------------------
+- Eliminare un modello dalla libreria cancellava anche le sue texture: le copie già nella scena (e nei progetti salvati) le leggono proprio da lì e diventavano rosa. Ora il modello sparisce dalla libreria, ma le sue texture restano sul disco: le scene continuano a vederle.
+
+TEXTURE MANCANTI AL SALVATAGGIO
+-------------------------------
+- Salvando nella libreria un modello le cui texture non ci sono più (eliminate con una versione precedente), Simpler prova a recuperarle: dalla memoria o dalla copia ridotta della vista 3D, salvandole accanto al modello.
+- Se non è possibile, un avviso elenca le texture mancanti e spiega come riaverle: reimportare il modello dal file originale. Prima il modello veniva salvato rosa senza dire nulla.

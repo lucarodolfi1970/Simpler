@@ -1,0 +1,5 @@
+SIMPLER 1.67.9  —  29 October 2026
+==================================
+
+- «Fit to the object»: the picture no longer comes out upside down on models imported with different axes (many FBX files have up on the Y axis and are turned by their group). Now up is the scene's up, whatever the object's own orientation, and the proportions take every scale into account, groups included.
+- To correct a window already fitted, just press «Fit to the object» again.

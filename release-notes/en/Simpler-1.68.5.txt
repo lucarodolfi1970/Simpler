@@ -1,0 +1,12 @@
+SIMPLER 1.68.5  —  29 October 2026
+==================================
+
+- Material used by other objects too: at the top there is a single switch, «Applies: Only here / Everywhere», with the number of pieces.
+  - «Only here» is the starting choice: at the first change the chosen pieces get a copy of the material with all its settings, and the other objects do not change. The chosen pieces are the selected objects (with Rectangle or Lasso, or a whole model), or only the clicked piece if nothing is selected. It works among the pieces of the same model too: a single window of a church, not all 69.
+  - «Everywhere» changes every object with that material.
+  - The copy is called «<material> · <object>» or «<material> copy»: you can rename it in the name field. Undo with Ctrl+Z.
+- Library, clearer: one line says how the material stands in the library (not there, the same, different) and reminds that the changes stay in this project. There are at most two buttons:
+  - «Add to the library…»: a copy in the library; nothing changes here.
+  - «Update the library»: the library material takes these settings, with a confirmation; projects already made do not change.
+  - «Add as new…»: another material in the library, with the name you choose.
+- The word «Save» is left only for the project.

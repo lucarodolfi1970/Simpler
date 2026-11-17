@@ -1,0 +1,11 @@
+SIMPLER 1.76.6  —  2 novembre 2026
+==================================
+
+Variazione su grande scala: texture grandi sul terreno, e per ogni materiale.
+
+- Le zone del terreno usano ora anche le texture «aeree» di Poly Haven, che coprono 20–90 m: rocky_terrain_02 sul prato (erba con rocce che affiorano), aerial_rocks_01 su terra e ghiaia, marble_cliff_05 sulla roccia (marble_cliff_04 nel canyon), snow_field_aerial sulla neve, aerial_beach_01 sulla sabbia. Si scaricano da sole come le altre.
+- La texture grande non sostituisce quella di dettaglio: ci si posa sopra. Le sue forme (rocce, chiazze, colate) moltiplicano il colore del dettaglio, e «Colore dalla texture grande» può portarne anche il colore, lasciando la grana del dettaglio. Così da lontano si vedono le grandi forme e da vicino resta la definizione: niente più superfici di un colore solo, niente ripetizioni minuscole.
+- «Variazione di tono»: chiaro e scuro, più e meno saturo, a macchie di decine di metri, anche senza una texture grande (spianata, pianura).
+- Nuova sezione «Variazione su grande scala» nel pannello di ogni materiale, non solo del terreno: variazione di tono, texture grande e normal map grande con la loro dimensione. Serve per qualsiasi superficie grande: un prato, un piazzale, una montagna importata.
+- Vista in tempo reale: forme, colore e tono come nel render; la normal map grande si vede solo nel path tracing.
+- I terreni già fatti ricevono le texture grandi alla prima modifica del terreno.

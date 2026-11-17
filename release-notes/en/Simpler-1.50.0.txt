@@ -1,0 +1,6 @@
+SIMPLER 1.50.0  —  27 October 2026
+==================================
+
+- Snow: the models of distributions too (cars, rocks, benches placed with Distribute) get the mantle on their shape. It is computed only once per model, in three variants with different patches given to the copies: 80 cars cost what 3 cost, in the path tracing and in the real-time view (instancing).
+- Per copy: no mantle when it stands under something (a canopy, a tree) or leans more than 10° (the white on the surfaces stays there). A distribution «Always dry», «No snow mantle» or with Snow detail «Low» stays without a mantle. Grass and leaves stay just white.
+- In the panel, under «Mantle detail», you can read how many copies have the mantle and from how many shapes.

@@ -1,0 +1,6 @@
+SIMPLER 1.34.1  —  25 October 2026
+==================================
+
+- Several copies of the same library model no longer duplicate materials and textures. Before, every insertion loaded all the materials (body.001, glass.001…) and images again: more memory, and the real-time view prepared each copy from scratch. Now what the scene already has is reused, but only when it is identical in content: same nodes with all values and links, same settings, same images (the same file with the same colour space, or the same bytes when embedded). Two materials with the same name but even a tiny difference stay apart. With two Audi A4 the materials go from 35 to 18.
+- The real-time view prepares a model only once even when its copies have their parts renamed in a different order (Sphere, Sphere.006…): before, every copy had its own prototype and export. At the first start the prototypes already made are made again once.
+- Good to know: editing a shared material in the editor changes every copy that uses it. Dragging a material onto a piece changes only that piece.

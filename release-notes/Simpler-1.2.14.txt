@@ -1,0 +1,8 @@
+SIMPLER 1.2.14  —  20 ottobre 2026
+==================================
+
+- SCALA PIÙ DOLCE E PREVEDIBILE: prima il fattore dipendeva dal rapporto tra la distanza del mouse dal centro e
+  quella all'inizio; afferrando una maniglia vicina al centro (il gizmo è piccolo su un modello grande) bastava
+  muovere poco il mouse per raddoppiare o dimezzare il modello. Ora conta solo quanto sposti il mouse sullo
+  schermo lungo la maniglia: 20 pixel ≈ +7%, 200 pixel = ×2, tornando indietro di 200 pixel ÷2. Con lo Snap (o
+  tenendo premuto Maiusc) scatta a passi di 0,1.

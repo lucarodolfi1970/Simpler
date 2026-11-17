@@ -1,0 +1,11 @@
+SIMPLER 1.73.7  —  30 ottobre 2026
+==================================
+
+Niente più chiazza verde nel riflesso del sole sull'acqua bassa.
+
+- Nel riflesso del sole al tramonto, dove la spiaggia entra nell'acqua, compariva una chiazza verde luminosa.
+  - Causa: la «Fascia bagnata» della costa rendeva lucida la sabbia anche sotto l'acqua. Il fondale rifletteva il sole basso come uno specchio. Per tornare alla fotocamera quel riflesso attraversava l'acqua, che toglie il rosso: così usciva verde.
+  - Nella realtà la sabbia coperta d'acqua non riflette quasi nulla, perché acqua e sabbia piegano la luce in modo simile.
+  - Ora sotto il livello del mare la sabbia resta bagnata e scura ma non lucida. Sopra, dove arrivano le onde, resta lucida come prima.
+  - Con «Fascia bagnata» a 0 la chiazza spariva: era proprio quella.
+  - Con il sole basso sul mare la chiazza verde non c'è più. Il riflesso del sole sulla spiaggia bagnata resta.

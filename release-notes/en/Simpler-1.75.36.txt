@@ -1,0 +1,6 @@
+SIMPLER 1.75.36  —  1 November 2026
+===================================
+
+AI video: the keyframe thumbnails are shown whole.
+
+- The «Start» and «End» pictures in the panel were cropped to fill the box. Now they are shown whole, with their proportions, with black horizontal or vertical bands where needed. The box keeps the same size.

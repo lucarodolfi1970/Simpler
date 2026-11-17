@@ -1,0 +1,63 @@
+SIMPLER 1.0.0  —  18 October 2026
+=================================
+
+First numbered release. From now on every delivery raises the version number
+(1.0.x = fixes, 1.x.0 = new features) and has its own notes file in this folder.
+
+NEW FEATURES
+------------
+View and navigation
+- Real-time 3D view (WebGL) with a Path tracing (Cycles) preview, switched on with a button or the space bar.
+- Classic navigation: right button orbits around the centre of the view, left button dragged orbits
+  around the clicked point, wheel moves forward/back, middle button pans. Shift+wheel = fine steps.
+- Wheel speed: walking, bicycle, car.
+- Adjustable real-time shadows: Off / Medium / High / Ultra.
+
+Objects
+- Gizmo with rotation rings, angle sector and on-screen values (degrees, mm/cm/m, scale factor).
+- Pivot: centre, base or origin; World/Local axes (Q key); Snap (or Shift); "Drop" onto the surface below.
+- Multi-selection: Ctrl+click and Shift+click in the tree, Ctrl+click in the view, Ctrl+A. The selection transforms
+  as a single object; with several objects scaling is uniform so the pieces are not distorted. Double click = goes
+  up to the parent group.
+- Undo / Redo (Ctrl+Z / Ctrl+Y) up to 60 steps.
+- Tree: filter by name with wildcards (%fridge%, chair_%) and by type (Models, Lights, Groups).
+
+Lights
+- Lights visible in the view with icon and outline; Omni, Spot, Area, Sun types; power, temperature in Kelvin, spot
+  cone and edge softness, source size (sharp/soft shadows), shadows on/off, visibility in reflections.
+  Real-time preview while dragging the sliders.
+
+Import and textures
+- FBX (also text/ASCII FBX, e.g. from Houdini), glTF/GLB, OBJ, USD.
+- Automatic search for moved textures; missing ones no longer turn the material pink; choice of the texture folder
+  (remembered for the next imports) and a "Find missing textures…" item.
+- The size of the imported model is shown in the status bar.
+
+Rendering
+- Rendering panel: Draft/High/Final presets, samples, noise threshold, denoiser, bounces (total, diffuse/GI,
+  reflections, refractions, transparency, volumes), fast GI, caustics (MNEE, reflective, refractive), reflection
+  filter, direct/indirect light clamps, exposure, AgX tone.
+- Final render in a separate process: progress bar, time left and a "Cancel render" button.
+  "As configured" option that uses the Rendering panel.
+
+Interface
+- Small progress bars at the bottom of the view (they no longer cover the screen).
+- Resizable side panels (width remembered).
+- Italian / English language (Settings, gear icon at the top right; applies from the next restart).
+- New app icon; version number in the title bar and in Settings.
+
+BUG FIXES
+---------
+- Moving or rotating a group (parent branch) made the object jump back to its starting point when the mouse was
+  released.
+- After moving a child piece, it stayed at its previous position in path tracing.
+- FBX files saved in text (ASCII) format were not imported and no error was shown.
+- Invisible import errors: a message with the reason is now shown.
+- Pink materials in path tracing when the FBX textures were not at their original path.
+- "Striped" effect (shadow acne) on real-time shadows in large scenes.
+- Progress bar in the middle of the screen at every operation.
+
+NOTES
+-----
+- The glass "bicchiere whisky.fbx" declares a unit in centimetres in the file: it is imported about 1 cm tall.
+  This comes from the file (exported from Houdini); fix it by scaling the model (e.g. ×10).

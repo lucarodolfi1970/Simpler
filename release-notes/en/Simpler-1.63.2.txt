@@ -1,0 +1,5 @@
+SIMPLER 1.63.2  —  28 October 2026
+==================================
+
+- Real-time view: the snow mantle on distributed trees is now drawn only on the copies big enough on the screen, like the detail of the trees themselves. Far copies show the white of the material. Before, it was drawn whole on every copy: in the mountain forest that was 2,685 million triangles. Path tracing and final images have it on all of them.
+- In «Only what the camera sees» the «Snow» item is now called «Snow mantle». Its description makes clear that turning it off does not remove the snow: to remove it there is the snowflake in «Lighten».

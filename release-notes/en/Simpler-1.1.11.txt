@@ -1,0 +1,26 @@
+SIMPLER 1.1.11  —  19 October 2026
+==================================
+
+BUG FIXES
+---------
+- Path tracing in the view: at every refinement pass (2, 8, 32, 128 samples) Cycles re-read all the
+  objects and rebuilt the acceleration structure, even if nothing had changed. On a large interior
+  this was about 2.3 seconds lost at every pass, almost 10 seconds for each image. The cause: at every pass
+  the camera was re-assigned to the scene, and Blender treats this as a change to the whole scene. Now the
+  scene stays on the graphics card between passes and also when the view is turned or moved: it is
+  prepared again only when something really changes (objects moved, materials, lights).
+- Final render split into 4 tiles even with plenty of free video memory: this is why the time left
+  jumped (5:46, then 0:12, for a render that took 4:13). Now the image is computed in one go when it
+  fits comfortably in video memory; tiles remain only for huge images or small cards, and in that
+  case the bar advances across all the tiles instead of starting from zero at each tile.
+- Reduced texture copies piled up in the engine at every final render and every save (442,
+  then 802, then 1155 images in the scene): now those no longer used are removed, and finding the copies
+  already loaded is instant instead of going through all the images.
+- 3D viewer: if it stayed "not responding" for a moment (for example while loading a large scene
+  with the computer under load) it was reloaded and the 3D view was prepared again from scratch. Now it
+  is reloaded only if it has really closed.
+
+DIAGNOSTICS
+-----------
+- Simpler's logs record the duration of every path tracing pass, every 3D view preparation and the slow
+  commands, and keep those of the previous session too: they show where the seconds go.

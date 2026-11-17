@@ -1,0 +1,5 @@
+SIMPLER 1.65.2  —  28 October 2026
+==================================
+
+- The drops' «How far they reach» really works: in the distance the rain becomes a thicker and thicker veil, as in reality. Before, almost nothing was added beyond about 40 m, and 150 m looked like 40.
+- Drops are always made of water. «Drop transparency» goes from water that scatters the light (more visible streaks) to clear water, which shows what is behind it and the glints. Before, at a low transparency, drops near the camera looked like white balls.

@@ -1,0 +1,21 @@
+SIMPLER 1.13.40  —  23 October 2026
+===================================
+
+MATERIALS AT HAND
+-----------------
+- «Apply to object ▾» (how a material dropped in the view is applied) moved to the top, between the navigation speeds and Clay / Real time / Path tracing.
+- Next to it is the eyedropper: click it, then click a surface in the view and the panel of its material opens at once. On a library model it goes straight to the part that has that material (e.g. the leaves). Esc cancels.
+
+LIBRARY STATISTICS AND CLEANUP (NEW)
+------------------------------------
+From Import ▾ «Library statistics and cleanup…», for the whole library or the folders you choose:
+- How many models and how much space: model files, textures (with the number of files), thumbnails, original imported files (FBX, OBJ…, which are outside the library; also how many can no longer be found).
+- By folder, the heaviest models, textures by format, the space of downloaded Poly Haven materials and models.
+- Suggestions to save space, for the whole library:
+  · backups of «Fix model materials» (not shown in the library): they can be deleted if the fixes are fine;
+  · textures of deleted models: they can be deleted, with a clear warning because saved projects may need them (those of the open scene stay anyway);
+  · models saved twice (exactly the same file) and identical textures copied in several models: reported with their names;
+  · cache of the 3D view and of the reduced textures: it can be emptied, Simpler makes it again when needed;
+  · models without a file (interrupted imports): they can be removed from the list;
+  · how many 4K and 8K textures there are.
+Every deletion asks for confirmation and says how much space it frees.

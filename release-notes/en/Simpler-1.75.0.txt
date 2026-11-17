@@ -1,0 +1,30 @@
+SIMPLER 1.75.0  —  31 October 2026
+==================================
+
+Large water with real waves: no more squares of light, and the wave sliders work. Plus four bugs.
+
+- Wave Height and Size «changed nothing» and there were squares of light on the walls, with a very large water plane.
+  - Cause: with a water plane 139 m wide, Simpler divided the whole surface into small squares, at most 400 thousand, and on 139 m each square was 27 cm. The waves were reduced to half a centimetre, and each flat square reflected the sun like a small mirror.
+  - Now a large water surface is drawn around the camera: fine squares near you, wider and wider far away, never denser than what can be seen. The waves have the height and size you choose, whatever the size of the plane.
+  - It applies to every flat, rectangular water surface too large for the old subdivision. Small pools stay as before.
+  - The grid is made again when you move the camera (25 cm or 6°), only for path tracing: for example 248 thousand faces in 0.3 s.
+  - The squares on the walls disappear, in their place the light reflected by the waves; the waves show in the reflections.
+- Water material, simpler: in «Surface and waves» a single choice, «Water»: Still · Rippled · Choppy · Rough.
+  - Simpler picks the height and size of the waves, already right for each other. «Real waves», Height and Size are in Advanced, as before; if you change them, the choice shows «Custom waves».
+  - Choosing water with waves, if the caustics are off Simpler turns them on (Normal and light reflected by the water) and says so in the status bar. It never turns them off: you do that from Rendering.
+- Poly Haven and Scatter: with the brush on, a click on a Poly Haven model put it in the scene.
+  - Now it joins the brush. The brush works with library models: the first time the downloaded model is added to the library, in the «Poly Haven» folder (only once, then that one is used).
+  - Dragged into the view, it is placed in the scene as before.
+- Rain and sea: puddles appeared on the sand under the sea. Now no puddles or film of water under the sea and where its waves run (snow already did this).
+- The green in the sun's reflection at sunset, on the shoreline.
+  - Cause: the wet sand was glossy even where the waves cover it. The reflection of the low sun, before reaching you, crossed the water almost horizontally, and the water took the red away.
+  - Now the sand is glossy only in the upper half of the wet band, where the water has already gone back, and never seen through the water.
+  - The green patch is gone; the shoreline stays glossy and orange.
+- Gizmo, moving on the plane between the red and green arrows with an almost horizontal view (for example a ship on the sea).
+  - Cause: the view is almost edge-on. The plane sector and the rotation arc fall on the same thin line, and the arc always took the press.
+  - Now below about 12° the plane sector wins.
+
+- Coloured light from stained glass: the light reflected by the water onto columns and vaults takes the colour of the glass the sun went through.
+  - Before, every glass stopped the sun like a wall, so only the white light of openings without glass reached the water.
+  - Now the sun's ray crosses the glass (up to 4 panes) and takes the colour of the window at that exact point, read from its picture, together with the light the glass lets through.
+  - With dark stained glass (glass letting little light through) that coloured light is weak, and the white comes from the openings without glass.

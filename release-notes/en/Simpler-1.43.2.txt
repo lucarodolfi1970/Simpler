@@ -1,0 +1,4 @@
+SIMPLER 1.43.2  —  26 October 2026
+==================================
+
+- Rain: in a large scene (a city) the shelter under cars did not work, so «Gives no shelter» also seemed to change nothing. Building façades took almost all of the computation and the last objects, such as the cars, were left out. Now mostly the surfaces seen from above count (walls give only their edges) and, if the scene is huge, every object is lightened but none is left out. The computation is also faster.

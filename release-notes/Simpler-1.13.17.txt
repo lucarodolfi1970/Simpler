@@ -1,0 +1,8 @@
+SIMPLER 1.13.17  —  22 ottobre 2026
+===================================
+
+SCHERMATA DI AVVIO
+------------------
+- La valutazione della scheda video non è più nel riquadro in alto a destra, che passava sopra l'anello: ora è una
+  piccola riga sopra il logo, con la percentuale in verde, giallo, arancio o rosso e subito dopo il giudizio (per
+  esempio "82%  Ottima: scene grandi senza problemi"). Il nome della scheda e i dettagli sono nel suggerimento.

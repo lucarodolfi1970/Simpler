@@ -1,0 +1,6 @@
+SIMPLER 1.55.1  —  27 October 2026
+==================================
+
+- Volumetric and haze: in a scene with haze (cities, streets) a cloud or fog in front of walls and buildings had a flat grey patch in the middle and square grey specks along its edges, with any number of samples. The haze took them for the horizon: now the haze only touches what is seen through the volume, and the volume stays as clean as without haze.
+- Volumetric, models that are not closed: the soft shape built around the pieces could enclose empty pockets inside the cloud (20 m³ in the downloaded one); now they are filled.
+- New primitives (cube, sphere...) and materials dragged from the library: they always come with the material exactly as in the library. Before, if the scene already had that material but changed (a «White» turned into a number plate), the new sphere took the changed one. The material already in the scene is reused only when it is an identical copy (same nodes, values, images and settings).

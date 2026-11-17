@@ -1,0 +1,10 @@
+SIMPLER 1.75.39  —  1 novembre 2026
+===================================
+
+Video AI: ogni video della libreria ricorda come è stato fatto.
+
+- Con ogni video in Elaborazioni AI › Video AI ora si salvano tutti i suoi parametri: modello, risoluzione, durata, audio, testo del movimento e i due fotogrammi. Dei fotogrammi si salvano le immagini e lo stato della scena: inquadratura, luci, ambiente.
+- Un clic sul video lo apre e rimette tutti quei parametri nel pannello Video AI. Si può cambiare quello che si vuole e creare un'altra versione; se non serve, il video si elimina dal tasto ….
+- Nel menu del tasto … c'è anche «Carica i parametri nel pannello Video AI».
+- I parametri e le immagini dei fotogrammi si salvano con il progetto, nella cartella «nome AI». Valgono anche per un video scaricato dopo («Video in sospeso»).
+- I video fatti prima di questa versione non hanno i parametri: si aprono come prima.

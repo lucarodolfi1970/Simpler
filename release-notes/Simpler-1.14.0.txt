@@ -1,0 +1,17 @@
+SIMPLER 1.14.0  —  23 ottobre 2026
+==================================
+
+NUVOLE VOLUMETRICHE
+-------------------
+- Nella scheda Nuvole dell'Ambiente c'è l'interruttore «Nuvole volumetriche»: le nuvole diventano vere, in 3D, nel path tracing (vista ray-traced e render finale). Il sole le attraversa: lati illuminati bianchi, basi grigie, bordi luminosi controsole, e fanno ombra sul suolo e sulla scena.
+- Sei tipi: Cumuli piccoli, Cumuli grandi, Altocumuli, Cumulonembo, Strati, Nembostrati. Un clic imposta copertura, grandezza, altezza, spessore e forma; poi si può regolare tutto.
+- Regolazioni: Copertura, Grandezza, Altezza (della base, 250–4000 m), Spessore, Base piatta, Sbuffi, Densità, «Altre nuvole» (stesse regolazioni, disposte diversamente) e «Ombre delle nuvole» (spento: sole pieno sotto un cielo nuvoloso).
+- Alba e tramonto: le nuvole ricevono la luce del sole com'è alla loro quota (più rossa dopo il lungo percorso nell'aria, calcolata con il modello di cielo di Blender) e restano accese per qualche istante dopo che il sole è sparito dal suolo, come nella realtà.
+- Le nuvole lontane sfumano nella foschia (prospettiva aerea) e si diradano verso l'orizzonte.
+- Prestazioni: calcolate a passi (ray marching), decine di volte più veloci del metodo predefinito di Cycles su un volume così grande; nella vista meno rimbalzi e passi più lunghi. Spento (predefinito) non costa nulla: le nuvole restano dipinte sul cielo.
+- La vista in tempo reale continua a mostrare le nuvole dipinte; la foto a 360° di quelle vere arriva con la 1.14.1.
+- Scegliendo un ambiente (Mattino, Tramonto, …) le nuvole volumetriche restano accese con la loro forma; cambia solo la copertura.
+
+CORREZIONE
+----------
+- Con le nuvole volumetriche la foschia del compositor non le trasforma più in macchie piatte grigie (un volume non ha profondità nel passaggio Mist): la loro luce è separata e sfuma per conto suo.

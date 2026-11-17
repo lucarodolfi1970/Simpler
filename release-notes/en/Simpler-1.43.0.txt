@@ -1,0 +1,9 @@
+SIMPLER 1.43.0  —  26 October 2026
+==================================
+
+- Rain, step 2: shelter. Under canopies, porticos, balconies, cars and trees it stays dry, as with real rain: no wetness and no puddles under what covers them, the same in the real-time view and in path tracing.
+  - Simpler looks at the scene from above and works out what is under something else. It does this again by itself when the geometry changes (you move, add or delete an object), a moment after the last command: not when you change a material, a light or the camera.
+  - Of distributions only the tall models count (trees, cars): grass gives no shelter.
+  - Walls under a shelter stay a little wet, because rain also comes in slanted.
+  - Rain Advanced: «Outdoors only» (on by default). Off, everything gets wet, even under cover.
+  - New «Always dry» in the Advanced of an object's Rain card (it appears while it rains): the rain does not wet that object nor what it contains. Ctrl+Z undoes it.

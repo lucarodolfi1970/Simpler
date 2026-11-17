@@ -1,0 +1,6 @@
+SIMPLER 1.51.0  —  27 ottobre 2026
+==================================
+
+- Pioggia e neve sull'oggetto anche con più oggetti selezionati (per esempio le parti interne di un'auto): «Sempre asciutto», «Non fa riparo», «Senza mantello» e «Dettaglio neve» valgono per tutta la selezione. Ogni interruttore è acceso se lo è per tutti, spento se lo è per tutti, con una piccola scritta «multi» se i selezionati sono diversi; un clic lo accende (o lo spegne) per tutti.
+- La scheda si chiama «Pioggia e neve» e c'è sempre, anche quando non piove né nevica: le scelte si possono preparare prima. Sono valori del modello: salvandolo in libreria restano con lui e valgono ovunque lo usi, anche nelle distribuzioni.
+- Neve: le parti di un modello di distribuzione con «Senza mantello» restano senza mantello.

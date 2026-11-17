@@ -1,0 +1,8 @@
+SIMPLER 1.44.2  —  26 ottobre 2026
+==================================
+
+- «Occupato · attendi» copre davvero tutte le attese. Mentre la vista caricava i modelli di una distribuzione, la scritta spariva e poi tornava:
+  - la domanda «sei occupato?» al motore aspettava in fila dietro ai caricamenti (il browser apre al massimo 6 collegamenti per indirizzo). Ora passa da un collegamento tutto suo e arriva subito;
+  - la scritta si aggiorna con un orologio suo, ogni 0,2 secondi;
+  - conta anche ogni richiesta della vista al motore che aspetta più di 0,4 secondi (modelli, parti, immagini delle decal);
+  - si spegne solo dopo 0,7 secondi senza lavoro, così la pausa tra un modello e l'altro non la fa lampeggiare.

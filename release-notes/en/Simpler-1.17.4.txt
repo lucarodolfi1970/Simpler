@@ -1,0 +1,8 @@
+SIMPLER 1.17.4  —  24 October 2026
+==================================
+
+NEW SCENE AND OPEN: PANELS WITH THE RIGHT VALUES
+------------------------------------------------
+- New scene: the engine already went back to the defaults (rendering, camera, ambience, caustics), but an open panel could still show the values of the previous scene (e.g. Ambience with the sunset and volumetric clouds). Now Rendering, Camera and Ambience are redrawn with the defaults; the panels of a material or of the brush close.
+- Opening a project: an open Rendering panel shows the settings of the project just opened (before, the old ones stayed until another click).
+- At start Simpler always begins from a new scene with all default values. Only the app preferences stay (language, shadows and navigation speed of the view, panels open or closed).

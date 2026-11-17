@@ -1,0 +1,4 @@
+SIMPLER 1.28.2  —  25 ottobre 2026
+==================================
+
+- Nuovo modo di applicare un materiale trascinato: «Sostituisci nella selezione», nel menu accanto a «Sostituisci il materiale». Il materiale prende il posto di quello sotto il mouse solo negli oggetti selezionati e nei loro pezzi: per esempio selezioni un palazzo, trascini un vetro sopra una finestra e cambiano tutte le finestre di quel palazzo, non quelle degli altri palazzi che usano lo stesso materiale. Se non hai selezionato niente (o hai selezionato altro), vale per il modello dove lo lasci.

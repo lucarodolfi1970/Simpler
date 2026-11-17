@@ -1,0 +1,26 @@
+SIMPLER 1.2.1  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- Due gesti chiari per i materiali della libreria in basso:
+  · TRASCINA il materiale sopra un oggetto nella vista = lo applica (Maiusc: a tutto il gruppo);
+  · CLICCA il materiale = si apre nella barra di destra per modificarlo (non viene applicato).
+  Lo stesso per le texture Poly Haven. Nelle proprietà di un oggetto basta cliccare il nome del suo materiale
+  per modificarlo (niente più pulsante "Modifica").
+- ANTEPRIMA del materiale nell'editor: una sfera su fondale a scacchi, renderizzata in path tracing, che si
+  aggiorna dopo ogni modifica, anche per un materiale non ancora usato nella scena. È calcolata da un secondo
+  Blender sempre pronto, così la vista in path tracing della scena non viene disturbata (con il vecchio metodo
+  ogni anteprima avrebbe fatto ripreparare tutta la scena). Lo stesso processo prepara le miniature della libreria.
+- SALVA nella libreria: di default sovrascrive il materiale della libreria da cui viene; "Salva come nuovo…"
+  chiede un nome e crea un nuovo materiale nella libreria (quello di partenza torna com'era salvato). L'editor
+  indica se ci sono modifiche non ancora salvate. La libreria sta in %APPDATA%\Simpler\materials, con una copia
+  delle texture, e vale per tutti i progetti. Tasto destro su un materiale della libreria: "Ripristina il
+  materiale di Simpler" (per quelli modificati) o "Elimina dalla libreria" (per quelli creati da te).
+- DISPERSIONE più naturale e dosabile: "Intensità" (0-100%, predefinito 35%) è la quota di luce che si separa nei
+  colori; "Separazione colori" (1× = valore reale) quanto si allontanano. Prima l'effetto era fortissimo già al
+  minimo: Cycles sceglie il colore di nuovo a ogni superficie attraversata, e con tutta la luce divisa in tre
+  colori una gemma diventava scura e piena di puntini colorati. Ora una parte della luce resta vetro normale: per
+  questo anche le caustiche nitide (MNEE) funzionano con la dispersione (bianche).
+- Caselle numeriche: Invio conferma subito il valore scritto (anche oltre i limiti del cursore, verso l'alto, e
+  molto sotto il minimo per i cursori logaritmici).

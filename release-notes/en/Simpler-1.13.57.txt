@@ -1,0 +1,9 @@
+SIMPLER 1.13.57  —  23 October 2026
+===================================
+
+YOU CAN SEE WHEN SIMPLER IS WORKING
+-----------------------------------
+- When a command waits for the engine for more than half a second (moving a big model, assigning a material to many pieces, adding, deleting, undoing…):
+  · the mouse pointer becomes the arrow with the hourglass, over the 3D view too;
+  · a small label at the bottom of the view says what it is doing and for how many seconds (e.g. "Assigning the material… 3 s").
+- Quick commands show nothing, so the view does not flicker. Operations that already have their own bar (preparing the view, final render) keep it.

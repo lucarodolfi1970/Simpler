@@ -1,0 +1,6 @@
+SIMPLER 1.75.31  —  1 novembre 2026
+===================================
+
+Contratto di licenza: anche le caselle e i pulsanti in fondo cambiano lingua.
+
+- Con «Italiano» o «English» in alto cambiano ora tutti i testi della finestra, non solo il contratto: le due caselle di accettazione, «Accetto» / «Non accetto», «Chiudi», la data di accettazione e il titolo della finestra. Prima la parte in fondo restava nella lingua di Simpler.

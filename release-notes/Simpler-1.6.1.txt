@@ -1,0 +1,26 @@
+SIMPLER 1.6.1  —  21 ottobre 2026
+=================================
+
+DISTRIBUISCI: LE REGOLAZIONI CAMBIANO QUELLO CHE HAI GIÀ DIPINTO
+---------------------------------------------------------------
+- Una distribuzione ora ricorda le sue pennellate: dove è passato il pennello, con che diametro, e dove hai
+  cancellato. I pezzi vengono ricavati da lì con le regolazioni attuali.
+  Se muovi uno slider (distanza, distanza casuale, scala, rotazione e le parti casuali, allinea alla superficie)
+  o cambi la presenza, aggiungi o togli un modello, si rifà subito tutta la distribuzione. Esempio: alberi troppo
+  vicini, alzi la Distanza e si diradano.
+- Le stesse pennellate danno sempre lo stesso risultato. Se cambi solo la presenza, i pezzi restano dove sono e
+  cambia il modello di alcuni. Se cambi scala o rotazione, i pezzi restano al loro posto.
+- Ogni modifica è un passo di annullamento ("Distribuzione"): Ctrl+Z torna ai pezzi e alle regolazioni di prima.
+- Pennellate, regolazioni e modelli vengono salvati con il progetto. Riaprendolo e selezionando la distribuzione
+  nell'albero con il pennello attivo, il pannello mostra le sue regolazioni e i suoi modelli con le loro presenze.
+- Il diametro vale per le pennellate nuove: quelle fatte tengono il loro.
+- Le distribuzioni dipinte con la 1.5 e la 1.6.0 non hanno pennellate salvate: i loro pezzi restano come sono e
+  le regolazioni valgono solo per le nuove pennellate.
+- Attenzione: rifacendo la distribuzione, i pezzi spostati o cancellati a mano con il gizmo tornano come li danno
+  le pennellate.
+
+CORREZIONI
+----------
+- Mentre dipingi i pezzi non spariscono più a metà pennellata: si vedono subito con il loro modello. La prima volta
+  che usi un modello appaiono come coni verdi finché il modello non è pronto (qualche secondo), poi diventano il
+  modello vero.

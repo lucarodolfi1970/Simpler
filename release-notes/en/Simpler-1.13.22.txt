@@ -1,0 +1,20 @@
+SIMPLER 1.13.22  —  22 October 2026
+===================================
+
+SAFETY: SIMPLER CAN NO LONGER FREEZE THE COMPUTER
+-------------------------------------------------
+- What happened: "Remesh" with 2 cm voxels on the Ground (4 × 4 km) asked for about 40 billion faces. Blender filled
+  the whole RAM and Windows stopped.
+- Before applying them, Simpler estimates how much geometry the heavy Displacement options would make (Remesh,
+  subdivision in centimetres, the type itself) on every object using the material. If it is too much (over 15
+  million faces for the remesh, 60 million for the subdivision) a message says which object and how many faces, and
+  proposes the finest value that fits (for the Ground: 103 cm voxels). "No" changes nothing.
+- Even if such a request arrived anyway (old projects, other ways), the engine does not apply a remesh or a
+  subdivision beyond the limit. Opening a project saved with too heavy settings, they are taken off.
+- Memory limit: Blender and the processes it starts (previews, exports) can use at most three quarters of the RAM,
+  always leaving at least 3 GB to Windows. If any operation asks for more, the engine stops, not the computer:
+  Simpler says so and starts again reopening the last saved project.
+- Esc when the engine has not answered for more than 4 seconds: Simpler asks whether to stop it (a Blender
+  computation like the remesh cannot be interrupted halfway: the engine stops, all memory is freed and Simpler
+  starts again from the last save).
+- The maximum subdivision level of the material now also caps the whole scene.

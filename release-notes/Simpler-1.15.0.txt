@@ -1,0 +1,14 @@
+SIMPLER 1.15.0  —  24 ottobre 2026
+==================================
+
+SCHIARISCI OMBRE E RECUPERA LUCI
+--------------------------------
+- Nelle impostazioni di render, in «Colore ed esposizione», due cursori nuovi come in un programma di fotoritocco:
+  · «Schiarisci ombre»: alza solo i toni scuri. Al 100% un grigio al 10% diventa circa 21%, il nero resta nero, i toni medi e chiari quasi non cambiano. Per controluce, tramonti, sottobosco, interni.
+  · «Recupera luci»: abbassa solo i toni chiarissimi (cielo, finestre, sole). Al 100% un 90% diventa circa 81%, il bianco resta bianco.
+- Agiscono sull'immagine già calcolata: effetto immediato, senza ricalcolare, nella vista in tempo reale e in quella ray-traced. Il render finale (PNG, JPEG, TIFF) viene salvato con la stessa curva; gli EXR restano senza, perché contengono la luce prima della resa.
+- Si salvano con il progetto.
+
+PROSSIMI PASSI (dopo le tue prove)
+----------------------------------
+- HDR locale (cielo e primo piano leggibili insieme in controluce), luce di riempimento, esposizione automatica che misura l'immagine.

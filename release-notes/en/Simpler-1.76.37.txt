@@ -1,0 +1,14 @@
+SIMPLER 1.76.37  —  4 November 2026
+===================================
+
+Sliders that did nothing: found with an automatic check and fixed.
+
+- New automatic check: for every slider of Ocean and Coast it makes two small path-traced pictures, at the minimum and at the maximum, and reports those that change nothing. It had found 6 of 17:
+  - «Moving water at the edge» did nothing with a terrain in the scene: the shape of the shore was lowered twice by the sea level. Fixed. The extra detail no longer depends on the camera (before it followed it, and turning the view it was gone); on a long coast it is cut less finely, at most 400,000 faces more.
+  - «Direction» and «Damping» did nothing with «Alignment» at 0% (Blender's waves have no direction there). Now the waves always follow the wind a little.
+  - «Foam» at 100% gave almost the same foam as 0%: now the top end reaches much more foam (up to 35%, the presets, it stays almost the same).
+  - «Peaks» taken off the panel: Blender ignores it (checked: the sea surface is identical from 0 to 100%).
+  - «Wind distance over the sea» works: it appears only with the spectra that use it.
+- Ecosystems, «Thinner in the distance»: the thinning starts 25 m from the camera. Before it started at the point the camera turns around, and with that point far away (a mountain) almost everything seen was nearer and nothing thinned: 0% and 100% the same. An automatic check now verifies it.
+- Sea around an object in the water (a sphere, a rock, a pillar): land next to deep water takes the depth of that water. Before, between the point «on land» and the one in the water the sea came out shallow and the view made it vanish, showing the dry bottom: the «ghost terrain».
+- Fixed: after «Remove the sea» and Ctrl+Z the sea came back without «Moving water at the edge» (the shape of the shore was not made again). Found by the automatic check.

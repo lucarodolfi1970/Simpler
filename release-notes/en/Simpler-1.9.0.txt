@@ -1,0 +1,19 @@
+SIMPLER 1.9.0  —  21 October 2026
+=================================
+
+- SCATTER > AREA: the second mode of the Scatter tool. You draw the outline by clicking
+  on surfaces (click on the first point, double-click, Enter or Esc to close it; Backspace removes the last point)
+  and the area fills with the models chosen in the library, with their presences.
+  · Afterwards: drag the points (they slide over the surfaces), the "+" halfway along each segment adds a point,
+    Del removes the selected one. The area updates immediately.
+  · Adjustments: Spacing, Random spacing, Probability (density), Tension (soft outline or straight
+    segments), Edge falloff with its Falloff distance (towards the outline, objects become sparser and
+    smaller), Snap to surfaces, Random seed with "Change" (same area, different random choices).
+    Scale, rotation (random ones too) and Align to surface are shared by Brush and Area.
+  · Objects drop onto the first surface below the area; walls and very steep faces stay empty.
+  · Properties of an object > Scatter > "Exclude from Area": Area puts nothing on it and objects drop onto the
+    surface below. "Update" recomputes the area after moving or excluding objects.
+  · Performance as with the brush: in Cycles they are instances (points), in the view GPU instances with levels
+    of detail; even hundreds of thousands of objects. The adjustments change the area afterwards too, and
+    everything can be undone with Ctrl+Z.
+  · A scatter made with Area, chosen in the tree, reopens in Area with its outline.

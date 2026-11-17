@@ -1,0 +1,9 @@
+SIMPLER 1.76.12  —  2 November 2026
+===================================
+
+More natural snow: no saw teeth, soft borders, at the right height.
+
+- Ambience snow (with and without the mantle): on slopes at the limit the snow ends irregularly, also inside the triangles of the terrain. Before, where the terrain has a point every 7–9 m, the edge followed the triangles: straight-sided patches and saw-tooth crests. The same in the real-time view, in path tracing and in the mantle.
+- Terrain: every cell of the grid is split along the diagonal that best follows the shape, so a crest or a gully stays one continuous line instead of a row of teeth.
+- Terrain «Snow up high»: the snow line goes up and down in patches, lower in hollows and gullies, higher on crests; above the line the snow holds on steeper slopes the higher it is (the ledges of the walls), not only on the gentle slopes down low.
+- The border between the snow and the other zones fades over a wider band (twice the «Border blend», at least 4 m), in patches.

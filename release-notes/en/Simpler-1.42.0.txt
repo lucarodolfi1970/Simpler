@@ -1,0 +1,12 @@
+SIMPLER 1.42.0  —  26 October 2026
+==================================
+
+- Rain in the Ambience: wet surfaces and puddles, the same in the real-time view and in path tracing.
+  - Wetness: asphalt, stone, wood and fabrics get darker and glossier; metal and paint only get a film of water. Walls get less wet than the ground, surfaces facing down hardly at all.
+  - Puddles: how much of the ground is under water, from a few scattered puddles to a flooded street. They form only on flat surfaces facing up, with a wet halo around them.
+  - Puddle size: small and close or large and far apart.
+  - Water clarity: from a dark mirror (deep water reflecting sky, buildings and sun) to shallow water where the ground shows through.
+  - Advanced: Move X and Move Y move the puddles, to get one away from where you don't want it.
+  - While you drag a slider the real-time view follows at once.
+  - Grass and trees of distributions get wet but make no puddles; glass and water stay as they are.
+  - The materials of the models are not touched: with the rain at zero everything is exactly as before. The rain stays when you change the Ambience preset and also works with an HDRI sky.

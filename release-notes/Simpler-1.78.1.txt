@@ -1,0 +1,15 @@
+SIMPLER 1.78.1  —  6 novembre 2026
+==================================
+
+La libreria riordinata: un menu per tipo, e dentro sempre Simpler · I miei · Online. Ricerca in tutta la libreria.
+
+- I menu della libreria sono: Preferiti · Modelli 3D · Vegetazione · Materiali · Decal · Ecosistemi · Cielo e luci · Progetto.
+  - In ogni menu le stesse fonti, nello stesso ordine: Simpler (quello che arriva con il programma, solo da usare), I miei (quello che importi o salvi tu, con le cartelle), Online (Poly Haven e ambientCG, scaricati al primo uso).
+  - Modelli 3D ▸ Simpler sono le forme di base (prima «Primitive»).
+  - Materiali ▸ Simpler ha i materiali di Simpler, che prima erano una cartella dentro i tuoi; Materiali ▸ I miei mostra solo i tuoi.
+  - Cielo e luci: HDRI e sfondi, Luci. Progetto: Scene, Elaborazioni AI.
+- «La storia di Simpler» è ora nel menu File (Simpler si apre ancora su di lei).
+- Ricerca: accanto a «risultati per …» c'è «Cerca in tutta la libreria»: le stesse parole in modelli, piante, forme di base, materiali, ecosistemi, Poly Haven, decal di ambientCG e HDRI, divise per tipo (al massimo 40 per tipo). Le sezioni online si cercano dopo averle aperte una volta.
+- Tasto destro su una cartella di Modelli 3D: «Converti la cartella in vegetazione…», tutti i suoi modelli e le sottocartelle in un colpo solo.
+- Tasto destro su un oggetto nella vista o nell'albero: «Converti in vegetazione». Foglie e legno dei suoi materiali ricevono il Fogliame subito, nella scena, senza passare dalla libreria; si annulla con Ctrl+Z.
+- La finestra di importazione ha un'immagine sua per la vegetazione.

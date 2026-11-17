@@ -1,0 +1,10 @@
+SIMPLER 1.76.60  —  5 novembre 2026
+===================================
+
+I pulsanti delle funzioni AI sono arancioni e riconoscibili.
+
+- Nella barra in alto l'ordine è ora: Render finale, AI immagini, Video AI.
+- AI immagini: una piccola macchina fotografica con le stelline dell'AI in alto a destra. Arancione quando la chiave OpenAI funziona, grigio senza chiave.
+- Video AI: un piccolo ciak con le stelline dell'AI in alto a destra, arancione.
+- Render finale: solo la macchina fotografica, blu, senza scritta (il nome resta nel suggerimento).
+- L'arancione distingue d'ora in poi le funzioni AI dal blu del render.

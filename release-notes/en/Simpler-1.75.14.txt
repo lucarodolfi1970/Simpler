@@ -1,0 +1,8 @@
+SIMPLER 1.75.14  —  31 October 2026
+===================================
+
+Immediate selection of models.
+
+- Selecting a library model (for example a car) could freeze the view for many seconds (up to 15 s).
+  - A selected model is drawn as a single object, with outline and gizmo, which needs different shaders from those of the copies. In some cases the view made them inside a single frame and froze.
+  - Now those shaders are made in the background as soon as the model is ready, so selecting is immediate. If some are still missing, the view makes them without freezing.

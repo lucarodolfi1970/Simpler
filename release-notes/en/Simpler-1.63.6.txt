@@ -1,0 +1,4 @@
+SIMPLER 1.63.6  —  28 October 2026
+==================================
+
+- Snow under water: rocks just below the surface of a pool got the snow mantle, whether «Does not shelter» was on or off. The shelter only counted what is at least about a metre above. Now an object «Without mantle» that shelters (water, a sheet of glass) removes the mantle from everything under it, at any distance, including fully covered distributed plants. With «Does not shelter» the snow under it comes back.

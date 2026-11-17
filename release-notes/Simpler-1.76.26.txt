@@ -1,0 +1,7 @@
+SIMPLER 1.76.26  —  3 novembre 2026
+===================================
+
+Pennello: la distribuzione non cade più sotto i modelli.
+
+- Corretto: dopo «Ridisegna la vista», i modelli della libreria nella scena (per esempio una scogliera di Poly Haven) vengono disegnati in modo più leggero, e il pennello non li vedeva più come superfici. Cambiando la scala o un'altra regolazione, la distribuzione veniva rifatta senza di loro e cadeva tutta sul terreno sotto. Ora quei modelli restano superfici per il pennello, sia mentre dipingi sia quando la distribuzione viene rifatta.
+- Per una distribuzione già caduta: cambia di nuovo una regolazione (per esempio la scala, avanti e indietro), e viene rifatta sul modello dove l'avevi dipinta.

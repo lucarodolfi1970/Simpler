@@ -1,0 +1,13 @@
+SIMPLER 1.13.26  —  22 October 2026
+===================================
+
+SHARED MATERIALS: CHANGES GO ONLY ON THE OBJECT
+-----------------------------------------------
+- Before: Ground and Sphere with the same material; opening the material from the Ground and making it red turned the
+  sphere red too, because it was the same material.
+- Now, when you open a material from an object and other objects use it too, under the Type there is "Edit: Only
+  Ground · All (2)". With "Only …" (default) at the first change the object gets its own copy of the material
+  ("Bianco · Ground"): the other objects do not change. With "All" the changes apply to all of them, as before.
+- The copy does not need to be saved to the library to exist: it is in the project, tied to that object. To give it
+  to other objects drag the preview sphere onto them; to keep it for other projects too, "Save to library".
+- The "Only for this object" button is no longer needed and was removed.

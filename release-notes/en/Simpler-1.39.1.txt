@@ -1,0 +1,4 @@
+SIMPLER 1.39.1  —  26 October 2026
+==================================
+
+- Scatter: the «Presence» slider of each model is now really usable. The label takes only the room of its text and the value box is narrower, so the slider gets all the room left (before, only its knob was left). In each model's «Advanced» section, the name of each setting sits on a line above its slider.

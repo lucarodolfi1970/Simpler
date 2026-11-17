@@ -1,0 +1,15 @@
+SIMPLER 1.13.32  —  23 ottobre 2026
+===================================
+
+LIBRERIA 3D: SOVRASCRIVERE UN MODELLO NON PERDE PIÙ LE TEXTURE
+--------------------------------------------------------------
+- Salvare un modello sopra quello che c'era (per esempio dopo averlo ingrandito) cancellava la sua cartella delle texture prima di copiarle: il modello salvato tornava tutto bianco. Ora le texture restano e il modello salvato le ha.
+- Lo stesso per «Importa» con sostituzione.
+
+MINIATURE DEI MODELLI IMPORTATI
+-------------------------------
+- Le luci di altri programmi (V-Ray, Corona) in un FBX diventavano oggetti vuoti lontani dal modello: la miniatura inquadrava anche loro e il modello sembrava un puntino. Ora non vengono importati e la miniatura inquadra solo ciò che si vede.
+
+ELIMINARE UN MODELLO DELLA LIBRERIA È IMMEDIATO
+-----------------------------------------------
+- Eliminare un modello della libreria dalla scena preparava da capo tutta la vista 3D (20 secondi in una scena grande). Ora sparisce subito.

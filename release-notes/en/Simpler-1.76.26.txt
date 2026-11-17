@@ -1,0 +1,7 @@
+SIMPLER 1.76.26  —  3 November 2026
+===================================
+
+Brush: the distribution no longer falls under the models.
+
+- Fixed: after «Redraw the view», the library models in the scene (for example a Poly Haven cliff) are drawn in a lighter way, and the brush no longer saw them as surfaces. Changing the scale or another setting, the distribution was made again without them and all fell to the ground below. Now those models stay surfaces for the brush, both while you paint and when the distribution is made again.
+- For a distribution that already fell: change a setting again (for example the scale, back and forth) and it is made again on the model where you painted it.

@@ -1,0 +1,7 @@
+SIMPLER 1.76.19  —  2 novembre 2026
+===================================
+
+Coste naturali.
+
+- Il bordo dei terreni nuovi scende in modo irregolare: con il mare al piede del terreno la costa ha baie, promontori e isolotti invece della linea dritta del quadrato.
+- Nelle Avanzate del terreno c'è «Bordo con baie e promontori»: acceso sui terreni nuovi, spento su quelli fatti prima (restano come sono), lo puoi accendere o spegnere quando vuoi.

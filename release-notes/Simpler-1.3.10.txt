@@ -1,0 +1,9 @@
+SIMPLER 1.3.10  —  21 ottobre 2026
+==================================
+
+CORREZIONI
+----------
+- ANTEPRIMA DOPO "SALVA COME NUOVO": la sfera dell'editor del materiale restava vuota, perché l'editor passava al
+  nuovo materiale senza chiederne l'anteprima. Ora la sfera mostra subito l'immagine del materiale da cui è stato
+  copiato (è identico) e, più in generale, ogni volta che l'editor apre un materiale di cui non ha ancora
+  l'anteprima (nuova copia, nome cambiato...) la richiede da solo.

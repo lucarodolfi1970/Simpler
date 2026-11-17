@@ -1,0 +1,12 @@
+SIMPLER 1.75.24  —  31 ottobre 2026
+===================================
+
+Il render 4K «senza bagnato» era un file vecchio; selezione delle auto con SmartView.
+
+- Il bagnato non era scomparso: il render 4K non è mai stato salvato e la finestra ti ha mostrato il file vecchio con lo stesso nome.
+  - Dal registro: nella copia del render la pioggia c'era tutta (bagnato 0,85, pozzanghere 0,55, mappa dei ripari caricata, 347 materiali bagnati), uguale al render 960×540 di prima. Né la risoluzione né la memoria c'entrano: scheda 13,9 GB di 16, nessun avviso.
+  - Alla fine, dopo 10 minuti e 50 secondi, Blender non è riuscito a scrivere il file dell'immagine («Could not open file»: di solito il file è aperto in un altro programma). Però è uscito come se fosse tutto a posto; Simpler ha trovato lì il file del render precedente, con quel nome, e ha aperto quello.
+  - Ora il render scrive l'immagine nella sua cartella di lavoro e poi Simpler la copia dove hai scelto. Se lì non si può scrivere, la salva accanto con un numero («... (2).png»), la apre e te lo dice nella barra di stato: il render non va mai perso e non viene mai mostrato un file vecchio. Un errore dentro il render ora ferma Blender con un codice di errore, che Simpler vede.
+- SmartView, selezione di un'auto (5–9 secondi).
+  - Causa: le auto delle distribuzioni sono disegnate «a copie»; quella selezionata viene disegnata da sola, con shader suoi. Simpler li prepara in anticipo, ma gli shader dipendono dalle luci della vista: quando al tramonto si sono accesi i lampioni (luci da 4 a 16 e da 2 a 10, nel registro alle 22:46) quelli preparati non servivano più, e alla selezione se ne facevano 3 dentro un fotogramma, 9 secondi.
+  - Ora, a ogni cambio delle luci della vista, gli shader dei modelli vengono preparati di nuovo in sottofondo, dopo quelli della vista. Se selezioni prima che abbiano finito, la preparazione passa dal riquadro «Occupato» invece di bloccare la vista.

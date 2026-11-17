@@ -1,0 +1,2542 @@
+{
+ "1.75.51": {
+  "icon": "fix",
+  "it": "Lo sporco dipinto si vede di nuovo nel path tracing dei progetti grandi: le mappe di dati non vengono più ridotte.",
+  "en": "Painted dirt shows again in the path tracing of big projects: data maps are no longer reduced."
+ },
+ "1.75.50": {
+  "icon": "new",
+  "it": "Nebbia volumetrica con goccioline vere (Mie), bagliore verso le luci, irregolarità, foschia sopra lo strato basso, più rimbalzi della luce.",
+  "en": "Volumetric fog with real droplets (Mie), glow towards lights, irregularity, haze above the low layer, more light bounces."
+ },
+ "1.75.49": {
+  "icon": "new",
+  "it": "Nebbia: nebbia bassa (altezza e sfumatura), colore scelto, distanza d'inizio, preimpostazioni; anche nella vista in tempo reale.",
+  "en": "Fog: low fog (height and falloff), chosen colour, start distance, presets; also in the real-time view."
+ },
+ "1.75.48": {
+  "icon": "ui",
+  "it": "I modelli importati vanno al centro della vista (opzione nella finestra di importazione; più file restano allineati).",
+  "en": "Imported models go to the centre of the view (option in the import window; several files stay aligned)."
+ },
+ "1.75.47": {
+  "icon": "ui",
+  "it": "Una piccola × in fondo alle caselle di testo per svuotarle.",
+  "en": "A small × at the end of text boxes to empty them."
+ },
+ "1.75.46": {
+  "icon": "ui",
+  "it": "Impostazioni in sezioni richiudibili con icone; nuova sezione Chiavi API (OpenAI, Krea) con stato, spiegazione e costi.",
+  "en": "Settings in collapsible sections with icons; new API keys section (OpenAI, Krea) with state, explanation and costs."
+ },
+ "1.75.45": {
+  "icon": "fix",
+  "it": "«Salva immagine» resta acceso anche senza oggetti selezionati.",
+  "en": "«Save image» stays bright with nothing selected."
+ },
+ "1.75.44": {
+  "icon": "fix",
+  "it": "Video AI: il testo del movimento si salva nel progetto (vuoto nei progetti nuovi); × per cancellarlo e barra di scorrimento.",
+  "en": "AI video: the motion text is saved in the project (empty in new projects); × to clear it and a scrollbar."
+ },
+ "1.75.43": {
+  "icon": "ui",
+  "it": "Video AI: «Continua a lavorare», Simpler controlla da solo e mostra un avviso verde quando il video è salvato in Elaborazioni AI.",
+  "en": "AI video: «Keep working», Simpler checks by itself and shows a green notice when the video is saved in AI outputs."
+ },
+ "1.75.42": {
+  "icon": "fix",
+  "it": "Video AI: i fotogrammi dicono da quale scena vengono (per codice, non per nome) e avvisano se è stata aggiornata o eliminata; restano sempre copie.",
+  "en": "AI video: keyframes say which scene they come from (by code, not by name) and warn if it was updated or deleted; they always stay copies."
+ },
+ "1.75.41": {
+  "icon": "ui",
+  "it": "Elaborazioni AI: il nome di immagini e video riporta anche il modello usato.",
+  "en": "AI outputs: the name of images and videos also shows the model used."
+ },
+ "1.75.40": {
+  "icon": "new",
+  "it": "Video AI: «Migliora con l'AI» riscrive il testo del movimento con il modello di testo più economico della chiave OpenAI.",
+  "en": "AI video: «Improve with AI» rewrites the motion text with the cheapest text model of the OpenAI key."
+ },
+ "1.75.39": {
+  "icon": "new",
+  "it": "Video AI: ogni video in libreria conserva i suoi parametri e i fotogrammi; un clic li rimette nel pannello per un'altra versione.",
+  "en": "AI video: every video in the library keeps its parameters and keyframes; a click puts them back in the panel for another version."
+ },
+ "1.75.38": {
+  "icon": "fix",
+  "it": "Render finale di nuovo con la strada bagnata nelle scene grandi (mappa del riparo vecchia rimessa al render); Video AI: «Vedi il render» e messaggio oltre il 100%.",
+  "en": "Final render with the wet road again in big scenes (old shelter map put back at render); AI video: «See the render» and a message past 100%."
+ },
+ "1.75.37": {
+  "icon": "ui",
+  "it": "Video AI: casella «Genera audio automatico» (spenta: l'audio di Krea viene tolto).",
+  "en": "AI video: «Generate automatic audio» box (off: Krea's audio is removed)."
+ },
+ "1.75.36": {
+  "icon": "fix",
+  "it": "Video AI: miniature dei fotogrammi intere, con bande nere al posto del ritaglio.",
+  "en": "AI video: keyframe thumbnails shown whole, with black bands instead of cropping."
+ },
+ "1.75.35": {
+  "icon": "ui",
+  "it": "Elaborazioni AI: cartelle fisse «Immagini AI» e «Video AI»; gli elementi si rinominano ed eliminano, non si spostano; i video si salvano con il progetto.",
+  "en": "AI outputs: fixed «AI images» and «AI videos» folders; items can be renamed and deleted, not moved; videos are saved with the project."
+ },
+ "1.75.34": {
+  "icon": "fix",
+  "it": "Video AI: tolta la traccia audio che Krea aggiunge, senza ricodificare il video.",
+  "en": "AI video: the sound track Krea adds is removed, without encoding the video again."
+ },
+ "1.75.33": {
+  "icon": "fix",
+  "it": "Video AI: Krea non accetta più l'opzione audio, tolta; altri modelli raccolti in «Altri modelli…».",
+  "en": "AI video: Krea no longer accepts the audio option, removed; other models grouped in «Other models…»."
+ },
+ "1.75.32": {
+  "icon": "new",
+  "it": "Video AI: un breve video tra due fotogrammi della scena (Inizio e Fine) con Krea e la tua chiave.",
+  "en": "AI video: a short video between two keyframes of the scene (Start and End) with Krea and your key."
+ },
+ "1.75.31": {
+  "icon": "fix",
+  "it": "Contratto di licenza: caselle, pulsanti e titolo seguono la lingua scelta.",
+  "en": "License agreement: boxes, buttons and title follow the chosen language."
+ },
+ "1.75.30": {
+  "icon": "ui",
+  "it": "Contratto di licenza in italiano e in inglese nella stessa finestra; tolti i contatti.",
+  "en": "License agreement in Italian and English in the same window; contacts removed."
+ },
+ "1.75.29": {
+  "icon": "fix",
+  "it": "Licenze e crediti: le immagini incluse in Simpler risultano verificate.",
+  "en": "Licenses and credits: the images included in Simpler are checked."
+ },
+ "1.75.28": {
+  "icon": "new",
+  "it": "Contratto di licenza da accettare al primo avvio; inserimento dei modelli molto più veloce nelle scene grandi.",
+  "en": "License agreement to accept at the first start; much faster model insertion in big scenes."
+ },
+ "1.75.27": {
+  "icon": "performance",
+  "it": "Inserimento dei modelli: confronto con la scena più leggero; profilo dei comandi lenti nel registro.",
+  "en": "Inserting models: lighter comparison with the scene; profile of slow commands in the log."
+ },
+ "1.75.26": {
+  "icon": "performance",
+  "it": "Inserire un modello con SmartView non blocca più la vista; tempi di ogni fase dell'inserimento nel registro.",
+  "en": "Inserting a model with SmartView no longer freezes the view; times of every phase of the insert in the log."
+ },
+ "1.75.25": {
+  "icon": "performance",
+  "it": "SmartView non prepara più shader: selezione immediata, modelli nuovi in versione semplice, modifiche pesanti dei materiali allo spegnimento.",
+  "en": "SmartView no longer prepares shaders: instant selection, new models in a plain version, heavy material changes when it is turned off."
+ },
+ "1.75.24": {
+  "icon": "fix",
+  "it": "Un render che non si può salvare finisce accanto con un altro nome, mai più il file vecchio mostrato; selezione delle auto con SmartView senza attese dopo il cambio delle luci.",
+  "en": "A render that cannot be saved ends up next to it under another name, never again the old file shown; selecting cars with SmartView without waiting after the lights change."
+ },
+ "1.75.23": {
+  "icon": "fix",
+  "it": "Il grafico dei campioni non salta più avanti e non resta dritto nei render a riquadri (4K).",
+  "en": "The samples chart no longer jumps ahead and stays flat in tiled renders (4K)."
+ },
+ "1.75.22": {
+  "icon": "render",
+  "it": "Nel grafico dei campioni una riga gialla sottilissima mostra dove l'area deve arrivare.",
+  "en": "In the samples chart a very thin yellow line shows where the area has to arrive."
+ },
+ "1.75.21": {
+  "icon": "render",
+  "it": "Il grafico dei campioni del render finale diventa giallo quando arriva alla fine.",
+  "en": "The chart of the final render samples turns yellow when it reaches the end."
+ },
+ "1.75.20": {
+  "icon": "render",
+  "it": "Durante il render finale, in basso, un grafico dei campioni nel tempo che cresce secondo dopo secondo.",
+  "en": "During the final render, at the bottom, a chart of the samples over time that grows second by second."
+ },
+ "1.75.19": {
+  "icon": "view",
+  "it": "Nuovo pulsante «Salva immagine» nella vista: salva il path tracing raggiunto o la vista in tempo reale.",
+  "en": "New «Save image» button in the view: saves the path tracing reached so far or the real-time view."
+ },
+ "1.75.18": {
+  "icon": "fix",
+  "it": "Diagnostica nel registro: com'è la pioggia nella scena del render finale.",
+  "en": "Diagnostics in the log: how the rain is in the scene of the final render."
+ },
+ "1.75.17": {
+  "icon": "fix",
+  "it": "Il bordo delle zone asciutte sotto i ripari sfuma, senza più la riga netta a gradini.",
+  "en": "The edge of dry areas under shelters fades, without the sharp stepped line."
+ },
+ "1.75.16": {
+  "icon": "fix",
+  "it": "Il manto di neve ha i bordi chiusi: niente più fessure scure dove finisce contro oggetti e marciapiedi.",
+  "en": "The snow mantle has closed edges: no more dark slits where it ends against objects and sidewalks."
+ },
+ "1.75.15": {
+  "icon": "ui",
+  "it": "Durante il render finale il logo di Simpler è un occhio che si guarda intorno.",
+  "en": "During the final render the Simpler logo is an eye that looks around."
+ },
+ "1.75.14": {
+  "icon": "performance",
+  "it": "Selezionare un modello (un'auto) è immediato: niente più vista bloccata per secondi.",
+  "en": "Selecting a model (a car) is immediate: no more view frozen for seconds."
+ },
+ "1.75.13": {
+  "icon": "fix",
+  "it": "Il manto di neve si ricalcola anche spostando i modelli «Non fa riparo»: nel render finale la neve segue l'auto.",
+  "en": "The snow mantle is made again when «Does not shelter» models move: in the final render the snow follows the car."
+ },
+ "1.75.12": {
+  "icon": "performance",
+  "it": "SmartView tiene ferme le luci della vista (niente «Aggiornamento delle luci»); caustiche del mare solo come linee in più, senza bordi né zone scure.",
+  "en": "SmartView keeps the lights of the view fixed (no «Updating the lights»); sea caustics only as added lines, without borders or dark areas."
+ },
+ "1.75.11": {
+  "icon": "render",
+  "it": "Il render finale mostra tempo, picco di VRAM e di RAM; caustiche del mare che sfumano al bordo senza riga; Importa e Apri solo icona con freccina.",
+  "en": "The final render shows time, peak VRAM and RAM; sea caustics fade at their border without a line; Import and Open icon-only with a small arrow."
+ },
+ "1.75.10": {
+  "icon": "performance",
+  "it": "SmartView più leggero (ombre spente senza rifare gli shader), luci delle distribuzioni fisse, selezione senza ricaricare la vista, caustiche del mare corrette dopo spento/acceso.",
+  "en": "Lighter SmartView (shadows off without rebuilding shaders), fixed lights of distributions, selection without reloading the view, sea caustics right after off/on."
+ },
+ "1.75.9": {
+  "icon": "performance",
+  "it": "SmartView: un pulsante arancione per impostare la scena senza attese; la vista non si ricalcola da sola e le ombre si spengono, inserire, spostare e cambiare materiali funziona.",
+  "en": "SmartView: an orange button to set up the scene without waiting; the view is not recomputed by itself and shadows go off, inserting, moving and changing materials work."
+ },
+ "1.75.8": {
+  "icon": "water",
+  "it": "Caustiche del mare visibili (celle più grandi, linee più marcate, stessa luce media); i modelli salvati nella libreria e le loro miniature sono senza neve e pioggia.",
+  "en": "Visible sea caustics (larger cells, more marked lines, same average light); models saved to the library and their thumbnails are without snow and rain."
+ },
+ "1.75.7": {
+  "icon": "fix",
+  "it": "Applicando una scena il pannello Ambiente e la vista mostrano la sua pioggia, neve e cielo; scene in studio con la loro pioggia e neve; il vetro senza neve ripara i sedili dal mantello.",
+  "en": "Applying a scene the Ambience panel and the view show its rain, snow and sky; studio scenes with their rain and snow; glass without snow shelters the seats from the mantle."
+ },
+ "1.75.6": {
+  "icon": "fix",
+  "it": "Mantello di neve anche su modelli molto pesanti e con «Non fa riparo»; modelli con pezzi nascosti inseriti a terra e con la miniatura giusta.",
+  "en": "Snow mantle also on very heavy models and with «Gives no shelter»; models with hidden pieces inserted on the ground and with the right thumbnail."
+ },
+ "1.75.5": {
+  "icon": "fix",
+  "it": "«Senza mantello» (e gli altri interruttori di pioggia e neve) spento su un pezzo vale davvero anche se era acceso sul modello; vista in tempo reale fluida con i vetri.",
+  "en": "«No snow mantle» (and the other rain and snow switches) turned off on a piece now really applies even if it was on for the model; smooth real-time view with glass."
+ },
+ "1.75.4": {
+  "icon": "ui",
+  "it": "Un solo pulsante arancione nella barra (prima di AI) chiude e riapre le sezioni del pannello visibile; caustiche del mare calcolate per l'inquadratura attuale.",
+  "en": "A single orange button in the bar (before AI) closes and reopens the sections of the visible panel; sea caustics computed for the current framing."
+ },
+ "1.75.3": {
+  "icon": "performance",
+  "it": "Vista in tempo reale non più bloccata a 30 fps: niente più fotogrammi saltati per preparare shader che non servivano; vista ferma senza ridisegni continui.",
+  "en": "Real-time view no longer stuck at 30 fps: no more frames skipped to prepare shaders that were not needed; a still view no longer redrawn again and again."
+ },
+ "1.75.2": {
+  "icon": "water",
+  "it": "Caustiche del mare vere, calcolate da Cycles dalle onde del mare (il reticolato disegnato è spento); niente più «costa» nel riquadro Occupato senza mare; luce riflessa sul fondo bagnato non più troppo chiara.",
+  "en": "Real sea caustics, computed by Cycles from the waves of the sea (the drawn net is off); no more «coast» in the Busy box without a sea; reflected light on wet ground no longer too bright."
+ },
+ "1.75.1": {
+  "icon": "fix",
+  "it": "Niente più errore «StructRNA… removed» sugli slider dell'acqua; path tracing non più fermo a «pass 2/5»; vista in tempo reale riavviata da sola se la scheda video la azzera; caustiche dell'oceano sul fondale.",
+  "en": "No more «StructRNA… removed» error on the water sliders; path tracing no longer stuck at «pass 2/5»; real-time view restarted by itself if the video card resets it; ocean caustics on the sea bed."
+ },
+ "1.75.0": {
+  "icon": "new",
+  "it": "Acqua grande con onde vere attorno alla fotocamera (niente quadrati di luce); scelta unica «Acqua» con caustiche automatiche; luce colorata dalle vetrate; Poly Haven nel pennello; niente pozzanghere né verde sotto il mare; gizmo sul piano con vista quasi orizzontale.",
+  "en": "Large water with real waves around the camera (no squares of light); single «Water» choice with automatic caustics; coloured light from stained glass; Poly Haven in the brush; no puddles or green under the sea; gizmo on the plane with an almost horizontal view."
+ },
+ "1.74.1": {
+  "icon": "fix",
+  "it": "La barra di stato non scrive più «Caustiche disattivate» quando le caustiche Normali sono accese.",
+  "en": "The status bar no longer says «Caustics off» when Normal caustics are on."
+ },
+ "1.74.0": {
+  "icon": "new",
+  "it": "Ogni sezione dei pannelli ha la sua icona; texture «vuote» dei modelli 3ds Max non più chieste a ogni apertura; nota delle onde corta e chiara.",
+  "en": "Every section of the panels has its icon; «empty» textures of 3ds Max models no longer asked for at every opening; short and clear wave note."
+ },
+ "1.73.9": {
+  "icon": "fix",
+  "it": "Dipingi lo sporco: ripassare non cancella più, il motore non lavora più a vuoto; pulsante per chiudere e riaprire tutte le sezioni di un pannello.",
+  "en": "Paint dirt: going over again no longer erases, the engine no longer works for nothing; button to close and reopen all the sections of a panel."
+ },
+ "1.73.8": {
+  "icon": "new",
+  "it": "Mare con le proporzioni giuste (onde corte del mare vero, onde fino all'orizzonte, niente riga scura); luce riflessa dall'acqua di nuovo visibile riaprendo i progetti; controllo automatico con salva e riapri.",
+  "en": "Sea with the right proportions (short waves of a real sea, waves up to the horizon, no dark line); light reflected by the water visible again when reopening projects; automatic check with save and reopen."
+ },
+ "1.73.7": {
+  "icon": "fix",
+  "it": "Mare: niente più chiazza verde nel riflesso del sole sull'acqua bassa (la sabbia sott'acqua non è più lucida).",
+  "en": "Sea: no more green patch in the sun's reflection on shallow water (sand under water is no longer glossy)."
+ },
+ "1.73.6": {
+  "icon": "fix",
+  "it": "Ecosistemi: niente più erba sotto il mare (la stima dell'area inquadrata tornava sempre a 2,8 milioni); render con le nuvole volumetriche circa il 40% più veloce.",
+  "en": "Ecosystems: no more grass under the sea (the framed-area estimate always came back at 2.8 million); render with volumetric clouds about 40% faster."
+ },
+ "1.73.5": {
+  "icon": "fix",
+  "it": "Ecosistemi: niente più errore di memoria sul suolo e funzionano sui modelli della libreria; apertura più veloce con il mare; controllo automatico prima di ogni versione.",
+  "en": "Ecosystems: no more memory error on the ground and they work on library models; faster opening with the sea; an automatic check before every version."
+ },
+ "1.73.4": {
+  "icon": "fix",
+  "it": "Neve e mare: niente neve sotto il livello del mare né dove arrivano le onde (prima il mantello finiva nell'acqua come una lastra).",
+  "en": "Snow and sea: no snow below sea level or where the waves reach (before, the mantle went into the water like a slab)."
+ },
+ "1.73.3": {
+  "icon": "render",
+  "it": "Costa: il bordo dell'acqua sfuma nella sabbia bagnata; i progetti con il mare prendono il materiale attuale.",
+  "en": "Coast: the edge of the water fades into the wet sand; projects with the sea take the current material."
+ },
+ "1.73.2": {
+  "icon": "render",
+  "it": "Costa: le onde risalgono la riva e la linea dell'acqua è frastagliata, non più una riga dritta.",
+  "en": "Coast: the waves run up the shore and the water line is jagged, no longer a straight line."
+ },
+ "1.73.1": {
+  "icon": "fix",
+  "it": "Costa: il suolo inclinato è il fondale del mare (acqua trasparente sulla riva) e i modelli della libreria contano.",
+  "en": "Coast: a tilted ground is the sea bed (clear water at the shore) and library models count."
+ },
+ "1.73.0": {
+  "icon": "render",
+  "it": "Oceano: la Costa. Onde che sentono il fondo e si rompono, schiuma dei frangenti e intorno agli scogli, acqua bassa trasparente, riva bagnata.",
+  "en": "Ocean: the Coast. Waves that feel the bottom and break, foam of the breakers and around rocks, clear shallow water, a wet shore."
+ },
+ "1.72.1": {
+  "icon": "fix",
+  "it": "Il pulsante Paesaggio diventa solo icona con la finestra stretta, come gli altri.",
+  "en": "The Landscape button becomes just an icon in a narrow window, like the others."
+ },
+ "1.72.0": {
+  "icon": "render",
+  "it": "Nuovo pannello Paesaggio con l'Oceano: mare vero fino all'orizzonte, otto preset, onde, schiuma e colore uguali in vista e path tracing.",
+  "en": "New Landscape panel with the Ocean: a real sea to the horizon, eight presets, waves, foam and colour the same in the view and in path tracing."
+ },
+ "1.71.6": {
+  "icon": "ui",
+  "it": "Albero: scorre da solo trascinando verso i bordi; si spostano più righe insieme.",
+  "en": "Tree: scrolls by itself when dragging to the edges; several rows move together."
+ },
+ "1.71.5": {
+  "icon": "ui",
+  "it": "L'albero della scena si apre chiuso dopo il caricamento di una scena.",
+  "en": "The scene tree starts closed after a scene is loaded."
+ },
+ "1.71.4": {
+  "icon": "render",
+  "it": "Render finale: memoria della scheda grafica e del computer, con avviso quando la scheda non basta.",
+  "en": "Final render: graphics card and computer memory, with a warning when the card is not enough."
+ },
+ "1.71.3": {
+  "icon": "performance",
+  "it": "Render finale molto più veloce nelle scene grandi: la vista libera la memoria della scheda grafica.",
+  "en": "Much faster final render in large scenes: the view frees the graphics card's memory."
+ },
+ "1.71.2": {
+  "icon": "fix",
+  "it": "Texture mancanti indicate con il nome del file e i materiali; le mappe vuote non chiedono più la cartella.",
+  "en": "Missing textures shown with their file name and materials; empty maps no longer ask for a folder."
+ },
+ "1.71.1": {
+  "icon": "render",
+  "it": "Look (LUT) con le anteprime della tua inquadratura; preferiti con il tasto destro.",
+  "en": "Looks (LUT) with previews of your framing; favourites with a right click."
+ },
+ "1.71.0": {
+  "icon": "render",
+  "it": "Effetti della fotocamera: colore, look LUT con preferiti, grana, bagliore e altro; seme casuale dello sporco.",
+  "en": "Camera effects: colour, LUT looks with favourites, grain, glow and more; random seed for the dirt."
+ },
+ "1.70.3": {
+  "icon": "performance",
+  "it": "Verifica delle prestazioni: molte azioni sui modelli grandi da decine di secondi a meno di uno.",
+  "en": "Performance review: many actions on large models from tens of seconds to under one."
+ },
+ "1.70.2": {
+  "icon": "performance",
+  "it": "Ecosistemi molto più veloci nelle scene grandi.",
+  "en": "Ecosystems much faster in large scenes."
+ },
+ "1.70.1": {
+  "icon": "fix",
+  "it": "Sporco, pozzanghere e neve dipinti subito anche nel path tracing.",
+  "en": "Painted dirt, puddles and snow at once in path tracing too."
+ },
+ "1.70.0": {
+  "icon": "material",
+  "it": "Dipingi lo sporco: pennello con tre tipi di sporco, su qualsiasi superficie.",
+  "en": "Paint the dirt: a brush with three kinds of dirt, on any surface."
+ },
+ "1.69.4": {
+  "icon": "material",
+  "it": "Sporco: Opacità per un velo leggero; tolto «Sui bordi».",
+  "en": "Grunge: Opacity for a light veil; «On the edges» removed."
+ },
+ "1.69.3": {
+  "icon": "material",
+  "it": "Sporco uguale in tempo reale e path tracing; bordi lungo la linea.",
+  "en": "Same grunge in real time and path tracing; edges along the line."
+ },
+ "1.69.2": {
+  "icon": "ui",
+  "it": "Sporco: dimensione da 5 cm a 50 m, in cm o m.",
+  "en": "Grunge: size from 5 cm to 50 m, in cm or m."
+ },
+ "1.69.1": {
+  "icon": "fix",
+  "it": "Sporco visibile anche sui modelli in pollici o millimetri.",
+  "en": "Grunge visible on models in inches or millimetres too."
+ },
+ "1.69.0": {
+  "icon": "material",
+  "it": "Sporco nei materiali: quantità, bordi, dimensione indipendente dalle UV.",
+  "en": "Grunge in materials: quantity, edges, size independent of the UV."
+ },
+ "1.68.6": {
+  "icon": "material",
+  "it": "«Adatta all'oggetto»: una sola immagine su più pezzi selezionati.",
+  "en": "«Fit to the object»: one picture over several selected pieces."
+ },
+ "1.68.5": {
+  "icon": "material",
+  "it": "Materiali: «Solo qui / Ovunque» e libreria con comandi chiari.",
+  "en": "Materials: «Only here / Everywhere» and a library with clear commands."
+ },
+ "1.68.4": {
+  "icon": "fix",
+  "it": "Texture ricollegate visibili anche nella vista in tempo reale.",
+  "en": "Relinked textures visible in the real-time view too."
+ },
+ "1.68.3": {
+  "icon": "library",
+  "it": "Primitive come voce propria del menu Modelli 3D.",
+  "en": "Primitives as their own entry of the 3D models menu."
+ },
+ "1.68.2": {
+  "icon": "material",
+  "it": "Le texture viaggiano con il progetto; quelle mancanti si cercano all'apertura.",
+  "en": "Textures travel with the project; missing ones are looked for at opening."
+ },
+ "1.68.1": {
+  "icon": "material",
+  "it": "La libreria dei materiali non cambia più i progetti; i materiali di Simpler diventano tuoi.",
+  "en": "The material library no longer changes projects; the materials of Simpler become yours."
+ },
+ "1.68.0": {
+  "icon": "ambience",
+  "it": "Cupola del sole: trascini il sole dove lo vuoi, ora e nord seguono.",
+  "en": "Sun dome: drag the sun where you want it, time and north follow."
+ },
+ "1.67.9": {
+  "icon": "fix",
+  "it": "«Adatta all'oggetto» non capovolge più l'immagine sui modelli importati.",
+  "en": "«Fit to the object» no longer turns the picture upside down on imported models."
+ },
+ "1.67.8": {
+  "icon": "material",
+  "it": "«Adatta all'oggetto» sempre visibile, anche su tutti gli oggetti del materiale.",
+  "en": "«Fit to the object» always visible, also on every object of the material."
+ },
+ "1.67.7": {
+  "icon": "fix",
+  "it": "Vista non più bloccata con «Centra ogni pezzo».",
+  "en": "View no longer frozen with «Centre every piece»."
+ },
+ "1.67.6": {
+  "icon": "material",
+  "it": "«Adatta all'oggetto» proietta l'immagine sulla sagoma, senza le vecchie UV.",
+  "en": "«Fit to the object» projects the picture onto the shape, without the old UV."
+ },
+ "1.67.5": {
+  "icon": "performance",
+  "it": "Vista senza blocchi, correzioni dal controllo completo, «Adatta all'oggetto».",
+  "en": "View without freezes, fixes from the full check, «Fit to the object»."
+ },
+ "1.67.4": {
+  "icon": "fix",
+  "it": "«Niente pioggia» e «Niente neve» subito nel path tracing.",
+  "en": "«No rain» and «No snow» at once in path tracing."
+ },
+ "1.67.3": {
+  "icon": "scatter",
+  "it": "Ecosistemi: nasconde la forma esatta degli oggetti, mai dietro vetri e foglie trasparenti.",
+  "en": "Ecosystems: exact shape of the objects hides, never behind glass or transparent leaves."
+ },
+ "1.67.2": {
+  "icon": "scatter",
+  "it": "Ecosistemi: niente pezzi dietro alberi ed edifici già nella scena.",
+  "en": "Ecosystems: no pieces behind trees and buildings already in the scene."
+ },
+ "1.67.1": {
+  "icon": "ambience",
+  "it": "«Sempre asciutto» separato per pioggia e neve.",
+  "en": "«Always dry» split into rain and snow."
+ },
+ "1.67.0": {
+  "icon": "ambience",
+  "it": "Preset per pioggia e neve, e i tuoi con un nome.",
+  "en": "Presets for rain and snow, and your own with a name."
+ },
+ "1.66.3": {
+  "icon": "fix",
+  "it": "Gocce sui vetri delle auto; qualità e ombre in un menu a tendina.",
+  "en": "Drops on car windows; quality and shadows in a drop-down menu."
+ },
+ "1.66.2": {
+  "icon": "fix",
+  "it": "Pioggia forte più fitta vicino alla camera.",
+  "en": "Denser heavy rain near the camera."
+ },
+ "1.66.1": {
+  "icon": "fix",
+  "it": "Vista senza blocchi lunghi: materiali preparati in sottofondo con «Occupato».",
+  "en": "View without long freezes: materials prepared in the background with «Busy»."
+ },
+ "1.66.0": {
+  "icon": "scene",
+  "it": "Gocce posate sulle superfici, cerchi nelle pozzanghere; render con dimensione e campioni a scelta.",
+  "en": "Drops on surfaces, rings in puddles; render with custom size and samples."
+ },
+ "1.65.2": {
+  "icon": "fix",
+  "it": "Pioggia lontana fino a «Fin dove arrivano»; gocce sempre d'acqua.",
+  "en": "Distant rain up to «How far they reach»; drops always made of water."
+ },
+ "1.65.1": {
+  "icon": "fix",
+  "it": "Schizzi su auto e distribuzioni; pioggia visibile di notte vicino ai lampioni.",
+  "en": "Splashes on cars and distributions; rain visible at night near street lights."
+ },
+ "1.65.0": {
+  "icon": "scene",
+  "it": "Pioggia che cade con schizzi, superfici che si bagnano e cerchi sull'acqua.",
+  "en": "Falling rain with splashes, surfaces that get wet and rings on water."
+ },
+ "1.64.1": {
+  "icon": "fix",
+  "it": "Bordi della neve smussati vicino alla camera; crepe del ghiaccio regolabili.",
+  "en": "Smoothed snow edges near the camera; adjustable ice cracks."
+ },
+ "1.64.0": {
+  "icon": "scene",
+  "it": "Acqua che ghiaccia con la neve; neve più fine vicino alla camera e sulle rocce.",
+  "en": "Water that freezes with the snow; finer snow near the camera and on rocks."
+ },
+ "1.63.7": {
+  "icon": "fix",
+  "it": "Niente bianco sotto l'acqua; neve arrotondata sui bordi delle rocce.",
+  "en": "No white under water; snow rounded at rock edges."
+ },
+ "1.63.6": {
+  "icon": "fix",
+  "it": "Niente manto di neve sotto l'acqua di una pozza.",
+  "en": "No snow mantle under the water of a pool."
+ },
+ "1.63.5": {
+  "icon": "fix",
+  "it": "«Ricalcola» funziona anche se l'ecosistema è stato risalvato in libreria.",
+  "en": "«Recalculate» works even when the ecosystem was saved again in the library."
+ },
+ "1.63.4": {
+  "icon": "view",
+  "it": "Nuovo nome: «Calcola solo l'area inquadrata».",
+  "en": "New name: «Compute only the framed area»."
+ },
+ "1.63.3": {
+  "icon": "view",
+  "it": "Box «Solo ciò che vede la camera» compatto, spiegazioni nei suggerimenti.",
+  "en": "Compact «Only what the camera sees» box, explanations in tooltips."
+ },
+ "1.63.2": {
+  "icon": "performance",
+  "it": "Vista più leggera: neve sugli alberi solo dove si vede; «Manto di neve».",
+  "en": "Lighter view: snow on trees only where it shows; «Snow mantle»."
+ },
+ "1.63.1": {
+  "icon": "fix",
+  "it": "Neve su tutti gli alberi delle distribuzioni, anche con spessori sottili.",
+  "en": "Snow on every distributed tree, even with thin layers."
+ },
+ "1.63.0": {
+  "icon": "performance",
+  "it": "«Solo ciò che vede la camera»: neve ed ecosistemi più leggeri, dettaglio dove guardi.",
+  "en": "«Only what the camera sees»: lighter snow and ecosystems, detail where you look."
+ },
+ "1.62.1": {
+  "icon": "view",
+  "it": "Fiocchi che cadono spostati nelle Avanzate della neve.",
+  "en": "Falling snowflakes moved into the snow's Advanced."
+ },
+ "1.62.0": {
+  "icon": "performance",
+  "it": "Box «Alleggerisci»: neve, distribuzioni, fiocchi, ombre, mezza risoluzione, ricalcoli, memoria.",
+  "en": "«Lighten» box: snow, distributions, flakes, shadows, half resolution, computations, memory."
+ },
+ "1.61.1": {
+  "icon": "fix",
+  "it": "Fiocchi visibili nella vista in tempo reale; scala giusta; clic più veloci.",
+  "en": "Snowflakes visible in the real-time view; correct scale; faster clicks."
+ },
+ "1.61.0": {
+  "icon": "scene",
+  "it": "Fiocchi di neve che cadono, con vento, raffiche e mosso; mantello senza cerchi.",
+  "en": "Falling snowflakes with wind, gusts and motion blur; mantle without rings."
+ },
+ "1.60.1": {
+  "icon": "view",
+  "it": "Di notte i lampioni degli scatter illuminano anche la vista in tempo reale.",
+  "en": "At night the street lamps of scatters light the real-time view too."
+ },
+ "1.60.0": {
+  "icon": "scene",
+  "it": "«Nascondi la neve»: sposti i modelli senza ricalcolare il manto, poi «Mostra la neve».",
+  "en": "«Hide the snow»: move models without recomputing the mantle, then «Show the snow»."
+ },
+ "1.59.0": {
+  "icon": "import",
+  "it": "«Aggiorna dalla libreria»: i modelli corretti in libreria arrivano anche nei progetti già fatti.",
+  "en": "«Update from the library»: models corrected in the library reach projects already made."
+ },
+ "1.58.5": {
+  "icon": "view",
+  "it": "Velocità «uomo» di nuovo a passo d'uomo anche con ecosistemi fino all'orizzonte.",
+  "en": "«Walk» speed back to walking pace even with ecosystems reaching the horizon."
+ },
+ "1.58.4": {
+  "icon": "scatter",
+  "it": "«Ricalcola dalla vista»: conta prima i pezzi, chiede oltre 400.000 e propone il diradamento se troppi.",
+  "en": "«Recalculate from the view»: counts the pieces first, asks above 400,000 and offers thinning if too many."
+ },
+ "1.58.3": {
+  "icon": "fix",
+  "it": "Finestre della libreria: niente più riquadro «Occupato» e clessidra infiniti.",
+  "en": "Library windows: no more endless «Busy» box and hourglass."
+ },
+ "1.58.2": {
+  "icon": "scatter",
+  "it": "Ecosistemi: conto giusto dei pezzi nell'inquadratura anche sul pavimento grande; cartelle per gli ecosistemi.",
+  "en": "Ecosystems: right count of pieces in the frame also on the big floor; folders for ecosystems."
+ },
+ "1.58.1": {
+  "icon": "fix",
+  "it": "Path tracing: niente più errore «eye_z» con le nuvole del cielo di progetti vecchi.",
+  "en": "Path tracing: no more «eye_z» error with sky clouds of old projects."
+ },
+ "1.58.0": {
+  "icon": "scatter",
+  "it": "Ecosistemi «Solo dove guarda la camera»: molti meno pezzi, con «Ricalcola dalla vista».",
+  "en": "Ecosystems «Only where the camera looks»: far fewer pieces, with «Recalculate from the view»."
+ },
+ "1.57.2": {
+  "icon": "performance",
+  "it": "All'apertura del progetto i dati inutilizzati del file escono subito dalla memoria.",
+  "en": "Unused data in the file leaves memory as soon as the project opens."
+ },
+ "1.57.1": {
+  "icon": "fix",
+  "it": "«Libera memoria» non dà più errore nelle scene con collezioni.",
+  "en": "«Free memory» no longer fails in scenes with collections."
+ },
+ "1.57.0": {
+  "icon": "performance",
+  "it": "«Libera memoria»: icona rossa che toglie ciò che la scena non usa più, con conferma.",
+  "en": "«Free memory»: red icon that removes what the scene no longer uses, with confirmation."
+ },
+ "1.56.3": {
+  "icon": "material",
+  "it": "«Materiali» non riapre più copie rimaste su oggetti eliminati.",
+  "en": "«Materials» no longer reopens copies left on deleted objects."
+ },
+ "1.56.2": {
+  "icon": "view",
+  "it": "Vista: le nuvole volumetriche prese dalla libreria si vedono come volumi.",
+  "en": "View: volumetric clouds taken from the library show as volumes."
+ },
+ "1.56.1": {
+  "icon": "import",
+  "it": "«Unisci i pezzi in un solo oggetto» ora è un interruttore visibile nella finestra d'importazione.",
+  "en": "«Merge the pieces into a single object» is now a visible switch in the import window."
+ },
+ "1.56.0": {
+  "icon": "scene",
+  "it": "«Unisci in un solo oggetto» dal tasto destro dell'albero, con annulla; voce d'importazione rinominata.",
+  "en": "«Merge into a single object» from the tree's right click, with undo; import option renamed."
+ },
+ "1.55.1": {
+  "icon": "material",
+  "it": "Niente più macchie grigie e puntini sui volumi con la foschia; sacche vuote nelle nuvole riempite; primitive sempre col materiale originale.",
+  "en": "No more grey patches and specks on volumes with haze; empty pockets in clouds filled; primitives always with the original material."
+ },
+ "1.55.0": {
+  "icon": "material",
+  "it": "Volumi su modelli non chiusi, sbuffi in % del modello, niente più macchie grigie con la foschia; «Unisci in un solo oggetto» all'importazione.",
+  "en": "Volumes on models that are not closed, puffs as % of the model, no more grey patches with haze; «Merge into a single object» on import."
+ },
+ "1.54.1": {
+  "icon": "material",
+  "it": "Volumetrico: «Rimbalzi della luce», Nuvola tarata su un cumulo; riquadro rosso anche mentre il path tracing prepara la scena.",
+  "en": "Volumetric: «Light bounces», Cloud tuned on a cumulus; red box also while the path tracing prepares the scene."
+ },
+ "1.54.0": {
+  "icon": "material",
+  "it": "Materiale «Volumetrico»: nuvole, fumo, nebbia, vapore, polvere e fuoco dentro qualsiasi modello.",
+  "en": "«Volumetric» material: clouds, smoke, fog, steam, dust and fire inside any model."
+ },
+ "1.53.0": {
+  "icon": "ambience",
+  "it": "Neve: «Neve vecchia», bianco spento e aloni di sporco, uguale in vista e nel rendering.",
+  "en": "Snow: «Old snow», duller white and dirty stains, the same in the view and in the render."
+ },
+ "1.52.0": {
+  "icon": "ambience",
+  "it": "Neve: scolpisci passi, tracce di pneumatici, neve spalata o ammucchiata, uguale in vista e nel rendering.",
+  "en": "Snow: sculpt footprints, tyre tracks, shovelled or heaped snow, the same in the view and in the render."
+ },
+ "1.51.1": {
+  "icon": "fix",
+  "it": "Vista: «Sempre asciutto» sulle parti di un modello toglie anche bagnato e bianco della neve.",
+  "en": "View: «Always dry» on the parts of a model also removes wetness and the white of snow."
+ },
+ "1.51.0": {
+  "icon": "fix",
+  "it": "Pioggia e neve per più oggetti selezionati, con lo stato «multi»; valori salvati con il modello.",
+  "en": "Rain and snow for several selected objects, with the «multi» state; values saved with the model."
+ },
+ "1.50.0": {
+  "icon": "ambience",
+  "it": "Neve: mantello sulla forma anche per i modelli delle distribuzioni, calcolato una volta per modello.",
+  "en": "Snow: mantle on the shape for the models of distributions too, computed once per model."
+ },
+ "1.49.1": {
+  "icon": "fix",
+  "it": "Le luci spente non fanno più ombre nella vista (molto più veloce); diagnosi della notte nel registro.",
+  "en": "Lights that are off no longer cast shadows in the view (much faster); night diagnosis in the log."
+ },
+ "1.49.0": {
+  "icon": "ambience",
+  "it": "Neve sulla forma dei modelli, dettaglio per oggetto; pioggia e neve sui decal; avviso sole di mezzanotte.",
+  "en": "Snow on the shape of models, detail per object; rain and snow on decals; midnight sun warning."
+ },
+ "1.48.1": {
+  "icon": "ambience",
+  "it": "Neve: «Dettaglio del mantello» nelle Avanzate, con limiti e avvisi di Simpler.",
+  "en": "Snow: «Mantle detail» in Advanced, with Simpler's limits and warnings."
+ },
+ "1.48.0": {
+  "icon": "ambience",
+  "it": "Neve, passo 3: pennello neve per aggiungere o togliere neve e mantello.",
+  "en": "Snow, step 3: snow brush to add or remove snow and mantle."
+ },
+ "1.47.0": {
+  "icon": "ambience",
+  "it": "Neve, passo 2: mantello di neve con spessore vero, arrotondato sui bordi.",
+  "en": "Snow, step 2: snow mantle with a real thickness, rounded at the edges."
+ },
+ "1.46.0": {
+  "icon": "ambience",
+  "it": "Neve, passo 1: neve sulle superfici rivolte in alto, con il riparo della pioggia.",
+  "en": "Snow, step 1: snow on surfaces facing up, with the rain's shelter."
+ },
+ "1.45.4": {
+  "icon": "fix",
+  "it": "Memoria video per programma senza Windows (dwm), che contava due volte le finestre degli altri.",
+  "en": "Video memory per program without Windows (dwm), which counted the other programs' windows twice."
+ },
+ "1.45.3": {
+  "icon": "fix",
+  "it": "Edifici e auto di nuovo visibili nella vista in tempo reale; tasto «Ridisegna la vista».",
+  "en": "Buildings and cars visible again in the real-time view; «Redraw the view» button."
+ },
+ "1.45.2": {
+  "icon": "ambience",
+  "it": "«Sfumatura pennello» per le pozzanghere dipinte; memoria video per programma solo della scheda del render.",
+  "en": "«Brush softness» for painted puddles; video memory per program only on the render card."
+ },
+ "1.45.1": {
+  "icon": "fix",
+  "it": "Path tracing non più bloccato su «calcolo…» con la pioggia; «Occupato» anche mentre si prepara il cielo.",
+  "en": "Path tracing no longer stuck on «computing…» with rain; «Busy» also while the sky is prepared."
+ },
+ "1.45.0": {
+  "icon": "ambience",
+  "it": "Pennello pozzanghere: aggiungi o togli pozzanghere dipingendo sulla vista.",
+  "en": "Puddle brush: add or remove puddles by painting on the view."
+ },
+ "1.44.3": {
+  "icon": "fix",
+  "it": "Pioggia: «Sempre asciutto» funziona anche sulle distribuzioni.",
+  "en": "Rain: «Always dry» also works on distributions."
+ },
+ "1.44.2": {
+  "icon": "fix",
+  "it": "«Occupato · attendi» non sparisce più durante i caricamenti della vista.",
+  "en": "«Busy · please wait» no longer goes away while the view is loading."
+ },
+ "1.44.1": {
+  "icon": "ui",
+  "it": "Salvataggio automatico ogni 10, 20 o 30 minuti; registro dei tempi di attesa.",
+  "en": "Autosave every 10, 20 or 30 minutes; a log of the waits."
+ },
+ "1.44.0": {
+  "icon": "ui",
+  "it": "«Occupato · attendi» rosso lampeggiante nella vista, con cosa sta facendo, e la clessidra finché tutto è finito.",
+  "en": "A blinking red «Busy · please wait» in the view, with what it is doing, and the hourglass until everything is over."
+ },
+ "1.43.4": {
+  "icon": "fix",
+  "it": "Con la pioggia il path tracing si fermava a 3/5: ora arriva alla fine.",
+  "en": "With rain, path tracing stopped at 3/5: now it reaches the end."
+ },
+ "1.43.3": {
+  "icon": "fix",
+  "it": "Pioggia rifatta da capo all'apertura del progetto (precauzione contro il rosa nel path tracing).",
+  "en": "Rain made again from scratch when a project opens (a guard against pink in path tracing)."
+ },
+ "1.43.2": {
+  "icon": "fix",
+  "it": "Pioggia: nelle scene grandi il riparo sotto le auto ora funziona (e con lui «Non fa riparo»).",
+  "en": "Rain: in large scenes the shelter under cars now works (and «Gives no shelter» with it)."
+ },
+ "1.43.1": {
+  "icon": "ambience",
+  "it": "Pioggia: «Non fa riparo» per le auto in movimento, la strada sotto resta bagnata.",
+  "en": "Rain: «Gives no shelter» for moving cars, the road under them stays wet."
+ },
+ "1.43.0": {
+  "icon": "ambience",
+  "it": "Pioggia: asciutto sotto tettoie, portici, auto e alberi; «Sempre asciutto» per oggetto.",
+  "en": "Rain: dry under canopies, porticos, cars and trees; «Always dry» per object."
+ },
+ "1.42.1": {
+  "icon": "ambience",
+  "it": "Pioggia: Bagnato al 100% è un velo d'acqua su tutto il terreno; bordi delle pozzanghere sfumabili.",
+  "en": "Rain: Wetness at 100% is a sheet of water on all the ground; puddle edges can be softened."
+ },
+ "1.42.0": {
+  "icon": "ambience",
+  "it": "Pioggia nell'Ambiente: superfici bagnate e pozzanghere, in tempo reale e nel path tracing.",
+  "en": "Rain in the Ambience: wet surfaces and puddles, in real time and in path tracing."
+ },
+ "1.41.0": {
+  "icon": "ui",
+  "it": "Ctrl+Z riporta una selezione di più oggetti persa per sbaglio.",
+  "en": "Ctrl+Z brings back a selection of several objects lost by mistake."
+ },
+ "1.40.0": {
+  "icon": "library",
+  "it": "Preferiti: cuore sulle miniature, menu Preferiti con cinque cartelle e «Porta all'elemento».",
+  "en": "Favourites: a heart on the thumbnails, a Favourites menu with five folders and «Go to the item»."
+ },
+ "1.39.2": {
+  "icon": "fix",
+  "it": "Scatter adottati dal banco di prova a ogni modifica, anche se la prima pennellata era fuori.",
+  "en": "Scatters adopted by the test plot at every change, even if the first stroke was off it."
+ },
+ "1.39.1": {
+  "icon": "ui",
+  "it": "Scatter: cursore della Presenza largo e usabile in ogni riga dei modelli.",
+  "en": "Scatter: wide, usable Presence slider in every model row."
+ },
+ "1.39.0": {
+  "icon": "scatter",
+  "it": "Scatter: scala e rotazione proprie per ogni modello del pennello, in Avanzate sotto la sua riga.",
+  "en": "Scatter: scale and rotation of its own for each model of the brush, in Advanced under its row."
+ },
+ "1.38.12": {
+  "icon": "fix",
+  "it": "Diagnosi dei decal invisibili in tempo reale nei registri del motore e dell'app.",
+  "en": "Diagnosis of decals invisible in real time in the engine and app logs."
+ },
+ "1.38.11": {
+  "icon": "fix",
+  "it": "Nessuna auto girata per un istante all'apertura: i pezzi aspettano il loro orientamento.",
+  "en": "No car turned for a moment on opening: pieces wait for their orientation."
+ },
+ "1.38.10": {
+  "icon": "fix",
+  "it": "Auto non più girate alla riapertura: le distribuzioni seguono sempre l'orientamento della libreria. Decal più robusti nella vista.",
+  "en": "Cars no longer turned when reopening: distributions always follow the library orientation. Sturdier decals in the view."
+ },
+ "1.38.9": {
+  "icon": "scatter",
+  "it": "Un solo banco di prova per scena (cambia misura invece di duplicarsi); icona del prato per gli ecosistemi.",
+  "en": "One test plot per scene (it changes size instead of duplicating); grass icon for ecosystems."
+ },
+ "1.38.8": {
+  "icon": "scatter",
+  "it": "Scatter dipinti sul banco di prova come suoi figli (lo seguono), con il pallino blu.",
+  "en": "Scatters painted on the test plot become its children (they follow it), with the blue dot."
+ },
+ "1.38.7": {
+  "icon": "ui",
+  "it": "Tessere della libreria sempre allineate, anche con nomi su due righe.",
+  "en": "Library tiles always aligned, also with names on two lines."
+ },
+ "1.38.6": {
+  "icon": "fix",
+  "it": "Miniatura e salvataggio funzionano anche con un ecosistema rimesso sul banco di prova.",
+  "en": "Thumbnail and saving also work with an ecosystem put back on the test plot."
+ },
+ "1.38.5": {
+  "icon": "render",
+  "it": "Miniature degli ecosistemi col path tracer: inquadratura piena sul banco di prova, senza bordi.",
+  "en": "Ecosystem thumbnails with the path tracer: a full framing on the test plot, no edges."
+ },
+ "1.38.4": {
+  "icon": "scatter",
+  "it": "Limite degli ecosistemi calcolato sulla memoria libera del PC (misurata per pezzo); pallino blu dove c'è un ecosistema.",
+  "en": "Ecosystem limit worked out from the PC's free memory (measured per piece); a blue dot where an ecosystem is."
+ },
+ "1.38.3": {
+  "icon": "performance",
+  "it": "Nomi delle tessere che vanno a capo dopo _ e finiscono con «…»; vista più leggera con milioni di pezzi.",
+  "en": "Tile names that wrap after _ and end with «…»; lighter view with millions of pieces."
+ },
+ "1.38.2": {
+  "icon": "performance",
+  "it": "Ecosistemi messi in scena fino a 4 volte più in fretta (un milione di pezzi in circa 2 secondi).",
+  "en": "Ecosystems placed up to 4 times faster (a million pieces in about 2 seconds)."
+ },
+ "1.38.1": {
+  "icon": "scatter",
+  "it": "L'ecosistema segue il suo oggetto: è suo figlio, si sposta, ruota e si copia con lui.",
+  "en": "The ecosystem follows its object: it is its child, and moves, rotates and is copied with it."
+ },
+ "1.38.0": {
+  "icon": "scatter",
+  "it": "Ecosistemi: componi la vegetazione sul banco di prova, salvala con la miniatura e trascinala su qualunque superficie. Scatter nella barra in alto.",
+  "en": "Ecosystems: compose vegetation on the test plot, save it with a thumbnail and drag it onto any surface. Scatter in the top bar."
+ },
+ "1.37.6": {
+  "icon": "ambience",
+  "it": "Suolo rotondo (orizzonte uguale in ogni direzione); errori del cielo della vista scritti nel registro.",
+  "en": "Round ground (the same horizon in every direction); errors of the view's sky written in the log."
+ },
+ "1.37.5": {
+  "icon": "ui",
+  "it": "«La storia» larga quanto la libreria fin dall'avvio, con il logo prima del titolo.",
+  "en": "«The story» as wide as the library from the start, with the logo before the title."
+ },
+ "1.37.4": {
+  "icon": "ui",
+  "it": "«La storia»: testo senza nomi di altri programmi.",
+  "en": "«The story»: text without names of other programs."
+ },
+ "1.37.3": {
+  "icon": "ui",
+  "it": "«La storia» in un solo riquadro, più breve, con il titolo arancione.",
+  "en": "«The story» in one box, shorter, with an orange title."
+ },
+ "1.37.2": {
+  "icon": "library",
+  "it": "Nuovo menu «La storia»: perché esiste Simpler, con il link al sito. Si apre all'avvio.",
+  "en": "New «The story» menu: why Simpler exists, with the link to the site. It opens at start."
+ },
+ "1.37.1": {
+  "icon": "fix",
+  "it": "Rinomina che funziona, nomi senza .002, modelli delle distribuzioni eliminate tolti dal progetto; nuovi valori predefiniti della notte.",
+  "en": "Rename that works, names without .002, models of deleted distributions removed from the project; new night defaults."
+ },
+ "1.37.0": {
+  "icon": "ambience",
+  "it": "Notte: le stelle vere della NASA con la Via Lattea e la luna vera, con fase, dimensione, luminosità e alone.",
+  "en": "Night: NASA's real stars with the Milky Way and a real moon, with phase, size, brightness and halo."
+ },
+ "1.36.9": {
+  "icon": "material",
+  "it": "«Centra ogni pezzo»: la texture centrata su ogni parte staccata (i due fanali, le lenti). Decal: si cambia anche l'immagine, copia e incolla delle mappe.",
+  "en": "«Centre every piece»: the texture centred on every separate part (both lamps, the lenses). Decal: the picture can be changed too, copy and paste of maps."
+ },
+ "1.36.8": {
+  "icon": "scatter",
+  "it": "Scatter: niente più auto minuscole in tempo reale (modelli con scala propria, come gli FBX in pollici).",
+  "en": "Scatter: no more tiny cars in real time (models with a scale of their own, such as FBX in inches)."
+ },
+ "1.36.7": {
+  "icon": "ui",
+  "it": "Pannello della decal riordinato: un riquadro per canale in Avanzate, ognuno con la sua mappa e i suoi valori.",
+  "en": "Decal panel reorganised: one box per channel in Advanced, each with its map and its own values."
+ },
+ "1.36.6": {
+  "icon": "fix",
+  "it": "Triplanare in Mondo su oggetti ruotati: niente più texture strisciata nel path tracer, uguale al tempo reale.",
+  "en": "Triplanar in World on turned objects: no more smeared texture in the path tracer, the same as in real time."
+ },
+ "1.36.5": {
+  "icon": "material",
+  "it": "Le texture si centrano da sole sull'oggetto quando metti una mappa o un materiale della libreria, e restano centrate cambiando scala e rotazione.",
+  "en": "Textures centre themselves on the object when you put on a map or a library material, and stay centred when scale and rotation change."
+ },
+ "1.36.4": {
+  "icon": "material",
+  "it": "«Centra sull'oggetto»: la texture al centro dell'oggetto selezionato con un clic (UV, Triplanare, Piana, Cilindro, Sfera).",
+  "en": "«Centre on the object»: the texture on the middle of the selected object in one click (UV, Triplanar, Planar, Cylinder, Sphere)."
+ },
+ "1.36.3": {
+  "icon": "fix",
+  "it": "Decal copiate una accanto all'altra non escono più sbiadite nel path tracer: ogni decal è tagliata al suo riquadro.",
+  "en": "Decals copied side by side no longer come out faded in the path tracer: every decal is cut to its box."
+ },
+ "1.36.2": {
+  "icon": "scatter",
+  "it": "Una distribuzione spostata o ruotata (o una sua copia) resta dov'è con Aggiorna: linea e pennellate la seguono.",
+  "en": "A distribution moved or turned (or a copy of it) stays where it is with Update: line and strokes follow it."
+ },
+ "1.36.1": {
+  "icon": "navigation",
+  "it": "Cono di attesa a misura fissa; la vista si ruota col tasto sinistro anche con lo scatter attivo.",
+  "en": "Waiting cone of fixed size; the view turns with the left button with the scatter tool on too."
+ },
+ "1.36.0": {
+  "icon": "library",
+  "it": "Orientamento dei modelli della libreria: Raddrizza, Gira di 90°/180° o salva quello della scena; vale anche per gli scatter.",
+  "en": "Orientation of library models: Straighten, Turn by 90°/180° or save the scene's one; scatters follow."
+ },
+ "1.35.3": {
+  "icon": "light",
+  "it": "Le luci dentro i modelli della libreria si selezionano nella vista e illuminano in tempo reale.",
+  "en": "Lights inside library models can be selected in the view and light in real time."
+ },
+ "1.35.2": {
+  "icon": "material",
+  "it": "Mappe col nome giusto dopo aver inserito modelli (niente più texture sbagliate o 404); originali dei materiali salvati con i modelli.",
+  "en": "Maps with the right name after inserting models (no more wrong textures or 404); material originals saved with models."
+ },
+ "1.35.1": {
+  "icon": "material",
+  "it": "Tasto destro su una mappa: incolla un'immagine dagli appunti (ritagli dello schermo, immagini copiate).",
+  "en": "Right click on a map: paste an image from the clipboard (screen cut-outs, copied images)."
+ },
+ "1.35.0": {
+  "icon": "material",
+  "it": "Materiali: «Solo questo modello» di partenza, la copia va su tutto il modello; avviso quando cambiano altri modelli.",
+  "en": "Materials: «Only this model» by default, the copy goes on the whole model; a note when other models change."
+ },
+ "1.34.3": {
+  "icon": "fix",
+  "it": "Modelli della libreria non più bianchi in tempo reale dopo l'apertura; rotazione rispetto alla linea negli scatter.",
+  "en": "Library models no longer white in real time after opening; rotation from the line in scatters."
+ },
+ "1.34.2": {
+  "icon": "scatter",
+  "it": "Scatter eliminato: pannello e riga azzerati; clessidra anche quando lavora la vista; niente riquadro giallo sugli scatter.",
+  "en": "Deleted scatter: panel and line cleared; busy cursor when the view works; no yellow box on scatters."
+ },
+ "1.34.1": {
+  "icon": "performance",
+  "it": "Copie dello stesso modello: materiali e texture identici condivisi, un solo prototipo nella vista.",
+  "en": "Copies of the same model: identical materials and textures shared, one prototype in the view."
+ },
+ "1.34.0": {
+  "icon": "scatter",
+  "it": "Distanza casuale negli scatter a intervalli; luci al tramonto anche nelle copie distribuite.",
+  "en": "Random distance in spacing scatters; dusk lights in scattered copies too."
+ },
+ "1.33.4": {
+  "icon": "fix",
+  "it": "Gizmo «Base» giusto anche sui modelli di libreria selezionati prima di essere caricati.",
+  "en": "Right «Base» gizmo on library models selected before they were loaded."
+ },
+ "1.33.3": {
+  "icon": "ui",
+  "it": "Decimali e centesimi in tutti i campi numerici.",
+  "en": "Decimals and hundredths in every number field."
+ },
+ "1.33.2": {
+  "icon": "library",
+  "it": "Niente avviso «texture mancanti» per i segnaposto vuoti (Map #0); avviso in stile Simpler.",
+  "en": "No «missing textures» warning for empty placeholders (Map #0); warning in Simpler's style."
+ },
+ "1.33.1": {
+  "icon": "fix",
+  "it": "Le istanze non diventano più non cliccabili (e spente) dopo che la vista si rifà da capo.",
+  "en": "Instances no longer become unclickable (and unlit) after the view is prepared again."
+ },
+ "1.33.0": {
+  "icon": "material",
+  "it": "Decal con le mappe: normale (anche generata con DeepBump), rugosità, metallo, opacità ed emissione.",
+  "en": "Decals with maps: normal (also made with DeepBump), roughness, metal, opacity and emission."
+ },
+ "1.32.6": {
+  "icon": "fix",
+  "it": "Niente più sagome fantasma delle decal lontane dalla decal (es. sul pavimento).",
+  "en": "No more ghost outlines of decals far from them (e.g. on the floor)."
+ },
+ "1.32.5": {
+  "icon": "ui",
+  "it": "Pallino viola nell'albero sugli oggetti che contengono decal; la decal nuova si vede subito nell'albero.",
+  "en": "Violet dot in the tree on objects holding decals; a new decal shows at once in the tree."
+ },
+ "1.32.4": {
+  "icon": "material",
+  "it": "I materiali con spostamento UV dei progetti vecchi coincidono tra vista e path tracing all'apertura.",
+  "en": "Materials with a UV offset in older projects match between view and path tracing on opening."
+ },
+ "1.32.3": {
+  "icon": "fix",
+  "it": "Centro 3D, Base e Origine funzionano anche dopo aver spostato il pivot a mano; nuovo pulsante «Manuale».",
+  "en": "3D centre, Base and Origin work after moving the pivot by hand too; new «Manual» button."
+ },
+ "1.32.2": {
+  "icon": "fix",
+  "it": "La scelta Centro/Base/Origine (e altre impostazioni) non si perde più aprendo o salvando.",
+  "en": "The Centre/Base/Origin choice (and other settings) is no longer lost when opening or saving."
+ },
+ "1.32.1": {
+  "icon": "material",
+  "it": "Spostamento UV uguale in vista e render; cubo con l'immagine intera su ogni faccia.",
+  "en": "Same UV offset in view and render; cube with the whole picture on every face."
+ },
+ "1.32.0": {
+  "icon": "scene",
+  "it": "Pivot spostato a mano: il gizmo viola si mette dove vuoi e resta lì per quel modello.",
+  "en": "Pivot moved by hand: the violet gizmo goes where you want and stays there for that model."
+ },
+ "1.31.0": {
+  "icon": "library",
+  "it": "Selezione multipla dei modelli con Ctrl: taglia, copia, sposta, elimina insieme.",
+  "en": "Multiple selection of models with Ctrl: cut, copy, move, delete together."
+ },
+ "1.30.4": {
+  "icon": "ui",
+  "it": "Dimensioni del modello nelle Proprietà (m, cm, mm).",
+  "en": "Model size in Properties (m, cm, mm)."
+ },
+ "1.30.3": {
+  "icon": "material",
+  "it": "Spostamento, scala e stiramento delle texture con più decimali (0,125).",
+  "en": "Texture offset, scale and stretch with more decimals (0.125)."
+ },
+ "1.30.2": {
+  "icon": "fix",
+  "it": "L'emissione dei materiali importati funziona (filtro colore nero → bianco).",
+  "en": "Emission of imported materials works (black colour filter → white)."
+ },
+ "1.30.1": {
+  "icon": "fix",
+  "it": "«Appoggia» solleva anche i modelli affondati nel pavimento.",
+  "en": "«Drop» also lifts models sunk into the floor."
+ },
+ "1.30.0": {
+  "icon": "light",
+  "it": "Luci ed emissioni «Accesa» e «Dal tramonto all'alba»: si accendono da sole la sera.",
+  "en": "Lights and emissions «On» and «Dusk to dawn»: they switch on by themselves at evening."
+ },
+ "1.29.0": {
+  "icon": "ui",
+  "it": "«Licenze e crediti»: tutte le licenze, gli autori e i nomi usati da Simpler.",
+  "en": "«Licenses and credits»: every license, author and name Simpler uses."
+ },
+ "1.28.8": {
+  "icon": "fix",
+  "it": "Modelli della libreria non più bianchi nella vista dopo un cambio di materiale.",
+  "en": "Library models no longer turn white in the view after a material change."
+ },
+ "1.28.7": {
+  "icon": "fix",
+  "it": "Decal sulle parti dei modelli: non spariscono più (anche dopo salva e riapri).",
+  "en": "Decals on parts of models no longer disappear (after save and reopen too)."
+ },
+ "1.28.6": {
+  "icon": "material",
+  "it": "Le decal si vedono su tutti i pezzi che toccano, anche di altri modelli.",
+  "en": "Decals show on every piece they reach, of other models too."
+ },
+ "1.28.5": {
+  "icon": "ui",
+  "it": "Apri e salva ripartono dall'ultima cartella usata per quel tipo di file.",
+  "en": "Open and save start from the last folder used for that kind of file."
+ },
+ "1.28.4": {
+  "icon": "fix",
+  "it": "Conversione dei materiali delle scansioni (unlit) con la texture; annulla torna all'originale nella vista.",
+  "en": "Scanned (unlit) materials converted with their texture; undo restores the original in the view."
+ },
+ "1.28.3": {
+  "icon": "ui",
+  "it": "Tasto per espandere o comprimere tutto l'albero.",
+  "en": "Button to unfold or fold the whole tree."
+ },
+ "1.28.2": {
+  "icon": "material",
+  "it": "«Sostituisci nella selezione»: cambia un materiale solo nel modello scelto.",
+  "en": "«Replace in selection»: changes a material only in the chosen model."
+ },
+ "1.28.1": {
+  "icon": "fix",
+  "it": "Conversione dei materiali importati senza perdere le texture; annulla aggiorna la vista.",
+  "en": "Imported materials converted without losing textures; undo updates the view."
+ },
+ "1.28.0": {
+  "icon": "scene",
+  "it": "Parti dei modelli selezionabili (contorno azzurro): spostale e cambiane il materiale.",
+  "en": "Parts of models selectable (light blue outline): move them and change their material."
+ },
+ "1.27.2": {
+  "icon": "library",
+  "it": "Peso dei modelli sulla miniatura, sempre leggibile.",
+  "en": "Model size on the thumbnail, always readable."
+ },
+ "1.27.1": {
+  "icon": "library",
+  "it": "Menu della libreria per tipo: Modelli 3D, Materiali, Decal (Poly Haven/ambientCG e Personalizzati).",
+  "en": "Library menus by kind: 3D models, Materials, Decals (Poly Haven/ambientCG and Custom)."
+ },
+ "1.27.0": {
+  "icon": "fix",
+  "it": "Vetro senza zone nere; render finale intero nella finestra; peso dei modelli leggibile.",
+  "en": "Glass without black patches; whole final render in its window; readable model sizes."
+ },
+ "1.26.0": {
+  "icon": "material",
+  "it": "Menu Decal con le 127 decal di ambientCG; peso dei modelli in libreria.",
+  "en": "Decals menu with the 127 ambientCG decals; model sizes in the library."
+ },
+ "1.25.2": {
+  "icon": "material",
+  "it": "Decal copiate visibili e indipendenti, anche dentro i modelli copiati.",
+  "en": "Copied decals visible and independent, inside copied models too."
+ },
+ "1.25.1": {
+  "icon": "material",
+  "it": "Decal: gizmo centrato e trascinamento sulle superfici, anche da un pezzo all'altro.",
+  "en": "Decals: centred gizmo and dragging over surfaces, from one piece to another."
+ },
+ "1.25.0": {
+  "icon": "material",
+  "it": "Decal: le tue immagini PNG proiettate sui modelli, con il loro pannello.",
+  "en": "Decals: your PNG images projected onto models, with their own panel."
+ },
+ "1.24.1": {
+  "icon": "render",
+  "it": "Path tracing: niente più blocchi a un passaggio finché non si cambia finestra.",
+  "en": "Path tracing: no more stalls at a pass until switching window."
+ },
+ "1.24.0": {
+  "icon": "ui",
+  "it": "Con Importa, Correggi materiali o Statistiche aperte il resto di Simpler è fermo, con un messaggio.",
+  "en": "With Import, Fix materials or Statistics open, the rest of Simpler is on hold, with a message."
+ },
+ "1.23.4": {
+  "icon": "ui",
+  "it": "«Importa/Correggi ▾» e «Apri ▾» con nome sempre visibile.",
+  "en": "\"Import/Fix ▾\" and \"Open ▾\" with the name always visible."
+ },
+ "1.23.3": {
+  "icon": "ui",
+  "it": "Importa e Apri: triangolino del menu più pulito.",
+  "en": "Import and Open: cleaner menu triangle."
+ },
+ "1.23.2": {
+  "icon": "material",
+  "it": "Correggi materiali: pulsanti fissi in fondo, il resto scorre.",
+  "en": "Fix materials: buttons pinned at the bottom, the rest scrolls."
+ },
+ "1.23.1": {
+  "icon": "ui",
+  "it": "Bacchetta magica delle mappe più leggera.",
+  "en": "Lighter magic wand on maps."
+ },
+ "1.23.0": {
+  "icon": "material",
+  "it": "Rugosità generata dalla texture, anche con i bordi consumati.",
+  "en": "Roughness generated from the texture, with worn edges too."
+ },
+ "1.22.2": {
+  "icon": "material",
+  "it": "Mappe: pulsante «Genera» a bacchetta magica.",
+  "en": "Maps: magic-wand \"Generate\" button."
+ },
+ "1.22.1": {
+  "icon": "material",
+  "it": "Correggi materiali: «Applica» sempre visibile anche con molte modifiche.",
+  "en": "Fix materials: \"Apply\" always visible even with many changes."
+ },
+ "1.22.0": {
+  "icon": "material",
+  "it": "«Genera» nelle mappe: normale, altezza e risoluzione doppia con DeepBump.",
+  "en": "\"Generate\" on maps: normal, height and double resolution with DeepBump."
+ },
+ "1.21.0": {
+  "icon": "material",
+  "it": "Copia e incolla delle mappe dei materiali con il tasto destro.",
+  "en": "Copy and paste of material maps with the right click."
+ },
+ "1.20.1": {
+  "icon": "ui",
+  "it": "Avviso se apri, crei o chiudi mentre l'AI sta elaborando.",
+  "en": "Warning when opening, creating or closing while the AI is processing."
+ },
+ "1.20.0": {
+  "icon": "ui",
+  "it": "Elaborazioni AI nel progetto: scheda in libreria, confronto prima/dopo, salvate con il progetto.",
+  "en": "AI outputs in the project: library tab, before/after comparison, saved with the project."
+ },
+ "1.19.2": {
+  "icon": "ui",
+  "it": "Pannello AI: funzioni in elenco con anteprima, nome e descrizione.",
+  "en": "AI panel: functions in a list with preview, name and description."
+ },
+ "1.19.1": {
+  "icon": "ui",
+  "it": "Pannello AI: tasti della chiave della stessa altezza.",
+  "en": "AI panel: key buttons of the same height."
+ },
+ "1.19.0": {
+  "icon": "ui",
+  "it": "Pannello AI: fotorealismo, persone, arredo, stagioni, inquadrature e sostituzioni con OpenAI, risultato con confronto prima/dopo.",
+  "en": "AI panel: photorealism, people, furnishing, seasons, shots and replacements with OpenAI, result with before/after comparison."
+ },
+ "1.18.2": {
+  "icon": "ambience",
+  "it": "Colori da una foto: niente più strati al 90%, cieli con squarci e forme.",
+  "en": "Colours from a photo: no more stratus at 90%, skies with gaps and shapes."
+ },
+ "1.18.1": {
+  "icon": "ui",
+  "it": "Pulsante AI con l'icona classica delle stelline.",
+  "en": "AI button with the classic sparkles icon."
+ },
+ "1.18.0": {
+  "icon": "ui",
+  "it": "Pulsante «AI»: la tua chiave OpenAI salvata cifrata e verificata, per le prossime funzioni di intelligenza artificiale.",
+  "en": "\"AI\" button: your OpenAI key saved encrypted and tested, for the coming artificial intelligence features."
+ },
+ "1.17.12": {
+  "icon": "ambience",
+  "it": "Secondo strato di nuvole (interruttore, con avviso sul tempo); preset Nuvoloso a grandi masse con squarci invece di una coltre uniforme.",
+  "en": "Second cloud layer (a switch, with a time warning); Overcast presets as big masses with gaps instead of a uniform sheet."
+ },
+ "1.17.11": {
+  "icon": "ambience",
+  "it": "Colori da una foto: nuovi preset Alba e Nuvoloso, 4 foto ciascuno.",
+  "en": "Colours from a photo: new Sunrise and Overcast presets, 4 photos each."
+ },
+ "1.17.10": {
+  "icon": "ui",
+  "it": "Pulsante «Materiali» solo con l'icona, come gli altri pannelli.",
+  "en": "\"Materials\" button with the icon only, like the other panels."
+ },
+ "1.17.9": {
+  "icon": "material",
+  "it": "Pulsante «Materiali» nella barra in alto: il materiale dell'oggetto selezionato, o il bianco standard senza selezione.",
+  "en": "\"Materials\" button in the top bar: the material of the selected object, or the white Standard with nothing selected."
+ },
+ "1.17.8": {
+  "icon": "ui",
+  "it": "Avanzamento della tabella dei colori del cielo nella barra in basso; riprende da sola se interrotta.",
+  "en": "Sky colour table progress in the bottom bar; it resumes by itself if stopped."
+ },
+ "1.17.7": {
+  "icon": "ambience",
+  "it": "Colori del cielo da una foto (Cielo › Avanzate) con preset Tramonto; ogni scena parte con i pannelli in ordine.",
+  "en": "Sky colours from a photo (Sky › Advanced) with Sunset presets; every scene starts with tidy panels."
+ },
+ "1.17.6": {
+  "icon": "ambience",
+  "it": "Colori del cielo da una foto: tabella dei colori e primi preset Tramonto (la funzione arriva nella prossima versione).",
+  "en": "Sky colours from a photo: colour table and first Sunset presets (the feature comes in the next version)."
+ },
+ "1.17.5": {
+  "icon": "performance",
+  "it": "Niente più puntini chiari sui rametti davanti alle nuvole; render finale 15% più veloce a parità di immagine.",
+  "en": "No more bright dots on twigs in front of clouds; final render 15% faster with the same picture."
+ },
+ "1.17.4": {
+  "icon": "fix",
+  "it": "Nuova scena e apertura: i pannelli aperti mostrano subito i valori giusti.",
+  "en": "New scene and open: open panels show the right values at once."
+ },
+ "1.17.3": {
+  "icon": "performance",
+  "it": "Misura del render finale, secondo giro: passi nelle nuvole e minimo di campioni.",
+  "en": "Final render measurement, second round: steps in the clouds and minimum samples."
+ },
+ "1.17.2": {
+  "icon": "fix",
+  "it": "Reti di sicurezza: niente chiusura o comandi a metà di render finale, salvataggio, apertura e importazione.",
+  "en": "Safety nets: no closing or commands in the middle of a final render, save, opening or import."
+ },
+ "1.17.1": {
+  "icon": "render",
+  "it": "Render finale: dimensione «Prova 960×540» e misura di dove va il tempo.",
+  "en": "Final render: \"Test 960×540\" size and measurement of where the time goes."
+ },
+ "1.17.0": {
+  "icon": "ui",
+  "it": "Riquadri arancio «Avanzate»: in vista solo i comandi principali; gli ambienti rispettano le tue impostazioni avanzate. Niente più bordi chiari sugli alberi davanti alle nuvole.",
+  "en": "Orange \"Advanced\" boxes: only the main controls in sight; ambiences respect your advanced settings. No more bright rims on trees in front of clouds."
+ },
+ "1.16.1": {
+  "icon": "ambience",
+  "it": "Cirri, nuvole fino all'orizzonte, ambienti Alba e Crepuscolo, altocumuli a pecorelle.",
+  "en": "Cirrus, clouds down to the horizon, Sunrise and Twilight ambiences, mackerel-sky altocumulus."
+ },
+ "1.16.0": {
+  "icon": "ambience",
+  "it": "Tramonti: sole arancio e rosso all'orizzonte, alone attorno al sole, nuvole accese da sotto; resa colore Vivida.",
+  "en": "Sunsets: orange and red sun at the horizon, glow around the sun, clouds lit from below; Vivid colour rendering."
+ },
+ "1.15.3": {
+  "icon": "light",
+  "it": "Luce di riempimento: luce vera e morbida dalla camera, intensità in percentuale uguale in ogni scena.",
+  "en": "Fill light: real soft light from the camera, strength as a percentage that means the same in every scene."
+ },
+ "1.15.2": {
+  "icon": "render",
+  "it": "Ombre e Luci rifatte: conservano i colori (il tramonto resta caldo) e le ombre si schiariscono di più nei quasi neri.",
+  "en": "Shadows and Highlights redone: they keep the colours (the sunset stays warm) and shadows lift more in the near blacks."
+ },
+ "1.15.1": {
+  "icon": "ui",
+  "it": "Progetti recenti: gli ultimi 5 in fondo al menu Apri, un clic e si aprono.",
+  "en": "Recent projects: the last 5 at the bottom of the Open menu, one click opens them."
+ },
+ "1.15.0": {
+  "icon": "render",
+  "it": "Schiarisci ombre e Recupera luci: come in un programma di fotoritocco, immediati, anche nel render finale.",
+  "en": "Lift shadows and Recover highlights: as in a photo editor, immediate, in the final render too."
+ },
+ "1.14.8": {
+  "icon": "ambience",
+  "it": "Niente più puntini bianchi sui materiali con opacità (paralumi, saliera, forno): la foschia usava distanze sbagliate attraverso le parti trasparenti.",
+  "en": "No more white dots on materials with opacity (lamp shades, salt shaker, oven): the haze used wrong distances through see-through parts."
+ },
+ "1.14.7": {
+  "icon": "fix",
+  "it": "Vista ray-traced di nuovo funzionante dopo una diagnostica non riuscita («enum JPEG not found»).",
+  "en": "Ray-traced view working again after a failed diagnostics save (\"enum JPEG not found\")."
+ },
+ "1.14.6": {
+  "icon": "fix",
+  "it": "Diagnostica dell'opacità: si possono indicare i pezzi da salvare.",
+  "en": "Opacity diagnostics: the pieces to save can be named."
+ },
+ "1.14.5": {
+  "icon": "fix",
+  "it": "Diagnostica dell'opacità: i pezzi con mappa di opacità salvati a parte per riprodurre i puntini.",
+  "en": "Opacity diagnostics: pieces with an opacity map saved separately to reproduce the dots."
+ },
+ "1.14.4": {
+  "icon": "material",
+  "it": "Niente più puntini su paralumi, saliere e vetri smerigliati: le mappe di opacità a sfumature restano graduali invece di essere tagliate al 50%.",
+  "en": "No more dots on lamp shades, salt shakers and frosted glass: opacity maps made of shades stay graded instead of being cut at 50%."
+ },
+ "1.14.3": {
+  "icon": "render",
+  "it": "Vista ray-traced senza macchie agli ultimi passaggi: nessun pixel si ferma prima di metà dei campioni (un quarto nel finale).",
+  "en": "Ray-traced view without blotches in the last passes: no pixel stops before half of the samples (a quarter in the final render)."
+ },
+ "1.14.2": {
+  "icon": "fix",
+  "it": "Diagnostica del rumore su richiesta: l'immagine prima del denoiser e i campioni per pixel, per capire le macchie su scene specifiche.",
+  "en": "Noise diagnostics on request: the image before the denoiser and the samples per pixel, to understand blotches on specific scenes."
+ },
+ "1.14.1": {
+  "icon": "render",
+  "it": "Niente più macchie nere con tanti campioni (campionamento adattivo che segue l'esposizione), paralumi senza grana, nuvole con cupole e sbuffi, tramonti colorati, niente bordi scuri contro il cielo.",
+  "en": "No more black blotches with many samples (adaptive sampling that follows the exposure), lamp shades without grain, clouds with domes and puffs, colourful sunsets, no dark rims against the sky."
+ },
+ "1.14.0": {
+  "icon": "ambience",
+  "it": "Nuvole volumetriche vere nel path tracing: sei tipi, altezza, spessore, forma, ombre sul suolo e colori di alba e tramonto alla loro quota.",
+  "en": "Real volumetric clouds in the path tracing: six types, height, thickness, shape, shadows on the ground and sunrise and sunset colours at their height."
+ },
+ "1.13.59": {
+  "icon": "water",
+  "it": "Luce dall'acqua non più bruciata: le sue immagini passavano per una trasformazione di colore (luce debole fino a 10 volte più forte). Verificata con Fresnel entro il 4%.",
+  "en": "Light from water no longer burnt: its images went through a colour transform (faint light up to 10 times stronger). Checked against Fresnel within 4%."
+ },
+ "1.13.58": {
+  "icon": "water",
+  "it": "Via le ombre nere irreali della luce dall'acqua (immagini per strati di profondità), onde vere anche nella vista; clessidra anche durante l'aggiornamento della vista.",
+  "en": "No more unreal black shadows in the light from water (images per depth layer), real waves in the view too; hourglass also while the view updates."
+ },
+ "1.13.57": {
+  "icon": "ui",
+  "it": "Clessidra sul mouse ed etichetta nella vista quando Simpler lavora per più di mezzo secondo.",
+  "en": "Hourglass pointer and a label in the view when Simpler works for more than half a second."
+ },
+ "1.13.56": {
+  "icon": "water",
+  "it": "Frecce sui pulsanti con menu, Importa come menu, impostazioni nella barra di destra; luci sott'acqua non più contate due volte.",
+  "en": "Arrows on menu buttons, Import as a menu, settings in the right sidebar; lights under water no longer counted twice."
+ },
+ "1.13.55": {
+  "icon": "scene",
+  "it": "Menu Apri (nuova, apri, salva, info, chiudi), impostazioni nel pannello a sinistra con backup e salvataggio automatico, scatti di rotazione di 5°.",
+  "en": "Open menu (new, open, save, about, close), settings in the left panel with backup and automatic save, 5° rotation snapping."
+ },
+ "1.13.54": {
+  "icon": "water",
+  "it": "Luce riflessa dall'acqua senza «fotoni giganti» e senza copie su altre pareti; scene enormi non si bloccano più; acqua su bicchieri e vasi aperti non rende più tutto nero.",
+  "en": "Light reflected by water without \"giant photons\" or copies on other walls; huge scenes no longer hang; water on open glasses and vases no longer turns everything black."
+ },
+ "1.13.53": {
+  "icon": "fix",
+  "it": "Ctrl+Z annulla anche i valori scritti nelle caselle; dopo Annulla l'editor del materiale e l'Ambiente mostrano i valori giusti.",
+  "en": "Ctrl+Z also undoes values typed in the boxes; after Undo the material editor and the Environment show the right values."
+ },
+ "1.13.52": {
+  "icon": "light",
+  "it": "Luci sott'acqua: con le caustiche Nitide la loro luce esce dall'acqua e disegna il reticolo su pareti, colonne e soffitto.",
+  "en": "Lights under water: with Sharp caustics their light leaves the water and draws the net on walls, columns and ceiling."
+ },
+ "1.13.51": {
+  "icon": "light",
+  "it": "Luce riflessa dall'acqua più pulita (niente puntini) e anche dalle luci vicine o sott'acqua, con riflessione totale.",
+  "en": "Light reflected by water is cleaner (no speckles) and comes from nearby or underwater lamps too, with total internal reflection."
+ },
+ "1.13.50": {
+  "icon": "light",
+  "it": "Prototipo «Luce riflessa dall'acqua»: il riflesso del sole sulle onde sui muri e sotto i ponti. Acqua limpida sott'acqua, notti buie, pan con la rotellina alla giusta velocità, gizmo rivolto alla camera, luci dove clicchi, ora HH:mm.",
+  "en": "Prototype \"Light reflected by water\": the sun reflected by the waves on walls and under bridges. Clear water under the surface, dark nights, wheel pan at the right speed, gizmo facing the camera, lights where you click, time as HH:mm."
+ },
+ "1.13.49": {
+  "icon": "light",
+  "it": "Ambiente: luce e ombre del sole seguono in tempo reale gli slider di ora, giorno, latitudine, nord e intensità.",
+  "en": "Environment: the sun's light and shadows follow the time, day, latitude, north and intensity sliders in real time."
+ },
+ "1.13.48": {
+  "icon": "view",
+  "it": "«Rompi la ripetizione» anche nella vista in tempo reale (UV e Triplanare); versione in alto a destra nello splash.",
+  "en": "«Break the repetition» in the real-time view too (UV and Triplanar); version at the top right of the splash."
+ },
+ "1.13.47": {
+  "icon": "ui",
+  "it": "Menu Importa: una linea separa l'importazione dalla cura della libreria.",
+  "en": "Import menu: a line separates importing from looking after the library."
+ },
+ "1.13.46": {
+  "icon": "material",
+  "it": "«Rompi la ripetizione» ora rimescola tutta la superficie (due livelli di zone): la texture originale ripetuta non compare più.",
+  "en": "«Break the repetition» now reshuffles the whole surface (two layers of zones): the original repeating texture no longer shows."
+ },
+ "1.13.45": {
+  "icon": "fix",
+  "it": "Il suolo dell'Ambiente è un materiale Simpler: l'editor ne vede la texture e modificarlo (anche con Randomize UV) non lo fa più diventare bianco.",
+  "en": "The Environment ground is a Simpler material: the editor sees its texture and changing it (also with Randomize UV) no longer turns it white."
+ },
+ "1.13.44": {
+  "icon": "material",
+  "it": "Scena nuova con camera più alta e pavimento a piastrelle; nei materiali «Triplanare» e il nuovo «Rompi la ripetizione (Randomize UV)».",
+  "en": "New scene with a higher camera and a tiled floor; in materials «Triplanar» and the new «Break the repetition (Randomize UV)»."
+ },
+ "1.13.43": {
+  "icon": "ui",
+  "it": "«Correggi materiali» più piccola e centrata; tutte le finestre restano dentro lo schermo.",
+  "en": "«Fix model materials» smaller and centred; every window stays inside the screen."
+ },
+ "1.13.42": {
+  "icon": "material",
+  "it": "Un materiale trascinato su un modello della libreria va solo alle parti con il materiale sotto il mouse (Shift: tutto il modello).",
+  "en": "A material dropped on a library model goes only to the parts with the material under the mouse (Shift: the whole model)."
+ },
+ "1.13.41": {
+  "icon": "ui",
+  "it": "Statistiche della libreria: finestra al centro con scorrimento, e una riga che spiega spazio di Simpler, file originali e totale su disco.",
+  "en": "Library statistics: centred window with scrolling, and a line explaining Simpler's space, original files and the disk total."
+ },
+ "1.13.40": {
+  "icon": "library",
+  "it": "Nuove statistiche e pulizia della libreria (spazio, duplicati, copie di sicurezza, cache); «Applica all'oggetto» e il contagocce in alto.",
+  "en": "New library statistics and cleanup (space, duplicates, backups, caches); «Apply to object» and the eyedropper at the top."
+ },
+ "1.13.39": {
+  "icon": "view",
+  "it": "Selezionando una parte di un modello della libreria, la vista evidenzia solo quella parte (non più il modello intero).",
+  "en": "Selecting a part of a library model, the view highlights only that part (no longer the whole model)."
+ },
+ "1.13.38": {
+  "icon": "fix",
+  "it": "Modificare il materiale di un modello scelto dall'albero (gruppo) ora cambia davvero i suoi pezzi, invece di una copia su nessun oggetto.",
+  "en": "Editing the material of a model chosen in the tree (a group) now really changes its pieces, instead of a copy on no object."
+ },
+ "1.13.37": {
+  "icon": "material",
+  "it": "Correggi materiali: i valori si scrivono in percentuale come nell'editor (Imposta 100 = 100%), con l'unità accanto.",
+  "en": "Fix materials: values are typed in percent as in the editor (Set 100 = 100%), with the unit next to them."
+ },
+ "1.13.36": {
+  "icon": "material",
+  "it": "Nuovo «Correggi materiali dei modelli»: i materiali di tanti modelli della libreria corretti insieme, con preset (Meno plastica, Vetri veri), backup e ripristino.",
+  "en": "New «Fix model materials»: the materials of many library models fixed together, with presets (Less plastic, Real glass), backup and restore."
+ },
+ "1.13.35": {
+  "icon": "library",
+  "it": "Eliminare un modello dalla libreria non cancella più le sue texture (le copie nella scena restano a posto); avviso per le texture mancanti al salvataggio.",
+  "en": "Deleting a library model no longer deletes its textures (copies in the scene stay fine); a warning for missing textures when saving."
+ },
+ "1.13.34": {
+  "icon": "import",
+  "it": "Import nella libreria: ogni modello viene misurato appena aggiunto, con la sua scala × per riga; avviso per le misure strane prima di importare.",
+  "en": "Library import: every model is measured as soon as it is added, with its own × scale per row; a warning for odd sizes before importing."
+ },
+ "1.13.33": {
+  "icon": "import",
+  "it": "Import nella libreria: scala per tutti (×1 di default, fattori veloci) o controllo della scala dopo ogni modello, con dimensioni e Prosegui.",
+  "en": "Library import: scale for all (×1 by default, quick factors) or a scale check after each model, with size and Continue."
+ },
+ "1.13.32": {
+  "icon": "library",
+  "it": "Sovrascrivere un modello non perde più le texture; miniature senza le luci V-Ray vuote; eliminare un modello della libreria è immediato.",
+  "en": "Overwriting a model no longer loses its textures; thumbnails without empty V-Ray lights; deleting a library model is immediate."
+ },
+ "1.13.31": {
+  "icon": "material",
+  "it": "I vetri con una texture colorata proiettano i loro colori (vetrate); avviso «Parete sottile» per il vetro su un piano; pulsante «?» per le novità.",
+  "en": "Glass with a coloured texture casts its colours (stained glass); «Thin wall» hint for glass on a plane; «?» button for the news."
+ },
+ "1.13.30": {
+  "icon": "performance",
+  "it": "Una primitiva o un oggetto nuovo in una scena grande appare in un attimo: si prepara solo lui, non tutta la vista 3D (prima 20 s).",
+  "en": "A primitive or a new object in a big scene appears in a blink: only it is prepared, not the whole 3D view (20 s before)."
+ },
+ "1.13.29": {
+  "icon": "ambience",
+  "it": "Pannello Ambiente più bello: preset a riquadri con un piccolo cielo, icone per sezioni e parametri, cursori dell'ora e del giorno colorati.",
+  "en": "Nicer Environment panel: preset tiles with a small sky, icons for sections and parameters, coloured time and day sliders."
+ },
+ "1.13.28": {
+  "icon": "library",
+  "it": "Le primitive hanno la loro miniatura renderizzata; tolto «Gruppo vuoto»; basi piatte per cilindro e cono.",
+  "en": "Primitives have their own rendered thumbnail; «Empty group» removed; flat caps for cylinder and cone."
+ },
+ "1.13.27": {
+  "icon": "fix",
+  "it": "I progetti si aprono di nuovo per intero, con la camera salvata: l'errore «matedit» della 1.13.22 interrompeva l'apertura a metà.",
+  "en": "Projects open fully again, with the saved camera: the «matedit» error of 1.13.22 stopped the opening halfway."
+ },
+ "1.13.26": {
+  "icon": "material",
+  "it": "Un materiale condiviso aperto da un oggetto si modifica solo su quell'oggetto: alla prima modifica riceve una copia sua, da trascinare poi dove vuoi. «Tutti» per cambiarlo ovunque.",
+  "en": "A shared material opened from an object changes only on that object: at the first change it gets its own copy, which you can then drag anywhere. «All» to change it everywhere."
+ },
+ "1.13.25": {
+  "icon": "ui",
+  "it": "Nell'editor dei materiali «Su N oggetti ▾» apre l'elenco degli oggetti che usano il materiale; un clic ne seleziona uno.",
+  "en": "In the material editor «On N objects ▾» opens the list of objects using the material; a click selects one."
+ },
+ "1.13.24": {
+  "icon": "ui",
+  "it": "L'editor dei materiali dice subito su quali oggetti è il materiale, e avvisa in arancio se non è su nessuno. La scala della mappatura si chiama Scala in tutti i modi (ripetizioni o cm).",
+  "en": "The material editor says at once which objects the material is on, and warns in orange if on none. The mapping scale is called Scale in every mode (repeats or cm)."
+ },
+ "1.13.23": {
+  "icon": "material",
+  "it": "Un menu decide come si applica un materiale trascinato: all'oggetto, al posto di quello sotto il mouse ovunque, o alla selezione. Dalla libreria arriva sempre com'è nella libreria.",
+  "en": "A menu decides how a dragged material is applied: to the object, in place of the one under the mouse everywhere, or to the selection. From the library it always comes as in the library."
+ },
+ "1.13.22": {
+  "icon": "fix",
+  "it": "Simpler non può più bloccare il computer: stima e avviso prima di remesh e suddivisioni troppo pesanti, limite di memoria per Blender, Esc per fermare il motore bloccato e ripartire.",
+  "en": "Simpler can no longer freeze the computer: estimate and warning before too heavy remesh and subdivision, a memory limit for Blender, Esc to stop a stuck engine and start again."
+ },
+ "1.13.21": {
+  "icon": "material",
+  "it": "Nuovo tipo di materiale Displacement: rilievo vero con suddivisione adattiva di Blender 5, mappa vettoriale, chiudi fessure, remesh, solo nel render finale. Le primitive hanno di nuovo le UV.",
+  "en": "New Displacement material type: true relief with Blender 5 adaptive subdivision, vector map, close cracks, remesh, final-render-only. Primitives have real UVs again."
+ },
+ "1.13.20": {
+  "icon": "fix",
+  "it": "Il tasto destro nella libreria funziona di nuovo (con Taglia). Con Nuovo e Apri la vista 3D libera la memoria del progetto precedente: niente più GB occupati con una scena vuota.",
+  "en": "Right click in the library works again (with Cut). New and Open make the 3D view release the memory of the previous project: no more GB in use with an empty scene."
+ },
+ "1.13.19": {
+  "icon": "library",
+  "it": "Le cartelle di Simpler (materiali Simpler e Primitive) sono rosse: si vede subito che non si spostano e non ricevono incolla.",
+  "en": "Simpler's folders (Simpler materials and Primitives) are red: you see at once that they cannot be moved or take a paste."
+ },
+ "1.13.18": {
+  "icon": "library",
+  "it": "Libreria: taglia e incolla di materiali, modelli e cartelle intere (con tutto il contenuto), solo tra cartelle dello stesso tipo. L'elemento tagliato resta in trasparenza finché lo incolli.",
+  "en": "Library: cut and paste materials, models and whole folders (with everything inside), only between folders of the same kind. The cut item stays faded until you paste it."
+ },
+ "1.13.17": {
+  "icon": "ui",
+  "it": "Schermata di avvio: la valutazione della scheda video diventa una piccola riga sopra il logo, con la percentuale colorata e il giudizio, lontana dagli anelli.",
+  "en": "Start screen: the video card rating becomes a small line above the logo, with the coloured percentage and the verdict, away from the rings."
+ },
+ "1.13.16": {
+  "icon": "fix",
+  "it": "Un materiale rinominato nell'editor e salvato prende il nuovo nome anche nella libreria, nella stessa cartella.",
+  "en": "A material renamed in the editor and saved now takes the new name in the library too, in the same folder."
+ },
+ "1.13.15": {
+  "icon": "ui",
+  "it": "Novità più chiare: un elenco a discesa con tutte le versioni, ognuna con icona e riassunto; sotto le prime righe del dettaglio e «Mostra tutto». Si chiudono da sole appena fai altro.",
+  "en": "Clearer what's new: a drop-down list of every version, each with an icon and summary; below, the first lines of the details and \"Show all\". It closes by itself as soon as you do something else."
+ },
+ "1.13.14": {
+  "icon": "library",
+  "it": "Il menu Simpler sparisce dalla libreria: i materiali di Simpler e le primitive diventano cartelle fisse dentro Personali, e la ricerca trova sia i tuoi materiali sia quelli inclusi.",
+  "en": "The Simpler menu is gone from the library: built-in materials and primitives are now fixed folders inside Personal, and search finds both your materials and the built-in ones."
+ },
+ "1.13.13": {
+  "icon": "material",
+  "it": "Il vetro dei modelli importati diventa trasparente: accendendo la trasparenza il metallo viene tolto, e \"Rendi vetro pulito\" elimina le mappe che lo sporcano. Vista più fluida e nuova barra di scala.",
+  "en": "Glass in imported models now turns properly transparent: enabling transparency drops metalness, and \"Make it clear glass\" strips maps that dirty it. Smoother view and a new scale bar."
+ },
+ "1.13.12": {
+  "icon": "scatter",
+  "it": "Le nuove distribuzioni prendono il nome dal metodo usato (Pennello, Area, Spaziatura) con un numero per tipo. Quelle esistenti mantengono il loro nome.",
+  "en": "New scatters are named after the method used (Brush, Area, Spacing), numbered per type. Existing ones keep their names."
+ },
+ "1.13.11": {
+  "icon": "scatter",
+  "it": "Mentre si crea o aggiorna una distribuzione, una barra mostra il modello in caricamento e quanti ne mancano, e nell'albero della scena compare subito la riga in preparazione.",
+  "en": "While a scatter is created or updated, a bar shows the model being loaded and how many remain, and a placeholder row appears right away in the scene tree."
+ },
+ "1.13.10": {
+  "icon": "scatter",
+  "it": "Una nuova distribuzione con modelli già usati nasce subito: condivide geometria, materiali e texture invece di ricaricarli dalla libreria, senza occupare memoria in più.",
+  "en": "A new scatter reusing models already in the scene is created instantly: it shares geometry, materials and textures instead of reloading them, using no extra memory."
+ },
+ "1.13.9": {
+  "icon": "performance",
+  "it": "Le distribuzioni di modelli grandi sono più fluide nella vista: i pezzi con lo stesso materiale vengono uniti. Gli edifici lontani non spariscono più, al massimo usano la versione leggera.",
+  "en": "Scatters of large models run smoother in the view, as parts sharing a material are merged. Distant buildings no longer vanish; at most they switch to a lighter version."
+ },
+ "1.13.8": {
+  "icon": "navigation",
+  "it": "Lo spostamento con due dita sul touchpad funziona subito dopo aver aperto una scena: la vista segue le dita alla distanza di ciò che è sotto il cursore.",
+  "en": "Two-finger touchpad panning now works right after opening a scene: the view follows your fingers at the distance of whatever is under the cursor."
+ },
+ "1.13.7": {
+  "icon": "navigation",
+  "it": "Nessun cambiamento visibile: Simpler registra nel log i primi movimenti di rotellina e touchpad per capire perché le due dita non spostano la vista su alcuni PC.",
+  "en": "No visible changes: Simpler logs the first wheel and touchpad movements to find out why two-finger panning does not work on some PCs."
+ },
+ "1.13.6": {
+  "icon": "navigation",
+  "it": "Con due dita sul touchpad la vista si sposta senza ruotare e il pizzico avvicina o allontana. La rotellina del mouse resta com'era; l'opzione si spegne nelle Impostazioni.",
+  "en": "Two-finger touchpad swipes now pan the view without rotating it, and pinching moves closer or farther. The mouse wheel works as before; the option can be turned off in Settings."
+ },
+ "1.13.5": {
+  "icon": "scatter",
+  "it": "Mentre la vista prepara i modelli di una distribuzione compare una barra di avanzamento. I punti della linea usano sempre la posizione aggiornata degli oggetti, anche dopo il path tracing.",
+  "en": "A progress bar now shows while the view prepares a scatter's models. Line points always use up-to-date object positions, even right after path tracing."
+ },
+ "1.13.4": {
+  "icon": "material",
+  "it": "Il Tipo di materiale è un elenco a discesa e tornando a Standard il materiale riprende i valori di prima. Le onde troppo alte non rendono più l'acqua bianca o grigia.",
+  "en": "Material Type is now a dropdown, and switching back to Standard restores the previous values. Overly tall waves no longer turn water white or grey."
+ },
+ "1.13.3": {
+  "icon": "material",
+  "it": "I materiali hanno un Tipo, Standard o Acqua, che mostra solo i parametri utili. L'acqua funziona anche in oggetti chiusi come vasche e bicchieri; le scene nuove partono con suolo e primitive bianchi.",
+  "en": "Materials now have a Type, Standard or Water, showing only the relevant settings. Water also works in closed objects like tubs and glasses; new scenes start with a white ground and white primitives."
+ },
+ "1.13.2": {
+  "icon": "water",
+  "it": "L'acqua si regola nell'editor del materiale con \"È acqua\", onde e colore. Il path tracing arriva a tutti i campioni e usa OpenImageDenoise: acqua e vetro escono puliti, senza puntini.",
+  "en": "Water is now set up in the material editor via \"Is water\", waves and color. Path tracing reaches the full sample count and uses OpenImageDenoise, so water and glass come out clean, without speckles."
+ },
+ "1.13.1": {
+  "icon": "fix",
+  "it": "Le finestre non bloccano più il sole quando le caustiche sono accese: l'acqua della piscina al chiuso non è più scura e granulosa. La torbidità parte da 0% e Luci torna un pulsante a sé nella libreria.",
+  "en": "Windows no longer block sunlight when caustics are on, so indoor pool water is no longer dark and grainy. Turbidity now starts at 0% and Lights is its own library button again."
+ },
+ "1.13.0": {
+  "icon": "water",
+  "it": "L'acqua prende colore e limpidezza realistici con la profondità, anche vista da sotto. Arrivano nebbia volumetrica con raggi di luce, HDRI con sole estratto come luce vera e la vista d'argilla.",
+  "en": "Water now gets realistic color and clarity with depth, even seen from below. Also new: volumetric fog with light shafts, HDRIs whose sun becomes a real light, and a clay view."
+ },
+ "1.12.0": {
+  "icon": "water",
+  "it": "Onde reali sull'acqua e caustiche sul fondo, con la rete di luce del sole come in piscina, solo in path tracing. Sole più alto all'inizio e terreno eliminato che non ricompare più.",
+  "en": "Real waves on water and caustics on the bottom, with the sun's net of light like in a pool, in path tracing only. A higher sun by default, and a deleted ground no longer comes back."
+ },
+ "1.11.3": {
+  "icon": "fix",
+  "it": "Vetro e acqua non diventano più neri con «Rimbalzi totali» a 0: l'acqua è trasparente sia da sopra sia da sotto. Il pannello Rendering avvisa delle impostazioni di rimbalzo sbagliate.",
+  "en": "Glass and water no longer turn black when total bounces are set to 0: water is see-through from above and below. The Rendering panel warns about bad bounce settings."
+ },
+ "1.11.2": {
+  "icon": "water",
+  "it": "Vetro e acqua lasciano passare la luce: il fondo di uno stagno è illuminato dal sole con le sue ombre, quasi senza costo. Corretta la nebbia sulle foglie e la barra in finestre strette.",
+  "en": "Glass and water now let light through: the bottom of a pond is lit by the sun with its shadows, at almost no cost. Fixed fog on foliage and the top bar in narrow windows."
+ },
+ "1.11.1": {
+  "icon": "ui",
+  "it": "Tutte le note di rilascio esistono anche in inglese: con Simpler in inglese il pannello Novità mostra la versione inglese, in italiano quella italiana.",
+  "en": "Every release note now also exists in English: with Simpler in English the \"What's new\" panel shows the English version, in Italian the Italian one."
+ },
+ "1.11.0": {
+  "icon": "ambience",
+  "it": "Nuovo pannello Ambiente con cielo fisico: preset dal mattino alla notte, sole per ora e luogo, nuvole, foschia, nebbia, stelle e terreno. Esposizione automatica; le nuove scene partono all'aperto di giorno.",
+  "en": "New Environment panel with a physical sky: presets from morning to night, sun by time and place, clouds, haze, fog, stars and ground. Automatic exposure; new scenes start outdoors in daylight."
+ },
+ "1.10.0": {
+  "icon": "scatter",
+  "it": "Nuova modalità Scatter Spaziatura: i modelli si allineano lungo una linea, per distanza o numero, anche orientati sulla linea (recinzioni, panchine, lampioni). Ombre in tempo reale nitide anche su oggetti piccoli.",
+  "en": "New Scatter Spacing mode: models line up along a line, by distance or count, optionally turned to follow it (fences, benches, street lamps). Sharp real-time shadows even on small objects."
+ },
+ "1.9.0": {
+  "icon": "scatter",
+  "it": "Nuova modalità Scatter Area: disegni un contorno sulle superfici e si riempie di modelli, con densità, sfumatura ai bordi e seme casuale. Punti modificabili e oggetti escludibili.",
+  "en": "New Scatter Area mode: draw an outline on surfaces and it fills with models, with density, edge falloff and a random seed. Points stay editable and objects can be excluded."
+ },
+ "1.8.4": {
+  "icon": "light",
+  "it": "La striscia LED si vede accesa in path tracing. Le luci ad area hanno l'opzione «Visibile alla camera». I progetti si riaprono con la stessa inquadratura del salvataggio.",
+  "en": "LED strips now show as lit lines in path tracing. Area lights get a \"Visible to camera\" option. Projects reopen with the framing they had when saved."
+ },
+ "1.8.3": {
+  "icon": "fix",
+  "it": "Tornando al tempo reale durante il path tracing, l'immagine in arrivo non copre più la vista. Luci, primitive e gruppi vuoti si aggiungono ora dalla libreria invece che dal «+» dell'albero.",
+  "en": "Switching back to real time during path tracing no longer leaves the incoming image over the view. Lights, primitives and empty groups are now added from the library instead of the tree's \"+\"."
+ },
+ "1.8.2": {
+  "icon": "navigation",
+  "it": "Un oggetto inclinato su un pendio torna dritto quando lo riporti su una superficie piana. Nuova velocità «formica», con passi 5 volte più piccoli per avvicinarsi ai dettagli.",
+  "en": "An object tilted on a slope stands upright again when moved back onto a flat surface. New \"ant\" speed with steps five times smaller for getting close to details."
+ },
+ "1.8.1": {
+  "icon": "navigation",
+  "it": "Spostando un oggetto sulle superfici, ora si inclina anche secondo la pendenza sotto il mouse, come un libro su un leggio o un sasso su un pendio. Build più semplice da avviare.",
+  "en": "When you slide an object over surfaces it now also tilts to match the slope under the mouse, like a book on a lectern or a rock on a hillside. The build is also easier to launch."
+ },
+ "1.8.0": {
+  "icon": "scatter",
+  "it": "Gli scatter diventano un unico oggetto a punti: prati e boschi con centinaia di migliaia di pezzi, ricalcolo in frazioni di secondo e annulla istantaneo. I progetti vecchi si convertono da soli.",
+  "en": "Scatters become a single point object: lawns and woods with hundreds of thousands of pieces, updates in a fraction of a second and instant undo. Older projects convert automatically."
+ },
+ "1.7.3": {
+  "icon": "scatter",
+  "it": "Cliccando uno scatter nell'albero si apre subito il suo pannello con modelli, presenze e regolazioni, con il pennello attivo per continuare a dipingere.",
+  "en": "Clicking a scatter in the tree opens its panel straight away, with its models, presences and settings, and the brush ready to keep painting."
+ },
+ "1.7.2": {
+  "icon": "material",
+  "it": "Trascinando un materiale su un modello con istanze cambia su tutte, in path tracing e in tempo reale, dove ora si vede subito anche sull'oggetto selezionato. Cerchio del pennello più visibile.",
+  "en": "Dropping a material on a model with instances changes all of them, in path tracing and real time, where it now shows at once on the selected object too. The brush circle is easier to see."
+ },
+ "1.7.1": {
+  "icon": "navigation",
+  "it": "Trascinando il centro del gizmo l'oggetto scorre sulle superfici sotto il mouse, sempre appoggiato sulla base: pavimento, tavolo, terreno. Con Alt resta il movimento libero.",
+  "en": "Dragging the gizmo's centre slides the object over the surfaces under the mouse, always resting on its base: floor, table, terrain. Hold Alt for free movement."
+ },
+ "1.7.0": {
+  "icon": "performance",
+  "it": "I modelli della libreria e le loro copie si inseriscono senza ripreparare la vista, con instancing e livelli di dettaglio. Scene con migliaia di oggetti molto più rapide da caricare, ricalcolare e annullare.",
+  "en": "Library models and their copies are inserted without rebuilding the view, with instancing and levels of detail. Scenes with thousands of objects load, update and undo much faster."
+ },
+ "1.6.1": {
+  "icon": "scatter",
+  "it": "Lo scatter ricorda le pennellate: cambiando spaziatura, scala, rotazione o presenze si ricalcola subito quanto già dipinto. Pennellate e regolazioni si salvano nel progetto.",
+  "en": "Scatters now remember their brush strokes: changing spacing, scale, rotation or presence instantly redoes what you already painted. Strokes and settings are saved with the project."
+ },
+ "1.6.0": {
+  "icon": "performance",
+  "it": "Scatter veloce anche con migliaia di pezzi: pennellate istantanee, instancing su GPU e livelli di dettaglio automatici nella vista. Da ferma la vista non ridisegna e lascia libera la scheda grafica.",
+  "en": "Scatter stays fast with thousands of pieces: instant strokes, GPU instancing and automatic levels of detail in the view. When nothing moves the view stops redrawing, freeing the graphics card."
+ },
+ "1.5.0": {
+  "icon": "scatter",
+  "it": "Nuovo pennello Scatter: si dipingono modelli della libreria sulle superfici (prati, fiori, rocce, alberi) con presenza, diametro, spaziatura, scala e rotazione casuali. I pezzi sono istanze e ogni pennellata si annulla.",
+  "en": "New Scatter brush: paint library models onto surfaces (lawns, flowers, rocks, trees), with presence, diameter, spacing and random scale and rotation. Pieces are instances and each stroke can be undone."
+ },
+ "1.4.11": {
+  "icon": "library",
+  "it": "Salvando in libreria un modello con un nome già presente nella cartella, Simpler chiede se sovrascriverlo, salvarlo con un nuovo nome o annullare.",
+  "en": "Saving a model to the library under a name that already exists in the folder now asks whether to overwrite it, save it with a new name or cancel."
+ },
+ "1.4.10": {
+  "icon": "scene",
+  "it": "Ordine libero delle righe nell'albero: trascinando sul bordo di una riga l'oggetto va prima o dopo, anche allo stesso livello. L'ordine si salva nel progetto e si annulla con Ctrl+Z.",
+  "en": "Rows in the tree can be reordered: drop on a row's edge to place an object before or after it, even at the same level. The order is saved with the project and can be undone."
+ },
+ "1.4.9": {
+  "icon": "fix",
+  "it": "Il gizmo parte dalla base dei modelli importati con origine alla base e la posizione scelta viene ricordata. Chiudendo le finestre in primo piano si torna sempre a Simpler.",
+  "en": "The gizmo now starts at the base of models imported with a base origin, and your choice is remembered. Closing always-on-top windows now returns focus to Simpler."
+ },
+ "1.4.8": {
+  "icon": "scene",
+  "it": "Spostando nell'albero un originale in un altro gruppo, le sue istanze lo seguono e restano raggruppate sotto di lui. Un solo Ctrl+Z annulla tutto lo spostamento.",
+  "en": "Moving an original to another group in the tree now brings its instances along, still grouped under it. A single Ctrl+Z undoes the whole move."
+ },
+ "1.4.7": {
+  "icon": "library",
+  "it": "Importando nella libreria, ogni oggetto di un file può diventare un modello separato (collezioni). Si sceglie l'origine del modello (base o centro) e si vede l'avanzamento modello per modello.",
+  "en": "When importing into the library, each object in a file can become its own model (collections). You pick the model origin (base or centre) and see progress model by model."
+ },
+ "1.4.6": {
+  "icon": "scene",
+  "it": "Albero ordinato con le istanze: l'originale mostra «×N» e le copie stanno in una riga chiudibile «N istanze», selezionabili tutte insieme col tasto destro.",
+  "en": "A tidier tree for instances: the original shows \"×N\" and its copies sit in one collapsible \"N instances\" row, which you can select all at once with a right-click."
+ },
+ "1.4.5": {
+  "icon": "scene",
+  "it": "Alla chiusura, prima di Nuovo e prima di Apri, Simpler chiede se salvare le modifiche non salvate. Spostare la vista o cambiare modalità non conta come modifica.",
+  "en": "On closing, and before New or Open, Simpler asks whether to save unsaved changes. Moving the view or switching modes doesn't count as a change."
+ },
+ "1.4.4": {
+  "icon": "scene",
+  "it": "Nell'albero un pallino arancione indica gli oggetti che sono istanze, con il numero di modelli condivisi. Le copie indipendenti condividono meglio le parti ripetute e pesano meno.",
+  "en": "An orange dot in the tree marks objects that are instances, with how many models share them. Independent copies now reuse repeated parts and take less memory."
+ },
+ "1.4.3": {
+  "icon": "performance",
+  "it": "Il contatore fps mostra anche «max ≈», cioè quanti fotogrammi la scheda potrebbe disegnare oltre il limite dello schermo; i colori di avviso seguono questo valore.",
+  "en": "The fps counter also shows \"max ≈\", how many frames the card could draw beyond the screen's refresh limit; the warning colours now follow that value."
+ },
+ "1.4.2": {
+  "icon": "fix",
+  "it": "La valutazione della scheda grafica nella schermata iniziale non copre più il testo: ora è un piccolo riquadro scuro in alto a destra.",
+  "en": "The graphics card rating on the start screen no longer covers the text: it is now a small dark box in the top right corner."
+ },
+ "1.4.1": {
+  "icon": "view",
+  "it": "Contatore di fps, triangoli e draw call in basso a destra nella vista. Nuova vista «Scatole» per scene enormi: ogni pezzo è un box colorato e la navigazione resta fluida.",
+  "en": "An fps, triangle and draw-call counter in the corner of the view. New \"Boxes\" view for huge scenes: every piece is drawn as a coloured box so navigation stays smooth."
+ },
+ "1.4.0": {
+  "icon": "scene",
+  "it": "Copia e incolla di oggetti come istanze leggere o copie indipendenti, anche in quantità; copia trascinando con Shift, in fila o in cerchio. All'avvio la valutazione della scheda grafica.",
+  "en": "Copy and paste objects as lightweight instances or independent copies, in any quantity; Shift-drag to copy in a row or a circle. The start screen now rates your graphics card."
+ },
+ "1.3.10": {
+  "icon": "fix",
+  "it": "Dopo Salva come nuovo la sfera di anteprima del materiale non resta più vuota: l'editor chiede da solo l'anteprima quando manca.",
+  "en": "After Save as new, the material preview sphere is no longer empty: the editor requests a preview on its own whenever one is missing."
+ },
+ "1.3.9": {
+  "icon": "view",
+  "it": "Il gizmo permette lo spostamento su un piano: trascinando lo spicchio tra due assi l'oggetto si muove solo sul pavimento o su una parete verticale.",
+  "en": "The gizmo now supports plane movement: dragging the wedge between two axes moves the object only along the floor or a vertical wall."
+ },
+ "1.3.8": {
+  "icon": "fix",
+  "it": "Ogni libreria si sposta da sola: spostando i Materiali Poly Haven non vengono più trascinati anche i Modelli 3D Poly Haven.",
+  "en": "Each library now moves on its own: moving Poly Haven Materials no longer drags Poly Haven 3D Models along with it."
+ },
+ "1.3.7": {
+  "icon": "library",
+  "it": "Spostamento guidato di una libreria in un'altra cartella: copia con avanzamento annullabile, verifica dei file e scelta se eliminare la vecchia cartella.",
+  "en": "Guided move of a library to another folder: copy with cancellable progress, file verification and a choice whether to delete the old folder."
+ },
+ "1.3.6": {
+  "icon": "performance",
+  "it": "Le anteprime di materiali e modelli occupano molta meno memoria video: la scheda viene liberata dopo ogni immagine e il processo si chiude quando è inattivo.",
+  "en": "Material and model previews use far less GPU memory: the card is freed after each image and the preview process shuts down when idle."
+ },
+ "1.3.5": {
+  "icon": "ambience",
+  "it": "Il sole si posiziona con ora, data, latitudine e nord, e il cielo lo segue; si scelgono le cartelle di librerie e download, e i progetti restano validi se le librerie si spostano.",
+  "en": "The sun is placed by time, date, latitude and north, with the sky following it; library and download folders can be chosen, and projects survive moving libraries."
+ },
+ "1.3.4": {
+  "icon": "view",
+  "it": "Nuova icona Sposta e ruota e pulsanti più chiari per la posizione del gizmo (base, centro 3D, origine); il pannello destro segue sempre la selezione.",
+  "en": "New Move & Rotate icon and clearer buttons for gizmo placement (base, 3D center, origin); the right panel always follows the selection."
+ },
+ "1.3.3": {
+  "icon": "material",
+  "it": "Foglie senza veli grigi in path tracing grazie al ritaglio netto, alfa delle texture colore attivata da sola, sfera di anteprima con UV corrette e libreria che scorre trascinando.",
+  "en": "Leaves without grey halos in path tracing thanks to hard cutout, color texture alpha enabled automatically, preview sphere with proper UVs and library auto-scroll while dragging."
+ },
+ "1.3.2": {
+  "icon": "library",
+  "it": "Le cartelle di Modelli 3D e Materiali si possono spostare dentro altre cartelle, trascinandole o con Sposta in, con unione se il nome esiste già.",
+  "en": "3D Model and Material folders can be moved into other folders by dragging or with Move to, merging them if the name already exists."
+ },
+ "1.3.1": {
+  "icon": "import",
+  "it": "Si importano anche i vecchi FBX 6.x (Tree It, vecchi 3ds Max e Maya) con materiali e gerarchia; gli errori di importazione spiegano il motivo e cosa fare.",
+  "en": "Old FBX 6.x files (Tree It, older 3ds Max and Maya) now import with materials and hierarchy; import errors explain the cause and what to do."
+ },
+ "1.3.0": {
+  "icon": "import",
+  "it": "Pulsante Importa nella barra in alto e importazione guidata di molti modelli insieme nella libreria, con cartelle, texture, miniature e gestione dei doppioni, in sottofondo.",
+  "en": "Import button in the top bar and a guided batch import of many models into the library, with folders, textures, thumbnails and duplicate handling, in the background."
+ },
+ "1.2.14": {
+  "icon": "view",
+  "it": "La scala con il gizmo è più dolce e prevedibile: dipende solo da quanto si sposta il mouse lungo la maniglia, con scatti di 0,1 usando lo Snap.",
+  "en": "Scaling with the gizmo is smoother and predictable: it depends only on how far the mouse moves along the handle, with 0.1 steps when snapping."
+ },
+ "1.2.13": {
+  "icon": "view",
+  "it": "Gizmo ridisegnato, con assi uniti e fasce di rotazione; il contorno della selezione sparisce dal path tracing e il tasto destro non cambia più la selezione.",
+  "en": "Gizmo redesigned, with joined axes and rotation bands; the selection outline no longer shows in path tracing and right-click keeps the selection."
+ },
+ "1.2.12": {
+  "icon": "view",
+  "it": "Gli oggetti selezionati hanno un contorno arancione, gizmo più compatto e icone delle luci di misura costante anche con focali lunghe.",
+  "en": "Selected objects get an orange outline, a more compact gizmo, and light icons that keep their size even with long lenses."
+ },
+ "1.2.11": {
+  "icon": "ui",
+  "it": "Due gizmo più piccoli (sposta e ruota insieme, scala), elenco di chi usa la memoria video nel pannello Risorse e modelli Poly Haven senza texture ora completi.",
+  "en": "Two smaller gizmos (combined move/rotate, and scale), a list of what uses GPU memory in the Resources panel, and Poly Haven models that lacked textures now complete."
+ },
+ "1.2.10": {
+  "icon": "fix",
+  "it": "I download da Poly Haven non restano più bloccati a 0%: tentativi automatici, ripresa da dove si erano fermati, avanzamento continuo e messaggi d'errore chiari.",
+  "en": "Poly Haven downloads no longer stall at 0%: automatic retries, resume where they stopped, continuous progress and clear error messages."
+ },
+ "1.2.9": {
+  "icon": "fix",
+  "it": "Texture con proiezione box non più ruotate tra tempo reale e path tracing, icone delle luci sempre della stessa misura; spunta verde sugli elementi Poly Haven già scaricati.",
+  "en": "Box-projected textures no longer rotate between real-time and path tracing, light icons keep a constant size; green check on Poly Haven items already downloaded."
+ },
+ "1.2.8": {
+  "icon": "material",
+  "it": "Cliccando una texture nell'editor materiale si apre in grande in una finestra flottante, con nome, risoluzione, trasparenze e apertura della cartella.",
+  "en": "Clicking a texture in the material editor opens it large in a floating window, with name, resolution, transparency and a button to open its folder."
+ },
+ "1.2.7": {
+  "icon": "library",
+  "it": "Nuova scheda con oltre 500 modelli 3D Poly Haven gratuiti, in cartelle e con ricerca, scaricati al primo uso; schede della libreria rinominate e riordinate.",
+  "en": "New tab with 500+ free Poly Haven 3D models, organized in folders with search and downloaded on first use; library tabs renamed and reordered."
+ },
+ "1.2.6": {
+  "icon": "scene",
+  "it": "Nell'albero della scena si trascina un oggetto accanto o dentro un'altra riga; gli oggetti singoli dalla libreria entrano senza un gruppo in più.",
+  "en": "In the scene tree you can drag an object next to or inside another row; single objects from the library are inserted without an extra group."
+ },
+ "1.2.5": {
+  "icon": "fix",
+  "it": "Salvando un oggetto nella libreria non viene più incluso l'oggetto a cui è collegato; miniature degli oggetti a riempire il riquadro e comando per rigenerarle.",
+  "en": "Saving an object to the library no longer includes the object it is attached to; object thumbnails now fill the tile and can be regenerated."
+ },
+ "1.2.4": {
+  "icon": "library",
+  "it": "Libreria degli oggetti a cartelle con categorie già pronte; si salvano nella libreria oggetti della scena con materiali, texture e miniatura; nuovo menu del tasto destro nella vista.",
+  "en": "Object library in folders with ready-made categories; save scene objects to it with materials, textures and a thumbnail; new right-click menu in the view."
+ },
+ "1.2.3": {
+  "icon": "ui",
+  "it": "Selezione a rettangolo e a lazo nella vista, editor materiale che segue l'oggetto cliccato, sfera di anteprima trascinabile sugli oggetti e libreria che scatta a righe intere.",
+  "en": "Box and lasso selection in the view, material editor that follows the clicked object, preview sphere you can drag onto objects, and a library that snaps to full rows."
+ },
+ "1.2.2": {
+  "icon": "library",
+  "it": "Libreria dei materiali a cartelle annidabili, con spostamento per trascinamento e ricerca globale; texture Poly Haven per categorie e libreria in basso ridimensionabile.",
+  "en": "Material library organized in nested folders, with drag-to-move and search across all folders; Poly Haven textures by category and a resizable bottom library."
+ },
+ "1.2.1": {
+  "icon": "material",
+  "it": "Trascina un materiale per applicarlo, cliccalo per modificarlo; anteprima a sfera in path tracing nell'editor, salvataggio nella libreria e dispersione più naturale e dosabile.",
+  "en": "Drag a material to apply it, click it to edit; path-traced sphere preview in the editor, saving to the library, and more natural, adjustable dispersion."
+ },
+ "1.2.0": {
+  "icon": "material",
+  "it": "Nuovo editor dei materiali con canali chiari, mappe, dispersione per vetri e gemme, displacement reale e mappature; libreria con luci, oggetti e texture Poly Haven da trascinare.",
+  "en": "New material editor with clear channels, maps, dispersion for glass and gems, true displacement and mapping options; library with draggable lights, objects and Poly Haven textures."
+ },
+ "1.1.12": {
+  "icon": "performance",
+  "it": "Spostare oggetti o cambiare luci e materiali aggiorna il path tracing in frazioni di secondo; riaprendo un progetto la vista 3D già preparata viene riusata.",
+  "en": "Moving objects or changing lights and materials now updates path tracing in a fraction of a second; reopening a project reuses the already prepared 3D view."
+ },
+ "1.1.11": {
+  "icon": "performance",
+  "it": "Il path tracing non ricostruisce più la scena a ogni passaggio e il render finale si calcola in un colpo solo quando la memoria video basta, con tempi stimati stabili.",
+  "en": "Path tracing no longer rebuilds the scene on every pass, and final renders run in one go when GPU memory allows, with steady time estimates."
+ },
+ "1.1.10": {
+  "icon": "render",
+  "it": "Render finale molto più veloce sulle scene con texture enormi grazie alla scelta automatica della risoluzione; nuovo pannello Risorse con memoria e carico della scheda video.",
+  "en": "Much faster final renders on scenes with huge textures thanks to automatic texture resolution; new Resources panel showing GPU memory and load."
+ },
+ "1.1.9": {
+  "icon": "navigation",
+  "it": "La rotazione con il tasto destro ora gira attorno alla superficie al centro della vista, così l'inquadratura non scappa più di lato.",
+  "en": "Right-click orbit now pivots on the surface at the center of the view, so the framing no longer drifts sideways."
+ },
+ "1.1.8": {
+  "icon": "performance",
+  "it": "Anche le texture incorporate negli FBX vengono ridotte e messe in cache, con path tracing molto più veloce; finestre di dialogo e barre di scorrimento nello stile scuro dell'app.",
+  "en": "Textures embedded in FBX files are now downscaled and cached too, making path tracing much faster; dialogs and scrollbars match the app's dark style."
+ },
+ "1.1.7": {
+  "icon": "ui",
+  "it": "Schermata di avvio più piccola del 30%, con immagine ridotta che resta nitida.",
+  "en": "Splash screen made 30% smaller, with a downsized image that stays sharp."
+ },
+ "1.1.6": {
+  "icon": "fix",
+  "it": "Corretto il problema per cui chiudendo la schermata di avvio si chiudeva tutta l'app invece di mostrarla.",
+  "en": "Fixed the app closing entirely when the splash screen closed, instead of showing the main window."
+ },
+ "1.1.5": {
+  "icon": "performance",
+  "it": "Avanzamento del path tracing con barra e tempo rimanente stimato; le texture su disco di rete vengono copiate in locale per leggerle più in fretta.",
+  "en": "Path tracing progress with a bar and estimated time left; textures on network drives are copied locally so they load much faster."
+ },
+ "1.1.4": {
+  "icon": "ui",
+  "it": "Schermata di avvio con l'avanzamento del caricamento: l'app compare solo quando è pronta, a tutto schermo e con la scena già visibile.",
+  "en": "Splash screen showing loading progress: the app appears only when ready, maximized, with the scene already visible."
+ },
+ "1.1.3": {
+  "icon": "performance",
+  "it": "Texture ridotte e tenute in cache per le anteprime: il path tracing parte prima, usa meno memoria GPU e si interrompe subito quando si dà un comando.",
+  "en": "Downscaled, cached textures for previews: path tracing starts sooner, uses less GPU memory and stops immediately when you issue a command."
+ },
+ "1.1.2": {
+  "icon": "ui",
+  "it": "Le note di versione si aprono nella barra laterale destra, impaginate e nella lingua dell'app, con accesso alle versioni precedenti.",
+  "en": "Release notes now open in the right sidebar, properly formatted and in the app language, with access to earlier versions."
+ },
+ "1.1.1": {
+  "icon": "performance",
+  "it": "Scene molto grandi gestibili: modifiche, annulla e ripeti immediati, vista 3D preparata in sottofondo e interrompibile con Esc, avanzamento dettagliato del path tracing.",
+  "en": "Very large scenes become workable: instant edits and undo/redo, 3D view prepared in the background and cancellable with Esc, detailed path tracing progress."
+ },
+ "1.1.0": {
+  "icon": "scene",
+  "it": "Scene salvate con inquadratura, impostazioni di render e miniatura; nuovo pannello Fotocamera con focale, profondità di campo, verticali raddrizzate e formati immagine.",
+  "en": "Saved scenes that store framing, render settings and a thumbnail; new Camera panel with focal length, depth of field, vertical correction and image formats."
+ },
+ "1.0.1": {
+  "icon": "render",
+  "it": "Caustiche in un solo comando (Spente, Normali, Nitide) nel pannello Rendering, barra in alto più pulita e niente più errore di comunicazione col motore durante il path tracing.",
+  "en": "Caustics now set with a single control (Off, Normal, Sharp) in the Rendering panel, a cleaner top bar, and no more engine communication errors during path tracing."
+ },
+ "1.0.0": {
+  "icon": "view",
+  "it": "Prima versione: vista 3D in tempo reale con anteprima path tracing, navigazione classica, gizmo e multiselezione, luci regolabili, import FBX/glTF/OBJ/USD e pannello Rendering.",
+  "en": "First release: real-time 3D view with path-traced preview, classic navigation, gizmo and multi-select, adjustable lights, FBX/glTF/OBJ/USD import and a Rendering panel."
+ },
+ "1.75.52": {
+  "icon": "new",
+  "it": "Nuovo «Ottimizza poligoni» (tasto destro): meno triangoli con anteprima, materiali e copie rispettati, Ctrl+Z. Il mouse non sparisce più con i pennelli piccoli.",
+  "en": "New «Optimize polygons» (right click): fewer triangles with a preview, materials and copies respected, Ctrl+Z. The mouse no longer vanishes with small brushes."
+ },
+ "1.75.53": {
+  "icon": "fix",
+  "it": "Ottimizza poligoni: la vista mostra subito il modello ottimizzato (anche con Ctrl+Z) e l'anteprima mostra i materiali.",
+  "en": "Optimize polygons: the view shows the optimized model at once (Ctrl+Z too) and the preview shows the materials."
+ },
+ "1.75.54": {
+  "icon": "view",
+  "it": "Ottimizza poligoni: finestra grande con anteprima 3D Prima/Dopo da girare e zoomare insieme, con materiali e fil di ferro.",
+  "en": "Optimize polygons: a large window with a 3D Before/After preview to turn and zoom together, with materials and wireframe."
+ },
+ "1.75.55": {
+  "icon": "ui",
+  "it": "Le finestre di Simpler stanno sopra Simpler, non sopra tutti i programmi. Ottimizza poligoni: la barra avanza anche dentro un pezzo grande.",
+  "en": "Simpler's windows stay above Simpler, not above every program. Optimize polygons: the bar moves inside a big piece too."
+ },
+ "1.75.56": {
+  "icon": "ui",
+  "it": "Proprietà: il numero di triangoli del modello selezionato, sotto le dimensioni.",
+  "en": "Properties: the triangle count of the selected model, under its size."
+ },
+ "1.75.57": {
+  "icon": "render",
+  "it": "Le miniature delle scene diventano path tracing da sole: apri la scena, lascia finire il path tracing senza cambiare niente.",
+  "en": "Scene thumbnails become path traced by themselves: open the scene, let the path tracing finish without changing anything."
+ },
+ "1.75.58": {
+  "icon": "ui",
+  "it": "Video AI: «Crea/migliora con l'AI» (con la casella vuota scrive il testo da zero guardando i due fotogrammi).",
+  "en": "AI video: «Create/improve with AI» (with an empty box it writes the text from scratch from the two keyframes)."
+ },
+ "1.75.59": {
+  "icon": "ui",
+  "it": "Elaborazioni AI: pollice verde (riuscita) o rosso (malriuscita) sulla miniatura, dal menu «…».",
+  "en": "AI outputs: a green (good) or red (failed) thumb on the thumbnail, from the «…» menu."
+ },
+ "1.75.60": {
+  "icon": "material",
+  "it": "Materiali: «Scala mappa» nelle Avanzate di rugosità/glossy, metallico, normal e bump (una mappa più grande delle altre texture).",
+  "en": "Materials: «Map scale» in the Advanced settings of roughness/glossy, metallic, normal and bump (a map bigger than the other textures)."
+ },
+ "1.75.61": {
+  "icon": "fix",
+  "it": "Ottimizza poligoni: anteprima 3D ridisegnata anche da sola (modelli pesantissimi), errori nel registro.",
+  "en": "Optimize polygons: the 3D preview also redraws on its own (very heavy models), errors in the log."
+ },
+ "1.75.62": {
+  "icon": "fix",
+  "it": "Vista: un modello della libreria che non si può preparare non manda più la vista in un ciclo infinito.",
+  "en": "View: a library model that cannot be prepared no longer sends the view into an endless loop."
+ },
+ "1.75.63": {
+  "icon": "fix",
+  "it": "Box e Lasso selezionano anche i modelli della libreria.",
+  "en": "Box and Lasso also select library models."
+ },
+ "1.76.0": {
+  "icon": "new",
+  "it": "Terreno: paesaggi naturali generati con l'erosione, divisi in zone con i loro materiali.",
+  "en": "Terrain: natural landscapes shaped by erosion, split into zones with their own materials."
+ },
+ "1.76.1": {
+  "icon": "fix",
+  "it": "Terreno: le zone non sono più semitrasparenti (mappa di opacità di alcune texture).",
+  "en": "Terrain: zones are no longer semi-transparent (opacity map of some textures)."
+ },
+ "1.76.2": {
+  "icon": "new",
+  "it": "Ecosistemi: «Oltre il bordo» per bordi naturali; niente più zone senza erba in lontananza.",
+  "en": "Ecosystems: «Past the edge» for natural borders; no more grassless areas in the distance."
+ },
+ "1.76.3": {
+  "icon": "new",
+  "it": "Terreno: griglia fitta (fino a 1 m) vicino al modello e alla camera, più rada verso i bordi.",
+  "en": "Terrain: dense grid (down to 1 m) near the model and the camera, wider towards the edges."
+ },
+ "1.76.4": {
+  "icon": "new",
+  "it": "Terreno: «Sfumatura dei bordi», i materiali delle zone si fondono al confine senza linee nette.",
+  "en": "Terrain: «Border blend», the zones' materials merge at their borders with no sharp lines."
+ },
+ "1.76.5": {
+  "icon": "fix",
+  "it": "Sfumatura dei bordi: anche il rilievo si fonde (niente gradini); acqua, volumetrico e vetro restano netti.",
+  "en": "Border blend: the relief blends too (no steps); water, volumetric and glass stay sharp."
+ },
+ "1.76.6": {
+  "icon": "new",
+  "it": "Variazione su grande scala: texture aeree da 20–90 m sulle zone del terreno e in ogni materiale.",
+  "en": "Large-scale variation: 20–90 m aerial textures on the terrain zones and in every material."
+ },
+ "1.76.7": {
+  "icon": "fix",
+  "it": "Cartelle del progetto in ordine: sovrascrivere un progetto manda il vecchio nel Cestino; i file non più usati pure.",
+  "en": "Tidy project folders: overwriting a project sends the old one to the Recycle Bin; unused files too."
+ },
+ "1.76.8": {
+  "icon": "new",
+  "it": "Dividi zona: una zona del terreno si divide in parti guidate dal terreno (umido, sole, quota, pendenza, forma, macchie).",
+  "en": "Split zone: a terrain zone splits into parts guided by the land (wet, sun, height, slope, shape, patches)."
+ },
+ "1.76.9": {
+  "icon": "fix",
+  "it": "Materiali del terreno: «Occupato» con la percentuale del download da subito, finché non sono applicati.",
+  "en": "Terrain materials: «Busy» with the download percentage at once, until they are on."
+ },
+ "1.76.10": {
+  "icon": "new",
+  "it": "Roccia scolpita: cenge, salti, canaloni e creste frastagliate sui pendii ripidi del terreno.",
+  "en": "Sculpted rock: ledges, drops, gullies and jagged crests on the terrain's steep slopes."
+ },
+ "1.76.11": {
+  "icon": "fix",
+  "it": "Fotogrammi del video: «Usa la vista attuale» chiede conferma prima del render.",
+  "en": "Video keyframes: «Use the current view» asks before rendering."
+ },
+ "1.76.12": {
+  "icon": "fix",
+  "it": "Neve: niente creste a dente di sega, bordi sfumati, limite della neve naturale sul terreno.",
+  "en": "Snow: no saw-tooth crests, soft borders, a natural snow line on the terrain."
+ },
+ "1.76.13": {
+  "icon": "fix",
+  "it": "Libreria: il testo di ricerca vale solo per la scheda in cui l'hai scritto.",
+  "en": "Library: the search text applies only to the tab you typed it in."
+ },
+ "1.76.14": {
+  "icon": "new",
+  "it": "Colori dal terreno: creste, canaloni, colate sulle pareti, fasce degli strati e umido guidano il colore.",
+  "en": "Colours from the terrain: crests, gullies, streaks, layer bands and damp guide the colour."
+ },
+ "1.76.15": {
+  "icon": "fix",
+  "it": "Ecosistemi sul terreno: rifatti sulla nuova forma quando il terreno cambia.",
+  "en": "Ecosystems on a terrain: made again on the new shape when the terrain changes."
+ },
+ "1.76.16": {
+  "icon": "fix",
+  "it": "Oceano al piede del terreno (lo segue); nuvole sempre sopra la scena.",
+  "en": "Ocean at the foot of the terrain (it follows it); clouds always above the scene."
+ },
+ "1.76.17": {
+  "icon": "fix",
+  "it": "Nuvole: l'altezza resta quella che scegli (niente spostamento automatico).",
+  "en": "Clouds: the height stays the one you choose (no automatic move)."
+ },
+ "1.76.18": {
+  "icon": "new",
+  "it": "«Appoggia alla superficie» per pennello, area, spaziatura ed ecosistemi; automatico quando il terreno cambia.",
+  "en": "«Drop onto the surface» for brush, area, spacing and ecosystems; automatic when the terrain changes."
+ },
+ "1.76.19": {
+  "icon": "new",
+  "it": "Coste naturali: il bordo del terreno nuovo ha baie e promontori, con il mare la costa non è più dritta.",
+  "en": "Natural coasts: the edge of a new terrain has bays and headlands, so with the sea the coast is no longer straight."
+ },
+ "1.76.20": {
+  "icon": "fix",
+  "it": "Path tracing: il terreno e il mare lontani non spariscono più quando la camera è vicina al punto che guarda.",
+  "en": "Path tracing: the far terrain and sea no longer vanish when the camera is close to the point it looks at."
+ },
+ "1.76.21": {
+  "icon": "fix",
+  "it": "Mare: niente più motivi ripetuti né strisce bianche verso l'orizzonte.",
+  "en": "Sea: no more repeating patterns or white streaks towards the horizon."
+ },
+ "1.76.22": {
+  "icon": "new",
+  "it": "«Pietre e detriti»: le tue pietre posate ai piedi delle pareti e nei canaloni, con il colore della roccia. Schiuma della risacca vera.",
+  "en": "«Stones and debris»: your stones laid at the foot of the walls and in the gullies, with the colour of the rock. Real surf foam."
+ },
+ "1.76.23": {
+  "icon": "fix",
+  "it": "Costa senza fascia grigia; modelli Poly Haven: scegli il livello di dettaglio; pietre anche da Poly Haven.",
+  "en": "Coast without the grey band; Poly Haven models: choose the level of detail; stones from Poly Haven too."
+ },
+ "1.76.24": {
+  "icon": "fix",
+  "it": "Pietre e detriti: «Posa le pietre» corretto, grandezza per ogni pietra, solo dove guarda la camera.",
+  "en": "Stones and debris: «Lay the stones» fixed, a size for each stone, only where the camera looks."
+ },
+ "1.76.25": {
+  "icon": "new",
+  "it": "Terreno da file di quote veri (.dem, .hgt, .asc); pietre solo nell'inquadratura e leggere; Avanzate in giallo; neve corretta.",
+  "en": "Terrain from real elevation files (.dem, .hgt, .asc); stones only in the frame and light; yellow Advanced; snow fixed."
+ },
+ "1.76.26": {
+  "icon": "fix",
+  "it": "Pennello: la distribuzione non cade più sotto i modelli della libreria.",
+  "en": "Brush: the distribution no longer falls under the library models."
+ },
+ "1.76.27": {
+  "icon": "fix",
+  "it": "Schiuma della costa intorno ai modelli; terreni grandi visti fino in fondo.",
+  "en": "Coast foam around the models; large terrains seen to the end."
+ },
+ "1.76.28": {
+  "icon": "new",
+  "it": "«Avanzate» in azzurro, nel blu dell'interfaccia.",
+  "en": "«Advanced» in azure, in the blue of the interface."
+ },
+ "1.76.29": {
+  "icon": "fix",
+  "it": "«Avanzate» in blu medio: non si confonde più con i pulsanti principali.",
+  "en": "«Advanced» in medium blue: no longer mistaken for the main buttons."
+ },
+ "1.76.30": {
+  "icon": "fix",
+  "it": "Mare: spostando un oggetto nell'acqua non resta più un pezzo di «terreno» dov'era.",
+  "en": "Sea: moving an object in the water no longer leaves a piece of «ground» where it was."
+ },
+ "1.76.31": {
+  "icon": "new",
+  "it": "Banco per ecosistemi da solo e inquadrato, «Grandezza» di tutte le pietre, «Ricalcola» anche per le sole pietre, correzioni.",
+  "en": "Ecosystem bench alone and framed, «Size» of all the stones, «Recalculate» for stones alone, fixes."
+ },
+ "1.76.32": {
+  "icon": "new",
+  "it": "Comandi preferiti: cuori nel pannello di destra, filtro nella barra in alto, preset come «Utente Rookie».",
+  "en": "Favourite commands: hearts in the right panel, a filter in the top bar, presets such as «Rookie user»."
+ },
+ "1.76.33": {
+  "icon": "new",
+  "it": "Il mare contro gli oggetti si muove: linea di contatto ondulata, bagnato frastagliato, schiuma di contatto.",
+  "en": "The sea moves against objects: wavy contact line, ragged wet band, clinging foam."
+ },
+ "1.76.34": {
+  "icon": "new",
+  "it": "File di quote grandi: una finestra per scegliere la parte da usare (fino a 10 km di lato).",
+  "en": "Big elevation files: a window to choose the part to use (up to 10 km a side)."
+ },
+ "1.76.35": {
+  "icon": "fix",
+  "it": "Comandi preferiti: un cuore nel pannello Ecosistemi vale per tutti gli ecosistemi.",
+  "en": "Favourite commands: a heart in the Ecosystems panel applies to every ecosystem."
+ },
+ "1.76.36": {
+  "icon": "fix",
+  "it": "«Acqua mossa sul bordo» ora si vede anche vicino a un terreno grande.",
+  "en": "«Moving water at the edge» now shows near a big terrain too."
+ },
+ "1.76.37": {
+  "icon": "fix",
+  "it": "Cursori che non facevano nulla trovati con un controllo automatico e corretti; «Più rado in lontananza»; terreno fantasma intorno agli oggetti in acqua.",
+  "en": "Sliders that did nothing found with an automatic check and fixed; «Thinner in the distance»; ghost terrain around objects in the water."
+ },
+ "1.76.38": {
+  "icon": "fix",
+  "it": "«Acqua mossa sul bordo» più visibile con il mare grosso.",
+  "en": "«Moving water at the edge» more visible with a big sea."
+ },
+ "1.76.39": {
+  "icon": "new",
+  "it": "Il mare ha le onde vere dove guardi: «Segue l'inquadratura».",
+  "en": "The sea has true waves where you look: «Follows the view»."
+ },
+ "1.76.40": {
+  "icon": "new",
+  "it": "Terreno: «Rilievo della roccia», le pareti non sono più lisce come plastilina da lontano.",
+  "en": "Terrain: «Rock relief», walls no longer smooth like clay from far away."
+ },
+ "1.76.41": {
+  "icon": "ui",
+  "it": "Terreno: pannello in cinque sezioni, ognuna con le sue Avanzate.",
+  "en": "Terrain: panel in five sections, each with its own Advanced."
+ },
+ "1.76.42": {
+  "icon": "fix",
+  "it": "Ecosistemi: «Più rado in lontananza» non spoglia più il terreno; «Rilievo della roccia» in «Forma e roccia».",
+  "en": "Ecosystems: «Sparser in the distance» no longer bares the ground; «Rock relief» in «Shape and rock»."
+ },
+ "1.76.43": {
+  "icon": "material",
+  "it": "Terreno: solchi e colate delle pareti a gruppi, non più «a pettine».",
+  "en": "Terrain: creases and streaks on the walls in groups, no longer comb-like."
+ },
+ "1.76.44": {
+  "icon": "new",
+  "it": "Terreno: «Scultura», pennello per alzare, abbassare e lisciare il terreno.",
+  "en": "Terrain: «Sculpting», a brush to raise, lower and smooth the terrain."
+ },
+ "1.76.45": {
+  "icon": "fix",
+  "it": "Neve: niente più disegni ripetuti con poca neve.",
+  "en": "Snow: no more repeated patterns with little snow."
+ },
+ "1.76.46": {
+  "icon": "ui",
+  "it": "Interfaccia: schede chiuse all'inizio, cuori dei preferiti azzurri.",
+  "en": "Interface: sections closed at first, azure favourite hearts."
+ },
+ "1.76.47": {
+  "icon": "performance",
+  "it": "Velocità: ecosistemi e terreno rifatti molto più in fretta (minuti → secondi).",
+  "en": "Speed: ecosystems and terrain made again much faster (minutes → seconds)."
+ },
+ "1.76.48": {
+  "icon": "performance",
+  "it": "Velocità: cache su disco di terreno e alberi, vista aggiornata con la sola geometria.",
+  "en": "Speed: disk cache of terrain and trees, view updated with the geometry only."
+ },
+ "1.76.49": {
+  "icon": "performance",
+  "it": "Cache su disco con limiti stretti e pulizia automatica.",
+  "en": "Disk caches with tight limits and automatic cleanup."
+ },
+ "1.76.50": {
+  "icon": "performance",
+  "it": "Vista in tempo reale più veloce: meno ricaricamenti e shader rifatti.",
+  "en": "Faster real-time view: fewer reloads and shaders made again."
+ },
+ "1.76.51": {
+  "icon": "performance",
+  "it": "Cache della vista e delle texture con un limite, niente file vecchi su disco.",
+  "en": "View and texture caches with a limit, no old files left on disk."
+ },
+ "1.76.52": {
+  "icon": "performance",
+  "it": "Uscita dalla scultura più rapida: ghiaioni ed ecosistemi rifatti in meno tempo.",
+  "en": "Faster exit from sculpting: scree and ecosystems made again in less time."
+ },
+ "1.76.53": {
+  "icon": "ambience",
+  "it": "Nuova scheda «Rilievo 3D»: canaloni erosi, parete fratturata, strati a cenge.",
+  "en": "New “3D relief” card: eroded gullies, fractured wall, ledged strata."
+ },
+ "1.76.54": {
+  "icon": "ambience",
+  "it": "«Rilievo 3D»: i tipi di roccia cambiano la forma vera della roccia.",
+  "en": "“3D relief”: the kinds of rock change the real shape of the rock."
+ },
+ "1.76.55": {
+  "icon": "ambience",
+  "it": "«Rilievo 3D»: displacement vero nelle Avanzate, solo nel render finale.",
+  "en": "“3D relief”: true displacement in the Advanced settings, final render only."
+ },
+ "1.76.56": {
+  "icon": "performance",
+  "it": "Modificare un materiale del terreno è immediato (prima 25-31 s).",
+  "en": "Editing a terrain material is immediate (before 25-31 s)."
+ },
+ "1.76.57": {
+  "icon": "performance",
+  "it": "Path tracing del terreno pronto in pochi secondi (prima 53 s).",
+  "en": "Terrain path tracing ready in a few seconds (before 53 s)."
+ },
+ "1.76.58": {
+  "icon": "ambience",
+  "it": "«Rilievo 3D»: carica la tua mappa di rilievo e la sua mappa colore.",
+  "en": "“3D relief”: load your own relief map and its colour map."
+ },
+ "1.76.59": {
+  "icon": "ui",
+  "it": "«Rilievo 3D»: «Grandezza della mappa» e «Dimensione delle forme», nomi chiari.",
+  "en": "“3D relief”: “Map size” and “Shape size”, clear names."
+ },
+ "1.76.60": {
+  "icon": "ui",
+  "it": "Pulsanti AI arancioni: macchina fotografica e ciak con le stelline.",
+  "en": "Orange AI buttons: camera and clapperboard with sparkles."
+ },
+ "1.76.61": {
+  "icon": "ui",
+  "it": "Render, AI e Video AI uguali; ricerca nelle Novità.",
+  "en": "Render, AI and AI video alike; search in the news."
+ },
+ "1.76.62": {
+  "icon": "library",
+  "it": "Note di rilascio riscritte: solo le modifiche di Simpler, senza progetti particolari.",
+  "en": "Release notes rewritten: only Simpler's changes, no particular projects."
+ },
+ "1.77.0": {
+  "icon": "material",
+  "it": "Nuovo materiale Fogliame con la stagione: le foglie ingialliscono, diventano rosse e cadono.",
+  "en": "New Foliage material with the season: leaves turn yellow, red and fall."
+ },
+ "1.77.1": {
+  "icon": "material",
+  "it": "Nuovo materiale Tessuto: stoffe piene con la peluria o sottili che lasciano passare la luce.",
+  "en": "New Fabric material: full cloth with fuzz or thin cloth that lets light through."
+ },
+ "1.78.0": {
+  "icon": "library",
+  "it": "Libreria della vegetazione: importa le piante, foglie e legno ricevono il Fogliame con la stagione.",
+  "en": "Vegetation library: import plants, leaves and wood get Foliage with the season."
+ },
+ "1.78.1": {
+  "icon": "library",
+  "it": "Libreria riordinata: un menu per tipo con Simpler, I miei e Online; ricerca in tutta la libreria.",
+  "en": "Library reorganised: one menu per kind with Simpler, Mine and Online; search the whole library."
+ },
+ "1.78.2": {
+  "icon": "library",
+  "it": "Cartelle dei file: ecosistemi e decal hanno la loro cartella, spostabile.",
+  "en": "File folders: ecosystems and decals have their own movable folder."
+ },
+ "1.78.3": {
+  "icon": "light",
+  "it": "Pulsante delle luci nella barra in alto; Vegetazione e Modelli 3D con la parte Simpler.",
+  "en": "Lights button in the top bar; Vegetation and 3D models with the Simpler part."
+ },
+ "1.78.4": {
+  "icon": "brush",
+  "it": "Il pennello Distribuisci non blocca più la vista con troppi oggetti; le cartelle Simpler si possono rendere di sola lettura.",
+  "en": "The Scatter brush no longer freezes the view with too many objects; the Simpler folders can be made read only."
+ },
+ "1.78.5": {
+  "icon": "library",
+  "it": "Pacchetti con la loro voce e cartelle blu; idee e modelli gratuiti dal riquadro di avvio; piante OBJ e texture BMP corrette.",
+  "en": "Packages with their own entry and blue folders; ideas and free models from the start box; OBJ plants and BMP textures fixed."
+ },
+ "1.79.0": {
+  "icon": "new",
+  "it": "Prima versione ufficiale. Ecosistemi da aprire, modificare e copiare; 21 nuovi materiali Simpler; materiale «Interni»; contenuti scaricabili al clic; avviso degli aggiornamenti; programma di installazione con Blender incluso; vista in tempo reale senza blocchi; nebbia e pioggia pulite nel path tracing.",
+  "en": "First official release. Ecosystems to open, edit and copy; 21 new Simpler materials; «Interiors» material; content downloaded with a click; update notices; installer with Blender included; real-time view without freezes; clean fog and rain in path tracing."
+ }
+}

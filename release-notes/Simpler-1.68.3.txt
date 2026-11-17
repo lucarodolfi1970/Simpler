@@ -1,0 +1,5 @@
+SIMPLER 1.68.3  —  29 ottobre 2026
+==================================
+
+- Le primitive (cubo, sfera, piano…) hanno di nuovo una voce propria: Modelli 3D ▾ > Primitive, accanto a Poly Haven e Personalizzati. Restano protette come prima.
+- In Modelli 3D > Personalizzati ci sono solo le tue cartelle e i tuoi modelli.

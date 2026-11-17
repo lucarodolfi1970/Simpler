@@ -1,0 +1,13 @@
+SIMPLER 1.17.7  —  24 ottobre 2026
+==================================
+
+OGNI SCENA PARTE PULITA
+-----------------------
+- All'avvio, con «Nuova scena» e aprendo un progetto, tutte le sezioni dei pannelli sono aperte e tutti i riquadri «Avanzate» chiusi. Prima Simpler si ricordava, anche tra una sessione e l'altra, quali avevi aperto o chiuso. Durante il lavoro sulla scena restano come li lasci.
+
+COLORI DEL CIELO DA UNA FOTO (Cielo › Avanzate)
+-----------------------------------------------
+- Una lista di piccole foto quadrate: un clic e Simpler regola il cielo sui loro colori. Primi preset: quattro tramonti.
+- «Carica foto…»: una foto qualsiasi; Simpler ne guarda solo i colori, li confronta con quelli dei cieli che sa fare e imposta ora, foschia, ozono, nuvole volumetriche, esposizione e resa colore. Mostra i colori trovati e la somiglianza.
+- «Salva come preset»: la foto, ritagliata quadrata, resta nella lista per le prossime volte (clic destro per toglierla).
+- La tabella dei colori è stata rifatta tenendo conto anche dell'esposizione e della resa colore: la prima versione era troppo pallida rispetto alle foto. Si ricostruisce da sola al prossimo avvio (circa mezz'ora, in background); fino ad allora la sezione dice che non è pronta.

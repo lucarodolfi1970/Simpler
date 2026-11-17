@@ -1,0 +1,9 @@
+SIMPLER 1.13.37  —  23 ottobre 2026
+===================================
+
+CORREGGI MATERIALI: VALORI IN PERCENTUALE
+-----------------------------------------
+- Nelle modifiche ruvidezza, metallo, riflesso, trasparenza, vernice, luminosità e saturazione si scrivono in percentuale, come nell'editor dei materiali: Imposta 100 = 100%, Somma 20 = +20 punti. Accanto al valore c'è l'unità (%, ×, nit).
+- Moltiplica resta un fattore: 1,5 = una volta e mezza, 0,5 = la metà.
+- Anche l'elenco dei materiali mostra ruvidezza, metallo e trasparenza in percentuale.
+- I menu a tendina hanno il testo a sinistra e la freccia a destra.

@@ -1,0 +1,8 @@
+SIMPLER 1.76.59  —  5 November 2026
+===================================
+
+"3D relief": the two "Size" sliders have clear names and descriptions.
+
+- "Map size" (in metres): how many metres of wall one repeat of your relief and colour maps covers. It does not change the real shape of the rock in the mesh.
+- "Shape size" (in %): how large the gullies, blocks and ledges of the chosen kind are compared with the thickness of the layers; it changes the real shape of the rock in the mesh (the terrain is recomputed).
+- Hearts already put on "Size" move by themselves to "Shape size".

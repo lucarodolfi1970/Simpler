@@ -1,0 +1,5 @@
+SIMPLER 1.37.5  —  25 ottobre 2026
+==================================
+
+- «La storia»: il riquadro prende tutta la larghezza della libreria fin dall'avvio. Prima si allargava solo dopo aver ridimensionato la barra di destra. Segue anche ogni cambio di misura della finestra.
+- Il logo di Simpler, piccolo, prima del titolo.

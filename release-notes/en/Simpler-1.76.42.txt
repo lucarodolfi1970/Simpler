@@ -1,0 +1,9 @@
+SIMPLER 1.76.42  —  4 November 2026
+===================================
+
+Ecosystems: «Sparser in the distance» no longer bares the ground. Terrain: «Rock relief» in «Shape and rock».
+
+- Fix of a regression of 1.76.37: with the camera far away, after «Recompute from the view» the grass almost vanished (1,878 pieces over a 3 km view). The thinning for the memory and «Sparser in the distance» multiplied (far away 1 piece in 12 times 1 in 400), and «Sparser» started at 25 m even with the camera 900 m away.
+- Now «Sparser» starts at 25 m or at a quarter of the distance to the point looked at, if farther; the pieces left get bigger (up to 2.5 times) so the surface stays covered; where the pieces are already thinned for the memory it takes away at most 40% more. In the test: 30% fewer pieces, surface 65% covered (before: 96% fewer, bare ground).
+- «Rock relief» moved to «Shape and rock», in view (no longer in Advanced), and it works with «Colours from the terrain» off too. Its favourite heart follows it.
+- Tooltip of «Sparser in the distance» rewritten.

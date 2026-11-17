@@ -1,0 +1,5 @@
+SIMPLER 1.37.2  —  25 October 2026
+==================================
+
+- Library: new «The story» menu, before 3D models. It is the tab Simpler shows when it starts. In a few lines signed by Luca Rodolfi it tells why Simpler exists and in what spirit, with the link to the site and everything about Simpler in English and Italian: https://simpler-render.web.app/en/
+- Before, «Materials · Custom» opened at start: it was the starting tab left over from an old version.

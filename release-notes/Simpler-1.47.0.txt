@@ -1,0 +1,8 @@
+SIMPLER 1.47.0  —  26 ottobre 2026
+==================================
+
+- Neve, passo 2: il mantello di neve con spessore vero. Nuovo cursore «Spessore» (0–50 cm, di serie 10) nella scheda Neve. Sopra terreno, tetti, cornicioni e auto si posa uno strato di neve vero, arrotondato sui bordi (il tettuccio di un'auto, il bordo di un tetto) e appoggiato contro i muri. Segue le chiazze della neve, non va sotto tettoie, auto e alberi e lascia stare gli oggetti «Sempre asciutto». A 0 resta solo il bianco sulle superfici.
+- Erba e alberi delle distribuzioni restano solo bianchi, così come le parti con i buchi (foglie, reti).
+- Nuovo «Senza mantello» nelle Avanzate dell'oggetto (scheda «Neve», mentre nevica): niente strato sull'oggetto, resta il bianco.
+- Il mantello è uguale nella vista in tempo reale e nel path tracing. Si ricalcola da solo quando cambiano la scena o la neve (scritta rossa «Calcolo del mantello di neve»). Non viene salvato nel progetto: si rifà all'apertura.
+- Neve: le chiazze non mostrano più la ripetizione ogni 8 metri su un terreno grande (due scale della stessa trama).

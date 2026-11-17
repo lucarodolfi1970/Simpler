@@ -1,0 +1,12 @@
+SIMPLER 1.13.48  —  23 October 2026
+===================================
+
+«BREAK THE REPETITION» IN THE REAL-TIME VIEW TOO
+-----------------------------------------------
+- Randomize UV now shows in real time too, with UV mapping and with Triplanar: colour, roughness, metal, emission, opacity and normal maps (these only shifted, never turned). The settings are the same (zone size, blend, turn the zones).
+- The random pattern of the zones is of the same kind but not identical to the path tracing one.
+- It costs a little GPU only on the materials that use it.
+
+SPLASH
+------
+- The version number (x.y.z) is small at the top right.

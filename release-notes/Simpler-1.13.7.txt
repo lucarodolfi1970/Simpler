@@ -1,0 +1,8 @@
+SIMPLER 1.13.7  —  22 ottobre 2026
+==================================
+
+TOUCHPAD (DIAGNOSI)
+-------------------
+- Su alcuni computer le due dita sul touchpad non spostavano la vista. Simpler ora annota nel suo registro i primi
+  80 movimenti di rotellina e touchpad: i valori cambiano da un computer all'altro e servono a riconoscere il
+  touchpad con certezza. Nessun cambiamento visibile.

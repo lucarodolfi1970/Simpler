@@ -1,0 +1,7 @@
+SIMPLER 1.52.0  —  27 ottobre 2026
+==================================
+
+- Neve > Avanzate > «Scolpisci la neve»: passi, tracce di pneumatici, neve spalata o ammucchiata, disegnati sulla vista tenendo premuto il tasto sinistro e trascinando lungo il percorso. Cinque modi: Passi (impronte a destra e a sinistra, girate lungo il percorso, con il bordo di neve spostata; grandezza regolabile), Pneumatici (due solchi con battistrada alla carreggiata scelta, con la neve spinta ai lati), Scava (come una pala, fino al terreno), Solleva e Liscia.
+- Dove passi il mantello di neve diventa fine (circa 1,5 cm), il resto resta leggero: un'impronta ha la sua forma anche dove le celle del mantello sono grandi. Sotto passi e pneumatici la neve resta pressata, più grigia e liscia, e mantiene la suola e il battistrada anche dove la neve è sottile; solo «Scava» arriva al terreno.
+- Uguale nel rendering e nella vista in tempo reale (la stessa geometria, lo stesso colore della neve pressata). Ogni tratto si annulla con Ctrl+Z, resta nel progetto e si cancella tutto con «Cancella la neve scolpita». Vale per il mantello del terreno e dei modelli grandi (tetti); i modelli piccoli con il mantello sulla forma non si scolpiscono.
+- Velocità: un tratto costa pochi millesimi di secondo e il mantello si rifà in una frazione di secondo, perché quando cambia solo la neve scolpita Simpler tiene le altezze, i modelli e le distribuzioni già calcolati. Il taglio del bordo della neve è ora vettoriale: più veloce anche per il mantello normale (0,6 → 0,05 s nella scena di prova).

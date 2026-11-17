@@ -1,0 +1,8 @@
+SIMPLER 1.75.48  —  1 novembre 2026
+===================================
+
+Modelli importati al centro della vista.
+
+- Un modello importato (FBX, OBJ, glTF e gli altri formati, anche trascinato nella finestra) ora appoggia la base nel punto al centro dello schermo, dove sta guardando la camera, come gli oggetti della libreria. Prima restava nelle coordinate del file, spesso lontano dalla vista.
+- Più file importati insieme: il primo va al centro della vista, gli altri si spostano dello stesso tratto e restano allineati tra loro.
+- Nella finestra «Importa nella scena» c'è la nuova opzione «Al centro della vista», accesa di base. Spenta, il modello resta nelle coordinate del file: serve per parti dello stesso progetto da far combaciare. La scelta viene ricordata.

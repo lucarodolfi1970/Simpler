@@ -1,0 +1,6 @@
+SIMPLER 1.65.1  —  28 October 2026
+==================================
+
+- Rain bounces on everything: splashes now also appear on objects set to «Does not shelter» (like cars) and on the models of distributions (cars, benches, trees; not grass). Near the camera, no drops fall under or inside these objects any more.
+- More visible splashes: wider, taller crowns with more droplets, paler than the falling drops.
+- Rain at night: drops near street lights and lamps now light up, above all against the light, as in a photograph. Before, the smooth water of the drops reflected and refracted the light of the lamps only by chance and stayed almost invisible. In the real-time view too, drops in front of a lamp shine more.

@@ -1,0 +1,7 @@
+SIMPLER 1.76.46  —  4 novembre 2026
+===================================
+
+Interfaccia: schede chiuse e cuori azzurri.
+
+- Tutte le schede dei pannelli partono chiuse: si vede solo l'elenco con le icone, si apre quella che serve. Poi restano come le lasci finché la scena è aperta; una scena nuova o aperta riparte con tutte chiuse.
+- I cuori dei comandi preferiti non sono più gialli: un azzurro tenue, meno invadente. Il cuore vuoto è solo un contorno scuro; i comandi base hanno il cuore pieno con il bordo scuro. Anche il cuore della barra in alto.

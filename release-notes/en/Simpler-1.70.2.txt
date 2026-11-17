@@ -1,0 +1,7 @@
+SIMPLER 1.70.2  —  29 October 2026
+==================================
+
+- Ecosystems much faster in large scenes, both when you place one and with «Recalculate from the view». In a scene with thousands of objects each calculation went from about 37 to about 7 seconds the first time and 4 afterwards (measured without a graphics card; with one it is quicker). Before, an ecosystem ran 2-3 of them in a row and took more than a minute.
+  - The memory of the shapes that hide the surface («No pieces behind the models») added up, at every object, the space taken by all the others: with 3,800 objects that was 7 million sums and 16 seconds. It was a fault introduced in 1.67.5.
+  - Large triangles, like long thin columns, are now drawn row by row instead of testing every pixel of their square.
+- The result is identical: same pixels covered, same depths.

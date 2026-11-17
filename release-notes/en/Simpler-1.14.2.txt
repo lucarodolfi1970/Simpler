@@ -1,0 +1,6 @@
+SIMPLER 1.14.2  —  24 October 2026
+==================================
+
+NOISE DIAGNOSTICS
+-----------------
+- For the denoiser blotches that appear only on some scenes (the kitchen with caustics off): with the file "diag.on" in the %LOCALAPPDATA%\Simpler folder, the last pass of the ray-traced view also saves "diag.exr" with the image before the denoiser, the albedo and normals the denoiser uses and the number of samples of every pixel, plus the Cycles settings in "diag.exr.txt". The "diag.on" file is then deleted: no cost in normal use.

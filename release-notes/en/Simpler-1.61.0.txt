@@ -1,0 +1,9 @@
+SIMPLER 1.61.0  —  27 October 2026
+==================================
+
+- New: falling snowflakes (Ambience ▸ Falling snowflakes ▸ Snowing). They are real flakes in the scene, only where the camera looks: they disappear behind buildings, there are none under canopies and porches, at night they light up in the light of street lamps, and with depth of field the nearest become blurred discs. Intensity, Wind, Irregularity (gusts and swirls: the flakes no longer all go parallel) and Motion blur (each flake becomes a streak along its movement, like a photo with a slow shutter). In Advanced: wind direction, patches (thicker curtains and clearer gaps), flake size, how far they reach, another arrangement. They show in the real-time view too, are computed again when the camera stops and are hidden with «Hide the snow». They are independent of the snow on the ground.
+- Snow mantle on cars and models: no more «rings» and steps on curved surfaces, the snow is now smooth and soft.
+- Pavements, steps and kerbs (low, flat models) now have a mantle that can be sculpted: footprints and tyres work there too.
+- When changing the ambience (night, sunset…) or adding a light the red «Busy» box appears at once and stays until the view is ready, with the hourglass: before, for a few seconds nothing showed and it looked broken.
+- «Brush softness» shows only with the brush on.
+- The value boxes line up in a column even when the unit changes (%, cm, °).

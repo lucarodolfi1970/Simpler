@@ -1,0 +1,6 @@
+SIMPLER 1.67.3  —  28 October 2026
+==================================
+
+- «No pieces behind the models» is more precise. Now only what an object really covers is hidden: its exact shape, instead of the cloud of points used before, which made objects slightly bigger. It applies to any object at least 1.5 m high: objects in the scene and copies of all the distributions.
+- Transparent parts hide nothing: glass, water, transparent plastic, leaves and grass cut out by transparency, fog. Behind a glass wall or under the leaves the surface gets its pieces. For a tree, the trunk and branches count, not the transparent leaves.
+- Far copies are computed with simplified shapes, so the count stays fast even with thousands of trees.

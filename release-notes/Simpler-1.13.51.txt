@@ -1,0 +1,10 @@
+SIMPLER 1.13.51  —  23 ottobre 2026
+===================================
+
+LUCE RIFLESSA DALL'ACQUA: PIÙ PULITA, ANCHE DALLE LUCI
+-------------------------------------------------------
+- Niente più puntinatura: quando i campioni non bastano diventa più morbida l'immagine della luce, invece di riempirla di punti sparsi. Anche i triangoli d'acqua i cui raggi cadono su superfici diverse ora lasciano una macchia della loro misura, non un punto.
+- Oltre al sole contano anche le luci (punto, faretto, area) vicine all'acqua o sotto di essa. Vista da sotto, la superficie rimanda verso il basso una parte della luce, e tutta oltre i 48,6° (riflessione totale), sul fondo e sulle pareti della piscina.
+- La luce della luna è esclusa: riflessa non si vedrebbe.
+- Nella vista, con acqua molto suddivisa, il calcolo usa le stesse onde un livello più grossolane (circa 4 volte più veloce); il render finale usa quelle vere.
+- Quando si vede il reticolo: con onde ampie (da 50 cm in su) e superfici chiare. Con onde piccole (15 cm) la luce riflessa si concentra a pochi centimetri dalla superficie e sui muri arriva come un chiarore uniforme. Una superficie quasi nera (colore 0,4%) non rimanda nulla. È la fisica reale, non un limite del calcolo.

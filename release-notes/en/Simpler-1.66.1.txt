@@ -1,0 +1,8 @@
+SIMPLER 1.66.1  —  28 October 2026
+==================================
+
+- Smoother view while you work. The logs showed freezes of 20-35 seconds, sometimes with Windows reporting the view as «not responding». Every time something changed in the lights or materials, the view prepared all materials again (40-60, about half a second each in a large scene) in one go and stopped. Now:
+  - it prepares them in the background, several at a time, and meanwhile shows «Busy · please wait» with the reason (lights, shadows, materials);
+  - this applies when you add, copy or delete a light, change shadows or colour rendering, turn the rain on or off, load the view or a model.
+- The view's wet materials contain the code of the drops on surfaces and of the rings in puddles only while those are on: the rest of the time they are lighter to prepare.
+- Falling drops are computed again only when the camera moves enough to leave the margin around the frame. Before, it happened at every notch of the mouse wheel: half a second of the engine and about 10 MB for the view each time.

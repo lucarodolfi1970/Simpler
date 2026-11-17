@@ -1,0 +1,6 @@
+SIMPLER 1.53.0  —  27 ottobre 2026
+==================================
+
+- Neve > Avanzate > «Neve vecchia» (0-100%): la neve caduta da giorni. Il bianco si spegne e diventa più caldo, compaiono aloni di sporco sparsi a caso (a due grandezze, senza ripetizioni visibili), più marcati dove la neve si assottiglia e nelle tracce di passi e pneumatici; la superficie diventa una crosta un po' più lucida. A 0% la neve resta fresca, come prima.
+- Agisce solo sul materiale della neve: il mantello e il bianco della neve su terreno, tetti, auto e decal. Gli aloni cadono negli stessi punti nel rendering e nella vista in tempo reale (la stessa mappa e le stesse formule).
+- Nessun costo: niente geometria nuova, il mantello non si ricalcola; lo slider cambia solo il colore.

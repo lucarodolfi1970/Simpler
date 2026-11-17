@@ -1,0 +1,13 @@
+SIMPLER 1.7.1  —  21 October 2026
+=================================
+
+NEW
+---
+- MOVE ON SURFACES: dragging the centre of the gizmo (the yellow square) slides the selection
+  over the surfaces under the mouse, always resting on its base: floor, table, terrain, even library models
+  and scatters. It is "Drop" while you move it.
+  · An object below the floor comes back on top as soon as you grab it by the centre.
+  · The label next to the mouse shows "on surface".
+  · Holding Alt: free movement as before (even in mid-air). The axis arrows and the plane wedges work as
+    usual.
+  · With Shift (copies by dragging) movement stays free.

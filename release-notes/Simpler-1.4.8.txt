@@ -1,0 +1,11 @@
+SIMPLER 1.4.8  —  21 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- ALBERO: ORIGINALE E ISTANZE SI SPOSTANO INSIEME. Trascinando l'originale (o la riga "N istanze" sotto di lui)
+  dentro un altro gruppo, sopra o sotto un'altra riga, le sue istanze lo seguono: restano raggruppate sotto di lui
+  anche nel nuovo posto, ognuna nella sua posizione nella scena. Un solo Ctrl+Z annulla tutto lo spostamento.
+  Lasciando qualcosa sulla riga "N istanze" va accanto all'originale (stesso livello).
+  Le singole istanze si possono sempre trascinare da sole (aprendo la riga "N istanze"): spostata altrove,
+  un'istanza compare con il suo pallino arancione al nuovo posto.

@@ -1,0 +1,5 @@
+SIMPLER 1.34.0  —  25 October 2026
+==================================
+
+- Spacing scatter, «By distance» mode: new «Random distance» setting. Each gap gets a random 0 to that many metres more, so rows are no longer perfectly aligned (parked cars, trees, lamp posts). «Distance» becomes the minimum distance: it never goes below, so models do not overlap; on a closed line it holds between the last object and the first too. The same random seed always gives the same result; «Change» gives another.
+- Lights inside scattered models: «dusk to dawn» lights now switch on and off in the scattered copies too. Before they stayed as saved in the library (a car saved by day had its cabin light off in every copy, while the plate light, always on, showed). This is for path tracing and the render; the real-time view does not draw the lights of scattered copies.

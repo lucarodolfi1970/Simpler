@@ -1,0 +1,6 @@
+SIMPLER 1.69.1  —  29 ottobre 2026
+==================================
+
+- Corretto lo Sporco sui modelli importati in pollici o millimetri (come molti modelli architettonici): la dimensione si misurava nelle unità del modello, quindi lo sporco era decine di volte troppo piccolo e sembrava una grana uniforme, come se non ci fosse. Ora la dimensione è in centimetri veri, uguale per tutti i modelli, sia nel path tracing sia nella vista in tempo reale.
+- Lo Sporco è più visibile: a 50% si vede la texture com'è, a 100% è il doppio.
+- Il tooltip di «Sui bordi» avvisa che, la prima volta che lo usi, la scheda grafica prepara un programma nuovo, operazione che può richiedere un minuto o due.

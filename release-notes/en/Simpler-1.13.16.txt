@@ -1,0 +1,7 @@
+SIMPLER 1.13.16  —  22 October 2026
+===================================
+
+BUG FIXES
+---------
+- Renaming a material in the editor and pressing "Save", the library kept the old name (for example "Acqua
+  increspata" instead of "Acqua"). Now the library material takes the new name too, in the same folder.

@@ -1,0 +1,18 @@
+SIMPLER 1.0.1  —  18 October 2026
+=================================
+
+NEW FEATURES
+------------
+- Caustics in the Rendering panel with a single control: Off / Normal / Sharp (MNEE).
+  "Off" turns off all caustics (faster, cleaner render); with "Normal" and "Sharp"
+  the details remain available (reflective and refractive caustics).
+- Cleaner top bar: the "Caustics" button and the path tracing progress bar were removed
+  (progress stays in the badge at the bottom of the view, caustics in the Rendering panel).
+
+BUG FIXES
+---------
+- Red message "Cannot communicate with the engine: An error occurred while sending the request"
+  appearing during the path tracing preview: the engine now accepts more simultaneous requests and
+  the app automatically retries requests that were refused for a moment.
+- Objects moved in the tree into the "Floor" group were treated as floor
+  (excluded from "Drop" and from framing).

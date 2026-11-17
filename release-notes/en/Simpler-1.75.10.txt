@@ -1,0 +1,12 @@
+SIMPLER 1.75.10  —  31 October 2026
+===================================
+
+Lighter SmartView, sea caustics after off/on, selection without reloading the view.
+
+- SmartView: with SmartView on the view was slower than without.
+  - The shadow level is no longer changed: shadows fade out and their maps are no longer drawn, without rebuilding the shaders of the whole scene. The level you had before comes back by itself.
+  - The lights of distributions (street lamps and the like) stay as chosen while you move.
+- Real-time view, for everyone: walking among different kinds of lamps rebuilt the shaders of every material («Updating the lights», up to 9 s). The lights of distributions are now a fixed set.
+- Touching a light no longer opens the red «Updating the materials» box: lines and labels no longer ask for it.
+- Clicking a model in some city scenes rebuilt the whole 3D view: the engine said «nothing to add» and the app read it as an error. Now the view stays as it is.
+- Sea caustics: turning «Light reflected by water» off and on again left the water darker and without caustics. The rain did not go through the materials again after the light was recomputed; now it does, and on/off/on gives the same image.

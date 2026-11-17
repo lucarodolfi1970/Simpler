@@ -1,0 +1,12 @@
+SIMPLER 1.77.1  —  6 November 2026
+==================================
+
+New material type «Fabric»: full cloth with fuzz, or thin cloth that lets you see and lets light through.
+
+- In the material editor, in the type menu, there is «Fabric».
+  - Full: velvet, wool, felt, cotton, denim. Fuzz: the soft light veil on the edges of cloth.
+  - Thin: curtains, tulle, gauze. Transparency (how much you see through), Denser edge on (seen at a slant the cloth becomes more opaque, like a real curtain), Light through (a curtain with the sun behind lights up).
+  - Advanced: Fuzz softness and colour; «Where the fuzz is», a mask to have it only on some parts; «Tint mask» with its colour, to change the colour of stripes or patterns without making the texture again.
+  - Switching to Fabric, if the fuzz was at zero it starts at 50%.
+  - The channels a cloth needs remain: colour, roughness, dirt, relief, opacity and projection.
+  - The same in the real-time view and in path tracing.

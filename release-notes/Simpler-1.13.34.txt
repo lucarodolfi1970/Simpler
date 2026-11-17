@@ -1,0 +1,10 @@
+SIMPLER 1.13.34  —  23 ottobre 2026
+===================================
+
+IMPORTA MODELLI NELLA LIBRERIA: LE DIMENSIONI PRIMA DI IMPORTARE
+----------------------------------------------------------------
+- Appena aggiungi i file (uno per uno o un'intera cartella) Simpler li misura in background, uno dopo l'altro: ogni riga mostra larghezza × profondità · altezza (in mm, cm, m o km). Così sai subito se un modello è troppo piccolo o troppo grande.
+- Ogni riga ha la sua scala «×» (1 = come nel file): scrivi 25,4 per ingrandire, 0,01 per rimpicciolire, e la riga mostra subito il risultato (es. «alto 7 cm → 1,78 m»).
+- «Scala per tutti» scrive lo stesso fattore in tutte le righe; poi puoi cambiare le singole righe.
+- Le misure strane (più piccole di 3 cm o più grandi di 2 km) sono in arancione. Premendo Importa, se ce ne sono, Simpler lo dice e chiede se importarle così o tornare all'elenco per cambiare la scala.
+- «Controlla la scala dopo ogni modello» resta: la pausa mostra le dimensioni anche quando la libreria non le ha ancora.

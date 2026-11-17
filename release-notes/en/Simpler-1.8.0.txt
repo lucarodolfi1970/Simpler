@@ -1,0 +1,29 @@
+SIMPLER 1.8.0  —  21 October 2026
+=================================
+
+POINT-BASED SCATTERS: LAWNS AND WOODS WITH HUNDREDS OF THOUSANDS OF PIECES
+--------------------------------------------------------------------------
+- A scatter is no longer made of one object per piece, but of a single point object: each point says which
+  model to show and how it is placed (position, rotation, scale). Blender draws them as instances with Geometry
+  Nodes ("Instance on Points"): same result in path tracing and in the final render.
+- Speed (measured without a graphics card):
+  · redoing a scatter of 20,000 pieces: 0.2 s; 50,000: less than 1 s (previously 1-2 s for 3,000);
+  · undo and redo: instant;
+  · the scene list and the tree no longer grow with the pieces: the scatter is a single row and shows
+    how many pieces it has.
+- Real-time view: the points arrive in one block, in binary. The view draws them with the same instancing and
+  levels of detail as before. In addition, pieces that are tiny on screen (a distant blade of grass) are not
+  drawn, and the graphics card stays smooth even with a huge number of pieces.
+- The brush finds surfaces with a search tree (three-mesh-bvh): brush strokes stay fast even
+  over heavy models.
+- Scatters in projects made with earlier versions are converted automatically when the project is opened,
+  together with their brush strokes.
+
+WHAT CHANGES IN USE
+-------------------
+- Clicking a piece selects its scatter (the gizmo moves all of it). Individual pieces can no longer be moved by
+  hand: you change them with the brush, Shift to erase, and with the adjustments.
+- Materials: drag a material onto a piece and it changes on all the pieces of that model, only on the surfaces
+  that had the material under the mouse (with Shift, on all the surfaces of the model). Changes made in the
+  material editor also show up immediately on scatters.
+- Hiding a scatter from the tree hides all its pieces, in path tracing too.

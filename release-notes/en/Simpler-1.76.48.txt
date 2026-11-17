@@ -1,0 +1,8 @@
+SIMPLER 1.76.48  —  4 November 2026
+===================================
+
+Speed: no more work done again after reopening, and the view updated at once.
+
+- The terrain's shape (erosion included) is also kept on disk: after reopening the scene the first change no longer runs the erosion again (15 s on a 3 km mountain).
+- The simplified versions of big trees and stones (used to know what hides the view) are kept on disk: after reopening, the ecosystems do not prepare them again.
+- After a change of shape (sculpting, terrain parameters) the view gets only the new geometry: it already has materials and textures. Before, a second Blender wrote all the terrain's textures again (18 s); now about a second.

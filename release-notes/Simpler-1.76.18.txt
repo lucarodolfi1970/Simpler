@@ -1,0 +1,8 @@
+SIMPLER 1.76.18  —  2 novembre 2026
+===================================
+
+Appoggia alla superficie, per tutte le distribuzioni.
+
+- Nuovo pulsante «Appoggia alla superficie» nelle Avanzate di ogni distribuzione (Pennello, Area, Spaziatura) e di ogni ecosistema: rimette ogni oggetto sulla superficie sotto di lui, in verticale, o sopra se è finito sepolto, con la sua rotazione e la sua scala. Serve quando il terreno o i modelli sotto sono cambiati dopo averli messi.
+- Gli oggetti già appoggiati (entro 30 cm, per esempio affondati un poco di proposito) restano dove sono.
+- Quando modifichi, rigeneri o sposti un terreno, le distribuzioni sopra di lui vengono appoggiate da sole sulla nuova forma (gli ecosistemi vengono rifatti, come dalla 1.76.15). Un solo Ctrl+Z annulla tutto insieme.

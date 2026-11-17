@@ -1,0 +1,11 @@
+SIMPLER 1.76.57  —  5 novembre 2026
+===================================
+
+Path tracing del terreno: si prepara in pochi secondi, non in un minuto.
+
+- Con la 1.76.56 la modifica di un materiale del terreno era immediata, ma alla partenza del path tracing i materiali del terreno si preparavano in 53 s.
+- Causa: ogni materiale del terreno aveva circa 1000 nodi. Il 93% era lo stesso calcolo del tono e del rilievo della roccia ripetuto per ogni zona vicina nella fascia di sfumatura, e Blender rallenta molto a ogni nodo aggiunto in un albero grande.
+- Ora quel calcolo si fa una volta per materiale e le zone lo condividono: circa 270 nodi, 0,4-0,5 s per materiale invece di 6-9 s.
+- Il risultato non cambia. Nella fascia di sfumatura il rilievo delle zone vicine ora usa lo spessore giusto degli strati (prima usava sempre 10 m) e segue i cursori di «Rilievo 3D» senza rifare i materiali.
+- La copia che Simpler tiene per Ctrl+Z non viene più preparata per il path tracing.
+- Nuovo controllo automatico: i materiali del terreno devono essere pronti per Cycles in meno di 6 s.

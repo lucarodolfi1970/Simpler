@@ -1,0 +1,6 @@
+SIMPLER 1.33.2  —  25 October 2026
+==================================
+
+- Saving a model to the library no longer warns about «missing textures» for empty placeholders of the original file: for example 3ds Max's «Map #0», a map with no picture (its path is only a folder) and connected to nothing in the material. There was never a texture to save. Texture nodes connected to nothing are skipped too.
+- When a texture is really missing, the warning has Simpler's style (no longer the Windows box) and tells the real causes: file moved or deleted, or on a drive that is not connected. It also says how to fix it: right click on the model in the tree ▸ Find missing textures…, then save again; or import it again from the original file.
+- The question about the scale in the import wizard has Simpler's style too.

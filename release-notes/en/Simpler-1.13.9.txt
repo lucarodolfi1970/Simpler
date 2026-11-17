@@ -1,0 +1,15 @@
+SIMPLER 1.13.9  —  22 October 2026
+==================================
+
+DISTRIBUTIONS OF BIG MODELS: FASTER, NO MORE BUILDINGS DISAPPEARING
+-------------------------------------------------------------------
+- Why they disappeared: a building of a kit is made of hundreds of pieces, and the view drew every piece separately
+  (112 buildings = over 12,000 draws per frame, 16 fps). The performance protection saw the slow view and, taking
+  the triangles for too many, hid the farthest pieces; but the problem was not the triangles (3 million are fine on
+  a recent graphics card), it was the number of draws.
+- Now the pieces of a model with the same material become a single geometry when the model reaches the view: one
+  draw per material instead of per piece. Test: a model of 40 pieces with 2 materials goes from 40 to 2 draws per
+  level of detail.
+- The performance protection no longer hides an object taller than 2% of the view: far buildings stay, at most in
+  the lightest version. Far blades of grass still disappear as before.
+- Path tracing does not change: everything is always there.

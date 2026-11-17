@@ -1,0 +1,12 @@
+SIMPLER 1.75.49  —  1 November 2026
+===================================
+
+Haze and fog: low fog, colour, start distance, presets.
+
+- Low fog: the fog is thick near the ground and thins out going up. «Height» says up to where it is thick (metres from height 0), «Falloff» over how many metres above it thins out. The sky above a low layer stays clear, as in a real fog; off, the fog is the same at every height as before.
+- Chosen colour: the fog takes the colour you choose (light blue, sand, grey-blue…) at the same brightness as the automatic one; off, the colour comes from the sky and the sun as before.
+- Start distance (in Advanced): near things stay sharp and the fog begins further away.
+- Presets for the fog alone: None, Light haze, Low fog, Fog bank, Warm dust, Foggy night. They change only the fog: sky, sun and clouds stay as they are. The Ambience presets also leave the height, colour and start distance you chose.
+- No extra render cost: the normal fog is still computed at the end of the image, now along each ray with its height.
+- Real-time view: the same low fog, colour and start distance, and the fog now follows the same formula as the path tracing (before it was lighter near and thicker far). A few calculations per pixel: the view and SmartView do not slow down.
+- The volumetric fog already follows the height and the colour; irregularity, second layer and glow towards the lights come in the next version.

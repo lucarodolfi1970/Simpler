@@ -1,0 +1,22 @@
+SIMPLER 1.73.6  —  30 October 2026
+==================================
+
+Ecosystems with the sea, and a faster render with clouds.
+
+- Ecosystems: with «Compute only the framed area» the estimate stayed at about 2.8 million pieces even from very close.
+  - Cause: grass also grew on the sea bed, under the sea. The sea lets the ground below it show, so for Simpler that sea bed was «framed» up to the horizon.
+  - In a sea scene, from a saved view, 91% of the pieces were under water.
+  - The count always reached the cap of 4 million candidates set in 1.73.5. That is why the number was almost the same in every frame.
+  - Now, with the sea on, nothing grows below its level: neither in the estimate nor in the pieces. This applies to every ecosystem and every surface (ground, cliff, models).
+  - Same view: from 2.76 million to 1.23 million pieces, all on land.
+  - If the surface is all under the sea, a message says so instead of making an empty ecosystem.
+- Final render with volumetric clouds: about 40% faster.
+  - Clouds are computed in steps. The final render used steps half the size of the view's: now it uses the same.
+  - Measured on the sunset over the sea, sky in the frame, 40 samples: 274 → 159 s. The picture is the same apart from noise (mean difference 1.6 out of 255).
+  - Clouds cost even when out of the frame, because sunlight crosses them for the shadows. There too the time per sample drops by 39%.
+
+What costs in the render of a sea scene with clouds (measured on the processor, at low resolution):
+- Volumetric clouds were about 80% of the time of each sample.
+- The sea costs almost only the preparation of the scene (about 7 s, once per render). Per sample it costs almost nothing.
+- Shallow water transparency, coast and a cliff's levels of detail: negligible differences.
+- The number of light bounces in the clouds (24 or 12): no difference in time.

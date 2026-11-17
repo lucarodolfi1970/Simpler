@@ -1,0 +1,10 @@
+SIMPLER 1.76.51  —  5 November 2026
+===================================
+
+Disk caches with a limit and a faster first terrain edit after an update.
+
+- The caches of the 3D view and of the reduced textures now have a limit (distribution points 2 GB, models prepared for the view 4 GB, reduced textures 3 GB): before, they grew without end (34 GB found). The files used least recently go first; those used in the last day and the textures of the open scene stay. Whatever is missing is made again by itself: the first opening of an old project can be a little slower.
+- The view maps (snow, rain, ice, painted dirt) left by earlier sessions are deleted after two hours: before, the last one of each session stayed forever (up to hundreds of MB).
+- The terrain shape cache stays valid when a new version of Simpler changes other parts of the terrain: the first edit after an update no longer computes the erosion again (about 15 s on a mountain). With this version one more recalculation is needed, the last one.
+- New automatic check: a terrain saved and opened again does not make its materials again.
+- New automatic check: the view maps of past sessions are deleted, those in use are not.

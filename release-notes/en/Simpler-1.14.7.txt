@@ -1,0 +1,6 @@
+SIMPLER 1.14.7  —  24 October 2026
+==================================
+
+FIX
+---
+- "Path tracing failed: enum JPEG not found": if the diagnostics could not save diag.exr (for example because the previous file was still open), the ray-traced view stayed stuck on the EXR format and every following image failed. Now the format is always restored and a locked diag.exr is saved under another name.

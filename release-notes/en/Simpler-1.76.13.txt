@@ -1,0 +1,6 @@
+SIMPLER 1.76.13  —  2 November 2026
+===================================
+
+Library search per tab.
+
+- The search text applies only to the tab you typed it in: another tab starts with an empty search, and going back gives you the text you had.

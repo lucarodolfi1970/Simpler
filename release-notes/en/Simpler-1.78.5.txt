@@ -1,0 +1,15 @@
+SIMPLER 1.78.5  —  8 November 2026
+==================================
+
+Packages with their own entry and blue folders, ideas and free models from the start box, OBJ and BMP plants fixed.
+
+- «Why Simpler exists»: the link now leads to the official Simpler website, and on the right there is the «Cosmetic shop» example scene. A click on its picture opens it: Simpler makes a copy in Documents\Simpler\Examples, to change and save freely.
+- «Why Simpler exists»: next to the example scene there is «Suggest an idea». The ideas page opens in the space of the view: you suggest a feature or an improvement and see where the others' ideas are. «× Back to the scene» closes it. If the website cannot be reached, a message says so and the scene stays as it was.
+- Real-time view: plants and materials with BMP textures no longer appear white; textures in formats the view cannot read directly also arrive by themselves as soon as they are ready.
+- «Why Simpler exists»: after «Suggest an idea» there is «Free models», a page with the websites where you can download free 3D models and plants to import into Simpler; the links open in the browser. The «Example scene» command of the File menu now opens this box.
+- Import models and vegetation: the window scrolls when the scale check does not fit on the screen, and the buttons always stay at the bottom. Closing it while it waits for the scale check stops the import (the models already imported stay): before, Simpler stayed busy.
+- Import vegetation: plants in OBJ with a grey opacity map (no alpha channel) no longer lose their leaves, in real time and in path tracing.
+- Models imported from files with a turned vertical axis (for example OBJ with up on Y): rested with the yellow square of the gizmo they no longer lie down by 90°. For models already in the library there is «Orientation ▸ Fix the axes» in the model's menu.
+- Packages: every installed package has its blue folder in the new «Packages» entry of 3D models and of Vegetation, apart from Simpler's models and from yours. The folders of the packages are always read only (so updates and uninstall find the models where they put them); a model can be copied among your own and changed freely. Inside the folder of a package a subfolder with its same name is not repeated. If the models of a package were already in the library before installing it, uninstalling it puts them back in the folders where they were. «Mine» vegetation has a new category «Flowers and perennials».
+- Library: in the 3D models, Vegetation, Materials and Decals menus every entry has an icon in the colour of its folders (Simpler red, Mine yellow, Packages blue); the Online entries have a globe.
+- Smoother real-time view: the scale bar is updated when the view stops (orbiting around very heavy models the view jerked); in SmartView no finishing effects and no redraw of the still view; editing a light, an object's name or the sky, or saving a scene, no longer makes the engine check the rain shelter, the snow and the coast again; the automatic save waits for 20 seconds without activity.

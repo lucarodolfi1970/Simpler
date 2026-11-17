@@ -1,0 +1,10 @@
+SIMPLER 1.75.4  —  31 ottobre 2026
+==================================
+
+Un solo pulsante arancione per chiudere le sezioni, e caustiche del mare calcolate per l'inquadratura giusta.
+
+- Il pulsante con la doppia freccia che chiude tutte le sezioni non è più in ogni pannello: ce n'è uno solo, arancione, nella barra in alto prima del pulsante AI.
+  - Lavora sul pannello visibile: chiude tutte le sue sezioni; premuto di nuovo, riapre quelle che erano aperte.
+  - Spento (grigio) quando il pannello visibile non ha sezioni da chiudere.
+- Caustiche del mare nella vista path tracing: la zona del fondale veniva calcolata con la posizione della fotocamera di prima. Dopo uno spostamento, il sole veniva tolto e la luce messa sulla zona sbagliata, quindi l'acqua diventava più scura.
+  - Ora la fotocamera viene messa al suo posto prima di ogni calcolo dell'acqua.

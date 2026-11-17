@@ -1,0 +1,13 @@
+SIMPLER 1.7.1  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- SPOSTA SULLE SUPERFICI: trascinando il centro del gizmo (il quadrato giallo) la selezione
+  scivola sulle superfici sotto il mouse, sempre appoggiata con la sua base: pavimento, tavolo, terreno, anche i
+  modelli della libreria e le distribuzioni. È "Appoggia" mentre la sposti.
+  · Un oggetto sotto il pavimento torna sopra appena lo prendi dal centro.
+  · Nell'etichetta accanto al mouse compare "appoggiato".
+  · Alt tenuto premuto: spostamento libero come prima (anche in aria). Le frecce degli assi e gli spicchi dei
+    piani funzionano come sempre.
+  · Con Shift (copie con trascinamento) resta lo spostamento libero.

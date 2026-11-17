@@ -1,0 +1,10 @@
+SIMPLER 1.76.51  —  5 novembre 2026
+===================================
+
+Cache su disco con un limite e prima modifica del terreno più rapida dopo un aggiornamento.
+
+- Le cache della vista 3D e delle texture ridotte ora hanno un limite (punti delle distribuzioni 2 GB, modelli preparati per la vista 4 GB, texture ridotte 3 GB): prima crescevano senza fine (34 GB trovati). Vanno via per primi i file usati meno di recente; quelli usati nell'ultimo giorno e le texture della scena aperta restano. Quello che manca si rifà da solo: la prima apertura di un progetto vecchio può essere un po' più lenta.
+- Le mappe della vista (neve, pioggia, ghiaccio, sporco dipinto) lasciate dalle sessioni precedenti vengono cancellate dopo due ore: prima l'ultima di ogni sessione restava per sempre (fino a centinaia di MB).
+- La cache della forma del terreno resta valida anche quando una nuova versione di Simpler cambia altre parti del terreno: la prima modifica dopo un aggiornamento non ricalcola più l'erosione (circa 15 s su una montagna). Con questa versione serve ancora un ricalcolo, l'ultima volta.
+- Nuovo controllo automatico: un terreno salvato e riaperto non rifà i suoi materiali.
+- Nuovo controllo automatico: le mappe della vista delle sessioni passate vengono cancellate, quelle in uso no.

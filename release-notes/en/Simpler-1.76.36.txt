@@ -1,0 +1,9 @@
+SIMPLER 1.76.36  —  4 November 2026
+===================================
+
+«Moving water at the edge» also works near a big terrain.
+
+- Fixed: with a big terrain in the scene the sea near objects has points every 2.5 m, and the distance from the shore was measured on those points. The band where the water moves (a couple of metres) fell between one point and the next, and «Moving water at the edge» at 0%, 300% or 1200% gave the same clean cut. Now the distance is measured on the true shape of the objects where they touch the water, and the contact line waves.
+- The extra detail is made only within 80 m of the camera: from far the ripples would be smaller than a pixel, and the whole coast of a terrain would have weighed over a million faces.
+- A project saved with the previous version measures the coast again once when opened.
+- Fixed: when the scene finished, its thumbnail did not update with the path tracing if the scene had just been saved or updated (it worked only when opened from its thumbnail). Now it works for a scene just saved or updated too; and if the path tracing ends while Simpler is busy, the thumbnail waits instead of being skipped.

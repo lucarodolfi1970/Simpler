@@ -1,0 +1,10 @@
+SIMPLER 1.75.35  —  1 November 2026
+===================================
+
+AI outputs: two fixed folders, «AI images» and «AI videos».
+
+- The AI outputs tab of the library now has two red folders, like Simpler's other fixed folders: they cannot be deleted, renamed or moved.
+- Every result goes into its folder by itself: the AI images into «AI images», the videos into «AI videos».
+- The items inside cannot be moved: with the … button they can only be renamed and deleted (plus opened and saved as a copy).
+- AI videos are now saved with the project, like the images, in the «name AI» folder next to the project file. The thumbnail is the start keyframe, and a click opens the video looping.
+- Until the project is saved the videos stay in a temporary folder: Simpler counts them as unsaved changes and asks when closing.

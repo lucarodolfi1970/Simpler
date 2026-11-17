@@ -1,0 +1,8 @@
+SIMPLER 1.13.41  —  23 October 2026
+===================================
+
+LIBRARY STATISTICS: CLEARER
+---------------------------
+- The window always stays in the middle of the screen, also when the results arrive; the folder list is shorter and scrolls, the results have their own scroll bar.
+- Under the tiles a line explains what is what: the space used by Simpler is the library (models, textures, thumbnails); the original imported files (FBX, OBJ…) are yours, in their folders, and Simpler no longer uses them after the import (they are only needed to import again). Then the total on disk.
+- New information: models with the textures inside the file (no texture folder, a big file): their weight is in the model files.

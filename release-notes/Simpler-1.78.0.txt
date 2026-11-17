@@ -1,0 +1,13 @@
+SIMPLER 1.78.0  —  6 novembre 2026
+==================================
+
+La libreria della vegetazione: importa le piante e le loro foglie ricevono il materiale Fogliame, con la stagione.
+
+- Importa ▸ «Importa vegetazione nella libreria…»: la stessa finestra di «Importa modelli nella libreria», con in alto la scelta Modelli 3D · Vegetazione.
+  - Dopo ogni pianta importata Simpler riconosce le foglie e il legno: dal nome del materiale (foglia, leaf, corteccia, bark… in più lingue), dal ritaglio della texture (una foglia su un piano) o dal colore verde; senza indizi lo tratta come legno, che la stagione non tocca.
+  - Foglie e legno ricevono il materiale Fogliame: le piante hanno subito la stagione, la luce attraverso le foglie e la variazione tra copia e copia.
+  - Le piante vanno in Vegetazione, divise per altezza in Alberi (da 3 m), Arbusti e siepi (da 60 cm), Erbe e prati; Fiori e coprenti li scegli tu spostandole. Una sottocartella di Vegetazione scelta da te resta.
+- Nuovo menu della libreria «Vegetazione», con le tue piante e le loro cartelle, e il riquadro «Importa vegetazione…». Modelli 3D ▸ Personalizzati non le mostra più.
+- Tasto destro su un modello di Modelli 3D ▸ Personalizzati: «Converti in vegetazione…» (anche su più modelli selezionati), per le piante già importate come modelli.
+- Tasto destro su una pianta: «Foglie e legno…» mostra cosa è stato preso per foglia e cosa per legno, con il motivo; un clic per cambiarlo (Foglie, Legno o Altro, che resta com'era).
+- Un preferito che è una pianta si apre in Vegetazione.

@@ -1,0 +1,4 @@
+SIMPLER 1.28.7  —  25 October 2026
+==================================
+
+- Missing decals: a decal put on a part of a library model while the model was open (part selected) became one of its parts when the model closed: it disappeared from the view and the tree, and stayed so after saving and opening again. Now, when the model closes, its decals leave it and stay where they are, projected on the part. Projects already saved are fixed when opened: the decals show again.

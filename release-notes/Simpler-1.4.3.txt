@@ -1,0 +1,12 @@
+SIMPLER 1.4.3  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- FPS: OLTRE AI FOTOGRAMMI MOSTRATI, QUANTI LA SCHEDA NE POTREBBE FARE. La vista in tempo reale disegna un
+  fotogramma per ogni aggiornamento dello schermo (vsync, come ogni pagina web e come WebView2 impone): su uno
+  schermo a 60 Hz il contatore si ferma a 60, anche con la scena vuota. È voluto: non serve disegnare fotogrammi che
+  lo schermo non mostra, la scheda resta libera per il path tracing e non scalda.
+  Ora il contatore mostra anche "max ≈": ogni 20 fotogrammi Simpler misura quanto ci mette la scheda a disegnarne
+  uno fino alla fine del lavoro, e ne ricava quanti fotogrammi al secondo potrebbe fare con quella scena. Il
+  colore (giallo/rosso) ora segue questo valore, non il limite dello schermo.

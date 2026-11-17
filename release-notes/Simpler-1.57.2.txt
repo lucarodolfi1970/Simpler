@@ -1,0 +1,4 @@
+SIMPLER 1.57.2  —  27 ottobre 2026
+==================================
+
+- Aprendo un progetto, Simpler toglie subito dalla memoria quello che il file si porta dietro e che nessuno usa: per esempio i modelli di una distribuzione eliminata tempo fa e le texture di un modello eliminato poco prima di salvare. Nel progetto della montagna erano 6 oggetti, 23 materiali e 57 texture (circa 70 MB), che «Libera memoria» trovava appena aperto. Ora appena aperto non c'è niente da liberare, e al prossimo salvataggio il file è più leggero. La distribuzione presente resta com'è.

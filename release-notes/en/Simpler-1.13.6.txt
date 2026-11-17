@@ -1,0 +1,12 @@
+SIMPLER 1.13.6  —  22 October 2026
+==================================
+
+TOUCHPAD
+--------
+- Two fingers on the touchpad up or down (or sideways) move the view without turning it, like the middle mouse
+  button: the scene follows the fingers.
+- Pinching with two fingers moves closer or farther (walks forward and back, smoothly).
+- The mouse wheel works as before (walks forward and back in steps): Simpler tells by itself whether it comes from
+  the mouse or the touchpad.
+- It can be turned off: Settings (gear) → Navigation → "Touchpad: two fingers move the view". Off, two fingers walk
+  like the wheel.

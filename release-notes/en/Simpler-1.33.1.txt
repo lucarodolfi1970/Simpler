@@ -1,0 +1,4 @@
+SIMPLER 1.33.1  —  25 October 2026
+==================================
+
+- Copies (instances) of an object with the same parent no longer vanish from the real-time view for clicks: after a full preparation of the view (reopening, some changes that redo it) they showed but could not be clicked or moved in the view, and did not switch on at dusk (for example the emissive spheres inside a car's headlights). Blender's export merged them into one «instanced» block on the parent, and the single objects disappeared for the view. Now the view finds them again from their place and separates them: they can be clicked, moved, switched on and off like the other objects. Very big sets (over 500 copies of the same object) stay merged so the view stays light.

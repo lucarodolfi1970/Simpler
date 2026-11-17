@@ -1,0 +1,4 @@
+SIMPLER 1.63.1  —  28 October 2026
+==================================
+
+- Snow on distributed trees: with a thinner layer (10 cm) two tree models out of four still had no mantle. Now every model always gets one: when the budget is not enough, that model's mantle is coarser and a little thicker, but never missing.

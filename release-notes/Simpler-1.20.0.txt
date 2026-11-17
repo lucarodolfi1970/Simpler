@@ -1,0 +1,7 @@
+SIMPLER 1.20.0  —  24 ottobre 2026
+==================================
+
+- Pannello AI: la funzione si sceglie da un menu a tendina. Si vede solo quella scelta (anteprima, nome e due parole su cosa fa); un clic apre l'elenco di tutte, e le opzioni sotto cambiano subito.
+- Nuova scheda «Elaborazioni AI» nella libreria, accanto a Scene: ogni elaborazione del progetto compare lì in miniatura. Un clic apre la finestra con il confronto prima/dopo; dal menu «…» puoi elaborarla ancora con l'AI, salvarne l'immagine o eliminarla.
+- Le elaborazioni fanno parte del progetto: salvando, vanno nella cartella «<nome del progetto> AI» accanto al file .simpler («Salva con nome» le copia nella nuova cartella) e tornano quando riapri il progetto. Se non salvi, si perdono come il resto delle modifiche; Simpler ti chiede di salvare anche quando l'unica novità è un'elaborazione.
+- Tolto «Da file…»: si elaborano solo immagini di Simpler (la vista, il render finale, le elaborazioni del progetto).

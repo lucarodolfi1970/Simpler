@@ -1,0 +1,4 @@
+SIMPLER 1.67.4  —  29 ottobre 2026
+==================================
+
+- «Niente pioggia» e «Niente neve» funzionano subito nel path tracing. Prima l'interruttore veniva salvato, ma l'immagine continuava a mostrare l'oggetto bagnato fino alla riapertura del progetto. Lo stesso vale per l'annulla.

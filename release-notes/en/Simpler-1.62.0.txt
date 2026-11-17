@@ -1,0 +1,13 @@
+SIMPLER 1.62.0  —  28 October 2026
+==================================
+
+- New «Lighten» box at the bottom of the scene tree, always in sight, for heavy scenes. Seven buttons, orange when on:
+  · Snow: hides the mantle and the flakes, no recomputing while you move models (only when it snows).
+  · Distributions: trees, grass, scatters and ecosystems leave the real-time view (they stay in path tracing).
+  · Flakes: the falling flakes leave the real-time view (the mantle stays).
+  · Shadows: turns off the view's shadows; a second click brings them back as before.
+  · Half resolution: the view draws a quarter of the pixels, much smoother (path tracing does not change).
+  · Pause computations: rain shelter, mantle and flakes are not made again after each move until you resume them.
+  · Free memory.
+  Distributions, flakes, shadows and half resolution stay as you left them next time too; snow and computations are always back on when a project opens.
+- The «Snow hidden» message in the bottom bar is no longer cut.

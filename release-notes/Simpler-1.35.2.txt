@@ -1,0 +1,12 @@
+SIMPLER 1.35.2  —  25 ottobre 2026
+==================================
+
+Controllo di materiali e mappe: tre errori corretti.
+
+- Mappe col nome sbagliato dopo aver inserito un modello. Quando un modello porta un'immagine con un nome che la scena ha già (targa.jpg), Blender la rinomina (targa.jpg.001), ma i parametri del materiale Simpler continuavano a dire targa.jpg. Così:
+  · alla prima modifica il materiale veniva ricostruito con l'altra immagine (la targa di un'altra auto, o nessuna);
+  · la miniatura e la finestra della texture davano «Texture non disponibile (404)»;
+  · salvando il materiale nella libreria veniva copiata l'immagine sbagliata.
+  Ora ogni materiale controlla da solo i nomi delle sue mappe e li rimette sull'immagine che usa davvero. Vale anche per i progetti già salvati: si sistemano aprendoli.
+- «Ripristina originale» sui modelli presi dalla libreria. Salvando un modello nella libreria non venivano salvati gli originali nascosti dei suoi materiali convertiti in Simpler: un modello preso dalla libreria non poteva tornare ai materiali importati, oppure trovava l'originale di un altro modello con lo stesso nome (es. «Vetro»). Ora gli originali vengono salvati con il modello e ricollegati al suo inserimento. Per i modelli salvati prima, il collegamento sbagliato viene tolto (Ripristina riporta ai valori di base); salvandoli di nuovo nella libreria si ha di nuovo l'originale.
+- La condivisione dei materiali identici tra copie dello stesso modello confronta i nomi delle mappe già corretti.

@@ -1,0 +1,1476 @@
+{
+ "engine": "/home/claude/simpler/engine",
+ "when": "2026-10-31 01:51",
+ "scenes": [
+  {
+   "scene": "test_oceano2.simpler",
+   "steps": [
+    {
+     "step": "scene",
+     "secs": 0.011,
+     "idle": 0.0,
+     "rssGB": 0.82,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_open",
+     "secs": 0.003,
+     "idle": 0.0,
+     "rssGB": 0.82,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_open",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.82,
+     "status": "ok"
+    },
+    {
+     "step": "temp_sweep",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.82,
+     "status": "ok"
+    },
+    {
+     "step": "ambience",
+     "secs": 0.007,
+     "idle": 0.0,
+     "rssGB": 0.82,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on",
+     "secs": 2.287,
+     "idle": 1.82,
+     "rssGB": 0.78,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off",
+     "secs": 0.046,
+     "idle": 0.0,
+     "rssGB": 0.78,
+     "status": "ok"
+    },
+    {
+     "step": "snow_on",
+     "secs": 0.051,
+     "idle": 7.1,
+     "rssGB": 1.12,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off",
+     "secs": 0.048,
+     "idle": 0.0,
+     "rssGB": 1.12,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_add",
+     "secs": 0.339,
+     "idle": 0.0,
+     "rssGB": 1.12,
+     "status": "ok",
+     "points": 261121
+    },
+    {
+     "step": "ocean_height",
+     "secs": 0.085,
+     "idle": 0.0,
+     "rssGB": 1.12,
+     "status": "ok",
+     "points": 261121
+    },
+    {
+     "step": "ocean_wind",
+     "secs": 0.357,
+     "idle": 0.0,
+     "rssGB": 1.13,
+     "status": "ok",
+     "points": 261121
+    },
+    {
+     "step": "ocean_calm",
+     "secs": 0.108,
+     "idle": 0.0,
+     "rssGB": 1.13,
+     "status": "ok",
+     "points": 261121
+    },
+    {
+     "step": "ocean_mesh",
+     "secs": 0.037,
+     "idle": 0.0,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "undo",
+     "secs": 0.1,
+     "idle": 0.0,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "redo",
+     "secs": 0.107,
+     "idle": 0.0,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "snow_with_sea",
+     "secs": 0.046,
+     "idle": 0.0,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off2",
+     "secs": 2.911,
+     "idle": 0.0,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "eco_count",
+     "secs": 9.939,
+     "idle": 0.0,
+     "rssGB": 1.24,
+     "status": "ok",
+     "pieces": 1231386,
+     "tooMany": true,
+     "farCut": 0.0
+    },
+    {
+     "step": "eco_count_far",
+     "secs": 4.994,
+     "idle": 0.0,
+     "rssGB": 1.24,
+     "status": "ok",
+     "pieces": 5006,
+     "tooMany": false,
+     "farCut": 0.0
+    },
+    {
+     "step": "eco_on_model",
+     "secs": 7.069,
+     "idle": 0.0,
+     "rssGB": 1.24,
+     "status": "ok",
+     "pieces": 2215,
+     "tooMany": false,
+     "farCut": 0.0
+    },
+    {
+     "step": "coast_off",
+     "secs": 0.056,
+     "idle": 0.0,
+     "rssGB": 1.24,
+     "status": "ok",
+     "points": 261121
+    },
+    {
+     "step": "coast_on",
+     "secs": 0.048,
+     "idle": 0.0,
+     "rssGB": 1.24,
+     "status": "ok",
+     "points": 261121
+    },
+    {
+     "step": "render_small",
+     "secs": 27.196,
+     "idle": 0.0,
+     "rssGB": 4.08,
+     "status": "ok"
+    },
+    {
+     "step": "export_view",
+     "secs": 10.75,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_steps",
+     "secs": 0.005,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_steps",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "save",
+     "secs": 2.031,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "reopen",
+     "secs": 0.558,
+     "idle": 0.0,
+     "rssGB": 2.3,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_reopen",
+     "secs": 0.009,
+     "idle": 0.0,
+     "rssGB": 2.3,
+     "status": "ok"
+    },
+    {
+     "step": "render_reopen",
+     "secs": 25.209,
+     "idle": 0.0,
+     "rssGB": 4.09,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_render",
+     "secs": 0.011,
+     "idle": 0.0,
+     "rssGB": 4.09,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on2",
+     "secs": 0.046,
+     "idle": 0.0,
+     "rssGB": 4.09,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_paint",
+     "secs": 0.964,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_repaint",
+     "secs": 0.07,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_step",
+     "secs": 0.042,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_clear",
+     "secs": 0.018,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off2",
+     "secs": 0.046,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    },
+    {
+     "step": "ph_to_brush",
+     "secs": 0.134,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_remove",
+     "secs": 0.013,
+     "idle": 0.0,
+     "rssGB": 4.11,
+     "status": "ok"
+    }
+   ],
+   "errors": 0,
+   "open": 8.05,
+   "open_idle": -0.29,
+   "peakGB": 4.83,
+   "log": null
+  },
+  {
+   "scene": "spiaggia.simpler",
+   "steps": [
+    {
+     "step": "scene",
+     "secs": 0.01,
+     "idle": 0.0,
+     "rssGB": 0.4,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_open",
+     "secs": 0.035,
+     "idle": 0.0,
+     "rssGB": 0.4,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_open",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.4,
+     "status": "ok"
+    },
+    {
+     "step": "temp_sweep",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.4,
+     "status": "ok"
+    },
+    {
+     "step": "ambience",
+     "secs": 0.01,
+     "idle": 0.0,
+     "rssGB": 0.4,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on",
+     "secs": 2.693,
+     "idle": 0.0,
+     "rssGB": 0.4,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off",
+     "secs": 0.773,
+     "idle": 0.0,
+     "rssGB": 0.42,
+     "status": "ok"
+    },
+    {
+     "step": "snow_on",
+     "secs": 0.049,
+     "idle": 4.32,
+     "rssGB": 0.59,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off",
+     "secs": 0.045,
+     "idle": 0.0,
+     "rssGB": 0.5,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_add",
+     "secs": 0.079,
+     "idle": 0.0,
+     "rssGB": 0.5,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_height",
+     "secs": 0.071,
+     "idle": 0.0,
+     "rssGB": 0.5,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_wind",
+     "secs": 0.414,
+     "idle": 0.0,
+     "rssGB": 0.5,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_calm",
+     "secs": 0.159,
+     "idle": 0.0,
+     "rssGB": 0.5,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_mesh",
+     "secs": 0.041,
+     "idle": 0.0,
+     "rssGB": 0.51,
+     "status": "ok"
+    },
+    {
+     "step": "undo",
+     "secs": 0.095,
+     "idle": 0.0,
+     "rssGB": 0.51,
+     "status": "ok"
+    },
+    {
+     "step": "redo",
+     "secs": 0.085,
+     "idle": 0.0,
+     "rssGB": 0.51,
+     "status": "ok"
+    },
+    {
+     "step": "snow_with_sea",
+     "secs": 0.051,
+     "idle": 7.78,
+     "rssGB": 0.68,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off2",
+     "secs": 0.041,
+     "idle": 0.0,
+     "rssGB": 0.51,
+     "status": "ok"
+    },
+    {
+     "step": "eco_count",
+     "status": "skip"
+    },
+    {
+     "step": "eco_count_far",
+     "status": "skip"
+    },
+    {
+     "step": "eco_on_model",
+     "status": "skip"
+    },
+    {
+     "step": "coast_off",
+     "secs": 0.032,
+     "idle": 0.0,
+     "rssGB": 0.51,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "coast_on",
+     "secs": 0.04,
+     "idle": 0.0,
+     "rssGB": 0.51,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "render_small",
+     "secs": 9.035,
+     "idle": 0.0,
+     "rssGB": 1.27,
+     "status": "ok"
+    },
+    {
+     "step": "export_view",
+     "secs": 1.077,
+     "idle": 0.0,
+     "rssGB": 1.45,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_steps",
+     "secs": 0.012,
+     "idle": 0.0,
+     "rssGB": 1.45,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_steps",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 1.45,
+     "status": "ok"
+    },
+    {
+     "step": "save",
+     "secs": 0.133,
+     "idle": 0.0,
+     "rssGB": 1.46,
+     "status": "ok"
+    },
+    {
+     "step": "reopen",
+     "secs": 0.127,
+     "idle": 0.0,
+     "rssGB": 1.27,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_reopen",
+     "secs": 0.014,
+     "idle": 0.0,
+     "rssGB": 1.27,
+     "status": "ok"
+    },
+    {
+     "step": "render_reopen",
+     "secs": 11.013,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_render",
+     "secs": 0.013,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on2",
+     "secs": 0.043,
+     "idle": 0.92,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_paint",
+     "secs": 0.257,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_repaint",
+     "secs": 0.043,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_step",
+     "secs": 0.043,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_clear",
+     "secs": 0.016,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off2",
+     "secs": 0.043,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "ph_to_brush",
+     "secs": 0.115,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_remove",
+     "secs": 0.014,
+     "idle": 0.0,
+     "rssGB": 1.54,
+     "status": "ok"
+    }
+   ],
+   "errors": 0,
+   "open": 3.01,
+   "open_idle": -0.29,
+   "peakGB": 1.54,
+   "log": null
+  },
+  {
+   "scene": "cattedrale.simpler",
+   "steps": [
+    {
+     "step": "scene",
+     "secs": 0.268,
+     "idle": 0.0,
+     "rssGB": 0.96,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_open",
+     "secs": 0.028,
+     "idle": 0.0,
+     "rssGB": 0.96,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_open",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.96,
+     "status": "ok"
+    },
+    {
+     "step": "temp_sweep",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.96,
+     "status": "ok"
+    },
+    {
+     "step": "ambience",
+     "secs": 0.03,
+     "idle": 0.0,
+     "rssGB": 0.96,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on",
+     "secs": 2.761,
+     "idle": 3.97,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off",
+     "secs": 0.108,
+     "idle": 0.65,
+     "rssGB": 1.15,
+     "status": "ok"
+    },
+    {
+     "step": "snow_on",
+     "secs": 0.122,
+     "idle": 8.26,
+     "rssGB": 1.36,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off",
+     "secs": 0.119,
+     "idle": 0.65,
+     "rssGB": 1.36,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_add",
+     "secs": 2.508,
+     "idle": 0.65,
+     "rssGB": 1.41,
+     "status": "ok",
+     "points": 184041
+    },
+    {
+     "step": "ocean_height",
+     "secs": 0.107,
+     "idle": 0.64,
+     "rssGB": 1.41,
+     "status": "ok",
+     "points": 184041
+    },
+    {
+     "step": "ocean_wind",
+     "secs": 1.195,
+     "idle": 0.64,
+     "rssGB": 1.41,
+     "status": "ok",
+     "points": 184041
+    },
+    {
+     "step": "ocean_calm",
+     "secs": 1.083,
+     "idle": 0.64,
+     "rssGB": 1.41,
+     "status": "ok",
+     "points": 184041
+    },
+    {
+     "step": "ocean_mesh",
+     "secs": 0.025,
+     "idle": 0.0,
+     "rssGB": 1.42,
+     "status": "ok"
+    },
+    {
+     "step": "undo",
+     "secs": 0.102,
+     "idle": 0.66,
+     "rssGB": 1.42,
+     "status": "ok"
+    },
+    {
+     "step": "redo",
+     "secs": 0.106,
+     "idle": 0.65,
+     "rssGB": 1.42,
+     "status": "ok"
+    },
+    {
+     "step": "snow_with_sea",
+     "secs": 0.117,
+     "idle": 3.74,
+     "rssGB": 1.41,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off2",
+     "secs": 0.115,
+     "idle": 0.63,
+     "rssGB": 1.41,
+     "status": "ok"
+    },
+    {
+     "step": "eco_count",
+     "secs": 0.897,
+     "idle": 0.0,
+     "rssGB": 1.41,
+     "status": "ok",
+     "note": "{\"ok\": false, \"error\": \"Questa superficie \u00e8 tutta sotto il livello del mare: qui non cresce nulla\"}"
+    },
+    {
+     "step": "eco_count_far",
+     "secs": 0.027,
+     "idle": 0.0,
+     "rssGB": 1.41,
+     "status": "ok",
+     "note": "{\"ok\": false, \"error\": \"Questa superficie \u00e8 tutta sotto il livello del mare: qui non cresce nulla\"}"
+    },
+    {
+     "step": "eco_on_model",
+     "status": "skip"
+    },
+    {
+     "step": "coast_off",
+     "secs": 0.059,
+     "idle": 0.63,
+     "rssGB": 1.41,
+     "status": "ok",
+     "points": 184041
+    },
+    {
+     "step": "coast_on",
+     "secs": 0.066,
+     "idle": 0.65,
+     "rssGB": 1.41,
+     "status": "ok",
+     "points": 184041
+    },
+    {
+     "step": "render_small",
+     "secs": 22.429,
+     "idle": 0.0,
+     "rssGB": 3.62,
+     "status": "ok"
+    },
+    {
+     "step": "export_view",
+     "secs": 26.277,
+     "idle": 0.0,
+     "rssGB": 4.55,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_steps",
+     "secs": 0.028,
+     "idle": 0.0,
+     "rssGB": 4.55,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_steps",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 4.55,
+     "status": "ok"
+    },
+    {
+     "step": "save",
+     "secs": 1.211,
+     "idle": 0.0,
+     "rssGB": 4.55,
+     "status": "ok"
+    },
+    {
+     "step": "reopen",
+     "secs": 4.852,
+     "idle": 0.66,
+     "rssGB": 4.43,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_reopen",
+     "secs": 0.021,
+     "idle": 0.0,
+     "rssGB": 4.43,
+     "status": "ok"
+    },
+    {
+     "step": "render_reopen",
+     "secs": 20.422,
+     "idle": 0.62,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_render",
+     "secs": 0.047,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on2",
+     "secs": 0.144,
+     "idle": 3.07,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_paint",
+     "secs": 0.799,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_repaint",
+     "secs": 0.445,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_step",
+     "secs": 0.436,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_clear",
+     "secs": 0.102,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off2",
+     "secs": 0.179,
+     "idle": 0.65,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "ph_to_brush",
+     "secs": 2.688,
+     "idle": 0.0,
+     "rssGB": 4.83,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_remove",
+     "secs": 0.147,
+     "idle": 0.64,
+     "rssGB": 4.83,
+     "status": "ok"
+    }
+   ],
+   "errors": 0,
+   "open": 4.01,
+   "open_idle": -0.29,
+   "peakGB": 4.83,
+   "log": null
+  },
+  {
+   "scene": "piscina.simpler",
+   "steps": [
+    {
+     "step": "scene",
+     "secs": 0.012,
+     "idle": 0.0,
+     "rssGB": 0.38,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_open",
+     "secs": 0.008,
+     "idle": 0.0,
+     "rssGB": 0.38,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_open",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.38,
+     "status": "ok"
+    },
+    {
+     "step": "temp_sweep",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 0.38,
+     "status": "ok"
+    },
+    {
+     "step": "ambience",
+     "secs": 0.012,
+     "idle": 0.0,
+     "rssGB": 0.38,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on",
+     "secs": 2.612,
+     "idle": 0.61,
+     "rssGB": 0.44,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off",
+     "secs": 0.037,
+     "idle": 0.0,
+     "rssGB": 0.44,
+     "status": "ok"
+    },
+    {
+     "step": "snow_on",
+     "secs": 0.048,
+     "idle": 3.76,
+     "rssGB": 0.6,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off",
+     "secs": 0.031,
+     "idle": 0.0,
+     "rssGB": 0.55,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_add",
+     "secs": 0.487,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok",
+     "points": 95481
+    },
+    {
+     "step": "ocean_height",
+     "secs": 0.071,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok",
+     "points": 95481
+    },
+    {
+     "step": "ocean_wind",
+     "secs": 0.239,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok",
+     "points": 95481
+    },
+    {
+     "step": "ocean_calm",
+     "secs": 0.164,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok",
+     "points": 95481
+    },
+    {
+     "step": "ocean_mesh",
+     "secs": 0.012,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok"
+    },
+    {
+     "step": "undo",
+     "secs": 0.081,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok"
+    },
+    {
+     "step": "redo",
+     "secs": 0.084,
+     "idle": 0.0,
+     "rssGB": 0.56,
+     "status": "ok"
+    },
+    {
+     "step": "snow_with_sea",
+     "secs": 0.054,
+     "idle": 2.74,
+     "rssGB": 0.62,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off2",
+     "secs": 0.036,
+     "idle": 0.0,
+     "rssGB": 0.57,
+     "status": "ok"
+    },
+    {
+     "step": "eco_count",
+     "secs": 0.023,
+     "idle": 0.0,
+     "rssGB": 0.57,
+     "status": "ok",
+     "note": "{\"ok\": false, \"error\": \"Questa superficie \u00e8 tutta sotto il livello del mare: qui non cresce nulla\"}"
+    },
+    {
+     "step": "eco_count_far",
+     "secs": 0.013,
+     "idle": 0.0,
+     "rssGB": 0.57,
+     "status": "ok",
+     "note": "{\"ok\": false, \"error\": \"Questa superficie \u00e8 tutta sotto il livello del mare: qui non cresce nulla\"}"
+    },
+    {
+     "step": "eco_on_model",
+     "status": "skip"
+    },
+    {
+     "step": "coast_off",
+     "secs": 0.029,
+     "idle": 0.0,
+     "rssGB": 0.57,
+     "status": "ok",
+     "points": 95481
+    },
+    {
+     "step": "coast_on",
+     "secs": 0.03,
+     "idle": 0.0,
+     "rssGB": 0.57,
+     "status": "ok",
+     "points": 95481
+    },
+    {
+     "step": "render_small",
+     "secs": 38.503,
+     "idle": 0.0,
+     "rssGB": 1.98,
+     "status": "ok"
+    },
+    {
+     "step": "export_view",
+     "secs": 24.807,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_steps",
+     "secs": 0.014,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_steps",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "save",
+     "secs": 0.513,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "reopen",
+     "secs": 0.364,
+     "idle": 0.0,
+     "rssGB": 2.78,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_reopen",
+     "secs": 0.011,
+     "idle": 0.0,
+     "rssGB": 2.78,
+     "status": "ok"
+    },
+    {
+     "step": "render_reopen",
+     "secs": 23.721,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_render",
+     "secs": 0.014,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on2",
+     "secs": 0.059,
+     "idle": 0.61,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_paint",
+     "secs": 0.407,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_repaint",
+     "secs": 0.047,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_step",
+     "secs": 0.053,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_clear",
+     "secs": 0.053,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off2",
+     "secs": 0.084,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "ph_to_brush",
+     "secs": 0.329,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_remove",
+     "secs": 0.022,
+     "idle": 0.0,
+     "rssGB": 2.95,
+     "status": "ok"
+    }
+   ],
+   "errors": 0,
+   "open": 2.02,
+   "open_idle": -0.29,
+   "peakGB": 2.95,
+   "log": null
+  },
+  {
+   "scene": "cattedrale_acqua.simpler",
+   "steps": [
+    {
+     "step": "scene",
+     "secs": 0.38,
+     "idle": 0.0,
+     "rssGB": 1.05,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_open",
+     "secs": 0.031,
+     "idle": 0.0,
+     "rssGB": 1.04,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_open",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 1.04,
+     "status": "ok"
+    },
+    {
+     "step": "temp_sweep",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 1.04,
+     "status": "ok"
+    },
+    {
+     "step": "ambience",
+     "secs": 0.024,
+     "idle": 0.0,
+     "rssGB": 1.04,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on",
+     "secs": 3.477,
+     "idle": 4.92,
+     "rssGB": 1.17,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off",
+     "secs": 0.128,
+     "idle": 0.64,
+     "rssGB": 1.17,
+     "status": "ok"
+    },
+    {
+     "step": "snow_on",
+     "secs": 0.128,
+     "idle": 27.98,
+     "rssGB": 1.62,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off",
+     "secs": 0.123,
+     "idle": 0.67,
+     "rssGB": 1.52,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_add",
+     "secs": 3.084,
+     "idle": 0.65,
+     "rssGB": 1.53,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_height",
+     "secs": 0.109,
+     "idle": 0.63,
+     "rssGB": 1.53,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_wind",
+     "secs": 1.24,
+     "idle": 0.65,
+     "rssGB": 1.53,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_calm",
+     "secs": 1.127,
+     "idle": 0.64,
+     "rssGB": 1.53,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "ocean_mesh",
+     "secs": 0.05,
+     "idle": 0.0,
+     "rssGB": 1.55,
+     "status": "ok"
+    },
+    {
+     "step": "undo",
+     "secs": 0.116,
+     "idle": 0.64,
+     "rssGB": 1.55,
+     "status": "ok"
+    },
+    {
+     "step": "redo",
+     "secs": 0.125,
+     "idle": 0.63,
+     "rssGB": 1.55,
+     "status": "ok"
+    },
+    {
+     "step": "snow_with_sea",
+     "secs": 0.139,
+     "idle": 24.53,
+     "rssGB": 1.86,
+     "status": "ok"
+    },
+    {
+     "step": "snow_off2",
+     "secs": 0.135,
+     "idle": 0.64,
+     "rssGB": 1.55,
+     "status": "ok"
+    },
+    {
+     "step": "eco_count",
+     "secs": 0.824,
+     "idle": 0.0,
+     "rssGB": 1.55,
+     "status": "ok",
+     "note": "{\"ok\": false, \"error\": \"Questa superficie \u00e8 tutta sotto il livello del mare: qui non cresce nulla\"}"
+    },
+    {
+     "step": "eco_count_far",
+     "secs": 0.032,
+     "idle": 0.0,
+     "rssGB": 1.55,
+     "status": "ok",
+     "note": "{\"ok\": false, \"error\": \"Questa superficie \u00e8 tutta sotto il livello del mare: qui non cresce nulla\"}"
+    },
+    {
+     "step": "eco_on_model",
+     "status": "skip"
+    },
+    {
+     "step": "coast_off",
+     "secs": 0.073,
+     "idle": 0.64,
+     "rssGB": 1.55,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "coast_on",
+     "secs": 0.068,
+     "idle": 0.63,
+     "rssGB": 1.55,
+     "status": "ok",
+     "points": 259081
+    },
+    {
+     "step": "render_small",
+     "secs": 96.436,
+     "idle": 0.63,
+     "rssGB": 4.95,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_steps",
+     "secs": 0.034,
+     "idle": 0.0,
+     "rssGB": 4.95,
+     "status": "ok"
+    },
+    {
+     "step": "quiet_steps",
+     "secs": 0.0,
+     "idle": 0.0,
+     "rssGB": 4.95,
+     "status": "ok"
+    },
+    {
+     "step": "save",
+     "secs": 2.011,
+     "idle": 0.0,
+     "rssGB": 5.0,
+     "status": "ok"
+    },
+    {
+     "step": "reopen",
+     "secs": 4.371,
+     "idle": 0.64,
+     "rssGB": 4.2,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_reopen",
+     "secs": 0.025,
+     "idle": 0.0,
+     "rssGB": 4.2,
+     "status": "ok"
+    },
+    {
+     "step": "render_reopen",
+     "secs": 87.496,
+     "idle": 0.0,
+     "rssGB": 5.32,
+     "status": "ok"
+    },
+    {
+     "step": "selfcheck_render",
+     "secs": 0.078,
+     "idle": 0.0,
+     "rssGB": 5.32,
+     "status": "ok"
+    },
+    {
+     "step": "rain_on2",
+     "secs": 0.169,
+     "idle": 3.38,
+     "rssGB": 5.32,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_paint",
+     "secs": 5.422,
+     "idle": 0.0,
+     "rssGB": 5.28,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_repaint",
+     "secs": 2.006,
+     "idle": 0.0,
+     "rssGB": 5.28,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_step",
+     "secs": 1.945,
+     "idle": 0.0,
+     "rssGB": 5.28,
+     "status": "ok"
+    },
+    {
+     "step": "dirt_clear",
+     "secs": 0.169,
+     "idle": 0.0,
+     "rssGB": 5.28,
+     "status": "ok"
+    },
+    {
+     "step": "rain_off2",
+     "secs": 0.169,
+     "idle": 0.63,
+     "rssGB": 5.28,
+     "status": "ok"
+    },
+    {
+     "step": "ph_to_brush",
+     "secs": 2.585,
+     "idle": 0.0,
+     "rssGB": 5.28,
+     "status": "ok"
+    },
+    {
+     "step": "ocean_remove",
+     "secs": 0.107,
+     "idle": 0.64,
+     "rssGB": 5.28,
+     "status": "ok"
+    }
+   ],
+   "errors": 0,
+   "open": 10.04,
+   "open_idle": -0.29,
+   "peakGB": 5.32,
+   "log": null
+  }
+ ]
+}

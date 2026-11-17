@@ -1,0 +1,4 @@
+SIMPLER 1.32.6  —  25 ottobre 2026
+==================================
+
+- Decal: nella vista in tempo reale non compare più una «copia fantasma» lontana dalla decal (per esempio una sagoma arancione sul pavimento sotto una decal messa sul cruscotto di un'auto). Quando la decal attraversa una faccia grande (il fondo dell'auto), la vista riceveva la faccia tagliata solo ai lati del box e non in profondità: quella parte era invisibile ma ne mostrava il contorno di selezione, allargava il riquadro e prendeva i clic. Ora è tagliata anche in profondità. Il render non cambia.

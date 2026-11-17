@@ -1,0 +1,4 @@
+SIMPLER 1.44.3  —  26 October 2026
+==================================
+
+- Rain: «Always dry» also works on distributions (a row of cars made with Spacing, Brush or Area): turn it on on the distribution's group and all its cars stay dry, in path tracing and in the real-time view. Before, the switch turned on but the cars stayed wet.

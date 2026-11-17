@@ -1,0 +1,13 @@
+SIMPLER 1.75.25  —  31 October 2026
+===================================
+
+SmartView: speed first, the faithful view when you turn it off.
+
+- With SmartView on the view no longer prepares any shader of lit materials, the thing that cost seconds at every selection or change. Only what is needed to work and fill the scene stays: navigating, selecting, moving with the gizmo, inserting and copying models.
+  - Selecting a car of a distribution: the car stays drawn as it was; an invisible «twin» takes the orange outline, the gizmo and the clicks. No new shader: the selection is instant.
+  - A model inserted, or a material changed to one the view has not prepared yet: drawn with a plain version of its material (colour and image, no lights), ready in milliseconds.
+  - Material changes that would need a new shader wait: the view keeps the one it has. Small changes (colour, values) show at once as before.
+  - Falling rain and snowflakes are not drawn: a lot to draw, not needed to set up the scene.
+  - The background preparation of the models' shaders stops while SmartView is on.
+  - As before: lights held, shadows off, the engine does not recompute rain, snow, coast and path tracing.
+- Turning SmartView off brings everything back: real materials, changes left waiting, shadows, rain and flakes. The shaders are prepared once, with the «Busy» box: the only wait is here, when you decide to look at the result.

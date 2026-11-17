@@ -1,0 +1,20 @@
+SIMPLER 1.2.12  —  20 ottobre 2026
+==================================
+
+NOVITÀ
+------
+- SELEZIONE COME CONTORNO: i pezzi selezionati hanno un contorno arancione invece della scatola. Il contorno si vede
+  anche sopra l'immagine in path tracing. (La scatola resta solo per ciò che non ha superfici: gruppi vuoti.)
+- GIZMO PIÙ COMPATTO: una sola freccia per asse, quarti di disco per spostare su un piano,
+  archi di rotazione piatti vicino al centro.
+- Quando si vede l'immagine in path tracing la vista in tempo reale non viene più disegnata sotto: meno lavoro
+  per la scheda video.
+
+CORREZIONI
+----------
+- ICONE DELLE LUCI ENORMI con obiettivi lunghi: l'icona si ingrandiva quando il campo visivo si stringe (focale
+  lunga, tipica dei gioielli). Ora resta della stessa dimensione con qualsiasi focale.
+- MODELLI POLY HAVEN ANCORA SENZA TEXTURE (Cannon 01): durante il nuovo download Simpler credeva il modello già
+  pronto (leggeva il vecchio file di stato) e inseriva la vecchia versione senza texture. Ora il vecchio stato viene
+  tolto all'inizio del download. Il tuo Cannon 01 è già stato riscaricato bene (glTF con texture): elimina dalla
+  scena i cannoni bianchi e reinseriscilo.

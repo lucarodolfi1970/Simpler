@@ -1,0 +1,7 @@
+SIMPLER 1.68.0  —  29 ottobre 2026
+==================================
+
+- Nuova cupola del sole in cima alla scheda «Sole» dell'Ambiente: trascini il sole dove vuoi che sia, invece di cercare la combinazione di Ora e Nord con gli slider.
+- La cupola è il cielo visto dall'alto e gira con la vista: in alto è davanti alla camera, in basso dietro, al centro sopra la testa. Il cerchio chiaro è l'orizzonte; la fascia scura fuori è sotto l'orizzonte (crepuscolo e notte, fino a 10°). La «N» rossa indica il nord della scena.
+- Mentre trascini, Ora e Nord si aggiornano, l'altezza in gradi compare accanto al sole e nella vista in tempo reale si muovono subito luce, ombre e disco del sole. Cielo e path tracing seguono quando lasci il sole. Giorno dell'anno e latitudine restano quelli impostati.
+- La zona scura al centro è l'altezza che il sole non raggiunge in quel giorno e a quella latitudine: trascinando lì si ferma al punto più alto (mezzogiorno).

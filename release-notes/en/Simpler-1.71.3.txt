@@ -1,0 +1,8 @@
+SIMPLER 1.71.3  —  30 October 2026
+==================================
+
+- Final render much faster in large scenes with the path tracing view on. In a city with 253 textures, at 1920×1080, each sample took about 1 second, almost 20 times more than the same scene in the view.
+  - The cause is the memory of the graphics card. During the final render the path tracing view kept its own copy of the scene on the card, 4.8 GB. The final render asked for 11 more, almost all for the 253 textures at full size (9.9 GB). Together they went over the 16 GB of the card, and the excess went into the computer's memory, which is much slower.
+  - Now, before the final render, the view lets its copy go. After the render the view prepares it again once: a few seconds.
+  - The automatic choice of texture size also takes into account the memory that is really free at that moment (Windows, the 3D view, other programs). If the originals do not fit, it uses the 4096 px copies, which cannot be told apart in a 1920×1080 picture.
+  - The log now shows the card's memory before and after, so it can be checked.

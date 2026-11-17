@@ -1,0 +1,4 @@
+SIMPLER 1.57.0  —  27 ottobre 2026
+==================================
+
+- Barra della vista: nuova icona rossa con la scopa, «Libera memoria». Toglie dalla memoria del computer gli oggetti eliminati che Simpler tiene per l'annulla e i materiali, le texture e le geometrie che nessun oggetto usa più. Prima un messaggio dice cosa e quanto verrebbe tolto e chiede conferma: la cronologia di annulla (Ctrl+Z) si azzera, la scena non cambia. Restano i materiali che stai modificando senza oggetti e gli originali per «Ripristina originale».

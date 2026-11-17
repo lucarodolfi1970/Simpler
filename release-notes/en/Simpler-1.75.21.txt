@@ -1,0 +1,8 @@
+SIMPLER 1.75.21  —  31 October 2026
+===================================
+
+The chart of the samples turns yellow at the end.
+
+- When the final render reaches the last sample, the area of the chart at the bottom turns all yellow, the colour of the logo's dot a little darker, with a half-second transition. The top edge takes the yellow of the dot.
+- It turns yellow also if the engine moves on to the denoiser before reading the last sample; then the last second rises to the top.
+- It stays yellow during the denoiser and the saving, until the image opens.

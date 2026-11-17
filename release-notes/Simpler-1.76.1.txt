@@ -1,0 +1,7 @@
+SIMPLER 1.76.1  —  1 novembre 2026
+==================================
+
+Terreno: le zone non sono più semitrasparenti.
+
+- Alcune texture di Poly Haven per il suolo arrivano con una mappa di opacità (per esempio l'erba con le foglie, usata per il Prato): il materiale del terreno la prendeva, e il terreno diventava in parte trasparente. Ora i materiali del terreno sono sempre pieni.
+- I terreni già creati con la 1.76.0 si correggono da soli quando si apre il progetto.

@@ -1,0 +1,12 @@
+SIMPLER 1.75.46  —  1 novembre 2026
+===================================
+
+Impostazioni riordinate, con le chiavi API.
+
+- Il pannello Impostazioni è diviso in sezioni con la loro icona, che si aprono e si chiudono come negli altri pannelli, anche tutte insieme con la doppia freccia arancione: Lingua, Navigazione, Salvataggio, Cartelle, Chiavi API, Versione, Motore di render.
+- Nuova sezione «Chiavi API» con OpenAI (immagini AI e «Migliora con l'AI») e Krea (video AI):
+  - ogni chiave mostra se è Attiva, Non funziona, Da verificare o Non inserita;
+  - si può verificare di nuovo o eliminare;
+  - se manca, si incolla e si verifica lì, con il collegamento alla pagina del fornitore per crearla.
+- Una breve spiegazione dice cosa sono le chiavi, come funzionano, di chi è la responsabilità e come funzionano i costi. In evidenza: Simpler non riceve alcun compenso o vantaggio dall'uso delle API, e i costi sono solo quelli dei fornitori.
+- I pulsanti delle sezioni hanno ora le icone, come nel resto di Simpler.

@@ -1,0 +1,10 @@
+SIMPLER 1.75.27  —  1 November 2026
+===================================
+
+Inserting models: lighter comparison of materials; profile of slow commands in the log.
+
+- Every model inserted was compared with the whole scene, to reuse images, node groups and materials already there instead of loading them twice: Simpler computed the full fingerprint of every image (packed images read whole), every group and every material of the scene, at every insert.
+  - Now the full fingerprint is computed only for what could be equal: the same image (same file or same size), the same number of nodes and links. The result is the same; in a scene with 425 images and 350 materials 0.27 s instead of 0.71.
+  - The repair of image names in Simpler materials also covers only the materials just loaded, not all those of the scene.
+- In a scene with 4,000 objects, 300 materials and 20 distributions the insert takes 0.5 s.
+- Profile of slow commands: switched on with the file «profile.on» in Simpler's local folder, every command over 2 seconds writes into the log the functions it spent its time in, besides the times of the phases of the insert. It helps find slowness that depends on a particular scene.

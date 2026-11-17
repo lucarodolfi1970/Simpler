@@ -1,0 +1,30 @@
+SIMPLER 1.1.12  —  20 ottobre 2026
+==================================
+
+VELOCITÀ
+--------
+- Path tracing dopo una modifica: spostare un oggetto, cambiare una luce o un materiale non fa più ripreparare
+  tutta la scena. Cycles, nel modo in cui lo usa Simpler, "cuoceva" la posizione di ogni oggetto dentro la sua
+  geometria e a ogni modifica rifaceva tutto da capo (circa 2,4 secondi in un interno grande con una scheda
+  veloce, molto di più con schede più lente). Ora ogni oggetto ha un "gemello" invisibile che condivide la sua
+  geometria: così Cycles la tiene sulla scheda e aggiorna solo la posizione. Misurato con Blender 5.2.2 su un
+  interno grande (in CPU): oggetto spostato da 7,6 a 0,55 secondi, materiale modificato da 7,4
+  a 0,15 secondi, luce modificata 0,16 secondi. I gemelli non si vedono, non compaiono nell'albero, non entrano
+  nella vista 3D e vengono tolti dal render finale, che resta alla massima velocità.
+- Vista 3D già preparata riusata: riaprendo un progetto (o dopo un riavvio, o annullando una modifica) la vista
+  3D non si prepara più da capo se la scena è la stessa. Le ultime 4 viste preparate restano in
+  cache: in un interno grande sono i 20 secondi della preparazione.
+- Apertura dei progetti con texture incorporate: le texture non vengono più rilette tutte in memoria a ogni
+  apertura per riconoscerle (circa 1 secondo in meno in un interno grande).
+
+BUG CORRETTI
+------------
+- Preparazione della vista 3D dopo aver usato il path tracing: venivano decodificate per niente tutte le texture
+  originali (centinaia di 4K/8K), con tempi di minuti o memoria esaurita. Ora si leggono solo le texture davvero
+  usate dai materiali.
+- Due progetti con immagini dallo stesso nome potevano scambiarsi le texture nella cache durante la stessa sessione.
+
+DIAGNOSTICA
+-----------
+- I registri annotano i tempi di apertura del progetto e di caricamento della vista 3D, e quando la vista arriva
+  dalla cache.

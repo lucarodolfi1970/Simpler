@@ -1,0 +1,22 @@
+SIMPLER 1.73.6  —  30 ottobre 2026
+==================================
+
+Ecosistemi con il mare e render con le nuvole più veloce.
+
+- Ecosistemi: con «Calcola solo l'area inquadrata» la stima restava circa 2,8 milioni di pezzi anche da vicinissimo.
+  - Causa: l'erba cresceva anche sul fondale, sotto il mare. Il mare lascia vedere il suolo sotto di sé, quindi per Simpler quel fondale era «inquadrato» fino all'orizzonte.
+  - In una scena di mare, da una vista salvata, il 91% dei pezzi era sott'acqua.
+  - Il conto arrivava sempre al tetto di 4 milioni di candidati messo nella 1.73.5. Per questo il numero era quasi uguale a ogni inquadratura.
+  - Ora, con il mare acceso, sotto il suo livello non cresce nulla: né nella stima né nei pezzi. Vale per ogni ecosistema e ogni superficie (suolo, scogliera, modelli).
+  - Stessa vista: da 2,76 milioni a 1,23 milioni di pezzi, tutti sulla terra.
+  - Se la superficie è tutta sotto il mare, un messaggio lo dice invece di creare un ecosistema vuoto.
+- Render finale con le nuvole volumetriche: circa il 40% più veloce.
+  - Le nuvole si calcolano a passi. Il render finale usava passi grandi la metà di quelli della vista: ora usa gli stessi.
+  - Misurato sul tramonto sul mare, cielo nell'inquadratura, 40 campioni: 274 → 159 s. L'immagine è la stessa a parte il rumore (differenza media 1,6 su 255).
+  - Le nuvole costano anche quando sono fuori inquadratura, perché la luce del sole le attraversa per le ombre. Anche lì il tempo per campione cala del 39%.
+
+Cosa costa nel render di una scena di mare con nuvole (misurato sul processore, a bassa risoluzione):
+- Le nuvole volumetriche erano circa l'80% del tempo di ogni campione.
+- Il mare costa quasi solo la preparazione della scena (circa 7 s, una volta per render). Per campione costa quasi nulla.
+- Trasparenza dell'acqua bassa, costa e livelli di dettaglio di una scogliera: differenze trascurabili.
+- Il numero di rimbalzi della luce nelle nuvole (24 o 12): nessuna differenza di tempo.

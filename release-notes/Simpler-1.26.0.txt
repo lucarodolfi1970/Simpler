@@ -1,0 +1,8 @@
+SIMPLER 1.26.0  —  25 ottobre 2026
+==================================
+
+- Nuovo menu «Decal» nella libreria, tra Personali e Luci: le 127 decal gratuite di ambientCG (CC0), divise per famiglia: segnaletica stradale, colature, tombini, cordoli, porte, gomme da masticare, asfalto rovinato, tracce di pneumatici. Anteprime, ricerca, si scaricano al primo uso (1K, qualche MB) e si mettono come le tue: clic al centro della vista o trascinate sul modello.
+- Le decal di ambientCG portano tutte le loro mappe: colore, opacità, normale (il rilievo), rugosità e metallo. Quando ambientCG ne dà la misura reale (per esempio un tombino 90 × 90 cm) vengono messe a quella grandezza.
+- Le colature non hanno opacità: sono «macchie» che scuriscono la superficie sotto, come lo sporco vero (bianco = niente, scuro = più sporco), sia nel path tracing sia nella vista in tempo reale.
+- Nel pannello della decal i cursori di Rugosità e Metallo spariscono quando la decal ha la sua mappa; sotto c'è da dove viene (per esempio «ambientCG ManholeCover011 · CC0»).
+- Libreria dei modelli: sotto il nome di ogni modello, in piccolo e tra parentesi, quanto pesa sul disco (modello e texture), per esempio «(84,2 MB)».

@@ -1,0 +1,32 @@
+SIMPLER 1.2.2  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+- FOLDER LIBRARY, like a file system: the Materials tab shows the folders (Metals, Gems, Glass, Surfaces, Fabrics,
+  My materials…) with the number of materials in each; click to go in, use "Back" or the path bar next to the search
+  to go up. Folders can be nested (e.g. Wood / Parquet).
+  · "New folder" (the last tile) creates a folder where you are; with / you also create subfolders.
+  · Right click on a folder: Open, New subfolder, Rename, Delete (the materials are not lost: they move to the
+    parent folder).
+  · To move a material: drag it onto a folder, onto "Back" or onto a part of the path; or right click on the
+    material > Move to. This also works for Simpler's own materials.
+  · The search looks in all folders at once.
+- SAVING WITH A FOLDER: "Save as new…" (and "Save to library…" for a material that doesn't come from the library)
+  asks for a name and a folder: pick a folder from the list or type a new path (e.g. Wood/Parquet), which gets
+  created. "Save" on a library material overwrites it and leaves it in its folder.
+- POLY HAVEN TEXTURES in folders, on two levels, taken from Poly Haven's categories: Stone, Bricks and blocks,
+  Ground, Wood, Concrete and plaster, Fabrics and leather, Metal, Ceramics, Asphalt… and inside them, for example,
+  Wood / Boards & Planks (the subfolders keep their original Poly Haven names). Read-only.
+- MATERIAL EDITOR: the name, preview sphere and save buttons stay FIXED at the top; only the parameters scroll, so
+  you immediately see the effect of each change. The panel also shows which library folder the material is in.
+- RESIZABLE BOTTOM LIBRARY: drag the edge between the view and the library upwards to get more rows of tiles (the
+  view gets smaller); double click the edge to switch between one and two rows. The height is remembered.
+
+HOW SAVING MATERIALS WORKS
+--------------------------
+- Changes made in the editor apply to the scene immediately and are saved with the project (.simpler) when you
+  save the project.
+- "Save" / "Save as new…" put the material in the LIBRARY (%APPDATA%\Simpler\materials, with a copy of the
+  textures): the library is shared by all projects, so in a new scene you find your materials and your folders
+  again.

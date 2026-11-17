@@ -1,0 +1,12 @@
+SIMPLER 1.13.15  —  22 October 2026
+===================================
+
+CLEARER WHAT'S NEW
+------------------
+- At the top a drop-down list with the version: every entry has an icon of its main theme, the number and a
+  two-line summary. All versions are there, from 1.0.0 to today, each with its summary in Italian and English.
+- Below, the summary of the chosen version with its icon, and the first lines of the details; "Show all" opens the
+  whole text.
+- What's new closes by itself as soon as you do something else: a click in the view, the tree, the library or
+  another panel. No need to look for the × any more.
+- The grid of version numbers is replaced by the drop-down list.

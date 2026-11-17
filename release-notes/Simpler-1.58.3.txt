@@ -1,0 +1,4 @@
+SIMPLER 1.58.3  —  27 ottobre 2026
+==================================
+
+- Finestre della libreria (Correggi materiali dei modelli, Importa modelli nella libreria, Statistiche e pulizia): mentre sono aperte il resto di Simpler resta fermo come prima, ma non compare più il riquadro rosso «Occupato · attendi» né la clessidra, che finiva anche sulla finestra e sembrava un blocco senza fine. Nessuno sta lavorando: la finestra aspetta i tuoi clic. Il riquadro rosso resta per quando il motore lavora davvero.

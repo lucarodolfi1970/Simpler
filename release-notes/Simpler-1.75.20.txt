@@ -1,0 +1,10 @@
+SIMPLER 1.75.20  —  31 ottobre 2026
+===================================
+
+Il grafico dei campioni durante il render finale.
+
+- Mentre il render finale è in corso, nella parte bassa della schermata di attesa (alta 170 pixel) cresce un'area dello stesso colore dello sfondo, solo un po' più chiara.
+  - In verticale i campioni: da 0 in basso ai campioni del render in alto.
+  - In orizzontale il tempo: tutta la larghezza è il tempo passato finora. Al primo secondo vale un secondo, al decimo dieci secondi, e così via.
+  - Ogni secondo si aggiunge un punto. I secondi già passati restano con l'altezza che avevano raggiunto e si stringono solo verso sinistra, così la forma dell'area mostra la velocità di ogni parte del render: piatta all'inizio mentre carica geometrie e texture, poi la salita dei campioni.
+- I campioni arrivano dal motore insieme all'avanzamento (gli stessi di «campione X di Y»), anche quando il render va per riquadri.

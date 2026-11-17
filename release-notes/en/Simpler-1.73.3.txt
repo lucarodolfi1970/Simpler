@@ -1,0 +1,9 @@
+SIMPLER 1.73.3  —  30 October 2026
+==================================
+
+Coast: the edge of the water fades into the wet sand.
+
+- The last film of water disappears little by little. Simpler knows the thickness of the water at every point: the depth of the sea bed plus the height of the wave there; on land it also knows the land's height above the sea. The thinner the film, the more transparent it becomes, until only the wet sand shows. No more sharp line where the surface meets the shore.
+- The fade is 25 cm of thickness wide plus half the wave height, enough to cover even the bumps of a sand with displacement. On a beach tilted by 1° that means about fifteen metres of gradual transition.
+- It is the same in the real-time view and in path tracing.
+- Fixed: a project with the sea saved with an earlier version kept the old water material, even after Simpler was updated. Now the sea takes the current material when the project is opened.

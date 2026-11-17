@@ -1,0 +1,6 @@
+SIMPLER 1.67.3  —  28 ottobre 2026
+==================================
+
+- «Niente pezzi dietro i modelli» più preciso. Ora è nascosto solo quello che un oggetto copre davvero: la sua forma esatta, al posto della nuvola di punti di prima che allargava un po' gli oggetti. Vale per qualunque oggetto alto almeno 1,5 m: oggetti della scena e copie di tutte le distribuzioni.
+- Le parti trasparenti non nascondono niente: vetri, acqua, plastica trasparente, foglie ed erba ritagliate con la trasparenza, nebbia. Dietro una vetrata o sotto le foglie la superficie si popola. Di un albero contano tronco e rami, non le foglie trasparenti.
+- Le copie lontane si calcolano con forme semplificate, così il conto resta veloce anche con migliaia di alberi.

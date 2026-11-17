@@ -1,0 +1,5 @@
+SIMPLER 1.38.3  —  25 ottobre 2026
+==================================
+
+- Nomi delle tessere della libreria più leggibili: i nomi lunghi senza spazi, come MT_PM_V60_Lolium_perenne_01, vanno a capo dopo _ - . invece che a metà parola. Stanno su due righe e, se sono più lunghi, finiscono con «…». Il nome intero compare tenendoci sopra il puntatore. Vale per modelli, materiali, decal, sfondi, ecosistemi e cartelle.
+- Vista in tempo reale con distribuzioni ed ecosistemi enormi: i pezzi sono raggruppati in blocchi vicini. Si scartano in un colpo i blocchi fuori inquadratura o troppo lontani, e le posizioni dei pezzi visibili si calcolano in modo più diretto. L'immagine è identica a prima. Con un milione di pezzi, il lavoro del processore a ogni movimento della camera si riduce fino al 40%, a seconda dell'inquadratura.

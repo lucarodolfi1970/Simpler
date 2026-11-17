@@ -1,0 +1,5 @@
+SIMPLER 1.60.1  —  27 ottobre 2026
+==================================
+
+- Di notte i lampioni messi con uno scatter (o con un ecosistema) ora illuminano anche la vista in tempo reale, non solo il path tracing. Le luci dentro i modelli delle distribuzioni diventano luci della vista, nella stessa posizione e con la stessa potenza, colore e cono del path tracing, e si accendono e si spengono con l'ora come nel path tracing. Per restare veloce la vista accende le 12 più vicine alla camera, senza ombre; le altre restano visibili solo nel path tracing.
+- «Aggiorna dalla libreria»: se un modello non è più nella libreria (eliminato e salvato di nuovo, quindi per Simpler un modello nuovo) ora lo dice e spiega come fare, invece di non fare niente in silenzio. Per correggere un modello senza perdere il legame con i progetti: salvalo con lo stesso nome nella stessa cartella e scegli di sovrascriverlo.

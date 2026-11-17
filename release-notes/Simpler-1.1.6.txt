@@ -1,0 +1,7 @@
+SIMPLER 1.1.6  —  18 ottobre 2026
+=================================
+
+BUG CORRETTI
+------------
+- Alla chiusura dello splash screen si chiudeva tutta l'app invece di mostrarla: Windows considerava lo splash
+  (la prima finestra aperta) come finestra principale. Ora la finestra principale è quella di Simpler.

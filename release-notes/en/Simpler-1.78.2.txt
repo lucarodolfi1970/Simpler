@@ -1,0 +1,13 @@
+SIMPLER 1.78.2  —  6 November 2026
+==================================
+
+Clearer file folders: ecosystems and decals have their own folder too, movable like the others.
+
+- Settings ▸ Folders now lists:
+  - Downloads: Poly Haven textures, HDRI, ambientCG decals (before it said only «Poly Haven materials», but it also holds downloaded HDRI and decals).
+  - Poly Haven 3D models.
+  - 3D models and vegetation library (plants are models of the same library).
+  - Ecosystems: new entry. Before they always stayed next to the models library and, moving the models, they were left behind and no longer seen. Now they stay where they are until you move them.
+  - Materials library.
+  - My decals: new entry, before always in the Windows profile folder.
+- As for the other libraries, projects keep opening after moving decals and ecosystems.

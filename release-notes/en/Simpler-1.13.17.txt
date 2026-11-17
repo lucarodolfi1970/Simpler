@@ -1,0 +1,8 @@
+SIMPLER 1.13.17  —  22 October 2026
+===================================
+
+START SCREEN
+------------
+- The video card rating is no longer in the box at the top right, which went over the ring: it is now a small line
+  above the logo, with the percentage in green, yellow, orange or red and the verdict right after it (for example
+  "82%  Very good: large scenes without problems"). The card name and the details are in the tooltip.

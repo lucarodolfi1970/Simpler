@@ -1,0 +1,7 @@
+SIMPLER 1.17.12  —  24 October 2026
+===================================
+
+CLOUDS: SECOND LAYER AND A COVERED SKY IN BANKS
+-----------------------------------------------
+- New "Second cloud layer" switch in the Clouds card (with volumetric clouds): a higher, lighter veil above the first, as in real covered skies, with dark masses below, a light broken layer above and gaps of light between them. "Upper layer coverage" sets how much sky it covers. When on, a warning reminds that the ray-traced view and the final render can take up to twice as long: you decide.
+- The "Overcast" presets of "Colours from a photo" no longer give a uniform sheet at 90%: they choose big dark masses at 70%, with gaps. To compare them with the photos the colour table completes itself at the next start (about 10 minutes in the background, progress in the bottom bar); until then the Overcast presets work as before.

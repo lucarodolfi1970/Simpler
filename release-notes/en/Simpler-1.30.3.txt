@@ -1,0 +1,4 @@
+SIMPLER 1.30.3  —  25 October 2026
+==================================
+
+- More precise texture mapping: «Offset X» and «Offset Y» accept and show up to 4 decimals (for example 0.125, an eighth of a repeat), «Scale» and «Stretch» 3 decimals, «Rotation» one decimal. Before, the box showed 0.13 instead of 0.125, and a later tweak could start from the rounded value.

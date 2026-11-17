@@ -1,0 +1,24 @@
+SIMPLER 1.11.0  —  21 October 2026
+==================================
+
+- ENVIRONMENT: new button in the top bar (and Resources now comes before Camera). It uses Blender's physical
+  sky: sun, sky colour, clouds and haze come from the same atmosphere, so they agree with each other and between
+  real time and path tracing.
+  · Presets: Clear morning, Midday, Afternoon, Golden hour, Sunset, Overcast, Fog, Night, Studio
+    (also in the Environments tab of the library below).
+  · Sun: time, day of the year, latitude, north, intensity and size (sharper or softer shadows). Colour and
+    strength follow the atmosphere: orange at sunset, weaker with haze or clouds.
+  · Sky: air, haze (dust and moisture), ozone, altitude and sky light.
+  · Clouds: coverage, size, softness and "Other clouds".
+  · Haze and fog: distant things fade into the air, all the way to thick fog.
+  · Night: stars and moon.
+  · Ground: grass, soil, concrete, neutral or none, all the way to the horizon («Ground» object in the tree: it
+    can also have another material).
+  · Automatic exposure, like a camera: at sunset and at night the image stays readable. It adds to the
+    exposure in the rendering settings.
+- NEW SCENE: starts outdoors, in full daylight, with grass to the horizon and a light haze, instead of the grey
+  floor on a black background. Projects already saved stay as they are until you choose an environment.
+- PERFORMANCE: no volumes. The sun is a real light (sharp shadows without noise), the clouds are painted into the
+  sky (about 10% more time), the haze is added to the image (no cost in path tracing). The sky of the real-time
+  view is prepared by the preview Blender in a couple of seconds, without stopping the rest.
+- Saved scenes (Scenes tab) and Undo also include the Environment.

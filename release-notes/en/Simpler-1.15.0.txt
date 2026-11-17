@@ -1,0 +1,14 @@
+SIMPLER 1.15.0  —  24 October 2026
+==================================
+
+LIFT SHADOWS AND RECOVER HIGHLIGHTS
+-----------------------------------
+- In the render settings, under "Colour and exposure", two new sliders as in a photo editor:
+  · "Lift shadows": raises only the dark tones. At 100% a 10% grey becomes about 21%, black stays black, mid and light tones barely change. For backlight, sunsets, undergrowth, interiors.
+  · "Recover highlights": lowers only the brightest tones (sky, windows, sun). At 100% a 90% becomes about 81%, white stays white.
+- They act on the finished picture: immediate, no recalculation, in the real-time and in the ray-traced view. The final render (PNG, JPEG, TIFF) is saved with the same curve; EXR files stay without it, since they hold the light before tone mapping.
+- They are saved with the project.
+
+NEXT STEPS (after your tests)
+-----------------------------
+- Local HDR (sky and foreground readable together in backlight), fill light, automatic exposure that meters the picture.

@@ -1,0 +1,6 @@
+SIMPLER 1.14.5  —  24 ottobre 2026
+==================================
+
+DIAGNOSTICA DELL'OPACITÀ
+-------------------------
+- Con diag.on, oltre a diag.exr viene salvato diag_alpha.blend: i pezzi che usano una mappa di opacità (al massimo 12, prima quelli selezionati) con materiali e texture, per riprodurre altrove i puntini che la 1.14.4 non ha tolto.

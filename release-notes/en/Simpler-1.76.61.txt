@@ -1,0 +1,8 @@
+SIMPLER 1.76.61  —  6 November 2026
+===================================
+
+The three buttons at the top right share one style; the news can be searched.
+
+- Final render, AI images and AI video have the same width and aligned icons.
+- Final render: the camera with a small sun at its top right (the simulated light), blue. AI images and AI video: the AI sparkles in the same place, orange.
+- News: at the top there is a search box with a lens (or Enter). The panel lists the versions that contain the word or phrase, with the piece of text where it appears highlighted in orange. A click opens that note, fully open, with the word highlighted; the × clears the search.

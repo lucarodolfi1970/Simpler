@@ -1,0 +1,12 @@
+SIMPLER 1.13.18  —  22 October 2026
+===================================
+
+LIBRARY: CUT AND PASTE
+----------------------
+- Right click on one of your materials, a 3D model or a folder: "Cut". The cut item stays faded until you paste it.
+- Then open the folder where you want it and, with a right click on the empty part of the library, choose "Paste
+  here"; or right click on a folder: "Paste into this folder". The item leaves its old place and appears in the new
+  one. A folder moves with everything it contains (subfolders included).
+- Pasting works only within the same kind: a material into a folder of materials, a model into a folder of models.
+  Going from materials to models (or back) forgets the cut. The Simpler and Primitives folders take no paste.
+- "Cancel the cut" in the right-click menu cancels it.

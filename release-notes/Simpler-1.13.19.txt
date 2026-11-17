@@ -1,0 +1,7 @@
+SIMPLER 1.13.19  —  22 ottobre 2026
+===================================
+
+LIBRERIA
+--------
+- Le cartelle di Simpler (i materiali Simpler con le loro sottocartelle e le Primitive) sono rosse invece che gialle:
+  si vede subito che non si possono spostare, rinominare né ricevere incolla.

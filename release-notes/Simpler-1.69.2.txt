@@ -1,0 +1,4 @@
+SIMPLER 1.69.2  —  29 ottobre 2026
+==================================
+
+- Sporco, «Dimensione» più comoda: va da 5 cm a 50 m su una scala che dà più spazio alle misure piccole, e mostra il valore in cm o in m a seconda della grandezza. Si può scrivere «250» (cm), «2,5 m» o «2.5m».

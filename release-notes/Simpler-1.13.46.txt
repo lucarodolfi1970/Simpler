@@ -1,0 +1,8 @@
+SIMPLER 1.13.46  —  23 ottobre 2026
+===================================
+
+«ROMPI LA RIPETIZIONE» (RANDOMIZE UV) FUNZIONA DAVVERO
+-----------------------------------------------------
+- Nella prima versione, vicino ai bordi di ogni zona si vedeva la texture originale, e quella fascia copriva gran parte della superficie: inquadrando da vicino un asfalto si poteva restare tutto nella parte non cambiata, e sembrava che l'opzione non facesse niente.
+- Ora le zone sono su due livelli, entrambi spostati e ruotati a caso, con le celle in posti diversi: dove un livello ha il suo bordo si vede l'altro, così la texture originale ripetuta non compare più da nessuna parte e le giunzioni restano nascoste.
+- La sfumatura è più stretta a parità di valore (25% = passaggio morbido ma breve).

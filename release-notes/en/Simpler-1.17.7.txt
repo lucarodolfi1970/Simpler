@@ -1,0 +1,13 @@
+SIMPLER 1.17.7  —  24 October 2026
+==================================
+
+EVERY SCENE STARTS CLEAN
+------------------------
+- At start, with "New scene" and when opening a project, all panel sections are open and all "Advanced" boxes closed. Before, Simpler remembered, even across sessions, which ones you had opened or closed. While you work on the scene they stay as you leave them.
+
+SKY COLOURS FROM A PHOTO (Sky › Advanced)
+-----------------------------------------
+- A list of small square photos: one click and Simpler sets the sky on their colours. First presets: four sunsets.
+- "Load photo…": any photo; Simpler only looks at its colours, compares them with those of the skies it can make and sets time, haze, ozone, volumetric clouds, exposure and colour rendering. It shows the colours found and the similarity.
+- "Save as preset": the photo, cropped square, stays in the list for the next times (right click to remove it).
+- The colour table was made again taking exposure and colour rendering into account too: the first version was too pale next to photos. It rebuilds by itself at the next start (about half an hour, in the background); until then the section says it is not ready.

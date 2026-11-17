@@ -1,0 +1,12 @@
+SIMPLER 1.75.52  —  1 November 2026
+===================================
+
+New: «Optimize polygons». The mouse pointer no longer vanishes in the view.
+
+- Right click on an object or a group (in the tree or in the view): «Optimize polygons…». A window opens that always stays on top, with four presets (Light 75%, Medium 50%, Strong 30%, Maximum 15%), a slider that goes down to 15% at most, and the number of triangles that will remain.
+- The «Before» and «After» pictures show the model on its own, seen from the camera's direction, with the wireframe (it can be turned off). On light models the preview updates when you let go of the slider. On heavy models (over 1.5 million triangles) it is computed with «Compute preview», or you can go straight to «Apply». A bar shows the progress piece by piece and «Stop» halts the computation.
+- The materials stay on their faces, glass and water included. The texture coordinates, open edges (glass panes, planes) and sharp edges stay too; smooth surfaces stay smooth.
+- The pieces stay separate and the whole group is optimized with a single triangle budget. Repeated pieces (bolts, rims) are reduced once and every copy follows, including copies of the model elsewhere in the scene. Very small pieces (under 300 triangles) are left alone.
+- The model changes only in the project; the library stays as it is, and you can save it to the library afterwards if you want. Ctrl+Z brings back the model as it was. Advanced has «Merge the pieces first», off by default: it only keeps the tree tidy.
+- Mouse vanishing in the view: with «Paint dirt» on, Simpler hid the arrow and showed the brush circle in its place. With a brush of a few centimetres and the scene seen from far, the circle was smaller than a pixel and the mouse seemed gone. Now the arrow is hidden only when the circle is clearly visible; otherwise a crosshair stays. This applies to every brush: dirt, puddles, snow and Scatter.
+- New step in the automatic check, «decimate»: it halves the triangles, checks that the pieces and materials are the same, and that Ctrl+Z gives the model back.

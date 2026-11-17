@@ -1,0 +1,17 @@
+SIMPLER 1.4.6  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- ALBERO ORDINATO CON LE ISTANZE:
+  · l'ORIGINALE non ha più il pallino: accanto al nome ha un'etichetta arancione "×4" con il numero delle sue
+    istanze;
+  · le ISTANZE non sono più elencate una per una allo stesso livello: sotto l'originale c'è una riga chiusa
+    "4 istanze" (con il pallino arancione); un clic la apre e mostra le copie, ognuna con il pallino. Così anche
+    migliaia di copie occupano una sola riga;
+  · tasto destro su "N istanze": "Seleziona le N istanze" oppure "Seleziona l'originale e tutte le istanze";
+  · cliccando un'istanza nella vista, la sua riga si apre da sola nell'albero;
+  · copiando modelli diversi, ognuno ha il suo gruppo di istanze: si capisce subito cosa è copia di cosa.
+- Una copia di una copia è istanza dello stesso originale. Le copie indipendenti sono modelli a sé (niente pallino).
+  Le scene salvate prima: i modelli che condividono la geometria vengono riconosciuti e il primo per nome fa da
+  originale.

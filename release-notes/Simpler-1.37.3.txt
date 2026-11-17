@@ -1,0 +1,4 @@
+SIMPLER 1.37.3  —  25 ottobre 2026
+==================================
+
+- «La storia» rifatta: un solo riquadro largo quanto la libreria, con il titolo arancione «Blender, ma più semplice», due righe sullo spirito di Simpler, la firma di Luca Rodolfi e il link al sito.

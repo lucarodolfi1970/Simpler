@@ -1,0 +1,20 @@
+SIMPLER 1.13.55  —  23 October 2026
+===================================
+
+OPEN MENU
+---------
+- The "Open ▾" button opens a menu: New scene, Open…, Save, Save as…, About, Settings, Close Simpler. The Save button stays next to it for quick saves.
+- About shows the start screen with version and engine; it closes with the × at the top right (or Esc).
+- A click on New, Open or Save while another of these is running is ignored. Before, clicks made while the engine was stuck stayed in a queue and came back one after the other as "save the changes?" questions.
+
+SETTINGS IN THE LEFT PANEL
+--------------------------
+- The gear opens the settings in the left panel, in place of the scene; they close with the × or another click on the gear. No separate window any more.
+- New Saving section:
+  · Backup before saving: the previous file stays as "name.simpler1" (a single copy, replaced at every save). It is a setting of the scene, saved with it; on by default, as Simpler already did.
+  · Automatic save: off, 5, 10, 15 (default) or 30 minutes. It writes a copy "name.autosave.simpler" next to the project, only when there are changes and when Simpler is not doing anything else: your file changes only when you press Save. If Simpler closes badly, opening the project offers to recover it. Saving or closing normally deletes the copy.
+
+ROTATION SNAPPING
+-----------------
+- New "↻ 5°" button in the view bar: the gizmo arcs rotate in steps of 5°, on by default. A click changes it: 5° → 15° → 45° → 1° → free. Ctrl while rotating inverts it. The choice is kept for next time.
+- "Snap" now applies to moving and scaling; rotation has its own button.

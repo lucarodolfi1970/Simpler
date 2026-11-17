@@ -1,0 +1,30 @@
+SIMPLER 1.2.4  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- LIBRERIA DEGLI OGGETTI A CARTELLE (scheda Oggetti in basso), come i materiali:
+  · "Primitive" contiene le forme di base (cubo, sfera, cilindro, cono, piano, toro, gruppo vuoto);
+  · cartelle già pronte, da modificare a piacere: Alberi, Piante e fiori, Natura (Rocce e pietre, Tronchi e rami),
+    Edifici, Elementi architettonici (Porte, Finestre, Scale), Oggetti città (Panchine, Lampioni, Recinzioni),
+    Veicoli, Persone, Arredamento (Sedute, Tavoli, Letti, Contenitori), Cucina, Bagno, Illuminazione, Decorazioni,
+    Elettronica, Giardino ed esterni, Gioielli, Altro;
+  · nuova cartella, rinomina, elimina (gli oggetti salgono di livello), sposta trascinando su una cartella o con
+    tasto destro > Sposta in; la ricerca guarda in tutte le cartelle.
+  · Clic su un oggetto della libreria = al centro della vista; trascinalo nella vista = la sua base va sulla
+    superficie dove lo lasci. Tasto destro: Inserisci, Rinomina, Sposta in, Elimina dalla libreria.
+- SALVA NELLA LIBRERIA: tasto destro su un oggetto nella vista (o nell'albero) > "Salva nella libreria…": scegli
+  nome e cartella (anche nuova). Viene salvato l'oggetto con tutto ciò che contiene, materiali compresi; le texture
+  sono copiate accanto al modello, quindi resta utilizzabile anche se i file originali vengono spostati.
+  La miniatura è un piccolo render in path tracing: vista assonometrica dall'alto a destra (nessuna prospettiva o
+  zoom strano), luci da studio, ombra su sfondo trasparente. Il salvataggio non blocca l'app: copia delle texture e
+  miniatura le prepara il secondo Blender delle anteprime (qualche secondo).
+  La libreria sta in %APPDATA%\Simpler\models e vale per tutti i progetti.
+- MENU CON IL TASTO DESTRO NELLA VISTA: clic destro su un pezzo = lo seleziona (Ctrl+clic destro: il suo gruppo;
+  se il pezzo fa già parte della selezione, la selezione resta) e apre il menu: Salva nella libreria, Modifica il
+  materiale (quello della superficie cliccata), Seleziona il gruppo, Inquadra, Duplica, Rinomina, Appoggia sulla
+  superficie sotto, Nascondi, Elimina. Il tasto destro trascinato ruota la vista come prima.
+- FINESTRA DI SALVATAGGIO rifatta (materiali e oggetti): anteprima del materiale accanto al nome, cartelle ad albero
+  allineate a sinistra con la cartella scelta evidenziata, barra di scorrimento quando sono tante, pulsante
+  "Nuova cartella" (dentro quella scelta), percorso scrivibile a mano con l'indicazione se la cartella esiste già o
+  verrà creata. Doppio clic su una cartella = salva lì.

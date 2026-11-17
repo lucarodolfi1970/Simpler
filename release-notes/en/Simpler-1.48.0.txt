@@ -1,0 +1,6 @@
+SIMPLER 1.48.0  —  26 October 2026
+==================================
+
+- Snow, step 3: «Snow brush» in the Snow's Advanced. You paint on the view as with the puddle brush: «Add» puts snow, «Remove» (or Shift) takes it away, also the automatic one, together with its thickness. Use it for a shovelled path, a cleared pavement or a heap where you need it. «Brush size», [ and ] on the view, Esc to stop.
+- Painted snow also goes under canopies, follows the surface where it was painted (it does not end up on the roof above the street) and is there even with the Amount at zero, if it does not rain. «Brush softness» sets the edges; «Clear the painted snow» takes it all away. Every stroke can be undone.
+- Painted puddles and painted snow are two separate maps: while it snows the painted puddles wait, and come back when it stops.

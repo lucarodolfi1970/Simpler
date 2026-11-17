@@ -1,0 +1,9 @@
+SIMPLER 1.7.3  —  21 ottobre 2026
+=================================
+
+- DISTRIBUZIONI DALL'ALBERO: cliccando una distribuzione ("Scatter 1"…) nell'albero si apre subito il suo pannello
+  Distribuisci a destra, con i suoi modelli, le presenze e le regolazioni: muovi uno slider e la distribuzione si
+  rifà. Il pennello è attivo, quindi puoi anche continuare a dipingere.
+  · Esc, la ✕ del pannello o un altro strumento lo chiudono.
+  · Cliccando nell'albero un oggetto che non fa parte di una distribuzione il pennello si chiude e tornano le
+    sue proprietà.

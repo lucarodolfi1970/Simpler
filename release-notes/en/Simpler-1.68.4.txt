@@ -1,0 +1,5 @@
+SIMPLER 1.68.4  —  29 October 2026
+==================================
+
+- Fixed: a texture missing at opening and then linked again by pointing to its folder showed in path tracing but not in the real-time view. Simpler remembered for the whole session that the texture had no file; now, when the texture is found again, it looks up the file again.
+- The real-time view also no longer remembers textures it could not load: it tries them again at the next load.

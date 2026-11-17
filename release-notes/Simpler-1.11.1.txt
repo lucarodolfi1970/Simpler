@@ -1,0 +1,6 @@
+SIMPLER 1.11.1  —  21 ottobre 2026
+==================================
+
+- NOVITÀ IN INGLESE: tutte le note di versione esistono ora anche in inglese (cartella release-notes\en). Con
+  Simpler in inglese, la finestra delle novità mostra la versione inglese; in italiano quella italiana.
+- Le note italiane non contengono più il riassunto in inglese in fondo (ora c'è la versione completa a parte).

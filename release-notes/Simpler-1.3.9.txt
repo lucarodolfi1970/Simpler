@@ -1,0 +1,13 @@
+SIMPLER 1.3.9  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- GIZMO: SPOSTAMENTO SU UN PIANO. Lo spicchio racchiuso da due assi e dall'arco che li unisce
+  ora è una maniglia: passandoci sopra si colora (del colore dell'arco che lo chiude) e si accendono i due assi;
+  trascinando, l'oggetto si sposta solo in quelle due direzioni:
+    · spicchio tra X e Y (arco blu): sul pavimento, senza cambiare l'altezza;
+    · spicchio tra X e Z (arco verde) e tra Y e Z (arco rosso): sulle due pareti verticali.
+  Gli archi restano per ruotare: se il puntatore è proprio sull'arco ruota, dentro lo spicchio sposta.
+  Le maniglie delle frecce sono un po' più sottili, così lasciano spazio agli spicchi. Snap e assi Mondo/Locale
+  valgono anche per i piani.

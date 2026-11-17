@@ -1,0 +1,6 @@
+SIMPLER 1.44.1  —  26 ottobre 2026
+==================================
+
+- Salvataggio automatico più semplice e meno invadente: Spento, 10, 20 o 30 minuti (prima anche 5 e 15; chi aveva 5 passa a 10, chi aveva 15 passa a 20). Di serie 20 minuti. Su un progetto grande ogni copia ferma il motore per qualche secondo, e ora lo vedi con «Occupato · attendi».
+- La copia automatica viene eliminata ogni volta che lasci il progetto apposta: chiudendo Simpler, ma anche con Nuova scena o aprendo un altro progetto. Prima, dopo una Nuova scena, la riapertura chiedeva di recuperare una copia rimasta lì.
+- Registro dei tempi: ogni volta che compare «Occupato · attendi», il registro dell'app annota quanto è durato e per cosa (per esempio «wait 26,0 s: Salvataggio automatico»). Il tempo di apertura del progetto non conta più l'attesa della domanda sulla copia automatica, che viene annotata a parte.

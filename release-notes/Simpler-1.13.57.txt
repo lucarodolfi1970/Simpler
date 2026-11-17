@@ -1,0 +1,9 @@
+SIMPLER 1.13.57  —  23 ottobre 2026
+===================================
+
+SI VEDE QUANDO SIMPLER STA LAVORANDO
+------------------------------------
+- Quando un comando aspetta il motore per più di mezzo secondo (spostare un modello grande, assegnare un materiale a molti pezzi, inserire, eliminare, annullare…):
+  · il puntatore del mouse diventa la freccia con la clessidra, anche sopra la vista 3D;
+  · in basso nella vista compare una piccola etichetta con cosa sta facendo e da quanti secondi (es. «Assegnazione del materiale… 3 s»).
+- I comandi veloci non mostrano nulla, per non far lampeggiare la vista. Le operazioni che hanno già la loro barra (preparazione della vista, render finale) la mantengono.

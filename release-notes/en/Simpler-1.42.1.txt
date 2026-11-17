@@ -1,0 +1,6 @@
+SIMPLER 1.42.1  —  26 October 2026
+==================================
+
+- Rain, two touches after the first tests.
+  - Wetness recalibrated: the effect shows from low values (30% = darker ground, 60% = glossy). Past half, a continuous sheet of water forms on flat ground: at 100% everything shines and reflects sky and buildings as after a downpour.
+  - New «Edge softness» slider in the Rain's Advanced: puddle edges sharp (0%) or fading into the wet ground (100%). The starting value (30%) already softens them a little.

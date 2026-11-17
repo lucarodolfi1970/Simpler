@@ -1,0 +1,12 @@
+SIMPLER 1.77.0  —  6 novembre 2026
+==================================
+
+Nuovo tipo di materiale «Fogliame», con la stagione: dal verde all'autunno fino all'inverno senza foglie.
+
+- Nell'editor dei materiali, nel menu del tipo, c'è «Fogliame», per foglie, aghi, petali e per il legno delle piante.
+  - Foglie o Legno: il legno (tronco, rami, corteccia) non cambia con la stagione.
+  - Stagione: 0% estate, tutto verde; verso il 30-50% le foglie ingialliscono, poi diventano arancioni e rosse e cominciano a cadere; al 100% inverno, niente foglie. Il passaggio è graduale: ogni foglia ha il suo momento, rami interi cambiano insieme, ogni pianta un po' prima o un po' dopo, con piccole differenze casuali di colore. Sotto il cursore una riga dice a che punto della stagione sei.
+  - Le foglie cadute diventano trasparenti e non fanno più ombra, anche nella vista in tempo reale.
+  - Luce attraverso: il sole che passa attraverso la foglia, per chiome luminose viste da sotto invece che scure.
+  - Avanzate: Retro della foglia (il lato di sotto più chiaro), Rossi d'autunno (quante piante diventano rosse invece che gialle), Scuro all'interno (la chioma più scura al centro, solo nel path tracing e nel render), Variazione (ogni pianta e ogni foglia un po' diversa).
+  - Restano i canali che servono a una foglia: colore, rugosità, sporco, rilievo, opacità (il ritaglio della foglia) e proiezione.

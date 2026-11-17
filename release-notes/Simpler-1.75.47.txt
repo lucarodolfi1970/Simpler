@@ -1,0 +1,8 @@
+SIMPLER 1.75.47  —  1 novembre 2026
+===================================
+
+Una piccola × in tutte le caselle di testo.
+
+- Le caselle di testo di Simpler hanno ora in fondo una piccola × che svuota la casella e ci rimette il cursore: ricerche nella libreria e nell'albero, nomi, ricerca dei look colore, testi delle funzioni AI e le altre. Compare solo quando c'è del testo.
+- Le caselle dei numeri e delle chiavi API non ce l'hanno.
+- Il riquadro «Movimento» del Video AI tiene la sua ×, che si può annullare.

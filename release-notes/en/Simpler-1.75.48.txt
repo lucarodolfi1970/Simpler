@@ -1,0 +1,8 @@
+SIMPLER 1.75.48  —  1 November 2026
+===================================
+
+Imported models at the centre of the view.
+
+- An imported model (FBX, OBJ, glTF and the other formats, also dragged into the window) now sets its base on the point at the centre of the screen, where the camera is looking, like the objects of the library. Before, it kept the coordinates of the file, often far from the view.
+- Several files imported together: the first goes to the centre of the view, the others move by the same amount and stay aligned to each other.
+- The «Import into the scene» window has the new option «At the centre of the view», on by default. Off, the model keeps the coordinates of the file: useful for parts of the same project that must match. The choice is remembered.

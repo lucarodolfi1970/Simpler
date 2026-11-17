@@ -1,0 +1,10 @@
+SIMPLER 1.75.3  —  31 October 2026
+==================================
+
+Real-time view: no more fixed 30 fps.
+
+- The Qashqai ran at 30 fps even when still, with a video card able to draw 690 frames per second.
+  - Cause (from the 1.75.2 log): the view drew every other frame. Something marked the materials as «to be made again» at every frame; the view then skipped the next frame to prepare the shaders in the background, and never found anything new to prepare.
+  - Now, after 3 checks in a row with nothing new, the view stops skipping frames, until a frame really prepares a new shader. The protection against long freezes after an import stays.
+  - A still view is no longer drawn again and again: the video card stays free.
+  - The log says who marks the materials, to remove the cause at its root.

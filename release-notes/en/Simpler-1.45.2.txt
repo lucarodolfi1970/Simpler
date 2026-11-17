@@ -1,0 +1,5 @@
+SIMPLER 1.45.2  —  26 October 2026
+==================================
+
+- Rain: new «Brush softness» slider for painted puddles, in the Rain's Advanced (it appears with the brush on or when there are painted puddles): sharp edges (0%) or fading into the wet ground (100%). It applies to all of them, also those already painted; 50% by default, softer than before.
+- Resources: «Who uses the video memory» counted programs on all video cards together (the processor's one included), and Windows (dwm) could show 7.3 GB with 5.4 GB used in all. Now it counts only the card that renders.

@@ -1,0 +1,9 @@
+SIMPLER 1.13.52  —  23 ottobre 2026
+===================================
+
+LUCI SOTT'ACQUA: LA LUCE ESCE DALL'ACQUA
+----------------------------------------
+- Con «Luce riflessa dall'acqua» acceso e le caustiche su «Nitide», la luce di una lampada sott'acqua esce dalla superficie e disegna il suo reticolo sulle pareti, sui bordi, sulle colonne e sul soffitto intorno alla piscina. Prima la stanza restava al buio: le caustiche nitide di Cycles non trovavano quella luce perché il corpo dell'acqua (il volume del colore) le interrompe.
+- È fisico: rifrazione di Snell dall'acqua all'aria (indice 1,333), luce trasmessa = 1 − Fresnel, niente luce oltre i 48,6° (lì tutta la luce torna giù come riflessione totale, già calcolata). La luce che viaggia sott'acqua viene attenuata da colore e limpidezza dell'acqua, sia verso la superficie sia nel riflesso verso il fondo.
+- Con le caustiche su «Normali» la luce delle lampade sott'acqua esce già in modo uniforme (scorciatoia delle ombre): lì non viene aggiunta di nuovo, per non contarla due volte.
+- Costo: un raggio in più per vertice per le lampade sott'acqua. In una piscina circa 4,5 s nella vista, solo quando cambiano luci, acqua o oggetti vicini.

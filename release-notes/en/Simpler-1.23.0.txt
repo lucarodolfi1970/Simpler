@@ -1,0 +1,8 @@
+SIMPLER 1.23.0  —  24 October 2026
+==================================
+
+- Generated roughness: on the Roughness map, the magic wand offers
+  · "Roughness from the colour map": from the brightness of the texture, levelled; dark = rough (90%), bright = smooth (25%). Instant.
+  · "Roughness with worn edges": on top, the curvature of the relief (DeepBump, from the normal map or, if missing, from the colour texture) makes edges smoother and hollows rougher, as with real wear.
+  If the material works the other way round (bright = rough), use "Invert the map"; "Map weight" blends it with the slider value.
+- Glossiness doesn't need generating: it is the inverted roughness.

@@ -1,0 +1,30 @@
+SIMPLER 1.1.12  —  20 October 2026
+==================================
+
+SPEED
+-----
+- Path tracing after a change: moving an object or changing a light or a material no longer makes the whole
+  scene be prepared again. Cycles, the way Simpler uses it, "baked" the position of each object into its
+  geometry and at every change redid everything from scratch (about 2.4 seconds on a large interior with a fast
+  card, much more with slower cards). Now each object has an invisible "twin" that shares its
+  geometry: this way Cycles keeps it on the card and updates only the position. Measured with Blender 5.2.2 on
+  a large interior (on CPU): object moved from 7.6 to 0.55 seconds, material changed from 7.4
+  to 0.15 seconds, light changed 0.16 seconds. The twins are not visible, do not appear in the tree, do not go
+  into the 3D view and are removed from the final render, which stays at full speed.
+- Already prepared 3D view reused: when reopening a project (or after a restart, or undoing a change) the 3D
+  view is no longer prepared from scratch if the scene is the same. The last 4 prepared views are kept in
+  cache: on a large interior this saves the 20 seconds of preparation.
+- Opening projects with embedded textures: the textures are no longer all re-read into memory at every
+  opening to recognise them (about 1 second less on a large interior).
+
+BUG FIXES
+---------
+- Preparing the 3D view after using path tracing: all the original textures (hundreds of 4K/8K) were
+  decoded for nothing, taking minutes or running out of memory. Now only the textures really
+  used by the materials are read.
+- Two projects with images of the same name could swap textures in the cache during the same session.
+
+DIAGNOSTICS
+-----------
+- The logs record the opening time of the project and the loading time of the 3D view, and when the view comes
+  from the cache.

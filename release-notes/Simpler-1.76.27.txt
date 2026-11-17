@@ -1,0 +1,8 @@
+SIMPLER 1.76.27  —  3 novembre 2026
+===================================
+
+Schiuma della costa intorno ai modelli; terreni grandi visti fino in fondo.
+
+- Corretto: la schiuma della costa, l'acqua limpida e le linee della riva seguivano le righe della griglia del mare e uscivano come fasce dritte, soprattutto lontano dal centro della scena. Ora la costa viene misurata su una mappa a celle quadrate intorno a ciò che tocca l'acqua (fino a 25 cm per cella), e la schiuma gira intorno al modello che esce dall'acqua, sia nella vista sia nel path tracing.
+- La mappa viene salvata con il progetto: riaprendolo non serve misurare di nuovo. Un progetto salvato con una versione precedente la misura una volta all'apertura.
+- Corretto: un terreno molto grande (per esempio un file di quote di quasi 100 km) sembrava tagliato, perché la vista smetteva di disegnare a 3 km dalla camera. Ora la vista arriva fino al bordo della scena.

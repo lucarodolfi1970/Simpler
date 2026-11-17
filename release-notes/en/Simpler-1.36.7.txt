@@ -1,0 +1,11 @@
+SIMPLER 1.36.7  —  25 October 2026
+==================================
+
+- Decal panel reorganised. At the top there are only Size, Depth, Opacity and Colour, plus a line saying which maps the decal has.
+- Everything else is in Advanced, in one box per channel, each with its map and only its own values:
+  - Relief (normal): map, Strength, DirectX normal;
+  - Roughness: map, or the slider when there is no map;
+  - Metal: map, or the slider;
+  - Transparency: opacity map;
+  - Emission (light): Brightness and map;
+  - Shape: Width, Height, Order.

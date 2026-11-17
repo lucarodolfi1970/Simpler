@@ -1,0 +1,8 @@
+SIMPLER 1.13.25  —  22 October 2026
+===================================
+
+MATERIAL EDITOR
+---------------
+- Under the Type, instead of the names in a row: "On: Ground" with a single object, otherwise "On 152 objects ▾".
+  The click opens the list of the objects (alphabetical, scrolling); a click on one selects it in the scene. Objects
+  inside the models of distributions are counted at the bottom.

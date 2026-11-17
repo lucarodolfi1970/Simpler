@@ -1,0 +1,6 @@
+SIMPLER 1.69.1  —  29 October 2026
+==================================
+
+- Fixed Grunge on models imported in inches or millimetres (as many architectural models are): the size was measured in the model's units, so the dirt was dozens of times too small and looked like a uniform grain, as if it were not there. Now the size is in real centimetres, the same for every model, in path tracing and in the real-time view.
+- Grunge is more visible: at 50% the texture shows as it is, at 100% it is twice as strong.
+- The tooltip of «On the edges» warns that the first time you use it the graphics card prepares a new program, which may take a minute or two.

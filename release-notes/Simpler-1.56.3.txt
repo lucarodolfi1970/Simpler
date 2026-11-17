@@ -1,0 +1,4 @@
+SIMPLER 1.56.3  —  27 ottobre 2026
+==================================
+
+- Pulsante «Materiali» senza nulla selezionato (e clic su un materiale della libreria): apriva la copia del progetto con le sue modifiche anche quando era rimasta solo su oggetti eliminati (un «Bianco» diventato la targa di un'auto cancellata). Ora apre la copia che è su oggetti della scena, oppure una bozza che stai modificando senza oggetti; altrimenti il materiale come è in libreria.

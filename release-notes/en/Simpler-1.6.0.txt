@@ -1,0 +1,41 @@
+SIMPLER 1.6.0  —  21 October 2026
+=================================
+
+SCATTER: FAST EVEN WITH THOUSANDS OF PIECES
+-------------------------------------------
+- INSTANT BRUSH STROKES: pieces appear right under the brush, with the real model (no more green cones), and stay
+  there. Previously every batch made the whole 3D view prepare again (10-17 seconds).
+  The engine now creates 200 pieces in about 0.1 seconds.
+- The first time you use a model, Simpler prepares a copy of it for the 3D view: a few seconds, then never again,
+  even in other projects.
+- GPU INSTANCING: in the 3D view all the pieces of a model are drawn from a single copy. 300 bushes = 5 draw
+  calls. Pieces outside the frame are not drawn.
+- AUTOMATIC LEVELS OF DETAIL (LOD): for each model Simpler prepares three lighter versions by itself
+  (about 30%, 8% and 2% of the triangles), without blocking the view.
+  · Vegetation (leaves, grass blades, needles): removes whole leaves and enlarges the remaining ones, so the
+    canopy keeps its volume and colour from a distance.
+  · Trunks, rocks and other continuous surfaces: simplified with meshoptimizer.
+  Each piece uses the level suited to its size on screen. If the scene exceeds what the graphics card can draw
+  smoothly, Simpler lowers the detail of the farthest pieces, following the measured time of each frame. The
+  counter at the bottom right shows how many pieces are visible, and "automatic LOD" when it steps in.
+- Path tracing and the final render always use the full models (Cycles draws instances natively).
+- Hiding and showing a scatter again from the tree no longer piles the pieces up in one spot.
+- The 3D view no longer prepares again for scatters, and the view files are smaller.
+
+SCATTER PANEL
+-------------
+- Each scatter has its own models: selecting "Scatter 1" or "Scatter 2" in the tree with the brush active, the
+  panel shows the models of that scatter. It also works with a reopened project: the models are worked out from
+  the pieces, at 100%. Pressing B with a scatter selected also resumes from that one.
+- "+ New" empties the models to scatter: the next brush stroke starts a new group.
+- At startup, with New and with Open, the brush starts empty (only the adjustments remain: diameter, spacing,
+  scale, rotation).
+- The button that removes a model from the brush is now a bin, with an explanation on mouse hover.
+- "Paint into: …" visible again.
+
+GRAPHICS CARD AT REST
+---------------------
+- The 3D view only redraws when something changes: you move the view, the mouse, press a key, make an edit, a
+  texture arrives. When still, it leaves the graphics card free: no 90% load, less heat, more power for path
+  tracing and other programs. The counter shows this with "still".
+- The counter no longer shows "2 triangles · 1 draw" when an object is selected: it counts the whole frame.

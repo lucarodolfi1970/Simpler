@@ -1,0 +1,5 @@
+SIMPLER 1.25.1  —  25 October 2026
+==================================
+
+- Decals: in the real-time view the decal is cut exactly to its box. Before, the whole face of the piece it was on came along (e.g. the whole floor), which is why the gizmo was not at the centre of the decal and seemed to move at a different speed.
+- Decals: dragged by the yellow square of the gizmo it slides over the surfaces under the mouse, turned like the surface, as models do. Dropped on another piece (e.g. from the floor to the cube), it is projected onto that one and becomes its child. The same for moves and turns from the panel; everything undoes with Ctrl+Z.

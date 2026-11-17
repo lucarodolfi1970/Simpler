@@ -1,0 +1,5 @@
+SIMPLER 1.45.1  —  26 October 2026
+==================================
+
+- Path tracing stuck on «computing…» with rain in a scene with nothing that gives shelter (only the ground and painted puddles): fixed. The rain made the shelter map again at every pass and each time started path tracing over, forever. Now it makes it again only when the geometry changes, and restarts path tracing only if the map really changed.
+- «Busy · please wait» also appears while the new sky is being prepared (for example choosing Night or another Ambience): «Preparing the sky», a few seconds.

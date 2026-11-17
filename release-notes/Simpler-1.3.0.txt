@@ -1,0 +1,22 @@
+SIMPLER 1.3.0  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- PULSANTE "IMPORTA" NELLA BARRA IN ALTO, accanto a "Nuovo" (il vecchio pulsante "Importa modello" sopra l'albero
+  non c'è più). Clic = importa un modello nella scena (come prima, Ctrl+I). Il piccolo ▾ accanto apre il menu con
+  "Importa modelli nella libreria…".
+- IMPORTA MODELLI NELLA LIBRERIA: una finestra guidata per popolare in fretta la libreria dei Modelli 3D.
+  1. Scegli i modelli: "Aggiungi file…" (anche molti insieme) o "Aggiungi una cartella…" (tutti i modelli della
+     cartella e delle sottocartelle). Formati: FBX, glTF/GLB, OBJ, USD. Il nome di ogni modello si può cambiare.
+  2. Scegli la cartella della libreria: una per tutti, oppure cartella per cartella dal pulsante su ogni riga;
+     "Nuova cartella…" ne crea una nella struttura della libreria.
+  3. Importa: una barra mostra l'avanzamento, ogni riga diventa ✓ o ✗ (passandoci sopra si legge il motivo).
+  Ogni modello viene preparato dal secondo Blender (quello delle anteprime): la scena e la vista 3D non vengono
+  toccate, niente sfarfallii, puoi continuare a lavorare. Per ogni modello Simpler cerca le texture accanto al file,
+  le copia nella libreria, toglie camere, luci e scheletri del file, salva il modello e fa la miniatura in path
+  tracing. Le caselle compaiono nella libreria una dopo l'altra.
+  Se un modello esiste già (stesso nome nella stessa cartella): con "Sovrascrivi i modelli che esistono già" attivo
+  viene sostituito; altrimenti Simpler chiede Sovrascrivi / Rinomina (es. "Sedia (2)") / Salta, con l'opzione
+  "Fai lo stesso per i prossimi".
+  Puoi chiudere la finestra durante l'importazione: continua in background (riaprila dal menu Importa).

@@ -1,0 +1,11 @@
+SIMPLER 1.13.24  —  22 October 2026
+===================================
+
+CLEARER MATERIAL EDITOR
+-----------------------
+- Right under the Type, the editor says which objects the material is on ("On: Ground, Plane and 3 more"). If it is on
+  no object of the scene it says so in orange: "changes do not show in the view". Before, this was at the bottom,
+  under the preview, and it happened to edit a material other than the one of the object being looked at (so the
+  mapping changes seemed not to work).
+- The scale of the mapping is called "Scale" in every mode: in UV it is "Scale · repeats" (how many times it repeats
+  on the model's UVs), in Box, Planar, Cylinder and Sphere it is "Scale · real size" in cm.

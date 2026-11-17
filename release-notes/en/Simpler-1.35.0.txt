@@ -1,0 +1,8 @@
+SIMPLER 1.35.0  —  25 October 2026
+==================================
+
+- Materials: the model rules. When you open a material from an object (eyedropper or click on a piece) and other models use it too, the top shows «Edit: Only this model | All».
+  · «Only this model» is always where it starts: at the first change the model gets a copy of the material all its own, on all its pieces using it (for example both tail lights of a car), named after the model (e.g. «Tail lights · Audi A4 White»). The other models do not change. Before, the copy went only on the piece clicked, and another piece of the same model kept the old material.
+  · «All» has to be chosen and holds only for the material open: it no longer stays on for the materials opened afterwards.
+  · When a change reaches several models (with «All», or opening the material from the library or the list of the scene's materials) an orange note names them: «The changes also change: …».
+- Example: drag the red tail lights of a car onto another car, open them from the second one with the eyedropper and adjust them: the first car stays as it was.

@@ -1,0 +1,17 @@
+SIMPLER 1.75.1  —  31 ottobre 2026
+==================================
+
+Tre bug corretti e le caustiche dell'oceano.
+
+- «Internal error: StructRNA of type Object has been removed» muovendo gli slider dell'acqua.
+  - Causa: cambiando il materiale dell'acqua Simpler aggiornava anche la griglia attorno alla fotocamera, che nel frattempo era già stata rifatta dalla sua superficie.
+  - Ora la griglia viene rifatta solo dalla sua superficie, e un oggetto già rifatto viene saltato.
+- Path tracing fermo a «pass 2/5»: non era bloccato, ricominciava sempre lo stesso passaggio.
+  - Causa: ogni comando che arriva interrompe il passaggio in corso per rispondere subito. Con comandi ogni 1-2 secondi il passaggio successivo (2 s) non finiva mai: poteva ripartire 27 volte in 55 secondi.
+  - Ora un passaggio si interrompe al massimo 3 volte, poi finisce (i comandi aspettano al più quel passaggio).
+- Vista in tempo reale vuota (grigia) dopo un fotogramma molto lento (18 s, piscina con ombre Ultra).
+  - Causa: la scheda video azzera la vista 3D quando un fotogramma dura troppo; la vista restava vuota.
+  - Ora Simpler se ne accorge e riavvia la vista da solo, con la stessa scena.
+- Caustiche dell'oceano: con «Luce riflessa dall'acqua» acceso e il sole alto, il fondale sotto il mare ha la rete di luce delle onde.
+  - Più forte vicino alla riva, sparisce in acqua profonda (6 m); la grandezza segue il vento, la direzione segue il sole.
+  - Calcolata nel materiale, quindi senza tempo in più.

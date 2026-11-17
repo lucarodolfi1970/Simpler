@@ -1,0 +1,9 @@
+SIMPLER 1.13.45  —  23 October 2026
+===================================
+
+THE ENVIRONMENT GROUND IS A SIMPLER MATERIAL
+--------------------------------------------
+- The ground material was built in a way the editor could not read: opening it, the editor showed default values without texture and at the first change (for example «Break the repetition») rebuilt it white. That is why the tiles disappeared in path tracing while the real-time view still showed them.
+- Now every ground (Tiles, Lawn, Soil, Concrete, White, Neutral) is a normal Simpler material: the editor shows its texture, roughness and mapping, and every change (Randomize UV included) keeps it.
+- Lawn, soil and concrete break their repetition with the editor's own «Break the repetition» (on, adjustable); the tiles do not, because the grout lines must match.
+- Scenes already open with the old ground: choose it again in the Environment to get the new one.

@@ -1,0 +1,8 @@
+SIMPLER 1.13.46  —  23 October 2026
+===================================
+
+«BREAK THE REPETITION» (RANDOMIZE UV) REALLY WORKS
+--------------------------------------------------
+- In the first version the original texture showed near the edges of every zone, and that band covered much of the surface: framing an asphalt from close up you could stay entirely in the unchanged part, and the option seemed to do nothing.
+- Now the zones are on two layers, both shifted and turned at random, with their cells in different places: where one layer has its edge the other shows, so the original repeating texture no longer appears anywhere and the joins stay hidden.
+- The blend is narrower for the same value (25% = a soft but short passage).

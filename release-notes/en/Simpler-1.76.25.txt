@@ -1,0 +1,11 @@
+SIMPLER 1.76.25  —  3 November 2026
+===================================
+
+Real elevation files as terrains, lighter and tidier stones, more visible Advanced, snow fixed.
+
+- Terrain from a real elevation file: «Use a height map…» now opens USGS (.dem), SRTM (.hgt) and ESRI ASCII (.asc) files too. The terrain takes the file's real width and relief (for example 9.6 km and 146 m), with no erosion added: the place as it is. The empty parts at the edges of the file are cut away or filled.
+- «Stones and debris» has its own switch in «Compute only the framed area», next to snow and ecosystems; «Recalculate» makes the stones again too, and before the render they are made again by themselves.
+- Stones only where the camera looks: the choice is now made before they are computed (before, they were made on the whole terrain, millions, and then an even share was kept everywhere). Far from the camera they are sparser and a little bigger, so the terrain stays covered and the scene light; close by they are all there.
+- Each stone has its own thumbnail and, under it, its own Advanced with «Size» and «How many of this one», which can be set also before «Lay the stones».
+- «Advanced» is now a yellow bar as wide as the panel with blue text; inside lists (stones, brush models) it is a thin bar. The dot that says «something is not at its default» is on the right of the bar.
+- Fixed: with snow the path tracing could stop with «foreach_set(..) sequence length mismatch given 1, needed 0».

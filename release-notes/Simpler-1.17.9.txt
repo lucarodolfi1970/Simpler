@@ -1,0 +1,8 @@
+SIMPLER 1.17.9  —  24 ottobre 2026
+==================================
+
+PULSANTE «MATERIALI» NELLA BARRA IN ALTO
+----------------------------------------
+- Nuovo pulsante «Materiali», accanto ad Ambiente e Fotocamera: apre l'editor del materiale dell'oggetto selezionato (per un gruppo o un modello della libreria, quello del primo pezzo con un materiale).
+- Senza nessun oggetto selezionato apre il materiale bianco standard: lo regoli e poi trascini la sfera di anteprima sugli oggetti per applicarlo.
+- Un secondo clic chiude il pannello.

@@ -1,0 +1,18 @@
+SIMPLER 1.4.6  —  21 October 2026
+=================================
+
+NEW
+---
+- TIDY TREE WITH INSTANCES:
+  · the ORIGINAL no longer has the dot: next to its name it has an orange "×4" label with the number of its
+    instances;
+  · the INSTANCES are no longer listed one by one at the same level: under the original there is a collapsed
+    "4 instances" row (with the orange dot); a click opens it and shows the copies, each with the dot. This way
+    even thousands of copies take up a single row;
+  · right click on "N instances": "Select the N instances" or "Select the original and all instances";
+  · clicking an instance in the view opens its row in the tree automatically;
+  · when copying different models, each one has its own group of instances: you can tell right away what is a copy
+    of what.
+- A copy of a copy is an instance of the same original. Independent copies are models in their own right (no dot).
+  Scenes saved earlier: models that share geometry are recognised and the first one by name acts as the
+  original.

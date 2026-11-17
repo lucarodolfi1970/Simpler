@@ -1,0 +1,10 @@
+SIMPLER 1.76.47  —  4 novembre 2026
+===================================
+
+Velocità: ecosistemi e terreno molto più rapidi da rifare.
+
+- Ogni volta che un ecosistema veniva rifatto (terreno modificato o scolpito, «Ricalcola dalla vista») Simpler preparava di nuovo, da zero, le versioni semplificate di ogni albero e pietra usate per capire cosa nasconde la vista: la memoria che doveva tenerle le cercava per il nome della raccolta, che cambia a ogni rifacimento. E le preparava con un ordinamento lentissimo. In un caso misurato: 109 s di 201 nell'aggiornamento del terreno dopo la scultura, 95 s di 128 in «Ricalcola dalla vista».
+- Ora le riconosce da quello che sono (stessa forma = stessa versione semplificata, anche dopo il rifacimento) e le prepara circa 10 volte più in fretta (un albero di un milione di triangoli: 38 s → 3,6 s, la prima volta; poi niente).
+- Dopo una scultura, le zone vicine tengono il loro ordine: i materiali del terreno non vengono più rifatti tutti per niente (18 s). Se un materiale viene rifatto, il registro dice perché.
+- Il registro delle operazioni lente ora dice anche chi chiama le parti più pesanti: le cause si trovano subito.
+- Nuovo controllo dei tempi: un terreno con ecosistema aggiornato dopo una scultura e «Ricalcola dalla vista» devono restare sotto un limite, e i materiali non devono essere rifatti; se no la versione non parte.

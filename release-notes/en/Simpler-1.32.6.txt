@@ -1,0 +1,4 @@
+SIMPLER 1.32.6  —  25 October 2026
+==================================
+
+- Decals: the real-time view no longer shows a «ghost copy» far from the decal (for example an orange outline on the floor under a decal placed on a car's dashboard). When the decal crosses a big face (the floor of the car), the view got the face cut only at the sides of the box, not in depth: that part was invisible but showed its selection outline, widened the box and took clicks. Now it is cut in depth too. The render does not change.

@@ -1,0 +1,24 @@
+SIMPLER 1.13.13  —  22 October 2026
+===================================
+
+GLASS OF IMPORTED MODELS
+------------------------
+- The glass that stayed a mirror at 100% transparency: some imported window materials have a "metalness" map
+  connected to the metal. In Blender's shader metal wins over transparency, so the glass stayed a
+  mirror. Now, when you turn transparency on, the metal is removed by itself (the status bar says so) and it becomes
+  glass.
+- New button "Make it clear glass" in the Glass and transparency section: removes the colour, roughness, relief, metal
+  and opacity maps. Such materials often have a dark colour texture, a "dirty" roughness and a smudged normal map, made for
+  the old trick of the half-invisible window: kept, the glass is dark and frosted; with the button it becomes clear.
+  Ctrl+Z to go back.
+- "Is water" now also removes metal maps.
+- The speckles on the windows in path tracing came from that original material (43% transparency, metal and
+  roughness from maps): with real or clear glass they go away.
+
+REAL-TIME VIEW
+--------------
+- While you move, the models of the distributions use lighter versions and come back detailed as soon as you stop:
+  the movement stays smooth also with many big buildings (each of yours has about 2 million triangles).
+- Shadows draw the models a second time: now they count in the triangle budget.
+- New scale bar at the bottom right: a line with its length (mm, cm, m or km) at the distance of what is in the
+  middle of the view, as a reference for sizes. It changes with the zoom.

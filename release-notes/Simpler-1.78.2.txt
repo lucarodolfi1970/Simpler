@@ -1,0 +1,13 @@
+SIMPLER 1.78.2  —  6 novembre 2026
+==================================
+
+Cartelle dei file più chiare: anche ecosistemi e decal hanno la loro cartella, spostabile come le altre.
+
+- Impostazioni ▸ Cartelle ora elenca:
+  - Download: texture di Poly Haven, HDRI, decal di ambientCG (prima diceva solo «Materiali Poly Haven», ma contiene anche HDRI e decal scaricati).
+  - Modelli 3D Poly Haven.
+  - Libreria Modelli 3D e vegetazione (le piante sono modelli della stessa libreria).
+  - Ecosistemi: nuova voce. Prima stavano sempre accanto alla libreria dei modelli e, spostando i modelli, restavano indietro e non si vedevano più. Ora restano dove sono finché non li sposti tu.
+  - Libreria Materiali.
+  - Le mie decal: nuova voce, prima sempre nella cartella del profilo di Windows.
+- Come per le altre librerie, i progetti continuano ad aprirsi anche dopo aver spostato decal ed ecosistemi.

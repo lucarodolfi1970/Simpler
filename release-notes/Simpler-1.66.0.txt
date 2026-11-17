@@ -1,0 +1,23 @@
+SIMPLER 1.66.0  —  28 ottobre 2026
+==================================
+
+- Gocce sulle superfici. Nelle Avanzate della pioggia, sotto «Gocce che cadono», c'è «Gocce posate»:
+  - Goccioline d'acqua sulle superfici lisce bagnate, come carrozzerie, metalli, plastiche e vetri. Ogni goccia è una piccola lente: riflette il cielo e le luci e piega ciò che c'è sotto.
+  - Sulle parti inclinate e sui lati le gocce si allungano e scendono rivoli.
+  - Sui vetri le gocce piegano ciò che si vede dietro.
+  - Cursori «Quantità», «Dimensione», «Gocce grandi», «Rivoli sulle pareti», «Velo d'acqua». Il velo d'acqua è un sottile strato lucido sui materiali lisci.
+  - Non ci sono gocce sotto i ripari, né sull'acqua dei materiali di tipo acqua, che hanno i loro cerchi.
+  - Per ogni materiale, in «Riflessi e vernice» → Avanzate → «Con la pioggia»: Automatico, Gocce o Niente gocce.
+  - Nel path tracing costano fino a circa metà del tempo in più sulle superfici con le gocce. Spente non costano nulla.
+  - Si vedono anche nella vista in tempo reale.
+- Cerchi nelle pozzanghere: mentre cadono le gocce, l'acqua delle pozzanghere e il velo sul terreno hanno i cerchi della pioggia, regolati da «Cerchi nelle pozzanghere».
+- Schizzi più visibili sull'asfalto: lo spruzzo è una nebbiolina chiara e gli schizzi arrivano fino a 20 m dalla camera.
+- Gocce che cadono più veloci da calcolare: la luce che rimbalza su muri e suolo non le cerca più.
+- Render finale:
+  - si può scrivere una dimensione personalizzata (larghezza × altezza);
+  - una miniatura mostra la vista attuale e la parte che finisce nell'immagine;
+  - il numero di campioni si può scrivere, per esempio 1024 tra 512 e 2048.
+- Il tempo che manca nel render finale ora viene dalla velocità degli ultimi secondi: prima Cycles annunciava 33 minuti per un render che ne durava 3. È una stima per eccesso, che si accorcia mentre il render accelera.
+- Correzioni:
+  - Togliere l'immagine proiettata da un faretto ora la toglie davvero anche dal path tracing.
+  - Quando una luce viene aggiunta, copiata o eliminata, la vista mostra «Occupato · attendi» mentre prepara di nuovo i materiali. Prima si bloccava senza alcun segnale.

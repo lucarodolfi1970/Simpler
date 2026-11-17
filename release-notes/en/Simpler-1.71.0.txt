@@ -1,0 +1,19 @@
+SIMPLER 1.71.0  —  29 October 2026
+==================================
+
+Camera effects.
+
+- The «Colour and exposure» card of the Render panel now has Contrast, Saturation, Temperature (white balance, 6500 K = neutral) and Tint (green ↔ magenta).
+- Look (LUT): a menu with 14 Simpler looks, among them Warm and Cool film, Teal & orange, Cinematic, Clean architecture, Golden light, Blue night, Faded, Vintage, Instant photo and some black and white ones. Below it there is the Look strength, from 0 to 100%.
+  - You can import your own looks: .cube files, .zip archives or whole folders. Each archive or folder becomes a group. The name search helps when there are hundreds.
+  - The black heart next to a look adds it to the favourites, at the top of the menu.
+  - In the library, under Favourites, there is the new «Look (LUT)» folder: it is black with a yellow icon, the opposite of the others. The black folders will be those of the effects. Each look shows a preview of its colours; a click applies it to the camera.
+- In the Advanced settings of the same card: Glow, Vignette, Chromatic aberration, Grain (with its size) and Sharpness. Grain and a little Sharpness give a «crispy», sharp and tactile look. The Tone (AgX) is still in the same Advanced settings.
+- The effects are applied to the finished picture, like «Lift shadows»: nothing has to be recalculated. They apply to the real-time view (while you drag the slider), to path tracing and to the final render, with the same result. All at zero, they cost nothing.
+- Sizes follow the frame, not the pixels: glow, grain, vignette and aberration stay the same in the view and in a 4K render.
+- Looks are saved in the project and in the views. An imported look missing on another computer is simply ignored.
+
+Dirt:
+- New «Random seed» button: each click moves the stains to a different place of the dirt, both in real time and in path tracing. Ctrl+Z goes back to the previous distribution.
+
+Free LUT collection: its licence, Creative Commons Attribution according to three articles, could not be checked on the original site, which does not open. So it is not included in the program. You can download it yourself and import it with «Import files…» (.zip archives are fine).

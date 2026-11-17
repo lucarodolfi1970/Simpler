@@ -1,0 +1,20 @@
+SIMPLER 1.3.4  —  20 October 2026
+=================================
+
+NEW
+---
+- NEW "MOVE AND ROTATE" ICON in the top bar: crossed arrows + two turning arcs, because that tool does both
+  things.
+- WHERE THE GIZMO GOES, clearer buttons in the view bar:
+  - "⊥ Base (feet)": the gizmo goes to the centre of the base, at the lowest point of the object (the feet of a
+    character, the foot of a trunk): handy to set it on a surface and rotate it on the spot;
+  - "◎ 3D centre": the gizmo goes exactly to the 3D centre of the model;
+  - "Origin": where the program that created the model put it.
+  (They were already "Centre / Base / Origin": now they have names, symbols and tooltips that say what they do.)
+  If the view is narrow, the shadows bar moves below the tools bar instead of overlapping it.
+
+FIXES
+-----
+- RIGHT PANEL AND SELECTION: with the material editor open, selecting a light (or a group, or nothing) brings the
+  panel straight back to the properties and shows the light's parameters. Selecting a piece with materials in the
+  tree switches the editor to its material.

@@ -1,0 +1,9 @@
+SIMPLER 1.74.1  —  30 October 2026
+==================================
+
+«Caustics off» with the caustics on.
+
+- Choosing «Normal» caustics in the Rendering panel, the status bar said «Caustics off», but the caustics were on.
+  - Cause: the bar only looked at the «Sharp» caustics.
+  - Now it says the real choice: Off, Normal (reflected and refracted, computed by path tracing) or Sharp.
+- The same error was in the note under the waves of the Water material, which with Normal caustics asked to turn them on: now it takes the Normal ones into account too.

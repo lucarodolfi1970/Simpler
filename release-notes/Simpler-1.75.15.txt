@@ -1,0 +1,8 @@
+SIMPLER 1.75.15  —  31 ottobre 2026
+===================================
+
+Il logo guarda il render.
+
+- Durante il render finale il logo della schermata d'attesa diventa un occhio: il pallino giallo è la pupilla.
+  - Ogni tanto dà un'occhiata a destra o a sinistra, si ferma, torna al centro; a volte guarda due volte, alza o abbassa lo sguardo, sbatte le palpebre.
+  - Non è un ciclo che si ripete: pause e movimenti cambiano ogni volta.

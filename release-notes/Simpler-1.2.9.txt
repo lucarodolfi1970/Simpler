@@ -1,0 +1,17 @@
+SIMPLER 1.2.9  —  20 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- TEXTURE RUOTATE DI 90° TRA TEMPO REALE E PATH TRACING (proiezione "box", per esempio i materiali Poly Haven):
+  la vista in tempo reale leggeva la texture con assi diversi da Cycles. Ho misurato con dei render di prova come
+  Cycles proietta su ogni faccia (sopra/sotto, davanti/dietro, destra/sinistra, con il verso giusto) e la vista in
+  tempo reale ora fa lo stesso, compresa rotazione, scala e spostamento dell'editor. Verificato confrontando le due
+  viste sulla stessa inquadratura.
+- ICONE DELLE LUCI nella vista: restano sempre piccole e della stessa dimensione sullo schermo. Prima ereditavano la
+  scala della luce o del gruppo in cui stanno, e in alcune scene diventavano enormi.
+
+NOVITÀ
+------
+- Spunta verde in alto a destra sull'anteprima dei materiali e dei modelli 3D di Poly Haven già scaricati sul PC
+  (si usano subito, anche senza Internet). Compare appena finisce un download.

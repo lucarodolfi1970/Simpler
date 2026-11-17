@@ -1,0 +1,10 @@
+SIMPLER 1.8.3  —  21 October 2026
+=================================
+
+- REAL TIME / PATH TRACING: switching back to "Real time" while a path tracing image was arriving, that image
+  would land back on top of the view and stay there, with the label "Path tracing · … samples" but the button
+  on Real time. Now a path tracing response that arrives after the switch is ignored, and the view is redrawn
+  immediately.
+- SCENE TREE: removed the "+" button and its menu. Lights, primitives (cube, sphere, cylinder, cone,
+  plane, torus) and empty group are added from the library below: Lights and 3D models > Primitives tabs
+  (click: at the centre of the view; drag: where you drop it).

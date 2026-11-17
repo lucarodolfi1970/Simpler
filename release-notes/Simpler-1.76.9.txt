@@ -1,0 +1,8 @@
+SIMPLER 1.76.9  —  2 novembre 2026
+==================================
+
+I materiali del terreno si vedono arrivare.
+
+- Appena creato o cambiato un terreno, «Occupato · attendi · Materiali del terreno» resta visibile finché i materiali non sono applicati, con la percentuale delle texture in download. Prima il terreno sembrava finito per decine di secondi e i materiali arrivavano dopo, all'improvviso.
+- Corretto: se le texture erano già scaricate, i materiali a volte venivano applicati solo al successivo passaggio sul pannello Terreno.
+- Esc smette di aspettare: puoi continuare a lavorare e i materiali arrivano da soli appena scaricati. Un materiale messo da te nel frattempo resta.

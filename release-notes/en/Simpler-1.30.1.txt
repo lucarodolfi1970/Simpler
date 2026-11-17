@@ -1,0 +1,4 @@
+SIMPLER 1.30.1  —  25 October 2026
+==================================
+
+- «Drop» also brings up a model sunk into the floor (for example an imported car with the wheels under the ground): it looks for the surface under the model from half its height, so it finds the floor cutting it and puts the model on it. Before it started from the bottom of the model, already under the floor, and missed the floor.

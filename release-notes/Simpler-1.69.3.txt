@@ -1,0 +1,5 @@
+SIMPLER 1.69.3  —  29 ottobre 2026
+==================================
+
+- Sporco identico nella vista in tempo reale e nel path tracing: le macchie sono negli stessi punti. Prima lo spostamento casuale di ogni oggetto era calcolato in modo diverso nei due motori, e nella vista l'immagine era capovolta.
+- «Sui bordi» segue la linea degli spigoli e degli angoli: lo sporco corre lungo il bordo e varia solo un po', invece di comparire a macchie casuali.

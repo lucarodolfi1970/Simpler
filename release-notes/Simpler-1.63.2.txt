@@ -1,0 +1,5 @@
+SIMPLER 1.63.2  —  28 ottobre 2026
+==================================
+
+- Vista in tempo reale: il manto di neve sugli alberi delle distribuzioni ora c'è solo sulle copie abbastanza grandi sullo schermo, come il dettaglio degli alberi stessi. Le copie lontane mostrano il bianco del materiale. Prima era disegnato intero su ogni copia: nella foresta della montagna erano 2.685 milioni di triangoli. Il path tracing e le immagini finali lo hanno su tutte.
+- In «Solo ciò che vede la camera» la voce «Neve» ora si chiama «Manto di neve». La descrizione chiarisce che spenta non toglie la neve: per toglierla c'è il fiocco di «Alleggerisci».

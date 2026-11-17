@@ -1,0 +1,10 @@
+SIMPLER 1.69.0  —  29 ottobre 2026
+==================================
+
+- Nuova sezione «Sporco» nei materiali: uno strato di sporco casuale (macchie, colature, polvere) per dare realismo.
+  - Quantità: quanto sporco si vede (0% = spento).
+  - Sui bordi: più sporco su spigoli e angoli e dove la superficie tocca altri oggetti, per esempio un muro sul pavimento. Si vede nel path tracing e nel render; nella vista in tempo reale no.
+  - Dimensione: in centimetri, indipendente dalle coordinate UV del materiale. Lo sporco è proiettato da tre direzioni, quindi va bene anche su modelli senza UV.
+- La texture dello sporco è di Simpler (fatta apposta, senza problemi di licenza) e si ripete senza giunture.
+- Avanzate: colore dello sporco, quanto rende la superficie opaca, leggero rilievo, «Varia per oggetto» (oggetti uguali non hanno le stesse macchie, acceso di default), larghezza dei bordi, una maschera tua al posto di quella di Simpler, una texture di colore e una normal map.
+- Nella vista in tempo reale lo sporco si vede subito (colore e opacità); bordi, rilievo e normal map solo nel path tracing.

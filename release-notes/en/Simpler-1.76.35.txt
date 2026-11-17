@@ -1,0 +1,6 @@
+SIMPLER 1.76.35  —  3 November 2026
+===================================
+
+Favourite commands: they apply to every ecosystem.
+
+- Fixed: the heart of a command in the Ecosystems panel (for example «Beyond the edge») stayed tied to the ecosystem you put it on, and choosing another one it disappeared. Now a favourite command applies to every ecosystem. The hearts already set are converted by themselves.

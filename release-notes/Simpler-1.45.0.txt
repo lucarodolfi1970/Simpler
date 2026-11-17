@@ -1,0 +1,10 @@
+SIMPLER 1.45.0  —  26 ottobre 2026
+==================================
+
+- Pioggia, passo 3: il pennello delle pozzanghere. In Ambiente > Pioggia > Avanzate accendi «Pennello pozzanghere» e dipingi direttamente sulla vista, tenendo premuto il tasto sinistro e trascinando.
+  - «Aggiungi» mette le pozzanghere dove vuoi, «Togli» le toglie, anche quelle automatiche. Tenendo premuto Maiusc togli senza cambiare modo.
+  - La grandezza del pennello va da 10 cm a 10 m; [ e ] la cambiano sulla vista. Esc smette di dipingere; il tasto destro gira la vista come sempre.
+  - Una pozzanghera dipinta va dove l'hai dipinta, anche sotto una tettoia. Si posa solo sulla superficie che hai dipinto: se dipingi la strada sotto un portico, il tetto sopra resta com'è.
+  - I bordi seguono «Sfumatura bordi». Le pozzanghere dipinte compaiono anche con Pozzanghere a 0.
+  - Si vedono subito nella vista in tempo reale e sono uguali nel path tracing. Ogni pennellata si annulla con Ctrl+Z, e «Cancella le pozzanghere dipinte» le toglie tutte.
+  - Restano nel progetto quando salvi.

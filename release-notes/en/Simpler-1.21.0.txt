@@ -1,0 +1,6 @@
+SIMPLER 1.21.0  —  24 October 2026
+==================================
+
+- Copy and paste of material maps: right click on the thumbnail (or on the file name) of a map opens the menu with Preview, Open the folder, Copy the map and Paste the map. Only maps copied in Simpler are pasted, into any material and any kind of map (colour, roughness, normal…), embedded ones too. The copy also puts the picture and the file on the clipboard, to paste them in Photoshop or in Explorer.
+- The same image used as colour in one map and as data in another (roughness, normal, metallic) is now read correctly in both: before, the last one used changed the colour space of the other too.
+- Top bar: the Import and Open buttons are as narrow as Undo and Redo, with the small menu arrow on the corner of the icon.

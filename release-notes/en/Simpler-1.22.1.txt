@@ -1,0 +1,4 @@
+SIMPLER 1.22.1  —  24 October 2026
+==================================
+
+- Fix model materials: the list of changes shows three rows and then scrolls, so "Apply changes" always stays inside the window even with many changes. A change you add shows at once, at the end of the list.

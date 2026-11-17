@@ -1,0 +1,10 @@
+SIMPLER 1.13.29  —  22 ottobre 2026
+===================================
+
+AMBIENTE: PIÙ CHIARO E PIÙ BELLO
+--------------------------------
+- I preset (Mattino limpido, Pieno giorno, Tramonto, Notte, Studio, HDRI…) sono riquadri con un piccolo cielo colorato e la sua icona; quello scelto è evidenziato.
+- Ogni sezione (Sole, Cielo, Nuvole, Foschia e nebbia, Notte, Suolo, Esposizione) ha la sua icona colorata nel titolo.
+- Ogni parametro ha una piccola icona (ora, giorno, latitudine, nord, aria, ozono, altitudine…).
+- Il cursore dell'Ora mostra notte, alba, giorno e tramonto; quello del Giorno dell'anno inverno ed estate.
+- I suoli hanno un pallino col loro colore.

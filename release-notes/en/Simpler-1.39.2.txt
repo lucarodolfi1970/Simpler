@@ -1,0 +1,4 @@
+SIMPLER 1.39.2  —  26 October 2026
+==================================
+
+- Test plot: a scatter becomes a child of the plot at every change, not only when it is made. Before, a first stroke starting just off the plot was enough for the scatter to stay at the top level of the scene for good. Now it is adopted as soon as more than half of its pieces are on the plot, and the pieces stay where you painted them.

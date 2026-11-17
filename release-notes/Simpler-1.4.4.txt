@@ -1,0 +1,16 @@
+SIMPLER 1.4.4  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- ISTANZE NELL'ALBERO: un pallino arancione sull'icona indica gli oggetti che sono istanze, cioè che condividono
+  forma e materiali con altri modelli (copie fatte come "Istanza", Ctrl+D, Shift+trascina). Anche l'originale ha il
+  pallino: originale e istanze sono la stessa cosa. Su un gruppo, il pallino dice che i suoi pezzi sono istanze di
+  quelli di un altro gruppo. Passando sopra si legge con quanti altri modelli è condiviso.
+  Le parti ripetute dentro un solo modello (es. le quattro griffe di un anello) non contano: un modello unico resta
+  senza pallino.
+
+CORREZIONI
+----------
+- COPIA INDIPENDENTE più leggera: le parti che nell'originale condividono la stessa forma (es. le griffe) nella copia
+  continuano a condividerne una sola, nuova, invece di diventare tutte separate.

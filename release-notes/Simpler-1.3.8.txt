@@ -1,0 +1,14 @@
+SIMPLER 1.3.8  —  21 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- CARTELLE INDIPENDENTI: spostando i Materiali Poly Haven venivano spostati anche i Modelli 3D Poly Haven (che di
+  base stanno in una sottocartella "models" della stessa cartella). Ora ogni libreria si sposta da sola:
+  - la copia salta le cartelle delle altre librerie;
+  - eliminando la vecchia cartella, le cartelle delle altre librerie che ci stanno dentro vengono lasciate dove
+    sono, con tutto il loro contenuto;
+  - il conteggio dei file e dei GB riguarda solo la libreria che stai spostando.
+- Se i Modelli 3D Poly Haven sono finiti dentro la cartella dei materiali (come con la 1.3.7), usa "Cambia…" su
+  "Modelli 3D Poly Haven" (o "Torna alla predefinita"): vengono copiati nella cartella che scegli e alla fine
+  Simpler può eliminare la sottocartella "models" rimasta nella cartella dei materiali.

@@ -1,0 +1,23 @@
+SIMPLER 1.66.0  —  28 October 2026
+==================================
+
+- Drops on surfaces. In the rain's Advanced, under «Falling raindrops», there is «Drops on surfaces»:
+  - Water droplets on wet smooth surfaces, such as car bodies, metal, plastic and glass. Every drop is a small lens: it reflects the sky and the lights and bends what is under it.
+  - On sloped parts and sides the drops get longer and runs flow down.
+  - On glass the drops bend what is seen behind it.
+  - Sliders «Amount», «Size», «Big drops», «Runs on the sides», «Water film». The water film is a thin glossy layer on smooth materials.
+  - No drops under shelters, nor on the water of water-type materials, which have their own rings.
+  - Per material, in «Reflections and coat» → Advanced → «In the rain»: Automatic, Drops or No drops.
+  - In path tracing they cost up to about half more time on the surfaces with drops. Off, they cost nothing.
+  - They also show in the real-time view.
+- Rings in puddles: while drops fall, the water of puddles and the sheet on the ground have rain rings, set by «Rings in puddles».
+- More visible splashes on asphalt: the spray is a pale mist and splashes reach up to 20 m from the camera.
+- Falling drops faster to render: light bouncing off walls and ground no longer looks for them.
+- Final render:
+  - you can type a custom size (width × height);
+  - a thumbnail shows the current view and the part that ends up in the image;
+  - you can type the number of samples, for example 1024 between 512 and 2048.
+- The time left in the final render now comes from the speed of the last seconds: before, Cycles announced 33 minutes for a render that took 3. It is an upper estimate, which shrinks as the render speeds up.
+- Fixes:
+  - Removing a spot light's projected image now really removes it from path tracing too.
+  - When a light is added, copied or deleted, the view shows «Busy · please wait» while it prepares the materials again. Before, it froze without any sign.

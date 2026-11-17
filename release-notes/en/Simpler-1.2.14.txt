@@ -1,0 +1,8 @@
+SIMPLER 1.2.14  —  20 October 2026
+==================================
+
+- SMOOTHER, MORE PREDICTABLE SCALING: before, the factor depended on the ratio between the mouse's distance from
+  the centre and the distance at the start; grabbing a handle close to the centre (the gizmo is small on a large
+  model) a small mouse movement was enough to double or halve the model. Now only how far you move the mouse on
+  screen along the handle counts: 20 pixels ≈ +7%, 200 pixels = ×2, going back 200 pixels ÷2. With Snap (or
+  holding down Shift) it snaps in steps of 0.1.

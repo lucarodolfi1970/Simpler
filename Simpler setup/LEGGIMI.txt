@@ -1,0 +1,30 @@
+SETUP DI SIMPLER
+================
+Cosa fa: un unico Setup.exe con wizard in italiano e inglese (lingua di Windows): contratto di licenza di Simpler
+(nelle due lingue) con approvazione specifica delle clausole, pagina "Il tuo computer" (scheda video trovata e
+quanto e' adatta), cartella del programma, cartella dei contenuti (con controllo dello spazio), icona sul desktop,
+installazione di WebView2 se manca, avvio di Simpler alla fine. Dentro: Simpler (con .NET incluso), il motore,
+Blender, i due progetti di esempio, le miniature dei modelli del cloud, le decal di Simpler. Nessun modello: si
+scaricano a richiesta. I materiali di Simpler li crea il motore. Pack Studio non c'e'.
+
+Come si costruisce (Luca)
+  1. Inno Setup installato (una volta).
+  2. Doppio clic su Build-Setup.bat in questa cartella. La finestra mostra 7 passi; l'ultimo dura 10-20 minuti.
+  3. Scrivere "fatto" a Claude: tutto il dettaglio e' in build.log (lo legge Claude).
+  Il risultato e' in "Simpler setup\Output\Simpler-Setup-<versione>.exe". La versione e' quella di Simpler.csproj.
+
+Da dove prende le cose
+  - miniature: M:\3D\simpler-setup\thumbs (le crea Pack Studio preparando i contenuti del cloud)
+  - decal: la cartella "Simpler" delle decal di Luca (paths.json) -> %APPDATA%\Simpler\decals\Simpler dell'utente
+  - contratto: credits\Licenza.md e credits\en\License.md; la versione e' LicenseWindow.Version
+  - Blender: quello in Program Files\Blender Foundation (o: Build-Setup.bat "C:\cartella\di\Blender")
+
+Firma (quando c'e' il certificato)
+  Crea il file "Simpler setup\sign.cmd" con UNA riga, il comando di firma del certificato Certum, con $f al posto
+  del file. Esempio (da adattare a quello che Certum/SimplySign indica):
+     signtool.exe sign /fd SHA256 /tr http://time.certum.pl /td SHA256 /n "Nome sul certificato" $f
+  Se il file non c'e', il setup viene costruito senza firma (Windows mostrera' l'avviso SmartScreen).
+
+Dopo l'installazione il programma e' in %LOCALAPPDATA%\Programs\Simpler (o in Program Files se si sceglie
+"per tutti gli utenti"). Disinstallando NON si cancellano i contenuti dell'utente. Il setup scrive
+%APPDATA%\Simpler\license-accepted.txt: Simpler non richiede il contratto al primo avvio.

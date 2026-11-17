@@ -1,0 +1,13 @@
+SIMPLER 1.62.0  —  28 ottobre 2026
+==================================
+
+- Nuovo box «Alleggerisci» in fondo all'albero della scena, sempre visibile, per le scene pesanti. Sette pulsanti, arancioni quando sono attivi:
+  · Neve: nasconde manto e fiocchi, niente ricalcoli mentre sposti i modelli (solo quando nevica).
+  · Distribuzioni: alberi, erba, scatter ed ecosistemi spariscono dalla vista in tempo reale (nel path tracing restano).
+  · Fiocchi: i fiocchi che cadono spariscono dalla vista in tempo reale (il manto resta).
+  · Ombre: spegne le ombre della vista; un secondo clic le riporta come prima.
+  · Mezza risoluzione: la vista disegna un quarto dei pixel, molto più fluida (il path tracing non cambia).
+  · Ferma i ricalcoli: riparo dalla pioggia, manto e fiocchi non si rifanno dopo ogni spostamento finché non li riprendi.
+  · Libera memoria.
+  Distribuzioni, fiocchi, ombre e mezza risoluzione restano come li hai lasciati anche alla prossima apertura; neve e ricalcoli tornano sempre attivi aprendo un progetto.
+- Il messaggio «Neve nascosta» nella barra in basso non è più tagliato.

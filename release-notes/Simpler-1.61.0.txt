@@ -1,0 +1,9 @@
+SIMPLER 1.61.0  —  27 ottobre 2026
+==================================
+
+- Nuovo: fiocchi di neve che cadono (Ambiente ▸ Fiocchi che cadono ▸ Nevica). Sono fiocchi veri nella scena, solo dove guarda la camera: spariscono dietro gli edifici, non ci sono sotto tettoie e portici, di notte si accendono nella luce dei lampioni e con la profondità di campo i più vicini diventano dischi sfocati. Intensità, Vento, Irregolarità (raffiche e mulinelli: i fiocchi non vanno più tutti paralleli) e Mosso (ogni fiocco diventa una scia lungo il suo movimento, come una foto con tempo di scatto lento). Nelle Avanzate: direzione del vento, zone (cortine più fitte e spazi più radi), dimensione dei fiocchi, fin dove arrivano, altra disposizione. Si vedono anche nella vista in tempo reale, si ricalcolano quando la camera si ferma e si nascondono con «Nascondi la neve». Sono indipendenti dalla neve a terra.
+- Mantello di neve sulle auto e sui modelli: niente più «cerchi» e gradini sulle superfici curve, ora la neve è liscia e morbida.
+- Marciapiedi, gradini e cordoli (modelli bassi e piatti) hanno ora il mantello che si può scolpire: passi e pneumatici funzionano anche lì.
+- Cambiando ambiente (notte, tramonto…) o aggiungendo una luce il riquadro rosso «Occupato» compare subito e resta finché la vista è pronta, con la clessidra: prima per qualche secondo non si vedeva nulla e sembrava che non funzionasse.
+- «Sfumatura pennello» compare solo con il pennello acceso.
+- Le caselle dei valori sono allineate in colonna anche quando l'unità cambia (%, cm, °).

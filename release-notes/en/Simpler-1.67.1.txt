@@ -1,0 +1,6 @@
+SIMPLER 1.67.1  —  28 October 2026
+==================================
+
+- «Always dry» is now two separate switches, in Rain and snow → Advanced: «No rain» and «No snow». For example, on the windows and body of a car you can keep the drops when it rains and remove the mantle when it snows.
+- Objects that had «Always dry» have both switches on: nothing changes in projects and library models until you edit them.
+- Path tracing: «Always dry» on the parts of a model now also applies to the copies of a distribution. Before, only the setting of the whole distribution counted.

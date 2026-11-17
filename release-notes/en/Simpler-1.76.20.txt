@@ -1,0 +1,6 @@
+SIMPLER 1.76.20  —  3 November 2026
+===================================
+
+Path tracing sees far.
+
+- The path tracing camera stopped seeing past 100 times its distance from the point it looks at (at least 1 km): close to the framed point, a big terrain or the sea past 1 km vanished (in their place the grey or black of the sky below the horizon), while the real-time view showed them. Now it sees up to 300 km, past the edge of the sea, in projects saved before too.

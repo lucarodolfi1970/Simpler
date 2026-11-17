@@ -1,0 +1,15 @@
+SIMPLER 1.78.1  —  6 November 2026
+==================================
+
+The library reorganised: one menu per kind, and inside always Simpler · Mine · Online. Search in the whole library.
+
+- The library menus are: Favourites · 3D models · Vegetation · Materials · Decals · Ecosystems · Sky and lights · Project.
+  - In every menu the same sources, in the same order: Simpler (what comes with the program, to use only), Mine (what you import or save, with folders), Online (Poly Haven and ambientCG, downloaded at the first use).
+  - 3D models ▸ Simpler are the basic shapes (before «Primitives»).
+  - Materials ▸ Simpler has Simpler's materials, before a folder inside yours; Materials ▸ Mine shows only yours.
+  - Sky and lights: HDRI and backgrounds, Lights. Project: Scenes, AI outputs.
+- «The story of Simpler» is now in the File menu (Simpler still opens on it).
+- Search: next to «results for …» there is «Search the whole library»: the same words in models, plants, basic shapes, materials, ecosystems, Poly Haven, ambientCG decals and HDRI, divided by kind (at most 40 per kind). The online sections are searched after opening them once.
+- Right click on a folder of 3D models: «Convert the folder to vegetation…», all its models and subfolders at once.
+- Right click on an object in the view or in the tree: «Convert to vegetation». The leaves and wood of its materials get Foliage at once, in the scene, without going through the library; Ctrl+Z undoes it.
+- The import window has a picture of its own for vegetation.

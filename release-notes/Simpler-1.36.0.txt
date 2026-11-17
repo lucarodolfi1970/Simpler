@@ -1,0 +1,8 @@
+SIMPLER 1.36.0  —  25 ottobre 2026
+==================================
+
+- Orientamento dei modelli della libreria. Ogni modello può essere salvato «dritto»: il suo davanti lungo l'asse rosso X, che è anche la direzione della linea dello spacing (con «Orienta lungo la linea» acceso). Serve per qualunque modello: veicoli, panchine, lampioni, edifici, mobili.
+  · Tasto destro su un modello in libreria ▸ Orientamento ▸ «Raddrizza»: Simpler guarda il modello dall'alto e lo gira in modo che il suo lato lungo stia sull'asse X. «Gira di 90°» e «Gira di 180°» per sistemare il resto (per esempio il davanti al contrario).
+  · Per i modelli che hanno bisogno di un raddrizzamento su misura: inseriscilo nella scena, giralo con il gizmo come vuoi (anche di pochi gradi, anche su X o Y per un modello coricato), poi tasto destro sul modello nell'albero o nella vista ▸ «Salva questo orientamento nella libreria».
+  · Il modello della libreria viene riscritto con il nuovo orientamento (la base resta dov'era) e la miniatura rifatta. Da lì valgono i nuovi inserimenti e tutti gli scatter, compresi quelli già presenti nel progetto aperto, che si girano da soli. Le copie già inserite nella scena restano come sono.
+- Motivo: un modello salvato nella libreria dopo averlo girato nella scena conserva quella rotazione; negli scatter ogni modello puntava quindi da una parte diversa (per esempio due auto salvate girate di 15° e di 65°).

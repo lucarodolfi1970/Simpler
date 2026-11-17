@@ -1,0 +1,5 @@
+SIMPLER 1.49.1  —  27 ottobre 2026
+==================================
+
+- Vista in tempo reale: una luce spenta (a mano, o «dal tramonto all'alba» di giorno) non fa più ombre. Prima la sua mappa d'ombra ridisegnava lo stesso tutta la scena, sei volte per una luce puntiforme: con alcune luci spente la vista scendeva a 2 fps con oltre 100 milioni di triangoli.
+- Registro (app.log e engine.log): per capire la notte nella vista in tempo reale, quante luci ci sono, quante sono accese, quante fanno ombra, quante stanno dentro i modelli delle distribuzioni e l'esposizione della vista.

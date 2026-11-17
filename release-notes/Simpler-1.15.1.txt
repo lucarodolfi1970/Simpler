@@ -1,0 +1,7 @@
+SIMPLER 1.15.1  —  24 ottobre 2026
+==================================
+
+PROGETTI RECENTI
+----------------
+- In fondo al menu Apri (la cartella con la freccia) ci sono gli ultimi 5 progetti aperti o salvati: un clic e si aprono (con la domanda sulle modifiche non salvate, come Apri). Il progetto aperto ora ha il segno di spunta; il nome completo del file appare passandoci sopra.
+- Un progetto spostato o eliminato appare sbiadito: cliccandolo Simpler lo dice e lo toglie dalla lista. Le copie automatiche (.autosave) non entrano nella lista.

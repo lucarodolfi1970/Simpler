@@ -1,0 +1,7 @@
+SIMPLER 1.36.3  —  25 October 2026
+==================================
+
+- Decals copied or instanced side by side (zebra crossings, road lines): in the path tracer some came out faded or patchy, even with identical settings. A decal took the whole face of the surface under it: on a road made of large faces every copy became a transparent sheet as long as the road, at the same height as the others. The rays went through one copy and missed the other. Now every decal is cut exactly to its box, as the real-time view already did.
+- Two decals that really overlap, with the same «Order», are no longer at exactly the same height.
+- Faster in the path tracer: no more useless transparent layers over roads and floors.
+- Projects already saved are fixed by themselves when opened.

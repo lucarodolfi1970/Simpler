@@ -1,0 +1,8 @@
+SIMPLER 1.13.16  —  22 ottobre 2026
+===================================
+
+BUG CORRETTI
+------------
+- Rinominando un materiale nell'editor e premendo "Salva", nella libreria restava il nome vecchio (per esempio
+  "Acqua increspata" invece di "Acqua"). Ora il materiale della libreria prende anche il nuovo nome, nella stessa
+  cartella.

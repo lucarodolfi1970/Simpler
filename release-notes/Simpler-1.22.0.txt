@@ -1,0 +1,11 @@
+SIMPLER 1.22.0  —  24 ottobre 2026
+==================================
+
+- Pulsante «Genera» nella riga delle mappe del materiale, con DeepBump (gratis, tutto sul tuo computer):
+  · Normal map → «Normale dalla mappa colore»;
+  · Bump e Spostamento → «Altezza dalla normale» o «Altezza dalla mappa colore»;
+  · ogni mappa fino a 2048 px → «Raddoppia la risoluzione».
+  Una barra mostra l'avanzamento; alla fine la mappa nuova è già nello slot.
+- La mappa generata si salva accanto all'originale (legno.jpg → legno_normal.png, senza sovrascrivere nulla); se l'originale è incorporata nel progetto, anche la nuova lo è.
+- La prima volta Simpler chiede di scaricare i componenti di DeepBump (onnxruntime e imageio, circa 40 MB); poi funziona anche senza connessione.
+- DeepBump (licenza GPL-3.0) è incluso, con il suo codice sorgente e i modelli, nella cartella tools\deepbump.

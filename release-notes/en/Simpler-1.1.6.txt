@@ -1,0 +1,7 @@
+SIMPLER 1.1.6  —  18 October 2026
+=================================
+
+BUG FIXES
+---------
+- When the splash screen closed, the whole app closed instead of appearing: Windows treated the splash
+  (the first window opened) as the main window. The main window is now the Simpler one.

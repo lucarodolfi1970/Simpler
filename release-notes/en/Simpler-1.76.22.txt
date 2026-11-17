@@ -1,0 +1,10 @@
+SIMPLER 1.76.22  —  3 November 2026
+===================================
+
+Stones and debris, and the foam of the surf.
+
+- New «Stones and debris» section in Landscape, under the terrain: pick the stone models from the library (turn on «Pick the stones from the library» and click the models, or right-click a model > «Add to Stones and debris») and press «Lay the stones». Simpler lays them where the mountain drops them: in cones at the foot of the rock walls, the longer the higher the wall, and along the gullies and where they fan out. Every stone turned at random, a little buried and resting on the real surface of the terrain.
+- The stones take the colour of the terrain's rock by themselves («Match the terrain»), on a copy of their materials: the library model does not change.
+- On the panel: «Amount» and «Other positions». In Advanced: at the foot of the walls, length of the cones, in the gullies, smallest and largest size, big ones at the bottom (the small ones stay near the wall), buried, match the terrain, colour and how much colour, saturation, brightness, contrast.
+- When you change or make the terrain again, the stones are laid again on the new shape. Ctrl+Z undoes.
+- Sea: the foam of the surf near the coast is now real foam, a white lace with sharp edges and holes, thicker where the waves break and on the crests, with the clear water in between. Before it was a soft, opaque grey band.

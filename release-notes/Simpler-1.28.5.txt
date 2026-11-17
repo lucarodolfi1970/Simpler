@@ -1,0 +1,4 @@
+SIMPLER 1.28.5  —  25 ottobre 2026
+==================================
+
+- Le finestre per aprire e salvare i file si aprono nell'ultima cartella usata per quel tipo di file, e se la ricordano anche alla prossima apertura di Simpler: progetti, modelli da importare (nella scena e nella libreria, file e cartelle), immagini (mappe dei materiali, foto del cielo, immagine dell'AI, gobo delle luci), decal, render e immagini salvate, cartella delle texture mancanti. La prima volta per un tipo si parte dall'ultima cartella usata in generale.

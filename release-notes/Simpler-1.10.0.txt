@@ -1,0 +1,19 @@
+SIMPLER 1.10.0  —  21 ottobre 2026
+==================================
+
+- DISTRIBUISCI > SPAZIATURA: il terzo modo di Distribuisci. Si disegna una linea
+  con dei clic sulle superfici (doppio clic, clic sull'ultimo punto, Invio o Esc la finiscono; clic sul primo
+  punto la chiude ad anello) e i modelli si mettono in fila lungo di essa.
+  · Per distanza (un oggetto ogni tanti metri) o Per numero (un numero fisso su tutta la linea).
+  · Scostamento laterale: ogni oggetto si sposta a caso di fianco alla linea.
+  · Ordine casuale: spento, i modelli si ripetono nell'ordine della lista; acceso, a caso secondo la presenza.
+  · Orienta lungo la linea: gli oggetti girano seguendo la linea (recinzioni, panchine, lampioni).
+  · Tensione, Appoggia alle superfici, Seme casuale, Aggiorna, scala/rotazione come nell'Area. Punti
+    trascinabili, "+" per aggiungerne, Canc per toglierli; tutto si annulla con Ctrl+Z.
+- "Escludi da Area" diventa "Escludi da Area e Spaziatura" e vale per entrambi.
+- OMBRE IN TEMPO REALE: gli oggetti piccoli (anelli, gioielli, oggetti su un tavolo) non avevano ombre. Due cause:
+  · le luci spot e ad area nella vista erano, per un dettaglio di three.js, un metro dietro la loro posizione:
+    illuminavano meno che nel path tracing e le loro ombre non arrivavano agli oggetti vicini. Ora sono al posto
+    giusto (la vista in tempo reale può risultare più luminosa di prima: è quella corretta);
+  · le mappe delle ombre coprivano tutta la scena: ora si concentrano sulla parte che si sta guardando e si
+    adattano a ogni movimento della vista, quindi anche oggetti di pochi centimetri hanno ombre nette.

@@ -1,0 +1,8 @@
+SIMPLER 1.75.15  —  31 October 2026
+===================================
+
+The logo watches the render.
+
+- During the final render the logo of the waiting screen becomes an eye: the yellow dot is the pupil.
+  - Now and then it glances right or left, pauses and comes back to the centre; sometimes it looks twice, looks up or down, or blinks.
+  - It is not a repeating loop: pauses and movements change every time.

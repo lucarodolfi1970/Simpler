@@ -1,0 +1,12 @@
+SIMPLER 1.75.10  —  31 ottobre 2026
+===================================
+
+SmartView più leggero, caustiche del mare dopo spento/acceso, selezione senza ricaricare la vista.
+
+- SmartView: con SmartView acceso la vista era più lenta che senza.
+  - Le ombre non cambiano più il livello delle ombre: si spengono e le loro mappe non si disegnano più, senza rifare gli shader di tutta la scena. Il livello che avevi prima torna da solo.
+  - Le luci delle distribuzioni (lampioni e simili) restano quelle scelte mentre ti muovi.
+- Vista in tempo reale, per tutti: camminando tra lampioni di tipo diverso la vista rifaceva gli shader di tutti i materiali («Aggiornamento delle luci», fino a 9 s). Ora le luci delle distribuzioni sono un insieme fisso.
+- Toccare una luce non apre più il box rosso «Aggiornamento dei materiali»: le linee e le etichette non lo chiedono più.
+- Cliccare un modello in alcune scene di città rifaceva tutta la vista 3D: il motore diceva «niente da aggiungere» e l'app lo leggeva come un errore. Ora la vista resta com'è.
+- Caustiche del mare: spegnendo e riaccendendo «Luce riflessa dall'acqua» l'acqua tornava più scura e senza caustiche. La pioggia non ripassava i materiali dopo il ricalcolo della luce; ora sì, e acceso/spento/acceso dà la stessa immagine.

@@ -1,0 +1,8 @@
+SIMPLER 1.17.11  —  24 October 2026
+===================================
+
+COLOURS FROM A PHOTO: SUNRISE AND OVERCAST
+------------------------------------------
+- Two new groups of presets in Sky › Advanced › "Colours from a photo": "Sunrise" (4 photos) and "Overcast" (4 photos), next to the 4 sunsets. The list goes Sunrise, Sunset, Overcast, then your photos.
+- Sunrise photos put the sun in the morning, Sunset photos in the evening; Overcast photos always choose a covered sky (dark grey alone could look like the shadow of a few big cumuli).
+- Similarity of the new presets: from 71 to 90%.

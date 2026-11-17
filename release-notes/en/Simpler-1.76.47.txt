@@ -1,0 +1,10 @@
+SIMPLER 1.76.47  —  4 November 2026
+===================================
+
+Speed: ecosystems and terrain much faster to make again.
+
+- Every time an ecosystem was made again (terrain changed or sculpted, «Recompute from the view») Simpler prepared again, from scratch, the simplified versions of every tree and stone used to know what hides the view: the memory meant to keep them looked them up by the name of their collection, which changes at every remake. And it prepared them with a very slow sort. In one measured case: 109 s of 201 in the terrain update after sculpting, 95 s of 128 in «Recompute from the view».
+- Now it recognises them by what they are (same shape = same simplified version, also after a remake) and prepares them about 10 times faster (a tree of a million triangles: 38 s → 3.6 s the first time; then nothing).
+- After a sculpting the neighbouring zones keep their order: the terrain's materials are no longer all made again for nothing (18 s). When a material is made again, the log says why.
+- The log of slow operations now also says who calls the heaviest parts: causes are found at once.
+- New time check: a terrain with an ecosystem updated after sculpting and «Recompute from the view» must stay under a limit, and the materials must not be made again; otherwise the version does not ship.

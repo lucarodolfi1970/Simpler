@@ -1,0 +1,8 @@
+SIMPLER 1.75.13  —  31 October 2026
+===================================
+
+Snow that follows «Does not shelter» models in the final render too.
+
+- Moving a model set to «Does not shelter» (for example a car, so the road under it stays wet) did not recompute the snow mantle: the engine only checked the objects that shelter. In the final render the snow stayed where the car had been.
+  - The view looked right because moving the camera as well made the mantle again for the new framing.
+  - Now these objects count too: when you move them the mantle is made again at once and the final render uses it.

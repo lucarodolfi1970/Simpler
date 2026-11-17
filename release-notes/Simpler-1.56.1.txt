@@ -1,0 +1,4 @@
+SIMPLER 1.56.1  —  27 ottobre 2026
+==================================
+
+- Importare nella scena (menu Importa, Ctrl+I, file trascinati sulla scena): dopo la scelta dei file si apre una piccola finestra con i file e l'interruttore «Unisci i pezzi in un solo oggetto», così si vede sempre se è acceso. La scelta resta per le volte successive. Tolta la voce dal menu Importa, dove non si capiva se era spuntata.

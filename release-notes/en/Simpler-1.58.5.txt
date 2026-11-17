@@ -1,0 +1,5 @@
+SIMPLER 1.58.5  —  27 October 2026
+==================================
+
+- Walking in the view (wheel and arrows): with an ecosystem «Only where the camera looks» that reaches the horizon, the scene becomes kilometres wide and the «walk» speed became hundreds of metres per wheel notch. Now the speed follows the scene only up to the size of a large building: in a large scene «walk» stays at walking pace (about 2 m per notch), and bike and car are there for long distances. Nothing changes in small scenes and buildings.
+- Walking with the arrows is lighter in scenes with large distributions: the size of the scene is no longer computed again at every frame.

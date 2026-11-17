@@ -1,0 +1,10 @@
+SIMPLER 1.75.7  —  31 October 2026
+==================================
+
+Scenes also bring back the ambience in the panel and in the view; mantle: the roof shelters the seats even with «No snow».
+
+- Applying a saved scene, rain, snow, preset and sky came back in the engine (path tracing and render), but the Ambience panel and the real-time view still showed the previous ones. It looked as if the scene had not saved them.
+  - Now the panel and the view are updated with the scene's ambience.
+  - Scenes saved in studio also bring back their rain and snow (before, the ambience was applied again only with the sky or an HDRI).
+  - Camera depth of field: saved and applied again. Tested: f/1.4 with depth of field on comes back as it was.
+- Mantle on models (1.75.6): to decide which surfaces are «on top», every piece of the model now counts, also those with «No snow» or «No snow mantle». So a glass without snow still shelters the seats under it.

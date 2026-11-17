@@ -1,0 +1,11 @@
+SIMPLER 1.4.5  —  21 October 2026
+=================================
+
+NEW
+---
+- UNSAVED CHANGES: when you close Simpler, if the scene has unsaved changes you are asked
+  "Save them before closing Simpler?" with Yes (saves and closes; for a new project it asks where), No (closes
+  without saving) and Cancel (stays open). The same question appears before "New" and, now also, before "Open".
+  If nothing has changed since the last save Simpler asks nothing: moving the view, switching between real time
+  and path tracing or resizing the window don't count as changes; objects, materials, lights, environment, saved
+  views, rendering and camera settings do.

@@ -1,0 +1,44 @@
+SIMPLER 1.1.0  —  18 October 2026
+=================================
+
+NEW FEATURES
+------------
+Saved scenes ("Scenes" tab in the library at the bottom, after Environments)
+- "Save scene" stores the framing, lens and depth of field, format, all rendering settings
+  (preset, samples, bounces, caustics, exposure, tone), environment, lights and visible objects.
+- Each scene has a path-traced thumbnail. Click the thumbnail = back to the scene.
+- ⟳ wheel = updates the scene with the current framing and settings (and redoes the thumbnail).
+- "…" menu: rename, duplicate, delete. Scenes are saved inside the .simpler project.
+
+Camera (new "Camera" button at the top)
+- Focal length in mm with presets 14 / 24 / 35 / 50 / 85 / 135 / 200.
+- Depth of field: f/ aperture, focus distance, bokeh shape (blades), and
+  "Click to focus": click the point in the view that must be sharp.
+- Perspective: horizontal/vertical lens shift and "Straighten verticals (2-point)".
+- Image format (16:9, 3:2, 4:3, 1:1, 4:5, 2:3, 9:16, A4): frame in the view and
+  final render with exactly that framing; Final render suggests sizes in that format.
+
+Materials
+- Library thumbnails are now real renders (sphere on a backdrop) computed with Cycles and stored:
+  the first time they appear one at a time, then they are instant.
+
+Navigation and tree
+- Arrow keys: forward/back and sideways; PgUp/PgDn: up/down (Shift = slow).
+  Speed follows the walking / bicycle / car buttons.
+- Rename in the tree by holding the click on the name (or F2, or the "Rename" menu).
+
+New scene
+- Asks whether to save the current project.
+- Resets all settings to their initial values (framing, rendering, exposure, caustics).
+- Contains only the floor (20 m) and a Sun light; other lights are added from the + button
+  and appear near the point you are looking at, already aimed at it.
+
+BUG FIXES
+---------
+- Off/Normal/Sharp caustics with no visible difference:
+  · sharp caustics (MNEE) were not turned on/off during the preview (the engine kept the
+    old object settings): they now change at once;
+  · "Normal" caustics were removed by the reflection filter and the indirect light clamp:
+    with caustics on these two values go to 0, with caustics off they return to the clean values.
+- After "New scene" the view stayed where it was in the previous project (floor very far away).
+- Exposure and the other settings were not reset to their initial values by "New scene".

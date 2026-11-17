@@ -1,0 +1,8 @@
+SIMPLER 1.13.28  —  22 ottobre 2026
+===================================
+
+LIBRERIA: PRIMITIVE
+-------------------
+- Le primitive (cubo, sfera, cilindro, cono, piano, toro) hanno la loro miniatura renderizzata, come i modelli 3D.
+- Tolto "Gruppo vuoto" dalle primitive.
+- Cilindro e cono: le basi restano piatte (prima, smussate, il bordo sembrava morbido).

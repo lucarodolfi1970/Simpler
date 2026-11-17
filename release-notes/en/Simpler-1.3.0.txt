@@ -1,0 +1,22 @@
+SIMPLER 1.3.0  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+- "IMPORT" BUTTON IN THE TOP TOOLBAR, next to "New" (the old "Import model" button above the tree is gone).
+  Click = import a model into the scene (as before, Ctrl+I). The small ▾ next to it opens the menu with
+  "Import models into the library…".
+- IMPORT MODELS INTO THE LIBRARY: a guided window to quickly fill the 3D models library.
+  1. Choose the models: "Add files…" (many at once too) or "Add a folder…" (all the models in the folder and its
+     subfolders). Formats: FBX, glTF/GLB, OBJ, USD. Each model's name can be changed.
+  2. Choose the library folder: one for all, or folder by folder with the button on each row;
+     "New folder…" creates one in the library's structure.
+  3. Import: a bar shows the progress, each row becomes ✓ or ✗ (hover over it to read the reason).
+  Each model is prepared by the second Blender (the one used for previews): the scene and the 3D view are not
+  touched, no flickering, you can keep working. For each model Simpler looks for the textures next to the file,
+  copies them into the library, removes the file's cameras, lights and skeletons, saves the model and makes the
+  path-traced thumbnail. The tiles appear in the library one after another.
+  If a model already exists (same name in the same folder): with "Overwrite models that already exist" turned on it
+  is replaced; otherwise Simpler asks Overwrite / Rename (e.g. "Chair (2)") / Skip, with the option
+  "Do the same for the next ones".
+  You can close the window during the import: it continues in the background (reopen it from the Import menu).

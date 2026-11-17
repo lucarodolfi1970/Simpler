@@ -1,0 +1,10 @@
+SIMPLER 1.4.11  —  21 ottobre 2026
+==================================
+
+CORREZIONI
+----------
+- SALVA NELLA LIBRERIA, MODELLO GIÀ PRESENTE: prima, salvando un oggetto con lo stesso nome nella stessa cartella,
+  Simpler creava un secondo modello uguale (due caselle con lo stesso nome). Ora chiede:
+    · Sovrascrivi: il modello della libreria viene sostituito (stessa casella, nuova miniatura);
+    · Salva come nuovo: lo salva accanto con un nome nuovo, es. "Acero (2)";
+    · Annulla.

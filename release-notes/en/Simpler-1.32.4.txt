@@ -1,0 +1,4 @@
+SIMPLER 1.32.4  —  25 October 2026
+==================================
+
+- Materials made before 1.32.1 with a UV offset (for example a plate centred with Move X) fix themselves when the project opens: in the path tracing they stayed shifted compared with the real-time view (the plate cut in two) until a value was touched. Now they are rebuilt once with the new calculation, and the path tracing shows what the real-time view shows.

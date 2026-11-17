@@ -1,0 +1,5 @@
+SIMPLER 1.71.5  —  30 ottobre 2026
+==================================
+
+- Quando apri un progetto, inizi una scena nuova o avvii il programma, l'albero della scena compare tutto chiuso: solo le righe principali, e apri tu quello che ti serve. Prima i modelli si aprivano subito e la lista era lunga da scorrere.
+- Durante il lavoro non cambia nulla: un modello importato, un oggetto selezionato nella vista o un nuovo elemento continuano ad aprire le righe che servono per vederlo.

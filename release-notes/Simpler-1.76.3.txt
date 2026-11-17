@@ -1,0 +1,10 @@
+SIMPLER 1.76.3  —  1 novembre 2026
+==================================
+
+Terreno: più dettaglio dove serve.
+
+- La griglia del terreno non è più uguale ovunque: è fitta vicino al modello, alla camera e al punto che guarda, e si allarga verso i bordi. Con «Normale» c'è un punto ogni 2 m in quella zona (1,5 m con «Alto», 1 m con «Massimo»); prima, su una montagna di 3 km, i punti erano a quasi 6 m l'uno dall'altro anche accanto al modello.
+- Il numero di punti non cresce: resta entro quello di prima (512, 768 o 1024 per lato), quindi vista e render restano leggeri. Su un terreno piccolo, come la pianura, il dettaglio fine copre tutto.
+- Il rilievo fine arriva fino a circa un metro dove la griglia è fitta; dove è larga non c'è dettaglio che la griglia non può reggere (niente tremolii).
+- Le zone (prato, terra, roccia, neve) hanno le stesse forme di prima, in metri, qualunque sia la griglia. I confini sono più precisi vicino al modello.
+- La camera conta quando il terreno viene creato o modificato. Se poi la sposti lontano, «Dettaglio dove guarda la camera» (nelle Avanzate) rifà la griglia fitta anche lì. Una camera lontanissima, per esempio una vista aerea di tutto il terreno, non allarga la zona fitta: resta intorno al modello.

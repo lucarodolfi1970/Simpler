@@ -1,0 +1,7 @@
+SIMPLER 1.70.2  —  29 ottobre 2026
+==================================
+
+- Ecosistemi molto più veloci nelle scene grandi, sia quando ne inserisci uno sia con «Ricalcola dalla vista». In una scena con migliaia di oggetti ogni calcolo passava da circa 37 a circa 7 secondi la prima volta e 4 le successive (misurato senza scheda grafica: con una scheda è più rapido). Prima un ecosistema ne faceva 2-3 di fila e superava il minuto.
+  - La memoria delle forme che nascondono la superficie («Niente pezzi dietro i modelli») ricalcolava a ogni oggetto lo spazio occupato da tutti gli altri: con 3.800 oggetti erano 7 milioni di somme e 16 secondi. Era un difetto introdotto nella 1.67.5.
+  - I triangoli grandi, come le colonne lunghe e sottili, ora si disegnano riga per riga invece di controllare ogni pixel del loro riquadro.
+- Il risultato è identico: stessi pixel coperti, profondità uguali.

@@ -1,0 +1,5 @@
+SIMPLER 1.19.2  —  24 ottobre 2026
+==================================
+
+- Pannello AI: le funzioni sono un elenco, come quello dei materiali: a sinistra l'anteprima prima/dopo, a destra il nome e due parole su cosa fa. Un clic sceglie la funzione e le opzioni sotto cambiano subito.
+- Il titolo delle opzioni ora è tradotto anche in inglese.

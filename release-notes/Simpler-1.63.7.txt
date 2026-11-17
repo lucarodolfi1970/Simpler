@@ -1,0 +1,5 @@
+SIMPLER 1.63.7  —  28 ottobre 2026
+==================================
+
+- Sotto l'acqua niente neve neanche nel bianco dei materiali: le rocce sotto la superficie di una pozza restavano dipinte di bianco. Dove qualcosa esce dall'acqua, lì la neve resta.
+- Neve sulle sporgenze delle rocce: prima scendeva lungo le pareti troppo ripide in lembi sottili e frastagliati. Ora finisce arrotondata sul bordo. Cosa conta come troppo ripido dipende da «Sulle pareti».

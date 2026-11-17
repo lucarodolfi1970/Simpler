@@ -1,0 +1,11 @@
+SIMPLER 1.1.4  —  18 October 2026
+=================================
+
+NEW FEATURES
+------------
+- Start-up screen: on opening, the Simpler splash screen appears with progress at the bottom right
+  (render engine start, project opening, 3D view preparation and loading).
+- All loading happens behind the splash screen: the app appears only when it is ready, already
+  maximized to full screen, with the scene visible in the 3D view.
+- If start-up needs an answer (for example where Blender is) the splash screen closes and
+  the app shows the question at once.

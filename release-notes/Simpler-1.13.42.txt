@@ -1,0 +1,7 @@
+SIMPLER 1.13.42  —  23 ottobre 2026
+===================================
+
+TRASCINARE UN MATERIALE SU UN MODELLO DELLA LIBRERIA
+----------------------------------------------------
+- Trascinando un materiale (dalla libreria o dalla sfera dell'editor) su un modello della libreria, Simpler lo dava a tutto il modello: foglie, vaso e terra insieme. Ora lo dà solo alle parti con il materiale che c'è sotto il mouse (es. solo le foglie).
+- Con Shift premuto va ancora a tutto il modello.

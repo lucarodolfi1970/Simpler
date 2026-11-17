@@ -1,0 +1,11 @@
+SIMPLER 1.13.24  —  22 ottobre 2026
+===================================
+
+EDITOR DEI MATERIALI PIÙ CHIARO
+-------------------------------
+- Subito sotto il Tipo, l'editor dice su quali oggetti è il materiale ("Su: Suolo, Piano e altri 3"). Se non è su
+  nessun oggetto della scena lo scrive in arancio: "le modifiche non si vedono nella vista". Prima l'informazione era
+  in basso, sotto l'anteprima, e capitava di modificare un materiale diverso da quello dell'oggetto guardato (così le
+  modifiche alla mappatura sembravano non funzionare).
+- La scala della mappatura si chiama "Scala" in tutti i modi: in UV è "Scala · ripetizioni" (quante volte si ripete
+  sulle UV del modello), in Box, Piana, Cilindro e Sfera è "Scala · dimensione reale" in cm.

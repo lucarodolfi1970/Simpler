@@ -1,0 +1,9 @@
+SIMPLER 1.54.0  —  27 October 2026
+==================================
+
+- New material type «Volumetric»: the model fills with cloud, smoke, fog, steam, dust or fire. The surface disappears and the volume remains, fading towards the edges of the model and eaten into puffs: a sphere becomes a cloud, three spheres a column of smoke, a low box a fog bank. It works on any closed model.
+- Six ready kinds (Cloud, Smoke, Fog bank, Steam, Dust, Fire), also in the material library in the «Volumes» folder: drag them onto a model like the others. Controls: Visibility, Colour, Edge softness, Puffs, Puff size, Glow and light colour (fire lights the scene); under Advanced: Absorption, Light direction, Detail and Variant.
+- Real-time view: the volume shows there too, drawn inside the faces of the model, with the same outline, the same colour and similar puffs; while you move the view it uses fewer steps, to stay smooth.
+- Rain and snow leave volumes alone: no shelter under a fog bank, no mantle on smoke.
+- Speed: for volumetric models the render uses ray marching instead of exact sampling, 3 to 6 times faster with the same picture (test: 59 → 10 s); the steps follow the size of the volume.
+- Fixed: preparing the view could stop with «could not convert string to float» when a material had a text field (an attribute name).

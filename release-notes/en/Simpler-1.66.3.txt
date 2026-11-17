@@ -1,0 +1,7 @@
+SIMPLER 1.66.3  —  28 October 2026
+==================================
+
+- Drops on car windows too. Model windows are wrapped by the node that lets sunlight pass through the glass, and the rain skipped materials wrapped that way: no drops and no wetness. Now it goes through them.
+- On glass the drops are more domed lenses: against the dark inside of the car you see their edges reflecting the sky and the lights.
+- Drops also appear on windows made with transparency (low Alpha), common in car models, not only on those transparent by refraction.
+- Top bar: the Draft/High/Final buttons became a single drop-down menu next to «Path tracing». In Real time it shows the shadows (No, Medium, High, Ultra), in Path tracing the quality (Draft, High, Final). The shadow bar inside the view is gone.

@@ -1,0 +1,4 @@
+SIMPLER 1.30.2  —  25 ottobre 2026
+==================================
+
+- Emissione dei materiali importati: accendendo «Emette luce» su un materiale di un modello importato (per esempio i fari di un'auto FBX) non si illuminava niente, perché il file portava un filtro colore nero (il valore dei materiali che non emettono) e luce per nero dà zero. Ora, quando un materiale emette con il filtro nero, il filtro diventa bianco; scegliendo un colore a mano resta quello scelto. I materiali già convertiti si sistemano alla prima modifica.

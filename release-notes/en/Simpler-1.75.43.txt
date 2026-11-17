@@ -1,0 +1,10 @@
+SIMPLER 1.75.43  —  1 November 2026
+===================================
+
+AI video: a green notice when the video is ready.
+
+- The «Stop waiting» button is now called «Keep working». Simpler no longer gives up on the video: it checks it by itself every 15 seconds while you work.
+- When Krea has finished, Simpler downloads the video, puts it in AI outputs › AI videos with all its parameters and shows for 3 seconds a green box «AI video created and saved in AI outputs». The box appears where the red «Busy» one appears.
+- It also works with several videos being made at once, and even if you close Simpler: when it opens again it goes on checking them.
+- In the panel, the «Videos being made» box says how many videos are still on Krea. «Wait for it here» follows it in the panel; «Forget it» stops checking them.
+- If a video on Krea fails, the status bar says so.

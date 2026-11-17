@@ -1,0 +1,4 @@
+SIMPLER 1.32.3  —  25 October 2026
+==================================
+
+- 3D centre, Base and Origin also work on models whose pivot was moved by hand (violet gizmo): before, the hand-placed pivot always won and the three buttons did nothing. Now the last choice rules: clicking 3D centre, Base or Origin puts the gizmo there; the hand-placed pivot stays saved in the model and comes back with the new «✥ Manual» button, shown in the gizmo bar only when the selected model has one. Moving the pivot again with the violet gizmo switches back to «Manual».

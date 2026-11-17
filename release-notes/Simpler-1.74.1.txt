@@ -1,0 +1,9 @@
+SIMPLER 1.74.1  —  30 ottobre 2026
+==================================
+
+«Caustiche disattivate» con le caustiche accese.
+
+- Scegliendo Caustiche «Normali» nel pannello Rendering, la barra di stato scriveva «Caustiche disattivate», ma le caustiche erano accese.
+  - Causa: la barra guardava solo le caustiche «Nitide».
+  - Ora dice la scelta vera: Spente, Normali (riflesse e rifratte calcolate dal path tracing) o Nitide.
+- Lo stesso errore c'era nella nota sotto le onde del materiale Acqua, che con le caustiche Normali chiedeva di accenderle: ora tiene conto anche delle Normali.

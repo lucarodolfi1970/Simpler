@@ -1,0 +1,8 @@
+SIMPLER 1.13.41  —  23 ottobre 2026
+===================================
+
+STATISTICHE DELLA LIBRERIA: PIÙ CHIARE
+--------------------------------------
+- La finestra resta sempre al centro dello schermo, anche quando arrivano i risultati; l'elenco delle cartelle è più basso e scorre, i risultati hanno la loro barra di scorrimento.
+- Sotto i riquadri una riga spiega cosa è cosa: lo spazio usato da Simpler è quello della libreria (modelli, texture, miniature); i file originali importati (FBX, OBJ…) sono i tuoi, nelle loro cartelle, e Simpler non li usa più dopo l'import (servono solo per reimportare). Poi il totale su disco.
+- Nuova informazione: i modelli con le texture dentro il file (nessuna cartella di texture, file grande): il loro peso è nei file dei modelli.

@@ -1,0 +1,4 @@
+SIMPLER 1.56.3  —  27 October 2026
+==================================
+
+- «Materials» button with nothing selected (and a click on a library material): it opened the project's copy with its changes even when it was left only on deleted objects (a «White» turned into the number plate of a deleted car). Now it opens the copy that is on objects of the scene, or a draft you are editing without objects; otherwise the material as it is in the library.

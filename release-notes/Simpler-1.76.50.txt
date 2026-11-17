@@ -1,0 +1,14 @@
+SIMPLER 1.76.50  —  5 novembre 2026
+===================================
+
+Vista in tempo reale più veloce: meno ricaricamenti, meno shader rifatti, path tracing che non blocca i comandi.
+
+- Dopo una modifica del terreno (scultura, forma, zone) la vista sostituisce solo le parti cambiate: prima una zona rimasta vuota faceva ricaricare tutta la vista.
+- La luce di riserva della vista resta sempre nella scena (spenta quando non serve): prima ogni volta che compariva o spariva tutti gli shader venivano rifatti («Aggiornamento delle luci»).
+- Quando la vista viene ricaricata (apertura, nuova preparazione) gli shader già pronti vengono riusati: prima venivano buttati e rifatti, alcuni secondi ogni volta.
+- Path tracing nella vista: se la preparazione della scena è lenta, le passate intermedie vengono saltate e la pausa tra una passata e l'altra si allunga, così i comandi non aspettano.
+- «Sfumatura dei bordi» del terreno: cambia solo i numeri del materiale, senza rifarlo (da 28 s a meno di un secondo).
+- Apertura più rapida: le impostazioni delle cartelle non vengono rilette a ogni richiesta.
+- SmartView ancora più leggera: le ombre controllano solo le luci note, non tutta la scena due volte al secondo.
+- Vista: un fotogramma lento non fa più ricalcolare la posizione di tutti i pezzi distribuiti quando il loro limite è già al minimo.
+- Nuovi controlli automatici per ognuno di questi punti.

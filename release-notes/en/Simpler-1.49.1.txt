@@ -1,0 +1,5 @@
+SIMPLER 1.49.1  —  27 October 2026
+==================================
+
+- Real-time view: a light that is off (by hand, or a dusk-to-dawn light by day) no longer casts shadows. Before, its shadow map still drew the whole scene, six times for a point light: with a few lights off the view dropped to 2 fps with over 100 million triangles.
+- Log (app.log and engine.log): to understand the night in the real-time view, how many lights there are, how many are on, how many cast shadows, how many sit inside the models of distributions, and the exposure of the view.

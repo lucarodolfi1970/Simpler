@@ -1,0 +1,11 @@
+SIMPLER 1.76.6  —  2 November 2026
+==================================
+
+Large-scale variation: large textures on the terrain, and for every material.
+
+- The terrain zones now also use Poly Haven's «aerial» textures, which cover 20–90 m: rocky_terrain_02 on the lawn (grass with rocks cropping out), aerial_rocks_01 on soil and gravel, marble_cliff_05 on rock (marble_cliff_04 in the canyon), snow_field_aerial on snow, aerial_beach_01 on sand. They download on their own like the others.
+- The large texture does not replace the detail one: it lies over it. Its shapes (rocks, patches, streaks) multiply the colour of the detail, and «Colour from the large texture» can bring its colour too, keeping the grain of the detail. So from afar you see the large shapes and up close the definition stays: no more single-colour surfaces, no more tiny repetitions.
+- «Tone variation»: lighter and darker, more and less saturated, in patches tens of metres wide, even without a large texture (level ground, plain).
+- New «Large-scale variation» section in the panel of every material, not only the terrain's: tone variation, large texture and large normal map with their size. It serves any large surface: a lawn, a forecourt, an imported mountain.
+- Real-time view: shapes, colour and tone as in the render; the large normal map shows only in path tracing.
+- Terrains already made get the large textures at the first change of the terrain.

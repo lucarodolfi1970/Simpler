@@ -1,0 +1,8 @@
+SIMPLER 1.35.0  —  25 ottobre 2026
+==================================
+
+- Materiali: comanda il modello. Quando apri un materiale da un oggetto (contagocce o clic su un pezzo) e lo usano anche altri modelli, in cima c'è «Modifica: Solo questo modello | Tutti».
+  · «Solo questo modello» è sempre la scelta iniziale: alla prima modifica il modello riceve una copia tutta sua del materiale, su tutti i suoi pezzi che lo usano (per esempio entrambi i fanali di un'auto), con il nome del modello (es. «Fanali · Audi A4 White»). Gli altri modelli non cambiano. Prima la copia andava solo sul pezzo cliccato, e un altro pezzo dello stesso modello restava col materiale vecchio.
+  · «Tutti» va scelto apposta e vale solo per il materiale aperto: non resta più attivo per i materiali aperti dopo.
+  · Quando una modifica tocca più modelli (con «Tutti», o aprendo il materiale dalla libreria o dall'elenco dei materiali della scena) compare un avviso arancione con i loro nomi: «Le modifiche cambiano anche: …».
+- Esempio: trascini i fanali rossi di un'auto su un'altra auto, li apri dalla seconda con il contagocce e li sistemi: la prima auto resta com'era.

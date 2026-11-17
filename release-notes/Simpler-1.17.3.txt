@@ -1,0 +1,7 @@
+SIMPLER 1.17.3  —  24 ottobre 2026
+==================================
+
+MISURA DEL RENDER FINALE: SECONDO GIRO SULLE NUVOLE
+---------------------------------------------------
+- La prima misura ha mostrato che le nuvole volumetriche sono il 94% del tempo del render finale, e che i rimbalzi nelle nuvole e il passo della scena non cambiano né il tempo né l'immagine.
+- La misura ora prova quello che resta: il numero massimo di passi per raggio dentro le nuvole (2048, 1024, 512), il passo del materiale delle nuvole raddoppiato, e il render completo con il minimo di campioni a un ottavo invece di un quarto. Salva anche il render principale in PNG per confrontare la qualità.

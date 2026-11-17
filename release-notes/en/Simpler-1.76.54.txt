@@ -1,0 +1,13 @@
+SIMPLER 1.76.54  —  5 November 2026
+===================================
+
+"3D relief": the kinds of rock change the real shape of the rock, not only the light.
+
+- Eroded gullies, Fractured wall and Ledged strata model the terrain mesh where "Sculpted rock" acts: carved gullies with spurs between them, angular blocks standing out and set back, marked ledges layer after layer. The outline and the shadows are real.
+- On top of the shape, the light of the path tracing adds the finer detail of the same kind, as before.
+- "Current" is now called "Mixed rock" and comes first; it stays identical to the rock as it was (checked: same shape). Order: Mixed rock, Eroded gullies, Ledged strata, Fractured wall, None.
+- Size and Orientation change the shape too: the terrain is recomputed, with ecosystems and stones, as when "Sculpted rock" is moved. Depth, Detail and Where stay immediate.
+- No displacement: the render does not slow down.
+- Ctrl+Z brings back shape and light of the previous kind together.
+- Pictures made again with the real shape.
+- New automatic check: each kind changes the shape of the rock and "Mixed rock" gives back exactly the shape of before.

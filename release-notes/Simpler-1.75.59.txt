@@ -1,0 +1,8 @@
+SIMPLER 1.75.59  —  1 novembre 2026
+===================================
+
+Elaborazioni AI: pollice verde per le riuscite, rosso per le malriuscite.
+
+- Nel menu «…» di ogni video o immagine AI ci sono due voci nuove: «Riuscita» e «Malriuscita». Dopo averne scelta una, in alto a destra della miniatura compare un piccolo pollice: verde e in su per le riuscite, rosso e in giù per le malriuscite. Così si distinguono a colpo d'occhio.
+- Per togliere il giudizio basta scegliere di nuovo la voce già spuntata.
+- Il giudizio viene salvato con il progetto, insieme alle elaborazioni AI.

@@ -1,0 +1,8 @@
+SIMPLER 1.76.27  —  3 November 2026
+===================================
+
+Coast foam around the models; large terrains seen to the end.
+
+- Fixed: the coast foam, the clear water and the shore lines followed the rows of the sea grid and came out as straight bands, above all far from the centre of the scene. Now the coast is measured on a map of square cells around what touches the water (down to 25 cm per cell), and the foam goes around the model that comes out of the water, both in the view and in path tracing.
+- The map is saved with the project: reopening it needs no new measure. A project saved with an earlier version measures it once when opened.
+- Fixed: a very large terrain (for example an elevation file of almost 100 km) looked cut, because the view stopped drawing 3 km from the camera. Now the view reaches the edge of the scene.

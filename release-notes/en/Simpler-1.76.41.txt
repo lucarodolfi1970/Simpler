@@ -1,0 +1,15 @@
+SIMPLER 1.76.41  —  4 November 2026
+===================================
+
+Terrain: the panel split into sections, each with its own Advanced.
+
+- The terrain is no longer one card with a very long Advanced: five sections, like «Stones and debris».
+  · Terrain: type, size, relief, «Another version». Advanced: grid detail, «Detail where the camera looks», height map.
+  · Shape and rock: sculpted rock, rock slope. Advanced: erosion, age, direction, sharpness and rock layers.
+  · Terrain zones: snow, border blend, list of the zones. Advanced: gravel and soil, irregular borders, border irregularity.
+  · Colours from the terrain: the switch and «Rock relief». Advanced: streaks, layer bands, crests and gullies, wet.
+  · Flat area and edges: flat area, radius, «Centre on the selection». Advanced: fillet, edge joined to the ground, bays and headlands.
+- Each Advanced shows its dot when something is not at its default value.
+- Favourite commands (hearts) put on terrain commands follow the command into its new section.
+- Fuller tooltips on erosion, age, layers, colours and edges.
+- No command removed, no value changed.

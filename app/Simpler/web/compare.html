@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Simpler compare</title>
+<!-- (1.75.54) «Ottimizza poligoni»: the model before and after, side by side, turning together (compare.js) -->
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0a1222; font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif; user-select: none; }
+  #view { position: absolute; inset: 0; }
+  canvas { display: block; width: 100%; height: 100%; outline: none; }
+  .tag { position: absolute; top: 10px; padding: 5px 10px; border-radius: 8px; background: rgba(10,18,34,.82); border: 1px solid #1c2b47;
+         color: #e6ecf5; font: 600 12px "Segoe UI", sans-serif; pointer-events: none; }
+  .tag span { color: #8fa3c4; font: 12px "Cascadia Mono", Consolas, monospace; margin-left: 6px; }
+  #tagB { left: 10px; } #tagA { left: calc(50% + 10px); }
+  #split { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; margin-left: -1px; background: #1c2b47; pointer-events: none; }
+  .busy { position: absolute; top: 50%; transform: translate(-50%, -50%); padding: 8px 14px; border-radius: 8px; background: rgba(10,18,34,.88);
+          border: 1px solid #2a3d60; color: #c9d3e4; font: 12.5px "Segoe UI", sans-serif; pointer-events: none; display: none; white-space: nowrap; }
+  .busy.on { display: block; }
+  #busyB { left: 25%; } #busyA { left: 75%; }
+  #hint:empty { display: none; }
+  #hint { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); padding: 4px 10px; border-radius: 7px; background: rgba(10,18,34,.72);
+          border: 1px solid #1c2b47; color: #8a99b5; font: 11.5px "Segoe UI", sans-serif; pointer-events: none; white-space: nowrap; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "./lib/three.module.js", "three/addons/": "./lib/addons/" } }
+</script>
+</head>
+<body>
+<div id="view"></div>
+<div id="split"></div>
+<div class="tag" id="tagB"><b id="nameB">Prima</b><span id="trisB"></span></div>
+<div class="tag" id="tagA"><b id="nameA">Dopo</b><span id="trisA"></span></div>
+<div class="busy" id="busyB"></div>
+<div class="busy" id="busyA"></div>
+<div id="hint"></div>
+<script type="module" src="compare.js"></script>
+</body>
+</html>

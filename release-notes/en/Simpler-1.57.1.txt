@@ -1,0 +1,4 @@
+SIMPLER 1.57.1  —  27 October 2026
+==================================
+
+- «Free memory»: in a scene with Blender groups (collections, for example those of distributions) it gave «Internal error: 'Collection' object has no attribute 'users_scene'» and showed no message. Fixed: collections in the scene, those used by other objects and those of distributions stay; only those nobody uses are removed.

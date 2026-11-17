@@ -1,0 +1,11 @@
+SIMPLER 1.73.7  —  30 October 2026
+==================================
+
+No more green patch in the sun's reflection on shallow water.
+
+- In the sun's reflection at sunset, where the beach enters the water, a bright green patch appeared.
+  - Cause: the coast's «Wet band» made the sand glossy under the water too. The sea bed reflected the low sun like a mirror. To get back to the camera that reflection crossed the water, which takes the red away: so it came out green.
+  - In reality sand covered by water reflects almost nothing, because water and sand bend light in a similar way.
+  - Now below sea level the sand stays wet and dark but not glossy. Above it, where the waves reach, it stays glossy as before.
+  - With «Wet band» at 0 the patch disappeared: that was it.
+  - With the sun low over the sea the green patch is gone. The sun's reflection on the wet beach remains.

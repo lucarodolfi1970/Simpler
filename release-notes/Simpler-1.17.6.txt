@@ -1,0 +1,9 @@
+SIMPLER 1.17.6  —  24 ottobre 2026
+==================================
+
+COLORI DEL CIELO DA UNA FOTO: PRIMO PASSO
+-----------------------------------------
+- Preparazione della funzione «Colori da una foto» (Cielo › Avanzate, nella prossima versione): Simpler non capisce la foto, ne confronta i colori con quelli dei cieli che sa fare e sceglie le regolazioni più vicine (ora, foschia, ozono, nuvole). Il cielo resta fisico.
+- La tabella dei colori si fa una volta sola con Simpler stesso: tanti piccoli render del solo cielo, in background, mentre Simpler è aperto (sviluppo: file test_out\tabella_cielo.on, avanzamento in test_out\tabella_cielo.txt).
+- Quattro foto di tramonto come primi preset.
+- Misura del render finale: tolta la prova senza «Biased» (oltre 20 volte più lenta: «Biased» resta).

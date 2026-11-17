@@ -1,0 +1,7 @@
+SIMPLER 1.30.0  —  25 October 2026
+==================================
+
+- Lights and light-emitting materials have two new switches. «On»: off gives no light, whatever the hour, and wins over everything else (to switch a light or a sign off by hand). «Dusk to dawn»: it switches on by itself only in the evening and at night, by the hour of the Ambience, and stays off in daytime — house lights, street lamps, neon and signs of a city. Changing the hour in the Ambience switches them all on and off together, in path tracing and in the real-time view.
+- They switch on when the sun goes below 2° (a little before sunset) and off when it is back above (a little after dawn). With a photographed sky (HDRI) its sun counts, or its light if there is no sun; with a studio background they stay on.
+- A light switched off keeps its power and a material its luminance: switched on again they are as before. The automatic exposure takes the lights that are on into account.
+- In the light panel, under the two switches, it says whether it is on or off now.

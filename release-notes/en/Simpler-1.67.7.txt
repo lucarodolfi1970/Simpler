@@ -1,0 +1,5 @@
+SIMPLER 1.67.7  —  29 October 2026
+==================================
+
+- Fixed the total freeze of the 3D view with «Centre every piece» on for a material with UV mapping. The material called a rain function endlessly: the view stopped drawing and in the end the view's graphics process closed. The fault was already there in earlier versions (reproduced in 1.67.4 too).
+- To be safe, the view now stops any call of this kind by itself instead of freezing.

@@ -1,0 +1,24 @@
+SIMPLER 1.2.11  —  20 October 2026
+==================================
+
+NEW FEATURES
+------------
+- TWO GIZMOS instead of three, smaller:
+  · "Move and rotate" (W, also E): arrows to move and three arcs to rotate, together; where
+    arrows and arcs touch, the one closest to the mouse wins;
+  · "Scale" (R): handles with small cubes.
+  The top toolbar now has two buttons.
+- RESOURCES > Graphics card: new "Who uses the video memory" list, program by program (Simpler's engine, preview
+  process, 3D view, other programs), with the same numbers as Task Manager. The "Video memory" value at the top is
+  for the whole card, that is for all open programs, not just Simpler.
+- Poly Haven folders (materials and 3D models): if they contain something already downloaded, a small green count
+  out of the total appears (e.g. 3/88).
+
+FIXES
+-----
+- POLY HAVEN MODELS WITHOUT TEXTURES (e.g. Cannon 01): some Poly Haven .blend files (the models with a skeleton for
+  animation) have materials without any image. Now, when the .blend has no textures, Simpler downloads the glTF
+  version, which always has them. Models already downloaded that way are downloaded again automatically the next
+  time they are used (delete the untextured cannon from the scene and insert it again).
+- From Poly Haven .blend files, the shapes that draw the skeleton's "bones" (wdg_* objects) no longer enter the
+  scene, nor do skeletons, cameras and lights from glTF/FBX files.

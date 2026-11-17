@@ -1,0 +1,11 @@
+SIMPLER 1.13.20  —  22 ottobre 2026
+===================================
+
+BUG CORRETTI
+------------
+- Il tasto destro sulle cartelle, sui materiali e sui modelli della libreria non apriva più nessun menu (dalla
+  1.13.18): il menu "Incolla qui" della parte vuota della libreria bloccava anche quelli dei riquadri. Ora ogni
+  riquadro ha di nuovo il suo menu (con Taglia), e "Incolla qui" compare solo sulla parte vuota.
+- MEMORIA DOPO "NUOVO" O "APRI": la vista 3D teneva tutto quello che aveva caricato per il progetto precedente
+  (i modelli delle distribuzioni con i loro livelli di dettaglio, le texture, i materiali): dopo una scena pesante,
+  anche con la scena nuova vuota restavano molti GB occupati. Ora con Nuovo e Apri la vista libera tutto.

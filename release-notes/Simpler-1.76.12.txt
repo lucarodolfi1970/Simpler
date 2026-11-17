@@ -1,0 +1,9 @@
+SIMPLER 1.76.12  —  2 novembre 2026
+===================================
+
+Neve più naturale: niente denti di sega, bordi sfumati, alla quota giusta.
+
+- Neve dell'Ambiente (con e senza manto): sui pendii al limite la neve finisce in modo irregolare, anche dentro i triangoli del terreno. Prima, dove il terreno ha un punto ogni 7–9 m, il bordo seguiva i triangoli: chiazze a lati dritti e creste «a dente di sega». Uguale nella vista in tempo reale, nel path tracing e nel manto.
+- Terreno: ogni cella della griglia è divisa lungo la diagonale che segue meglio la forma, così una cresta o un canalone restano una linea continua invece di una fila di denti.
+- «Neve in quota» del Terreno: il limite della neve sale e scende a chiazze, più in basso nelle conche e nei canaloni, più in alto sulle creste; sopra il limite la neve tiene anche su pendii più ripidi quanto più si sale (le cenge delle pareti), non solo sui pendii dolci in basso.
+- Il bordo fra la neve e le altre zone è sfumato su una fascia più larga (il doppio della «Sfumatura dei bordi», almeno 4 m), a chiazze.

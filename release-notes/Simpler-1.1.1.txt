@@ -1,0 +1,45 @@
+SIMPLER 1.1.1  —  18 ottobre 2026
+=================================
+Versione dedicata alle scene molto grandi (modelli FBX da centinaia di MB o più).
+
+NOVITÀ
+------
+- Path tracing: l'etichetta in basso mostra cosa sta facendo il motore e da quanto tempo, invece di
+  "calcolo…": lettura degli oggetti (es. 1234/5000), caricamento delle texture (12/480 · nome file),
+  costruzione della struttura di accelerazione (percentuale), memoria GPU usata, tempo trascorso.
+  Se il path tracing fallisce (es. memoria GPU esaurita) appare il messaggio d'errore in rosso.
+- Pannello Rendering › Path tracing: "Texture anteprima" (Piene / 4K / 2K / 1K) riduce le texture solo
+  nella vista path tracing, per scene enormi. Il render finale usa sempre le texture piene.
+- Pannello Rendering › Vista in tempo reale: "Texture" (Auto / 1K / 2K / Piene) per la vista 3D.
+  Auto = 2K, oppure 1K quando il modello ha moltissime texture.
+- Salva con nome: menu ▾ accanto a "Salva", oppure Ctrl+Maiusc+S.
+- Esc durante "Preparazione della vista 3D…" interrompe la preparazione e riporta la scena allo stato
+  precedente all'ultima operazione (es. annulla il materiale appena applicato o l'importazione).
+- Durante le operazioni lunghe i comandi che non si possono usare sono disattivati (barra in alto,
+  albero, libreria, proprietà, selezione e gizmo nella vista). La navigazione nella vista resta attiva.
+- Menu contestuali e suggerimenti (tooltip) nello stile scuro dell'app, non più bianchi.
+
+PRESTAZIONI
+-----------
+- La vista 3D non viene più ricostruita da capo per ogni modifica: eliminare, duplicare, aggiungere luci
+  o gruppi, spostare nei gruppi, applicare un materiale, annullare e ripetere sono immediati anche su
+  scene enormi. La ricostruzione completa resta solo per nuova geometria (importazione) o materiali con
+  texture che la vista non ha ancora.
+- Quando serve, la vista 3D si prepara in un processo separato: l'app resta utilizzabile e la
+  preparazione si può interrompere con Esc. Le texture della vista sono ridotte (vedi sopra): file più
+  piccoli, preparazione e caricamento molto più veloci, molta meno memoria.
+- Annulla/Ripeti di importa, aggiungi, elimina, duplica, ambiente e "applica scena" non salvano più una
+  copia dell'intera scena su disco: sono istantanei (prima su un modello da 1 GB potevano richiedere minuti).
+- Miniature delle scene istantanee: sono prese dalla vista in tempo reale (bastano a riconoscere
+  l'inquadratura) invece di essere calcolate in path tracing.
+- Il motore lavora con priorità più bassa e lascia libero qualche core della CPU: Windows e l'app
+  restano reattivi durante importazioni, path tracing e render finale.
+
+BUG CORRETTI
+------------
+- Messaggio "Operazione troppo lunga" su scene grandi (es. applicando un materiale mentre la vista si
+  preparava): i comandi ora attendono il loro turno invece di andare in errore (e poi essere eseguiti
+  lo stesso, di nascosto).
+- "Il visualizzatore 3D si è chiuso inaspettatamente: RenderProcessExited" (memoria esaurita con modelli
+  enormi): meno memoria usata e, se succede, la vista si riavvia da sola e ricarica la scena.
+- Il path tracing poteva restare per sempre su "calcolo…" se Cycles falliva: ora l'errore è mostrato.

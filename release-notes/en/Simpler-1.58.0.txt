@@ -1,0 +1,6 @@
+SIMPLER 1.58.0  —  27 October 2026
+==================================
+
+- Ecosystems, new option «Only where the camera looks»: pieces go only where the camera sees the surface, that is in the frame (with a margin for shadows and reflections of what is just outside) and not hidden behind ridges and hills. The crowns of trees just behind a ridge stay, because they show. On a big terrain the pieces become far fewer (in the test 54,000 → 3,400).
+- Placing an ecosystem too big for the memory, Simpler itself offers to put it in the frame only and says how many pieces it would take; if it is only heavy, it asks whether the whole surface or the frame only.
+- In the ecosystem panel: the switch, the «Recalculate from the view» button to make it again after moving the camera (with the same arrangement: where the views overlap the pieces stay the same), and in Advanced «Margin around the frame» and «Sparser in the distance». Changing density or scale keeps it cut to the view of when you last recalculated it.

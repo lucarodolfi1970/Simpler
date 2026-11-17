@@ -1,0 +1,6 @@
+SIMPLER 1.11.1  —  21 October 2026
+==================================
+
+- RELEASE NOTES IN ENGLISH: every release note now exists in English too (folder release-notes\en). With Simpler
+  in English, the "What's new" panel shows the English version; in Italian, the Italian one.
+- The Italian notes no longer carry the short English summary at the end (the full English version is separate).

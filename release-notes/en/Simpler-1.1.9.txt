@@ -1,0 +1,11 @@
+SIMPLER 1.1.9  —  18 October 2026
+=================================
+
+BUG FIXES
+---------
+- Off-centre orbit with the right button: the view orbited around a centre left at its previous distance
+  (after moving with the wheel or the arrows it ended up in empty space, in front of or behind the objects),
+  so the framing "ran off" to the side. Now, when the right button is pressed, the orbit centre moves
+  to the first surface found exactly in the middle of the view: you orbit around what you are
+  looking at. The view does not move when the button is pressed (the centre moves only along the
+  line of sight). If there is nothing in the middle, the previous centre is kept.

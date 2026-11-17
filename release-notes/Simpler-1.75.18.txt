@@ -1,0 +1,6 @@
+SIMPLER 1.75.18  —  31 ottobre 2026
+===================================
+
+Diagnostica del bagnato nel render finale.
+
+- Nel registro del motore, a ogni render finale, una riga dice com'è la pioggia nella scena che parte per il render (bagnato, pozzanghere, mappa del riparo e se il file esiste, quanti materiali sono bagnati) e una seconda riga dice come la ritrova il processo del render. Serve a capire perché in una scena il render finale è uscito senza il pavimento bagnato che la vista mostrava.

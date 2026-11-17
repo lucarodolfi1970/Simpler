@@ -1,0 +1,8 @@
+SIMPLER 1.76.18  —  2 November 2026
+===================================
+
+Drop onto the surface, for every distribution.
+
+- New «Drop onto the surface» button in the Advanced of every distribution (Brush, Area, Spacing) and of every ecosystem: it puts every object back on the surface below it, vertically, or above it if it ended up buried, with its rotation and scale. For when the terrain or the models under them changed after placing them.
+- Objects already on their surface (within 30 cm, for example sunk a little on purpose) stay where they are.
+- When you change, make again or move a terrain, the distributions on it are dropped by themselves onto the new shape (ecosystems are made again, as since 1.76.15). One Ctrl+Z undoes everything together.

@@ -1,0 +1,11 @@
+SIMPLER 1.1.4  —  18 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- Schermata di avvio: all'apertura compare lo splash screen di Simpler con l'avanzamento in basso a destra
+  (avvio del motore di render, apertura del progetto, preparazione e caricamento della vista 3D).
+- Tutto il caricamento avviene dietro lo splash screen: l'app compare solo quando è pronta, già
+  ingrandita a tutto schermo, con la scena visibile nella vista 3D.
+- Se all'avvio serve una risposta (per esempio dove si trova Blender) lo splash screen si chiude e
+  l'app mostra subito la domanda.

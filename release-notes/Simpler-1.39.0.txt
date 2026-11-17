@@ -1,0 +1,12 @@
+SIMPLER 1.39.0  —  26 ottobre 2026
+==================================
+
+- Scatter: impostazioni proprie per ogni modello del pennello. Sotto la «Presenza» di ogni modello c'è una piccola sezione arancione «Avanzate», chiusa all'inizio. Si apre e si chiude con un clic, e Simpler ricorda se l'hai lasciata aperta. Contiene:
+  - Scala: rispetto alla Scala generale, per esempio alberi al 300% e cespugli al 100%.
+  - Scala casuale: quella di questo modello. Finché non la sposti segue quella generale.
+  - Rotazione: si aggiunge alla Rotazione generale, per esempio 90° per un modello girato diversamente dagli altri.
+  - Rotazione casuale: quella di questo modello. Finché non la sposti segue quella generale.
+- Un pallino arancione accanto ad «Avanzate» indica che quel modello ha valori suoi. «Valori predefiniti» lo riporta come gli altri.
+- Valgono per pennello, area e spaziatura, cambiano subito tutta la distribuzione come le altre regolazioni, e restano negli ecosistemi salvati.
+- Le regolazioni generali restano dove sono e valgono per tutti i modelli.
+- Decal: all'apertura di un progetto, la vista riceveva i decal prima della scena e poi li perdeva. Ora compaiono.

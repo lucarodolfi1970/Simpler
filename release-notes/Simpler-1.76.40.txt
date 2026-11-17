@@ -1,0 +1,7 @@
+SIMPLER 1.76.40  —  4 novembre 2026
+===================================
+
+Terreno: la roccia ha il suo rilievo anche da lontano.
+
+- Nuovo «Rilievo della roccia» (Terreno › Avanzate, con «Colori dal terreno»): sulle pareti ripide gradini degli strati (forti e deboli, non tutti uguali), solchi che scendono lungo la parete e una superficie spaccata in blocchi, misurati sullo spessore degli strati della montagna. Da lontano il terreno ha un punto ogni 6-20 m e le pareti sembravano lisce come plastilina: ora la luce legge la roccia. Si vede nel path tracing; la forma e il profilo contro il cielo non cambiano (quello è il prossimo passo).
+- Acceso al 50% anche sui terreni già fatti; 0% = pareti lisce come prima.

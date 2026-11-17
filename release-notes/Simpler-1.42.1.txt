@@ -1,0 +1,6 @@
+SIMPLER 1.42.1  —  26 ottobre 2026
+==================================
+
+- Pioggia, due ritocchi dopo le prime prove.
+  - Bagnato ricalibrato: l'effetto si vede già dai valori bassi (30% = terreno più scuro, 60% = lucido). Oltre metà sul terreno piano si forma un velo d'acqua continuo: al 100% tutto è lucido e riflette cielo ed edifici come dopo un acquazzone.
+  - Nuovo cursore «Sfumatura bordi» nelle Avanzate della Pioggia: bordi delle pozzanghere netti (0%) o sfumati nel terreno bagnato (100%). Il valore iniziale (30%) li ammorbidisce già un po'.

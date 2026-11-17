@@ -1,0 +1,7 @@
+SIMPLER 1.13.42  —  23 October 2026
+===================================
+
+DRAGGING A MATERIAL ONTO A LIBRARY MODEL
+----------------------------------------
+- Dragging a material (from the library or from the editor's sphere) onto a library model, Simpler gave it to the whole model: leaves, pot and soil together. Now it goes only to the parts with the material under the mouse (e.g. only the leaves).
+- With Shift held it still goes to the whole model.

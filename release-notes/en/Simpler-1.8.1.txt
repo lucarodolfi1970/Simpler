@@ -1,0 +1,15 @@
+SIMPLER 1.8.1  —  21 October 2026
+=================================
+
+NEW
+---
+- MOVE ON SURFACES, SLOPED ONES TOO: when you drag the centre of the gizmo, the object not only rests on the
+  surface but also tilts like the surface under the mouse (a book on a lectern, a rock on a slope). On
+  horizontal surfaces it stays upright as before. Alt: free movement.
+
+BUILD
+-----
+- At the end of the build, Build-App.bat starts Simpler and closes by itself: the window stays open only if the
+  build fails, so you can copy the error.
+- New "Compila e avvia.vbs" (double-click): builds without any window and starts Simpler. If something goes
+  wrong, it shows a warning and opens build.log to copy to Claude.

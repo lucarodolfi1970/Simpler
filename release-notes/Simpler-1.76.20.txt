@@ -1,0 +1,6 @@
+SIMPLER 1.76.20  —  3 novembre 2026
+===================================
+
+Il path tracing vede lontano.
+
+- La camera del path tracing smetteva di vedere oltre 100 volte la distanza dal punto che guarda (almeno 1 km): vicino al punto inquadrato, un terreno grande o il mare oltre 1 km sparivano (al loro posto il grigio o il nero del cielo sotto l'orizzonte), mentre il tempo reale li mostrava. Ora vede fino a 300 km, oltre il bordo del mare, anche nei progetti salvati prima.

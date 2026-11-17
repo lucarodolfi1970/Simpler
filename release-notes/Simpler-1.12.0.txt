@@ -1,0 +1,24 @@
+SIMPLER 1.12.0  —  21 ottobre 2026
+==================================
+
+NOVITÀ
+------
+- ONDE VERE E CAUSTICHE SUL FONDALE: selezionando un oggetto di acqua o vetro, nelle proprietà c'è la sezione
+  "Acqua: onde e caustiche".
+  · "Onde vere": la superficie diventa davvero ondulata (altezza e dimensione delle onde regolabili). Le onde fanno
+    da lenti: con "Caustiche sul fondale" acceso il sole disegna sul fondo la rete di luce, come in piscina o in un
+    lago limpido. Con l'acqua piatta la luce passa uniforme: la rete nasce solo dalle onde.
+  · Le onde esistono solo nel path tracing e nel render finale: la vista in tempo reale resta leggera.
+  · Costo: le onde poco (+20% circa), le caustiche circa 2-2,5 volte il tempo. Per questo sono due interruttori.
+  · Valori di partenza: onde alte 8 cm, distanti 60 cm (giusti per un fondale a circa 1 m).
+  · Le caustiche si vedono dove il sole arriva sul fondale (non nelle zone in ombra).
+- SOLE PIÙ ALTO di partenza: "Pieno giorno" e le scene nuove hanno il sole a mezzogiorno.
+- IL SOLE DELL'AMBIENTE NON HA PIÙ L'ICONA nella vista né la riga nell'albero: si sposta dal pannello Ambiente
+  (Ora, Giorno, Latitudine, Nord). Lo stesso per la luna.
+
+BUG CORRETTI
+------------
+- SUOLO: se lo elimini, cambiando sole, cielo o preset non torna più. Torna solo se scegli un suolo nel pannello
+  Ambiente (o con Annulla).
+- Le caustiche ora valgono anche per gli oggetti e le luci aggiunti dopo averle accese (prima serviva spegnerle e
+  riaccenderle), sole dell'Ambiente compreso.

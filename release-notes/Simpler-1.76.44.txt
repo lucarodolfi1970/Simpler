@@ -1,0 +1,13 @@
+SIMPLER 1.76.44  —  4 novembre 2026
+===================================
+
+Terreno: nuova sezione «Scultura», un pennello per modellare il terreno a mano (primo pezzo: Alza, Abbassa, Liscia).
+
+- Paesaggio › Terreno › «Scultura», subito sotto «Forma e roccia»: «Scolpisci il terreno», poi tieni premuto il tasto sinistro sulla vista e trascina.
+- Tre strumenti con la loro icona: Alza (solleva, di più al centro), Abbassa (scava), Liscia (toglie gobbe e buche, la pendenza resta). Maiusc inverte Alza e Abbassa.
+- Diametro (1-2000 m, anche con [ e ] sulla vista), Intensità, Morbidezza del bordo.
+- Nessuna interruzione mentre lavori: il terreno cambia subito nella vista, Blender lo rifà una volta sola quando chiudi lo strumento (spegnendolo, cambiando pannello, passando al path tracing, al render finale o salvando). Solo allora «Occupato · attendi».
+- Le zone si ricalcolano con la nuova forma (ripido → roccia, spianato → prato); ecosistemi e pietre seguono.
+- Mentre scolpisci Ctrl+Z toglie l'ultima pennellata; dopo, tutta la sessione è un passo solo di Ctrl+Z.
+- Le pennellate restano nel progetto e valgono anche dopo «Un'altra versione», un cambio di dimensione o di dettaglio. In Avanzate: quante sono e «Togli tutte le modifiche».
+- Mentre scolpisci, l'erba e le pietre restano dove erano finché il terreno non viene rifatto.

@@ -1,0 +1,12 @@
+SIMPLER 1.75.46  —  1 November 2026
+===================================
+
+Settings reorganised, with the API keys.
+
+- The Settings panel is divided into sections with their icons, which open and close as in the other panels, also all together with the orange double arrow: Language, Navigation, Saving, Folders, API keys, Version, Render engine.
+- New «API keys» section with OpenAI (AI images and «Improve with AI») and Krea (AI video):
+  - each key shows whether it is Active, Not working, To be checked or Not entered;
+  - it can be tested again or deleted;
+  - if it is missing, you paste it and test it right there, with the link to the provider's page to create it.
+- A short explanation says what the keys are, how they work, whose responsibility they are and how the costs work. Highlighted: Simpler receives no payment or benefit from the use of the APIs, and the only costs are the providers'.
+- The section buttons now have icons, as in the rest of Simpler.

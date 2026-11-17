@@ -1,0 +1,8 @@
+SIMPLER 1.13.39  —  23 October 2026
+===================================
+
+PARTS OF LIBRARY MODELS
+-----------------------
+- Selecting a part of a library model in the tree (e.g. the leaves of the plant), the 3D view always highlighted the whole model. Now the orange outline shows only that part.
+- With a part selected the gizmo does not appear: it would have moved the whole model. The part is changed from the panel on the right (material, position and size in the properties).
+- Note: library models are drawn grouping their pieces by material (that is what makes them fast), so the part is recognised by its materials. In models split by material, like this plant, it matches the chosen part exactly.

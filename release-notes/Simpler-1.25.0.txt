@@ -1,0 +1,9 @@
+SIMPLER 1.25.0  —  25 ottobre 2026
+==================================
+
+- Decal: immagini PNG con trasparenza proiettate sui modelli, come adesivi, scritte, cartelli, macchie o graffiti.
+- Libreria ▸ Personali ▸ Decal: le tue decal, in cartelle. «Apri decal…» (il riquadro con il + o il tasto destro su una cartella) copia le immagini scelte nella cartella; tasto destro su una decal: rinomina, mostra nella cartella, elimina. Se un'immagine non ha trasparenza, Simpler te lo dice.
+- Clic su una decal: va al centro della vista. Trascinala sul modello: va dove la lasci, orientata come la superficie (dritta sui muri, leggibile dal tuo punto di vista sui pavimenti) e grande circa un quarto della distanza da cui guardi.
+- La decal segue la forma del pezzo (anche spigoli e curve) e non tocca né i suoi materiali né le sue UV: è un oggetto suo nell'albero, figlia del pezzo, e lo segue se lo sposti. La selezioni, la sposti e la ruoti con il gizmo, la copi, la nascondi e la elimini come gli altri oggetti; tutto si annulla con Ctrl+Z.
+- Pannello della decal: Dimensione (in proporzione), Profondità della proiezione, Opacità, Colore; in «Avanzate» Larghezza e Altezza separate, Ordine (chi sta sopra), Rugosità, Metallo, Luminosità.
+- L'immagine viene salvata nel progetto: il progetto si apre uguale anche su un altro computer.

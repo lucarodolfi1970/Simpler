@@ -1,0 +1,15 @@
+SIMPLER 1.7.2  —  21 ottobre 2026
+=================================
+
+CORREZIONI
+----------
+- MATERIALI SULLE ISTANZE: trascinare un materiale su un modello che ha delle istanze (copie fatte come
+  "Istanza", modelli della libreria e le loro copie, pezzi di una distribuzione) lo cambia su tutte le istanze,
+  nel path tracing e nella vista in tempo reale. Prima cambiava solo l'oggetto scelto.
+  · Per dare a un oggetto un materiale diverso dalle sue istanze resta "Solo per questo oggetto".
+  · Ctrl+Z riporta il materiale di prima su tutte.
+- NELLA VISTA IN TEMPO REALE il nuovo materiale si vede subito anche sull'oggetto selezionato: prima compariva
+  solo dopo averlo deselezionato. Mentre Simpler prepara il nuovo aspetto del modello (un paio di secondi)
+  resta visibile quello di prima, senza buchi.
+- PENNELLO DI DISTRIBUISCI: cerchio verde chiaro, più pieno e con il bordo più spesso, ben visibile anche sul
+  pavimento chiaro (rosso mentre cancelli).

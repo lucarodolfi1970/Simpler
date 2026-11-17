@@ -1,0 +1,5 @@
+SIMPLER 1.36.1  —  25 ottobre 2026
+==================================
+
+- Il cono verde che segna dove sta arrivando un modello (mentre la vista lo prepara) ha sempre la stessa misura, circa 25 × 40 cm. Prima veniva moltiplicato per la scala dell'oggetto: un modello importato in pollici (scala 37,8) aveva un cono di 15 m che riempiva tutta la vista.
+- Con lo strumento Scatter attivo e la linea già finita (Area, Spaziatura) la vista si ruota di nuovo con il tasto sinistro tenuto premuto, attorno al punto sotto il mouse. Prima ogni clic sinistro restava allo strumento, anche lontano dalla linea. I clic sui punti della linea e sui «+» continuano a modificarla; un clic semplice altrove non cambia la selezione.

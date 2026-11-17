@@ -1,0 +1,12 @@
+SIMPLER 1.8.4  —  21 ottobre 2026
+=================================
+
+- STRISCIA LED: nel path tracing sembrava spenta perché Cycles, di norma, non mostra nell'immagine la superficie
+  di una luce ad area: la striscia illuminava intorno ma la linea luminosa non si vedeva. Ora la Striscia LED
+  nasce "Visibile in camera": nel path tracing si vede la linea accesa e la vista in tempo reale la mostra uguale
+  (solo dal lato verso cui emette, come in Cycles).
+- LUCI AD AREA: nuova opzione "Visibile in camera" nel pannello della luce (Area, Disco, Striscia LED). Accesa:
+  si vede la superficie luminosa; spenta: illumina ma non compare nell'immagine (adatta ai pannelli softbox).
+  Per le strisce già inserite basta accenderla.
+- PROGETTI: alla riapertura il progetto si presenta inquadrato come era al salvataggio, invece di inquadrare
+  tutta la scena. I progetti salvati senza inquadratura continuano a inquadrare tutto.

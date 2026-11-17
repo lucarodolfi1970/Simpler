@@ -1,0 +1,9 @@
+SIMPLER 1.68.2  —  29 ottobre 2026
+==================================
+
+- Le texture viaggiano con il progetto. Salvando, le immagini prese da cartelle esterne (Download, desktop, la cartella di un modello importato) vengono copiate nella cartella «<nome del progetto> texture» accanto al progetto, e il progetto usa le copie. Puoi spostare o cancellare gli originali e portare progetto e cartella su un altro computer. Ogni immagine si copia una volta sola; le librerie di Simpler restano dove sono. Si spegne in Impostazioni > Salvataggio > «Copia le texture accanto al progetto».
+- La prima volta che salvi un progetto con modelli importati da altre cartelle, il salvataggio può durare di più: le loro texture vengono copiate. Dalle volte successive si copiano solo le immagini nuove.
+- All'apertura, le texture che non sono più dove erano vengono cercate per nome nella cartella del progetto, nelle librerie e nelle cartelle che hai indicato in passato. Quelle che restano mancanti vengono elencate e Simpler ti chiede la cartella in cui cercarle, sottocartelle comprese.
+- Una texture che non si trova viene solo staccata: il materiale tiene nome, colore e tutte le impostazioni, e quando la ritrovi torna com'era.
+- Menu File > «Cerca texture mancanti…»: lo stesso controllo, in qualsiasi momento.
+- Corretto: le texture salvate con un percorso relativo al progetto non venivano ritrovate per nome quando avevano un nome diverso da quello del file.

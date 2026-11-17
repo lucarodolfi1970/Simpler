@@ -1,0 +1,7 @@
+SIMPLER 1.38.4  —  25 ottobre 2026
+==================================
+
+- Il limite di pezzi di un ecosistema ora dipende dalla memoria del tuo PC, non più da un tetto fisso di 3 milioni. Prima di metterlo in scena Simpler legge la memoria libera e calcola quanta ne servirebbe, poi usa al massimo il 60% di quella libera.
+  - La memoria di ogni pezzo è stata misurata. Il progetto ne usa circa 650 byte nel motore, e altrettanti nel processo che fa il path tracing. La vista in tempo reale ne usa circa 120. Il path tracer ne usa circa 1,8 KB per ogni parte del modello: le istanze tengono la forma una volta sola, ma per Cycles ogni copia di ogni parte è un oggetto. Una pianta fatta di un solo pezzo costa quindi circa 3 KB, un'auto di 28 parti circa 50 KB.
+  - La domanda di conferma ora dice anche quanta memoria servirà e quanta ce n'è libera. Se i pezzi sono troppi, il messaggio dice perché e qual è il massimo possibile in quel momento.
+- Nella scena, un pallino blu sull'icona indica che dentro quella riga c'è un ecosistema, anche in profondità in un modello. Tenendoci sopra il puntatore compare quanti ne contiene. Funziona come il pallino viola dei decal.

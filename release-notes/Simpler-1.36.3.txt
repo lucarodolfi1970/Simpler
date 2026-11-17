@@ -1,0 +1,7 @@
+SIMPLER 1.36.3  —  25 ottobre 2026
+==================================
+
+- Decal copiate o istanziate una accanto all'altra (strisce pedonali, linee della strada): nel path tracer alcune uscivano sbiadite o a chiazze, anche con parametri identici. La decal prendeva intera la faccia della superficie sotto di sé: su una strada fatta di facce grandi ogni copia diventava una lastra trasparente lunga quanto la strada, alla stessa altezza delle altre. I raggi attraversavano una copia e mancavano l'altra. Ora ogni decal è tagliata esattamente al suo riquadro, come già nella vista in tempo reale.
+- Due decal che si sovrappongono davvero, con lo stesso «Ordine», non stanno più alla stessa identica altezza.
+- Più veloce nel path tracer: niente più strati trasparenti inutili sopra strade e pavimenti.
+- I progetti già salvati vengono sistemati da soli all'apertura.

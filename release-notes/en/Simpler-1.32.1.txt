@@ -1,0 +1,5 @@
+SIMPLER 1.32.1  —  25 October 2026
+==================================
+
+- Same UV mapping in the real-time view and in path tracing: «Offset X / Y» moved the texture by different amounts in the two (in path tracing by «offset» repeats, in the view by «offset × scale»), so a plate placed to the millimetre in the view came out shifted in the render. Now the offset is always a fraction of the model's UV square, the same in both, whatever the scale; with scales that are not whole numbers the view also stays aligned vertically. In materials already made with an offset the render now matches what the view shows.
+- New cube: every face has the whole picture, upright seen from outside. A texture (a plate, a sign, a painting) on a cube or a plane is spread on the face at once, with no scale and offsets to work out. Cubes already in the scene keep their mapping: insert a new cube to get the new one.

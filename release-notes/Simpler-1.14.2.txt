@@ -1,0 +1,6 @@
+SIMPLER 1.14.2  —  24 ottobre 2026
+==================================
+
+DIAGNOSTICA DEL RUMORE
+----------------------
+- Per le macchie del denoiser che compaiono solo su alcune scene (la cucina con le caustiche spente): con il file «diag.on» nella cartella %LOCALAPPDATA%\Simpler, l'ultimo passaggio della vista ray-traced salva anche «diag.exr» con l'immagine prima del denoiser, l'albedo e le normali che il denoiser usa e il numero di campioni di ogni pixel, più le impostazioni di Cycles in «diag.exr.txt». Il file «diag.on» viene poi cancellato: nessun costo nell'uso normale.

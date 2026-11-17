@@ -1,0 +1,13 @@
+SIMPLER 1.76.54  —  5 novembre 2026
+===================================
+
+«Rilievo 3D»: i tipi di roccia cambiano la forma vera della roccia, non solo la luce.
+
+- Canaloni erosi, Parete fratturata e Strati a cenge modellano la maglia del terreno dove agisce «Roccia scolpita»: canaloni scavati con speroni fra l'uno e l'altro, blocchi spigolosi che sporgono e rientrano, cenge marcate strato dopo strato. Il profilo e le ombre sono veri.
+- Sopra la forma, la luce del path tracing aggiunge il dettaglio più fine dello stesso tipo, come prima.
+- «Attuale» si chiama ora «Roccia mista» ed è il primo; resta identico alla roccia di prima (verificato: stessa forma). Ordine: Roccia mista, Canaloni erosi, Strati a cenge, Parete fratturata, Nessuno.
+- Dimensione e Orientamento cambiano anche la forma: il terreno si ricalcola, con ecosistemi e pietre, come quando si muove «Roccia scolpita». Profondità, Dettaglio e Dove restano immediati.
+- Nessun displacement: il render non rallenta.
+- Ctrl+Z riporta insieme forma e luce del tipo precedente.
+- Miniature rifatte con la forma vera.
+- Nuovo controllo automatico: ogni tipo cambia la forma della roccia e «Roccia mista» ridà esattamente la forma di prima.

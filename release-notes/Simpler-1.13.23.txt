@@ -1,0 +1,18 @@
+SIMPLER 1.13.23  —  22 ottobre 2026
+===================================
+
+MATERIALI: COME SI APPLICANO
+-------------------------------------------------
+- Nella barra della libreria, accanto alla ricerca, c'è un menu che decide cosa fa un materiale trascinato nella
+  vista (si ricorda la scelta):
+  · Applica all'oggetto (predefinito): solo sull'oggetto (la superficie) dove lo lasci.
+  · Sostituisci il materiale: prende il posto di quello sotto il mouse su tutti gli oggetti che lo usano.
+  · Applica alla selezione: va su tutti gli oggetti selezionati, dovunque lo lasci nella vista.
+  Vale per i materiali della libreria e per la sfera dell'editor (Poly Haven: per ora solo "all'oggetto").
+
+BUG CORRETTI
+------------
+- Suolo e piano con lo stesso "Bianco": trasformato il Bianco del piano in Displacement, trascinare "Bianco" dalla
+  libreria sul suolo non cambiava niente, perché il progetto riusava il Bianco già modificato (era lo stesso
+  materiale). Ora un materiale preso dalla libreria arriva sempre com'è nella libreria: se la copia nel progetto è
+  stata modificata e non salvata, ne nasce una nuova ("Bianco.001").

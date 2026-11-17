@@ -1,0 +1,14 @@
+SIMPLER 1.37.0  —  25 ottobre 2026
+==================================
+
+- Notte: stelle vere e luna vera, uguali in tempo reale e nel path tracer.
+  - Stelle: il cielo della NASA (Deep Star Maps 2020) con la Via Lattea. Le stelle stanno dove sarebbero all'ora, nel giorno e alla latitudine della scena, e girano con il nord. Prima nel path tracer erano punti più piccoli di un pixel che il rumore e il denoiser cancellavano.
+  - Luna: un disco vero nel cielo, con la foto della Luna della NASA (LRO). Sta nel punto da cui arriva la luce della luna, quindi si vede la luna e non solo il suo alone sul terreno.
+- Pannello Notte:
+  - Stelle;
+  - Luce della luna;
+  - Fase (0 nuova · 25 primo quarto · 50 piena · 75 ultimo quarto), con il nome della fase sotto il cursore e la parte in ombra disegnata giusta;
+  - Dimensione della luna, da 1× (la misura vera) a 8×.
+- Avanzate della Notte: Luminosità del disco, Alone, Posizione automatica oppure Altezza e Direzione scelte a mano.
+- La luce della luna segue la fase: un quarto illumina circa un decimo della luna piena. Anche l'esposizione automatica ne tiene conto.
+- Stelle e luna si scaricano da sole la prima volta che serve una notte, circa 35 MB, una volta sola. Fino ad allora restano le stelle di prima. Crediti: NASA's Scientific Visualization Studio, ESA/Gaia/DPAC.

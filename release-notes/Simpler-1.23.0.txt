@@ -1,0 +1,8 @@
+SIMPLER 1.23.0  —  24 ottobre 2026
+==================================
+
+- Rugosità generata: nella mappa della Rugosità, la bacchetta magica offre
+  · «Rugosità dalla mappa colore»: dalla luminosità della texture, livellata; scuro = ruvido (90%), chiaro = liscio (25%). Istantanea.
+  · «Rugosità con i bordi consumati»: in più la curvatura del rilievo (DeepBump, dalla normal map o, se manca, dalla texture del colore) rende gli spigoli più lisci e gli incavi più ruvidi, come nell'uso reale.
+  Se il materiale va al contrario (chiaro = ruvido), usa «Inverti la mappa»; con «Peso mappa» la mescoli al valore del cursore.
+- La glossiness non serve generarla: è la rugosità invertita.

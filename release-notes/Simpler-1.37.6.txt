@@ -1,0 +1,5 @@
+SIMPLER 1.37.6  —  25 ottobre 2026
+==================================
+
+- Suolo rotondo: un grande disco di 4 km invece di un quadrato. L'orizzonte è alla stessa distanza in ogni direzione. Prima, verso gli angoli il bordo era più lontano e con poca foschia si vedeva come una linea storta. I progetti già salvati prendono il disco da soli.
+- Notte in tempo reale: se il cielo per la vista non arriva, ora l'errore viene scritto nel registro del motore (engine.log), così si trova la causa.

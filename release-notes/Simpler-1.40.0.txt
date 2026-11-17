@@ -1,0 +1,9 @@
+SIMPLER 1.40.0  —  26 ottobre 2026
+==================================
+
+- Preferiti nella libreria. Tasto destro su un modello 3D, un materiale, una decal, un HDRI (o uno sfondo da studio) o un ecosistema ▸ «Aggiungi ai preferiti». Lo stesso menu poi offre «Togli dai preferiti».
+  - Sulla miniatura di ogni preferito compare un piccolo cuore nero con il contorno bianco, ovunque l'elemento si trovi nella libreria.
+  - Nuovo menu «Preferiti» tra «La storia» e «Modelli 3D», con cinque cartelle: Modelli 3D, Materiali, Decal, HDRI e sfondi, Ecosistemi. Sono cartelle color ambra con il contorno nero, l'icona del loro tipo al centro e il numero di preferiti. Ogni elemento finisce da solo nella cartella del suo tipo, mescolando Poly Haven, ambientCG e i tuoi.
+  - Nei preferiti ogni tessera funziona come l'originale: clic, trascinamento nella vista o su un oggetto, il suo menu.
+  - Tasto destro su un preferito ▸ «Porta all'elemento»: si apre la scheda e la cartella dove sta l'originale, la tessera viene mostrata e lampeggia in arancione.
+  - I preferiti sono tuoi, non del progetto: valgono in ogni progetto. Se un elemento viene eliminato dalla libreria, sparisce anche dai preferiti. La ricerca, nei preferiti, cerca in tutte e cinque le cartelle.

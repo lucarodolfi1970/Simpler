@@ -1,0 +1,30 @@
+SIMPLER 1.2.4  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+- OBJECT LIBRARY WITH FOLDERS (Objects tab at the bottom), like the materials:
+  · "Primitives" contains the basic shapes (cube, sphere, cylinder, cone, plane, torus, empty group);
+  · ready-made folders, which you can change as you like: Trees, Plants and flowers, Nature (Rocks and stones, Logs
+    and branches), Buildings, Architectural elements (Doors, Windows, Stairs), City objects (Benches, Street lamps,
+    Fences), Vehicles, People, Furniture (Seating, Tables, Beds, Storage), Kitchen, Bathroom, Lighting, Decorations,
+    Electronics, Garden and outdoors, Jewellery, Other;
+  · new folder, rename, delete (the objects move up a level), move by dragging onto a folder or with right
+    click > Move to; the search looks in all folders.
+  · Click a library object = it goes in the middle of the view; drag it into the view = its base goes onto the
+    surface where you drop it. Right click: Insert, Rename, Move to, Remove from the library.
+- SAVE TO LIBRARY: right click on an object in the view (or in the tree) > "Save to library…": choose a name and a
+  folder (a new one too). The object is saved with everything it contains, materials included; the textures are
+  copied next to the model, so it stays usable even if the original files are moved.
+  The thumbnail is a small path-traced render: axonometric view from the top right (no odd perspective or zoom),
+  studio lights, shadow on a transparent background. Saving doesn't block the app: the texture copy and thumbnail
+  are prepared by the second Blender used for previews (a few seconds).
+  The library is in %APPDATA%\Simpler\models and is shared by all projects.
+- RIGHT-CLICK MENU IN THE VIEW: right click on a piece = selects it (Ctrl+right click: its group; if the piece is
+  already part of the selection, the selection stays) and opens the menu: Save to library, Edit the material (the
+  one of the clicked surface), Select the group, Frame, Duplicate, Rename, Drop onto the surface below, Hide,
+  Delete. Dragging with the right button rotates the view as before.
+- SAVE DIALOG redesigned (materials and objects): material preview next to the name, folder tree aligned to the
+  left with the chosen folder highlighted, scroll bar when there are many, "New folder" button (inside the chosen
+  one), path you can type by hand, showing whether the folder already exists or will be created. Double click a
+  folder = save there.

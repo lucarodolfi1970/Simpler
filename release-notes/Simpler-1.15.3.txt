@@ -1,0 +1,9 @@
+SIMPLER 1.15.3  —  24 ottobre 2026
+==================================
+
+LUCE DI RIEMPIMENTO
+-------------------
+- Nelle impostazioni di render, in «Colore ed esposizione», il cursore «Luce di riempimento»: luce vera aggiunta alla scena (non una correzione dell'immagine), come il pannello riflettente o il flash di schiarita del fotografo.
+- Arriva morbida dalla camera, un po' dall'alto, e la segue quando ti muovi: illumina ciò che inquadri, con ombre morbide che cadono dietro gli oggetti. Non fa riflessi sulle superfici lucide e non si vede nell'immagine.
+- L'intensità è in percentuale e vale uguale in ogni scena: 100% = una superficie grigia di fronte alla camera esce come un grigio medio ben esposto, che sia mezzogiorno o un interno buio. Per un riempimento naturale 20–40%. L'Esposizione la schiarisce o scurisce insieme al resto.
+- Si vede nella vista in tempo reale (senza ombre), in quella ray-traced e nel render finale; si salva con il progetto.

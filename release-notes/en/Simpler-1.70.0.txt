@@ -1,0 +1,11 @@
+SIMPLER 1.70.0  —  29 October 2026
+==================================
+
+- New «Paint the dirt» (Material > Grunge > Advanced): a brush to put dirt where you want, on any surface, walls and columns too.
+  - Three kinds of dirt, with their icons: Even (fine, even dirt), Ragged (a solid patch with a ragged edge), Stains (separate stains).
+  - Add or Take away, brush size (also with [ and ] on the view) and strength. Shift takes away, Esc ends.
+  - The dirt shows at once in the real-time view while you paint, and it is the same in path tracing and in the render.
+  - Painting a face does not dirty the one behind it (for example the back of a column).
+  - The painted dirt uses the colour, opacity and other settings of the material's Grunge, and adds to the automatic one. For the painted dirt only, leave Quantity at 0.
+  - Painting on another material turns its painted dirt on by itself.
+  - Each stroke undoes with Ctrl+Z; «Clear the painted dirt» takes it all away. The painted dirt is saved with the project.

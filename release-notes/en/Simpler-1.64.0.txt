@@ -1,0 +1,11 @@
+SIMPLER 1.64.0  —  28 October 2026
+==================================
+
+- Water that freezes. In the Advanced of a water-type material, under «Surface and waves», there is «Freeze when it snows». While it snows:
+  - «Ice» freezes the water from the shore towards the middle: at a few % a thin frame along the shores, at 100% the whole surface. The ice front is ragged, with tongues and loose plates, and has a whiter rim.
+  - «Ice transparency» goes from black ice, clear and smooth, through which the bottom shows, to milky ice, pale and rough.
+  - «Air bubbles» adds trapped air, in clusters under the surface.
+  - The ice has cracks, a gentle undulation and a dusting of snow that is thicker towards the shore. The real waves calm down as the water freezes.
+  - The real-time view shows the ice, its transparency and the dusting; cracks and bubbles only in path tracing.
+- More detailed snow near the camera: with «Snow mantle» on in «Compute only the framed area», cells go down to 2.5 cm near the camera (6 cm before), in small scenes too.
+- Snow on rocks: the mantle stops where the face is steeper than about 50 degrees and ends rounded. It no longer runs down the sides in toothed flaps. The white of the materials continues on the face.

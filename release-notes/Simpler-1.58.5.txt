@@ -1,0 +1,5 @@
+SIMPLER 1.58.5  —  27 ottobre 2026
+==================================
+
+- Camminare nella vista (rotella e frecce): con un ecosistema «Solo dove guarda la camera» che arriva fino all'orizzonte, la scena diventa larga chilometri e la velocità «uomo» diventava di centinaia di metri a ogni scatto della rotella. Ora la velocità tiene conto della scena solo fino alla misura di un grande edificio: in una scena grande «uomo» resta a passo d'uomo (circa 2 m per scatto) e per le lunghe distanze ci sono bici e auto. Nelle scene piccole e negli edifici non cambia nulla.
+- Camminare con le frecce è più leggero nelle scene con grandi distribuzioni: la misura della scena non viene più ricalcolata a ogni fotogramma.

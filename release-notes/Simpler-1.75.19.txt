@@ -1,0 +1,8 @@
+SIMPLER 1.75.19  —  31 ottobre 2026
+===================================
+
+Salva l'immagine della vista.
+
+- Nella barra dentro la vista, dopo «Lazo», il pulsante «⤓ Salva immagine» salva in un file JPEG l'immagine della vista com'è in quel momento.
+  - In path tracing salva l'immagine raggiunta finora (anche a metà dei passaggi), alla risoluzione della vista.
+  - In tempo reale salva la vista alla sua risoluzione piena, senza gizmo, contorni di selezione e icone delle luci.

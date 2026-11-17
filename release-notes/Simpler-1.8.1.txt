@@ -1,0 +1,15 @@
+SIMPLER 1.8.1  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- SPOSTA SULLE SUPERFICI ANCHE INCLINATE: trascinando il centro del gizmo l'oggetto, oltre ad appoggiarsi, si
+  inclina come la superficie sotto il mouse (un libro su un leggio, un sasso su un pendio). Sulle superfici
+  orizzontali resta dritto come prima. Alt: spostamento libero.
+
+COMPILAZIONE
+------------
+- Build-App.bat a fine compilazione avvia Simpler e si chiude da solo: la finestra resta aperta solo se la
+  compilazione non riesce, per poter copiare l'errore.
+- Nuovo "Compila e avvia.vbs" (doppio clic): compila senza nessuna finestra e avvia Simpler. Se qualcosa non
+  va, mostra un avviso e apre build.log da copiare a Claude.

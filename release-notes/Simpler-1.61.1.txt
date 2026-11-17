@@ -1,0 +1,6 @@
+SIMPLER 1.61.1  —  28 ottobre 2026
+==================================
+
+- I fiocchi che cadono si vedono anche nella vista in tempo reale (prima comparivano solo nel path tracing). Prendono la luce del cielo, del sole o della luna e dei lampioni vicini.
+- La scala in basso a destra misura ciò che c'è sotto la barra: guardando una strada in profondità diceva «10 m» sopra il marciapiede vicino.
+- Clic su un oggetto o su una luce più veloce nelle scene grandi: l'albero preparava il menu del tasto destro per ogni riga a ogni clic; ora lo prepara quando lo apri. Se un clic resta lento, il registro dice adesso dove va il tempo.

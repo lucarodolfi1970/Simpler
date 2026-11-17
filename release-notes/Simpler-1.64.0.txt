@@ -1,0 +1,11 @@
+SIMPLER 1.64.0  —  28 ottobre 2026
+==================================
+
+- Acqua che ghiaccia. Nelle Avanzate del materiale di tipo acqua, sotto «Superficie e onde», c'è «Ghiaccia quando nevica». Quando nevica:
+  - «Ghiaccio» fa gelare l'acqua dalla riva verso il centro: con pochi % c'è una cornice sottile lungo le rive, al 100% gela tutta la superficie. Il fronte del ghiaccio è irregolare, con lingue e lastre staccate, e ha un orlo più bianco.
+  - «Trasparenza del ghiaccio» va dal ghiaccio nero, limpido e liscio, in cui si vede il fondo, al ghiaccio lattiginoso, chiaro e ruvido.
+  - «Bolle d'aria» aggiunge aria intrappolata, a gruppi sotto la superficie.
+  - Sul ghiaccio ci sono crepe, una leggera ondulazione e una spolverata di neve più fitta verso la riva. Le onde vere si calmano man mano che l'acqua gela.
+  - Nella vista in tempo reale si vedono il ghiaccio, la sua trasparenza e la spolverata; le crepe e le bolle solo nel path tracing.
+- Neve più dettagliata vicino alla camera: con «Manto di neve» acceso in «Calcola solo l'area inquadrata», le celle arrivano a 2,5 cm vicino alla camera (prima 6 cm), anche nelle scene piccole.
+- Neve sulle rocce: il manto si ferma dove la parete supera circa 50 gradi e finisce arrotondato. Non scende più in lembi a denti lungo i fianchi. Il bianco dei materiali continua sulla parete.

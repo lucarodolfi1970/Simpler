@@ -1,0 +1,22 @@
+SIMPLER 1.13.21  —  22 October 2026
+===================================
+
+NEW MATERIAL TYPE: DISPLACEMENT
+-----------------------------------------
+- The material "Type" has Displacement: the surface really moves with the height map (stones, bricks, bark,
+  terrain). The panel has the "True relief" group at the top and all the channels of Standard below. Standard no
+  longer has the Displacement section; materials that had it on are already of type Displacement.
+- True relief:
+  · Mode: True + detail (movement plus the fine relief, recommended) · True · Bump only (no geometry, fast).
+  · Height (map), Maximum height in cm, Zero level (so the object neither floats nor sinks).
+  · Vector map (optional): also moves the surface sideways (overhangs, rocks, tiles), with strength and zero.
+- Subdivision (Blender 5 adaptive subdivision):
+  · In pixels (finer near the camera) or In centimetres (same detail for every copy: distributions).
+  · Maximum level, Close the cracks (duplicate vertices merged before moving), Remesh (voxel remesh for models with
+    very bad topology; costly, UVs are lost), Less detail off screen.
+  · Only in the final render: the path tracing of the view keeps only the bump, fast.
+
+BUG FIXES
+---------
+- Primitives (cube, sphere, plane, cylinder, cone) had all their UV coordinates at zero: textures did not show and
+  displacement did nothing. Now they have real UVs (primitives already in scenes stay as they are).

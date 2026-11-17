@@ -1,0 +1,11 @@
+SIMPLER 1.75.8  —  31 October 2026
+==================================
+
+Visible sea caustics, model thumbnails without snow.
+
+- Sea caustics («Light reflected by water»): on your «Scene 7» with the light on the water only looked darker.
+  - The light under the sea was already computed by Cycles with the real waves, but the net was a grey grain of cells a few centimetres wide, too weak to be seen through the waves.
+  - Now the surface that makes the caustics uses only the waves longer than 25 cm: cells a hand or two wide, as they look at sea from a few metres. The lines of light are twice as marked, while the average light of the bottom stays the same.
+  - Tested on «Scene 7»: the bright net shows on the bottom and the water is no longer darker (slightly brighter).
+- Saving a model to the library with snow (or rain) in the scene, the thumbnail and the saved model took it with them.
+  - Now rain and snow stay in the scene: the model in the library and its thumbnail are dry. When you insert it into a scene with snow, it takes the snow from that scene.

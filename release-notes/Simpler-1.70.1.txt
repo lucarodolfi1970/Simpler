@@ -1,0 +1,5 @@
+SIMPLER 1.70.1  —  29 ottobre 2026
+==================================
+
+- Corretto: lo sporco dipinto si vedeva nella vista in tempo reale ma non nel path tracing. Il path tracing tiene le immagini da un passaggio all'altro e continuava a usare le mappe vecchie, senza le nuove pennellate; si aggiornava solo riaprendo il progetto. Ora ogni pennellata compare subito anche nel path tracing.
+- Stesso difetto e stessa correzione per le pozzanghere e la neve dipinte a mano e per l'acqua che ghiaccia.

@@ -1,0 +1,10 @@
+SIMPLER 1.1.2  —  18 October 2026
+=================================
+
+NEW FEATURES
+------------
+- The release notes no longer open in a separate window: they appear in the right sidebar,
+  formatted (headings, bulleted lists), and close with the small × at the top.
+  They open by themselves on the first start of a new version and from Settings › "What's new in this version".
+- At the bottom of the panel, the "Earlier versions" buttons show the notes of past versions.
+- Notes are shown in the app's language (Italian or English).

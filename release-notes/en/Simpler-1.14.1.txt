@@ -1,0 +1,26 @@
+SIMPLER 1.14.1  —  24 October 2026
+==================================
+
+BLACK BLOTCHES IN RENDERS WITH MANY SAMPLES
+-------------------------------------------
+- Found the cause of the misshapen black blotches in shadows and on dark furniture, worse with 512 or 2048 samples than with 256: Cycles' adaptive sampling stops each pixel when its noise drops below the threshold, but measures it before the exposure. At +4 EV (an interior lit by two windows, a night) every pixel was 4 times noisier than intended, and the dark pixels stopped first: next to the ones that went on, the denoiser turned them into blotches. With 256 samples the cap stopped all of them at the same point, which is why it looked better.
+- Now the threshold follows the exposure, no pixel stops before 1/8 of the samples (rare light coming through a window has time to arrive) and the denoiser runs at its highest quality. This applies to the ray-traced view and to the final render. Where the exposure is high, renders get somewhat slower, but clean.
+
+GRAIN ON LAMP SHADES AND GLASS AROUND BULBS
+-------------------------------------------
+- With caustics on, a thick glass around a glowing bulb (a lamp shade, a bulb) became a piece with real caustics: the light of the bulb crossed it only by chance and the glass filled with dots that came and went. Now glass that contains a glowing object stays out of the caustics and the light passes normally.
+- A SIMPLER_DIAG line in the engine log says which pieces have real caustics: if the grain comes back, it shows at once what changed.
+
+VOLUMETRIC CLOUDS
+-----------------
+- Real sunsets and sunrises: below the horizon, the haze of the sky lit the clouds from underneath and washed them out. Now the haze is seen but gives no light, and at sunset the clouds have grey bases and pink and orange tops.
+- Lighter haze on the sky: it is a layer near the ground, so it counts for little upwards (before, with the aerosols the sky already has, sunsets turned into a white veil). The clouds get the same haze as the sky behind them.
+- The Golden hour and Sunset presets have less haze.
+- No more dark rims around the clouds (or around leaves and other edges against the sky): the compositor attenuated the sky twice.
+- Shape: real domes (denser masses rise higher), flat bases, cauliflower tops with puffs at three scales (down to ~35 m); the clouds are no longer cut flat at the top of the layer.
+- Detail: steps inside the volume are 4 times finer, so the puffs are no longer smeared.
+- The light inside the clouds is computed more lightly after the first bounce: less black noise on the shaded parts and faster renders.
+
+EXPOSURE OF INTERIORS
+---------------------
+- The kitchen interior is dark because it is dark in reality too: two windows in a large room give 16–30 times less light than outdoors, and the automatic exposure meters the sky. A camera would raise the exposure: see the proposal in the ROADMAP (automatic exposure that meters the image).

@@ -1,0 +1,28 @@
+SIMPLER 1.3.5  —  20 October 2026
+=================================
+
+NEW
+---
+- FILE FOLDERS (Settings > "Folders for downloads and libraries…"): you can choose the folders for
+    · Poly Haven materials (downloaded textures)
+    · Poly Haven 3D models
+    · 3D model library
+    · Material library
+  The defaults stay the same as before. "Change…" asks for the new folder and whether to move the files already
+  there into it too (Yes = moves them; No = uses the new folder as it is, useful if it already holds a copy of the
+  library, for example on a network drive). "Back to default" and "Open in Explorer" on every row.
+- PROJECTS DON'T BREAK IF YOU MOVE THE LIBRARIES: when saving, every texture that comes from a library or a
+  download remembers the library and the path inside it (a variable), not the folder. On opening it is taken from
+  that library's current folder. Projects saved before this version are fixed too (Simpler remembers all the
+  folders used in the past), and so are the library materials.
+- SUN: new "Sun position" sliders in the light panel
+    · Time of day (night–dawn–day–sunset bar, 5-minute steps, you can type 17:45)
+    · North (where north is in the scene, 0-360°)
+    · Date (day of the year: in summer the sun is higher) and Latitude (Milan 45.5° by default)
+  The sun moves live in the view while you drag; before dawn and after sunset it turns off. With the "Daylight
+  outdoor" environment the sky follows the sun too (coloured dawn and sunset, no second sun).
+
+FIXES
+-----
+- LONG MENUS (e.g. choosing the folder when importing, "Move to"): they now have a scroll bar and show all the
+  folders.

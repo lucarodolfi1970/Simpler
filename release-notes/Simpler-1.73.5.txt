@@ -1,0 +1,14 @@
+SIMPLER 1.73.5  —  30 ottobre 2026
+==================================
+
+Ecosistemi sul suolo e sui modelli, apertura dei progetti con il mare, e un controllo automatico prima di ogni versione.
+
+- Ecosistema trascinato sul suolo: errore «Unable to allocate 950 MiB» e nessun ecosistema.
+  - Causa: con «Calcola solo l'area inquadrata» e un suolo di 4 km visto da vicino, l'inquadratura arriva all'orizzonte. Simpler preparava centinaia di milioni di pezzi prima di scartare quelli che non si vedono, e la memoria finiva. Il problema c'era anche prima del mare: era già nella 1.71.6.
+  - Ora prepara al massimo 4 milioni di pezzi, partendo dalle zone più vicine alla fotocamera. Quelli lontani sarebbero comunque più piccoli di un pixel.
+  - Poi vale quello che c'era già: se sono ancora troppi, i pezzi si diradano in lontananza da soli.
+  - Con un prato fitto su un suolo grande: 6 secondi e circa 2 GB di memoria, invece dell'errore.
+- Ecosistema trascinato su un modello della libreria (una scogliera): «Lascia l'ecosistema sopra un oggetto».
+  - Causa: il modello si seleziona tutto insieme e la sua radice è un gruppo, non una superficie.
+  - Ora l'ecosistema cresce sul pezzo sotto il mouse. Se Simpler riceve il gruppo, sceglie il pezzo più grande (dei livelli di dettaglio sovrapposti, il più fine).
+- Apertura di un progetto con il mare: la costa non si rimisura. Era già salvata nel progetto e si riprende da lì, se gli oggetti al livello del mare sono gli stessi. Su una scena di mare: 0,2 s invece di 3,9 s. Si rimisura solo se qualcosa è cambiato.

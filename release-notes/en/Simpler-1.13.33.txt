@@ -1,0 +1,10 @@
+SIMPLER 1.13.33  —  23 October 2026
+===================================
+
+IMPORT MODELS INTO THE LIBRARY: THE SCALE
+-----------------------------------------
+- New «Scale for all» row in step 3: ×1 = as in the file. Type any factor (e.g. 25.4) or pick a quick one: ×0.01, ×0.1, ×2.54, ×10, ×25.4, ×100. It applies to every model of the list.
+- New «Check the scale after each model» switch: after each import Simpler stops and shows the thumbnail and the size (width × depth · height in mm, cm, m or km). Type a factor for that model only, see at once how big it will be and press Continue for the next one, or Stop.
+  With «Use this factor for the next models too» the correction applies to the rest of the list and Simpler does not stop any more.
+- For a file with several models (collections) the factor applies to all the models of that file.
+- Every row shows the size of the model after the import.

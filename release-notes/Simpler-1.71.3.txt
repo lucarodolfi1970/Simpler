@@ -1,0 +1,8 @@
+SIMPLER 1.71.3  —  30 ottobre 2026
+==================================
+
+- Render finale molto più veloce nelle scene grandi con la vista path tracing accesa. In una città con 253 texture, a 1920×1080, ogni campione impiegava circa 1 secondo, quasi 20 volte più della stessa scena nella vista.
+  - La causa è la memoria della scheda grafica. Durante il render finale la vista path tracing teneva sulla scheda la sua copia della scena, 4,8 GB. Il render finale ne chiedeva altri 11, quasi tutti per le 253 texture alla piena risoluzione (9,9 GB). Insieme superavano i 16 GB della scheda, e la parte in eccesso finiva nella memoria del computer, molto più lenta.
+  - Ora, prima del render finale, la vista libera la sua copia. Dopo il render la vista la riprepara una volta sola: qualche secondo.
+  - La scelta automatica della dimensione delle texture tiene conto anche della memoria davvero libera in quel momento (Windows, la vista 3D, altri programmi). Se le originali non ci stanno, usa le copie a 4096 px, che in un'immagine 1920×1080 non si distinguono.
+  - Nel registro ora c'è la memoria della scheda prima e dopo, per verificare.

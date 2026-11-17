@@ -1,0 +1,5 @@
+SIMPLER 1.64.1  —  28 October 2026
+==================================
+
+- Snow on the edges of slabs and rocks near the camera: the edge of the mantle is no longer a row of teeth. Along an edge not aligned with the grid the mantle went in steps; now the outline is smoothed.
+- Ice: two new controls in the water's Advanced, «Large cracks» and «Fine cracks». They go from 0%, no cracks, to 200%, more marked cracks. Path tracing only.

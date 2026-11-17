@@ -1,0 +1,11 @@
+SIMPLER 1.68.1  —  29 October 2026
+==================================
+
+- The material library no longer changes projects. Before, in an old project, a click on a library material (for example White) was enough for its copy in the project to be rebuilt with the version saved meanwhile from another project. Now the project's copy always stays as it is: the library applies only to new uses, when you drag a material onto an object.
+- The materials of Simpler have become your materials: the «Simpler» folder is a normal folder like yours, and the materials inside are edited, renamed, moved and deleted like the others. At the first start they are written into the materials folder of your library.
+- A material of Simpler overwritten with another name becomes a material of its own and the original comes back as it was. In your case White becomes white again and «Bianco - vetrata 1» stays in the library next to it; the projects that use it stay linked to «Bianco - vetrata 1».
+- «Save» asks for confirmation before replacing a material in the library and explains that projects and models already made do not change.
+- «Save as new…»: the project's material becomes the new library material and the objects keep their look. Before, they went back to the starting material and lost the changes.
+- New objects (cube, sphere…) get a white of Simpler's own, not the library's White: changing or deleting it does not change new objects.
+- Settings > Folders: «Restore the materials of Simpler» puts back the deleted ones and brings the changed ones back to the original; the changed version stays as «name (changed)». Your materials and the projects do not change.
+- The library thumbnails always show the library material, not the changed copy in the open project.

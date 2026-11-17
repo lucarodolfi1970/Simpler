@@ -1,0 +1,8 @@
+SIMPLER 1.76.43  —  4 novembre 2026
+===================================
+
+Terreno: pareti di roccia non più «a pettine».
+
+- I solchi del «Rilievo della roccia» e le «Colate sulle pareti» erano uguali e paralleli su tutta la parete: da metà distanza sembravano una texture. Ora vanno a gruppi (tratti di parete con i solchi, placche lisce senza), sono più fitti nei canaloni e radi sulle creste, la loro linea serpeggia e la distanza tra uno e l'altro cambia, e accanto a un solco profondo ce n'è uno appena accennato.
+- Anche nella vista in tempo reale le colate vanno a gruppi (nessun costo in più che si noti).
+- I materiali dei terreni già fatti si rifanno da soli una volta. Nessun valore cambiato.

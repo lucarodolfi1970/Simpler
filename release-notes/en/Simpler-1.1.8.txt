@@ -1,0 +1,21 @@
+SIMPLER 1.1.8  —  18 October 2026
+=================================
+
+BUG FIXES
+---------
+- Path tracing still slow on models with textures embedded in the FBX file (for example an
+  interior with 442 textures, over 26 GB of video memory). The reduced copies were not made because those
+  textures are inside the project and not in a folder. Now embedded textures are also reduced only
+  once and kept in the cache: the preview uses copies at 2048 pixels, or 1024 when there are so many
+  textures that they would not fit comfortably in the graphics card memory (Auto).
+- The reduced copies for the 3D view were redone at every preparation ("Reducing textures for the view
+  127 of 420"): now these stay in the cache too, and the second time preparation is much faster.
+- "Loading textures" without progress: Cycles reports nothing during that phase. Progress is now
+  derived from the memory the graphics card fills (≈ textures loaded, bar, time left).
+
+NEW FEATURES
+------------
+- Message boxes (confirmations, errors, questions), Settings, Final render and Rename in the app's
+  style: dark panel with rounded corners, its own title bar with the small ×.
+  Enter = main button, Esc = cancel.
+- Thin, dark scroll bars throughout the app, instead of the white Windows ones.

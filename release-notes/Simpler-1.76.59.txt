@@ -1,0 +1,8 @@
+SIMPLER 1.76.59  —  5 novembre 2026
+===================================
+
+«Rilievo 3D»: i due cursori «Dimensione» hanno nomi e spiegazioni chiare.
+
+- «Grandezza della mappa» (in metri): quanti metri di parete copre una ripetizione delle tue mappe di rilievo e colore. Non cambia la forma vera della roccia nella maglia.
+- «Dimensione delle forme» (in %): quanto sono grandi canaloni, blocchi e cenge del tipo scelto rispetto allo spessore degli strati; cambia la forma vera della roccia nella maglia (il terreno si ricalcola).
+- I cuori già messi su «Dimensione» passano da soli a «Dimensione delle forme».

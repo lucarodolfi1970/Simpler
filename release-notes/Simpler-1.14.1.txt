@@ -1,0 +1,26 @@
+SIMPLER 1.14.1  —  24 ottobre 2026
+==================================
+
+MACCHIE NERE NEI RENDER CON TANTI CAMPIONI
+------------------------------------------
+- Trovata la causa delle macchie nere deformi nelle ombre e sui mobili scuri, peggiori con 512 o 2048 campioni che con 256: il campionamento adattivo di Cycles ferma ogni pixel quando il suo rumore scende sotto la soglia, ma lo misura prima dell'esposizione. Con +4 EV (un interno illuminato da due finestre, una notte) ogni pixel era 4 volte più rumoroso del previsto, e i pixel scuri si fermavano per primi: accanto a quelli che continuavano, il denoiser li trasformava in macchie. Con 256 campioni il tetto fermava tutti allo stesso punto, per questo sembrava meglio.
+- Ora la soglia segue l'esposizione, nessun pixel si ferma prima di 1/8 dei campioni (la luce rara che entra da una finestra fa in tempo ad arrivare) e il denoiser lavora alla qualità massima. Vale per la vista ray-traced e per il render finale. Dove l'esposizione è alta i render diventano un po' più lenti, ma puliti.
+
+GRANA SUI PARALUMI E SUI VETRI CON LAMPADINE
+--------------------------------------------
+- Con le caustiche accese, un vetro spesso attorno a una lampadina luminosa (un paralume, un bulbo) diventava un pezzo con caustiche vere: la luce della lampadina lo attraversava solo per caso e il vetro si riempiva di puntini che comparivano e sparivano. Ora i vetri che contengono un oggetto luminoso restano fuori dalle caustiche e la luce passa normalmente.
+- Nel log del motore una riga SIMPLER_DIAG dice quali pezzi hanno le caustiche vere: se la grana torna, serve per capire subito cosa cambia.
+
+NUVOLE VOLUMETRICHE
+-------------------
+- Tramonti e albe veri: la foschia del cielo, sotto l'orizzonte, illuminava le nuvole da sotto e le schiariva. Ora la foschia si vede ma non fa luce, e le nuvole al tramonto hanno basi grigie e cime rosa e arancio.
+- Foschia più leggera sul cielo: è uno strato vicino al suolo, quindi verso l'alto pesa poco (prima, con gli aerosol che il cielo ha già, i tramonti diventavano un velo bianco). Le nuvole ricevono la stessa foschia del cielo dietro di loro.
+- I preset Ora d'oro e Tramonto hanno meno foschia.
+- Niente più bordi scuri attorno alle nuvole (e attorno a foglie e bordi contro il cielo): il cielo veniva riattenuato due volte nel compositor.
+- Forma: cupole vere (le masse più dense salgono più in alto), basi piatte, cime a cavolfiore con sbuffi su tre scale (fino a ~35 m); non più nuvole tagliate piatte in cima allo strato.
+- Dettaglio: passi 4 volte più fini dentro il volume, quindi gli sbuffi non vengono più spalmati.
+- Luce interna calcolata in modo più leggero dopo il primo rimbalzo: meno rumore nero sulle parti in ombra e calcolo più rapido.
+
+ESPOSIZIONE DEGLI INTERNI
+-------------------------
+- L'interno della cucina è scuro perché lo è anche nella realtà: due finestre in una stanza grande danno 16-30 volte meno luce dell'esterno, e l'esposizione automatica misura il cielo. Una macchina fotografica alzerebbe l'esposizione: vedi la proposta nella ROADMAP (esposizione automatica che misura l'immagine).

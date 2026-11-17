@@ -1,0 +1,4 @@
+SIMPLER 1.39.1  —  26 ottobre 2026
+==================================
+
+- Scatter: il cursore della «Presenza» di ogni modello ora si usa davvero. La scritta occupa solo lo spazio del testo e la casella del valore è più stretta, così il cursore prende tutto lo spazio che resta (prima ne rimaneva solo il pallino). Nella sezione «Avanzate» di ogni modello, il nome di ogni regolazione sta su una riga sopra il suo cursore.

@@ -1,0 +1,4 @@
+SIMPLER 1.38.8  —  25 October 2026
+==================================
+
+- Scatters painted on the ecosystem test plot become its children. When you move the plot the scatters follow it, and when you delete it they go too. In the scene the plot shows the blue dot, and holding the pointer on it shows how many scatters it holds. A scatter counts as "on the plot" when more than half of its pieces stand on it. Scatter painted on other objects stays as before, at the top level of the scene.

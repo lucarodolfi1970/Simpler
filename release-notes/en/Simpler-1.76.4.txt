@@ -1,0 +1,12 @@
+SIMPLER 1.76.4  —  1 November 2026
+==================================
+
+Terrain: the materials of the zones merge at their borders.
+
+- New «Border blend» slider in the terrain panel (0–5 m, 2.5 m by default). Where two zones meet, for example the lawn and the gravel, their materials mix even without ecosystems: the stones come out of the grass and the grass stays between the stones, with an irregular edge rather than a fade. At the border the two sides match: no line.
+- The zones stay separate meshes, each with its own material. The material you see on a zone is a copy «with borders» of the one you gave it: editing it in the material panel edits the zone's material, and a material dropped on a zone is blended with the nearby zones on its own.
+- In Advanced: «Border irregularity», how ragged the border is.
+- It works with all Simpler and library materials, not only the terrain's automatic ones. In the real-time view the blend uses the colour and roughness of the nearby zone; the path tracing uses the whole material.
+- Terrains made before this version are rebuilt the first time the slider is used (the distance from the borders is needed, and it is now computed with the terrain).
+- Each zone also has a flat UV map in metres: a material projected by UV now sits correctly on the terrain.
+- Fixed: in the full automatic check, the «map_scale» step stopped on an error introduced in 1.76.1.

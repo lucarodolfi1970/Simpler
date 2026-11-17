@@ -1,0 +1,7 @@
+SIMPLER 1.68.0  —  29 October 2026
+==================================
+
+- New sun dome at the top of the «Sun» card in Ambience: you drag the sun where you want it, instead of looking for the combination of Time and North with the sliders.
+- The dome is the sky seen from above and turns with the view: at the top is in front of the camera, at the bottom behind it, in the middle overhead. The light circle is the horizon; the dark band outside is below the horizon (twilight and night, down to 10°). The red «N» shows the scene's north.
+- While you drag, Time and North update, the height in degrees appears next to the sun and in the real-time view the light, shadows and sun disc move at once. Sky and path tracing follow when you let go of the sun. Day of the year and latitude stay as set.
+- The dark area in the middle is the height the sun does not reach on that day and at that latitude: dragging there stops it at its highest point (noon).

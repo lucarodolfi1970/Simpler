@@ -1,0 +1,7 @@
+SIMPLER 1.41.0  —  26 October 2026
+==================================
+
+- Undo also brings back a lost selection. If a selection of two or more objects is lost, because you deselect by mistake or select something else, Ctrl+Z brings it back as it was and Ctrl+Y removes it again. The status bar says «Undone: selection (10 objects)».
+  - Going from one object to another, or widening the selection with Ctrl+click, adds no steps: undoing changes works as before.
+  - Lost selections take their place in order with changes to the scene: Ctrl+Z always undoes the last thing that happened.
+  - Undoing a selection changes nothing to save in the project.

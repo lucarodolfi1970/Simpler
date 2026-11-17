@@ -1,0 +1,9 @@
+SIMPLER 1.75.37  —  1 November 2026
+===================================
+
+AI video: «Generate automatic audio» option.
+
+- In the AI video panel, under the length, there is the new «Generate automatic audio» box.
+- On: the video keeps the audio Krea generates automatically.
+- Off, the default: Simpler removes the audio as soon as the video is downloaded, as before; the video does not change.
+- The choice made when you press «Create video» is the one used.

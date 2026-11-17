@@ -1,0 +1,6 @@
+SIMPLER 1.34.2  —  25 ottobre 2026
+==================================
+
+- Eliminando lo scatter che si stava modificando, il pannello torna ai valori predefiniti e la sua riga sparisce dalla vista. Prima restavano parametri e linea, come se lo scatter ci fosse ancora. Lo strumento resta quello in uso (Pennello, Area o Spaziatura).
+- Clessidra anche quando lavora la vista 3D: mentre la vista mostra un suo lavoro in corso (per esempio la preparazione dei modelli di uno scatter, o un pezzo che si sta caricando) il mouse mostra la freccia con la clessidra, come quando lavora il motore. Prima in quei momenti Simpler elaborava senza segnalarlo.
+- Selezionando uno scatter mentre la sua riga è visibile non compare più il riquadro giallo intorno: la riga basta a mostrarlo, e il riquadro copriva la vista.

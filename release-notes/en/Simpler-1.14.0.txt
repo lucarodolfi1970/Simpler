@@ -1,0 +1,17 @@
+SIMPLER 1.14.0  —  23 October 2026
+==================================
+
+VOLUMETRIC CLOUDS
+-----------------
+- The Clouds card of the Ambience has a "Volumetric clouds" switch: the clouds become real, in 3D, in the path tracing (ray-traced view and final render). The sun passes through them: white lit sides, grey bases, bright edges against the sun, and they cast shadows on the ground and the scene.
+- Six types: Small cumulus, Large cumulus, Altocumulus, Cumulonimbus, Stratus, Nimbostratus. One click sets coverage, size, height, thickness and shape; then everything can be adjusted.
+- Settings: Coverage, Size, Height (of the base, 250–4000 m), Thickness, Flat base, Puffs, Density, "Other clouds" (same settings, arranged differently) and "Cloud shadows" (off: full sun under a cloudy sky).
+- Sunrise and sunset: the clouds get the sunlight as it is at their height (redder after the long path through the air, computed with Blender's sky model) and stay lit for a few moments after the sun has left the ground, as in reality.
+- Far clouds fade into the haze (aerial perspective) and thin out towards the horizon.
+- Performance: computed in steps (ray marching), tens of times faster than Cycles' default method on such a large volume; in the view fewer bounces and longer steps. Off (the default) it costs nothing: the clouds stay painted on the sky.
+- The real-time view keeps showing the painted clouds; the 360° photo of the real ones comes with 1.14.1.
+- Choosing an ambience (Morning, Sunset, …) keeps the volumetric clouds on with their shape; only the coverage changes.
+
+FIX
+---
+- With volumetric clouds the haze of the compositor no longer turns them into flat grey patches (a volume has no depth in the Mist pass): their light is kept apart and fades by itself.

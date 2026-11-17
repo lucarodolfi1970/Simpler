@@ -1,0 +1,7 @@
+SIMPLER 1.17.3  —  24 October 2026
+==================================
+
+FINAL RENDER MEASUREMENT: SECOND ROUND ON THE CLOUDS
+----------------------------------------------------
+- The first measurement showed that volumetric clouds are 94% of the final render time, and that the volume bounces and the scene step change neither the time nor the picture.
+- The measurement now tries what is left: the maximum number of steps per ray inside the clouds (2048, 1024, 512), the step of the cloud material doubled, and the whole render with the minimum of samples at one eighth instead of a quarter. It also saves the main render as PNG to compare the quality.

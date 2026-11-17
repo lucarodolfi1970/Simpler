@@ -1,0 +1,7 @@
+SIMPLER 1.17.1  —  24 October 2026
+==================================
+
+FINAL RENDER: TEST SIZE AND TIME MEASUREMENT
+--------------------------------------------
+- New "Test 960×540" size in the final render: a quarter of the pixels of Full HD, to check light and clouds quickly at the real quality before the big render. With a frame format set in the Camera there is also a "Test" in its proportions.
+- Time measurement (for development): with the file test_out\misura.on in the Simpler folder, the next final render writes into test_out\misura the samples taken by every pixel, the time of each phase and a few short renders changing one thing at a time (volume bounces, volume step, no clouds). The misura.on file is removed: one measurement at a time. After the render the app stays a couple of minutes on "finishing" while it does the short renders.

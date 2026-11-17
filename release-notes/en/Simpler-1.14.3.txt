@@ -1,0 +1,11 @@
+SIMPLER 1.14.3  —  24 October 2026
+==================================
+
+RAY-TRACED VIEW WITHOUT BLOTCHES
+--------------------------------
+- The kitchen diagnostics (diag.exr) showed the cause of the blotches that appeared only at passes 4/5 and 5/5: 22% of the pixels in dark areas (black furniture, shadows, chair backs) stopped at 80 samples out of 512, scattered salt-and-pepper among pixels that reached 512. The denoiser cannot clean such uneven noise and turns it into blotches. In the first passes (2, 8, 32 samples) all pixels get the same samples, which is why the image looked perfect.
+- Now no pixel in the view stops before half of the samples, and none in the final render before a quarter. The last pass of the view can take up to a quarter longer.
+
+LAMP SHADE DIAGNOSTICS
+----------------------
+- With diag.on, diag.exr.txt also lists the glowing pieces and everything around them (bulb, shade, cage) with their materials node by node: to understand the grain that stays on the lamp shades even at 2048 samples.

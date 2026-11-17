@@ -1,0 +1,26 @@
+SIMPLER 1.73.0  —  30 ottobre 2026
+==================================
+
+Paesaggio > Oceano: la Costa. Il mare ora sente quello che tocca: spiagge, scogli, moli, piloni, qualunque oggetto della scena che arrivi al livello del mare.
+
+- Onde che sentono il fondo: un'onda si rompe quando è alta circa 0,78 volte la profondità (criterio di McCowan). Sopra un fondale che sale le onde si abbassano fino a riva; la superficie non spunta più dentro la sabbia o dentro uno scoglio.
+- Schiuma della costa:
+  - la fascia bianca dei frangenti, più forte dove le onde si rompono e più leggera tra lì e la riva, a chiazze e più sulle creste;
+  - un anello di schiuma intorno a scogli e piloni, largo quanto le onde sono alte;
+  - le righe sottili lasciate dalle ultime onde lungo la riva.
+- Acqua bassa trasparente: vicino a riva si vede il fondo, il colore va dal turchese al blu man mano che l'acqua si fa profonda. Nel path tracing è acqua vera, con rifrazione e assorbimento, e la luce del sole arriva al fondo. Il film d'acqua degli ultimi centimetri è un po' ruvido, non uno specchio.
+- Riva bagnata: sabbia, scogli e muri sono più scuri e lucidi da sotto l'acqua fin dove arrivano le onde, anche senza pioggia. «Sempre asciutto» vale anche qui.
+- Nel pannello Paesaggio c'è la nuova card «Costa»:
+  - «Spiagge e scogli» (acceso o spento);
+  - Schiuma della costa;
+  - Acqua bassa trasparente (acceso o spento);
+  - nelle Avanzate: Limpidezza (fino a che profondità si vede il fondo; 100% = quella tipica del colore dell'acqua) e Fascia bagnata.
+- La costa si misura da sola sugli oggetti che arrivano al livello del mare (non il suolo dell'Ambiente). Quando sposti o modifichi uno di quegli oggetti si aggiorna nei momenti liberi, con «Calcolo della costa» nel riquadro «Occupato».
+- Nella vista in tempo reale l'acqua bassa è trasparenza con il colore secondo la profondità. La rifrazione vera c'è solo nel path tracing.
+- Non c'è l'onda che si arriccia e si rovescia: la simulazione di Blender non la fa. Si rende con la schiuma dei frangenti.
+
+Prestazioni, misurate senza scheda video (2 core):
+- una spiaggia con uno scoglio: misura della costa 0,3–0,5 s; aggiungere il mare 1,5 s; cambiare l'altezza 0,03 s;
+- un edificio grande con tutto il piano terra al livello del mare (561 oggetti): misura 0,8–1,1 s; cambiare l'altezza 0,2 s.
+- Gli oggetti già letti restano in memoria: spostarne uno non fa rileggere gli altri.
+- Con la costa accesa i materiali della scena ricevono i nodi della pioggia, come quando piove, per la riva bagnata. Succede una volta, prima del primo path tracing.

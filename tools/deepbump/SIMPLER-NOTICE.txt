@@ -1,0 +1,10 @@
+DeepBump — https://github.com/HugoTini/DeepBump
+Copyright (c) Hugo Tini. Licensed under the GNU General Public License v3.0 (see LICENSE in this folder).
+
+This folder is an unmodified copy of DeepBump (commit fad19ba87daed12b1d0410a57e74f3d79e82f78d, 2025-03-17),
+source code and models included. Simpler runs it as a separate program (cli.py, with the Python of Blender)
+to generate normal and height maps and to upscale textures; Simpler's own code does not include DeepBump's code.
+The "img" folder of the original repository (screenshots for its readme) is not included.
+
+Dependencies installed on first use in %LOCALAPPDATA%\Simpler\deepbump-libs: onnxruntime, imageio, numpy, pillow
+(each under its own license).

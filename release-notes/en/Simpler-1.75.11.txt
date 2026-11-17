@@ -1,0 +1,9 @@
+SIMPLER 1.75.11  —  31 October 2026
+===================================
+
+Final render statistics, sea caustics without a line, narrower top bar.
+
+- In the final render window, after the buttons: total time, sampling time, peak graphics card memory (VRAM) and peak RAM of the render.
+  - Hovering over it: the time of each phase (preparation, loading geometry and textures, samples, denoising, saving), the card memory already in use before the render, the peak reported by Cycles and the name of the card.
+- Sea caustics: the border of the computed area was a straight line on the water. The caustics now fade into the normal light over a few metres (1.5 to 6 m depending on the area), and the area is widened by as much, so the fade falls outside what you see in full.
+- Top bar: «Import/Fix» and «Open» show only the icon with a small arrow at the lower right that tells there is a menu, without widening the button. The name stays in the tooltip.

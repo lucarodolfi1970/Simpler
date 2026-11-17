@@ -1,0 +1,4 @@
+SIMPLER 1.45.4  —  26 October 2026
+==================================
+
+- Resources: «Who uses the video memory» no longer lists Windows (dwm, csrss). Windows also counts the window images of the other programs: the same memory appeared twice and dwm showed 7.3 GB with 5.2 GB used in all. The note below explains that shared memory counts in every program that uses it and that the real total is the bar above.

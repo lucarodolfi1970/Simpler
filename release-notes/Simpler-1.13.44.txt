@@ -1,0 +1,14 @@
+SIMPLER 1.13.44  —  23 ottobre 2026
+===================================
+
+SCENA NUOVA
+-----------
+- La camera parte più in alto e guarda quasi dritta: si vedono l'orizzonte e il cielo, non solo il pavimento.
+- Il suolo di default è un pavimento di piastrelle chiare (3 × 3 piastrelle da 60 cm per ripetizione, leggermente lucide) invece del bianco piatto. È anche nell'elenco dei suoli dell'Ambiente («Piastrelle»); il bianco resta disponibile.
+
+MATERIALI: TRIPLANARE E «ROMPI LA RIPETIZIONE» (RANDOMIZE UV)
+-------------------------------------------------------------
+- In Mappatura texture la proiezione da tre direzioni si chiama ora «Triplanare» (com'era Box), con il riferimento Mondo o Oggetto.
+- Nuovo «Rompi la ripetizione (Randomize UV)»: la texture è mostrata a zone, ognuna spostata e ruotata a caso e sfumata con le vicine, così su un pavimento, un prato o un muro grande non si vede più lo stesso disegno ripetuto, anche con texture che in origine non si ripetono bene.
+  Regolazioni: grandezza delle zone (in ripetizioni), sfumatura tra le zone, «Ruota le zone» (spento: solo spostate, per legno e righe). Le normal map vengono solo spostate, mai ruotate (la luce resta giusta).
+  Si vede nel path tracing e nel render finale; la vista in tempo reale mostra la texture normale. Non adatto a piastrelle e mattoni (le fughe non combacerebbero).

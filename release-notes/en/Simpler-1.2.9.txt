@@ -1,0 +1,17 @@
+SIMPLER 1.2.9  —  20 October 2026
+=================================
+
+FIXES
+-----
+- TEXTURES ROTATED BY 90° BETWEEN REAL TIME AND PATH TRACING ("box" projection, for example Poly Haven materials):
+  the real-time view read the texture with different axes from Cycles. I measured with test renders how Cycles
+  projects onto each face (top/bottom, front/back, right/left, with the right orientation) and the real-time view
+  now does the same, including the editor's rotation, scale and offset. Checked by comparing the two views on the
+  same framing.
+- LIGHT ICONS in the view: they always stay small and the same size on screen. Before, they inherited the scale of
+  the light or of the group they are in, and in some scenes they became huge.
+
+NEW FEATURES
+------------
+- Green tick at the top right of the preview of Poly Haven materials and 3D models already downloaded to the PC
+  (they can be used right away, even without Internet). It appears as soon as a download finishes.

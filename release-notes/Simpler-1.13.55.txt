@@ -1,0 +1,20 @@
+SIMPLER 1.13.55  —  23 ottobre 2026
+===================================
+
+MENU APRI
+---------
+- Il pulsante «Apri ▾» apre un menu: Nuova scena, Apri…, Salva, Salva con nome…, Info, Impostazioni, Chiudi Simpler. Il pulsante Salva resta accanto per i salvataggi veloci.
+- Info mostra la schermata iniziale con versione e motore; si chiude con la × in alto a destra (o Esc).
+- Un clic su Nuova, Apri o Salva mentre un'altra di queste operazioni è in corso viene ignorato. Prima i clic fatti a motore bloccato restavano in coda e poi ricomparivano uno dopo l'altro come domande «salvare le modifiche?».
+
+IMPOSTAZIONI NEL PANNELLO A SINISTRA
+------------------------------------
+- L'ingranaggio apre le impostazioni nel pannello di sinistra, al posto della scena; si chiudono con la × o con un altro clic sull'ingranaggio. Niente più finestra a parte.
+- Nuova sezione Salvataggio:
+  · Backup prima di salvare: il file precedente resta come «nome.simpler1» (una sola copia, sostituita a ogni salvataggio). È un'impostazione della scena, salvata con lei; acceso di default, come faceva già Simpler.
+  · Salvataggio automatico: spento, 5, 10, 15 (di default) o 30 minuti. Scrive una copia «nome.autosave.simpler» accanto al progetto, solo se ci sono modifiche e quando Simpler non sta facendo altro: il tuo file cambia solo quando premi Salva. Se Simpler si chiude male, aprendo il progetto ti propone di recuperarla. Salvando o chiudendo normalmente la copia viene eliminata.
+
+SCATTI DI ROTAZIONE
+-------------------
+- Nuovo pulsante «↻ 5°» nella barra della vista: gli archi del gizmo ruotano a scatti di 5°, attivi di default. Un clic cambia: 5° → 15° → 45° → 1° → libera. Ctrl mentre ruoti li inverte. La scelta resta per le prossime volte.
+- «Snap» ora vale per spostamento e scala; la rotazione ha il suo pulsante.

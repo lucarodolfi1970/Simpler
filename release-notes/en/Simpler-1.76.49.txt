@@ -1,0 +1,10 @@
+SIMPLER 1.76.49  —  5 November 2026
+===================================
+
+Disk caches small and cleaned by themselves.
+
+- The caches of the terrains' shape (terrcache) and of the simplified models (occcache), in %LOCALAPPDATA%\Simpler, have tighter limits: at most 150 MB and 12 terrains, 400 MB and 60 models.
+- A file not used for 30 days is deleted; so is a half-written file (Simpler closed while writing).
+- The check runs after every write and at every opening of a scene: the oldest files (by last use) go first.
+- The caches are only a help: whatever is missing is computed again.
+- New automatic check: too many files, old files and half-written files must go.

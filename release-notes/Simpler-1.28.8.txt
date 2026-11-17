@@ -1,0 +1,4 @@
+SIMPLER 1.28.8  —  25 ottobre 2026
+==================================
+
+- Vista in tempo reale: un modello della libreria poteva diventare tutto bianco (nel path tracing invece era giusto) dopo aver cambiato un materiale di alcune sue parti, per esempio il vetro delle finestre con «Sostituisci nella selezione». La vista aggiorna tutti i materiali dei pezzi toccati; quelli con texture che conosce solo dal modello della libreria, dopo una nuova preparazione della vista, venivano sostituiti dal loro colore semplice. Ora restano quelli del modello.

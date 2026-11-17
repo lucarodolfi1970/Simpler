@@ -1,0 +1,8 @@
+SIMPLER 1.15.2  —  24 October 2026
+==================================
+
+SHADOWS AND HIGHLIGHTS REDONE
+-----------------------------
+- "Recover highlights" keeps the colours: it works on the brightness of each point and scales red, green and blue together, as Lightroom does. Before it acted on each channel separately and a warm sunset sky turned grey. It is also gentler: at 100% a 90% goes down to 85%, an 80% to 73%.
+- "Lift shadows" acts mostly on the near blacks, where the foliage sits in backlight: at 100% a 3% rises to 8.5% (before 6%), a 10% to 22%, a 30% to 38%; mid tones barely move and black stays black. Colours are kept here too.
+- The same calculation in all three places: real-time view (inside its shader), ray-traced view (the picture comes from the engine already corrected; moving the sliders corrects the last picture again, without recalculating) and final render.

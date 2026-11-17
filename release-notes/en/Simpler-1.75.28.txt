@@ -1,0 +1,14 @@
+SIMPLER 1.75.28  —  1 November 2026
+===================================
+
+License agreement at the first start; inserting models: the comparison with the scene was the slow part.
+
+- Faster model insertion in a large scene. With the version before: man with umbrella 16.2 s, of which 16.0 in the comparison with the scene; woman with bag 9.0 s, of which 8.2 in the comparison. Loading the model, linking it and updating the scene cost less than a second.
+  - The comparison reuses images, node groups and materials already in the scene instead of loading them twice. 1.75.27 limited it to what has the same number of nodes and links, but Simpler's materials nearly all have the same nodes: nearly all were still compared.
+  - Now a material is compared in full only if it also uses the same images. Test with 400 materials with the same nodes and 425 images: 1.6 s with 1.75.26, 1.4 s with 1.75.27, 0.28 s now, with the same result (the same group and material reused).
+- License agreement.
+  - At the first start, before anything else, Simpler shows the end user license agreement. To go on you tick two boxes: acceptance of the agreement and the specific approval of the onerous clauses (articles 1341 and 1342 of the Italian Civil Code); then «I accept». «I do not accept» or the × close Simpler.
+  - The acceptance is saved: from the next time Simpler asks nothing. It asks again only if the agreement changes version.
+  - The agreement can be read again from File ▸ Licenses and credits, with the «License agreement» button at the top, together with the date you accepted it.
+  - Text in Italian and English (Italian prevails), with the annex of third-party components and credits.
+- Licenses and credits: updated to 1.75.28; added the Simpler engine under the GNU GPL version 3 or later (as Blender's license requires for code using its functions) and the license text in the engine folder; removed the names of other visualisation programs.

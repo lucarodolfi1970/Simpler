@@ -1,0 +1,4 @@
+SIMPLER 1.19.1  —  24 ottobre 2026
+==================================
+
+- Pannello AI: i tasti «Verifica di nuovo» ed «Elimina chiave» hanno la stessa altezza.

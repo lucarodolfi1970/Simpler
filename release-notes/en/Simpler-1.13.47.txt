@@ -1,0 +1,6 @@
+SIMPLER 1.13.47  —  23 October 2026
+===================================
+
+IMPORT MENU
+-----------
+- A line separates the items to import (into the scene, into the library) from those to look after the library (Fix materials, Statistics and cleanup).

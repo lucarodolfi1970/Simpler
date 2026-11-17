@@ -1,0 +1,6 @@
+SIMPLER 1.55.1  —  27 ottobre 2026
+==================================
+
+- Volumetrico e foschia: in una scena con la foschia (città, strade) una nuvola o una nebbia davanti a muri e palazzi aveva una macchia grigia piatta nel mezzo e puntini grigi quadrati lungo i bordi, con qualsiasi numero di campioni. Era la foschia che li scambiava per l'orizzonte: ora la foschia tocca solo ciò che si vede attraverso il volume, il volume resta pulito come senza foschia.
+- Volumetrico, modelli non chiusi: la forma morbida costruita attorno ai pezzi poteva racchiudere sacche vuote dentro la nuvola (20 m³ in quella scaricata); ora sono riempite.
+- Nuove primitive (cubo, sfera...) e materiali trascinati dalla libreria: arrivano sempre con il materiale esattamente come in libreria. Prima, se nella scena c'era già quel materiale ma modificato (un «Bianco» trasformato in una targa), la nuova sfera prendeva quello modificato. Il materiale già presente viene riusato solo se ne è una copia identica (stessi nodi, valori, immagini e impostazioni).

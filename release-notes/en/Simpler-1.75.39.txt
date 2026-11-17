@@ -1,0 +1,10 @@
+SIMPLER 1.75.39  —  1 November 2026
+===================================
+
+AI video: every video in the library remembers how it was made.
+
+- Every video in AI outputs › AI videos now keeps all its parameters: model, resolution, length, audio, motion text and the two keyframes. For the keyframes it keeps the pictures and the state of the scene: framing, lights, environment.
+- A click on the video opens it and puts all those parameters back in the AI video panel. You can change what you want and create another version; if it is not needed, delete the video with the … button.
+- The … button menu also has «Load the parameters into the AI video panel».
+- The parameters and the keyframe pictures are saved with the project, in the «name AI» folder. They also work for a video downloaded later («Pending video»).
+- Videos made before this version have no parameters: they open as before.

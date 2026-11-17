@@ -1,0 +1,14 @@
+SIMPLER 1.75.28  —  1 novembre 2026
+===================================
+
+Contratto di licenza al primo avvio; inserimento dei modelli: il confronto con la scena era la parte lenta.
+
+- Inserimento dei modelli più rapido in una scena grande. Con la versione di prima: uomo con l'ombrello 16,2 s, di cui 16,0 nel confronto con la scena; donna con la borsa 9,0 s, di cui 8,2 nel confronto. Caricare il modello, collegarlo e aggiornare la scena costa meno di un secondo.
+  - Il confronto serve a riusare immagini, gruppi di nodi e materiali già nella scena invece di caricarli due volte. La 1.75.27 lo faceva solo con ciò che ha lo stesso numero di nodi e collegamenti, ma i materiali di Simpler hanno quasi tutti gli stessi nodi: ne restavano quasi tutti da confrontare.
+  - Ora un materiale viene confrontato per intero solo se usa anche le stesse immagini. Prova con 400 materiali con gli stessi nodi e 425 immagini: 1,6 s con la 1.75.26, 1,4 s con la 1.75.27, 0,28 s ora, con lo stesso risultato (riusati lo stesso gruppo e lo stesso materiale).
+- Contratto di licenza.
+  - Al primo avvio, prima di tutto il resto, Simpler mostra il contratto di licenza d'uso. Per andare avanti si spuntano due caselle: l'accettazione del contratto e l'approvazione specifica delle clausole più gravose (articoli 1341 e 1342 del Codice civile); poi «Accetto». «Non accetto» o la × chiudono Simpler.
+  - L'accettazione resta salvata: dalla volta dopo Simpler non chiede più nulla. Lo chiede di nuovo solo se il contratto cambia versione.
+  - Il contratto si rilegge da File ▸ Licenze e crediti, con il pulsante «Contratto di licenza» in cima, insieme alla data in cui l'hai accettato.
+  - Testo in italiano e in inglese (prevale l'italiano), con l'allegato dei componenti di terzi e dei crediti.
+- Licenze e crediti: aggiornati alla 1.75.28; aggiunto il motore di Simpler con la GNU GPL versione 3 o successiva (come chiede la licenza di Blender per il codice che ne usa le funzioni) e il testo della licenza nella cartella del motore; tolti i nomi di altri programmi di visualizzazione.

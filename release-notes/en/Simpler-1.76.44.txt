@@ -1,0 +1,13 @@
+SIMPLER 1.76.44  —  4 November 2026
+===================================
+
+Terrain: new «Sculpting» section, a brush to shape the terrain by hand (first piece: Raise, Lower, Smooth).
+
+- Landscape › Terrain › «Sculpting», right under «Shape and rock»: «Sculpt the terrain», then hold the left button on the view and drag.
+- Three tools with their icon: Raise (lifts, more at the centre), Lower (digs), Smooth (takes away bumps and holes, the slope stays). Shift swaps Raise and Lower.
+- Diameter (1-2000 m, also with [ and ] on the view), Intensity, Edge softness.
+- No interruptions while working: the terrain changes at once in the view, Blender makes it again only once when you close the tool (switching it off, changing panel, going to path tracing, the final render or saving). Only then «Busy · wait».
+- The zones follow the new shape (steep → rock, flattened → grass); ecosystems and stones follow.
+- While sculpting Ctrl+Z takes away the last stroke; afterwards the whole session is one Ctrl+Z step.
+- The strokes stay in the project and still apply after «Another version», a change of size or detail. In Advanced: how many there are and «Remove all changes».
+- While sculpting, the grass and stones stay where they were until the terrain is made again.

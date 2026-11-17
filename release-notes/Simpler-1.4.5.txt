@@ -1,0 +1,11 @@
+SIMPLER 1.4.5  —  21 ottobre 2026
+=================================
+
+NOVITÀ
+------
+- MODIFICHE NON SALVATE: chiudendo Simpler, se la scena ha modifiche non salvate compare la domanda
+  "Vuoi salvarle prima di chiudere Simpler?" con Sì (salva e chiude; per un progetto nuovo chiede dove), No (chiude
+  senza salvare) e Annulla (resta aperto). La stessa domanda prima di "Nuovo" e, ora anche, prima di "Apri".
+  Se non è cambiato niente dall'ultimo salvataggio Simpler non chiede nulla: muovere la vista, cambiare tra tempo
+  reale e path tracing o ridimensionare la finestra non contano come modifiche; contano oggetti, materiali, luci,
+  ambiente, viste salvate, impostazioni di rendering e della fotocamera.

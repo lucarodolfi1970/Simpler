@@ -1,0 +1,46 @@
+SIMPLER 1.2.0  —  20 ottobre 2026
+=================================
+
+NOVITÀ
+------
+Editor dei materiali (barra destra: "Modifica" accanto al materiale di un oggetto, il contagocce, oppure
+"Materiali della scena")
+- Canali, ognuno con valore e mappa (PNG, JPG, EXR, TIFF…), con inverti, canale (R/G/B/A) e
+  peso della mappa: Colore (tinta, luminosità, saturazione, contrasto) · Rugosità (anche mappe glossy) · Metallico ·
+  Rilievo (normal map OpenGL/DirectX e bump) · Riflessi e vernice (clearcoat) · Vetro e trasparenza (indice di
+  rifrazione con preset vetro, cristallo, acqua, diamante, zaffiro…, parete sottile, colore in profondità) ·
+  Velluto · Sottosuperficie · Emissione (luminanza in nit e temperatura in Kelvin) · Opacità (ritaglio con l'alfa
+  o una mappa).
+- DISPERSIONE per vetri e gemme: la luce si separa in rosso, verde e blu con l'indice di rifrazione giusto per ogni
+  colore (dal numero di Abbe del materiale), con un cursore per esagerare l'effetto. Le gemme mostrano il "fuoco"
+  colorato. Nota: Cycles non è un motore spettrale e le caustiche nitide (MNEE) seguono un solo colore, quindi i
+  materiali con dispersione usano le caustiche normali: le caustiche colorate sul piano ci sono ma sono più morbide
+  e rumorose di quelle di un motore spettrale; servono più campioni e una luce piccola e intensa.
+- DISPLACEMENT vero: la superficie viene davvero spostata dalla mappa di altezza, con suddivisione adattiva (più
+  fine vicino alla fotocamera). Altezza in cm, livello zero, dettaglio basso/medio/alto. Si vede in path tracing e
+  nel render finale.
+- Mappatura: UV del modello, Box (triplanare), piana, cilindrica, sferica; dimensione reale in cm (es. "una
+  piastrella = 60 cm"), riferimento oggetto o mondo, sfumatura degli spigoli, stiramento, rotazione, spostamento,
+  "Varia per oggetto".
+- Materiali importati dagli FBX letti con le loro texture (su un interno con 116 materiali tutti
+  letti; su un campione di 8 convertiti l'immagine è identica all'originale). Alla prima modifica l'originale viene conservato:
+  "Ripristina originale" lo rimette com'era.
+- Azioni: rinomina, "Solo per questo oggetto" (copia del materiale), "Sostituisci ovunque…", contagocce.
+- Annulla/Ripeti delle modifiche ai materiali istantanei (prima salvavano una copia di tutta la scena).
+- Vista in tempo reale: ogni modifica, mappe comprese, si vede subito senza preparare di nuovo la vista 3D.
+
+Libreria in basso, nuove schede
+- Luci (omni, spot, area, disco, striscia LED, sole) e Oggetti (cubo, sfera, cilindro, cono, piano, toro, gruppo).
+- TRASCINAMENTO nella vista: una luce o un oggetto si posa sulla superficie dove lo lasci; un materiale va sul pezzo
+  sotto il mouse (Maiusc: su tutto il gruppo). Il clic funziona come prima.
+- Texture Poly Haven: centinaia di texture reali scansionate (CC0, libere anche per uso commerciale), scaricate al
+  primo uso in 2K e riusate da tutti i progetti; il materiale nasce già con colore, rugosità, normal map, mappa di
+  altezza per il displacement e la dimensione reale della superficie scansionata.
+- Casella di ricerca nella libreria.
+
+BUG CORRETTI
+------------
+- Le primitive (cubo, piano, sfera…) non avevano coordinate UV: le texture in modalità UV non si vedevano.
+
+Fonti: Poly Haven API e
+condizioni d'uso (github.com/Poly-Haven/Public-API, ToS.md).

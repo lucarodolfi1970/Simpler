@@ -1,0 +1,6 @@
+SIMPLER 1.14.7  —  24 ottobre 2026
+==================================
+
+CORREZIONE
+----------
+- «Path tracing failed: enum JPEG not found»: se la diagnostica non riusciva a salvare diag.exr (per esempio perché il file precedente era ancora aperto), la vista ray-traced restava bloccata sul formato EXR e ogni immagine successiva falliva. Ora il formato viene sempre ripristinato e un diag.exr bloccato viene salvato con un altro nome.

@@ -1,0 +1,17 @@
+SIMPLER 1.13.56  —  23 October 2026
+===================================
+
+CLEARER MENUS
+-------------
+- Buttons that open a menu have a small arrow next to the icon: "Open" and now also "Import". The others (New, Save) act at once, without a menu.
+- "Import" opens the menu: a model into the scene (Ctrl+I), models into the library, Fix materials, Library statistics and cleanup. The separate small ▾ is gone.
+
+SETTINGS IN THE RIGHT SIDEBAR
+-----------------------------
+- The gear opens the settings in the right sidebar, like the other panels (the scene on the left stays where it is). They close with the × or another click on the gear.
+
+LIGHTS UNDER WATER: NO LIGHT COUNTED TWICE
+------------------------------------------
+- With "Sharp" caustics and "Light reflected by water" on, the light of a lamp under water leaving the water was computed twice: by the sharp caustics of Cycles (even, without the net) and by Simpler's calculation (with the net). That is why everything above the water became much brighter.
+- Now for lamps under the surface only Simpler computes it. Checked with a flat surface: the light on the ceiling matches the refraction formula within 16%.
+- Sharp shadows: a 2 cm lamp is almost a point and makes sharp shadows and lines even after the reflection. Real pool lamps measure 20-30 cm: with a similar "Size" shadows and net become soft as in reality.

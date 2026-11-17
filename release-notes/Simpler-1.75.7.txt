@@ -1,0 +1,10 @@
+SIMPLER 1.75.7  —  31 ottobre 2026
+==================================
+
+Le scene riportano anche l'ambiente nel pannello e nella vista; mantello: il tetto ripara i sedili anche se ha «Niente neve».
+
+- Applicando una scena salvata, pioggia, neve, preset e cielo tornavano nel motore (path tracing e render), ma il pannello Ambiente e la vista in tempo reale mostravano ancora quelli di prima. Sembrava che la scena non li avesse salvati.
+  - Ora pannello e vista si aggiornano con l'ambiente della scena.
+  - Le scene salvate in studio riportano anche la loro pioggia e neve (prima l'ambiente si riapplicava solo con il cielo o l'HDRI).
+  - Profondità di campo della camera: salvata e riapplicata. Provato: diaframma 1,4 con profondità di campo accesa torna com'era.
+- Mantello sui modelli (1.75.6): per decidere quali superfici sono «in cima», ora contano tutti i pezzi del modello, anche quelli con «Niente neve» o «Senza mantello». Così un vetro senza neve ripara comunque i sedili sotto.

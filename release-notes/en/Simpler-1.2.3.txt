@@ -1,0 +1,22 @@
+SIMPLER 1.2.3  —  20 October 2026
+=================================
+
+NEW FEATURES
+------------
+- BOTTOM LIBRARY IN WHOLE ROWS: when you drag its top edge, the library snaps between 1, 2 and 3 rows of tiles
+  (never rows cut in half, 3 at most). Double click the edge: next row count (1 → 2 → 3 → 1).
+  On small screens some of the 3D view always remains visible.
+- RECTANGLE AND LASSO SELECTION in the toolbar at the top left of the view:
+  · "▭ Rectangle": hold down the left button and drag a rectangle;
+  · "◌ Lasso": hold down the left button and draw a freehand shape.
+  Every piece (lights included) whose centre, as you see it on screen, falls inside the shape is selected.
+  Ctrl or Shift add to the selection, Alt removes. A simple click still selects a single piece.
+  While one of the two is active the left button draws (right and middle buttons still move the view; the gizmo is
+  paused); click the button again or press Esc to go back to normal navigation.
+- THE MATERIAL EDITOR FOLLOWS THE CLICK: with the material editor (or the list of scene materials) open on the
+  right, clicking an object in the view opens the material of the clicked surface (the tree on the left jumps to
+  the object as before). With the object's properties open, everything works as before.
+- DRAG THE PREVIEW SPHERE onto an object in the view: it applies the editor's material, exactly as from the bottom
+  library (to the piece under the mouse; Shift: the whole group).
+- While dragging a material (library, Poly Haven, preview sphere) a small ball with the material's preview and its
+  name appears next to the pointer.

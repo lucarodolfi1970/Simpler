@@ -1,0 +1,4 @@
+SIMPLER 1.23.3  —  24 October 2026
+==================================
+
+- Top bar: the Import and Open buttons have a small filled triangle right of the icon (as in Office and Explorer) instead of the little arrow over the icon.

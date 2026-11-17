@@ -1,0 +1,9 @@
+SIMPLER 1.73.3  —  30 ottobre 2026
+==================================
+
+Costa: il bordo dell'acqua sfuma nella sabbia bagnata.
+
+- L'ultimo velo d'acqua sparisce piano piano. Simpler conosce lo spessore dell'acqua in ogni punto: profondità del fondale più altezza dell'onda lì; sulla terra conosce anche la sua altezza sopra il mare. Più il velo è sottile, più diventa trasparente, fino a lasciar vedere solo la sabbia bagnata. Niente più linea netta dove la superficie incontra la riva.
+- La sfumatura è larga 25 cm di spessore più metà dell'altezza delle onde, abbastanza da coprire anche le gobbe di una sabbia con displacement. Su una spiaggia inclinata di 1° vuol dire una quindicina di metri di passaggio graduale.
+- È uguale nella vista in tempo reale e nel path tracing.
+- Corretto: un progetto con il mare salvato con una versione precedente teneva il materiale vecchio dell'acqua, anche dopo l'aggiornamento di Simpler. Ora all'apertura il mare prende il materiale attuale.

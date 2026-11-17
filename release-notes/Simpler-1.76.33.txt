@@ -1,0 +1,10 @@
+SIMPLER 1.76.33  —  3 novembre 2026
+===================================
+
+Il mare contro gli oggetti: niente più taglio netto.
+
+- Nel path tracing, vicino a ciò che il mare tocca (scogli, moli, scafi, una sfera) le onde corte diventano forma vera: in una fascia di un paio di metri l'acqua si alza e si abbassa, e la linea dove incontra l'oggetto ondeggia invece di essere un taglio netto. Il dettaglio fine si aggiunge solo in quella fascia: il render del resto del mare non si appesantisce.
+- La fascia bagnata sugli oggetti ha il bordo alto frastagliato, come dove arrivano gli spruzzi, non più una linea a livello.
+- La schiuma attaccata agli oggetti è un po' più larga e più bianca anche con il mare basso.
+- Nella vista in tempo reale l'acqua vicino alla riva è più increspata, senza geometria in più: la vista resta leggera.
+- Paesaggio › Costa › Avanzate: «Acqua mossa sul bordo» regola quanto l'acqua si muove contro gli oggetti (0% = taglio netto come prima).

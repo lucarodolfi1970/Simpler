@@ -1,0 +1,18 @@
+SIMPLER 1.11.2  —  21 ottobre 2026
+==================================
+
+- VETRO E ACQUA FANNO PASSARE LA LUCE: sotto l'acqua e dietro un vetro tutto restava scuro (il fondo di un laghetto
+  nero, l'ombra di un tavolo di vetro nera). Cycles non fa attraversare una superficie che rifrange alla luce diretta
+  di lampade e sole: arrivava solo per caso, come caustica, e dal sole praticamente mai. Ora, come fanno i motori
+  fotorealistici, per la luce che illumina vetro e acqua sono trasparenti (con il loro colore), mentre per lo sguardo
+  restano vetro e acqua veri: il fondo dell'acqua è illuminato dal sole, con le sue ombre. Costo quasi nullo. Con
+  "Caustiche" acceso resta il calcolo vero delle caustiche (la scorciatoia si spegne, la luce non conta due volte).
+  Non serve cambiare i materiali: vale per tutti i vetri e le acque della scena, anche importati.
+- NEBBIA: le foglie e gli altri pezzi con trasparenza contro il cielo diventavano fantasmi color nebbia, e
+  all'orizzonte c'era una linea scura. La distanza di questi punti ora è calcolata correttamente; la foschia è anche
+  più precisa con la nebbia fitta.
+- BARRA IN ALTO: con la finestra stretta i pulsanti uscivano dalla barra (Bozza/Alta/Finale tagliati). Ora, quando
+  non c'è spazio, spariscono prima le scritte dei pulsanti dei pannelli (restano le icone, con il suggerimento al
+  passaggio del mouse), poi quelle di Nuovo/Importa/Apri/Salva, poi il nome del progetto: i pulsanti restano tutti.
+- NOVITÀ IN INGLESE: ora vengono copiate anche nella cartella del programma compilato (prima si vedeva la versione
+  italiana anche con Simpler in inglese).

@@ -1,0 +1,8 @@
+SIMPLER 1.76.15  —  2 November 2026
+===================================
+
+Ecosystems follow the terrain.
+
+- When you change or make again a terrain, the ecosystems placed on its zones are made again on the new shape, with the same settings and the same seed. Before, the pieces stayed where they were: buried where the ground had risen, in the air where it had sunk, past the new borders of the zones.
+- One Ctrl+Z undoes the terrain change and the remade ecosystems together.
+- If an ecosystem cannot be made again (for example the camera no longer sees its surface), Simpler says so in the status bar and leaves it as it was.

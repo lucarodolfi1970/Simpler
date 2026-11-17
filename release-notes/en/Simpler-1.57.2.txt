@@ -1,0 +1,4 @@
+SIMPLER 1.57.2  —  27 October 2026
+==================================
+
+- When a project opens, Simpler takes out of memory at once what the file carries and nothing uses: for example the models of a distribution deleted long ago and the textures of a model deleted just before saving. In the mountain project these were 6 objects, 23 materials and 57 textures (about 70 MB), which «Free memory» found right after opening. Now there is nothing to free right after opening, and at the next save the file is lighter. The existing distribution stays as it is.

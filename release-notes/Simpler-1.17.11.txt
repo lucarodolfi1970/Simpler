@@ -1,0 +1,8 @@
+SIMPLER 1.17.11  —  24 ottobre 2026
+===================================
+
+COLORI DA UNA FOTO: ALBA E NUVOLOSO
+-----------------------------------
+- Due nuovi gruppi di preset in Cielo › Avanzate › «Colori da una foto»: «Alba» (4 foto) e «Nuvoloso» (4 foto), insieme ai 4 tramonti. Nella lista l'ordine è Alba, Tramonto, Nuvoloso, poi le tue foto.
+- Le foto di Alba mettono il sole al mattino, quelle di Tramonto alla sera; quelle di Nuvoloso scelgono sempre un cielo coperto (il grigio scuro da solo poteva sembrare l'ombra di pochi grandi cumuli).
+- Somiglianza dei nuovi preset: dal 71 al 90%.

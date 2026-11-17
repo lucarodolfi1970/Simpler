@@ -1,0 +1,24 @@
+SIMPLER 1.12.0  —  21 October 2026
+==================================
+
+NEW FEATURES
+------------
+- REAL WAVES AND CAUSTICS ON THE BOTTOM: when you select a water or glass object, its properties have the section
+  "Water: waves and caustics".
+  · "Real waves": the surface really becomes wavy (height and size of the waves can be set). The waves act as
+    lenses: with "Caustics on the bottom" on, the sun draws the net of light on the bottom, as in a pool or a clear
+    lake. With flat water the light passes evenly: the net comes only from the waves.
+  · The waves exist only in the path tracing and the final render: the real-time view stays light.
+  · Cost: the waves little (about +20%), the caustics about 2-2.5 times the time. That is why they are two switches.
+  · Starting values: waves 8 cm high, 60 cm apart (right for a bottom about 1 m deep).
+  · The caustics show where the sun reaches the bottom (not in the areas in shadow).
+- HIGHER SUN to start with: "Midday" and new scenes have the sun at noon.
+- THE SUN OF THE ENVIRONMENT NO LONGER HAS ITS ICON in the view nor its row in the tree: it is moved from the
+  Environment panel (Time, Day, Latitude, North). The same for the moon.
+
+BUG FIXES
+---------
+- GROUND: once you delete it, changing sun, sky or preset no longer brings it back. It comes back only if you choose
+  a ground in the Environment panel (or with Undo).
+- The caustics now also apply to objects and lights added after switching them on (before they had to be switched
+  off and on again), the sun of the Environment included.

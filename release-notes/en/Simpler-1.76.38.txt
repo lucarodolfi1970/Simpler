@@ -1,0 +1,7 @@
+SIMPLER 1.76.38  —  4 November 2026
+===================================
+
+«Moving water at the edge» more visible with a big sea.
+
+- With 2 m waves the water against objects moved by 22 cm at most: against a 12 m sphere the line still looked straight. Now it moves by about a fifth of the waves' height, up to half a metre (with «Calm» it stays small).
+- Note: true waves, and so this effect too, exist in the fine part of the sea, about 500 m around its centre. For an object far from the centre of the scene (for example at the foot of a big terrain): Ocean › Advanced › centre of the sea on «camera».

@@ -1,0 +1,6 @@
+SIMPLER 1.14.6  —  24 October 2026
+==================================
+
+OPACITY DIAGNOSTICS
+-------------------
+- The names written in the diag.on file (pieces or materials, one per line) choose the pieces saved in diag_alpha.blend.

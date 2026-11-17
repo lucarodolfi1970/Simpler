@@ -1,0 +1,4 @@
+SIMPLER 1.27.2  —  25 October 2026
+==================================
+
+- Model library: the size of a model is now a small label in the bottom right corner of its thumbnail, always readable (under the name it was cut off by the row height when the name took two lines).

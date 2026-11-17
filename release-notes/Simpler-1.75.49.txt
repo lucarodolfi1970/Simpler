@@ -1,0 +1,12 @@
+SIMPLER 1.75.49  —  1 novembre 2026
+===================================
+
+Foschia e nebbia: nebbia bassa, colore, distanza d'inizio, preimpostazioni.
+
+- Nebbia bassa: la nebbia è fitta vicino al suolo e si dirada salendo. «Altezza» dice fin dove è fitta (metri dalla quota 0), «Sfumatura» in quanti metri si dirada sopra. Il cielo sopra uno strato basso resta limpido, come in una nebbia vera; spenta, la nebbia è la stessa a ogni altezza come prima.
+- Colore scelto: la nebbia prende il colore che scegli (azzurrino, sabbia, grigio-blu…) alla stessa luminosità di quello automatico; spento, il colore viene dal cielo e dal sole come prima.
+- Distanza d'inizio (nelle Avanzate): le cose vicine restano nitide e la nebbia comincia più in là.
+- Preimpostazioni della sola nebbia: Nessuna, Foschia leggera, Nebbia bassa, Banco di nebbia, Polvere calda, Notte nebbiosa. Cambiano solo la nebbia: cielo, sole e nuvole restano come sono. Anche le preimpostazioni dell'Ambiente lasciano altezza, colore e distanza d'inizio che hai scelto.
+- Nessun costo in più nel render: la nebbia normale resta calcolata a fine immagine, ora lungo ogni raggio con la sua quota.
+- Vista in tempo reale: stessa nebbia bassa, colore e distanza d'inizio, e la nebbia segue ora la stessa formula del path tracing (prima era più leggera vicino e più fitta lontano). Pochi calcoli per pixel: la vista e SmartView non rallentano.
+- La nebbia volumetrica segue già l'altezza e il colore; irregolarità, seconda fascia e bagliore verso le luci arrivano nella prossima versione.

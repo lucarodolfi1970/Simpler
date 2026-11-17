@@ -1,0 +1,7 @@
+SIMPLER 1.38.5  —  25 October 2026
+==================================
+
+- The thumbnail of an ecosystem is now made with the path tracer, on the test plot. The framing is close and full: from a little above, with the four corners of the picture always inside the plot, so no edges and no background.
+  - The light is the project's own, with its sun, its sky and its exposure, when the sun is high. At night or at sunset a plain daylight is used.
+  - The render takes a few tens of seconds and does not block Simpler. Meanwhile the tile shows the picture of the view, then updates by itself.
+  - For ecosystems saved before: with the test plot in the scene, right click on the tile ▸ «Make the thumbnail again from the test plot».

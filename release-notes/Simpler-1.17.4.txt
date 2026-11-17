@@ -1,0 +1,8 @@
+SIMPLER 1.17.4  —  24 ottobre 2026
+==================================
+
+NUOVA SCENA E APERTURA: PANNELLI CON I VALORI GIUSTI
+----------------------------------------------------
+- Nuova scena: il motore tornava già ai valori predefiniti (rendering, fotocamera, ambiente, caustiche), ma un pannello aperto poteva mostrare ancora quelli della scena di prima (per esempio Ambiente con il tramonto e le nuvole volumetriche). Ora Rendering, Fotocamera e Ambiente si ridisegnano con i valori predefiniti; i pannelli di un materiale o del pennello si chiudono.
+- Aprire un progetto: il pannello Rendering aperto mostra le impostazioni del progetto aperto (prima restavano quelle di prima fino a un altro clic).
+- All'avvio Simpler parte sempre da una scena nuova con tutti i valori predefiniti. Restano solo le preferenze dell'app (lingua, ombre e velocità di navigazione della vista, pannelli aperti o chiusi).

@@ -1,0 +1,4 @@
+SIMPLER 1.43.3  —  26 ottobre 2026
+==================================
+
+- Pioggia: all'apertura di un progetto i materiali bagnati vengono rifatti da capo e la mappa del riparo viene ricalcolata. Una volta, riaprendo un progetto salvato con la pioggia, alcune facciate sono apparse rosa nel path tracing finché la pioggia non è stata rifatta; costa circa un secondo ogni 200 materiali.

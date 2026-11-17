@@ -1,0 +1,9 @@
+SIMPLER 1.76.34  —  3 November 2026
+===================================
+
+Big elevation files: choose the part you need.
+
+- When you choose an elevation file (USGS .dem, SRTM .hgt, ESRI .asc) bigger than 5 km, Simpler shows its relief in a window with a yellow square: drag it onto the part you need (or click where you want) and choose its side in km. The terrain uses only that part.
+- The side goes up to 10 km: beyond that, the 512 points of the terrain would be too sparse. A file smaller than 5 km is used whole, with no questions.
+- A big file chosen before, with no square, uses its middle 5 km by itself.
+- Landscape › Terrain › Advanced: «Choose another part of the file…» to move or resize the square later.

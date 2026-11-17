@@ -1,0 +1,4 @@
+SIMPLER 1.17.10  —  24 ottobre 2026
+===================================
+
+- Il pulsante «Materiali» si comporta come Rendering, Ambiente, Fotocamera e Risorse: quando la finestra non è larghissima resta solo l'icona (il nome è nel suggerimento).

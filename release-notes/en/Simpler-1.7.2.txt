@@ -1,0 +1,15 @@
+SIMPLER 1.7.2  —  21 October 2026
+=================================
+
+FIXES
+-----
+- MATERIALS ON INSTANCES: dragging a material onto a model that has instances (copies made as "Instance",
+  library models and their copies, pieces of a scatter) changes it on all the instances, in path tracing and
+  in the real-time view. Previously it changed only the chosen object.
+  · To give an object a different material from its instances, use "Only for this object" as before.
+  · Ctrl+Z restores the previous material on all of them.
+- IN THE REAL-TIME VIEW the new material also shows up immediately on the selected object: previously it
+  appeared only after deselecting it. While Simpler prepares the model's new look (a couple of seconds), the
+  previous one stays visible, with no gaps.
+- SCATTER BRUSH: light green circle, more solid and with a thicker edge, clearly visible even on a light
+  floor (red while erasing).

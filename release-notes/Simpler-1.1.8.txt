@@ -1,0 +1,21 @@
+SIMPLER 1.1.8  —  18 ottobre 2026
+=================================
+
+BUG CORRETTI
+------------
+- Path tracing ancora lento sui modelli con le texture incorporate nel file FBX (per esempio
+  un interno con 442 texture, oltre 26 GB in memoria video). Le copie ridotte non venivano fatte perché quelle
+  texture sono dentro il progetto e non in una cartella. Ora anche le texture incorporate vengono ridotte una
+  volta sola e tenute nella cache: l'anteprima usa copie a 2048 pixel, o a 1024 quando le texture sono così
+  tante da non stare comode nella memoria della scheda video (Auto).
+- Le copie ridotte per la vista 3D venivano rifatte a ogni preparazione ("Riduzione delle texture per la vista
+  127 di 420"): ora anche queste restano nella cache e la seconda volta la preparazione è molto più veloce.
+- "Caricamento delle texture" senza avanzamento: Cycles in quella fase non manda notizie. Ora l'avanzamento
+  si ricava dalla memoria che la scheda video si riempie (≈ texture caricate, barra, tempo rimanente).
+
+NOVITÀ
+------
+- Finestre di messaggio (conferme, errori, domande), Impostazioni, Render finale e Rinomina nello stile
+  dell'app: pannello scuro con angoli arrotondati, barra del titolo propria con la piccola ×.
+  Invio = pulsante principale, Esc = annulla.
+- Barre di scorrimento sottili e scure in tutta l'app, al posto di quelle bianche di Windows.

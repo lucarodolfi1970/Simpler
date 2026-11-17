@@ -1,0 +1,11 @@
+SIMPLER 1.75.12  —  31 October 2026
+===================================
+
+SmartView without «Updating the lights», sea caustics without borders or dark areas.
+
+- SmartView: adding, turning off or deleting a light made the view rebuild every shader («Updating the lights», 5-9 s each time).
+  - Now, with SmartView on, the set of lights of the view stays as it was when you turned it on: a new light shows as an icon but does not light the view until you turn SmartView off, a removed light leaves a dark stand-in.
+  - Turning SmartView off makes everything real again, with a single update.
+- Sea caustics («Light reflected by water»): the sun under the sea is no longer held back and put back as an image. Only the lines of light the waves gather above the normal light are added.
+  - No more line at the border of the area or dark band along the shore: with the option on no point can get darker than with it off.
+  - Slightly stronger lines (contrast ×3).

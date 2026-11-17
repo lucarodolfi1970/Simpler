@@ -1,0 +1,10 @@
+SIMPLER 1.75.35  —  1 novembre 2026
+===================================
+
+Elaborazioni AI: due cartelle fisse, «Immagini AI» e «Video AI».
+
+- Nella scheda Elaborazioni AI della libreria ci sono ora due cartelle rosse, come le altre cartelle di Simpler: non si possono cancellare, rinominare né spostare.
+- Ogni risultato va da solo nella sua cartella: le immagini dell'AI in «Immagini AI», i video in «Video AI».
+- Gli elementi dentro non si spostano: col tasto … si possono solo rinominare ed eliminare (più aprire e salvare una copia).
+- I video AI ora si salvano con il progetto, come le immagini, nella cartella «nome AI» accanto al file del progetto. La miniatura è il fotogramma d'inizio, e un clic apre il video in loop.
+- Finché il progetto non è salvato i video restano in una cartella temporanea: Simpler li conta come modifiche non salvate e lo chiede alla chiusura.

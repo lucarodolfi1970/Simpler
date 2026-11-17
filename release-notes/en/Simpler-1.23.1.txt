@@ -1,0 +1,4 @@
+SIMPLER 1.23.1  —  24 October 2026
+==================================
+
+- Material maps: the magic wand is lighter (thin stroke, single-line wand).

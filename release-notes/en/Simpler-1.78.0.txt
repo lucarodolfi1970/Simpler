@@ -1,0 +1,13 @@
+SIMPLER 1.78.0  —  6 November 2026
+==================================
+
+The vegetation library: import plants and their leaves get the Foliage material, with the season.
+
+- Import ▸ «Import vegetation into the library…»: the same window as «Import models into the library», with the choice 3D models · Vegetation at the top.
+  - After each plant is imported Simpler recognises the leaves and the wood: from the material's name (leaf, foglia, bark, corteccia… in several languages), from the cut-out of the texture (a leaf on a plane) or from the green colour; with no clue it treats it as wood, which the season does not touch.
+  - Leaves and wood get the Foliage material: the plants have the season at once, the light through the leaves and the variation between copies.
+  - The plants go into Vegetation, divided by height into Trees (from 3 m), Shrubs and hedges (from 60 cm), Grasses and lawns; Flowers and ground cover you choose by moving them. A subfolder of Vegetation you choose stays.
+- New library menu «Vegetation», with your plants and their folders, and the «Import vegetation…» tile. 3D models ▸ Custom no longer shows them.
+- Right click on a model of 3D models ▸ Custom: «Convert to vegetation…» (also on several selected models), for plants already imported as models.
+- Right click on a plant: «Leaves and wood…» shows what was taken for leaf and what for wood, with the reason; one click to change it (Leaves, Wood or Other, which stays as it was).
+- A favourite that is a plant opens in Vegetation.

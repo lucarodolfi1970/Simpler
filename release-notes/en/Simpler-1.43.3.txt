@@ -1,0 +1,4 @@
+SIMPLER 1.43.3  —  26 October 2026
+==================================
+
+- Rain: when a project opens, the wet materials are made again from scratch and the shelter map is computed again. Once, reopening a project saved with rain, some façades showed pink in path tracing until the rain was made again; it costs about one second per 200 materials.

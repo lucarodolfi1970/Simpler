@@ -1,0 +1,4 @@
+SIMPLER 1.38.6  —  25 ottobre 2026
+==================================
+
+- Correzione: con un ecosistema già salvato e rimesso sul banco di prova, «Rifai la miniatura dal banco di prova» e «Salva ecosistema» dicevano «Niente da salvare». Ora contano anche gli strati degli ecosistemi posati sul banco: la miniatura si rifà, e si può salvare una variante.

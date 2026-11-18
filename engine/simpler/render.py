@@ -565,10 +565,72 @@ def is_caustic_caster(ob):
     if wm is not None and water.shape_of(ob) != "shell":
         return water.mat_settings(wm)["waves"]["on"]      # flat water makes no caustic: only with real waves
     # (water on an open object with walls - a glass, a vase: its surface only, as a glass)
-    return _thickness(ob) >= 0.02              # thicker than 2 cm: a solid piece of glass, a gem, a vase
+    t = _thickness(ob)
+    if t >= 0.02:                              # thicker than 2 cm: a solid piece of glass, a gem, a vase
+        return True
+    # (18/11) a drinking glass, a bottle, a vase with thin walls: round and small, not the flat pane of a window
+    return t > 0.0005 and _vessel(ob) and not _holds_lamp(ob)
 
 
 _THICK = {}
+_VESSEL = {}
+VESSEL_SIZE = 1.2          # metres: the largest side of a thin-walled piece that draws sharp caustics
+VESSEL_FACINGS = 12        # ... and at least this many directions of its faces hold 85% of its surface
+
+
+def _vessel(ob):
+    """A thin-walled piece of glass that is a vessel (a tumbler, a bottle, a bowl, a vase) and not a pane: small and
+    round. (Luca, 18/11: his whisky glass, walls under 2 cm, was never a caster - with «Nitide» it had no shadow and
+    no caustic, the light went straight through it as through a window; tried apart with Cycles: as a caster, a dark
+    shadow with sharp patterns of light in it, as in a photograph.) A pane - or many panes joined, each with its own
+    orientation - has nearly all its surface in a few directions (2 per pane); a round piece in dozens. Cached."""
+    me = ob.data
+    sc = ob.matrix_world.to_scale()
+    key = (me.name, len(me.polygons), round(sc.x, 4), round(sc.y, 4), round(sc.z, 4))
+    if key in _VESSEL:
+        return _VESSEL[key]
+    out = False
+    try:
+        import numpy as np
+        dims = [abs(ob.dimensions[i]) for i in range(3)]
+        n = len(me.polygons)
+        if n >= VESSEL_FACINGS and max(dims) <= VESSEL_SIZE:
+            no = np.empty(n * 3, np.float32); me.polygons.foreach_get("normal", no)
+            ar = np.empty(n, np.float32); me.polygons.foreach_get("area", ar)
+            no = no.reshape(-1, 3)
+            # directions: the cube face of the normal and an 8 x 8 grid on it (384 in all)
+            ax = np.argmax(np.abs(no), axis=1)
+            sg = (no[np.arange(n), ax] > 0).astype(np.int64)
+            den = np.maximum(np.abs(no[np.arange(n), ax]), 1e-6)
+            u = no[np.arange(n), (ax + 1) % 3] / den
+            v = no[np.arange(n), (ax + 2) % 3] / den
+            iu = np.clip(((u + 1.0) * 4.0).astype(np.int64), 0, 7)
+            iv = np.clip(((v + 1.0) * 4.0).astype(np.int64), 0, 7)
+            bins = np.bincount(((ax * 2 + sg) * 8 + iu) * 8 + iv, weights=ar, minlength=384)
+            order = np.sort(bins)[::-1]
+            need = int(np.searchsorted(np.cumsum(order), 0.85 * float(order.sum()))) + 1
+            out = need >= VESSEL_FACINGS
+            log("SIMPLER_CASTER", f"{ob.name}: thin walls ({_thickness(ob) * 1000:.1f} mm), largest side {max(dims):.2f} m, "
+                f"{need} directions for 85% of the surface -> {'sharp caustics' if out else 'a pane: light straight through'}")
+    except Exception as exc:  # noqa: BLE001
+        log("SIMPLER_CASTER", f"{ob.name}: not measured: {exc}")
+    if len(_VESSEL) > 5000:
+        _VESSEL.clear()
+    _VESSEL[key] = out
+    return out
+
+
+def _holds_lamp(ob):
+    """A lamp inside the piece (the glass shade of a pendant lamp): no sharp caustics - its light has to leave the
+    glass, and where MNEE finds no path the room would stay dark."""
+    bb = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
+    lo = Vector(map(min, *bb)); hi = Vector(map(max, *bb))
+    for o in bpy.context.scene.objects:
+        if o.type == "LIGHT" and o.data.type != "SUN" and not o.hide_render:
+            p = o.matrix_world.translation
+            if lo.x <= p.x <= hi.x and lo.y <= p.y <= hi.y and lo.z <= p.z <= hi.z:
+                return True
+    return False
 
 
 def _thickness(ob):

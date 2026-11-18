@@ -713,7 +713,7 @@ def _trace(surfaces, emitters, bvh, owners, offsets, final=False):
             "O": np.concatenate(O)}, rays
 
 
-def _splat(t, final):
+def _splat(t, final, min_texel=None):
     """Fills the triangles of light into the six projection images. Returns {axis: (rgb image, u0, v0, texel,
     d0, d1)}."""
     rng = np.random.default_rng(7)
@@ -760,7 +760,7 @@ def _splat(t, final):
         u0, u1 = pu.min() - 0.05, pu.max() + 0.05
         v0, v1 = pv.min() - 0.05, pv.max() + 0.05
         px = MAX_PX if final else VIEW_PX
-        texel = max(MIN_TEXEL, (u1 - u0) / px, (v1 - v0) / px)
+        texel = max(MIN_TEXEL if min_texel is None else min_texel, (u1 - u0) / px, (v1 - v0) / px)
         tarea = 0.5 * np.abs((pu[:, 1] - pu[:, 0]) * (pv[:, 2] - pv[:, 0]) - (pu[:, 2] - pu[:, 0]) * (pv[:, 1] - pv[:, 0]))
         cover = tarea
         need = float(np.sum(np.clip(cover / (texel * texel) * 0.75, 1.0, 4096.0)))
@@ -1227,6 +1227,11 @@ def safe_ensure(final=False):
         log("SIMPLER_REFCAUSTICS", "failed:", repr(exc)[:300])
         traceback.print_exc()
         try:
+            from . import glasscaustics
+            glasscaustics.STATE["failed"] = True      # (the glasses go back to the caustics of Cycles: never left black)
+        except Exception:
+            pass
+        try:
             remove_all()
         except Exception:
             pass
@@ -1240,24 +1245,31 @@ def ensure(final=False):
     """Before every path-traced image. Off: nothing left in the scene. On: computed again only when the sun, the
     water or what is near it changed; otherwise only the wrappers are checked (a material rebuilt by the editor)."""
     from .render import STATE
-    if not enabled():
+    from . import glasscaustics
+    # (18/11) the light through the glasses (glasscaustics.py: the thin-walled vessels, with the caustics «Nitide»)
+    # goes into the same images: this runs for the water (the switch) or for them
+    on_w = enabled()
+    glasses = glasscaustics.casters()
+    if not on_w and not glasses:
         if _CACHE["key"] is not None or bpy.data.node_groups.get(GROUP) is not None:
             remove_all()
         LAST.update(state="off")
         return
     if not final and _CACHE["epoch"] == STATE.epoch and _CACHE["key"] is not None:
         return
-    waters = _water_objects()
+    waters = _water_objects() if on_w else []
     from . import seacaustics
-    sea = seacaustics.active()
+    sea = seacaustics.active() if on_w else False
     suns = _emitters(waters) if waters else (_suns() if sea else [])
-    if (not waters and not sea) or not suns:
+    g_lights = _emitters(glasses) if glasses else []
+    if not ((waters or sea) and suns) and not (glasses and g_lights):
         if _CACHE["key"] is not None:
             remove_all()
         LAST.update(state="nothing", seconds=0.0, rays=0, receivers=0)
         _CACHE["epoch"] = STATE.epoch
         return
-    key = _fingerprint(waters, suns, final)
+    key = (_fingerprint(waters, suns, final), _fingerprint([], g_lights, final) if glasses else 0,
+           glasscaustics.fingerprint(glasses, g_lights))
     if key != _CACHE["key"]:
         t0 = time.time()
         nl = max(1, len(suns))
@@ -1297,6 +1309,16 @@ def ensure(final=False):
                 traced = t2_ if traced is None else {k: np.concatenate([traced[k], t2_[k]]) for k in traced}
                 sea_rect = seacaustics.STATE["rect"] if (sea_bottom is not None or not seacaustics.CYCLES_BOTTOM) \
                     else sea_rect
+        only_glass = traced is None
+        if glasses and g_lights:
+            gt = glasscaustics.trace(glasses, g_lights, final, lambda ph, det="", fr=None: _progress(ph, det, fr))
+            if gt is not None:
+                t3_, r3, own3, _off3 = gt
+                t3_ = dict(t3_)
+                t3_["O"] = t3_["O"] + len(owners)
+                owners = list(owners) + list(own3)
+                rays += r3
+                traced = t3_ if traced is None else {k: np.concatenate([traced[k], t3_[k]]) for k in traced}
         from . import ocean
         sun0 = next((e for e in suns if e.type == "LIGHT" and e.data.type == "SUN"), None)
         sea_rect = None      # (1.75.12) the sun passes the sea evenly: the image of the bottom only adds its lines
@@ -1308,7 +1330,8 @@ def ensure(final=False):
             maps = {}
         else:
             _progress(tr("Luce riflessa dall'acqua: immagini"))
-            maps = _splat(traced, final)
+            # (only glass in the images: texels as fine as its caustics; with the water, the texels of the water)
+            maps = _splat(traced, final, glasscaustics.TEXEL if only_glass and sea_bottom is None else None)
             receivers = {owners[i].name for i in np.unique(traced["O"])}
         if sea_bottom is not None:
             # the bottom's image in the last layer facing up (the reflected light rarely lands facing up)

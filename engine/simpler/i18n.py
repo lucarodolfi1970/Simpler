@@ -259,6 +259,7 @@ EN = {
     "Luce riflessa dall'acqua: oggetti vicini": "Light reflected by water: nearby objects",
     "Luce riflessa dall'acqua: superficie": "Light reflected by water: surface",
     "Luce riflessa dall'acqua: raggi": "Light reflected by water: rays",
+    "Caustiche del vetro: raggi": "Glass caustics: rays",
     "Luce riflessa dall'acqua: immagini": "Light reflected by water: images",
     "Piastrelle": "Tiles",
     "Modelli con le texture dentro il file": "Models with the textures inside the file",

@@ -741,11 +741,18 @@ def refresh_caustics(force=False):
                 continue                  # (the body of the water stays out of MNEE, see water.py)
             caster = enabled and is_caustic_caster(ob) and not _encloses(ob, glows)
             receiver = enabled and not caster
-            if ob.cycles.is_caustics_caster != caster or ob.cycles.is_caustics_receiver != receiver:
-                ob.cycles.is_caustics_caster = caster
+            # (18/11) a thin-walled vessel: its light is made by glasscaustics.py (followed from the light), not by
+            # MNEE - no caster flag for Cycles, and its shadow shortcut all off (the light arrives only that way)
+            own = False
+            if caster:
+                from . import glasscaustics
+                own = glasscaustics.handles(ob)
+            mnee = caster and not own
+            if ob.cycles.is_caustics_caster != mnee or ob.cycles.is_caustics_receiver != receiver:
+                ob.cycles.is_caustics_caster = mnee
                 ob.cycles.is_caustics_receiver = receiver
                 changed = True
-            strength = _caster_strength(ob) if caster else 0.0
+            strength = 1.0 if own else (_caster_strength(ob) if caster else 0.0)
             if abs(float(ob.get("simpler_caster", 0.0)) - strength) > 1e-6:
                 ob["simpler_caster"] = strength                    # (its glass shadow shortcut off: glass.py)
                 changed = True

@@ -683,6 +683,20 @@ def refresh_caustics(force=False):
     STATE.caustics_flagged = enabled
 
 
+def _preset_into_config(name):
+    """A quality preset into the settings. The caustics chosen by the user stay: «Normali» and «Nitide» put the
+    filter of the reflections and the limit of the indirect light at 0 (they are what cancels the caustics of the
+    path tracing), and a preset chosen afterwards put them back at its own values - the coloured caustics of a glass
+    with dispersion were gone while the panel still said «Normali» (Luca, 18/11)."""
+    c = STATE.config
+    keep = (c.get("causticsReflective") or c.get("causticsRefractive") or STATE.caustics) \
+        and c.get("blurGlossy") == 0 and c.get("clampIndirect") == 0
+    c.update(PRESETS[name])
+    if keep:
+        c["blurGlossy"] = 0.0
+        c["clampIndirect"] = 0.0
+
+
 def set_settings(data):
     if "lang" in data:
         from . import i18n
@@ -691,7 +705,7 @@ def set_settings(data):
         if data["quality"] not in PRESETS:
             raise ApiError(tr("Qualità non valida (bozza, alta, finale)"))
         STATE.quality = data["quality"]
-        STATE.config.update(PRESETS[STATE.quality])
+        _preset_into_config(STATE.quality)
         invalidate()
     if isinstance(data.get("config"), dict):
         changed = False
@@ -1384,7 +1398,7 @@ def final_render(data):
     quality = data.get("quality", "attuale")
     saved = dict(STATE.config)
     if quality in PRESETS:
-        STATE.config.update(PRESETS[quality])      # only for this render
+        _preset_into_config(quality)               # only for this render
     from . import camview, ocean
     try:
         ocean.idle_follow(now=True)       # (1.76.39: the sea where this image looks, if the camera has just moved)

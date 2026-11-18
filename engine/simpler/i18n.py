@@ -260,6 +260,7 @@ EN = {
     "Luce riflessa dall'acqua: superficie": "Light reflected by water: surface",
     "Luce riflessa dall'acqua: raggi": "Light reflected by water: rays",
     "Caustiche del vetro: raggi": "Glass caustics: rays",
+    "L'oggetto selezionato è un contenitore vuoto, senza nessuna forma: seleziona il modello da salvare": "The selected object is an empty container, with no shape in it: select the model to save",
     "Luce riflessa dall'acqua: immagini": "Light reflected by water: images",
     "Piastrelle": "Tiles",
     "Modelli con le texture dentro il file": "Models with the textures inside the file",

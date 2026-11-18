@@ -444,6 +444,10 @@ def save(data):
     if not ids:
         raise ApiError(tr("Seleziona un oggetto"))
     obs, tops = _pieces(ids)
+    # (19/11, Luca: «glass #1» saved as a grey thumbnail of 0.1 MB) what was selected was an empty of an imported
+    # hierarchy, with nothing under it: a model without any shape. Said, instead of saving it
+    if not any(o.type != "EMPTY" or o.instance_collection is not None for o in obs):
+        raise ApiError(tr("L'oggetto selezionato è un contenitore vuoto, senza nessuna forma: seleziona il modello da salvare"))
     name = (data.get("name") or "").strip() or (tops[0].name if len(tops) == 1 else tr("Modello"))
     folder = _clean(data.get("folder"))
     refresh()
@@ -475,6 +479,9 @@ def save(data):
     # the hidden originals («Ripristina originale») go with the model: without them a model taken from the library
     # could not go back to its imported materials - or found the original of another model with the same name
     origs = {bpy.data.materials.get(str(m.get("simpler_mat_backup") or "")) for m in mats} - {None}
+    # (19/11: «glass #3» went to the library with the two images of the light of the glasses, 15 MB, and their node
+    # group - they were in the hidden original of one of its materials, a copy made while the light was on)
+    refcaustics.strip_materials(origs)
     missing = _rescue_textures(mats | origs, extra, os.path.join(mdir, "textures"))
     tmp = os.path.join(previews.work_dir(), mid + "_src.blend")
     bpy.data.libraries.write(tmp, set(obs) | extra | origs, fake_user=True, path_remap="ABSOLUTE", compress=False)

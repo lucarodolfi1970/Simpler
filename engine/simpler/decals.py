@@ -529,6 +529,17 @@ def add(data):
     n = n.normalized() if n.length > 1e-6 else Vector((0, 0, 1))
     cam = Vector([float(v) for v in data.get("camera") or (0, -5, 2)]) * CM
     target = _hit(loc, n)
+    if target is None:
+        # (Luca: «non capisco il messaggio rosso, la decal sembra funzionare bene») the short ray along the normal can
+        # miss the piece the view itself hit (log: view hit a shop display, ray found nothing, the decal was projected
+        # anyway on the 4 pieces its box reaches): that piece is the one under the point, as the view saw it
+        try:
+            hit = find(str(data.get("hitObject") or "").split("/")[0])
+        except Exception:
+            hit = None
+        if hit is not None and hit.type == "MESH" and not hit.get(INTERNAL_KEY) and not is_decal(hit) \
+                and not hit.get("simpler_trashed"):
+            target = hit
     # the picture, embedded in the project (the decal travels with it)
     im = _load(path)
     if not im.packed_file:

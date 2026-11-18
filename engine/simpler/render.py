@@ -1211,7 +1211,7 @@ def render_viewport_pass():
     scene.cycles.time_limit = time_limit
     _image_format_back(scene)
     scene.render.image_settings.file_format = "JPEG"
-    scene.render.image_settings.quality = 90
+    scene.render.image_settings.quality = 100       # (Luca, 18/11: «il 100 jpg mettilo ovunque»; «Salva immagine» saves this file)
     apply_texture_limit(scene, preview_texture_limit())
     path = os.path.join(STATE.tmp, "viewport.jpg")
     scene.render.filepath = path
@@ -1505,6 +1505,8 @@ def _final_render(path, width, height, data):
     scene.render.image_settings.file_format = fmt
     if fmt in ("PNG", "TIFF"):
         scene.render.image_settings.color_depth = "16"
+    elif fmt == "JPEG":
+        scene.render.image_settings.quality = 100   # (said here: before it was whatever the view had left, 90)
     scene.render.filepath = path
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     t0 = time.time()

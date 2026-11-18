@@ -59,6 +59,10 @@ VIEW_WATER_VERTS = 80_000   # (~1 s of rays: the engine waits for it)
 VIEW_LAMP_VERTS = 120_000   # vertices traced per lamp in the view (where its light is)
 LAMP_SR_VIEW = 4e-4          # largest solid angle of a water triangle seen from a lamp (view / final render)
 LAMP_SR_FINAL = 1e-4
+SPLIT_SPREAD = 0.06          # metres: light of a lamp UNDER the water - a water triangle whose light lands wider splits
+SPLIT_ROUNDS = 3             # (each round halves it), within SPLIT_VERTS_* new vertices
+SPLIT_VERTS_FINAL = 400_000
+SPLIT_VERTS_VIEW = 40_000
 MAX_SAMPLES = 12_000_000  # all the images of a final render (the view: a third)
 AXES = [(0, 1.0), (0, -1.0), (1, 1.0), (1, -1.0), (2, 1.0), (2, -1.0)]
 GLASS_LAYERS = 4          # (1.75.0) glass crossed by the sun on its way to the water (both faces of a pane count)
@@ -414,9 +418,12 @@ def _extinction(ob):
     return np.array(absorb, np.float64) + scatter
 
 
-def _land(acc, co, tri, hit, hn, hd, hidx, power, blur_v, col, offsets):
+def _land(acc, co, tri, hit, hn, hd, hidx, power, blur_v, col, offsets, spread=False):
     """Adds the triangles of light of one bundle of rays (reflected or refracted) to acc. power: (m, 3) W per triangle
-    (colour included), hit...: per vertex."""
+    (colour included), hit...: per vertex. spread (the light of a lamp under the water, sent back down at a grazing
+    angle): the patches of the triangles whose rays land apart are blurred by how far apart - before, each was a
+    sharp patch with the shape of its water triangle: squares and dots on what lies just under the surface
+    (Luca, 18/11: «quei riquadri sugli oggetti in parte sommersi»)."""
     P, N, F, B, O = acc
     a, b, c = tri[:, 0], tri[:, 1], tri[:, 2]
     pw = power.sum(1)
@@ -431,13 +438,29 @@ def _land(acc, co, tri, hit, hn, hd, hidx, power, blur_v, col, offsets):
         P.append(np.stack([hit[a[same]], hit[b[same]], hit[c[same]]], 1))
         N.append(hn[a[same]])
         F.append(power[same])
-        B.append((blur_v[a[same]] + blur_v[b[same]] + blur_v[c[same]]) / 3.0)
+        bl = (blur_v[a[same]] + blur_v[b[same]] + blur_v[c[same]]) / 3.0
+        if spread:
+            # (a triangle of light larger than its samples can cover - 4096 at most - was a cloud of dots)
+            ar = 0.5 * np.linalg.norm(np.cross(hit[b[same]] - hit[a[same]], hit[c[same]] - hit[a[same]]), axis=1)
+            bl = np.maximum(bl, 0.75 * np.sqrt(ar / 4096.0))
+        B.append(bl)
         O.append(oa[same])
     # straddling triangles (their rays land on different surfaces): a third of the power at each vertex that
     # landed, spread over a patch the size and shape of the water triangle (as a flat mirror would throw it). As
     # single points they made a salt-and-pepper noise instead of light.
     rest = (pw > 0) & ~same
     cen = (co[a] + co[b] + co[c]) / 3.0
+    wide = None
+    if spread and rest.any():
+        # how far apart the rays of the triangle land (those that landed); one alone: as far as it travelled
+        wide = np.zeros(len(tri))
+        for u, v in ((a, b), (b, c), (c, a)):
+            both = (hidx[u] >= 0) & (hidx[v] >= 0)
+            d = np.linalg.norm(np.where(both[:, None], hit[u] - hit[v], 0.0), axis=1)
+            wide = np.maximum(wide, d)
+        landed = (hidx[a] >= 0).astype(np.int8) + (hidx[b] >= 0) + (hidx[c] >= 0)
+        alone = np.maximum(np.maximum(hd[a], hd[b]), hd[c]) * 0.5
+        wide = np.minimum(np.where(landed == 1, alone, wide) * 0.5, 0.75)
     for v in (a, b, c):
         k = rest & (hidx[v] >= 0)
         if k.any():
@@ -445,7 +468,7 @@ def _land(acc, co, tri, hit, hn, hd, hidx, power, blur_v, col, offsets):
             P.append(np.stack([pts + (co[a[k]] - cen[k]), pts + (co[b[k]] - cen[k]), pts + (co[c[k]] - cen[k])], 1))
             N.append(hn[v[k]])
             F.append(power[k] / 3.0)
-            B.append(blur_v[v[k]])
+            B.append(blur_v[v[k]] if wide is None else np.maximum(blur_v[v[k]], wide[k]))
             O.append(np.searchsorted(offsets, hidx[v[k]], "right") - 1)
 
 
@@ -507,29 +530,88 @@ def _trace(surfaces, emitters, bvh, owners, offsets, final=False):
                 L0 = np.array(em.matrix_world.translation, np.float64)
                 co, no, tri = _refine_near(co, no, tri, L0, LAMP_SR_FINAL if final else LAMP_SR_VIEW,
                                            (MAX_WATER_VERTS if final else VIEW_WATER_VERTS // 2) + len(co))
-            nv = len(co)
             refract = (not sun) and float(ob.get("simpler_caster", 0.0)) > 0.5
             ext = _extinction(ob)
             if sun:
                 s = np.array((em.matrix_world.to_quaternion() @ Vector((0.0, 0.0, 1.0))).normalized(), np.float64)
-                dirs = np.tile(-s, (nv, 1)); irr = np.ones(nv); ldist = np.full(nv, REACH * 4)
                 spread = math.tan(max(float(em.data.angle), 1e-4) / 2.0)       # blur = distance x this
-            else:
-                dirs, irr, ldist, _L, radius = _lamp_terms(em, co)
-            dn = np.einsum("ij,ij->i", no, dirs)            # < 0: lit from above, > 0: from under the water
-            r = dirs - 2.0 * dn[:, None] * no
-            r /= np.maximum(np.linalg.norm(r, axis=1, keepdims=True), 1e-12)
-            # refraction out of the water (Snell, water -> air): t = eta d - (eta cos_i - cos_t) n
-            eta = IOR
-            cos_i = np.clip(dn, 0.0, 1.0)
-            sin_t2 = eta * eta * (1.0 - cos_i * cos_i)
-            cos_t = np.sqrt(np.maximum(0.0, 1.0 - sin_t2))
-            tdir = eta * dirs - (eta * cos_i - cos_t)[:, None] * no
-            tdir /= np.maximum(np.linalg.norm(tdir, axis=1, keepdims=True), 1e-12)
-            lit = np.zeros(nv, bool)
-            tint = np.ones((nv, 3))
-            hit = np.full((nv, 3), np.nan); hn = np.zeros((nv, 3)); hd = np.zeros(nv); hidx = np.full(nv, -1, np.int64)
-            thit = np.full((nv, 3), np.nan); thn = np.zeros((nv, 3)); thd = np.zeros(nv); thidx = np.full(nv, -1, np.int64)
+            radius = 0.0
+
+            def terms(co, no):
+                """Per vertex: where its light comes from and where the water sends it (reflected, refracted)."""
+                nonlocal radius
+                nv = len(co)
+                if sun:
+                    dirs = np.tile(-s, (nv, 1)); irr = np.ones(nv); ldist = np.full(nv, REACH * 4)
+                else:
+                    dirs, irr, ldist, _L, radius = _lamp_terms(em, co)
+                dn = np.einsum("ij,ij->i", no, dirs)            # < 0: lit from above, > 0: from under the water
+                r = dirs - 2.0 * dn[:, None] * no
+                r /= np.maximum(np.linalg.norm(r, axis=1, keepdims=True), 1e-12)
+                # refraction out of the water (Snell, water -> air): t = eta d - (eta cos_i - cos_t) n
+                eta = IOR
+                cos_i = np.clip(dn, 0.0, 1.0)
+                sin_t2 = eta * eta * (1.0 - cos_i * cos_i)
+                cos_t = np.sqrt(np.maximum(0.0, 1.0 - sin_t2))
+                tdir = eta * dirs - (eta * cos_i - cos_t)[:, None] * no
+                tdir /= np.maximum(np.linalg.norm(tdir, axis=1, keepdims=True), 1e-12)
+                return {"dirs": dirs, "irr": irr, "ldist": ldist, "dn": dn, "r": r, "sin_t2": sin_t2, "tdir": tdir,
+                        "lit": np.zeros(nv, bool), "tint": np.ones((nv, 3)),
+                        "hit": np.full((nv, 3), np.nan), "hn": np.zeros((nv, 3)), "hd": np.zeros(nv),
+                        "hidx": np.full(nv, -1, np.int64),
+                        "thit": np.full((nv, 3), np.nan), "thn": np.zeros((nv, 3)), "thd": np.zeros(nv),
+                        "thidx": np.full(nv, -1, np.int64)}
+
+            def cast(co, no, V, idxs, show=True):
+                """The rays of these vertices: to the light (lit? through which glass) and on, where the water sends it."""
+                nonlocal rays
+                dirs, irr, ldist, dn, r, sin_t2, tdir = V["dirs"], V["irr"], V["ldist"], V["dn"], V["r"], V["sin_t2"], V["tdir"]
+                lit, tint, hit, hn, hd, hidx = V["lit"], V["tint"], V["hit"], V["hn"], V["hd"], V["hidx"]
+                thit, thn, thd, thidx = V["thit"], V["thn"], V["thd"], V["thidx"]
+                step = max(2000, len(idxs) // 50)
+                for n_i, i in enumerate(idxs):
+                    if show and n_i % step == 0:
+                        _progress(tr("Luce riflessa dall'acqua: raggi"), f"{n_i * 100 // max(1, len(idxs))}%", n_i / max(1, len(idxs)))
+                    if irr[i] <= 0.0 or dn[i] == 0.0:
+                        continue
+                    above = dn[i] < 0.0
+                    p = Vector(co[i]) + Vector(no[i]) * (eps if above else -eps)
+                    rays += 1
+                    sv = Vector(-dirs[i]); q = p; left = max(0.0, ldist[i] - 2 * eps); shadow = False
+                    for _layer in range(GLASS_LAYERS + 1):
+                        hloc, _hn, hix, hdist = ray_cast(q, sv, left)
+                        if hloc is None:
+                            break
+                        f = _glass_pass(hix, hloc, offsets) if _layer < GLASS_LAYERS else None
+                        if f is None or f.max() < 1e-3:
+                            shadow = True                          # in shadow (a bridge, a wall, a tree over the water)
+                            break
+                        tint[i] *= f                               # (through a glass: its colour, at that point)
+                        q = hloc + sv * eps; left -= hdist + eps; rays += 1
+                    if shadow:
+                        continue
+                    lit[i] = True
+                    ri = r[i]
+                    if not ((ri[2] <= 0.0) if above else (ri[2] >= 0.0)):     # (into the water again / out: not followed)
+                        rays += 1
+                        rv = Vector(ri)
+                        loc, nrm, idx, dist = ray_cast(p, rv, REACH)
+                        if loc is not None:
+                            if nrm.dot(rv) > 0.0:
+                                nrm = -nrm                         # (the side the light arrives on, as Cycles shades it)
+                            hit[i] = loc; hn[i] = nrm; hd[i] = dist; hidx[i] = idx
+                    if refract and not above and sin_t2[i] < 1.0 and tdir[i][2] > 0.0:
+                        rays += 1
+                        tv = Vector(tdir[i])
+                        loc, nrm, idx, dist = ray_cast(Vector(co[i]) + Vector(no[i]) * eps, tv, REACH)
+                        if loc is not None:
+                            if nrm.dot(tv) > 0.0:
+                                nrm = -nrm
+                            thit[i] = loc; thn[i] = nrm; thd[i] = dist; thidx[i] = idx
+
+            V = terms(co, no)
+            nv = len(co)
+            dn, irr = V["dn"], V["irr"]
             # a lamp lights the water unevenly (inverse square): only the triangles that carry 99.5% of its light
             # on the water are traced, at most the budget of vertices - the full waves where the light is
             active = np.ones(nv, bool)
@@ -543,47 +625,53 @@ def _trace(surfaces, emitters, bvh, owners, offsets, final=False):
                 keep = min(keep, max(1, vert_budget // 2))       # (about 2 triangles per vertex)
                 active = np.zeros(nv, bool)
                 active[tri[order[:keep]].ravel()] = True
-            idxs = np.nonzero(active)[0]
-            step = max(2000, len(idxs) // 50)
-            for n_i, i in enumerate(idxs):
-                if n_i % step == 0:
-                    _progress(tr("Luce riflessa dall'acqua: raggi"), f"{n_i * 100 // max(1, len(idxs))}%", n_i / max(1, len(idxs)))
-                if irr[i] <= 0.0 or dn[i] == 0.0:
-                    continue
-                above = dn[i] < 0.0
-                p = Vector(co[i]) + Vector(no[i]) * (eps if above else -eps)
-                rays += 1
-                sv = Vector(-dirs[i]); q = p; left = max(0.0, ldist[i] - 2 * eps); shadow = False
-                for _layer in range(GLASS_LAYERS + 1):
-                    hloc, _hn, hix, hdist = ray_cast(q, sv, left)
-                    if hloc is None:
+            cast(co, no, V, np.nonzero(active)[0])
+            # a lamp UNDER the water: its light comes back down at a grazing angle and what lies just under the surface
+            # (a seat, a step) gets it from far away, stretched: the triangles of water whose three rays land wide
+            # apart split in four and their new vertices are traced, again and again (Luca, 18/11: squares of light
+            # on a sofa half under the water). Only there: nothing changes for the sun and the lamps above.
+            lamp_under = (not sun) and float(em.matrix_world.translation.z) < float(co[:, 2].max())
+            if lamp_under and (dn > 0.0).any():
+                left_v = SPLIT_VERTS_FINAL if final else SPLIT_VERTS_VIEW
+                for _round in range(SPLIT_ROUNDS):
+                    a, b, c = tri[:, 0], tri[:, 1], tri[:, 2]
+                    hidx, hit, lit = V["hidx"], V["hit"], V["lit"]
+                    wide = np.zeros(len(tri))
+                    for u, v in ((a, b), (b, c), (c, a)):
+                        both = (hidx[u] >= 0) & (hidx[v] >= 0)
+                        wide = np.maximum(wide, np.linalg.norm(np.where(both[:, None], hit[u] - hit[v], 0.0), axis=1))
+                    landed = (hidx[a] >= 0).astype(np.int8) + (hidx[b] >= 0) + (hidx[c] >= 0)
+                    under = (V["dn"][a] > 0.0) & (V["dn"][b] > 0.0) & (V["dn"][c] > 0.0)
+                    edge = np.linalg.norm(co[b] - co[a], axis=1)
+                    bad = under & (lit[a] | lit[b] | lit[c]) & (edge > 0.004) \
+                        & ((wide > SPLIT_SPREAD) | ((landed > 0) & (landed < 3)))
+                    nb = int(bad.sum())
+                    if nb == 0 or left_v < 3:
                         break
-                    f = _glass_pass(hix, hloc, offsets) if _layer < GLASS_LAYERS else None
-                    if f is None or f.max() < 1e-3:
-                        shadow = True                          # in shadow (a bridge, a wall, a tree over the water)
-                        break
-                    tint[i] *= f                               # (through a glass: its colour, at that point)
-                    q = hloc + sv * eps; left -= hdist + eps; rays += 1
-                if shadow:
-                    continue
-                lit[i] = True
-                ri = r[i]
-                if not ((ri[2] <= 0.0) if above else (ri[2] >= 0.0)):     # (into the water again / out: not followed)
-                    rays += 1
-                    rv = Vector(ri)
-                    loc, nrm, idx, dist = ray_cast(p, rv, REACH)
-                    if loc is not None:
-                        if nrm.dot(rv) > 0.0:
-                            nrm = -nrm                         # (the side the light arrives on, as Cycles shades it)
-                        hit[i] = loc; hn[i] = nrm; hd[i] = dist; hidx[i] = idx
-                if refract and not above and sin_t2[i] < 1.0 and tdir[i][2] > 0.0:
-                    rays += 1
-                    tv = Vector(tdir[i])
-                    loc, nrm, idx, dist = ray_cast(Vector(co[i]) + Vector(no[i]) * eps, tv, REACH)
-                    if loc is not None:
-                        if nrm.dot(tv) > 0.0:
-                            nrm = -nrm
-                        thit[i] = loc; thn[i] = nrm; thd[i] = dist; thidx[i] = idx
+                    if nb * 3 > left_v:                          # (the widest first)
+                        order = np.argsort(-np.where(bad, np.where(landed < 3, 1e9, wide), -1.0))
+                        bad = np.zeros(len(tri), bool); bad[order[:left_v // 3]] = True
+                        nb = int(bad.sum())
+                    sel = tri[bad]
+                    a, b, c = sel[:, 0], sel[:, 1], sel[:, 2]
+                    mids_co, mids_no = [], []
+                    for i, j in ((a, b), (b, c), (c, a)):
+                        mids_co.append(0.5 * (co[i] + co[j]))
+                        n = no[i] + no[j]
+                        mids_no.append(n / np.maximum(np.linalg.norm(n, axis=1, keepdims=True), 1e-12))
+                    base = len(co)
+                    nco, nno = np.concatenate(mids_co), np.concatenate(mids_no)
+                    Vn = terms(nco, nno)
+                    co = np.concatenate([co, nco]); no = np.concatenate([no, nno])
+                    V = {k: np.concatenate([V[k], Vn[k]]) for k in V}
+                    m01 = base + np.arange(nb); m12 = m01 + nb; m20 = m12 + nb
+                    tri = np.concatenate([tri[~bad], np.stack([a, m01, m20], 1), np.stack([m01, b, m12], 1),
+                                          np.stack([m20, m12, c], 1), np.stack([m01, m12, m20], 1)])
+                    cast(co, no, V, np.arange(base, len(co)), show=False)
+                    left_v -= nb * 3
+            dirs, irr, ldist, dn, sin_t2 = V["dirs"], V["irr"], V["ldist"], V["dn"], V["sin_t2"]
+            lit, tint, hit, hn, hd, hidx = V["lit"], V["tint"], V["hit"], V["hn"], V["hd"], V["hidx"]
+            thit, thn, thd, thidx = V["thit"], V["thn"], V["thd"], V["thidx"]
             a, b, c = tri[:, 0], tri[:, 1], tri[:, 2]
             fn = np.cross(co[b] - co[a], co[c] - co[a])
             area = 0.5 * np.linalg.norm(fn, axis=1)
@@ -611,7 +699,8 @@ def _trace(surfaces, emitters, bvh, owners, offsets, final=False):
                 blur_r = hd * radius / np.maximum(ldist, 1e-3)
                 blur_t = thd * IOR * radius / np.maximum(ldist, 1e-3)   # (out of the water the lamp looks n x wider)
             tm = (tint[a] + tint[b] + tint[c]) / 3.0               # (the colour of the glass the light came through)
-            _land(acc, co, tri, hit, hn, hd, hidx, (base * R)[:, None] * att_ref * col[None, :] * tm, blur_r, col, offsets)
+            _land(acc, co, tri, hit, hn, hd, hidx, (base * R)[:, None] * att_ref * col[None, :] * tm, blur_r, col, offsets,
+                  spread=lamp_under and bool(below.any()))
             if refract and below.any():
                 T = np.where(below, 1.0 - R, 0.0)
                 _land(acc, co, tri, thit, thn, thd, thidx, (base * T)[:, None] * att_in * col[None, :] * tm, blur_t, col,

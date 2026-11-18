@@ -43,6 +43,19 @@ Requirements: Windows 10/11, [.NET 8 SDK](https://dotnet.microsoft.com/download)
 Code comments are in English. The interface texts are written in Italian in the source (`L.T("…")`) and translated
 into English in `app/Simpler/L.En.cs`.
 
+## Project, name and logo
+
+Simpler is created, owned and maintained by **Luca Rodolfi**, who decides its direction, its roadmap and its
+releases. The only official builds are the ones published on <https://www.rodluc.com/simpler/en/>.
+
+- The **name «Simpler» and its logo belong to the author** and are not covered by the GPL. You may use them to
+  refer to the program; you may not use them for a modified version, a product or a service in a way that
+  suggests it is the official Simpler or is endorsed by the author (see section 4 of `credits/en/License.md`).
+- The GPL lets you study, modify and redistribute the code. **A modified version must say clearly that it is
+  modified and must have a different name.**
+- This repository mirrors the author's sources and is updated by him at each release. Bug reports and
+  suggestions are welcome as issues; whether and how a proposed change enters Simpler is decided by the author.
+
 ## License
 
 Simpler's code is © 2026 Luca Rodolfi, released under the **GNU General Public License version 3 or, at your

@@ -343,7 +343,7 @@ namespace Simpler
             if (dlg.ShowDialog(this) != true) return;
             mw?.Keep("render", dlg.FileName);
             BitmapEncoder enc = dlg.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || dlg.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase)
-                ? new JpegBitmapEncoder { QualityLevel = 95 } : new PngBitmapEncoder();
+                ? new JpegBitmapEncoder { QualityLevel = 100 } : new PngBitmapEncoder();
             enc.Frames.Add(BitmapFrame.Create(_after ?? _before));
             using var fs = File.Create(dlg.FileName);
             enc.Save(fs);

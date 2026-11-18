@@ -5430,7 +5430,7 @@ async function saveViewImage() {
         return;
       }
     }
-    post({ type: 'saveView', data: snapshot(100000, 100000, 0.95), ext: 'jpg', kind: 'realtime' });
+    post({ type: 'saveView', data: snapshot(100000, 100000, 1.0), ext: 'jpg', kind: 'realtime' });
   } catch (err) { viewLog('save view: ' + err); }
 }
 

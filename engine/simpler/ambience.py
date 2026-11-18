@@ -1157,6 +1157,64 @@ def _ground_disc(me):
     me.update()
 
 
+GROUND_Z = -0.004                      # the ground of Simpler: just under z = 0
+GROUND_GAP = 0.004                     # ... and this much under a floor of the scene that lies lower
+GROUND_AUTO = "simpler_ground_z"       # the height Simpler gave it (another one: the user moved it, it stays)
+
+
+def _ground_height(ob):
+    """Where the ground goes: GROUND_Z, or GROUND_GAP under the lowest floor of the scene found within 10 cm under
+    z = 0. (Luca, 18/11, the cathedral: its floor ends at -6.5 mm, the ground at -4 mm lay 2.5 mm ABOVE it - in the
+    real-time view the floor appeared and disappeared as the camera moved, in the path tracing the ground covered it.)
+    Rays straight down from just above z = 0 over the extent of the scene: only what lies between +3 mm and -10 cm
+    is met (not the furniture standing on the floor)."""
+    from .core import INTERNAL_KEY
+    try:
+        lo = [1e18, 1e18]; hi = [-1e18, -1e18]
+        for o in bpy.context.scene.objects:
+            if o.type != "MESH" or o is ob or o.get(INTERNAL_KEY) or o.get("simpler_trashed") or o.hide_render:
+                continue
+            for c in o.bound_box:
+                p = o.matrix_world @ Vector(c)
+                lo = [min(lo[0], p.x), min(lo[1], p.y)]; hi = [max(hi[0], p.x), max(hi[1], p.y)]
+        if lo[0] > hi[0]:
+            return GROUND_Z
+        lo = [max(v, -150.0) for v in lo]; hi = [min(v, 150.0) for v in hi]
+        dg = bpy.context.evaluated_depsgraph_get()
+        scene = bpy.context.scene
+        lowest = None
+        n = 24
+        for i in range(n):
+            for j in range(n):
+                x = lo[0] + (hi[0] - lo[0]) * (i + 0.5) / n
+                y = lo[1] + (hi[1] - lo[1]) * (j + 0.5) / n
+                z, left = 0.003, 0.103
+                for _ in range(4):                 # (past the ground itself, a twin, a decal)
+                    ok, loc, nrm, _i, hob, _m = scene.ray_cast(dg, Vector((x, y, z)), Vector((0.0, 0.0, -1.0)), distance=left)
+                    if not ok or hob is None:
+                        break
+                    src = hob.original if hob.original is not None else hob
+                    if src is ob or (src.get(INTERNAL_KEY) and not src.get("simpler_twin")) or src.get("simpler_decal") \
+                            or src.get(KIND_KEY_DECAL) == "decal":
+                        step = (z - loc.z) + 0.0005
+                        z -= step; left -= step
+                        if left <= 0:
+                            break
+                        continue
+                    if nrm.z > 0.7 and (lowest is None or loc.z < lowest):
+                        lowest = loc.z
+                    break
+        if lowest is None:
+            return GROUND_Z
+        return min(GROUND_Z, round(lowest - GROUND_GAP, 4))
+    except Exception as exc:  # noqa: BLE001
+        log("SIMPLER_GROUND", f"height not measured: {exc}")
+        return GROUND_Z
+
+
+KIND_KEY_DECAL = "simpler_kind"
+
+
 def _ground(kind, force=False):
     """The ground object. Its material is Simpler's only until the user gives it another one: a change of sky, sun or
     preset keeps the user's material; choosing a ground in the panel (force) puts Simpler's back."""
@@ -1176,9 +1234,18 @@ def _ground(kind, force=False):
         _ground_disc(me)
         ob = bpy.data.objects.new(tr("Suolo"), me)
         ob[GROUND_KEY] = True
-        ob.location.z = -0.004            # just under a floor already in the scene (no flicker)
+        ob.location.z = GROUND_Z          # just under a floor already in the scene (no flicker)
+        ob[GROUND_AUTO] = GROUND_Z
         link(ob)
         ensure_id(ob)
+    # the height stays Simpler's while the user has not moved it: under the lowest floor of the scene (_ground_height)
+    auto = ob.get(GROUND_AUTO)
+    if abs(ob.location.z - (GROUND_Z if auto is None else float(auto))) < 1e-5:
+        z = _ground_height(ob)
+        if abs(z - ob.location.z) > 1e-5:
+            log("SIMPLER_GROUND", f"ground from {ob.location.z * 1000:.1f} mm to {z * 1000:.1f} mm: a floor of the scene lies lower")
+            ob.location.z = z
+        ob[GROUND_AUTO] = z
     me = ob.data
     rebuilt = False
     if len(me.vertices) == 4 and len(me.polygons) == 1:

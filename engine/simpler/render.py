@@ -576,6 +576,19 @@ _THICK = {}
 _VESSEL = {}
 VESSEL_SIZE = 1.2          # metres: the largest side of a thin-walled piece that draws sharp caustics
 VESSEL_FACINGS = 12        # ... and at least this many directions of its faces hold 85% of its surface
+VESSEL_SHORTCUT = 0.5      # how much of the light still goes straight through a thin-walled caster (see _caster_strength)
+
+
+def _caster_strength(ob):
+    """How far the glass shadow shortcut is turned off on a caster (object property simpler_caster, read by the glass
+    shader): 1 on water and solid glass - their light arrives only as a real caustic. On a thin-walled vessel half of
+    the light keeps going straight through: tried on Luca's cut whisky glass (18/11), MNEE alone finds almost no path
+    through its relief and the shadow was black, with no caustic in it; with half the shortcut the glass has a shadow,
+    the pattern of its cuts in it and the highlights MNEE does find, on a plain glass the sharp caustics on top."""
+    from . import water
+    if water.water_material(ob) is not None or _thickness(ob) >= 0.02:
+        return 1.0
+    return 1.0 - VESSEL_SHORTCUT
 
 
 def _vessel(ob):
@@ -647,6 +660,11 @@ def _thickness(ob):
     try:
         bm.from_mesh(me)
         bm.transform(__import__("mathutils").Matrix.Diagonal((*sc, 1.0)))
+        # (18/11, Luca's whisky glass, a glTF: 5,376 open edges, thickness 0 - never a caster) the vertices doubled
+        # along the seams of a model (glTF and others split them at every change of UV or normal) welded first:
+        # the mesh is closed, only written in pieces
+        import bmesh as _bmesh
+        _bmesh.ops.remove_doubles(bm, verts=bm.verts[:], dist=1e-6)
         if any(not e.is_manifold for e in bm.edges):
             t = 0.0
         else:
@@ -727,8 +745,9 @@ def refresh_caustics(force=False):
                 ob.cycles.is_caustics_caster = caster
                 ob.cycles.is_caustics_receiver = receiver
                 changed = True
-            if float(ob.get("simpler_caster", 0.0)) != (1.0 if caster else 0.0):
-                ob["simpler_caster"] = 1.0 if caster else 0.0      # (its glass shadow shortcut off: glass.py)
+            strength = _caster_strength(ob) if caster else 0.0
+            if abs(float(ob.get("simpler_caster", 0.0)) - strength) > 1e-6:
+                ob["simpler_caster"] = strength                    # (its glass shadow shortcut off: glass.py)
                 changed = True
         elif ob.type == "LIGHT":
             from . import refcaustics

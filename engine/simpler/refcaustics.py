@@ -47,6 +47,7 @@ def _progress(phase, detail="", fraction=None):
         pass
 
 GROUP = "Simpler Reflected Caustics"
+GROUP_VERSION = 2       # 2 (18/11): each facing weighted by the surface's own normal (before: all or nothing)
 TAG = "simpler_refcaustics"
 IMG_TAG = "simpler_refcaustics_img"
 IOR = 1.333
@@ -771,7 +772,12 @@ def _splat(t, final):
         ax, sg = AXES[k]
         texel *= grow
         cosn = np.abs(N[sel, ax])
-        flux = F[sel] * (w[sel, k] * cosn)[:, None]
+        # (18/11) the irradiance itself in every facing the surface looks at: the shader weights the facings with the
+        # normal of the surface it shades. Before the weight was here (of the surface the light landed on) and the
+        # shader took a facing whole as soon as the normal leaned that way by 0.6 degrees: each face of a seat
+        # leaning a little towards a wall took all the light of that wall, the next face none - squares of light
+        # (Luca: «quei riquadri sugli oggetti»), seen in the Emission pass of his render, above the water too.
+        flux = F[sel] * cosn[:, None]
         W, H = int(math.ceil((u1 - u0) / texel)) + 1, int(math.ceil((v1 - v0) / texel)) + 1
         want = np.clip(np.ceil(cover / (texel * texel) * 0.75), 1, 4096)
         n = want.astype(np.int64)
@@ -996,7 +1002,8 @@ def _group():
         # (1.73.8) every picture still plugged in: the check of the missing textures at opening took these pictures
         # (in a temporary folder, gone) for missing ones of the project and unplugged them - the light was made
         # again but never reached the surfaces, until the switch was turned off and on. A group left so is rebuilt
-        if all(n is not None and any(o.is_linked for o in n.outputs) for n in imgs):
+        if all(n is not None and any(o.is_linked for o in n.outputs) for n in imgs) \
+                and g.get("simpler_version") == GROUP_VERSION:
             return g
         # group of 1.13.50-53: its nodes built again in the same datablock. The sockets stay as they are - clearing
         # them cut the links of every wrapped material and left those materials black
@@ -1033,7 +1040,18 @@ def _group():
         L.new(dp.outputs[0], lo.inputs[0])
         hi = Nn.new("ShaderNodeMath"); hi.operation = "LESS_THAN"; hi.name = f"hi{k}"
         L.new(dp.outputs[0], hi.inputs[0])
-        m1 = Nn.new("ShaderNodeMath"); m1.operation = "MULTIPLY"; L.new(gt.outputs[0], m1.inputs[0]); L.new(lo.outputs[0], m1.inputs[1])
+        # the weight of this facing for the surface being shaded: the square of its normal along the axis (they add
+        # up to 1 over the facings). sq{k} = 0: all or nothing as before (the bottom of the sea, an image of its own)
+        sq = Nn.new("ShaderNodeMath"); sq.operation = "MULTIPLY"
+        L.new(fc.outputs[0], sq.inputs[0]); L.new(fc.outputs[0], sq.inputs[1])
+        sq1 = Nn.new("ShaderNodeMath"); sq1.operation = "SUBTRACT"; sq1.inputs[1].default_value = 1.0
+        L.new(sq.outputs[0], sq1.inputs[0])
+        wk = Nn.new("ShaderNodeMath"); wk.operation = "MULTIPLY_ADD"; wk.name = f"sq{k}"
+        wk.inputs[1].default_value = 1.0; wk.inputs[2].default_value = 1.0
+        L.new(sq1.outputs[0], wk.inputs[0])
+        gw = Nn.new("ShaderNodeMath"); gw.operation = "MULTIPLY"
+        L.new(gt.outputs[0], gw.inputs[0]); L.new(wk.outputs[0], gw.inputs[1])
+        m1 = Nn.new("ShaderNodeMath"); m1.operation = "MULTIPLY"; L.new(gw.outputs[0], m1.inputs[0]); L.new(lo.outputs[0], m1.inputs[1])
         m2a = Nn.new("ShaderNodeMath"); m2a.operation = "MULTIPLY"; L.new(m1.outputs[0], m2a.inputs[0]); L.new(hi.outputs[0], m2a.inputs[1])
         # the depth where the light landed (alpha of the image, from the start of the range): only that surface
         rel = Nn.new("ShaderNodeMath"); rel.operation = "SUBTRACT"; rel.name = f"rel{k}"
@@ -1062,13 +1080,16 @@ def _group():
     addsh = Nn.new("ShaderNodeAddShader")
     L.new(gi.outputs[0], addsh.inputs[0]); L.new(em.outputs[0], addsh.inputs[1])
     L.new(addsh.outputs[0], go.inputs[0])
+    g["simpler_version"] = GROUP_VERSION
     return g
 
 
-def _set_group(maps, imgs):
+def _set_group(maps, imgs, whole=()):
+    """whole: slots whose image is taken whole by every surface facing that way (the bottom of the sea)."""
     g = _group()
     for k in range(SLOTS):
         on = g.nodes[f"on{k}"]; tex = g.nodes[f"img{k}"]
+        g.nodes[f"sq{k}"].inputs[1].default_value = 0.0 if k in whole else 1.0
         if k not in maps:
             on.inputs[1].default_value = 0.0
             tex.image = None
@@ -1294,7 +1315,7 @@ def ensure(final=False):
             maps[4 * LAYERS + LAYERS - 1] = sea_bottom[0]
             receivers |= sea_bottom[1]
         imgs = _write_images(maps)
-        _set_group(maps, imgs)
+        _set_group(maps, imgs, {4 * LAYERS + LAYERS - 1} if sea_bottom is not None else ())
         t3 = time.time()
         _CACHE.update(key=key, receivers=receivers)
         LAST.update(state="on", seconds=round(t3 - t0, 2), rays=int(rays), receivers=len(receivers), when=time.time())

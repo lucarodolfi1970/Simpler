@@ -66,6 +66,25 @@ bpy.app.handlers.render_stats.append(_stats)
 print(f"SIMPLER_JOB {scene.render.resolution_x}x{scene.render.resolution_y} samples={scene.cycles.samples} "
       f"device={scene.cycles.device} simplify={scene.render.use_simplify} images={len(bpy.data.images)}", flush=True)
 scene.render.filepath = out
+# (18/11, the squares of light on the sofa under the water: Luca's scene cannot be rendered outside his PC) with the file
+# test_out/luce.on in the Simpler folder this render also keeps the light apart (emission = the light reflected by
+# the water, direct and indirect diffuse, colour, glossy, transmission) and writes it to test_out/luce/luce.exr, with
+# the images of the light reflected by the water and where they are projected. One render: the flag is removed.
+_luce = None
+try:
+    _root0 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if os.path.isfile(os.path.join(_root0, "test_out", "luce.on")):
+        os.remove(os.path.join(_root0, "test_out", "luce.on"))
+        _luce = os.path.join(_root0, "test_out", "luce")
+        os.makedirs(_luce, exist_ok=True)
+        for _vl in scene.view_layers:
+            for _a in ("use_pass_emit", "use_pass_diffuse_direct", "use_pass_diffuse_indirect", "use_pass_diffuse_color",
+                       "use_pass_glossy_direct", "use_pass_glossy_indirect", "use_pass_transmission_direct",
+                       "use_pass_transmission_indirect", "use_pass_z", "use_pass_normal"):
+                setattr(_vl, _a, True)
+        print("SIMPLER_LIGHTPASSES on", flush=True)
+except Exception as _exc:
+    print(f"SIMPLER_LIGHTPASSES not set: {_exc}", flush=True)
 _meter = scene.get("simpler_meter")
 if _meter:
     # (1.79.0) «Esposizione sull'inquadratura» (simpler/meter.py): the image itself is measured, then saved with its
@@ -98,6 +117,65 @@ if _meter:
 else:
     bpy.ops.render.render(write_still=True)
 T["end"] = time.time()
+if _luce:
+    try:
+        import shutil
+        _st = scene.render.image_settings
+        _keep = (getattr(_st, "media_type", None), _st.file_format, _st.color_depth, _st.exr_codec)
+        if hasattr(_st, "media_type"):
+            _st.media_type = "MULTI_LAYER_IMAGE"
+        _st.file_format = "OPEN_EXR_MULTILAYER"
+        _st.color_depth = "16"; _st.exr_codec = "DWAA"
+        try:
+            bpy.data.images["Render Result"].save_render(os.path.join(_luce, "luce.exr"), scene=scene)
+        finally:
+            if _keep[0] is not None:
+                _st.media_type = _keep[0]
+            _st.file_format, _st.color_depth, _st.exr_codec = _keep[1:]
+        with open(os.path.join(_luce, "info.txt"), "w", encoding="utf-8") as _f:
+            _cam = scene.camera
+            _f.write(f"{scene.render.resolution_x}x{scene.render.resolution_y} samples={scene.cycles.samples}\n")
+            if _cam is not None:
+                _f.write(f"camera\t{[list(r) for r in _cam.matrix_world]}\tlens={_cam.data.lens}\tsensor={_cam.data.sensor_width}\n")
+            for _o in scene.objects:
+                if _o.type == "LIGHT":
+                    _f.write(f"light\t{_o.name}\t{_o.data.type}\t{_o.data.energy}\t{list(_o.matrix_world.translation)}\t"
+                             f"hide={_o.hide_render}\tcaustics={_o.data.cycles.is_caustics_light}\n")
+                elif _o.type == "MESH" and (_o.cycles.is_caustics_caster or _o.get("simpler_caster") or "Plane.002" in _o.name
+                                            or "sofa" in _o.name.lower()):
+                    _bb = [_o.matrix_world @ __import__("mathutils").Vector(c) for c in _o.bound_box]
+                    _f.write(f"mesh\t{_o.name}\tcaster={_o.cycles.is_caustics_caster}\tsimpler_caster={_o.get('simpler_caster')}\t"
+                             f"hide={_o.hide_render}\tz={min(p.z for p in _bb):.3f}..{max(p.z for p in _bb):.3f}\t"
+                             f"x={min(p.x for p in _bb):.2f}..{max(p.x for p in _bb):.2f}\ty={min(p.y for p in _bb):.2f}..{max(p.y for p in _bb):.2f}\t"
+                             f"mats={[sl.material.name for sl in _o.material_slots if sl.material]}\t"
+                             f"mods={[(m.name, m.type, m.show_render) for m in _o.modifiers]}\n")
+            try:
+                _dg = bpy.context.evaluated_depsgraph_get()
+                for _o in scene.objects:
+                    if _o.type == "MESH" and (_o.get("simpler_caster") or "Plane.002" in _o.name):
+                        _e = _o.evaluated_get(_dg)
+                        _f.write(f"evaluated\t{_o.name}\tverts={len(_e.data.vertices)}\tpolys={len(_e.data.polygons)}\t"
+                                 f"scale={list(_o.scale)}\tprops={ {k: (v if isinstance(v, (int, float, str)) else str(v)[:300]) for k, v in _o.items()} }\n")
+                        for _m in _o.material_slots:
+                            if _m.material is not None:
+                                _f.write(f"watermat\t{_m.material.name}\t{ {k: str(v)[:600] for k, v in _m.material.items()} }\n")
+            except Exception as _exc:
+                _f.write(f"evaluated failed: {_exc}\n")
+            _g = bpy.data.node_groups.get("Simpler Reflected Caustics")
+            if _g is not None:
+                for _k in range(24):
+                    _t = _g.nodes.get(f"img{_k}"); _on = _g.nodes.get(f"on{_k}"); _mp = _g.nodes.get(f"map{_k}")
+                    if _t is None or _t.image is None:
+                        continue
+                    _src = bpy.path.abspath(_t.image.filepath)
+                    _f.write(f"slot\t{_k}\ton={_on.inputs[1].default_value}\tscale={list(_mp.inputs[1].default_value)}\t"
+                             f"offset={list(_mp.inputs[2].default_value)}\tlo={_g.nodes[f'lo{_k}'].inputs[1].default_value}\t"
+                             f"hi={_g.nodes[f'hi{_k}'].inputs[1].default_value}\tsize={list(_t.image.size)}\t{_src}\n")
+                    if 16 <= _k < 20 and os.path.isfile(_src):
+                        shutil.copy(_src, os.path.join(_luce, f"slot{_k}.exr"))
+        print(f"SIMPLER_LIGHTPASSES written to {_luce}", flush=True)
+    except Exception as _exc:
+        print(f"SIMPLER_LIGHTPASSES not written: {_exc}", flush=True)
 # (17/11, the dots of the haze on the clouds: Luca's scene cannot be rendered outside his PC) with the file
 # test_out/passi.on in the Simpler folder, the passes of this render (picture, Mist, Depth, alpha, Environment, guides of
 # the denoiser) are also written to test_out/passi/passi.exr - to rebuild the haze of the compositor on them and try

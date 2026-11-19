@@ -111,7 +111,11 @@ namespace Simpler
             return null;
         }
 
-        /// <summary>Bundled copy first, then the saved setting, then a standard Blender 5.x install.</summary>
+        public const string BlenderVersion = "5.2";
+
+        /// <summary>Bundled copy first, then the saved setting, then a standard Blender 5.2 install.
+        /// Only 5.2: Simpler is tuned and tested on that version (19/11: before, any "Blender 5*" was taken, newest first,
+        /// so a PC with 5.3 installed started an engine nobody had tried).</summary>
         public static string? FindBlender()
         {
             var bundled = Path.Combine(AppContext.BaseDirectory, "blender", "blender.exe");
@@ -122,7 +126,7 @@ namespace Simpler
             {
                 var foundation = Path.Combine(root, "Blender Foundation");
                 if (!Directory.Exists(foundation)) continue;
-                var best = Directory.GetDirectories(foundation, "Blender 5*")
+                var best = Directory.GetDirectories(foundation, "Blender " + BlenderVersion + "*")
                     .OrderByDescending(d => d, StringComparer.OrdinalIgnoreCase)
                     .Select(d => Path.Combine(d, "blender.exe"))
                     .FirstOrDefault(File.Exists);

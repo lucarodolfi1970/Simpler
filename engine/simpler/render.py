@@ -554,11 +554,45 @@ def apply_caustics(enabled):
     refresh_caustics(force=True)
 
 
+NO_CAUSTICS_KEY = "simpler_nocaustics"
+
+
+def no_caustics(ob):
+    """«Genera caustiche» turned off on this piece or on a group above it (Luca, 19/11: a value of the model, like
+    «Niente pioggia»): it draws no sharp caustic of any kind - glass, metal, water."""
+    o = ob
+    while o is not None:
+        if o.get(NO_CAUSTICS_KEY):
+            return True
+        o = o.parent
+    return False
+
+
+def set_no_caustics(ids, value):
+    """POST caustics/off {ids, value}: «Genera caustiche» off (value true) on these objects and on the pieces inside
+    them; on again: cleared there and on the groups above (as snow.set_flag)."""
+    from .core import with_trees
+    from . import rain
+    for o in with_trees([find(i) for i in ids]):
+        if value:
+            o[NO_CAUSTICS_KEY] = 1
+        elif NO_CAUSTICS_KEY in o:
+            del o[NO_CAUSTICS_KEY]
+    if not value:
+        for o in rain.ancestors([find(i) for i in ids]):
+            if NO_CAUSTICS_KEY in o:
+                del o[NO_CAUSTICS_KEY]
+    invalidate()
+    return {"ok": True}
+
+
 def is_caustic_caster(ob):
     """Does this piece draw sharp caustics (MNEE)? Glass, gems and water that bend the light - not the thin flat
     panes of windows and glass doors: through MNEE they would only stop the sun (a room behind a window went dark
     with the caustics on), and they make no caustic worth the cost anyway. Water with real waves always does."""
     if ob.type != "MESH" or not any(materials.is_transmissive(s.material) for s in ob.material_slots):
+        return False
+    if no_caustics(ob):
         return False
     from . import water
     wm = water.water_material(ob)
@@ -739,7 +773,9 @@ def refresh_caustics(force=False):
         if ob.type == "MESH":
             if twins.is_twin(ob) or ob.get("simpler_water_body") or ob.get("simpler_fog_domain") or ob.get("simpler_clouds") or ob.get("simpler_ocean"):
                 continue                  # (the body of the water stays out of MNEE, see water.py)
-            caster = enabled and is_caustic_caster(ob) and not _encloses(ob, glows)
+            # («Caustiche rifratte» off: no sharp caustic through anything - glass and water let the light straight through)
+            caster = enabled and bool(STATE.config.get("causticsRefractive", True)) and is_caustic_caster(ob) \
+                and not _encloses(ob, glows)
             receiver = enabled and not caster
             # (18/11) a thin-walled vessel: its light is made by glasscaustics.py (followed from the light), not by
             # MNEE - no caster flag for Cycles, and its shadow shortcut all off (the light arrives only that way)

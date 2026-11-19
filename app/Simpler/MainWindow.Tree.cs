@@ -590,6 +590,8 @@ namespace Simpler
 
             // ---- look
             Section();
+            // (19/11, Luca: «non riesco mai a trovarlo») the panel with the values of the object, whatever panel is open
+            Item(L.T("Proprietà"), async () => await ShowRightPanel(""));
             Item(L.T("Inquadra (F)"), FrameSelection);
             if (fromView && !multi && one.Parent != "" && _scene.ById.TryGetValue(one.Parent, out var parentObj))
                 Item(L.F("Seleziona il gruppo «{0}» (Ctrl+clic destro)", parentObj.Name), async () => { await Task.Yield(); Select(parentObj.Id); });

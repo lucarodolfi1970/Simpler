@@ -279,24 +279,28 @@ namespace Simpler
                 };
             }
             cr.Children.Add(Row(L.T("Caustiche"), cmodes));
-            if (mode > 0)
-                cr.Children.Add(Hint(L.T("Con le caustiche attive il filtro riflessi e il limite della luce indiretta sono a 0: l'immagine può richiedere più campioni per essere pulita.")));
-            var ca = Advanced(cr, "caustics");
+            // (19/11, Luca: «continuo a non capire a cosa servono») what is on, said plainly and in sight: the two
+            // kinds of caustics and the light of the water; the three sliders that only clean the path tracing apart
             if (mode > 0)
             {
-                ca.Body.Children.Add(Switch(L.T("Caustiche riflesse"), "causticsReflective", refl, L.T("Luce riflessa da metalli e specchi (può aggiungere rumore)")));
-                ca.Body.Children.Add(Switch(L.T("Caustiche rifratte"), "causticsRefractive", refr, L.T("Luce che attraversa vetro e gemme (può aggiungere rumore)")));
+                cr.Children.Add(Switch(L.T("Caustiche riflesse"), "causticsReflective", refl, L.T("La luce riflessa dai metalli lucidi e dall'esterno dei vetri. Spento: nessuna caustica riflessa, neanche quelle nitide")));
+                cr.Children.Add(Switch(L.T("Caustiche rifratte"), "causticsRefractive", refr, L.T("La luce che attraversa vetro, gemme e acqua. Spento: la luce li attraversa dritta, senza disegni, anche con le caustiche nitide")));
             }
             // light reflected by the waves of water onto walls and the underside of bridges (engine refcaustics.py)
             bool rcOn = B("causticsReflected", false);
-            ca.Body.Children.Add(Switch(L.T("Luce riflessa dall'acqua"), "causticsReflected", rcOn,
+            cr.Children.Add(Switch(L.T("Luce riflessa dall'acqua"), "causticsReflected", rcOn,
                 L.T("Il riflesso di sole e luci sulle onde disegna il reticolo di luce sui muri vicini, sotto i ponti e sul fondo; con le caustiche Nitide anche la luce delle lampade sott'acqua che esce sulle pareti e sul soffitto. Solo acqua con onde vere, solo path tracing. Il reticolo si forma con onde ampie (da 50 cm in su) e superfici chiare")));
             if (rcOn)
             {
                 var rcHint = (TextBlock)Hint(RefCausticsText(_renderSettings["refCaustics"]));
-                ca.Body.Children.Add(rcHint);
+                cr.Children.Add(rcHint);
                 _ = WatchRefCaustics(rcHint);
             }
+            if (mode == 2)
+                cr.Children.Add(Hint(L.T("Nitide: la luce di bicchieri, bottiglie e metalli lucidi è seguita partendo dalla luce stessa; quella di gemme, vetri pieni e acqua è calcolata dal path tracing. Ogni modello può esserne escluso: Proprietà ▸ Caustiche ▸ Genera caustiche.")));
+            var ca = Advanced(cr, "caustics");
+            ca.Body.Children.Add(Theme.Label(L.T("Pulizia del rumore"), 12, Theme.TextSoft, FontWeights.SemiBold));
+            ca.Body.Children.Add(Hint(L.T("Questi tre cursori puliscono l'immagine del path tracing e non toccano le caustiche nitide di vetro, metallo e acqua. Con le caustiche accese il filtro riflessi e il limite della luce indiretta partono da 0: l'immagine può richiedere più campioni per essere pulita.")));
             ca.Body.Children.Add(Slider(L.T("Filtro riflessi"), "blurGlossy", C("blurGlossy", 0.5), 0, 2, false, "0.##", null,
                 L.T("Ammorbidisce leggermente i riflessi indiretti per ridurre il rumore (0 = esatto)")));
             ca.Body.Children.Add(Slider(L.T("Limite luce diretta"), "clampDirect", C("clampDirect", 0), 0, 100, false, "0.#", null,

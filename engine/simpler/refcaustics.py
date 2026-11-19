@@ -92,6 +92,8 @@ def _water_objects():
         if ob.type != "MESH" or ob.get("simpler_trashed") or ob.hide_render or not ob.visible_get():
             continue
         wm = water.water_material(ob)
+        if wm is not None and ob.get("simpler_nocaustics"):
+            continue                                    # («Genera caustiche» off on this water)
         if wm is not None and water.mat_settings(wm)["waves"]["on"] and ob.modifiers.get(water.MOD) is not None:
             out.append(water.grid_of(ob) or ob)        # (a large surface: its grid around the camera is the water)
     return out

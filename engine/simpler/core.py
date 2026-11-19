@@ -335,6 +335,8 @@ def object_json(ob):
         out["noShelter"] = True           # «Non fa riparo»: the rain reaches what is under it (rain.py)
     if ob.get("simpler_nomantle"):
         out["noMantle"] = True            # «Senza mantello»: no layer of snow on it (snow.py)
+    if ob.get("simpler_nocaustics"):
+        out["noCaustics"] = True          # «Genera caustiche» off: this piece draws none (render.no_caustics)
     if ob.get("simpler_snow_detail") in ("high", "low"):
         out["snowDetail"] = ob["simpler_snow_detail"]   # «Dettaglio neve» of the model (snow.py)
     # (lights and cameras inside a library model stay objects of the view of their own - a stale mark on them, copied

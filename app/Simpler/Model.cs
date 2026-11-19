@@ -19,6 +19,7 @@ namespace Simpler
         public bool NoSnow;                 // «Sempre asciutto» → no snow (rain.snow_dry)
         public bool NoShelter;              // «Non fa riparo»: what is under it gets the rain (a moving car)
         public bool NoMantle;               // «Senza mantello»: no layer of snow on it (snow.py)
+        public bool NoCaustics;             // «Genera caustiche» off: it draws no sharp caustic (render.no_caustics)
         public string SnowDetail = "auto";  // «Dettaglio neve»: auto | high | low (snow.py)
         public int PaintCount;              // its pieces (points drawn as instances)
         public string PaintModel = "";      // a painted piece (or a part of one): library model it comes from
@@ -84,6 +85,7 @@ namespace Simpler
             NoSnow = (bool?)o["noSnow"] ?? false,
             NoShelter = (bool?)o["noShelter"] ?? false,
             NoMantle = (bool?)o["noMantle"] ?? false,
+            NoCaustics = (bool?)o["noCaustics"] ?? false,
             SnowDetail = (string?)o["snowDetail"] ?? "auto",
             Paint = o["paint"] is JsonValue pv && (pv.TryGetValue<bool>(out var pb) ? pb : pv.TryGetValue<int>(out var pi) && pi != 0),
             Order = (int?)o["order"] ?? int.MaxValue,

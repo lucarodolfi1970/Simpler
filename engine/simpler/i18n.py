@@ -195,6 +195,7 @@ EN = {
     "Tratto troppo lungo: dividilo in più tratti": "Stroke too long: split it into several strokes",
     "Cancella la neve dipinta": "Clear the painted snow",
     "Senza mantello": "No snow mantle",
+    "Genera caustiche": "Casts caustics",
     "Salvataggio automatico": "Autosave",
     "Salvataggio del progetto": "Saving the project",
     "Apertura del progetto": "Opening the project",

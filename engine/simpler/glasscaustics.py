@@ -61,6 +61,8 @@ def _is_vessel(ob):
         return False
     if water.water_material(ob) is not None:
         return False
+    if render.no_caustics(ob):
+        return False
     t = render._thickness(ob)
     return 0.0005 < t < 0.02 and render._vessel(ob) and not render._holds_lamp(ob)
 
@@ -98,12 +100,22 @@ def _is_metal(ob):
         return False
     if len(ob.data.polygons) < 8 or max(ob.dimensions) > METAL_SIZE or max(ob.dimensions) < 0.005:
         return False
+    from . import render
+    if render.no_caustics(ob):
+        return False
     return any(_metal_of(s.material) is not None for s in ob.material_slots)
+
+
+def _switch(key):
+    """«Caustiche riflesse» / «Caustiche rifratte» of the Rendering panel: they turn this light off too (Luca, 19/11:
+    «se metto reflective caustics off perché si vedono?» - they only spoke to the path tracing of Cycles)."""
+    from .render import STATE as RS
+    return bool(RS.config.get(key, True))
 
 
 def handles(ob):
     """Is the light through this piece made here (and not by MNEE)? Asked by render.refresh_caustics."""
-    return not STATE["failed"] and _is_vessel(ob)
+    return not STATE["failed"] and _switch("causticsRefractive") and _is_vessel(ob)
 
 
 def casters():
@@ -116,7 +128,9 @@ def casters():
         out = [bpy.data.objects.get(n) for n in STATE.get("names", ())]
         if all(o is not None for o in out):
             return out
-    out = [ob for ob in bpy.context.scene.objects if (_is_vessel(ob) or _is_metal(ob)) and ob.visible_get()]
+    refr, refl = _switch("causticsRefractive"), _switch("causticsReflective")
+    out = [ob for ob in bpy.context.scene.objects
+           if ((refr and _is_vessel(ob)) or (refl and _is_metal(ob))) and ob.visible_get()]
     STATE.update(epoch=epoch, names=[o.name for o in out])
     return out
 
@@ -161,7 +175,7 @@ def _optics(ob):
 def fingerprint(glasses, lights):
     """What the light through the glasses depends on (besides the lights, see refcaustics._fingerprint)."""
     from . import matedit, materials
-    parts = []
+    parts = [_switch("causticsRefractive"), _switch("causticsReflective")]
     lo = Vector((1e18,) * 3); hi = Vector((-1e18,) * 3)
     for ob in glasses:
         parts.append((ob.name, tuple(round(x, 5) for r in ob.matrix_world for x in r), len(ob.data.polygons),
@@ -354,6 +368,7 @@ def trace(glasses, lights, final=False, progress=None):
         return bisect.bisect_right(off_list, idx) - 1
 
     ray_cast = bvh.ray_cast
+    reflect_on = _switch("causticsReflective")      # (the streaks the outside of a glass throws around: reflected)
     acc = ([], [], [], [], [])
     rays = 0
     budget = RAYS_FINAL if final else RAYS_VIEW
@@ -430,7 +445,7 @@ def trace(glasses, lights, final=False, progress=None):
                     if kind == 1:
                         ok[i] = True; hit[i] = loc; hn[i] = nrm; hd[i] = dist_; hidx[i] = ix; ev[i] = e
                         wt[i] = (mcol ** e) if is_metal else w          # (a metal: its colour at every reflection)
-                    if refl is not None and bi == 0 and not is_metal:
+                    if refl is not None and bi == 0 and not is_metal and reflect_on:
                         rl, rn, rix, rdist = ray_cast(refl[0], refl[1], reach)
                         if rl is not None and glass.get(owner_of(rix), False) is False:
                             if rn.dot(refl[1]) > 0.0:

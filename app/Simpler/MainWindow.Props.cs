@@ -222,6 +222,15 @@ namespace Simpler
             ra.Body.Children.Add(note);
             ra.Done(objs.Any(x => x.Dry || x.NoSnow) || openS != false || nmS != false || objs.Any(x => x.SnowDetail != "auto"), null);
             _props.Children.Add(Theme.Card(rc, 16));
+
+            // (19/11, Luca) «Genera caustiche»: on by default; off, this model draws no sharp caustic (glass, metal,
+            // water). A value of the model like the ones above; with many objects selected: one click for all
+            var cc = new StackPanel();
+            cc.Children.Add(SectionTitle(L.T("Caustiche")));
+            var gen = new Toggle(L.T("Genera caustiche"), Tri(x => !x.NoCaustics), L.T("Acceso: con le caustiche «Nitide» questo oggetto (e quello che contiene) disegna la sua luce - attraverso il vetro, riflessa dal metallo lucido, dall'acqua. Spento: non ne disegna, la luce lo attraversa o lo colpisce come senza caustiche. È un valore del modello: resta con lui in libreria."));
+            gen.Toggled += async v => await Post("caustics/off", !v);
+            cc.Children.Add(gen);
+            _props.Children.Add(Theme.Card(cc, 16));
         }
 
         UIElement Shortcuts()

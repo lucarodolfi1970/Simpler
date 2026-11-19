@@ -463,6 +463,17 @@ def save(data):
                 os.remove(os.path.join(mdir, f))
             except OSError:
                 pass
+        # (19/11) the images of the light of water and glasses that went into the textures of a model saved before
+        # (15 MB each time: «glass #3» was 30 MB): never textures of the model, taken away when it is saved again
+        import re
+        tdir = os.path.join(mdir, "textures")
+        if os.path.isdir(tdir):
+            for f in os.listdir(tdir):
+                if re.fullmatch(r"axis\d+_\d{10,}\.exr", f):
+                    try:
+                        os.remove(os.path.join(tdir, f))
+                    except OSError:
+                        pass
     os.makedirs(mdir, exist_ok=True)
     # image nodes may show reduced copies (the views): the originals go with the model, put back by the preview process
     extra = set()
@@ -482,6 +493,11 @@ def save(data):
     # (19/11: «glass #3» went to the library with the two images of the light of the glasses, 15 MB, and their node
     # group - they were in the hidden original of one of its materials, a copy made while the light was on)
     refcaustics.strip_materials(origs)
+    # ... and in the materials of the mesh itself, under a material given to the object («Solo qui»: the slot is of
+    # the object, the mesh keeps its own - written with the model too). Seen in «glass #3» saved again on 19/11:
+    # «Material.001», used by nothing, still carried the images
+    under = {m for o in obs if getattr(o.data, "materials", None) is not None for m in o.data.materials if m is not None}
+    refcaustics.strip_materials(under - mats - origs)
     missing = _rescue_textures(mats | origs, extra, os.path.join(mdir, "textures"))
     tmp = os.path.join(previews.work_dir(), mid + "_src.blend")
     bpy.data.libraries.write(tmp, set(obs) | extra | origs, fake_user=True, path_remap="ABSOLUTE", compress=False)

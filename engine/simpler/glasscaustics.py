@@ -37,18 +37,22 @@ from mathutils.interpolate import poly_3d_calc
 from .core import log
 from .i18n import tr
 
-RAYS_VIEW = 60_000         # rays per light and glass (shared by the colours of a dispersive glass)
+RAYS_VIEW = 60_000         # rays per light, shared by the pieces (each at least RAYS_MIN_*) and by the colours of a dispersive glass
 RAYS_FINAL = 320_000
-MAX_EVENTS = 16            # crossings and inner reflections followed per ray
+RAYS_MIN_VIEW = 8_000
+RAYS_MIN_FINAL = 40_000
+AIM_CELLS = 128            # the rays are aimed: a first look on this many cells along the longer side finds where the piece is
+MAX_EVENTS = 40            # crossings and inner reflections followed per ray (a diamond keeps the light in for long)
 REACH_K = 10.0             # the light is followed up to this many times the size of the glass (at least REACH_MIN)
 REACH_MIN = 0.6
 TEXEL = 0.0004             # metres: the finest texel of the images when only glass draws in them
-SMOOTH_TRIS = 800_000      # a glass with more triangles: face normals (no interpolation)
+SMOOTH_TRIS = 4_000_000    # a piece with more triangles: face normals (no interpolation)
 METAL_MIN = 0.6            # «Metallo» from here up, «Rugosità» up to METAL_ROUGH, largest side up to METAL_SIZE (m)
 METAL_ROUGH = 0.35
 METAL_SIZE = 1.2
 SOFT_K = 0.2               # the patch of a ray that went its own way: blurred by this share of how far its cell landed apart
 SOFT_MAX = 0.03            # ... at most this share of the reach
+SOFT_SIZE = 0.12           # ... and this share of the size of the piece (a gem: sparkles, not a glow)
 STATE = {"failed": False}
 
 
@@ -63,8 +67,11 @@ def _is_vessel(ob):
         return False
     if render.no_caustics(ob):
         return False
-    t = render._thickness(ob)
-    return 0.0005 < t < 0.02 and render._vessel(ob) and not render._holds_lamp(ob)
+    # (19/11, Luca's rings beside a render of D5: «i diamantini come generano quelle caustiche, e guarda il nostro») every
+    # small round piece of glass, whatever its thickness: gems and solid glass too. Their meshes are often not closed
+    # (the diamonds of his rings: thickness 0 even welded, never casters before) - following the rays needs no
+    # closed mesh, and MNEE found little in a brilliant cut anyway
+    return render._vessel(ob) and not render._holds_lamp(ob)
 
 
 def _metal_of(mat):
@@ -215,9 +222,9 @@ def _glass_data(k, meta):
     nm = np.linalg.inv(m[:3, :3]).T
     cn = cn.reshape(-1, 3).astype(np.float64) @ nm.T
     cn /= np.maximum(np.linalg.norm(cn, axis=1, keepdims=True), 1e-12)
-    P = co[tv].reshape(nt, 3, 3); Nn = cn[tl].reshape(nt, 3, 3)
-    return ([[Vector(P[i, j]) for j in range(3)] for i in range(nt)],
-            [[Vector(Nn[i, j]) for j in range(3)] for i in range(nt)])
+    # (arrays: the Vectors of a triangle are made when a ray meets it - made for every triangle of two rings of
+    # 900,000 triangles, they took longer than all the rays)
+    return co[tv].reshape(nt, 3, 3), cn[tl].reshape(nt, 3, 3)
 
 
 def _follow(ray_cast, origin, direction, first_limit, reach, owner_of, glass, target, ior, eps=2e-5):
@@ -251,8 +258,12 @@ def _follow(ray_cast, origin, direction, first_limit, reach, owner_of, glass, ta
         mirror = data[3] if data is not None else glass.get(("metal", k), False)
         if data is not None:
             tri = idx - data[2]
-            w = poly_3d_calc(data[0][tri], loc)
-            nn = data[1][tri]
+            c = data[4].get(tri)
+            if c is None:
+                c = ([Vector(x) for x in data[0][tri]], [Vector(x) for x in data[1][tri]])
+                data[4][tri] = c
+            w = poly_3d_calc(c[0], loc)
+            nn = c[1]
             ns = nn[0] * w[0] + nn[1] * w[1] + nn[2] * w[2]
             if ns.length_squared > 1e-12:
                 ns.normalize()
@@ -290,7 +301,7 @@ def _follow(ray_cast, origin, direction, first_limit, reach, owner_of, glass, ta
     return 0, None, None, 0.0, -1, 0.0, events, refl
 
 
-def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach):
+def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach, size=None):
     """The triangles of light of one bundle (see the module): V = per ray (landed, hit, normal, distance, polygon,
     weight, events); power: W per cell triangle (rgb), before the weight of the rays; blur_k: blur per metre."""
     P, N, F, B, O = acc
@@ -319,7 +330,8 @@ def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach):
     rest = ~same
     if rest.any():
         landed = ok[a].astype(np.int8) + ok[b] + ok[c]
-        soft = np.clip(np.where(all3, SOFT_K * wide, 0.8 * SOFT_MAX * reach), 2.0 * spacing, SOFT_MAX * reach)
+        top = SOFT_MAX * reach if size is None else min(SOFT_MAX * reach, max(SOFT_SIZE * size, 4.0 * spacing))
+        soft = np.clip(np.where(all3, SOFT_K * wide, 0.8 * top), 2.0 * spacing, top)
         for v in (a, b, c):
             k = rest & ok[v]
             if not k.any():
@@ -339,6 +351,44 @@ def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach):
             O.append(own[v[k]])
 
 
+def _aimed_grid(u0, u1, v0, v1, n_rays, on_target):
+    """The grid of rays only where the piece is (19/11: the small diamonds set in a ring took 1% of the rays of a
+    grid over their box, the central stone 7%). A first look on AIM_CELLS cells: the cells with a corner on the
+    piece, and their neighbours, are filled with a fine grid - n_rays in all. Returns (U, V of the points, triangles,
+    spacing) or None."""
+    cs = max(u1 - u0, v1 - v0, 1e-9) / AIM_CELLS
+    ncu = max(1, int(math.ceil((u1 - u0) / cs))); ncv = max(1, int(math.ceil((v1 - v0) / cs)))
+    H = np.zeros((ncu + 1, ncv + 1), bool)
+    for i in range(ncu + 1):
+        for j in range(ncv + 1):
+            H[i, j] = on_target(u0 + i * cs, v0 + j * cs)
+    M = H[:-1, :-1] | H[1:, :-1] | H[:-1, 1:] | H[1:, 1:]
+    D = M.copy()
+    D[1:, :] |= M[:-1, :]; D[:-1, :] |= M[1:, :]; D[:, 1:] |= M[:, :-1]; D[:, :-1] |= M[:, 1:]
+    if not D.any():
+        return None
+    # (cells too many for the rays - fewer than 3 x 3 each: twice as large, until they are enough)
+    while D.sum() * 16 > n_rays and min(D.shape) > 1:
+        a2, b2 = (D.shape[0] + 1) // 2, (D.shape[1] + 1) // 2
+        P2 = np.zeros((a2 * 2, b2 * 2), bool); P2[:D.shape[0], :D.shape[1]] = D
+        D = P2.reshape(a2, 2, b2, 2).any(axis=(1, 3))
+        cs *= 2.0
+    cells = np.argwhere(D)
+    m = int(round(math.sqrt(max(1, n_rays) / len(cells)))) - 1
+    m = min(max(m, 1), 64)
+    spacing = cs / m
+    a = np.arange(m + 1) / m
+    A, B = np.meshgrid(a, a, indexing="ij")                  # (m+1, m+1) inside one cell
+    U = (u0 + (cells[:, 0, None, None] + A[None]) * cs).reshape(-1)
+    V = (v0 + (cells[:, 1, None, None] + B[None]) * cs).reshape(-1)
+    idx = np.arange((m + 1) * (m + 1)).reshape(m + 1, m + 1)
+    ta = idx[:-1, :-1].ravel(); tb = idx[1:, :-1].ravel(); tc = idx[1:, 1:].ravel(); td = idx[:-1, 1:].ravel()
+    t1 = np.concatenate([np.stack([ta, tb, tc], 1), np.stack([ta, tc, td], 1)])
+    base = (np.arange(len(cells)) * (m + 1) * (m + 1))[:, None, None]
+    tri = (t1[None] + base).reshape(-1, 3)
+    return U, V, tri, spacing
+
+
 def trace(glasses, lights, final=False, progress=None):
     """Returns (dict of arrays as refcaustics._trace, rays, owners, offsets) or None."""
     from . import refcaustics as rc
@@ -356,7 +406,7 @@ def trace(glasses, lights, final=False, progress=None):
         if ow.name in names:
             d = _glass_data(k, meta)
             metal = not _is_vessel(ow)
-            glass[k] = None if d is None else (d[0], d[1], int(offsets[k]), metal)
+            glass[k] = None if d is None else (d[0], d[1], int(offsets[k]), metal, {})
             if metal:
                 glass[("metal", k)] = True
     if not glass:
@@ -371,8 +421,9 @@ def trace(glasses, lights, final=False, progress=None):
     reflect_on = _switch("causticsReflective")      # (the streaks the outside of a glass throws around: reflected)
     acc = ([], [], [], [], [])
     rays = 0
-    budget = RAYS_FINAL if final else RAYS_VIEW
-    for gi, (k, _d) in enumerate([kv for kv in glass.items() if not isinstance(kv[0], tuple)]):
+    pieces = [kv for kv in glass.items() if not isinstance(kv[0], tuple)]
+    budget = max(RAYS_MIN_FINAL if final else RAYS_MIN_VIEW, (RAYS_FINAL if final else RAYS_VIEW) // max(1, len(pieces)))
+    for gi, (k, _d) in enumerate(pieces):
         ob = owners[k]
         bands, tint, rough = _optics(ob)
         is_metal = bands[0][0] is None
@@ -397,13 +448,24 @@ def trace(glasses, lights, final=False, progress=None):
             pu = [(p - cen).dot(u) for p in pts]; pv = [(p - cen).dot(v) for p in pts]; pd = [(p - cen).dot(d0) for p in pts]
             u0, u1, v0, v1 = min(pu), max(pu), min(pv), max(pv)
             n_rays = max(2500, budget // len(bands))
-            spacing = math.sqrt(max(1e-12, (u1 - u0) * (v1 - v0)) / n_rays)
-            nu = max(2, int(math.ceil((u1 - u0) / spacing)) + 1); nv = max(2, int(math.ceil((v1 - v0) / spacing)) + 1)
-            gu = u0 + np.arange(nu) * spacing; gv = v0 + np.arange(nv) * spacing
-            U, Vv = np.meshgrid(gu, gv, indexing="ij")
+            back = -min(pd) + 0.01                   # (the plane of the grid, moved before the glass)
+            first0 = back + max(pd) + 0.02
+
+            def on_target(a, b, _k=k):
+                p = cen + u * a + v * b
+                if sun:
+                    loc, _n, ix, _ds = ray_cast(p - d0 * back, d0, first0)
+                else:
+                    dv = p - L
+                    loc, _n, ix, _ds = ray_cast(L, dv.normalized(), dv.length + size)
+                return loc is not None and owner_of(ix) == _k
+
+            g = _aimed_grid(u0, u1, v0, v1, n_rays, on_target)
+            if g is None:
+                continue
+            U, Vv, tri, spacing = g
             plane = np.array(cen)[None, :] + U.reshape(-1, 1) * np.array(u)[None, :] + Vv.reshape(-1, 1) * np.array(v)[None, :]
             nvt = len(plane)
-            back = -min(pd) + 0.01                   # (the plane of the grid, moved before the glass)
             if sun:
                 starts = plane - np.array(d0)[None, :] * back
                 dirs = None
@@ -416,9 +478,6 @@ def trace(glasses, lights, final=False, progress=None):
                 _dd, irr, _ld, _L, radius = rc._lamp_terms(em, plane)
                 blur_k = radius / max((cen - L).length, 1e-3)
                 first = float(dist.max()) + size
-            idx = np.arange(nu * nv).reshape(nu, nv)
-            ta = idx[:-1, :-1].ravel(); tb = idx[1:, :-1].ravel(); tc = idx[1:, 1:].ravel(); td = idx[:-1, 1:].ravel()
-            tri = np.concatenate([np.stack([ta, tb, tc], 1), np.stack([ta, tc, td], 1)])
             cell = 0.5 * spacing * spacing
             irr_t = (irr[tri[:, 0]] + irr[tri[:, 1]] + irr[tri[:, 2]]) / 3.0
             for bi, (ior, bw) in enumerate(bands):
@@ -454,7 +513,7 @@ def trace(glasses, lights, final=False, progress=None):
                 power = (cell * irr_t)[:, None] * (col * np.array(bw))[None, :]
                 # (a metal that is not a mirror: its light spreads with the distance, as its roughness)
                 bk = blur_k + (0.7 * rough * rough if is_metal else 0.0)
-                _accumulate(acc, plane, tri, (ok, hit, hn, hd, hidx, wt, ev), power, bk, spacing, offsets, reach)
+                _accumulate(acc, plane, tri, (ok, hit, hn, hd, hidx, wt, ev), power, bk, spacing, offsets, reach, size)
                 if bi == 0 and not is_metal:
                     powr = (cell * irr_t)[:, None] * (np.array(em.data.color[:3], np.float64) * float(em.data.energy))[None, :]
                     _accumulate(acc, plane, tri, (rok, rhit, rhn, rhd, rhidx, rwt, np.zeros(nvt, np.int32)), powr, blur_k,

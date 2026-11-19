@@ -603,7 +603,8 @@ def is_caustic_caster(ob):
     if t >= 0.02:                              # thicker than 2 cm: a solid piece of glass, a gem, a vase
         return True
     # (18/11) a drinking glass, a bottle, a vase with thin walls: round and small, not the flat pane of a window
-    return t > 0.0005 and _vessel(ob) and not _holds_lamp(ob)
+    # (19/11: with or without a closed mesh - gems are often written in pieces; see glasscaustics._is_vessel)
+    return _vessel(ob) and not _holds_lamp(ob)
 
 
 _THICK = {}
@@ -623,6 +624,11 @@ def _caster_strength(ob):
     if water.water_material(ob) is not None or _thickness(ob) >= 0.02:
         return 1.0
     return 1.0 - VESSEL_SHORTCUT
+
+
+def _is_solid(ob):
+    """Thicker than 2 cm: a solid piece of glass (MNEE alone gives its caustics when glasscaustics does not)."""
+    return _thickness(ob) >= 0.02
 
 
 def _vessel(ob):

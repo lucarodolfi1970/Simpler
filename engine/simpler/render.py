@@ -86,7 +86,7 @@ class RenderState:
     def __init__(self):
         self.device = "CPU"
         self.quality = "alta"
-        self.caustics = False
+        self.caustics = True     # (19/11) sharp caustics on in a new scene, see server.project_new
         self.config = default_config("alta")
         self.live = False  # progressive Cycles viewport on/off ("Realistica" view)
         self.vp_size = (1280, 720)

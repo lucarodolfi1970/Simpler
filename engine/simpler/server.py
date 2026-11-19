@@ -279,7 +279,11 @@ def project_new(_data):
     render.STATE.camera = {"target": [0.0, 0.0, 160.0], "distance": 600.0, "yaw": -60.0, "pitch": 1.5, "lens": 50.0}
     render.STATE.config = render.default_config("alta")
     render.STATE.quality = "alta"
-    render.apply_caustics(False)
+    # (19/11, Luca: «sharp dovrebbe essere il valore di default») a new scene starts with the sharp caustics on: with
+    # «Normali» a glass under a spot or the sun drew neither a shadow nor a caustic, and nobody would look for the
+    # switch. The noise cleanup of the preset stays (it does not touch the traced caustics). Projects already saved
+    # open as they were saved.
+    render.apply_caustics(True)
     render.STATE.meter_ev, render.STATE.meter_epoch = None, -1
     history.reset()
     snow.HIDE["on"] = False

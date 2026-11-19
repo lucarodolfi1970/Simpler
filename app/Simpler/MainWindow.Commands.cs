@@ -151,7 +151,7 @@ namespace Simpler
             // everything back to defaults: framing, render settings, exposure, caustics
             await LoadRenderSettings();
             if (_renderSettings["view"] is JsonObject nv) { SendToWeb(new { type = "setCamera", view = nv.DeepClone() }); SendCameraOptions(nv); }
-            _caustics = false;
+            _caustics = (bool?)_renderSettings["caustics"] ?? true;     // (19/11) a new scene starts with the sharp caustics, as the engine says
             ResetPanelState();
             // panels of things that are gone (a material, the brush) close; Rendering, Fotocamera and Ambiente show
             // their defaults

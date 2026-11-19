@@ -43,8 +43,9 @@ RAYS_MIN_VIEW = 8_000
 RAYS_MIN_FINAL = 40_000
 AIM_CELLS = 128            # the rays are aimed: a first look on this many cells along the longer side finds where the piece is
 MAX_EVENTS = 40            # crossings and inner reflections followed per ray (a diamond keeps the light in for long)
-REACH_K = 10.0             # the light is followed up to this many times the size of the glass (at least REACH_MIN)
-REACH_MIN = 0.6
+REACH_K = 4.0              # the light is followed up to this many times the size of the piece (at least REACH_MIN)
+REACH_MIN = 0.25           # (19/11: 10 times and 0.6 m - the images covered 1.9 m around two rings, texels of 1 mm: the
+                           # crescents and the sparkles were there, blurred; now 0.45 mm in the final render)
 TEXEL = 0.0004             # metres: the finest texel of the images when only glass draws in them
 SMOOTH_TRIS = 4_000_000    # a piece with more triangles: face normals (no interpolation)
 METAL_MIN = 0.6            # «Metallo» from here up, «Rugosità» up to METAL_ROUGH, largest side up to METAL_SIZE (m)

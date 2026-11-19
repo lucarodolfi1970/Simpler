@@ -18,6 +18,13 @@ black shadow, nothing in it), and the path tracing alone finds the sun only by c
 - the light is added to the images of refcaustics (same projection, same shader): the glass itself stops the direct
   light in Cycles (its shadow shortcut off, no MNEE on it: render.refresh_caustics), so nothing is counted twice.
 
+(19/11, Luca: «un bicchiere d'oro colpito dalla luce genera riflessi dorati: dove sono le nostre caustiche
+riflessive?») The same for the light a polished METAL piece throws around itself: Cycles finds it only by chance
+(with the sun: never), and MNEE does not reflect. The small pieces of smooth metal (METAL_*) are casters too: their
+rays are reflected (as many times as it takes - the inside of a cup), each time tinted by the colour of the metal,
+and land like the others; the blur grows with the roughness. Nothing to take away in Cycles: a metal is opaque,
+its shadow stays, this light is only added.
+
 Imports of Simpler only inside the functions (refcaustics imports this module)."""
 import math
 import time
@@ -37,6 +44,9 @@ REACH_K = 10.0             # the light is followed up to this many times the siz
 REACH_MIN = 0.6
 TEXEL = 0.0004             # metres: the finest texel of the images when only glass draws in them
 SMOOTH_TRIS = 800_000      # a glass with more triangles: face normals (no interpolation)
+METAL_MIN = 0.6            # «Metallo» from here up, «Rugosità» up to METAL_ROUGH, largest side up to METAL_SIZE (m)
+METAL_ROUGH = 0.35
+METAL_SIZE = 1.2
 SOFT_K = 0.2               # the patch of a ray that went its own way: blurred by this share of how far its cell landed apart
 SOFT_MAX = 0.03            # ... at most this share of the reach
 STATE = {"failed": False}
@@ -55,6 +65,42 @@ def _is_vessel(ob):
     return 0.0005 < t < 0.02 and render._vessel(ob) and not render._holds_lamp(ob)
 
 
+def _metal_of(mat):
+    """(colour, roughness) of a polished metal material, or None."""
+    from . import matedit
+    if mat is None:
+        return None
+    mp = matedit.params_of(mat)
+    try:
+        if mp is not None:
+            if float(mp["transmission"]["weight"]) > 0.5:
+                return None
+            met = float(mp["metallic"]["value"]); rough = float(mp["roughness"]["value"])
+            col = tuple(float(c) for c in mp["color"]["tint"][:3])
+            if mp["metallic"]["map"].get("image") or mp["roughness"]["map"].get("image"):
+                return None                       # (painted metal, rust: not a mirror all over)
+        else:
+            b = next((n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None) if mat.node_tree else None
+            if b is None or b.inputs["Metallic"].is_linked or b.inputs["Roughness"].is_linked:
+                return None
+            met = float(b.inputs["Metallic"].default_value); rough = float(b.inputs["Roughness"].default_value)
+            col = tuple(b.inputs["Base Color"].default_value[:3])
+    except (KeyError, TypeError, ValueError, AttributeError):
+        return None
+    if met < METAL_MIN or rough > METAL_ROUGH:
+        return None
+    return tuple(min(1.0, max(0.0, c)) for c in col), rough
+
+
+def _is_metal(ob):
+    from .core import INTERNAL_KEY
+    if ob.type != "MESH" or ob.get("simpler_trashed") or ob.get(INTERNAL_KEY) or ob.get("simpler_twin") or ob.hide_render:
+        return False
+    if len(ob.data.polygons) < 8 or max(ob.dimensions) > METAL_SIZE or max(ob.dimensions) < 0.005:
+        return False
+    return any(_metal_of(s.material) is not None for s in ob.material_slots)
+
+
 def handles(ob):
     """Is the light through this piece made here (and not by MNEE)? Asked by render.refresh_caustics."""
     return not STATE["failed"] and _is_vessel(ob)
@@ -70,14 +116,19 @@ def casters():
         out = [bpy.data.objects.get(n) for n in STATE.get("names", ())]
         if all(o is not None for o in out):
             return out
-    out = [ob for ob in bpy.context.scene.objects if _is_vessel(ob) and ob.visible_get()]
+    out = [ob for ob in bpy.context.scene.objects if (_is_vessel(ob) or _is_metal(ob)) and ob.visible_get()]
     STATE.update(epoch=epoch, names=[o.name for o in out])
     return out
 
 
 def _optics(ob):
-    """Index, colour and bands of the glass of this piece: [(index, rgb weight)], tint."""
+    """Index, colour and bands of the glass of this piece: [(index, rgb weight)], tint. A metal: [(None, white)], its
+    colour, and its roughness as third value (glass: 0)."""
     from . import materials, matedit
+    if not _is_vessel(ob):
+        m = next((_metal_of(s.material) for s in ob.material_slots if _metal_of(s.material) is not None), None)
+        if m is not None:
+            return [(None, (1.0, 1.0, 1.0))], m[0], m[1]
     mat = next((s.material for s in ob.material_slots if materials.is_transmissive(s.material)), None)
     ior, tint, bands = 1.5, (1.0, 1.0, 1.0), None
     mp = matedit.params_of(mat) if mat is not None else None
@@ -104,7 +155,7 @@ def _optics(ob):
         bands = [(ior, (1.0, 1.0, 1.0))]
     # (a pale tint: the light crosses the walls twice or more - the colour of the glass, not its square)
     tint = tuple(min(1.0, max(0.0, c)) ** 0.5 for c in tint)
-    return bands, tint
+    return bands, tint, 0.0
 
 
 def fingerprint(glasses, lights):
@@ -113,9 +164,9 @@ def fingerprint(glasses, lights):
     parts = []
     lo = Vector((1e18,) * 3); hi = Vector((-1e18,) * 3)
     for ob in glasses:
-        mat = next((s.material for s in ob.material_slots if materials.is_transmissive(s.material)), None)
         parts.append((ob.name, tuple(round(x, 5) for r in ob.matrix_world for x in r), len(ob.data.polygons),
-                      str(mat.get(matedit.PARAMS_KEY, "")) if mat is not None else ""))
+                      tuple(str(s.material.get(matedit.PARAMS_KEY, "")) for s in ob.material_slots if s.material is not None),
+                      str(_optics(ob))))
         for c in ob.bound_box:
             p = ob.matrix_world @ Vector(c)
             lo = Vector(map(min, lo, p)); hi = Vector(map(max, hi, p))
@@ -156,6 +207,7 @@ def _glass_data(k, meta):
 
 
 def _follow(ray_cast, origin, direction, first_limit, reach, owner_of, glass, target, ior, eps=2e-5):
+    # (ior None: the target is a metal - every crossing of it is a reflection; events = how many)
     """One ray of light. Returns (kind, hit, normal, last distance, polygon, weight, events, reflection) - kind 0:
     nothing (it missed the glass, or was lost), 1: landed. reflection: (point, direction, share) of the light the
     outside of the glass sends back at the first crossing, or None."""
@@ -182,6 +234,7 @@ def _follow(ray_cast, origin, direction, first_limit, reach, owner_of, glass, ta
             return 0, None, None, 0.0, -1, 0.0, events, refl
         entering = ng.dot(d) < 0.0
         n = ng
+        mirror = data[3] if data is not None else glass.get(("metal", k), False)
         if data is not None:
             tri = idx - data[2]
             w = poly_3d_calc(data[0][tri], loc)
@@ -193,8 +246,16 @@ def _follow(ray_cast, origin, direction, first_limit, reach, owner_of, glass, ta
                     n = ns
         if n.dot(d) > 0.0:
             n = -n
-        eta = (1.0 / ior) if entering else ior
         cosi = min(1.0, -d.dot(n))
+        if mirror or ior is None:
+            if not mirror:
+                return 0, None, None, 0.0, -1, 0.0, events, refl     # (a glass on the way of the light of a metal)
+            d = (d + n * (2.0 * cosi)).normalized()
+            pos = loc + ng * (eps if ng.dot(d) > 0.0 else -eps)
+            events += 1
+            limit = reach
+            continue
+        eta = (1.0 / ior) if entering else ior
         s2 = eta * eta * (1.0 - cosi * cosi)
         if s2 >= 1.0:                           # total reflection inside
             d = (d + n * (2.0 * cosi)).normalized()
@@ -222,7 +283,7 @@ def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach):
     ok, hit, hn, hd, hidx, wt, ev = V
     a, b, c = tri[:, 0], tri[:, 1], tri[:, 2]
     own = np.searchsorted(offsets, np.maximum(hidx, 0), "right") - 1
-    wsum = (wt[a] + wt[b] + wt[c]) / 3.0
+    wsum = (wt[a] + wt[b] + wt[c]) / 3.0          # (per colour)
     all3 = ok[a] & ok[b] & ok[c]
     dab = np.linalg.norm(np.where(all3[:, None], hit[a] - hit[b], 0.0), axis=1)
     dbc = np.linalg.norm(np.where(all3[:, None], hit[b] - hit[c], 0.0), axis=1)
@@ -237,7 +298,7 @@ def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach):
         ar = 0.5 * np.linalg.norm(np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]), axis=1)
         P.append(T)
         N.append(hn[a[same]])
-        F.append(power[same] * wsum[same][:, None])
+        F.append(power[same] * wsum[same])
         B.append(np.maximum(far[same] * blur_k, 0.75 * np.sqrt(ar / 4096.0)))
         O.append(own[a[same]])
     # the rays that went different ways: a third of the light of the cell at each landing point, as a soft patch
@@ -259,7 +320,7 @@ def _accumulate(acc, plane, tri, V, power, blur_k, spacing, offsets, reach):
             s = spacing
             P.append(np.stack([pts + t1 * s, pts - t1 * (0.5 * s) + t2 * (0.87 * s), pts - t1 * (0.5 * s) - t2 * (0.87 * s)], 1))
             N.append(nn)
-            F.append(power[k] * (wt[v[k]] / 3.0)[:, None])
+            F.append(power[k] * (wt[v[k]] / 3.0))
             B.append(np.maximum(soft[k], hd[v[k]] * blur_k))
             O.append(own[v[k]])
 
@@ -280,7 +341,10 @@ def trace(glasses, lights, final=False, progress=None):
     for k, ow in enumerate(owners):
         if ow.name in names:
             d = _glass_data(k, meta)
-            glass[k] = None if d is None else (d[0], d[1], int(offsets[k]))
+            metal = not _is_vessel(ow)
+            glass[k] = None if d is None else (d[0], d[1], int(offsets[k]), metal)
+            if metal:
+                glass[("metal", k)] = True
     if not glass:
         return None
     off_list = [int(o) for o in offsets]
@@ -293,16 +357,18 @@ def trace(glasses, lights, final=False, progress=None):
     acc = ([], [], [], [], [])
     rays = 0
     budget = RAYS_FINAL if final else RAYS_VIEW
-    for gi, (k, _d) in enumerate(glass.items()):
+    for gi, (k, _d) in enumerate([kv for kv in glass.items() if not isinstance(kv[0], tuple)]):
         ob = owners[k]
-        bands, tint = _optics(ob)
+        bands, tint, rough = _optics(ob)
+        is_metal = bands[0][0] is None
         pts = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
         cen = sum(pts, Vector()) / 8.0
         size = max((Vector(map(max, *pts)) - Vector(map(min, *pts))))
         reach = max(REACH_MIN, REACH_K * size)
         for em in lights:
             sun = em.data.type == "SUN"
-            col = np.array(em.data.color[:3], np.float64) * float(em.data.energy) * np.array(tint)
+            col = np.array(em.data.color[:3], np.float64) * float(em.data.energy) * (1.0 if is_metal else np.array(tint))
+            mcol = np.array(tint, np.float64)
             if sun:
                 d0 = -(em.matrix_world.to_quaternion() @ Vector((0.0, 0.0, 1.0))).normalized()
                 blur_k = math.tan(max(float(em.data.angle), 1e-4) / 2.0)
@@ -342,9 +408,9 @@ def trace(glasses, lights, final=False, progress=None):
             irr_t = (irr[tri[:, 0]] + irr[tri[:, 1]] + irr[tri[:, 2]]) / 3.0
             for bi, (ior, bw) in enumerate(bands):
                 ok = np.zeros(nvt, bool); hit = np.zeros((nvt, 3)); hn = np.zeros((nvt, 3)); hd = np.zeros(nvt)
-                hidx = np.full(nvt, -1, np.int64); wt = np.zeros(nvt); ev = np.zeros(nvt, np.int32)
+                hidx = np.full(nvt, -1, np.int64); wt = np.zeros((nvt, 3)); ev = np.zeros(nvt, np.int32)
                 rok = np.zeros(nvt, bool); rhit = np.zeros((nvt, 3)); rhn = np.zeros((nvt, 3)); rhd = np.zeros(nvt)
-                rhidx = np.full(nvt, -1, np.int64); rwt = np.zeros(nvt)
+                rhidx = np.full(nvt, -1, np.int64); rwt = np.zeros((nvt, 3))
                 step = max(2000, nvt // 25)
                 for i in range(nvt):
                     if progress is not None and i % step == 0:
@@ -362,16 +428,19 @@ def trace(glasses, lights, final=False, progress=None):
                     rays += 1
                     kind, loc, nrm, dist_, ix, w, e, refl = _follow(ray_cast, o, d, first, reach, owner_of, glass, k, ior)
                     if kind == 1:
-                        ok[i] = True; hit[i] = loc; hn[i] = nrm; hd[i] = dist_; hidx[i] = ix; wt[i] = w; ev[i] = e
-                    if refl is not None and bi == 0:
+                        ok[i] = True; hit[i] = loc; hn[i] = nrm; hd[i] = dist_; hidx[i] = ix; ev[i] = e
+                        wt[i] = (mcol ** e) if is_metal else w          # (a metal: its colour at every reflection)
+                    if refl is not None and bi == 0 and not is_metal:
                         rl, rn, rix, rdist = ray_cast(refl[0], refl[1], reach)
                         if rl is not None and glass.get(owner_of(rix), False) is False:
                             if rn.dot(refl[1]) > 0.0:
                                 rn = -rn
                             rok[i] = True; rhit[i] = rl; rhn[i] = rn; rhd[i] = rdist; rhidx[i] = rix; rwt[i] = refl[2]
                 power = (cell * irr_t)[:, None] * (col * np.array(bw))[None, :]
-                _accumulate(acc, plane, tri, (ok, hit, hn, hd, hidx, wt, ev), power, blur_k, spacing, offsets, reach)
-                if bi == 0:
+                # (a metal that is not a mirror: its light spreads with the distance, as its roughness)
+                bk = blur_k + (0.7 * rough * rough if is_metal else 0.0)
+                _accumulate(acc, plane, tri, (ok, hit, hn, hd, hidx, wt, ev), power, bk, spacing, offsets, reach)
+                if bi == 0 and not is_metal:
                     powr = (cell * irr_t)[:, None] * (np.array(em.data.color[:3], np.float64) * float(em.data.energy))[None, :]
                     _accumulate(acc, plane, tri, (rok, rhit, rhn, rhd, rhidx, rwt, np.zeros(nvt, np.int32)), powr, blur_k,
                                 spacing, offsets, reach)

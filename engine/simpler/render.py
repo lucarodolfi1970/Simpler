@@ -760,11 +760,39 @@ def _encloses(ob, points):
     return any(lo.x <= p.x <= hi.x and lo.y <= p.y <= hi.y and lo.z <= p.z <= hi.z for p in points)
 
 
+NO_BOUNCE_KEY = "simpler_caustics_nodiffuse"
+_HIDDEN = {"epoch": None}
+
+
+def _hide_from_bounces():
+    """«Genera caustiche» off on a model: the caustics the path tracing itself finds from it go too (Luca, 19/11: «le
+    genera anche se disattivo» - fainter and irregular, they were the ones of Cycles: a ray bounced off the floor
+    that meets the gold and then the light). Cycles has no switch per object for them: the piece is taken out of
+    the diffuse bounces (ray visibility) while it is off - it is still seen, reflected and it still casts its
+    shadow; only the light it would send back onto what is around is lost. Put back when the switch goes on."""
+    if _HIDDEN["epoch"] == STATE.epoch:
+        return
+    _HIDDEN["epoch"] = STATE.epoch
+    for ob in bpy.context.scene.objects:
+        if ob.type != "MESH":
+            continue
+        want = no_caustics(ob)
+        if want and ob.visible_diffuse:
+            ob.visible_diffuse = False
+            ob[NO_BOUNCE_KEY] = 1
+            ob.update_tag()
+        elif not want and ob.get(NO_BOUNCE_KEY):
+            ob.visible_diffuse = True
+            del ob[NO_BOUNCE_KEY]
+            ob.update_tag()
+
+
 def refresh_caustics(force=False):
     """Caustics flags of every object and light, before each path-traced image: pieces and lights added after the
     switch (an imported glass, the sun of the Ambiente, a water surface) take part too. Only real changes are tagged:
     with persistent data a tag makes Cycles sync that object again."""
     enabled = STATE.caustics
+    _hide_from_bounces()
     if not enabled and not force and not STATE.__dict__.get("caustics_flagged"):
         return
     glows = _glowing_points() if enabled else []

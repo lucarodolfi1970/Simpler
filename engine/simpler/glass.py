@@ -12,6 +12,12 @@ see the real glass. The light then passes, without the focusing of real caustics
 crosses the surface instead of stopping there). With the "Caustiche" switch on (MNEE, real shadow caustics) the
 shortcut is turned off, so the light is not counted twice.
 
+(19/11) The light that passes loses at every surface of the glass the share the glass reflects (Fresnel, with the
+index of the glass): about 4% where the light meets the surface square on, much more where it grazes it. So a glass
+under a spot or the sun has a light shadow, darker along its outline and where it is thick - before it had none at all
+(Luca, a cake stand and glasses under spots, caustics «Normali»). Water keeps the plain shortcut (IOR input 1: no
+loss), its look was tuned with it.
+
 ensure() is called before every path-traced image: it wraps the materials that need it (once; a material rebuilt by
 the editor is wrapped again) through one shared node group, whose switch follows the caustics setting. It also tells
 whether the scene has glass or water at all (PRESENT): the render then never lets the "total bounces" limit stop the
@@ -32,6 +38,8 @@ def _group():
     if g is not None:
         if g.nodes.get("caster") is None:
             _add_caster(g)                         # (group of an older version: per-piece switch added)
+        if g.nodes.get("fresnel") is None:
+            _add_fresnel(g)                        # (group of before 19/11: no loss at the surfaces)
         return g
     g = bpy.data.node_groups.new(GROUP, "ShaderNodeTree")
     g.interface.new_socket("Shader", in_out="INPUT", socket_type="NodeSocketShader")
@@ -56,6 +64,7 @@ def _group():
     L.new(mix.outputs[0], go.inputs[0])
     m2.name = "weight"
     _add_caster(g)
+    _add_fresnel(g)
     return g
 
 
@@ -75,6 +84,71 @@ def _add_caster(g):
     for l in mix_links:
         L.new(m3.outputs[0], l.to_socket)
     g.update_tag()
+
+
+IOR_SOCKET = "IOR"
+IOR_DEFAULT = 1.5
+
+
+def _add_fresnel(g):
+    """The light that goes through loses at each surface the share the glass reflects: Transparent colour = tint x
+    (1 - Fresnel). An IOR of 1 (water) loses nothing. Materials wrapped before get the default index at once (glass)."""
+    N, L = g.nodes, g.links
+    if g.interface.items_tree.get(IOR_SOCKET) is None:
+        s = g.interface.new_socket(IOR_SOCKET, in_out="INPUT", socket_type="NodeSocketFloat")
+        s.default_value = IOR_DEFAULT
+        s.min_value = 1.0
+    gi = next(n for n in N if n.type == "GROUP_INPUT")
+    tr = next(n for n in N if n.type == "BSDF_TRANSPARENT")
+    fr = N.new("ShaderNodeFresnel"); fr.name = "fresnel"
+    # the light is not bent here (it goes straight through): on the way out it meets the surface at the same angle
+    # it came in, so the loss is the same as on the way in. The Fresnel node takes the index inverted on back faces
+    # (light leaving the glass), and beyond 42 degrees it would see total reflection: a black shadow (tried). So on
+    # back faces it gets 1/IOR, which it inverts again.
+    geo = N.new("ShaderNodeNewGeometry")
+    rec = N.new("ShaderNodeMath"); rec.operation = "DIVIDE"; rec.inputs[0].default_value = 1.0
+    L.new(gi.outputs[IOR_SOCKET], rec.inputs[1])
+    dif = N.new("ShaderNodeMath"); dif.operation = "SUBTRACT"
+    L.new(rec.outputs[0], dif.inputs[0]); L.new(gi.outputs[IOR_SOCKET], dif.inputs[1])
+    eta = N.new("ShaderNodeMath"); eta.operation = "MULTIPLY_ADD"
+    L.new(geo.outputs["Backfacing"], eta.inputs[0]); L.new(dif.outputs[0], eta.inputs[1])
+    L.new(gi.outputs[IOR_SOCKET], eta.inputs[2])
+    L.new(eta.outputs[0], fr.inputs["IOR"])
+    inv = N.new("ShaderNodeMath"); inv.operation = "SUBTRACT"; inv.inputs[0].default_value = 1.0; inv.use_clamp = True
+    L.new(fr.outputs[0], inv.inputs[1])
+    sc = N.new("ShaderNodeVectorMath"); sc.operation = "SCALE"; sc.name = "fresnel_scale"
+    for l in list(tr.inputs["Color"].links):
+        L.remove(l)
+    L.new(gi.outputs["Tint"], sc.inputs[0])
+    L.new(inv.outputs[0], sc.inputs["Scale"])
+    L.new(sc.outputs["Vector"], tr.inputs["Color"])
+    g.update_tag()
+
+
+def _ior(mat, inner=None):
+    """Index of refraction of a glass material (editor parameters, else the BSDF), 1.5 when unknown."""
+    from . import matedit
+    v = None
+    mp = matedit.params_of(mat)
+    if mp is not None:
+        v = mp["transmission"].get("ior")
+    if v is None:
+        for n in ([inner] if inner is not None else []) + list(mat.node_tree.nodes):
+            if n is not None and n.type in ("BSDF_PRINCIPLED", "BSDF_GLASS", "BSDF_REFRACTION"):
+                s = n.inputs.get("IOR")
+                if s is not None and not s.is_linked:
+                    v = s.default_value
+                    break
+    try:
+        return max(1.0, min(3.0, float(v)))
+    except (TypeError, ValueError):
+        return IOR_DEFAULT
+
+
+def _set_ior(node, value):
+    s = node.inputs.get(IOR_SOCKET)
+    if s is not None and abs(s.default_value - value) > 1e-4:
+        s.default_value = value
 
 
 def set_enabled(enabled):
@@ -186,6 +260,11 @@ def ensure(caustic_mats=()):
         caustic_mats = ()
     caustic_mats = set(caustic_mats)
     set_enabled(True)
+    from . import water
+    waters = set()                              # (water keeps the plain shortcut: no Fresnel loss)
+    for ob in bpy.context.scene.objects:
+        if ob.get("simpler_ocean") or ob.get(water.BODY_KEY):
+            waters.update(sl.material for sl in ob.material_slots if sl.material is not None)
     seen, n, found = set(), 0, False
     for ob in bpy.context.scene.objects:
         if ob.type not in ("MESH", "CURVE", "FONT", "META", "SURFACE"):
@@ -206,6 +285,10 @@ def ensure(caustic_mats=()):
                     node = mat.node_tree.nodes.get(TAG)
                     if node is not None and "simpler_weight" in node and abs(node.inputs[2].default_value - node["simpler_weight"]) > 1e-6:
                         node.inputs[2].default_value = node["simpler_weight"]      # (1.13.0 set it per material)
+                    if node is not None:
+                        wet = mat in waters or water.is_water(mat)
+                        inner = node.inputs[0].links[0].from_node if node.inputs[0].is_linked else None
+                        _set_ior(node, 1.0 if wet else _ior(mat, inner))
             except Exception as exc:                   # an unusual node graph: left as it is
                 print(f"SIMPLER_GLASS skip {mat.name}: {exc}", flush=True)
     PRESENT["glass"] = found

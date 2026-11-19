@@ -2198,6 +2198,45 @@ def auto_exposure_on():
     return s is None or not outdoor(s) or bool(s.get("exposure", {}).get("auto", True))
 
 
+# (19/11) How much of the light of the sky comes from the painted clouds, by cover: measured on renders of a white
+# plane lit by the sky alone (sun light hidden), at sun heights 68, 48 and 29 degrees - the same at every height:
+# light = sky x (1 - share) + light of the clouds x share.
+CLOUD_SHARE = ((0.0, 0.0), (0.2, 0.06), (0.5, 0.38), (0.85, 0.61), (1.0, 0.53))
+
+
+def _cloud_share(cover):
+    pts = CLOUD_SHARE
+    c = max(0.0, min(1.0, float(cover)))
+    for (c0, g0), (c1, g1) in zip(pts, pts[1:]):
+        if c <= c1:
+            return g0 + (g1 - g0) * (c - c0) / max(1e-6, c1 - c0)
+    return pts[-1][1]
+
+
+def _sky_light(s, elev):
+    """The light the sky gives the ground (units of the sky model), as the render has it. (19/11) The painted clouds
+    of _world_nodes are lit by the sun up there and light the scene with that: under a sky almost all covered they
+    give as much light as a clear noon, the sky alone 5 times less. The exposure counted the clouds as a dimmer sky
+    (x 0.6-0.7): an overcast was opened up 1.2 stops more than a clear noon and came out almost white (Luca, 18/11;
+    measured on «test caustics»: same light in the frame as at noon, automatic exposure +1.24 against 0). Volumetric
+    clouds keep the estimate of before (they cast their own shadows; the painted ones stay only towards the horizon)."""
+    amb = float(s["sky"].get("ambient", 1.0))
+    sky = sky_irradiance(elev, s["sky"])
+    cover = float(s["clouds"]["cover"])
+    if _volumetric(s) or cover <= 0.005:
+        return sky * amb * (0.6 + 0.4 * _cloud_dim(s))
+    from . import clouds as _cl
+    e_up = elev + _dip(float(_cl.settings(s)["height"]))
+    if e_up < -6:                                  # moonlit clouds (as _world_nodes)
+        lit = math.pi * 0.0009
+    else:
+        es = sun_rgb(e_up, s["sky"])
+        lum_up = 0.2126 * es[0] + 0.7152 * es[1] + 0.0722 * es[2]
+        lit = (lum_up * (0.35 + 0.65 * max(0.0, math.sin(math.radians(e_up)))) + sky) * 0.9
+    g = _cloud_share(cover)
+    return sky * amb * (1.0 - g) + lit * g
+
+
 def auto_ev():
     """Automatic exposure (EV) from the light of sun, sky and moon, like a camera: 0 at a clear noon."""
     s = state()
@@ -2225,7 +2264,7 @@ def auto_ev():
     e = sun_rgb(elev, s["sky"])
     lum = 0.2126 * e[0] + 0.7152 * e[1] + 0.0722 * e[2]
     total = (lum * max(0.0, math.sin(math.radians(elev))) * float(s["sun"]["intensity"]) * _cloud_dim(s)
-             + sky_irradiance(elev, s["sky"]) * float(s["sky"].get("ambient", 1.0)) * (0.6 + 0.4 * _cloud_dim(s)))
+             + _sky_light(s, elev))
     if elev < -4:
         from . import night as nt
         total += 165.0 * 0.0025 * float(s["night"].get("moon", 1.0)) * 0.6 * nt.phase_light(s["night"].get("phase", 0.5))

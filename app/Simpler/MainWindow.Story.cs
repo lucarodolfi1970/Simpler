@@ -28,8 +28,8 @@ namespace Simpler
             // (20/11, Luca: on a small screen at 120-150% the text was cut - «togliamo quel testo e mettiamo un altro box come gli
             // altri con scritto sito ufficiale Simpler») only the tiles now, the official site first
             _storyBody = null; _storyFoot = null;
-            var tiles = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Left };
-            tiles.Children.Add(OfficialSiteTile());
+            var tiles = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center };
+            tiles.Children.Add(OfficialSiteTile());   // (20/11, Luca: «i box allineati centralmente rispetto alla scheda»)
             // (1.78.5, Luca) «Example #1» (the shop) and «Example #2» (the bedroom), one after the other
             for (int i = 0; i < Samples.Length; i++)
                 if (SampleTile(i) is FrameworkElement sample) tiles.Children.Add(sample);

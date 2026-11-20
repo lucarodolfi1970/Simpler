@@ -146,6 +146,12 @@ def project_open(data):
     matedit.sanitize_displacement()   # (a project saved with a too heavy remesh must not fill the memory again)
     t1 = time.time()
     moved = paths.remap_images()      # libraries moved since the project was saved: textures from their new folder
+    try:
+        ng = ambience.relink_ground_textures()     # (20/11) the ground's own textures, made on another PC or by another user
+        if ng:
+            core.log("SIMPLER_GROUND", f"{ng} ground textures taken from this PC")
+    except Exception as exc:  # noqa: BLE001
+        core.log("SIMPLER_GROUND", "relink failed:", exc)
     if moved:
         core.log("SIMPLER_PATHS", f"{moved} textures taken from the current library folders")
     render.setup_device()

@@ -2541,7 +2541,7 @@
  },
  "1.79.1": {
   "icon": "fix",
-  "it": "Il progetto ricorda con quale versione di Simpler è stato salvato: una versione più vecchia avvisa aprendolo.",
-  "en": "Projects remember which version of Simpler saved them: an older version warns when opening one."
+  "it": "Corretta la texture del suolo mancante aprendo gli esempi su un altro PC; il progetto ricorda con quale versione di Simpler è stato salvato.",
+  "en": "Fixed the missing ground texture when opening the examples on another PC; projects remember which version of Simpler saved them."
  }
 }

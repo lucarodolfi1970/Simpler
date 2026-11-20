@@ -1093,6 +1093,33 @@ def _ground_texture(kind):
     return path
 
 
+def relink_ground_textures():
+    """(20/11) «Example #1» opened on a new PC asked for «piastrelle_v1.jpg … material Simpler Suolo piastrelle v3».
+    The textures of the ground live in %LOCALAPPDATA%\\Simpler\\ground of the PC that made the project, and
+    the project keeps that whole path: on another PC, or for another user, the file is not there. They are Simpler's own
+    textures: at opening, the ones not found are taken (made, if needed) from the folder of this PC. Returns how many."""
+    names = {"piastrelle_v1.jpg": "piastrelle"}
+    for kind in ("prato", "terra", "cemento"):
+        names[f"{kind}_v{TEX_VERSION}.png"] = kind
+    n = 0
+    for im in bpy.data.images:
+        if im.source != "FILE" or im.packed_file is not None or not im.filepath:
+            continue
+        kind = names.get(os.path.basename(im.filepath.replace("\\", "/")).lower())
+        if kind is None:
+            continue
+        try:
+            if os.path.isfile(bpy.path.abspath(im.filepath, library=im.library)):
+                continue
+            im.filepath = _ground_texture(kind)
+            im.reload()
+            n += 1
+        except Exception as ex:  # noqa: BLE001 - the project opens anyway: the missing texture is reported as before
+            from .core import log
+            log("SIMPLER_GROUND", f"texture {im.name} not relinked: {ex}")
+    return n
+
+
 GROUND_MAT_VERSION = 3
 
 

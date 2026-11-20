@@ -13,7 +13,8 @@ namespace Simpler
     /// </summary>
     public sealed partial class MainWindow
     {
-        const string SiteUrl = "https://www.rodluc.com/simpler/en/";     // (1.78.4, Luca) the official site, in English
+        // (20/11, Luca) the official site in the language of Simpler: English or Italian
+        static string SiteUrl => "https://www.rodluc.com/simpler/" + (L.Lang == "en" ? "en" : "it") + "/index.html";
 
         Border? _storyBox;
         TextBlock? _storyBody, _storyFoot;
@@ -24,59 +25,18 @@ namespace Simpler
 
         void RenderStory()
         {
-            // one box as wide as the library: an orange title, two short lines, the signature and the site
-            var sp = new StackPanel();
-            var head = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 0, 0, 6) };
-            // the logo of Simpler, small, before the title (the largest picture of the icon file, drawn at 22 px)
-            try
-            {
-                var ico = System.IO.Path.Combine(AppContext.BaseDirectory, "Simpler.ico");
-                if (System.IO.File.Exists(ico))
-                {
-                    var dec = System.Windows.Media.Imaging.BitmapDecoder.Create(new Uri(ico), System.Windows.Media.Imaging.BitmapCreateOptions.None,
-                                                                              System.Windows.Media.Imaging.BitmapCacheOption.OnLoad);
-                    var best = dec.Frames.OrderByDescending(f => f.PixelWidth).First();
-                    var img = new Image { Source = best, Width = 22, Height = 22, Margin = new Thickness(0, 0, 9, 0), VerticalAlignment = VerticalAlignment.Center };
-                    RenderOptions.SetBitmapScalingMode(img, BitmapScalingMode.HighQuality);
-                    head.Children.Add(img);
-                }
-            }
-            catch { }
-            var title = new TextBlock { Text = L.T("Blender, ma più semplice"), FontSize = 17, FontWeight = FontWeights.SemiBold,
-                                        Foreground = new SolidColorBrush(AdvancedColor), VerticalAlignment = VerticalAlignment.Center };
-            head.Children.Add(title);
-            sp.Children.Add(head);
-            var body = new TextBlock { TextWrapping = TextWrapping.Wrap, FontSize = 13, LineHeight = 19, Foreground = Theme.B(Theme.TextSoft) };
-            body.Inlines.Add(new Run(L.T("Simpler nasce dalla passione per le immagini, non da un'azienda: la potenza di Blender e Cycles con un'interfaccia semplice e immediata, ispirata ai migliori programmi di visualizzazione in tempo reale. Gratuito, senza abbonamenti né registrazione.")));
-            sp.Children.Add(body);
-            _storyBody = body;
-            var foot = new TextBlock { TextWrapping = TextWrapping.Wrap, FontSize = 12.5, Foreground = Theme.B(Theme.TextMuted), Margin = new Thickness(0, 8, 0, 0) };
-            foot.Inlines.Add(new Italic(new Run("— Luca Rodolfi")) { Foreground = Theme.B(Theme.Text) });
-            foot.Inlines.Add(new Run("  ·  " + L.T("Tutto su Simpler, in italiano e in inglese, sul") + " "));
-            // (1.78.4, Luca: «non mettere l'url, scrivi nel link "sito ufficiale di Simpler"»)
-            var link = new Hyperlink(new Run(L.T("sito ufficiale"))) { NavigateUri = new Uri(SiteUrl), Foreground = Theme.B(Theme.Accent), ToolTip = SiteUrl };
-            link.RequestNavigate += (_, e) =>
-            {
-                try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true }); } catch { }
-                e.Handled = true;
-            };
-            foot.Inlines.Add(link);
-            sp.Children.Add(foot);
-            _storyFoot = foot;
-            // (1.78.4, Luca) the text on the left, the example scene on the right: its picture opens it
-            var row = new Grid();
-            row.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            row.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-            row.Children.Add(sp);
-            var tiles = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center };
+            // (20/11, Luca: on a small screen at 120-150% the text was cut - «togliamo quel testo e mettiamo un altro box come gli
+            // altri con scritto sito ufficiale Simpler») only the tiles now, the official site first
+            _storyBody = null; _storyFoot = null;
+            var tiles = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Left };
+            tiles.Children.Add(OfficialSiteTile());
             // (1.78.5, Luca) «Example #1» (the shop) and «Example #2» (the bedroom), one after the other
             for (int i = 0; i < Samples.Length; i++)
                 if (SampleTile(i) is FrameworkElement sample) tiles.Children.Add(sample);
             tiles.Children.Add(IdeasTile());                // (1.78.4, Luca) «Suggerisci un'idea»
             tiles.Children.Add(RoadmapTile());              // (Luca, 13/11) the roadmap of the website, in the language of Simpler
             tiles.Children.Add(FreeTile());                 // (Luca) where to find free models and vegetation
-            Grid.SetColumn(tiles, 1);
-            row.Children.Add(tiles);
+            var row = tiles;
             var box = new Border
             {
                 Margin = new Thickness(4), Padding = new Thickness(18, 12, 18, 12), CornerRadius = new CornerRadius(8),
@@ -99,6 +59,33 @@ namespace Simpler
             }
             _libraryTiles.Children.Add(box);
             FitStory();
+        }
+
+        /// <summary>(20/11, Luca) «Sito ufficiale Simpler»: a tile like the others (tiles\site.jpg) that opens the site in the
+        /// browser, in the language of Simpler.</summary>
+        FrameworkElement OfficialSiteTile()
+        {
+            var img = TilePicture("site.jpg");
+            var pic = new Border
+            {
+                Width = 128, Height = 72, CornerRadius = new CornerRadius(6), BorderThickness = new Thickness(1), BorderBrush = Theme.B(Theme.Line),
+                Background = img != null ? new ImageBrush(img) { Stretch = Stretch.UniformToFill } : new LinearGradientBrush(Theme.C("#1D3766"), Theme.C("#3A2A12"), 35),
+            };
+            var cap = new TextBlock { Text = L.T("Sito ufficiale Simpler"), FontSize = 11.5, Foreground = Theme.B(Theme.TextSoft),
+                                      Margin = new Thickness(0, 4, 0, 0), HorizontalAlignment = HorizontalAlignment.Center };
+            var tile = new StackPanel { VerticalAlignment = VerticalAlignment.Center, Cursor = System.Windows.Input.Cursors.Hand, Background = Brushes.Transparent,
+                                        ToolTip = L.T("Apre il sito ufficiale di Simpler nel browser: novità, manuale, domande frequenti e download") };
+            tile.Children.Add(pic);
+            tile.Children.Add(cap);
+            tile.MouseEnter += (_, __) => pic.BorderBrush = Theme.B(Theme.Accent);
+            tile.MouseLeave += (_, __) => pic.BorderBrush = Theme.B(Theme.Line);
+            tile.MouseLeftButtonUp += (_, e) =>
+            {
+                e.Handled = true;
+                AppLog.Write("official site: open " + SiteUrl);
+                try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(SiteUrl) { UseShellExecute = true }); } catch { }
+            };
+            return tile;
         }
 
         // (Luca: «sotto è tagliato») the library is one row high and does not scroll up and down: with the three tiles the
@@ -153,7 +140,7 @@ namespace Simpler
             };
             var cap = new TextBlock { Text = L.F("Esempio #{0}", n + 1), FontSize = 11.5, Foreground = Theme.B(Theme.TextSoft),
                                       Margin = new Thickness(0, 4, 0, 0), HorizontalAlignment = HorizontalAlignment.Center };
-            var tile = new StackPanel { Margin = new Thickness(n == 0 ? 18 : 12, 0, 0, 0), VerticalAlignment = VerticalAlignment.Center, Cursor = System.Windows.Input.Cursors.Hand,
+            var tile = new StackPanel { Margin = new Thickness(14, 0, 0, 0), VerticalAlignment = VerticalAlignment.Center, Cursor = System.Windows.Input.Cursors.Hand,
                                         Background = Brushes.Transparent,
                                         ToolTip = L.T("Apre la scena di esempio. Simpler ne fa una copia nella cartella «Examples», accanto alla tua libreria dei modelli (la cartella scelta all'installazione): puoi modificarla e salvarla, l'originale resta com'è") };
             tile.Children.Add(pic);

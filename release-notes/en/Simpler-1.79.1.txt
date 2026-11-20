@@ -1,0 +1,6 @@
+SIMPLER 1.79.1  —  in preparation
+==================================
+
+Projects remember which version of Simpler saved them.
+
+- Projects: every project saved remembers the version of Simpler that saved it. If you open it with an older version, it opens anyway and Simpler warns that some things may be missing or not look as expected, suggesting to update. Projects saved before have no version and open as always, without warnings.

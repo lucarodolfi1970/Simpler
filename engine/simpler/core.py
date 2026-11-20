@@ -12,6 +12,9 @@ INTERNAL_KEY = "simpler_internal"
 SOURCE_KEY = "simpler_source"
 
 CM = 0.01  # API lengths are centimetres, Blender works in metres
+# (20/11, Luca) the version of Simpler.exe (start_engine --app-version): written in every project saved («savedWith»),
+# so an older Simpler that opens it can warn
+APP_VERSION = ""
 
 
 def log(tag, *parts):

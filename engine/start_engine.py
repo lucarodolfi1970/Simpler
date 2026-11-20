@@ -16,6 +16,7 @@ parser.add_argument("--port", type=int, default=8787)
 parser.add_argument("--open", default="", help="project (.simpler) to open at startup")
 parser.add_argument("--parent-pid", type=int, default=0, help="exit when this process ends (Simpler.exe)")
 parser.add_argument("--lang", default="it", help="language of engine messages: it | en")
+parser.add_argument("--app-version", default="", help="version of Simpler.exe, written in the projects saved")
 args = parser.parse_args(argv)
 
 from simpler import fullspeed, i18n, server  # noqa: E402
@@ -24,6 +25,8 @@ from simpler import fullspeed, i18n, server  # noqa: E402
 print("SIMPLER_FULLSPEED engine", "on" if fullspeed.apply() else "not available", flush=True)
 
 i18n.set_lang(args.lang)
+from simpler import core  # noqa: E402
+core.APP_VERSION = args.app_version
 
 if args.open:
     server.project_open({"path": args.open})

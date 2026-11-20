@@ -2538,5 +2538,10 @@
   "icon": "new",
   "it": "Prima versione ufficiale. Ecosistemi da aprire, modificare e copiare; 21 nuovi materiali Simpler; materiale «Interni»; contenuti scaricabili al clic; avviso degli aggiornamenti; programma di installazione con Blender incluso; vista in tempo reale senza blocchi; nebbia e pioggia pulite nel path tracing.",
   "en": "First official release. Ecosystems to open, edit and copy; 21 new Simpler materials; «Interiors» material; content downloaded with a click; update notices; installer with Blender included; real-time view without freezes; clean fog and rain in path tracing."
+ },
+ "1.79.1": {
+  "icon": "fix",
+  "it": "Il progetto ricorda con quale versione di Simpler è stato salvato: una versione più vecchia avvisa aprendolo.",
+  "en": "Projects remember which version of Simpler saved them: an older version warns when opening one."
  }
 }

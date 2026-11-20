@@ -48,7 +48,8 @@ def _write_project(path, copy=False, keep_backup=False, collect=False):
     scene = bpy.context.scene
     scene["simpler_settings"] = json.dumps({"camera": render.STATE.camera, "quality": render.STATE.quality,
                                             "config": render.STATE.config,
-                                            "caustics": render.STATE.caustics, "settingsVersion": 2})
+                                            "caustics": render.STATE.caustics, "settingsVersion": 2,
+                                            "savedWith": core.APP_VERSION})       # (20/11: an older Simpler warns, see project_open)
     previews.remove_preview_scene()
     fp = bpy.context.preferences.filepaths
     old_versions = fp.save_version
@@ -151,9 +152,11 @@ def project_open(data):
     render.STATE.meter_ev, render.STATE.meter_epoch = None, -1     # (the measurement of the framing: of this scene)
     saved = bpy.context.scene.get("simpler_settings")
     has_view = False
+    saved_with = ""
     if saved:
         s = json.loads(saved)
         has_view = bool(s.get("camera"))
+        saved_with = str(s.get("savedWith", "") or "")
         render.STATE.camera.update(s.get("camera", {}))
         render.STATE.quality = s.get("quality", "alta")
         render.STATE.config = render.default_config("alta")
@@ -246,7 +249,8 @@ def project_open(data):
     from . import water
     water.ensure()                    # (projects of 1.12-1.13: the waves move from the object to its water material)
     _ecosystems_after_open()
-    return {"path": path, "hasView": has_view, "missingTextures": missing_tex, "emptyTextures": empty_tex}     # saved framing: the app shows it instead of framing everything
+    return {"path": path, "hasView": has_view, "missingTextures": missing_tex, "emptyTextures": empty_tex,
+            "savedWith": saved_with}       # (20/11) the version of Simpler that saved it: the app warns if it is newer than itself     # saved framing: the app shows it instead of framing everything
 
 
 def _ecosystems_after_open():

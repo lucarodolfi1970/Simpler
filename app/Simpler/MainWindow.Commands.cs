@@ -185,6 +185,17 @@ namespace Simpler
             await OpenProjectPath(path);
         }
 
+        /// <summary>(20/11, Luca: «nel .simpler mettere la versione così se con un Simpler vecchio apri un progetto nuovo esce un
+        /// avviso») the project was saved by a newer Simpler than this one: it is open, but some things may be missing or wrong.
+        /// Projects saved before 1.79.1 have no version: no warning.</summary>
+        void WarnNewerProject(string savedWith)
+        {
+            if (!System.Version.TryParse(savedWith, out var saved) || !System.Version.TryParse(SettingsDialog.Version, out var mine) || saved <= mine) return;
+            AppLog.Write($"open project: saved with Simpler {savedWith}, newer than {SettingsDialog.Version}");
+            Msg.Show(this, L.F("Questo progetto è stato salvato con Simpler {0}, più recente di questa versione ({1}).\nSi è aperto, ma alcune cose potrebbero mancare o non apparire come previsto. Per lavorarci senza sorprese aggiorna Simpler dal sito ufficiale.", savedWith, SettingsDialog.Version),
+                     "Simpler", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
         async Task OpenProjectPath(string path)
         {
             AppLog.Write("open project: " + path);
@@ -203,6 +214,7 @@ namespace Simpler
             var openClock = System.Diagnostics.Stopwatch.StartNew();
             var missingTex = new List<string>();
             var emptyTex = new List<string>();
+            var savedWith = "";
             await Run(async api =>
             {
                 // (the engine looks for textures not where they were also in the folders pointed to before)
@@ -212,6 +224,7 @@ namespace Simpler
                 hasView = (bool?)r["hasView"] ?? false;
                 if (r["missingTextures"] is JsonArray mt) missingTex.AddRange(mt.Select(x => (string?)x ?? "").Where(x => x != ""));
                 if (r["emptyTextures"] is JsonArray et) emptyTex.AddRange(et.Select(x => (string?)x ?? "").Where(x => x != ""));
+                savedWith = (string?)r["savedWith"] ?? "";
             });
             if (recovered) Status(L.T("Recuperato il salvataggio automatico: salva per tenerlo nel progetto."));
             AppLog.Write($"project read by the engine in {openClock.Elapsed.TotalSeconds:0.0} s");
@@ -246,6 +259,7 @@ namespace Simpler
             if (_rightPanel is "material" or "materials" or "paint") await ShowRightPanel("");
             else if (_rightPanel != "") await ShowRightPanel(_rightPanel);
             HideTask();
+            WarnNewerProject(savedWith);
             _pauseCalc = false; _snowHidden = false;      // (the engine opens a project with both off)
             RenderLightenBox();
             await LoadCamView();
@@ -603,18 +617,11 @@ namespace Simpler
         {
             _caustics = on;
             await Run(async api => { await api.Post("settings", new { caustics = on }); });
-            if (mode < 0) mode = on ? 2 : (CausticsAny() ? 1 : 0);
-            Status(mode == 2 ? L.T("Caustiche attive: vetri e gemme concentrano la luce sulle superfici")
-                 : mode == 1 ? L.T("Caustiche normali: riflesse e rifratte calcolate dal path tracing")
-                 : L.T("Caustiche disattivate"));
+            Status(on ? L.T("Caustiche attive: vetri e gemme concentrano la luce sulle superfici") : L.T("Caustiche disattivate"));
         }
 
-        /// <summary>Any caustics on (normal or sharp), as the Rendering panel shows them.</summary>
-        bool CausticsAny()
-        {
-            bool B(string k) => (bool?)_renderSettings["config"]?[k] ?? true;     // (as the panel reads them: missing = on)
-            return _caustics || B("causticsReflective") || B("causticsRefractive");
-        }
+        /// <summary>Caustics on, as the Rendering panel shows them (19/11: only «Spente» / «Attive», no more «Normali»).</summary>
+        bool CausticsAny() => _caustics;
 
         async Task FinalRender()
         {

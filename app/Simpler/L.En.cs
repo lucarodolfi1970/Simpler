@@ -2130,6 +2130,7 @@ namespace Simpler
             ["Perché esiste Simpler"] = "Why Simpler exists",
             ["Blender, ma più semplice"] = "Blender, but simpler",
             ["Sito ufficiale Simpler"] = "Simpler official website",
+            ["Questo progetto è stato salvato con Simpler {0}, più recente di questa versione ({1}).\nSi è aperto, ma alcune cose potrebbero mancare o non apparire come previsto. Per lavorarci senza sorprese aggiorna Simpler dal sito ufficiale."] = "This project was saved with Simpler {0}, newer than this version ({1}).\nIt is open, but some things may be missing or not look as expected. To work on it without surprises, update Simpler from the official website.",
             ["Apre il sito ufficiale di Simpler nel browser: novità, manuale, domande frequenti e download"] = "Opens the official Simpler website in the browser: news, manual, FAQ and downloads",
             ["Simpler nasce dalla passione per le immagini, non da un'azienda: la potenza di Blender e Cycles con un'interfaccia semplice e immediata, ispirata ai migliori programmi di visualizzazione in tempo reale. Gratuito, senza abbonamenti né registrazione."] = "Simpler was born from a passion for images, not from a company: the power of Blender and Cycles with a simple, immediate interface inspired by the best real-time visualisation software. Free, with no subscription and no registration.",
             ["Tutte le informazioni, in italiano e in inglese:"] = "Everything about Simpler, in English and Italian:",

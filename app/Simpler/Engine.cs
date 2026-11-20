@@ -161,7 +161,8 @@ namespace Simpler
                 WorkingDirectory = Path.GetDirectoryName(script)!,
             };
             foreach (var a in new[] { "--background", "--factory-startup", "--python", script, "--",
-                                      "--port", Port.ToString(), "--parent-pid", Environment.ProcessId.ToString(), "--lang", L.Lang })
+                                      "--port", Port.ToString(), "--parent-pid", Environment.ProcessId.ToString(), "--lang", L.Lang,
+                                      "--app-version", SettingsDialog.Version })      // (20/11) written in the projects saved
                 psi.ArgumentList.Add(a);
 
             var ready = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);

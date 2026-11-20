@@ -1,0 +1,6 @@
+SIMPLER 1.79.1  —  in preparazione
+==================================
+
+Il progetto ricorda con quale versione di Simpler è stato salvato.
+
+- Progetti: ogni progetto salvato ricorda la versione di Simpler che l'ha salvato. Se lo apri con una versione più vecchia, si apre lo stesso e Simpler avvisa che alcune cose potrebbero mancare o non apparire come previsto, consigliando di aggiornare. I progetti salvati prima non hanno la versione e si aprono come sempre, senza avvisi.

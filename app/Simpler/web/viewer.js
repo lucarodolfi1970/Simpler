@@ -3097,6 +3097,14 @@ const SHADOW_LEVELS = { off: { map: 512, label: tr('No') }, media: { map: 1024, 
 let shadowLevel = 'alta';
 try { const v = localStorage.getItem('simpler.shadows'); if (v && SHADOW_LEVELS[v]) shadowLevel = v; } catch { /* storage unavailable */ }
 function shadowSettings() { return SHADOW_LEVELS[shadowLevel]; }
+// Declared here and not next to shadowWarmScene and lightList, where they are used: setShadowLevel runs while the view
+// starts (the saved level of the shadows) and prepares the shaders, shadows included - further down these three did not
+// exist yet and every start of Simpler wrote «shaders for the shadows: ReferenceError: Cannot access '_lightSig' before
+// initialization» in the log (in the reports of 10 users out of 11, 22/11; harmless: at the start the scene is empty).
+const _SHADOW_SIDE = { [THREE.FrontSide]: THREE.BackSide, [THREE.BackSide]: THREE.FrontSide, [THREE.DoubleSide]: THREE.DoubleSide };
+const _shadowWarmed = { lights: null, kinds: new Set() };
+let _lightSig = null;      // what decides the shaders of three.js: how many lights of each kind are drawn (see lightList)
+
 function setShadowLevel(level) {
   shadowLevel = level;
   try { localStorage.setItem('simpler.shadows', level); } catch { /* storage unavailable */ }
@@ -9710,8 +9718,7 @@ function sceneGlass() {
 }
 // the shadow shaders of the scene, see prepareShaders. As WebGLShadowMap.getDepthMaterial of three.js r186 sets its material
 // for each object; kinds already prepared with the same lights are not looked at again (_shadowWarmed).
-const _SHADOW_SIDE = { [THREE.FrontSide]: THREE.BackSide, [THREE.BackSide]: THREE.FrontSide, [THREE.DoubleSide]: THREE.DoubleSide };
-const _shadowWarmed = { lights: null, kinds: new Set() };
+// (_SHADOW_SIDE, _shadowWarmed and _lightSig are declared above setShadowLevel: the view calls it while it starts)
 function shadowWarmScene() {
   if (!renderer.shadowMap.enabled) return null;
   const state = _lightSig + '|' + renderer.shadowMap.type;
@@ -9816,7 +9823,7 @@ function prepareShaders(why) {
   });
 }
 // what decides the shaders of three.js: how many lights of each kind are drawn, with or without shadows / pictures
-let _lightSig = null;
+// (_lightSig: declared above setShadowLevel)
 const _lightPend = { sig: '', t: 0 };
 function lightKey(o) { return o.type + (o.castShadow ? 's' : '') + (o.map ? 'm' : ''); }
 function lightList() {

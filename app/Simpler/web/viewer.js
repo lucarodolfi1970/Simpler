@@ -1545,6 +1545,43 @@ let selectMode = '';                 // box / lasso selection in the view: '' | 
 // ------------------------------------------------------------------ renderer & scene
 const container = document.getElementById('view');
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: !!params.get('test') });
+// (21/11, Luca: «pezzi di terreno sono in realtime invisibili») A shader the graphics card refuses is written in the log with the
+// reason - three.js only wrote it in the console, which nobody reads. In his «terrain test»: «FRAGMENT shader texture image
+// units count exceeds MAX_TEXTURE_IMAGE_UNITS(16)» - a zone of the terrain that blends its border with 5 other zones (one texture
+// each) on top of its own maps, the sky, the shadow, the rain and the snow: 17 textures, and the whole zone was not drawn. Such a
+// zone now gives up the last of its border blends, one at a time, until the card takes its shader (EB_LIMIT, useEdgeBlend): a
+// border a little less soft instead of a hole. The view only: the path tracing blends them all.
+const EB_LIMIT = new Map();              // name of the material -> how many border blends its shader can hold
+let _shaderErrSaid = 0;
+renderer.debug.onShaderError = (gl, program, vs, fs) => {
+  let fixing = '';
+  try {
+    const hit = [];
+    scene.traverse((o) => {
+      if (!o.isMesh) return;
+      for (const m of (Array.isArray(o.material) ? o.material : [o.material])) {
+        if (!m || !m._ebBase || hit.includes(m)) continue;
+        const cp = renderer.properties.get(m).currentProgram;
+        if (cp && cp.program === program) hit.push(m);
+      }
+    });
+    for (const m of hit) {
+      const key = m._ebBase.name || m.name;
+      const now = Math.min(5, EB_LIMIT.get(key) ?? 5, m._ebBase.b.partners.length);
+      if (now <= 0) continue;
+      EB_LIMIT.set(key, now - 1);
+      fixing += ` «${key}» ${now} -> ${now - 1}`;
+      setTimeout(() => { try { useEdgeBlend(m, m._ebBase.b, m._ebBase.uv, key); m.needsUpdate = true; invalidate(); } catch (err) { viewLog('border blends: ' + err); } }, 0);
+    }
+  } catch (err) { fixing = ' (not lowered: ' + err + ')'; }
+  if (_shaderErrSaid++ >= 12) return;
+  try {
+    const clip = (t) => String(t || '').replace(/\s+/g, ' ').trim().slice(0, 300);
+    const name = ((gl.getShaderSource(fs) || '').match(/#define SHADER_NAME (\S+)/) || [])[1] || '?';
+    viewLog(`SHADER REFUSED «${name}»: ${clip(gl.getProgramInfoLog(program))} ${clip(gl.getShaderInfoLog(vs))} ${clip(gl.getShaderInfoLog(fs))} | texture units allowed `
+      + `${gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS)}` + (fixing ? ' | border blends of the terrain lowered:' + fixing : ' | no terrain zone with border blends uses it'));
+  } catch (err) { try { viewLog('SHADER REFUSED (no details: ' + err + ')'); } catch (e2) {} }
+};
 renderer.setPixelRatio(window.devicePixelRatio);
 // (1.75.4) three.js itself sets needsUpdate on the double-sided transmissive materials (glass) at every frame
 // (renderTransmissionPass: back side, then front side) - not a change of the scene: inside a render it never asks
@@ -3980,7 +4017,7 @@ function simplerMaterial(p, m) {
   }
   if (p.macro && tri) useMacro(m, p.macro, uv);
   if (p.grunge && ((p.grunge.amount || 0) > 0 || p.grunge.paint) && (p.grunge.opacity ?? 1) > 0) useGrunge(m, p.grunge);
-  if (p.blend && tri && (p.blend.partners || []).length && (p.blend.width || 0) > 0) useEdgeBlend(m, p.blend, uv);
+  if (p.blend && tri && (p.blend.partners || []).length && (p.blend.width || 0) > 0) useEdgeBlend(m, p.blend, uv, p.name);
   // (1.76.41: the relief of the rock alone, colours off - nothing to do in the view)
   if (p.reliefColor && p.reliefColor.image) useReliefColor(m, p.reliefColor);
   if (p.tone && (p.tone.streaks || p.tone.bands || p.tone.ridges || p.tone.wet)) useTone(m, p.tone);
@@ -4446,9 +4483,13 @@ function ebLumW(uv) {
   if (!uv || (uv.mode || 'uv') === 'uv') return 1;
   return Math.min(1, 10 / Math.max(0.01, (uv.sizeCm || 100) / 100));
 }
-function useEdgeBlend(m, b, ownUv) {
-  const prev = m._ownCompile, prevKey = m._ownKey;
-  const parts = b.partners.slice(0, 5);
+function useEdgeBlend(m, b, ownUv, name) {
+  // (21/11) what the material had before the blends is kept: when the card refuses its shader for too many textures the blends are
+  // put again with one less (EB_LIMIT, renderer.debug.onShaderError), over that and not over themselves
+  if (!m._ebBase) m._ebBase = { c: m._ownCompile, k: m._ownKey };
+  m._ebBase.b = b; m._ebBase.uv = ownUv; if (name) m._ebBase.name = name;
+  const prev = m._ebBase.c, prevKey = m._ebBase.k;
+  const parts = b.partners.slice(0, Math.min(5, EB_LIMIT.get(m._ebBase.name || m.name) ?? 5));
   const at = !!ownUv.antitile;
   const un = { ebW: { value: Math.max(0.05, b.width) }, ebIrr: { value: Math.max(0, Math.min(1, b.irregular ?? 0.6)) },
               ebLwA: { value: ebLumW(ownUv) } };
@@ -10101,3 +10142,4 @@ if (params.get('test')) window.__dbg = {
   refitShadows, amb, ambApply, setAmbience, root, scatter, scatterAdopt, surfaceHits, paintSurfaces, areaSurfaces, paint, OCEAN, oceanSet, fxApply, setFx, FX, lightSig, shaderPrep, WET, wetDryApply, get shaderRev() { return [_shaderRev, _shaderRevSeen]; }, dropToFloor, mantleSync, distLamps, FLAKES, setPivotMode, updateHud, drawSector, applySelection, scatter, scatterUpdate, sceneHits, paint, paintStroke: (h, e) => paintStroke(h, e), surfaceUnder: (x, y) => surfaceUnder(x, y), areaTool, areaGenerate: () => areaGenerate(),
 };
 if (params.get('glb')) loadScene(params.get('glb')).then(() => { frameSelection([]); window.simplerLoaded = true; });
+

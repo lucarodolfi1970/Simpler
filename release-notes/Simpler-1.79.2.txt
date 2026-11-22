@@ -1,0 +1,10 @@
+SIMPLER 1.79.2  —  in preparazione
+===================================
+
+Video tutorial nel riquadro di avvio; corrette le zone del terreno non disegnate nella vista in tempo reale.
+
+- Novità: nel riquadro di avvio, tra gli esempi e «Suggerisci un'idea», c'è «Video tutorial»: apre la pagina dei video del sito di Simpler nello spazio della vista, in italiano o in inglese secondo la lingua di Simpler. I video si guardano lì, anche a tutto schermo.
+- Corretto: nella vista in tempo reale alcune zone di un terreno potevano non essere disegnate, quando una zona sfumava verso molte altre con pioggia o neve attive. Ora la zona rinuncia a una sfumatura di bordo alla volta finché la scheda grafica accetta il materiale.
+- Corretto: con il Suolo alzato per fare l'acqua di un fiume o di un lago (materiale d'acqua o di vetro della libreria), bastava un centimetro di «Spessore» della neve per stendere un lenzuolo bianco sull'acqua e su tutto ciò che sta più in basso. Ora un Suolo trasparente, o con «Sempre asciutto» per la neve, non riceve il manto.
+- Corretto: con il Suolo inclinato (per esempio di un grado, per un fiume in discesa) il manto di neve restava orizzontale all'altezza del suo centro: sul lato basso stava metri sopra il Suolo e copriva rocce e fiume già con un centimetro di «Spessore». Ora il manto segue il piano del Suolo.
+- Corretto: alcuni materiali Poly Haven venduti in più varianti di colore (per esempio Fabric Pattern 05 e 07) non si scaricavano («no colour map»). Ora si usa la prima variante di colore.

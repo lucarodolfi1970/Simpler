@@ -1,0 +1,10 @@
+SIMPLER 1.79.2  —  in preparation
+===================================
+
+Video tutorials in the start box; fixed terrain zones not drawn in the real-time view.
+
+- New: in the start box, between the examples and «Suggest an idea», there is «Video tutorials»: it opens the videos page of the Simpler website in the space of the view, in English or Italian according to the language of Simpler. The videos play there, full screen too.
+- Fixed: in the real-time view some zones of a terrain could be left undrawn, when a zone blended towards many others with rain or snow on. Now the zone gives up one edge blend at a time until the graphics card accepts the material.
+- Fixed: with the Ground raised to make the water of a river or a lake (a water or glass material from the library), one centimetre of snow «Thickness» laid a white sheet over the water and over everything lower than it. Now a see-through Ground, or one set to «Always dry» for the snow, takes no mantle.
+- Fixed: with the Ground tilted (by one degree, say, for a river flowing downhill) the snow mantle stayed level at the height of its centre: on the lower side it stood metres above the Ground and covered rocks and river with just one centimetre of «Thickness». Now the mantle follows the plane of the Ground.
+- Fixed: some Poly Haven materials that come in several colour variants (Fabric Pattern 05 and 07, for example) would not download («no colour map»). Now the first colour variant is used.

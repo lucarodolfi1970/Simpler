@@ -115,6 +115,43 @@ def _ground():
     return None
 
 
+def _ground_z(g, X, Y):
+    """(1.79.2) The height of the Ground at these points: its plane as it lies in the scene - turned a little (a river
+    that flows downhill) it is not level, and the mantle laid at the height of its centre everywhere stood metres
+    above it on the lower side: a white sheet over the rocks and the river from the first centimetre."""
+    np = _np()
+    from mathutils import Vector
+    mw = g.matrix_world
+    n = mw.to_3x3() @ Vector((0.0, 0.0, 1.0))
+    p = mw.translation
+    if abs(n.z) < 1e-4:
+        return np.full(np.shape(X), float(p.z), dtype=np.float32)
+    return (float(p.z) - (float(n.x) * (X - float(p.x)) + float(n.y) * (Y - float(p.y))) / float(n.z)).astype(np.float32)
+
+
+def _ground_bare(g):
+    """(1.79.2) The Ground that takes no mantle: «Sempre asciutto» for the snow on it, or see-through - the Ground raised
+    into a valley with a material of water or glass from the library is the surface of a river or a lake (the water made
+    with «Acqua» is already left out: _wet). Before, the mantle was laid at the height of the Ground whatever it was: a
+    white sheet over the river and over everything lower than it, from the first centimetre of «Spessore»."""
+    if g is None:
+        return False
+    if _dry(g):
+        return True
+    mats = [sl.material for sl in g.material_slots if sl.material is not None]
+    if not mats:
+        return False
+    import json
+    for m in mats:
+        try:
+            w = float((json.loads(m.get("simpler_mat") or "{}").get("transmission") or {}).get("weight", 0.0))
+        except (TypeError, ValueError):
+            w = 0.0
+        if w < 0.5:
+            return False
+    return True
+
+
 def _cutout(mat):
     """A material with holes (leaves, fences): its triangles hold no mantle. And water (16/11): a river or a lake
     painted on the ground as a material of the ground (Luca: «On: Ground») - no mantle on its faces either."""
@@ -184,8 +221,9 @@ def _signature(st):
     sh = rain.SH["meta"]["rev"] if (st[6] and rain.SH["meta"]) else -1
     used = {m for ob in _objects() for m in ob.data.materials if m is not None}
     mats = tuple(sorted((m.name, _cutout(m)) for m in used))
-    gz = round(g.matrix_world.translation.z, 4) if g is not None else None
-    return hash((rain._geometry_sig(shelter=False), tuple(round(x, 5) if isinstance(x, float) else x for x in st), sh, flags, gz, mats))
+    gz = tuple(round(v, 4) for row in g.matrix_world for v in row) if g is not None else None
+    return hash((rain._geometry_sig(shelter=False), tuple(round(x, 5) if isinstance(x, float) else x for x in st), sh, flags, gz, mats,
+                 _ground_bare(g)))
 
 
 def touch():
@@ -1474,9 +1512,13 @@ def _grid_field(st, obs, grid_obs, cut, budget, frame=None, box=None):
         hole = ~real & (cnt >= 5)
         top = np.where(hole, sm / np.maximum(cnt, 1), top)
         real = real | hole
-        gz = float(g.matrix_world.translation.z) if g is not None else None
-        if gz is not None:
-            top = np.where(real, np.maximum(top, gz), gz)
+        bare = None
+        if g is not None:
+            gX, gY = np.meshgrid((np.arange(nx) + 0.5) * cell + x0, (np.arange(ny) + 0.5) * cell + y0)
+            gz = _ground_z(g, gX, gY)           # (1.79.2: its height cell by cell - the Ground can be turned)
+            if _ground_bare(g):
+                bare = ~real | (top <= gz)      # (1.79.2: where the Ground is the surface and takes no snow)
+            top = np.where(real, np.maximum(top, gz), gz).astype(np.float32)
             real = np.ones_like(real)
         # (two cells on the same surface: a slope that can still hold snow - «Sulle pareti» decides how steep; a
         # steeper step is an edge, where the snow ends rounded instead of hanging down the face in thin flaps)
@@ -1572,6 +1614,8 @@ def _grid_field(st, obs, grid_obs, cut, budget, frame=None, box=None):
         if wet is not None:
             # (16/11) water at the height of the ground or above it (a river painted on the ground, a lake): no mantle
             S = np.where(wet >= top - 0.02, 0.0, S)
+        if bare is not None:
+            S = np.where(bare, 0.0, S)
         t = depth * S
         # (a layer, not the grain of the pattern: the fine detail of the map stays in the white of the materials)
         rb = int(round(2.4 * ref / cell))      # (two passes of 3 x 3 reach about 2.4 cells: what this matches)

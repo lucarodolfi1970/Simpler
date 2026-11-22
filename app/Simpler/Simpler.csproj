@@ -10,7 +10,7 @@
     <AssemblyName>Simpler</AssemblyName>
     <RootNamespace>Simpler</RootNamespace>
     <Product>Simpler</Product>
-    <Version>1.79.1</Version>
+    <Version>1.79.2</Version>
     <ApplicationIcon>Simpler.ico</ApplicationIcon>
     <Company>Luca Rodolfi</Company>
     <!-- The whole UI is built in C# (no XAML): every part of it is checked by the compiler. -->

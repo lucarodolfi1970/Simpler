@@ -2543,5 +2543,10 @@
   "icon": "fix",
   "it": "Corretta la texture del suolo mancante aprendo gli esempi su un altro PC; il progetto ricorda con quale versione di Simpler è stato salvato.",
   "en": "Fixed the missing ground texture when opening the examples on another PC; projects remember which version of Simpler saved them."
+ },
+ "1.79.2": {
+  "icon": "new",
+  "it": "Video tutorial nel riquadro di avvio; corrette le zone del terreno non disegnate nella vista in tempo reale.",
+  "en": "Video tutorials in the start box; fixed terrain zones not drawn in the real-time view."
  }
 }

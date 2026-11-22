@@ -33,6 +33,7 @@ namespace Simpler
             // (1.78.5, Luca) «Example #1» (the shop) and «Example #2» (the bedroom), one after the other
             for (int i = 0; i < Samples.Length; i++)
                 if (SampleTile(i) is FrameworkElement sample) tiles.Children.Add(sample);
+            tiles.Children.Add(TutorialsTile());            // (21/11) the video tutorials, between the examples and the ideas
             tiles.Children.Add(IdeasTile());                // (1.78.4, Luca) «Suggerisci un'idea»
             tiles.Children.Add(RoadmapTile());              // (Luca, 13/11) the roadmap of the website, in the language of Simpler
             tiles.Children.Add(FreeTile());                 // (Luca) where to find free models and vegetation

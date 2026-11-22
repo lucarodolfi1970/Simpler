@@ -256,6 +256,23 @@ def _pick_files(files):
                     break
             if channel in chosen:
                 break
+    if "color" not in chosen:
+        # (22/11) textures sold in colour variants have no single colour map: col_1, col_2... (fabric_pattern_05, _07 -
+        # «no colour map» before); the first variant is the colour
+        for key in sorted(k for k in files if k.lower().startswith(("col_", "diff_", "diffuse_")) and isinstance(files.get(k), dict)):
+            by_res = files[key]
+            for res in RES_ORDER:
+                fmts = by_res.get(res)
+                if not isinstance(fmts, dict):
+                    continue
+                for fmt in ("jpg", "png"):
+                    if isinstance(fmts.get(fmt), dict) and fmts[fmt].get("url"):
+                        chosen["color"] = (fmts[fmt]["url"], fmt, fmts[fmt].get("size", 0))
+                        break
+                if "color" in chosen:
+                    break
+            if "color" in chosen:
+                break
     return chosen
 
 

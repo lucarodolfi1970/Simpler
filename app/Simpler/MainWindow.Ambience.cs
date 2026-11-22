@@ -965,7 +965,9 @@ namespace Simpler
             var fog = Card(L.T("Foschia e nebbia"), Icons.Fog, Theme.Teal);
             var dens = D("fog", "density", 0.15);
             S(fog, Icons.Haze, Theme.Teal, L.T("Densità"), "fog", "density", dens * 100, 0, 100, false, "0", "%", L.T("Le cose lontane si perdono nell'aria: poca = profondità naturale, tanta = nebbia"), x => x / 100);
-            var vis = (double?)(_ambience["fog"] as JsonObject)?["visibility"] ?? 0;
+            // (1.79.2, Luca 15/11: «densità 0» and «260 m» together while the engine works) the visibility from the density shown,
+            // with the engine's formula (ambience.fog_visibility, nothing under 0.5%), not the one of the engine's last answer
+            var vis = (string?)st["mode"] == "hdri" || dens < 0.005 ? 0 : 40000.0 * Math.Pow(30.0 / 40000.0, dens);
             fog.Children.Add(HintSmall(vis > 0 ? L.F("Visibilità circa {0}", vis >= 1000 ? (vis / 1000).ToString("0.#") + " km" : Math.Round(vis) + " m") : L.T("Aria limpidissima")));
             // (1.75.49) presets of the fog alone (they leave the sky, the sun and the clouds as they are)
             var fp = new WrapPanel { Margin = new Thickness(0, 0, 0, 8) };

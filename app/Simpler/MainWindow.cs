@@ -368,7 +368,7 @@ namespace Simpler
             // (1.78.3, Luca: «le luci … avrebbero dignità di un pulsante con una lampadina gialla») the lights are not
             // a library: a button that opens the kinds of light, one click puts it in the middle of the view
             Button? lightsBtn = null;
-            lightsBtn = Theme.Button(Theme.IconText(Icons.Light, "", Theme.C("#F2C14E"), 17), Theme.Kind.Ghost, L.T("Aggiungi una luce: scegli il tipo, va al centro della vista"));
+            lightsBtn = Theme.Button(Theme.IconText(Icons.Light, "", Theme.C("#F2C14E"), 17), Theme.Kind.Ghost, L.T("Aggiungi una luce: scegli il tipo, va al centro della vista; oppure trascinala dal menu nella vista, dove la lasci"));
             lightsBtn.Padding = new Thickness(10, 0, 10, 0);
             lightsBtn.Margin = new Thickness(6, 0, 0, 0);
             lightsBtn.VerticalAlignment = VerticalAlignment.Center;

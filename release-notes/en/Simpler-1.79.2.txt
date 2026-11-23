@@ -10,3 +10,4 @@ Video tutorials in the start box; fixed terrain zones not drawn in the real-time
 - Fixed: some Poly Haven materials that come in several colour variants (Fabric Pattern 05 and 07, for example) would not download («no colour map»). Now the first colour variant is used.
 - Fixed: in the «Haze and fog» panel, while the engine was working after a change of density, the «Visibility about …» line still showed the previous value (for example density 0 and «260 m» together). Now it follows the chosen density at once.
 - Fixed: with two copies of Simpler open together, or Simpler and Pack Studio open together, one could take away the other's files of the 3D view, rain and snow; at start it could stay on «Preparing the 3D view» for ever.
+- New: from the menu of the light-bulb button a light can also be dragged into the view and dropped where you want, on the surface under the pointer. A click works as before: the light goes to the middle of the view.

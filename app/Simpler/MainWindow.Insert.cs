@@ -109,11 +109,133 @@ namespace Simpler
             foreach (var (kind, label, tip) in InsertLights)
             {
                 var k = kind;
-                var i = new MenuItem { Header = L.T(label), ToolTip = L.T(tip), Icon = Theme.Icon(LightIcon(k), Theme.C("#F2C877"), 16, 1.7) };
+                var i = new MenuItem { Header = L.T(label), ToolTip = L.T(tip) + "\n" + L.T("Clic: al centro della vista · trascina nella vista: dove la lasci"),
+                                       Icon = Theme.Icon(LightIcon(k), Theme.C("#F2C877"), 16, 1.7) };
                 i.Click += async (_, __) => await InsertLight(k, null);
+                DragFromMenu(i, m, L.T(label), async (x, y) =>
+                {
+                    var at = await AskViewPoint(x, y);
+                    if (at != null) await InsertLight(k, at);
+                });
                 m.Items.Add(i);
             }
             m.IsOpen = true;
+        }
+
+        /// <summary>(1.79.2, from a user's feedback on 1.79.1; tried first in the development version 1.80.14-1.80.16) An entry of a menu that can also be dragged into the view:
+        /// pressed and moved, the menu closes and the window follows the mouse (the menu's own capture ends with it);
+        /// let go over the view, <paramref name="onDrop"/> gets the point (view pixels); elsewhere or Esc, nothing. A click
+        /// works as before. Until 1.78.2 the lights were tiles of the library, dragged in with MakeDraggable: the button
+        /// of the header (1.78.3) had only the click.</summary>
+        void DragFromMenu(MenuItem item, ContextMenu menu, string label, Func<double, double, Task> onDrop)
+        {
+            // (1.79.2) listened to on the menu, handled events too, and the entry found under the mouse: listened to on
+            // the entry itself the press was never seen - the menu handles the mouse before its entries. The
+            // distance is measured on the screen (the menu is a window of its own)
+            Point start = default;
+            bool pressed = false;
+            menu.AddHandler(UIElement.PreviewMouseLeftButtonDownEvent, new MouseButtonEventHandler((_, e) =>
+            {
+                if (!IsInside(e.OriginalSource as DependencyObject, item)) return;
+                pressed = true;
+                start = menu.PointToScreen(e.GetPosition(menu));
+                AppLog.Write("lights menu: pressed on «" + label + "»");
+            }), true);
+            menu.AddHandler(UIElement.PreviewMouseLeftButtonUpEvent, new MouseButtonEventHandler((_, __) => pressed = false), true);
+            menu.AddHandler(UIElement.PreviewMouseMoveEvent, new MouseEventHandler((_, e) =>
+            {
+                if (!pressed) return;
+                if (e.LeftButton != MouseButtonState.Pressed) { pressed = false; return; }
+                var p = menu.PointToScreen(e.GetPosition(menu));
+                if (Math.Abs(p.X - start.X) <= 6 && Math.Abs(p.Y - start.Y) <= 6) return;
+                pressed = false;
+                e.Handled = true;
+                AppLog.Write("lights menu: dragging «" + label + "» out of the menu");
+                menu.IsOpen = false;
+                // the window takes the mouse once the menu has let it go (closing it gives its capture back)
+                Dispatcher.BeginInvoke(new Action(() => DragInWindow(label, onDrop)), System.Windows.Threading.DispatcherPriority.Input);
+            }), true);
+        }
+
+        static bool IsInside(DependencyObject? d, DependencyObject parent)
+        {
+            for (int n = 0; d != null && n < 64; n++)
+            {
+                if (d == parent) return true;
+                d = d is Visual || d is System.Windows.Media.Media3D.Visual3D ? VisualTreeHelper.GetParent(d) : LogicalTreeHelper.GetParent(d);
+            }
+            return false;
+        }
+
+        // (1.79.2) The state of the button and the place of the pointer asked to Windows itself: after the first drag
+        // WPF kept saying «button up» while the button was held (log of 23/11: «button already up» at every later try,
+        // 20 ms after the press) - its own record of the mouse had gone out of step with the menu closing.
+        [System.Runtime.InteropServices.DllImport("user32.dll")] static extern short GetAsyncKeyState(int vKey);
+        [System.Runtime.InteropServices.DllImport("user32.dll")] static extern int GetSystemMetrics(int nIndex);
+        // (GetCursorPos and NativePoint: in MainWindow.Tree.cs)
+
+        static bool PrimaryButtonDown()
+        {
+            int vk = GetSystemMetrics(23) != 0 ? 0x02 : 0x01;          // SM_SWAPBUTTON: the left-handed mouse
+            return (GetAsyncKeyState(vk) & 0x8000) != 0;
+        }
+
+        void DragInWindow(string label, Func<double, double, Task> onDrop)
+        {
+            if (!PrimaryButtonDown()) { AppLog.Write("lights menu: button already up, nothing dragged"); return; }
+            var ghost = new Popup
+            {
+                AllowsTransparency = true, Placement = PlacementMode.Relative, PlacementTarget = this, IsHitTestVisible = false,
+                Child = DragGhost(label, null),
+            };
+            bool active = true;
+            var timer = new System.Windows.Threading.DispatcherTimer(System.Windows.Threading.DispatcherPriority.Input) { Interval = TimeSpan.FromMilliseconds(15) };
+            KeyEventHandler key = null!;
+            // where the pointer is: in the window (for the label that follows it) and in the view (for the drop)
+            (Point win, Point view, bool over) Where()
+            {
+                GetCursorPos(out var c);
+                var sp = new Point(c.X, c.Y);
+                var w = PointFromScreen(sp);
+                bool ok = _web != null && _webReady && _web.IsVisible;
+                var v = ok ? _web!.PointFromScreen(sp) : default;
+                bool over = ok && v.X >= 0 && v.Y >= 0 && v.X <= _web!.ActualWidth && v.Y <= _web.ActualHeight;
+                return (w, v, over);
+            }
+            void End()
+            {
+                if (!active) return;
+                active = false;
+                timer.Stop();
+                PreviewKeyDown -= key;
+                ghost.IsOpen = false;
+                Mouse.OverrideCursor = null;
+                if (IsMouseCaptured) ReleaseMouseCapture();
+            }
+            timer.Tick += async (_, __) =>
+            {
+                if (!active) return;
+                var (w, v, over) = Where();
+                if (PrimaryButtonDown())
+                {
+                    ghost.HorizontalOffset = w.X + 6;
+                    ghost.VerticalOffset = w.Y + 6;
+                    Mouse.OverrideCursor = over ? Cursors.Cross : Cursors.No;
+                    return;
+                }
+                AppLog.Write(over ? $"lights menu: «{label}» dropped on the view at {v.X:0},{v.Y:0}" : $"lights menu: «{label}» let go outside the view");
+                End();
+                if (over) await onDrop(v.X, v.Y);
+            };
+            key = (_, e) => { if (e.Key == Key.Escape) { e.Handled = true; AppLog.Write("lights menu: drag cancelled (Esc)"); End(); } };
+            PreviewKeyDown += key;
+            var (w0, _, _) = Where();
+            ghost.HorizontalOffset = w0.X + 6;
+            ghost.VerticalOffset = w0.Y + 6;
+            ghost.IsOpen = true;
+            // (the window holds the mouse so that the view does not turn under the drag; the drop itself does not need it)
+            if (!CaptureMouse()) AppLog.Write("lights menu: the window could not take the mouse (the drop still works)");
+            timer.Start();
         }
 
         async Task InsertLight(string kind, JsonObject? at)

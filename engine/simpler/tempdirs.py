@@ -49,6 +49,18 @@ def _alive(pid):
         return True
 
 
+def removable(name, prefix):
+    """(23/11) For the files «<prefix><pid>_...» that every engine keeps in the same folder of %LOCALAPPDATA%\\Simpler
+    (rain: shelter, drops, mantle, painted layers; dirt): True when the file is of this engine or of an engine that
+    is gone, False when another engine that is running made it. Before, each engine removed all the files with its
+    prefix: two copies of Simpler open (or Simpler and Pack Studio) took each other's files away."""
+    pid = name[len(prefix):].split("_", 1)[0]
+    if not pid.isdigit():
+        return True
+    pid = int(pid)
+    return pid == os.getpid() or not _alive(pid)
+
+
 def stale():
     """The folders of engines that are gone (or of older versions, after a day)."""
     base = tempfile.gettempdir()

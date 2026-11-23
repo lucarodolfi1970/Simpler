@@ -2270,8 +2270,9 @@ def _write_view(groups):
     np = _np()
     from . import rain
     d = rain._shelter_dir()
+    from . import tempdirs
     for f in os.listdir(d):
-        if f.startswith("mantle_"):
+        if f.startswith("mantle_") and tempdirs.removable(f, "mantle_"):
             try:
                 os.remove(os.path.join(d, f))
             except OSError:

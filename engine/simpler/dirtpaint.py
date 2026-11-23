@@ -118,9 +118,10 @@ def _dir():
 
 
 def _write_bin(A, D, fr):
+    from . import tempdirs
     d = _dir()
     for f in os.listdir(d):
-        if f.startswith("dirt_"):
+        if f.startswith("dirt_") and tempdirs.removable(f, "dirt_"):
             try:
                 os.remove(os.path.join(d, f))
             except OSError:

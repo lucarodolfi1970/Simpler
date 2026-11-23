@@ -2078,10 +2078,21 @@ def _store_in_cache(path, cache_path):
         shutil.move(path, cache_path)
     except OSError:
         return path
-    files = sorted((os.path.join(view_cache_dir(), f) for f in os.listdir(view_cache_dir()) if f.endswith(".glb")),
-                   key=lambda f: os.path.getmtime(f), reverse=True)
+    # (23/11) a file of the list can be gone a moment later (another preparation of the view, or another Simpler open,
+    # tidying the same folder): its date could not be read, this thread ended there and the view waited for ever on
+    # «Preparazione della vista 3D». A file that is gone simply counts as the oldest.
+    def _age(f):
+        try:
+            return os.path.getmtime(f)
+        except OSError:
+            return 0.0
+    try:
+        names = [f for f in os.listdir(view_cache_dir()) if f.endswith(".glb")]
+    except OSError:
+        return cache_path
+    files = sorted((os.path.join(view_cache_dir(), f) for f in names), key=_age, reverse=True)
     for old in files[VIEW_CACHE_KEEP:]:
-        if old != PREVIEW.get("path"):
+        if old != PREVIEW.get("path") and not _view_used_elsewhere(old):
             try:
                 os.remove(old)
             except OSError:
@@ -2089,11 +2100,52 @@ def _store_in_cache(path, cache_path):
     return cache_path
 
 
+# (23/11) Several engines share this folder: two copies of Simpler, or Simpler and Pack Studio. Each kept the 4 most
+# recent files and knew only its own: it could remove the view another copy was showing. Now every engine leaves a
+# small mark next to the file it shows («<file>.use<pid>»); a file with the mark of an engine that is running is
+# never removed; the marks of engines that are gone are taken away.
+def _view_mark(path, on):
+    mark = f"{path}.use{os.getpid()}"
+    try:
+        if on:
+            with open(mark, "w"):
+                pass
+        elif os.path.isfile(mark):
+            os.remove(mark)
+    except OSError:
+        pass
+
+
+def _view_used_elsewhere(path):
+    from . import tempdirs
+    folder, base = os.path.split(path)
+    used = False
+    try:
+        names = os.listdir(folder)
+    except OSError:
+        return False
+    for n in names:
+        if not n.startswith(base + ".use"):
+            continue
+        pid = n[len(base) + 4:]
+        if pid.isdigit() and int(pid) != os.getpid() and tempdirs._alive(int(pid)):
+            used = True
+        else:
+            try:
+                os.remove(os.path.join(folder, n))        # (this engine's, or of an engine that is gone)
+            except OSError:
+                pass
+    return used
+
+
 def _finish_export(path):
     old = PREVIEW["path"]
     PREVIEW["version"] += 1
     PREVIEW["path"] = path
     PREVIEW["bytes"] = os.path.getsize(path)
+    if old and old != path:
+        _view_mark(old, False)
+    _view_mark(path, True)             # (see _view_used_elsewhere)
     in_cache = old and os.path.dirname(os.path.abspath(old)) == os.path.abspath(view_cache_dir())
     if old and not in_cache and os.path.isfile(old) and old != path:
         try:

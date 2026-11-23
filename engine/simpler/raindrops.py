@@ -613,8 +613,9 @@ def _write_view(P, R, V, st):
     import numpy as np
     from . import rain
     d = rain._shelter_dir()
+    from . import tempdirs
     for f in os.listdir(d):
-        if f.startswith("raindrops_"):
+        if f.startswith("raindrops_") and tempdirs.removable(f, "raindrops_"):
             try:
                 os.remove(os.path.join(d, f))
             except OSError:
@@ -727,8 +728,9 @@ def _forget():
     try:
         from . import rain
         d = rain._shelter_dir()
+        from . import tempdirs
         for f in os.listdir(d):
-            if f.startswith("raindrops_"):
+            if f.startswith("raindrops_") and tempdirs.removable(f, "raindrops_"):
                 os.remove(os.path.join(d, f))
     except OSError:
         pass

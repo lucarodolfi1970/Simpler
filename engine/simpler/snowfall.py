@@ -293,8 +293,9 @@ def _write_view(P, R, V, st):
     import numpy as np
     from . import rain
     d = rain._shelter_dir()
+    from . import tempdirs
     for f in os.listdir(d):
-        if f.startswith("snowfall_"):
+        if f.startswith("snowfall_") and tempdirs.removable(f, "snowfall_"):
             try:
                 os.remove(os.path.join(d, f))
             except OSError:

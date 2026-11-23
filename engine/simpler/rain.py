@@ -1327,6 +1327,9 @@ SH = {"meta": None, "sig": None, "changes": -1, "dirty": True, "rev": 0}
 _SAMPLES = {}
 
 
+from . import tempdirs          # (23/11: files of another engine that is running are not removed, see tempdirs.removable)
+
+
 def _shelter_dir():
     base = os.environ.get("LOCALAPPDATA") or os.path.expanduser("~")
     d = os.path.join(base, "Simpler", "rain")
@@ -1568,7 +1571,7 @@ def shelter_map():
     SH["rev"] += 1
     d = _shelter_dir()
     for f in os.listdir(d):
-        if f.startswith("shelter_"):
+        if f.startswith("shelter_") and tempdirs.removable(f, "shelter_"):
             try:
                 os.remove(os.path.join(d, f))
             except OSError:
@@ -2073,7 +2076,7 @@ def _paint_bin(arr, fr, layer="rain"):
     prefix = LAYERS[layer]["prefix"]
     d = _shelter_dir()
     for f in os.listdir(d):
-        if f.startswith(prefix):
+        if f.startswith(prefix) and tempdirs.removable(f, prefix):
             try:
                 os.remove(os.path.join(d, f))
             except OSError:

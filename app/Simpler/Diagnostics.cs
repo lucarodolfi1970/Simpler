@@ -183,7 +183,22 @@ namespace Simpler
 
         // ------------------------------------------------------------------------------------------ crash marker
 
-        public sealed class Session { public string Started { get; set; } = ""; public bool Clean { get; set; } }
+        public sealed class Session { public string Started { get; set; } = ""; public bool Clean { get; set; } public int Pid { get; set; } }
+
+        /// <summary>(23/11) The copy that wrote the marker is still running: a second copy opened next to it, not a crash.</summary>
+        static bool StillRunning(int pid)
+        {
+            if (pid <= 0 || pid == Environment.ProcessId) return false;
+            try
+            {
+                using var p = System.Diagnostics.Process.GetProcessById(pid);
+                using var me = System.Diagnostics.Process.GetCurrentProcess();
+                return !p.HasExited && string.Equals(p.ProcessName, me.ProcessName, StringComparison.OrdinalIgnoreCase);
+            }
+            catch { return false; }
+        }
+
+        static bool _sessionMine = true;     // (false: another copy opened first and holds the marker)
 
         /// <summary>At start: true when the previous run did not end cleanly (a crash, a kill, a power cut), then the new run is marked as open.</summary>
         public static bool StartSession(string file)
@@ -194,10 +209,13 @@ namespace Simpler
                 if (File.Exists(file))
                 {
                     var prev = JsonSerializer.Deserialize<Session>(File.ReadAllText(file));
+                    // (23/11) a second copy opened while the first is running read «not closed cleanly» and counted a
+                    // crash that never was (and sent it with the reports); the marker stays of the first copy
+                    if (prev != null && !prev.Clean && StillRunning(prev.Pid)) { _sessionMine = false; return false; }
                     crashed = prev != null && !prev.Clean;
                 }
                 Directory.CreateDirectory(Path.GetDirectoryName(file)!);
-                File.WriteAllText(file, JsonSerializer.Serialize(new Session { Started = DateTime.UtcNow.ToString("o"), Clean = false }));
+                File.WriteAllText(file, JsonSerializer.Serialize(new Session { Started = DateTime.UtcNow.ToString("o"), Clean = false, Pid = Environment.ProcessId }));
             }
             catch { }
             return crashed;
@@ -205,6 +223,7 @@ namespace Simpler
 
         public static void EndSession(string file)
         {
+            if (!_sessionMine) return;
             try { File.WriteAllText(file, JsonSerializer.Serialize(new Session { Started = DateTime.UtcNow.ToString("o"), Clean = true })); } catch { }
         }
 

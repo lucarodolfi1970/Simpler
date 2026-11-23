@@ -37,6 +37,7 @@ namespace Simpler
             tiles.Children.Add(IdeasTile());                // (1.78.4, Luca) «Suggerisci un'idea»
             tiles.Children.Add(RoadmapTile());              // (Luca, 13/11) the roadmap of the website, in the language of Simpler
             tiles.Children.Add(FreeTile());                 // (Luca) where to find free models and vegetation
+            tiles.Children.Add(GitHubTile());               // (23/11) the repository of Simpler on GitHub, in the browser
             var row = tiles;
             var box = new Border
             {
@@ -85,6 +86,35 @@ namespace Simpler
                 e.Handled = true;
                 AppLog.Write("official site: open " + SiteUrl);
                 try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(SiteUrl) { UseShellExecute = true }); } catch { }
+            };
+            return tile;
+        }
+
+        const string GitHubUrl = "https://github.com/lucarodolfi1970/Simpler";
+
+        /// <summary>(23/11) «GitHub»: the last tile, opens the repository of Simpler in the browser (tiles\github.jpg).</summary>
+        FrameworkElement GitHubTile()
+        {
+            var img = TilePicture("github.jpg");
+            var pic = new Border
+            {
+                Width = 128, Height = 72, CornerRadius = new CornerRadius(6), BorderThickness = new Thickness(1), BorderBrush = Theme.B(Theme.Line),
+                Background = img != null ? new ImageBrush(img) { Stretch = Stretch.UniformToFill } : new LinearGradientBrush(Theme.C("#1D3766"), Theme.C("#3A2A12"), 35),
+            };
+            var cap = new TextBlock { Text = "GitHub", FontSize = 11.5, Foreground = Theme.B(Theme.TextSoft),
+                                      Margin = new Thickness(0, 4, 0, 0), HorizontalAlignment = HorizontalAlignment.Center };
+            var tile = new StackPanel { Margin = new Thickness(14, 0, 0, 0), VerticalAlignment = VerticalAlignment.Center, Cursor = System.Windows.Input.Cursors.Hand,
+                                        Background = Brushes.Transparent,
+                                        ToolTip = L.T("Apre nel browser la pagina di Simpler su GitHub: codice sorgente, versioni e segnalazioni") };
+            tile.Children.Add(pic);
+            tile.Children.Add(cap);
+            tile.MouseEnter += (_, __) => pic.BorderBrush = Theme.B(Theme.Accent);
+            tile.MouseLeave += (_, __) => pic.BorderBrush = Theme.B(Theme.Line);
+            tile.MouseLeftButtonUp += (_, e) =>
+            {
+                e.Handled = true;
+                AppLog.Write("github: open " + GitHubUrl);
+                try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(GitHubUrl) { UseShellExecute = true }); } catch { }
             };
             return tile;
         }

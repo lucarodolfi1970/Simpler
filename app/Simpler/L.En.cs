@@ -3721,6 +3721,7 @@ namespace Simpler
             ["Aggiungi una luce: scegli il tipo, va al centro della vista"] = "Add a light: choose the kind, it goes to the middle of the view",
             ["Aggiungi una luce: scegli il tipo, va al centro della vista; oppure trascinala dal menu nella vista, dove la lasci"] = "Add a light: choose the kind, it goes to the middle of the view; or drag it from the menu into the view, where you drop it",
             ["Clic: al centro della vista · trascina nella vista: dove la lasci"] = "Click: in the middle of the view · drag into the view: where you drop it",
+            ["Apre nel browser la pagina di Simpler su GitHub: codice sorgente, versioni e segnalazioni"] = "Opens the page of Simpler on GitHub in the browser: source code, releases and issues",
             ["Le forme di base e i modelli di Simpler: clic al centro della vista · trascina nella vista dove vuoi"] = "The basic shapes and Simpler's models: click to put in the middle of the view · drag into the view where you want",
             ["Le piante di Simpler: clic al centro della vista · trascina nella vista o nel pennello Distribuisci"] = "Simpler's plants: click to put in the middle of the view · drag into the view or into the Scatter brush",
             ["Vegetazione Simpler"] = "Simpler vegetation",

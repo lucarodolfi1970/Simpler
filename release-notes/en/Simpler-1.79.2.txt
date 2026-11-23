@@ -12,3 +12,4 @@ Video tutorials in the start box; fixed terrain zones not drawn in the real-time
 - Fixed: with two copies of Simpler open together, or Simpler and Pack Studio open together, one could take away the other's files of the 3D view, rain and snow; at start it could stay on «Preparing the 3D view» for ever.
 - New: from the menu of the light-bulb button a light can also be dragged into the view and dropped where you want, on the surface under the pointer. A click works as before: the light goes to the middle of the view.
 - New: in the start box, at the end, the «GitHub» tile opens the page of Simpler on GitHub in the browser.
+- Fixed: saving a scene right after opening a project with water reflecting light on the walls (pools), the thumbnail of the scene could come out all pink.

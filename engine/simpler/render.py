@@ -1334,11 +1334,11 @@ def preview_texture_limit():
     return lim if lim > proxies.PROXY_PX else 0      # 4K: originals reduced by Cycles; smaller: the proxies
 
 
-def render_viewport_pass():
-    if not preview_textures_ready():
-        time.sleep(0.1)
-        STATE.waited_textures += 0.1
-        return
+def prepare_for_cycles():
+    """Everything the scene needs before Cycles makes an image of it: until 23/11 only in render_viewport_pass, so the
+    small path-traced thumbnail of a scene (views._thumbnail, when the real-time view does not answer) was made without
+    it - on a project just opened, the light of the water on the walls (refcaustics) still pointed to its pictures of
+    the session before, deleted with it: a pink thumbnail (Cycles' colour of a missing picture)."""
     twins.ensure()               # a change to the scene must not make Cycles rebuild all the geometry (see twins.py)
     apply_camera()               # (1.75.3) first: the water's grid and the sea's caustics are made for this view
     from . import matedit
@@ -1356,6 +1356,14 @@ def render_viewport_pass():
     refcaustics.safe_ensure(False)   # light reflected by the waves onto walls (see refcaustics.py)
     from . import rain
     rain.ensure()                 # wet surfaces and puddles (after the others: it copies what they put in the materials)
+
+
+def render_viewport_pass():
+    if not preview_textures_ready():
+        time.sleep(0.1)
+        STATE.waited_textures += 0.1
+        return
+    prepare_for_cycles()         # (23/11) what Cycles needs in the scene before an image (also views._thumbnail)
     epoch0 = STATE.epoch
     if STATE.pass_index == 0:
         _diag_line()

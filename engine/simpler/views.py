@@ -87,6 +87,7 @@ def _given_thumb(data):
 def _thumbnail():
     """Fallback: small, fast path-traced image of the current framing (JPEG, base64)."""
     scene = bpy.context.scene
+    render.prepare_for_cycles()          # (23/11) as before an image of the path tracing view: see render.prepare_for_cycles
     render.apply_camera()
     render._apply_common(scene)
     aspect = render.FORMATS.get(render.cam_get("format")) or (render.STATE.vp_size[0] / render.STATE.vp_size[1])

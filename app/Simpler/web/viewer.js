@@ -8427,9 +8427,13 @@ async function ensureProto(model, key = '', id = '') {
   const finished = () => { if (!counted) { counted = true; protoBusy.done++; protoProgress(''); if (protoBusy.done >= protoBusy.total) { try { protoStatDone(); } catch { } } } };
   const _t0 = performance.now();
   if (!protoStat.n && protoBusy.done + 1 >= protoBusy.total) protoStat.t0 = _t0;
+  // (24/11, reports of the users: «model not prepared for the view: m_… · Failed to fetch» three times, with no
+  // more to go on) where it stopped - asking the engine, downloading the file, reading it - after how long, and the file
+  let _stage = 'engine', _polls = 0, _file = '';
   try {
     let st = null;
     for (let i = 0; i < 600; i++) {
+      _polls = i + 1;
       st = await (await fetch(engineUrl + 'paint/proto?model=' + encodeURIComponent(model) + '&key=' + encodeURIComponent(key) + '&id=' + encodeURIComponent(id), { cache: 'no-store' })).json();
       if (st.state !== 'running') break;
       await sleep(400);
@@ -8442,7 +8446,9 @@ async function ensureProto(model, key = '', id = '') {
     }
     P.key = st.key || key;
     const _t1 = performance.now(), _url = engineUrl + 'paint/proto.glb?f=' + encodeURIComponent(st.file);
+    _stage = 'download'; _file = String(st.file || '');
     const gltf = await loader.loadAsync(_url);
+    _stage = 'reading';
     const _t2 = performance.now();
     let _down = 0;
     try { const e = performance.getEntriesByName(_url).pop(); if (e) _down = Math.min(_t2 - _t1, e.responseEnd - e.startTime); performance.clearResourceTimings(); } catch { }
@@ -8522,7 +8528,13 @@ async function ensureProto(model, key = '', id = '') {
     const f = protoFails.get(mapKey) || { n: 0 };
     f.n++; f.t = performance.now();
     protoFails.set(mapKey, f);
-    viewLog('model not prepared for the view: ' + label + ' · ' + (err && err.message ? err.message : err) + ' (attempt ' + f.n + ')');
+    let _mb = '';
+    if (_stage !== 'engine' && _file) {
+      try { const h = await fetch(engineUrl + 'paint/proto.glb?f=' + encodeURIComponent(_file), { method: 'HEAD', cache: 'no-store' }); const n = +h.headers.get('content-length'); if (n > 0) _mb = `, file ${(n / 1048576).toFixed(0)} MB`; } catch { }
+    }
+    viewLog('model not prepared for the view: ' + label + ' · ' + (err && err.message ? err.message : err) + ' (attempt ' + f.n + ')'
+      + ` · stopped while ${_stage === 'engine' ? 'asking the engine (' + _polls + ' checks)' : _stage === 'download' ? 'downloading the file' : 'reading the file'}`
+      + ` after ${((performance.now() - _t0) / 1000).toFixed(1)} s${_mb}`);
     if (f.n <= 3) setTimeout(() => { for (const [k, Q] of [...scatter.protos]) if (Q === P) scatter.protos.delete(k); scatter.dirty = true; invalidate(300); }, 1500 * Math.pow(4, f.n - 1));
   }
 }
@@ -10104,10 +10116,13 @@ function tick() {
       foliageShadows();
       const _p0 = renderer.info.programs ? renderer.info.programs.length : 0, _r0 = performance.now();
       const _before = renderer.info.programs ? renderer.info.programs.slice() : [];
+      const _shUp = renderer.shadowMap.enabled && (renderer.shadowMap.autoUpdate || renderer.shadowMap.needsUpdate);
       renderer.render(scene, camera);
+      const _r1 = performance.now();
       _frameNewShaders = !!(renderer.info.programs && renderer.info.programs.length > _p0);
       if (_frameNewShaders) { try { keepPrograms(); } catch (err) { viewLog('programs kept: ' + err); } }
       fxApply();
+      const _r2 = performance.now();
       renderOutline();
       // (a frame that blocks the page: how long, and whether three.js had to prepare new shaders - a new light, a
       // new kind of material: in app.log, for the slow clicks)
@@ -10119,7 +10134,13 @@ function tick() {
         const kinds = {};
         for (const pr of made) { const k = String(pr.name || '?').split(' ')[0]; kinds[k] = (kinds[k] || 0) + 1; }
         viewLog(`slow frame: ${Math.round(_rms)} ms, ${made.length} new shaders, ${renderer.info.render.calls} draws` +
-                (made.length ? ` (${Object.entries(kinds).map(([k, n]) => k + ' ' + n).join(', ')})` : '') + (_ptWarm ? ' · first frame after the path tracing' : ''));
+                (made.length ? ` (${Object.entries(kinds).map(([k, n]) => k + ' ' + n).join(', ')})` : '') + (_ptWarm ? ' · first frame after the path tracing' : '')
+                // (24/11, reports of the users: frames of 2.4 s with 21 draws and no new shader, nothing else to go on)
+                // where the time went, and what the frame had to do
+                + ` · drawing ${Math.round(_r1 - _r0)} ms, effects ${Math.round(_r2 - _r1)} ms, outline ${Math.round(performance.now() - _r2)} ms`
+                + `, ${(renderer.info.render.triangles / 1e6).toFixed(1)} M triangles, ${renderer.domElement.width}x${renderer.domElement.height} px`
+                + `, shadows ${_shUp ? 'updated (' + lightList().filter((l) => l.castShadow).length + ' lights)' : 'not updated'}`
+                + `, ${renderer.info.memory.textures} textures, ${renderer.info.memory.geometries} geometries`);
       }
       if (_frameNewShaders && _rms > 300) {
         try { for (const l of shaderWhy(renderer.info.programs.filter((p) => !_before.includes(p)), _before)) viewLog('shader made inside a frame: ' + l); } catch (err) { viewLog('shader why: ' + err); }

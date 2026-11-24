@@ -228,8 +228,10 @@ namespace Simpler
         bool _ok;
         public bool Merge { get; private set; }
         public bool AtView { get; private set; }
+        public double Scale { get; private set; } = 1.0;
 
-        ImportSceneDialog(IReadOnlyList<string> files, bool merge, bool atView) : base(L.T("Importa nella scena"), 440)
+        ImportSceneDialog(IReadOnlyList<string> files, bool merge, bool atView, Func<string, System.Threading.Tasks.Task<double[]?>>? probe)
+            : base(L.T("Importa nella scena"), 440)
         {
             Merge = merge;
             AtView = atView;
@@ -239,6 +241,98 @@ namespace Simpler
             head.TextWrapping = TextWrapping.Wrap;
             head.Margin = new Thickness(0, 4, 0, 14);
             Body.Children.Add(head);
+
+            // (1.80.39, Luca: «mostra anche le dimensioni e la possibilità di ridimensionarlo, così già in importazione si
+            // può importare corretto») the size in the file (measured by the second Blender, as the library import does)
+            // and the scale: a factor, or the height it must have. Several files: the same factor for all (aligned).
+            Body.Children.Add(Theme.Label(files.Count == 1 ? L.T("Dimensioni") : L.F("Dimensioni di «{0}»", System.IO.Path.GetFileName(files[0])), 12, Theme.TextMuted));
+            var sizeText = Theme.Label(probe != null ? L.T("misuro…") : "–", 12.5, Theme.TextSoft);
+            sizeText.TextWrapping = TextWrapping.Wrap;
+            sizeText.Margin = new Thickness(0, 2, 0, 8);
+            Body.Children.Add(sizeText);
+            var srow = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 0, 0, 6) };
+            AddLabel(srow, L.T("Scala ×"));
+            var factorBox = Theme.Input("1", true);
+            factorBox.Width = 72; factorBox.Padding = new Thickness(4, 2, 4, 2);
+            factorBox.ToolTip = L.T("1 = come nel file, 0,01 = cento volte più piccolo, 2,54 = da pollici a centimetri");
+            srow.Children.Add(factorBox);
+            AddLabel(srow, L.T("altezza"), 14);
+            var heightBox = Theme.Input("", true);
+            heightBox.Width = 86; heightBox.Padding = new Thickness(4, 2, 4, 2); heightBox.IsEnabled = false;
+            heightBox.ToolTip = L.T("Scrivi l'altezza che deve avere: la scala si calcola da sola");
+            srow.Children.Add(heightBox);
+            AddLabel(srow, "cm", 4);
+            Body.Children.Add(srow);
+            var chips = new WrapPanel { Margin = new Thickness(0, 0, 0, 4) };
+            Body.Children.Add(chips);
+            var sh = Theme.Label(files.Count == 1
+                ? L.T("Se il file ha le unità sbagliate (una persona di 2 cm, una sedia di 50 m) correggilo qui: si importa già della misura giusta.")
+                : L.T("La stessa scala vale per tutti i file importati insieme, così restano allineati tra loro."), 11.5, Theme.TextMuted);
+            sh.TextWrapping = TextWrapping.Wrap;
+            sh.Margin = new Thickness(0, 0, 0, 14);
+            Body.Children.Add(sh);
+            double[]? size = null;
+            bool syncing = false;
+            Button? goRef = null;
+            void ShowSize()
+            {
+                if (size == null) return;
+                var s = size.Select(x => x * Scale).ToArray();
+                bool changed = Math.Abs(Scale - 1) > 1e-9;
+                sizeText.Text = changed ? L.F("Nel file: {0}", SizeText(size)) + "\n" + L.F("Importato: {0}", SizeText(s)) : SizeText(size);
+                bool odd = s.Max() > 0 && (s.Max() < 3 || s.Max() > 200000);
+                if (odd) sizeText.Text += "\n" + L.T("Sembra molto piccolo o molto grande: controlla la scala");
+                sizeText.Foreground = Theme.B(odd ? Theme.Warm : changed ? Theme.Accent : Theme.TextSoft);
+                if (!syncing && size[2] > 0) { syncing = true; heightBox.Text = Num.F(s[2], 1); syncing = false; }
+            }
+            void SetScale(double f, bool fromHeight)
+            {
+                Scale = f;
+                if (!fromHeight && !syncing) { syncing = true; factorBox.Text = Num.F(f, 4); syncing = false; }
+                ShowSize();
+            }
+            factorBox.TextChanged += (_, __) =>
+            {
+                if (syncing) return;
+                bool ok = Num.TryParse(factorBox.Text.TrimStart('×', 'x', 'X'), out var f) && f >= 1e-4 && f <= 1e4;
+                if (goRef != null) goRef.IsEnabled = ok;
+                if (!ok) return;
+                Scale = f;
+                ShowSize();
+            };
+            heightBox.TextChanged += (_, __) =>
+            {
+                if (syncing || size == null || size[2] <= 0) return;
+                if (!Num.TryParse(heightBox.Text, out var h) || h <= 0) return;
+                var f = h / size[2];
+                if (f < 1e-4 || f > 1e4) return;
+                syncing = true; factorBox.Text = Num.F(f, 4); syncing = false;
+                if (goRef != null) goRef.IsEnabled = true;
+                SetScale(f, true);
+            };
+            foreach (var q in new[] { 1.0, 0.01, 0.1, 2.54, 10, 100 })
+            {
+                var b = Theme.Button("×" + Num.F(q, 2), Theme.Kind.Ghost, q == 1 ? L.T("Come nel file") : null);
+                b.MinHeight = 24; b.FontSize = 11.5; b.Padding = new Thickness(7, 0, 7, 0); b.Margin = new Thickness(0, 0, 4, 0);
+                b.Click += (_, __) => { if (goRef != null) goRef.IsEnabled = true; SetScale(q, false); };
+                chips.Children.Add(b);
+            }
+            if (probe != null)
+                Loaded += async (_, __) =>
+                {
+                    double[]? got = null;
+                    try { got = await probe(files[0]); } catch { got = null; }
+                    if (got == null || got.Length != 3 || got.Max() <= 0)
+                    {
+                        sizeText.Text = L.T("Dimensioni non lette: le vedrai dopo l'import (la scala scritta qui vale comunque)");
+                        sizeText.Foreground = Theme.B(Theme.TextFaint);
+                        return;
+                    }
+                    size = got;
+                    heightBox.IsEnabled = true;
+                    ShowSize();
+                };
+
             var t = new Toggle(L.T("Unisci i pezzi in un solo oggetto"), merge);
             t.Toggled += on => Merge = on;
             Body.Children.Add(t);
@@ -262,23 +356,44 @@ namespace Simpler
             go.MinWidth = 88;
             go.Margin = new Thickness(8, 0, 0, 0);
             go.Click += (_, __) => { _ok = true; Close(); };
+            goRef = go;
             bar.Children.Add(cancel);
             bar.Children.Add(go);
             Body.Children.Add(bar);
             PreviewKeyDown += (_, e) =>
             {
                 if (e.Key == Key.Escape) { Close(); e.Handled = true; }
-                else if (e.Key == Key.Enter) { _ok = true; Close(); e.Handled = true; }
+                else if (e.Key == Key.Enter && go.IsEnabled) { _ok = true; Close(); e.Handled = true; }
             };
             Loaded += (_, __) => go.Focus();
         }
 
-        /// <summary>null: cancelled; otherwise the choices (merging, at the centre of the view).</summary>
-        public static (bool merge, bool atView)? Ask(Window owner, IReadOnlyList<string> files, bool merge, bool atView)
+        static void AddLabel(Panel p, string text, double left = 0)
         {
-            var d = new ImportSceneDialog(files, merge, atView) { Owner = owner };
+            var l = Theme.Label(text, 12, Theme.TextSoft);
+            l.VerticalAlignment = VerticalAlignment.Center;
+            l.Margin = new Thickness(left, 0, 6, 0);
+            p.Children.Add(l);
+        }
+
+        /// <summary>cm as one reads them: mm, cm, m or km.</summary>
+        static string Len(double cm)
+        {
+            if (cm < 1) return Num.F(cm * 10, 1) + " mm";
+            if (cm < 100) return Num.F(cm, 1) + " cm";
+            if (cm < 100000) return Num.F(cm / 100, 2) + " m";
+            return Num.F(cm / 100000, 2) + " km";
+        }
+
+        static string SizeText(double[] s) => L.F("{0} × {1} · alto {2}", Len(s[0]), Len(s[1]), Len(s[2]));
+
+        /// <summary>null: cancelled; otherwise the choices (merging, at the centre of the view, the scale).</summary>
+        public static (bool merge, bool atView, double scale)? Ask(Window owner, IReadOnlyList<string> files, bool merge, bool atView,
+            Func<string, System.Threading.Tasks.Task<double[]?>>? probe = null)
+        {
+            var d = new ImportSceneDialog(files, merge, atView, probe) { Owner = owner };
             d.ShowDialog();
-            return d._ok ? (d.Merge, d.AtView) : null;
+            return d._ok ? (d.Merge, d.AtView, d.Scale) : null;
         }
     }
 

@@ -6,7 +6,7 @@ import bpy
 import tempfile
 
 from . import fbx_legacy, progress, textures
-from .core import CM, KIND_KEY, SOURCE_KEY, ApiError, ensure_id, find, link, refresh
+from .core import CM, KIND_KEY, SOURCE_KEY, ApiError, ensure_id, find, link, log, refresh
 from .i18n import tr
 
 IMPORTERS = {
@@ -25,17 +25,84 @@ def supported_formats():
     return sorted(IMPORTERS)
 
 
-def import_model(path, parent_id="", texture_folders=None, merge=False, location=None, offset=None):
+def import_model(path, parent_id="", texture_folders=None, merge=False, location=None, offset=None, scale=1.0):
     progress.begin("import", tr("Lettura del file {0}", os.path.basename(path or "")))
     try:
-        return _import_model(path, parent_id, texture_folders or [], merge, location, offset)
+        return _import_model(path, parent_id, texture_folders or [], merge, location, offset, scale)
     finally:
         progress.end()
 
 
-def _import_model(path, parent_id, texture_folders, merge=False, location=None, offset=None):
+def _freeze_pose(obs):
+    """(1.80.38) An animated model (a skeleton with its clips, keyframes on its pieces): Cycles drew the pose of the clip
+    at the scene's frame, the real-time view the rest pose of the skeleton - a diver swimming in the path tracing and
+    standing in the view (Luca, 24/11). Simpler makes still images: the pose of the first frame is made the shape of
+    the pieces (as both views then draw it) and the clips are taken away (no motion blur from them either).
+    -> how many pieces had their pose fixed (0: nothing animated)."""
+    skinned = [o for o in obs if o.type == "MESH" and any(m.type == "ARMATURE" for m in o.modifiers)]
+    animated = [o for o in obs if o.animation_data and (o.animation_data.action or o.animation_data.nla_tracks)]
+    keyed = [o for o in obs if o.type == "MESH" and o.data and o.data.shape_keys and o.data.shape_keys.animation_data]
+    if not (skinned or animated or keyed):
+        return 0
+    view_layer = bpy.context.view_layer
+    view_layer.update()
+    dg = bpy.context.evaluated_depsgraph_get()
+    world = {o: o.matrix_world.copy() for o in obs}
+    done = 0
+    for o in skinned + [k for k in keyed if k not in skinned]:
+        try:
+            e = o.evaluated_get(dg)
+            me = bpy.data.meshes.new_from_object(e, preserve_all_data_layers=True, depsgraph=dg)
+            old = o.data
+            me.name = old.name
+            o.modifiers.clear()
+            o.data = me
+            if old.users == 0:
+                bpy.data.meshes.remove(old)
+            done += 1
+        except Exception as exc:  # noqa: BLE001
+            log("SIMPLER_IMPORT", "pose not fixed on", o.name, exc)
+    clips = set()
+    for o in obs:
+        if o.animation_data:
+            if o.animation_data.action:
+                clips.add(o.animation_data.action)
+            for t in o.animation_data.nla_tracks:
+                clips.update(st.action for st in t.strips if st.action)
+    for o in obs:
+        if o.animation_data:
+            o.animation_data.action = None
+            for t in list(o.animation_data.nla_tracks):
+                o.animation_data.nla_tracks.remove(t)
+        if o.type == "MESH" and o.data and o.data.shape_keys and o.data.shape_keys.animation_data:
+            o.data.shape_keys.animation_data.action = None
+    # (keyframes on the pieces themselves: each stays where the first frame had it)
+    def depth(o):
+        d = 0
+        while o.parent is not None:
+            o, d = o.parent, d + 1
+        return d
+    for o in sorted(obs, key=depth):
+        o.matrix_world = world[o]
+    view_layer.update()
+    # (the clips of the file, no longer used by anything: not kept in the project nor sent to the view)
+    for act in clips:
+        act.use_fake_user = False
+        if act.users == 0:
+            bpy.data.actions.remove(act)
+    log("SIMPLER_IMPORT", f"animated model: pose of the first frame kept on {done} pieces, {len(animated)} clips removed")
+    return max(done, len(animated))
+
+
+def _import_model(path, parent_id, texture_folders, merge=False, location=None, offset=None, scale=1.0):
     if not path or not os.path.isfile(path):
         raise ApiError(tr("File non trovato: {0}", path))
+    try:
+        f = float(scale if scale is not None else 1.0)
+    except (TypeError, ValueError):
+        f = float("nan")
+    if not (1e-4 <= f <= 1e4):
+        raise ApiError(tr("Fattore di scala non valido"))
     ext = os.path.splitext(path)[1].lower()
     if ext not in IMPORTERS:
         raise ApiError(tr("Formato non supportato: {0} (supportati: {1})", ext, ', '.join(supported_formats())))
@@ -58,6 +125,7 @@ def _import_model(path, parent_id, texture_folders, merge=False, location=None, 
 
     progress.update(tr("Organizzazione della gerarchia"), 0.05)
     new_obs = [o for o in bpy.data.objects if o not in before_obs]
+    posed = _freeze_pose(new_obs)
     if merge:
         # «Unisci in un solo oggetto»: one mesh with all the materials instead of the tree of pieces (merge.py)
         from . import merge as _merge
@@ -91,6 +159,11 @@ def _import_model(path, parent_id, texture_folders, merge=False, location=None, 
             ob.parent = root
             ob.matrix_parent_inverse.identity()
             ob.matrix_world = world
+    # (1.80.39, Luca: «già in importazione si può importare corretto») the size chosen in the import dialog: the
+    # whole model scaled from the origin of the file (several files with the same factor stay aligned)
+    if abs(f - 1.0) > 1e-9:
+        root.scale = (f, f, f)
+        refresh()
 
     new_mats = [m for m in bpy.data.materials if m not in before_mats]
     new_imgs = [i for i in bpy.data.images if i not in before_imgs]
@@ -98,6 +171,8 @@ def _import_model(path, parent_id, texture_folders, merge=False, location=None, 
     folders = [(f, 6) for f in texture_folders if f] + textures.search_folders_for(path)
     found, missing = textures.resolve(new_imgs, folders, report_task=True)
     warnings = [tr("Texture non trovata: {0}", m) for m in missing]
+    if posed:
+        warnings.append(tr("Modello animato: tenuta la posa del primo fotogramma (le immagini sono ferme)"))
 
     # overall size (cm): files with wrong units show up immediately (a 1 cm glass, a 300 m chair)
     from mathutils import Vector

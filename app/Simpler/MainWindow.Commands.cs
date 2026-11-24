@@ -401,21 +401,41 @@ namespace Simpler
         {
             if (files.Count == 0) return;
             var st = Settings.Load();
-            var ans = ImportSceneDialog.Ask(this, files, st.MergeOnImport, st.ImportAtView);
+            var ans = ImportSceneDialog.Ask(this, files, st.MergeOnImport, st.ImportAtView, ProbeModelSize);
             if (ans == null) return;
-            var (merge, atView) = ans.Value;
+            var (merge, atView, scale) = ans.Value;
             if (merge != st.MergeOnImport || atView != st.ImportAtView) { st.MergeOnImport = merge; st.ImportAtView = atView; st.Save(); }
             // (1.75.48) the first file at the centre of the view, the others with the same shift (aligned to it)
             JsonArray? point = null, offset = null;
             if (atView && (await AskViewPoint())?["point"] is JsonArray p) point = (JsonArray)p.DeepClone();
             foreach (var f in files)
             {
-                var o = await ImportPath(f, merge, offset == null ? point : null, offset);
+                var o = await ImportPath(f, merge, offset == null ? point : null, offset, scale);
                 if (point != null && offset == null) offset = o;
             }
         }
 
-        async Task<JsonArray?> ImportPath(string path, bool merge, JsonArray? location = null, JsonArray? offset = null)
+        /// <summary>The size of a model file before importing it (cm; null: not read), measured by the second
+        /// Blender as for the library import (models/probe, kept until the file changes).</summary>
+        async Task<double[]?> ProbeModelSize(string path)
+        {
+            if (_api == null) return null;
+            var r = await _api.Post("models/probe", new JsonObject { ["path"] = path });
+            if ((int?)r["pending"] is int rid)
+            {
+                string state = "running";
+                for (int k = 0; k < 480 && state == "running"; k++)          // (at most 2 minutes)
+                {
+                    await Task.Delay(250);
+                    try { state = (string?)(await _api.Get($"material/preview/status?id={rid}"))["state"] ?? ""; } catch { state = ""; }
+                }
+                if (state != "done") return null;
+                r = await _api.Post("models/probe", new JsonObject { ["path"] = path });
+            }
+            return r["sizeCm"] is JsonArray a && a.Count == 3 ? a.Select(v => (double?)v ?? 0).ToArray() : null;
+        }
+
+        async Task<JsonArray?> ImportPath(string path, bool merge, JsonArray? location = null, JsonArray? offset = null, double scale = 1.0)
         {
             JsonArray? moved = null;
             using var busy = BeginBusy();
@@ -429,6 +449,7 @@ namespace Simpler
             {
                 var folders = Settings.Load().TextureFolders.Where(Directory.Exists).ToArray();
                 var body = new JsonObject { ["path"] = path, ["textureFolders"] = new JsonArray(folders.Select(x => (JsonNode)x!).ToArray()), ["merge"] = merge };
+                if (Math.Abs(scale - 1) > 1e-9) body["scale"] = scale;
                 if (location != null) body["location"] = location.DeepClone();
                 else if (offset != null) body["offset"] = offset.DeepClone();
                 var r = await api.Post("import", body);

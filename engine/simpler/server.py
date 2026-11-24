@@ -427,7 +427,7 @@ ROUTES = {
     "GET /api/paths/status": (paths.api_status, False, 30),
     "POST /api/paths/cancel": (paths.api_cancel, False, 30),
     "POST /api/paths/deleteold": (paths.api_delete_old, False, 60),
-    "POST /api/import":      (lambda d: _after_textures(importer.import_model(d.get("path", ""), d.get("parent", ""), d.get("textureFolders"), bool(d.get("merge")), d.get("location"), d.get("offset"))), True, 3600),
+    "POST /api/import":      (lambda d: _after_textures(importer.import_model(d.get("path", ""), d.get("parent", ""), d.get("textureFolders"), bool(d.get("merge")), d.get("location"), d.get("offset"), d.get("scale", 1.0))), True, 3600),
     "POST /api/textures/relink": (lambda d: _after_textures(textures.relink(d)), True, 1800),
     "GET /api/views":        (views.list_views, False, 300),
     "POST /api/views/save":  (views.save_view, True, 600),

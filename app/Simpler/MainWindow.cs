@@ -1095,6 +1095,25 @@ namespace Simpler
             return true;
         }
 
+        /// <summary>Whether the engine's log ends with a crash of Blender (EXCEPTION_..., and the path of its
+        /// report), rather than a stop for memory.</summary>
+        (bool crashed, string? report) EngineCrashReport()
+        {
+            try
+            {
+                using var fs = new FileStream(_host.LogPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete);
+                if (fs.Length > 65536) fs.Seek(-65536, SeekOrigin.End);
+                using var sr = new StreamReader(fs);
+                var tail = sr.ReadToEnd();
+                if (!tail.Contains("EXCEPTION_") && !tail.Contains("Segmentation fault")) return (false, null);
+                string? report = null;
+                foreach (var line in tail.Split('\n'))
+                    if (line.StartsWith("Writing: ") && line.TrimEnd().EndsWith(".crash.txt")) report = line.Substring(9).Trim();
+                return (true, report);
+            }
+            catch { return (false, null); }
+        }
+
         /// <summary>The engine stopped (out of memory, stopped with Esc, crash): Simpler starts again with the last saved project.</summary>
         void OnEngineDied()
         {
@@ -1102,7 +1121,13 @@ namespace Simpler
             _engineDead = true;
             AppLog.Write("engine ended unexpectedly");
             var limit = _host.MemoryLimitBytes > 0 ? L.F(" (limite {0} GB)", (_host.MemoryLimitBytes / 1073741824.0).ToString("0")) : "";
-            var msg = L.F("Il motore di render si è fermato: probabilmente l'ultima operazione chiedeva più memoria di quella a disposizione{0}, ed è stato fermato per non bloccare il computer.\n\nSimpler riparte ora", limit)
+            // the engine's log says whether Blender crashed (an internal error, with its report) or was stopped:
+            // the memory was not always the cause
+            var (crashed, report) = EngineCrashReport();
+            if (crashed) AppLog.Write("engine crash: Blender error" + (report != null ? ", report " + report : ""));
+            var msg = (crashed
+                    ? L.T("Il motore di render (Blender) si è interrotto per un errore interno: non per la memoria.") + (report != null ? L.F(" Il rapporto dell'errore è in «{0}».", report) : "") + L.T("\n\nSimpler riparte ora")
+                    : L.F("Il motore di render si è fermato: probabilmente l'ultima operazione chiedeva più memoria di quella a disposizione{0}, ed è stato fermato per non bloccare il computer.\n\nSimpler riparte ora", limit))
                       + (_projectPath != null ? L.F(" e riapre «{0}» (l'ultimo salvataggio).", Path.GetFileNameWithoutExtension(_projectPath)) : ".");
             Msg.Show(this, msg, "Simpler", MessageBoxButton.OK, MessageBoxImage.Warning);
             try

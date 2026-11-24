@@ -486,6 +486,10 @@ def _read_model(path, ext, before):
         if "FINISHED" not in result:
             raise RuntimeError("import non riuscito")
     new = [o for o in bpy.data.objects if o not in before["objects"]]
+    # (1.80.38) an animated model: the pose of its first frame, as in the scene (importer._freeze_pose); without it the
+    # rig taken away below left the pieces in the rest pose of the skeleton
+    from simpler import importer
+    importer._freeze_pose(new)
     # cameras, lights and rigs of the file are not part of the model (the pieces keep their place)
     bpy.context.view_layer.update()
     drop = [o for o in new if o.type in ("CAMERA", "LIGHT", "ARMATURE")]

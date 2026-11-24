@@ -5,6 +5,7 @@ Simpler.exe sets the language at start-up (POST /api/settings {"lang": "en"}).
 LANG = "it"
 
 EN = {
+    'Modello animato: tenuta la posa del primo fotogramma (le immagini sono ferme)': 'Animated model: the pose of the first frame is kept (images are still)',
     # (1.76.56, Luca: «nel box rosso la scritta è in italiano») the names of the commands in «Busy · please wait»
     'Aggiungi': 'Add',
     'Ambiente': 'Environment',

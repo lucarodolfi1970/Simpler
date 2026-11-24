@@ -3052,7 +3052,8 @@ function fitLightShadow(L, r, region) {
   const size = shadowSettings().map;
   if (L.light.shadow.mapSize.x !== size) {
     L.light.shadow.mapSize.set(size, size);
-    if (L.light.shadow.map) { L.light.shadow.map.dispose(); L.light.shadow.map = null; }
+    // (no dispose + null here: three.js r186 resizes the map itself; a map replaced by hand left the shadow sampler
+    // bound to a depth texture without compare mode - GL_INVALID_OPERATION on every draw, the whole view grey)
   }
   const g = region || shadowRegion() || { c: boxOf(root, true).getCenter(new THREE.Vector3()), r, R: r };
   const c = g.c, rr = g.r, R = Math.max(g.R, rr);
@@ -3113,7 +3114,6 @@ function setShadowLevel(level) {
   prepareShaders(tr('Aggiornamento delle ombre nella vista'));
   const r = Math.max(sceneRadius(), 0.05);
   key.shadow.mapSize.set(shadowSettings().map, shadowSettings().map);
-  if (key.shadow.map) { key.shadow.map.dispose(); key.shadow.map = null; }
   for (const L of lights.values()) fitLightShadow(L, r);
   updateViewbar();
 }

@@ -90,6 +90,10 @@ namespace Simpler
                 e.Count++; e.TotalMs += ms; if (ms > e.MaxMs) e.MaxMs = ms; e.Last = stamp;
                 if (e.Samples.Count < MaxSamples) e.Samples.Add(Clean(sample, MaxSampleChars));
             }
+            // the view not answering for a while (WebView2 «RenderProcessUnresponsive»): not a crash - the page is busy (one very
+            // long frame, e.g. opening a big project) and goes on by itself. Recorded as a problem, with the length of the slow
+            // frame that follows it when there is one
+            Event? hang = null; DateTime hangAt = default;
             foreach (var raw in lines)
             {
                 var m0 = Stamp.Match(raw);
@@ -107,7 +111,18 @@ namespace Simpler
                     continue;
                 }
                 m = Slow.Match(text);
-                if (m.Success) { Add("slow-frame", "slow frame", double.Parse(m.Groups[1].Value), stamp, text); continue; }
+                if (m.Success)
+                {
+                    double ms = double.Parse(m.Groups[1].Value);
+                    Add("slow-frame", "slow frame", ms, stamp, text);
+                    if (hang != null && DateTime.TryParse(stamp, out var ts) && (ts - hangAt).TotalSeconds < 60)
+                    {
+                        hang.TotalMs += ms; if (ms > hang.MaxMs) hang.MaxMs = ms;
+                        if (hang.Samples.Count < MaxSamples) hang.Samples.Add(Clean(text, MaxSampleChars));
+                        hang = null;
+                    }
+                    continue;
+                }
                 m = Shaders.Match(text);
                 if (m.Success)
                 {
@@ -117,6 +132,13 @@ namespace Simpler
                 }
                 m = Late.Match(text);
                 if (m.Success) { Add("late", "update late: " + m.Groups[1].Value, double.Parse(m.Groups[2].Value), stamp, text); continue; }
+                if (text.StartsWith("viewer process failed: RenderProcessUnresponsive"))
+                {
+                    Add("problem", HangKey, 0, stamp, text);
+                    hang = map[Fingerprint("problem|" + HangKey)];
+                    if (!DateTime.TryParse(stamp, out hangAt)) hang = null;
+                    continue;
+                }
                 if (text.StartsWith("viewer process failed")) { Add("viewer-crash", NormalizeKey(text), 0, stamp, text); continue; }
                 if (Benign.IsMatch(text)) continue;
                 if (Problem.IsMatch(text)) Add("problem", NormalizeKey(text), 0, stamp, text);
@@ -127,6 +149,8 @@ namespace Simpler
             rep.Events = map.Values.OrderByDescending(e => Severity(e)).ThenByDescending(e => e.Count).Take(MaxEvents).ToList();
             return rep;
         }
+
+        const string HangKey = "view not responding for a while (page busy)";
 
         static double Severity(Event e) => e.Kind switch { "crash" => 1e9, "viewer-crash" => 1e8, "problem" => 1e7, _ => e.MaxMs };
 

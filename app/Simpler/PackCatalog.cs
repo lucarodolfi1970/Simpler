@@ -39,6 +39,10 @@ namespace Simpler
 
         public static string Url(string name) => Base + name;
 
+        /// <summary>(Luca 19/11: «voglio sapere i package scaricati e quanti») The download of a pack goes through the counter of the site
+        /// (download.php: it saves date, pack, version and language, nothing about who) and is sent on to the same file of the folder.</summary>
+        public static string CountedUrl(string file) => "https://www.rodluc.com/simpler/download.php?pack=" + Uri.EscapeDataString(file) + "&lang=" + (L.Lang == "en" ? "en" : "it");
+
         /// <summary>The list as the site gives it; null when it is not a valid one.</summary>
         public static List<Entry>? Parse(string json)
         {
@@ -115,7 +119,7 @@ namespace Simpler
             var part = f + ".part";
             try
             {
-                using (var resp = await Download.GetAsync(Base + e.File, HttpCompletionOption.ResponseHeadersRead, ct).ConfigureAwait(false))
+                using (var resp = await Download.GetAsync(CountedUrl(e.File), HttpCompletionOption.ResponseHeadersRead, ct).ConfigureAwait(false))
                 {
                     resp.EnsureSuccessStatusCode();
                     using var src = await resp.Content.ReadAsStreamAsync(ct).ConfigureAwait(false);

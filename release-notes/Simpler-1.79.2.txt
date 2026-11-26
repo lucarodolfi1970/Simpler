@@ -1,4 +1,4 @@
-SIMPLER 1.79.2  —  in preparazione
+SIMPLER 1.79.2  —  26 novembre 2026
 ===================================
 
 Video tutorial nel riquadro di avvio; corrette le zone del terreno non disegnate nella vista in tempo reale.
@@ -17,3 +17,4 @@ Video tutorial nel riquadro di avvio; corrette le zone del terreno non disegnate
 - Corretto: un modello animato (per esempio da Sketchfab o Mixamo, con uno scheletro) poteva avere pose diverse nella vista in tempo reale e nel path tracing: in piedi in una, sdraiato nell'altra. Ora all'import viene tenuta la posa del primo fotogramma, uguale ovunque; Simpler lo segnala con un avviso.
 - Corretto: quando il motore di render si fermava, Simpler dava sempre la colpa alla memoria. Ora, se Blender va in crash per un errore interno, il messaggio lo dice e indica dove si trova il rapporto dell'errore.
 - Corretto: cambiando la qualità delle ombre nella vista in tempo reale (No, Media, Alta, Ultra) la vista diventava tutta grigia e restava così finché non si sceglieva «No». Ora si può passare da un livello all'altro.
+- Corretto: su uno schermo stretto (risoluzione bassa, testo ingrandito, pannelli laterali aperti) la fila di riquadri della pagina di avvio non ci stava e gli ultimi venivano tagliati. Ora la fila scorre di lato, con la sua barra sotto e la rotellina del mouse.

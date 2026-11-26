@@ -66,7 +66,7 @@ Ultimo aggiornamento: Simpler 1.78.5, 9 novembre 2026. Il contratto di licenza a
 - Le immagini inviate e i video ricevuti passano dai server di Krea.
 
 ### rodluc.com (sito di Simpler)
-- https://www.rodluc.com/simpler/ — all'avvio, al massimo una volta al giorno, Simpler chiede se c'è una versione nuova inviando soltanto il numero di versione e la lingua. Si può disattivare in Impostazioni ▸ Aggiornamenti.
+- https://www.rodluc.com/simpler/ — all'avvio, al massimo una volta al giorno, Simpler chiede se c'è una versione nuova inviando soltanto il numero di versione e la lingua; il sito tiene solo il conteggio dei controlli per giorno, versione e lingua (nessun indirizzo IP, nessun identificativo). Anche i download di pacchetti, modelli ed ecosistemi sono contati allo stesso modo, senza dati di chi scarica. Il controllo si può disattivare in Impostazioni ▸ Aggiornamenti.
 - Le pagine delle novità e del download si aprono nel browser solo quando lo chiedi.
 - «Suggerisci un'idea» apre la pagina delle idee del sito solo quando ci clicchi; arrivano la versione, la lingua e ciò che scrivi nel modulo. L'indirizzo IP non viene salvato.
 

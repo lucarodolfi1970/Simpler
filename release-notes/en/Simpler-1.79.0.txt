@@ -64,3 +64,6 @@ First official release. Ecosystems to open, edit and copy; 21 new Simpler materi
 - Final render ▸ Textures: new «1K» choice, the lightest for the graphics card in very large scenes.
 - LUTs: while they are being prepared, the thumbnails show a grey «Preview coming…» tile instead of wrong colours.
 - Start screen: the status text sits above the blue band and no longer covers the small print below.
+- Roadmap: it opens a page with the roadmap only, without menus or links to the rest of the website.
+- Packs: the download goes through the counter of the website (it counts only date, pack, version and language; no data about who downloads).
+- Caustics: only two choices, «Off» and «On» (the former «Sharp»). «Normal» has been removed: with spots, point lights and the sun it gave the same picture as «Off» and was confusing.

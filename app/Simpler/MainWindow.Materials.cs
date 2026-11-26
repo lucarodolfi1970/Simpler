@@ -917,6 +917,8 @@ namespace Simpler
                 },
             });
             await LoadRenderSettings();
+            // (19/11) «Attive» is the only way they are on now: before, this left the hidden «Normali» (no net on the bottom)
+            if (!_caustics) await SetCaustics(true, 2);
             Status(L.T("Caustiche accese per l'acqua: rete di luce sul fondale e luce riflessa sulle pareti (Rendering → Caustiche per spegnerle)"));
         }
 
@@ -1619,7 +1621,7 @@ namespace Simpler
             MatSlider(ss, L.T("Indice di rifrazione"), "transmission.ior", 1.333, 1.0, 2.0, false, "0.000", null, L.T("1,333 acqua dolce · 1,34 acqua di mare"));
             ss.Children.Add(Note(CausticsAny()
                 ? L.T("Caustiche accese (Rendering → Caustiche): con le onde vere il sole disegna la rete di luce sul fondale.")
-                : L.T("Per la rete di luce sul fondale accendi le caustiche in Rendering → Caustiche «Nitide».")));
+                : L.T("Per la rete di luce sul fondale accendi le caustiche in Rendering → Caustiche «Attive».")));
             ss.Children.Add(Note(L.T("Sul fondo e sui bordi dell'acqua serve un oggetto vero (vasca, terreno): l'acqua ne prende il colore con la profondità.")));
 
             // ice (engine ice.py): while it snows the water freezes from the shore inwards

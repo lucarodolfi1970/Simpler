@@ -66,7 +66,7 @@ Last update: Simpler 1.78.5, 9 November 2026. The license agreement accepted at 
 - The images sent and the videos received go through Krea's servers.
 
 ### rodluc.com (Simpler's website)
-- https://www.rodluc.com/simpler/ — at start, at most once a day, Simpler asks whether there is a new version, sending only the version number and the language. It can be switched off in Settings ▸ Updates.
+- https://www.rodluc.com/simpler/ — at start, at most once a day, Simpler asks whether there is a new version, sending only the version number and the language; the site keeps only the number of checks per day, version and language (no IP address, no identifier). Downloads of packs, models and ecosystems are counted the same way, with no data about who downloads. The check can be switched off in Settings ▸ Updates.
 - The pages of what's new and of the download open in the browser only when you ask.
 - «Suggest an idea» opens the website's ideas page only when you click it; it receives the version, the language and what you write in the form. The IP address is not saved.
 

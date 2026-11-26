@@ -64,3 +64,6 @@ Prima versione ufficiale. Ecosistemi da aprire, modificare e copiare; 21 nuovi m
 - Render finale ▸ Texture: nuova scelta «1K», la più leggera per la scheda video nelle scene molto grandi.
 - LUT: mentre si preparano, le miniature mostrano un riquadro grigio «Anteprima in arrivo…» invece di colori sbagliati.
 - Schermata di avvio: la scritta di stato sta sopra la banda blu e non copre più i testi in basso.
+- Roadmap: si apre una pagina con la sola roadmap, senza menu né collegamenti verso il resto del sito.
+- Pacchetti: il download passa dal contatore del sito (conta solo data, pacchetto, versione e lingua; nessun dato di chi scarica).
+- Caustiche: due sole scelte, «Spente» e «Attive» (le vecchie «Nitide»). «Normali» è stata tolta: con faretti, punti luce e sole dava la stessa immagine di «Spente» e confondeva.

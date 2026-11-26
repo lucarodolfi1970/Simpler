@@ -250,17 +250,18 @@ namespace Simpler
             // ---- caustics, reflections, fireflies
             var cr = new StackPanel();
             cr.Children.Add(SectionTitle(L.T("Caustiche, riflessi e rifrazioni")));
-            // one clear switch: off / normal / sharp (MNEE). Details below for who wants them.
+            // one clear switch: off / on. (19/11, Luca: «facciamo la 1 perché così confonde e basta») «Normali» is gone: it
+            // left only the caustics Cycles finds by itself, invisible with small lights (spot, point, sun) - the same
+            // picture as «Spente». «Attive» is the old «Nitide». mode keeps 0 / 2 for the code below.
             bool refl = B("causticsReflective"), refr = B("causticsRefractive");
-            int mode = !refl && !refr && !_caustics ? 0 : (_caustics ? 2 : 1);
+            int mode = _caustics ? 2 : 0;
             var cmodes = Theme.Segmented(out var cButtons,
                 (L.T("Spente"), L.T("Nessuna caustica: render più veloce e pulito")),
-                (L.T("Normali"), L.T("Caustiche riflesse e rifratte calcolate dal path tracing")),
-                (L.T("Nitide"), L.T("In più caustiche nitide (MNEE) di vetri e gemme sulle superfici sotto di loro")));
-            Theme.SetSegment(cButtons, mode);
+                (L.T("Attive"), L.T("Vetri, gemme, metalli lucidi e acqua concentrano la luce sulle superfici intorno")));
+            Theme.SetSegment(cButtons, mode == 2 ? 1 : 0);
             for (int ci = 0; ci < cButtons.Count; ci++)
             {
-                var m = ci;
+                var m = ci == 1 ? 2 : 0;
                 cButtons[ci].Click += async (_, __) =>
                 {
                     await RsPost(new JsonObject
@@ -297,7 +298,7 @@ namespace Simpler
                 _ = WatchRefCaustics(rcHint);
             }
             if (mode == 2)
-                cr.Children.Add(Hint(L.T("Nitide: la luce di bicchieri, bottiglie e metalli lucidi è seguita partendo dalla luce stessa; quella di gemme, vetri pieni e acqua è calcolata dal path tracing. Ogni modello può esserne escluso: Proprietà ▸ Caustiche ▸ Genera caustiche.")));
+                cr.Children.Add(Hint(L.T("Attive: la luce di bicchieri, bottiglie e metalli lucidi è seguita partendo dalla luce stessa; quella di gemme, vetri pieni e acqua è calcolata dal path tracing. Ogni modello può esserne escluso: Proprietà ▸ Caustiche ▸ Genera caustiche.")));
             var ca = Advanced(cr, "caustics");
             ca.Body.Children.Add(Theme.Label(L.T("Pulizia del rumore"), 12, Theme.TextSoft, FontWeights.SemiBold));
             ca.Body.Children.Add(Hint(L.T("Questi tre cursori puliscono l'immagine del path tracing e non toccano le caustiche nitide di vetro, metallo e acqua. Con le caustiche accese il filtro riflessi e il limite della luce indiretta partono da 0: l'immagine può richiedere più campioni per essere pulita.")));

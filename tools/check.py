@@ -909,7 +909,8 @@ def static_checks():
     import re as _re
     hosts = set(_re.findall(r"'url' => 'https://([^/']+)", fp_))
     missing = [h for h in hosts if '"' + h + '"' not in id_]
-    if "simpler/en/roadmap.html" not in id_ or "simpler/it/roadmap.html" not in id_ \
+    # (Luca 19/11: the roadmap of Simpler is the copy without links, simpler/inapp/roadmap-en|it.html)
+    if '"https://www.rodluc.com/simpler/inapp/roadmap-"' not in id_ or '"/simpler/inapp/"' not in id_ \
             or st_.find("RoadmapTile()") < 0 or st_.find("RoadmapTile()") > st_.find("FreeTile()") or missing:
         print("FAIL the Roadmap tile or the websites of the free models page:", missing, flush=True)
         bad.append("site tiles")

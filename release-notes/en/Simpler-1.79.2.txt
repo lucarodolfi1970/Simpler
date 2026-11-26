@@ -1,4 +1,4 @@
-SIMPLER 1.79.2  —  in preparation
+SIMPLER 1.79.2  —  26 November 2026
 ===================================
 
 Video tutorials in the start box; fixed terrain zones not drawn in the real-time view.
@@ -17,3 +17,4 @@ Video tutorials in the start box; fixed terrain zones not drawn in the real-time
 - Fixed: an animated model (for example from Sketchfab or Mixamo, with a skeleton) could have different poses in the real-time view and in path tracing: standing in one, lying in the other. Now the pose of the first frame is kept on import, the same everywhere; Simpler says so with a notice.
 - Fixed: when the render engine stopped, Simpler always blamed memory. Now, if Blender crashes because of an internal error, the message says so and tells where the error report is.
 - Fixed: changing the shadow quality of the real-time view (Off, Medium, High, Ultra) turned the view all grey, and it stayed so until «Off» was chosen. Now you can switch between levels.
+- Fixed: on a narrow screen (low resolution, enlarged text, side panels open) the row of tiles of the start page did not fit and the last ones were cut off. Now the row scrolls sideways, with its bar under it and the mouse wheel.

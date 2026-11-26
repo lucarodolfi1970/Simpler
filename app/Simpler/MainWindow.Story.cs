@@ -38,7 +38,19 @@ namespace Simpler
             tiles.Children.Add(RoadmapTile());              // (Luca, 13/11) the roadmap of the website, in the language of Simpler
             tiles.Children.Add(FreeTile());                 // (Luca) where to find free models and vegetation
             tiles.Children.Add(GitHubTile());               // (23/11) the repository of Simpler on GitHub, in the browser
-            var row = tiles;
+            // (26/11) on a narrow window (low resolution, big text, both side panels open) the row of tiles did not fit and
+            // the last ones were cut off: now it scrolls sideways, with its bar under it and the mouse wheel
+            var row = new ScrollViewer
+            {
+                Content = tiles, HorizontalScrollBarVisibility = ScrollBarVisibility.Auto, VerticalScrollBarVisibility = ScrollBarVisibility.Disabled,
+            };
+            row.PreviewMouseWheel += (_, e) =>
+            {
+                e.Handled = true;
+                if (row.ExtentWidth > row.ViewportWidth + 1) row.ScrollToHorizontalOffset(row.HorizontalOffset - e.Delta);
+                else _libraryScroller?.RaiseEvent(new System.Windows.Input.MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta)
+                    { RoutedEvent = UIElement.MouseWheelEvent });      // (all of it visible: the wheel goes to the library, as before)
+            };
             var box = new Border
             {
                 Margin = new Thickness(4), Padding = new Thickness(18, 12, 18, 12), CornerRadius = new CornerRadius(8),
